@@ -1,0 +1,93 @@
+---
+title: Uvidi u segmente za postojeće segmente
+description: Steknite uvid u postojeće segmente da biste vidjeli razlike i zajedničke karakteristike.
+ms.date: 06/10/2020
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: article
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: jimsonc
+manager: shellyha
+ms.openlocfilehash: 92e1b05dd08588a5da446af5b17b2d6ce57490ce
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.translationtype: HT
+ms.contentlocale: hr-HR
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405339"
+---
+# <a name="segment-insights-preview"></a>Uvidi u segmente (pretpregled)
+
+Otkrijte dodatne informacije i uvide o svojim postojećim segmentima. Otkrijte što razlikuje dva segmenta ili što imaju zajedničko.
+
+## <a name="segment-overlap"></a>Preklapanje segmenata
+
+Analiza preklapanja segmenata pokazuje tko su i koliko ima klijenata zajedničkih za dva ili više segmenta. Na primjer, kako se neki segment čestih klijenata preklapa sa segmentom koji sadrži klijente koji su zadovoljni vašom uslugom ili proizvodom.
+Također, možete analizirati kako se preklapanje mijenja za određene atribute.
+
+### <a name="run-an-overlap-analysis"></a>Pokretanje analize preklapanja
+
+1. Idite na **Segmenti** i odaberite karticu **Uvidi (pretpregled)**.
+
+1. Odaberite **Novo** i odaberite opciju **Preklapanje** u oknu **Odabir vrste uvida**.
+
+1. Odaberite segmente koji vas zanimaju i odaberite **Dalje**.
+
+1. Također, možete odabrati jedno ili više polja koja vas zanimaju kako biste analizirali preklapanja za svaku moguću vrijednost polja i zatim odabrati **Dalje**.
+
+1. Navedite naziv za analizu preklapanja, neobvezni zaslonski naziv i opis.
+
+1. Odaberite **Spremi** kako biste započeli analizu. Analiza preklapanja bit će spremna kada se status promijeni s Osvježavanje na Uspješno.
+
+### <a name="view-and-optimize-an-overlap-analysis"></a>Prikaz i optimiziranje analize preklapanja
+
+Nakon dovršetka analize, pronađite detalje o ovom uvidu u **Segmenti** > **Uvidi (pretpregled)**.
+
+> [!div class="mx-imgBorder"]
+> :::image type="content" source="media/segment-overlap.png" alt-text="Pojedinosti uvida o preklapanju segmenta":::
+
+Odaberite uvid da biste vidjeli rezultate analize:
+
+- Broj članova kod kojih se preklapaju segmenti odabrani za analizu.
+- Broj članova koji su uključeni u jedan od segmenata, ali ne i u ostale segmente.
+- Ako ste tijekom konfiguriranja analize preklapanja odabrali polja, naći ćete ih na odgovarajućim karticama. Pomoću padajućeg izbornika filtra možete odabrati bilo koju razinu atributa koja vas zanima, a tablica pri dnu prikazat će odgovarajuće podatke.
+
+## <a name="segment-differentiators"></a>Diferencijatori segmenta
+
+Elementi razlikovanja segmenata pomažu vam otkriti po čemu se neki segment razlikuje od ostalih klijenata ili nekog drugog segmenta. Trebate samo odabrati segment i sustav će prepoznati atribute profila i mjere koje razlikuju odabrani segment.
+
+### <a name="run-a-differentiator-analysis"></a>Pokretanje analize elemenata razlikovanja
+
+1. Idite na **Segmenti** i odaberite karticu **Uvidi (pretpregled)**.
+
+1. Odaberite **Novo** i odaberite opciju **Preklapanje** u oknu **Odabir vrste uvida**.
+
+1. Odaberite segment koji želite analizirati kao **Primarni segment** i odaberite **Dalje**.
+
+1. Odaberite **Svi klijenti** ili **Sekundarni segment** za usporedbu vašeg primarnog segmenta i zatim odaberite **Dalje**.
+
+1. Također, možete odabrati jedno ili više polja koja vas zanimaju da biste analizu usredotočili na određene atribute i zatim odaberite **Dalje**.
+
+1. Navedite naziv za analizu preklapanja, neobvezni zaslonski naziv i opis.
+
+1. Odaberite **Spremi** kako biste započeli analizu. Analiza preklapanja bit će spremna kada se status promijeni s Osvježavanje na Uspješno.
+
+### <a name="view-and-optimize-a-differentiators-analysis"></a>Prikaz i optimiziranje analize elemenata razlikovanja
+
+Nakon dovršetka analize, pronađite detalje o ovom uvidu u **Segmenti** > **Uvidi (pretpregled)**.
+
+> [!div class="mx-imgBorder"]
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Pojedinosti uvida u elemente razlikovanja segmenta":::
+
+Odaberite uvid da biste vidjeli rezultate analize. Analiza elemenata razlikovanja uključuje dvije kartice. Na kartici **Atributi** nalaze se atributi profila koji se smatraju elementima razlikovanja. Na kartici **Mjere** nalaze se elementi razlikovanja. Svaka kartica sadrži sljedeće detalje:
+
+- Rangirani popis elemenata razlikovanja, poredan po ocjeni razlike.
+- **Ocjena razlike** za svaki element razlikovanja. Ocjena razlike predstavlja stupanj razlike atributa između dva segmenta. Što je veća ocjena razlike, to se više atributi razlikuju između dva segmenta. Odaberite ocjenu kako bi se otvorilo okno **Ocjena razlike** s raspodjelom vrijednosti za taj atribut.
+
+## <a name="manage-segment-insights"></a>Upravljanje uvidima u segmente
+
+Sljedeće opcije s naredbene trake možete koristiti za svoje uvide:
+
+- **Natrag** za vraćanje popisa uvida
+- **Osvježi** za ponovno pokretanje analize
+- **Izbriši** za uklanjanje ovog uvida
