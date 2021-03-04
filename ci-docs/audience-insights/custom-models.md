@@ -4,16 +4,16 @@ description: Radite s prilagođenim modelima iz Strojnog učenja Azure u aplikac
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668894"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267225"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli za strojno učenje
 
@@ -46,15 +46,15 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 
 1. Odaberite web-servis Studio strojnog učenja (klasični) ili kanal Strojno učenje Azure na padajućem popisu **Web-servis koji sadrži vaš model**. Zatim odaberite **Dalje**.
    - Saznajte više o [objavljivanju web-servisa u Studiju strojnog učenja (klasični)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Saznajte više o [objavljivanju kanala u Strojnom učenju Azure pomoću dizajnera](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [SDK-a](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Vaš kanal mora biti objavljen pod [krajnjom točkom kanala](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Saznajte više o [objavljivanju kanala u Strojnom učenju Azure pomoću dizajnera](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [SDK-a](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš kanal mora biti objavljen pod [krajnjom točkom kanala](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Za svaki **Ulazni podatak web-servisa** odaberite odgovarajući **Entitet** iz uvida u ciljnu skupinu pa odaberite **Dalje**.
+   > [!NOTE]
+   > Tijek rada prilagođenog modela primijenit će heuristiku za mapiranje polja za unos web-usluga u atribute entiteta na temelju naziva i vrste podataka polja. Vidjet ćete pogrešku ako se polje web-usluge ne može mapirati na entitet.
 
    > [!div class="mx-imgBorder"]
    > ![Konfiguracija tijeka rada](media/intelligence-screen2-updated.png "Konfiguracija tijeka rada")
-
+   
 1. U koraku **Izlazni parametri modela**, postavite sljedeća svojstva:
    - Studio strojnog učenja (klasični)
       1. Unesite izlazni **Naziv entiteta** u koji želite da idu izlazni rezultati web-servisa.
@@ -112,3 +112,6 @@ Vaš tijek rada se također pokreće automatski sa svakim zakazanim osvježavanj
 1. Odaberite **Izbriši** i potvrdite brisanje.
 
 Vaš će se tijek rada izbrisati. [Entitet](entities.md) koji je stvoren kada ste stvorili tijek rada ostaje i može se pregledati na stranici **Entiteti**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

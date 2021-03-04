@@ -5,16 +5,16 @@ ms.date: 12/02/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 86aa8c66a47ee61741082c95f05d2e5ce3f06f35
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: 64d781f52e8124fc3e83a7b84f468830c5249cfd
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667175"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270149"
 ---
 # <a name="liverampreg-connector-preview"></a>Poveznik za LiveRamp&reg; (pretpregled)
 
@@ -69,3 +69,5 @@ Nakon uspješnog izvoza možete se prijaviti u LiveRamp Onboarding da biste akti
 
 Kada omogućite Dynamics 365 Customer Insights za prijenos podataka u Liveramp, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prema vašoj uputi prenijeti takve podatke, ali vi ste odgovorni za to da Liveramp ispunjava sve obaveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš administrator usluge Dynamics 365 Customer Insights može ovo odredište izvoza ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689166"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270271"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Unos podataka u stvarnom vremenu (pretpregled)
 
@@ -83,6 +83,7 @@ Pojedinosti ovog API-ja, uključujući parametre i odgovore, možete pronaći u 
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Objašnjenje uporabe u stvarnom vremenu uz telemetriju
 
-Dohvatite pregled količine zahtjeva API-ju u stvarnom vremenu i informacije o problemima na koje sustav može naići. Možete [pristupiti telemetriji u stvarnom vremenu](system.md#api-usage-tab) odlaskom u **Admin** > **Sustav** > **Upotreba API-ja**. U tablici **Operacije** retci za API operacije koje primjenjuju metode u stvarnom vremenu sadrže gumb za prikaz upotrebe API-ja u stvarnom vremenu. Gumb je prikazan sa simbolom dvogleda. Odaberite gumb da biste otvorili bočno okno s detaljima o upotrebi API-ja u stvarnom vremenu u trenutačnom okruženju.
+Dohvatite pregled količine zahtjeva API-ju u stvarnom vremenu i informacije o problemima na koje sustav može naići. Možete [pristupiti telemetriji u stvarnom vremenu](system.md#api-usage-tab). 
 
-Koristite birača **Grupiraj prema** da biste odabrali kako najbolje predstaviti svoje interakcije u stvarnom vremenu na vremenskoj traci u rasponu od posljednja 24 sata do posljednjih 30 dana. Možete grupirati podatke prema načinu rada API-ja, nazivu kvalificiranog entiteta (uvučeni entitet), kreatoru (izvor događaja), rezultatu (uspjeh ili neuspjeh) ili kodovima pogrešaka. Podaci su dostupni u vidu povijesnog grafikona i tablice.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

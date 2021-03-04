@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405318"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267759"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezivanje s izvorom podataka platforme Power Query
 
@@ -28,7 +28,10 @@ Power Query nudi širok skup poveznika za unos podataka. Većinu ovih poveznika 
 
 1. Odaberite način **Uvoz podataka** i zatim **Dalje**.
 
-1. Navedite **Naziv** izvora podataka i odaberite **Dalje** kako biste stvorili izvor podataka.
+1. Navedite **Naziv** izvora podataka i odaberite **Dalje** kako biste stvorili izvor podataka. Imenujte smjernice: 
+   - Započnite slovom.
+   - Koristite samo slova i brojeve. Nisu dopušteni posebni znakovi i razmaci.
+   - Koristite između 3 i 64 znaka.
 
 1. Odaberite jedan od [dostupnih poveznika](#available-power-query-data-sources). Za ovaj primjer odabiremo poveznik **Tekst/CSV**.
 
@@ -77,3 +80,6 @@ Poveznici s kvačicom u stupcu **Customer Insights (tijekovi podataka)** dostupn
 3. Primijenite svoje promjene i pretvorbe u dijaloškom okviru **Power Query – Uređivanje upita** onako kao je opisano u odjeljku [Stvaranje novog izvora podataka](#create-a-new-data-source).
 
 4. Kako biste nakon dovršetka uređivanja spremili promjene na platformu Power Query, odaberite **Spremi**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

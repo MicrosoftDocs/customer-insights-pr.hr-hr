@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643944"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269689"
 ---
-# <a name="overview-about-data-sources"></a>Pregled izvora podataka
+# <a name="data-sources-overview"></a>Pregled izvora podataka
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Vidjet ćete naziv svakog unijetog izvor podataka, njegov status i zadnji put ka
 |Osvježavanje    |U tijeku je unos podataka. Ovu operaciju možete otkazati tako da odaberete **Prekini osvježavanje** u stupcu **Radnje**. Ako prekinete osvježavanje, izvor podataka vratit će se na posljednje stanje osvježavanja.       |
 |Neuspjelo     |Došlo je do pogreške pri unosu podataka.         |
 
-Odaberite **Osvježavanje statusa** za pregled više pojedinosti o statusu osvježavanja, uključujući pojedinosti o pogreškama i ažuriranjima završnih procesa.
+Odaberite vrijednost u stupcu **Status** bilo kojeg izvora podataka za pregled više pojedinosti. U oknu **Pojedinosti o napretku** proširite **Izvori podataka**. Odaberite **Vidi pojedinosti** za više podataka o statusu osvježavanja, uključujući pojedinosti o pogreškama i ažuriranjima završnih procesa.
 
 Učitavanje podataka može potrajati. Nakon uspješnog osvježavanja umetnuti podaci mogu se pregledati na stranici **Entiteti**. Dodatne informacije potražite u odjeljku [Entiteti](entities.md).
 
@@ -76,3 +76,6 @@ Da biste osvježili izvor podataka na zahtjev, slijedite korake u nastavku:
 2. Odaberite okomitu trotočku pored izvora podataka koju želite ukloniti i odaberite **Izbriši** iz padajućeg izbornika.
 
 3. Potvrdite brisanje.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,17 +4,17 @@ description: Uvoz podataka iz rješenja Data Lake kojim upravlja platforma Commo
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643389"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267800"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Povezivanje s podacima iz rješenja Data Lake kojim upravlja platforma Common Data Service.
 
@@ -34,7 +34,10 @@ Podaci pohranjeni u internetskom servisu kao što je Azure Data Lake Storage mog
 
 3. Odaberite **Poveži se s opcijom Common Data Service** i odaberite **Sljedeće**.
 
-4. Unesite **Naziv** za izvor podataka i odaberite **Dalje**.
+4. Unesite **Naziv** za izvor podataka i odaberite **Dalje**. Imenujte smjernice: 
+   - Započnite slovom.
+   - Koristite samo slova i brojeve. Nisu dopušteni posebni znakovi i razmaci.
+   - Koristite između 3 i 64 znaka.
 
 5. Navedite **Adresu poslužitelja** za svoju tvrtku ili ustanovu Common Data Service i odaberite **Prijava**.
 
@@ -65,3 +68,6 @@ Da biste povezali drugi Common Data Service, [stvorite novi izvor podataka](#con
 3. S popisa odaberite mogućnost **Uredi**.
 
 4. Odaberite dodatne entitete s dostupnog popisa entiteta i odaberite **Spremi**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

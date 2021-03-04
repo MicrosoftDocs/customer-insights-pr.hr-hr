@@ -1,7 +1,7 @@
 ---
 title: Instalacija i konfiguracija Dodatka za karticu klijenta
 description: Instalirajte i konfigurirajte dodatak za korisničku karticu za Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644034"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268035"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatak kartice klijenta (pretpregled)
 
@@ -28,7 +28,7 @@ Dobijte prikaz svojih klijenata od 360 stupnjeva izravno u Dynamics 365 aplikaci
 - Profili klijenata [uneseno iz Dynamics 365 aplikacije pomoću servisa Common Data Service](connect-power-query.md).
 - Korisnici Dodatka za karticu klijenta moraju se [dodati kao korisnici](permissions.md) u uvidima ciljne skupine.
 - [Konfigurirane mogućnosti pretraživanja i filtriranja](search-filter-index.md).
-- Kontrola demografije: Demografska polja, poput dobi ili spola, dostupna su u objedinjenom profilu klijenta.
+- Kontrola demografije: demografska polja (kao što su dob ili spola) dostupna su u objedinjenom profilu klijenta.
 - Kontrola obogaćivanja: Zahtijeva aktivna [obogaćivanja](enrichment-hub.md) primijenjena na profile klijenata.
 - Kontrola inteligencije: Potrebni su podaci stvoreni pomoću alata za strojno učenje na platformi Azure ([Predviđanja](predictions.md) ili [Prilagođeni modeli](custom-models.md))
 - Kontrola mjerenja: Zahtijeva [konfigurirana mjerenja](measures.md).
@@ -92,10 +92,26 @@ Možda će biti potrebno neko vrijeme da se rješenje instalira u vaše okružen
 
 1. U dijalogu **Svojstva polja** poništite potvrdni okvir **Prikazani natpis na obrascu**.
 
-1. Odaberite mogućnost **Web** za kontrolu. Za kontrolu obogaćivanja, konfiguriranjem polja **enrichmentType** odaberite vrstu obogaćivanja koju želite prikazati. Za svaku vrstu obogaćivanja morate dodati zasebnu kontrolu obogaćivanja.
+1. Odaberite mogućnost **Web** za kontrolu. Za kontrolu obogaćivanja, konfiguriranjem polja **enrichmentType** odaberite vrstu obogaćivanja koju želite prikazati. Dodajte zasebnu kontrolu obogaćivanja za svaku vrstu obogaćivanja.
 
 1. Odaberite **Spremi** i **Objavi** da biste objavili ažurirani obrazac za kontakt.
 
 1. Idite na objavljeni obrazac za kontakt. Vidjet ćete novododanu kontrolu. Možda ćete se morati prijaviti prilikom prvog korištenja.
 
 1. Da biste prilagodili ono što želite prikazati na prilagođenoj kontroli, odaberite gumb za uređivanje u gornjem desnom kutu.
+
+## <a name="upgrade-customer-card-add-in"></a>Nadogradnja dodatka za karticu kupca
+Dodatak za karticu kupca ne nadograđuje se automatski. Da biste nadogradili na najnoviju verziju, slijedite ovaj postupak u aplikaciji Dynamics 365 u kojoj je instaliran dodatak.
+
+1. U aplikaciji Dynamics 365 idite na **Postavke** > **Prilagođavanje** i odaberite **Rješenja**.
+
+1. U tablici dodataka potražite **CustomerInsightsCustomerCard** i odaberite redak.
+
+1. Odaberite **Primijeni nadogradnju rješenja** na akcijskoj traci.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Nadogradite rješenje u području prilagođavanja aplikacija Dynamics 365":::
+
+1. Nakon pokretanja postupka nadogradnje vidjet ćete indikator učitavanja sve dok nadogradnja ne završi. Ako nema novije verzije, nadogradnja će prikazati poruku o pogrešci.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

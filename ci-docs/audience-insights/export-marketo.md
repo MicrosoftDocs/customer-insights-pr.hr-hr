@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 34ccee2894f1f2b552d0c6a88a6810e2dfc677a3
-ms.sourcegitcommit: 0b1d3ca11b8ba362a959da0eea15c37e9cdba084
+ms.openlocfilehash: e0245f2d01aabc86f43532822c056965ff7ae67a
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "4570394"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267072"
 ---
 # <a name="connector-for-marketo-preview"></a>Poveznik za Marketo (pretpregled)
 
@@ -74,3 +74,6 @@ Možete [izvesti podatke na zahtjev](export-destinations.md). Podaci će se izvo
 
 Kada omogućite Dynamics 365 Customer Insights za prijenos podataka u Marketo, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prema vašoj uputi prenijeti takve podatke, ali vi ste odgovorni za to da Marketo ispunjava sve obaveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš administrator usluge Dynamics 365 Customer Insights može ovo odredište izvoza ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

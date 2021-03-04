@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f276a73feca52023391ad92fbc84359921b85328
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405325"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268677"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahtjevi subjekta podataka (ZSP) za prava pod OUZP-om
 
@@ -75,3 +75,6 @@ Administrator klijenta može pratiti ove korake za izvoz podataka:
 1. Pošaljite e-poštu na D365CI@microsoft.com i u zahtjevu navedite adresu e-pošte korisnika. Tim Customer Insights poslat će poruku e-pošte na registriranu adresu e-pošte administratora klijenta i zatražiti potvrdu za izvoz podataka.
 2. Potvrdite zahtjev za izvozom podataka za zatraženog korisnika.
 3. Primite izvezene podatke putem adrese e-pošte administratora klijenta.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

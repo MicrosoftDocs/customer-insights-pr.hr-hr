@@ -3,26 +3,34 @@ title: Pregled proizvoda
 author: m-hartmann
 description: Nabavite pregled za Dynamics 365 Customer Insights i njegove mogućnosti.
 ms.author: mhart
-ms.date: 10/16/2020
+ms.date: 02/16/2021
 ms.service: customer-insights
-ms.topic: conceptual
-ms.openlocfilehash: e0b46652a087f9d16d9f2f5c6e955761be8da208
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.topic: overview
+ms.manager: shellyha
+ms.openlocfilehash: 815220b7dd2fcd4df31c0cff8f6b55eb3a055669
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405348"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476940"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Pregled proizvoda za Dynamics 365 Customer Insights
 
-Dynamics 365 Customer Insights dio je Microsoftove platforme za podatke o klijentima (CDP) koja pomaže u pružanju personaliziranih korisničkih iskustava. Objedinite podatke o klijentima u cijelom rasponu izvora da biste dobili jedinstveni prikaz klijenata. 
+Dynamics 365 Customer Insights dio je Microsoftove platforme za podatke o klijentima (CDP) koja pomaže u pružanju personaliziranih korisničkih iskustava. Mogućnosti platforme pružaju uvide u to tko su vaši kupci i kako stupaju u interakciju s vašom platformom. Objedinite podatke o klijentima iz više izvora da biste dobili jedinstveni prikaz klijenata.
 
-Pretvorite se u tvrtku ili ustanovu usmjerenu na klijenta u kojoj profesionalci za marketing, prodaju i usluge imaju uvide potrebne za personalizaciju iskustava. Izgradite dublje razumijevanje svojih klijenata. Povežite podatke iz različitih izvora transakcija, ponašanja i promatranja kako biste stvorili sveobuhvatan prikaz klijenta. Brže pogledajte rezultate pomoću CDP-a osmišljenog da pruži uvide na temelju kojih možete djelovati. 
 
-Steknite gotove uvide s predlošcima za brzi početak. Brzo gradite, testirajte i implementirajte prilagođene AI/ML modele koristeći analitička rješenja u omjeru. Aktivirajte uvide u stvarnom vremenu za pokretanje radnji. Održite potpunu kontrolu nad podacima o klijentima kako biste osigurali najvišu razinu upravljanja i usklađenosti s podacima. 
+- [Uvidi u ciljnu skupinu](audience-insights/overview.md) pomažu vam transformirati vaše poslovanje u tvrtku ili ustanovu kojoj je u središtu klijent. Stručnjaci za marketing, prodaju i usluge imaju uvide potrebne za personalizaciju iskustava. Povežite podatke iz transakcijskih, biheviorističkih i promatračkih izvora da biste stvorili cjeloviti prikaz klijenta. Brže pogledajte rezultate pomoću CDP-a osmišljenog da pruži uvide na temelju kojih možete djelovati. 
 
-Dvije su glavne mogućnosti: 
-
-- [Uvidi u ciljne skupine](audience-insights/overview.md)
-- [Uvidi u angažman (pretpregled)](engagement-insights/index.yml)
+- [Uvidi u angažman (pretpregled)](engagement-insights/index.yml) omogućuju vam interaktivno razumijevanje načina na koji vaši klijenti koriste vaše usluge i proizvode – pojedinačno i cjelovito – na web-mjestima, mobilnim aplikacijama i povezanim proizvodima. Kombinirajte analitiku ponašanja s transakcijskim, demografskim, podacima iz upitnika i ostalim vrstama podataka iz usluge Microsoft Dynamics 365 Customer Insights. Održite potpunu kontrolu nad podacima o klijentima kako biste osigurali najvišu razinu upravljanja i usklađenosti s podacima.
  
+## <a name="choose-a-capability"></a>Odabir mogućnosti
+
+:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Stranica Customer insights koja vam omogućuje da prijeđete na uvide u ciljnu skupinu ili uvide u angažman.":::
+
+Da biste odabrali mogućnost
+
+1. U navigacijskom oknu odaberite **Sve aplikacije** da biste otvorili prozor **Odaberi svoj fokus**.
+1. Odaberite **Idi sad** za navigaciju do mogućnosti po vašem izboru.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

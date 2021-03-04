@@ -1,7 +1,7 @@
 ---
 title: Pretražite i filtrirajte profile klijenata
 description: Pronađite brzo informacije o objedinjenim profilima klijenata i filtrirajte određene atribute.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405341"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270057"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profili klijenta: indeks pretraživanja i filtriranja
 
@@ -28,14 +28,6 @@ Rezultat objedinjavanja podataka vaših klijenata jest entitet Profil klijenta k
 Ako kao administrator po prvi put definirate atribute koje je moguće pretraživati, prvo trebate definirati indeksirana polja. Preporučujemo da odaberete sve atribute po kojima korisnici mogu pretraživati i filtrirati klijente na stranici **Klijenti**. Možete odrediti samo atribute koji postoje na entitetu Profil klijenta, koji ste izradili tijekom postupka objedinjavanja podataka.
 
 1. Otvorite stranicu **Kupci** i odaberite **Pretraži i filtriraj indeks**.
-
-> [!NOTE]
-> Stvaramo zadanu konfiguraciju indeksa pretraživanja na dostupnim atributima u entitetu Kupac na temelju sljedećih semantičkih vrsta definiranih na stranici Karta.
-> - Ime, prezime, srednje ime, puno ime osobe
-> - Naziv organizacije
-> - Adresa e-pošte
-> - Telefonski broj
-> - Podaci o lokaciji
 
 2. Odaberite **+ Dodaj** da biste odredili indeksirana polja.
 
@@ -65,3 +57,10 @@ Izbornik **Filtar** na stranici **Klijenti** može uključivati različit broj r
 2. Odaberite **Spremi** za primjenu izmjena.
 
 3. Odaberite **Pokreni** kad budete spremni primijeniti svoje postavke.
+
+## <a name="next-steps"></a>Sljedeći koraci
+
+Idite na stranicu **Klijenti** za pretraživanje korisničkih profila ili upotrijebite indeksirana polja za prikaz podskupa svih korisničkih profila.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

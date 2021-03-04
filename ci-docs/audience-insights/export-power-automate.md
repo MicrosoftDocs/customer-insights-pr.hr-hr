@@ -1,20 +1,20 @@
 ---
 title: Poveznik programa Power Automate | Microsoft Docs
 description: Stvaranje tijekova u povezniku Microsoft Power Automate iz usluge Dynamics 365 Customer Insights,
-ms.date: 08/03/2020
+ms.date: 01/20/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405294"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268815"
 ---
 # <a name="power-automate-connector-preview"></a>Poveznik Power Automate (pretpregled)
 
@@ -22,7 +22,7 @@ Postavite okidač da se određeni događaji dogode automatski kada se podaci pro
 
 ## <a name="power-automate-triggers"></a>Power Automate okidači
 
-Možete koristiti razne okidače koji vam omogućuju stvarati protoke u cilju automatizacije ponavljajućih zadataka, poput obavijesti ili naprednijih radnji. 
+Koristite okidače za stvaranje tokova oblaka i automatizaciju ponavljajućih zadataka, kao što su obavijesti ili naprednije mogućnosti. 
 
 - Okidanje kad osvježavanje izvora podataka ne uspije. 
 - Okidanje kad osvježavanje izvora podataka uspije.
@@ -36,14 +36,20 @@ Možete koristiti razne okidače koji vam omogućuju stvarati protoke u cilju au
 ## <a name="power-automate-actions"></a>Radnje u aplikaciji Power Automate
 Poveznik aplikacije Power Automate pruža druge radnje u odnosu na dostupne okidače. Dodatne informacije potražite na [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>Stvaranje tijeka servisa Power Automate u uvidima u ciljnu skupinu
+## <a name="create-a-power-automate-flow"></a>Stvori tijek Power Automate
 
-1. U uvidima u ciljnu skupinu idite na **Administrator** > **Sustav**.
+1. U uvidima u ciljnu skupinu idite na **Administrator** > **Odredišta izvoza**.
 
-1. Na stranici **Sustav** odaberite karticu **Status**.
+1. Na pločici **Power Automate** odaberite **Postavi**.
 
-1. U odjeljku **Izvori podataka** odaberite **Tijekovi** i odaberite **Stvori tijek** s padajućeg popisa.
-   > [!div class="mx-imgBorder"]
-   > ![Poveznik Power Automate prikazuje radnju Stvaranje tijeka](media/power-automate-connector-create-flow.png "Poveznik Power Automate prikazuje radnju Stvaranje tijeka")
+1. Otvara se poveznik za Customer Insights (pretpregled) u usluzi Power Automate. **Prijavite se** u uslugu Power Automate.
 
-1. U servisu Power Automate odaberite jedan od dostupnih okidača kako biste stvorili željeni tijek. Ako stvarate svoj prvi tijek, morate prvo provjeriti autentičnost uz poveznik Power Automate.
+1. Odaberite jedan od dostupnih okidača i dodajte više koraka svojem novom tijeku. Za dodatne informacije pogledajte [Stvaranje toka oblaka u Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+
+Primjeri korištenja tijekova: 
+- Pošaljite poruku na kanal Microsoft Teams ako ne uspije osvježavanje izvora podataka . 
+- Pošaljite e-poštu vlasnicima podataka kada se prijeđe prag na segmentu.
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

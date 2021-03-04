@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: c25cfbf3808fc1534b54d2d834f1c63ff4c9fe0a
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: 6b73aa93ec1a98f2b8d20d02e88bc6304f887078
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667085"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269459"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za korisničke profile (pretpregled)
 
@@ -51,3 +51,6 @@ Odaberite obogaćivanje da biste vidjeli dostupne mogućnosti. Ili možete odabr
 - **Izbrišite** obogaćivanje.
 
 Možete pokrenuti ili deaktivirati više obogaćivanja odjednom njihovim odabirom na popisu. Mogućnosti prikaza i uređivanja nisu dostupne kao skupna radnja i istovremeno rade samo za jedno obogaćivanje.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Poveznik za Power Apps
 description: Povežite se s uslugama Power Apps i Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405296"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268907"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Poveznik za Microsoft Power Apps (pretpregled)
 
@@ -31,7 +31,7 @@ Pogledajte dokumentaciju Power Apps da biste saznali kako [dodati podatkovnu vez
 Nakon dodavanja Customer Insights kao podatkovne veze možete odabrati sljedeće entitete u Power Apps:
 
 - Klijent: za korištenje podataka s [objedinjenog profila klijenta](customer-profiles.md).
-- Objedinjena aktivnost klijenta: za prikaz [vremenske trake aktivnosti](activities.md) u aplikaciji.
+- UnifiedActivity: za prikaz [vremenske trake aktivnosti](activities.md) u aplikaciji.
 
 ## <a name="limitations"></a>Ograničenja
 
@@ -72,3 +72,6 @@ Na primjer, profile klijenata dodajete [kontroli galerije](https://docs.microsof
 1. Da biste prikazali objedinjenu vremensku traku za klijenta, dodajte element Galerija i dodajte svojstvo Stavke: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
 
     Primjer: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

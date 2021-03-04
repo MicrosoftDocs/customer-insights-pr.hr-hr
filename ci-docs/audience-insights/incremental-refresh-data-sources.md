@@ -5,16 +5,16 @@ ms.date: 09/28/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b7e834f5f2fd1328563139675d7f850008348734
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d4b01be75d25fa0e120904924a193171eefec579
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405329"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268539"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Dodatno osvježavanje izvora podataka koji se temelje na platformi Power Query
 
@@ -54,3 +54,6 @@ Uvidi u ciljnu skupinu omogućuju inkrementalno osvježavanje za izvore podataka
    - **Provjeri ima li ažuriranja svakih**: navedite vremenski okvir za inkrementalno osvježavanje.
 
 1. Odaberite **Spremi** da biste dovršili izradu izvora podataka. Početno osvježavanje podataka bit će potpuno osvježavanje. Nakon toga, inkrementalno osvježavanje podataka izvodi se kao što je konfigurirano u prethodnom koraku.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

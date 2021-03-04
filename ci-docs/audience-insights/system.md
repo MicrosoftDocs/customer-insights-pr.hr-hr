@@ -1,7 +1,7 @@
 ---
 title: Konfiguracija sustava u uvidima u ciljnu skupinu
 description: Saznajte više o postavkama sustava u mogućnosti uvidi u ciljnu skupinu Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405338"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267331"
 ---
 # <a name="system-configuration"></a>Konfiguracija sustava
 
-Stranica **Sustav** uključuje četiri kartice: **Stanje**, **Raspored**, **O sustavu** i **Općenito**.
+Stranica **Sustav** uključuje sljedeće kartice:
+- [Stanje](#status-tab)
+- [Raspored](#schedule-tab)
+- [Upotreba API-ja](#api-usage-tab)
+- [Više o](#about-tab)
+- [Općenito](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Stranica sustava](media/system-tabs.png "Stranica sustava")
 
 ## <a name="status-tab"></a>Kartica Status
 
-Kartica **Status** omogućuje praćenje tijeka uvlačenja podataka, izvoza podataka i nekoliko važnih proizvodnih procesa. Pregledajte podatke na ovoj kartici da biste osigurali dovršetak aktivnih procesa.
+**Kartica statusa** omogućuje vam praćenje napretka unosa podataka, izvoza podataka i nekoliko drugih važnih procesa proizvoda. Pregledajte podatke na ovoj kartici da biste osigurali dovršetak aktivnih procesa.
 
-Ova kartica sadrži tablice stanja **Izvori podataka**, **Sustavni procesi** i **Priprema podataka**. Svaka tablica prati **Naziv** zadatka i odgovarajućeg entiteta, **Status** najnovijeg pokretanja i vrijeme za **Zadnje ažuriranje**.
+Ova kartica uključuje tablice s informacijama o statusu i obradi za različite procese. Svaka tablica prati **Naziv** zadatka i odgovarajućeg entiteta, **Status** najnovijeg pokretanja i vrijeme za **Zadnje ažuriranje**.
 
 Prikažite pojedinosti o posljednjih nekoliko pokretanja zadatka odabirom njegova naziva.
 
@@ -40,7 +45,7 @@ Postoji šest vrsta stanja za zadatke. Sljedeće vrste statusa prikazuju se i na
 - **Preskočen:** Zadatak je preskočen. Jedan ili više postupaka u nastavku o kojima ovaj zadatak ovisi nisu uspjeli ili su preskočeni.
 - **Neuspješno:** obrada zadatka nije uspjela.
 - **Otkazano:** korisnik je otkazao obradu prije nego što je dovršena.
-- **U redu čekanja:** obrada je u redu čekanja i započet će nakon dovršetka svih zadataka. Za dodatne informacije pogledajte [Pravila osvježavanja](#refresh-policies).
+- **U redu čekanja:** Obrada je u redu čekanja i započet će nakon dovršetka svih zadataka. Za dodatne informacije pogledajte [Pravila osvježavanja](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Pravila osvježavanja
 
@@ -89,4 +94,17 @@ Odaberite **Spremi** kako biste potvrdili svoje odabire.
 
 ## <a name="api-usage-tab"></a>Kartica Upotreba API-ja
 
-Pronađite pojedinosti o upotrebi API-ja u stvarnom vremenu i pogledajte koji su se događaji dogodili u određenom vremenskom rasponu. Za dodatne informacije pogledajte [Uvlačenje podataka u stvarnom vremenu](real-time-data-ingestion.md).
+Pronađite pojedinosti o korištenju API-ja u stvarnom vremenu i pogledajte koji su se događaji dogodili u danom vremenskom okviru. Odaberite vremenski okvir u padajućem izborniku **Odaberi vremenski okvir**. 
+
+**Korištenje API-ja** sadrži tri odjeljka: 
+- **Pozivi API-ja** – grafikon koji prikazuje skupni broj poziva API-ju u odabranom vremenskom okviru.
+
+- **Prijenos podataka** – grafikon koji prikazuje količinu podataka koja je prenesena putem API-ja u odabranom vremenskom okviru.
+
+-  **Operacije** – tablica s recima za svaku dostupnu operaciju API-ja i pojedinostima o korištenju operacija. Možete odabrati naziv operacije na koju želite ići [referenca za API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Operacije koje koriste [unos podataka u stvarnom vremenu](real-time-data-ingestion.md) sadrže gumb sa simbolom dalekozora za prikaz korištenja API-ja u stvarnom vremenu. Odaberite gumb da biste otvorili bočno okno s detaljima o upotrebi API-ja u stvarnom vremenu u trenutačnom okruženju.   
+   Koristite okvir **Grupiraj prema** u oknnu **Korištenje API-ja u stvarnom vremenu** da biste odabrali način kako najbolje predstaviti svoje interakcije u stvarnom vremenu. Možete grupirati podatke prema načinu rada API-ja, nazivu kvalificiranog entiteta (uvučeni entitet), kreatoru (izvor događaja), rezultatu (uspjeh ili neuspjeh) ili kodovima pogrešaka. Podaci su dostupni u vidu povijesnog grafikona i tablice.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

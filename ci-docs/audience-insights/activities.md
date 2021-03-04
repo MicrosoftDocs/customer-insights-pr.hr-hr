@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667220"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267423"
 ---
 # <a name="customer-activities"></a>Aktivnosti klijenta
 
@@ -44,13 +44,13 @@ Vaši izvori podataka uključuju entitete s podacima o transakcijama i aktivnost
 
 1. U odjeljku **Postavi odnos** konfigurirajte pojedinosti da biste povezali podatke o aktivnosti s odgovarajućim klijentom.
 
-   > [!div class="mx-imgBorder"]
-   > ![Definiranje odnosa entiteta](media/activities-entities-define.png "Definiranje odnosa entiteta")
-
     - **Polje entiteta aktivnosti**: odaberite polje u svojem entitetu aktivnosti koje će se koristiti za uspostavljanje odnosa s drugim entitetom.
     - **Entitet klijenta**: odaberite odgovarajući izvorni entitet klijenta s kojim će entitet aktivnosti biti u odnosu. Možete se povezati samo s onim izvornim entitetima klijenta koji se koriste u postupku objedinjavanja podataka.
     - **Polje entiteta klijenta**: ovo polje pokazuje primarni ključ izvornog entiteta klijenta kao odabranog u postupku mapiranja. Ovo polje primarnog ključa u izvornom entitetu klijenta koristi se za uspostavljanje odnosa s entitetom aktivnosti.
     - **Naziv**: ako odnos između ovog entiteta aktivnosti i odabranog izvornog entiteta klijenta već postoji, naziv odnosa bit će u načinu rada samo za čitanje. Ako takav odnos ne postoji, stvorit će se novi odnos s ovdje navedenim nazivom.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Definiranje odnosa entiteta](media/activities-entities-define.png "Definiranje odnosa entiteta")
 
 1. Odaberite **Spremi** za primjenu izmjena.
 
@@ -82,3 +82,6 @@ Vaši izvori podataka uključuju entitete s podacima o transakcijama i aktivnost
 3. Odaberite ikonu **Izbriši**.
 
 4. Potvrdite brisanje.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

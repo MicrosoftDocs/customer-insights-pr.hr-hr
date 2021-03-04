@@ -4,17 +4,17 @@ description: Koristite predviđanja za popunjavanje nepotpunih podataka o kupcim
 ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: zacook
 manager: shellyha
-ms.openlocfilehash: 66f0b16b5d05741ab98ca5ce2157da8c46b6d9e0
-ms.sourcegitcommit: 5379c2b77d613d071a177f509e6417ebf3c47516
+ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "4648702"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268263"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Dopunite djelomične podatke predviđanjima
 
@@ -160,3 +160,6 @@ Ako ne možete dovršiti proces prilaganja usluge Common Data Service zbog pogre
     1. Odaberite korisnika kojeg ste stvorili.
     1. Odaberite **Upravljanje ulogama** na traci izbornika na vrhu.
     1. Odaberite **Administrator sustava**, zatim odaberite **U redu**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

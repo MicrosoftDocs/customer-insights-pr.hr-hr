@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644394"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268309"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transakcijsko predviđanje gubitka (pretpregled)
 
@@ -96,6 +96,8 @@ Transakcijsko predviđanje gubitka pomaže predvidjeti hoće li klijent prestati
 1. Ako želite, odaberite **Dodaj podatke** za **Aktivnosti klijenata**. Odaberite entitet koji pruža informacije o aktivnostima klijenata kao što je opisano u preduvjetima.
 
 1. Mapirajte semantička polja na atribute unutar entiteta aktivnosti klijenta i odaberite **Sljedeće**. Za opis polja pogledajte [preduvjete](#prerequisites).
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Mapirajte polja klijenata za transakcijske podatke.":::
 
 1. Odaberite vrstu aktivnosti koja odgovara vrsti aktivnosti klijenta koju konfigurirate. Odaberite **Stvori novo** i odaberite dostupnu vrstu aktivnosti ili stvorite novu vrstu.
 
@@ -185,3 +187,6 @@ Brisanjem predviđanja uklanja se i njegov izlazni entitet.
 1. Odaberite okomitu trotočku uz predviđanje koje želite izbrisati.
 
 1. Odaberite **Obriši**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

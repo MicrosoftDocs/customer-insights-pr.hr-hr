@@ -4,17 +4,17 @@ description: Prilagodite entitete da biste stvorili objedinjene profile klijenat
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405335"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267469"
 ---
 # <a name="match-entities"></a>Slaganje entiteta
 
@@ -22,7 +22,7 @@ Nakon završetka faze mapiranja, spremni ste za uparivanje entiteta. Faza upariv
 
 ## <a name="specify-the-match-order"></a>Zadavanje redoslijeda uparivanja
 
-Idite na **Objedini** > **Upari** i odaberite **Postavi redoslijed** da biste pokrenuli fazu uparivanja.
+Idite na **Podaci** > **Objedini** > **Upari** i odaberite **Postavi redoslijed** za početak faze podudaranja.
 
 Svako uparivanje objedinjuje dva ili više entiteta u jedan entitet, a istovremeno održava postojanost svakog objedinjenog zapisa klijenta. U sljedećem primjeru odabrali smo tri entiteta: **ContactCSV: TestData** kao **primarni** entitet, **WebAccountCSV: TestData** kao **entitet 2** i **CallRecordSmall: TestData** kao **entitet 3**. Dijagram iznad odabira ilustrira kako će se izvršiti redoslijed uparivanja.
 
@@ -136,7 +136,7 @@ Nakon što se deduplicirani zapis identificira, taj će se zapis koristiti u pro
 
 1. Pokretanje procesa podudaranja sada grupira zapise na temelju uvjeta definiranih u pravilima za uklanjanje duplikata. Nakon grupiranja zapisa primjenjuje se politika spajanja za identificiranje pobjedničkog zapisa.
 
-1. Ovaj se pobjednički zapis zatim prenosi na podudaranje među entitetima.
+1. Taj se pobjednički zapis zatim prenosi na međusobno podudaranje entiteta, zajedno sa zapisima koji nisu pobjednički (na primjer, zamjenski ID-jevi) da bi se poboljšala kvaliteta podudaranja.
 
 1. Bilo koja prilagođena pravila podudaranja definirana za pravila koja se uvijek podudaraju i nikada se ne podudaraju s preskočenim pravilima o uklanjanju duplikata. Ako pravilo o uklanjanju duplikata identificira podudarne zapise, a prilagođeno pravilo podudaranja postavi se tako da se nikada ne podudara s tim zapisima, tada se ova dva zapisa neće podudarati.
 
@@ -157,6 +157,17 @@ Proces prvog uparivanja rezultira izradom objedinjenog glavnog entiteta. Sva nak
 
 > [!TIP]
 > Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Osim toga, većina procesa [ovisi o ostalim procesima](system.md#refresh-policies). Možete odabrati status procesa da biste vidjeli pojedinosti o tijeku cijelog posla. Nakon odabira mogućnosti **Pogledaj pojedinosti** za jedan od zadataka posla pronaći ćete dodatne informacije: vrijeme obrade, zadnji datum obrade te sve pogreške i upozorenja povezana sa zadatkom.
+
+## <a name="deduplication-output-as-an-entity"></a>Izlazna vrijednost uklanjanja duplikata kao entitet
+Osim objedinjenog glavnog entiteta stvorenog kao dio međusobnog podudaranja entiteta, postupak uklanjanja duplikata također generira novi entitet za svaki entitet iz naloga za podudaranje da bi se identificirali deduplicirani zapisi. Ti se entiteti mogu pronaći zajedno s **ConflationMatchPairs:CustomerInsights** u odjeljku **Sustav** na stranici **Entiteti** s nazivom **Deduplication_Datasource_Entity**.
+
+Entitet izlazne vrijednosti uklanjanja duplikata sadrži sljedeće informacije:
+- ID-jevi/ključevi
+  - Polje primarnog ključa i njegovo zamjensko polje ID-ja. Polje zamjenskih ID-jeva sastoji se od svih zamjenskih ID-jeva identificiranih za zapis.
+  - Polje Deduplication_GroupId prikazuje grupu ili klaster identificiran unutar entiteta koji grupira sve slične zapise na temelju navedenih polja uklanjanja duplikata. To se koristi u svrhu obrade sustava. Ako nisu navedena ručna pravila za uklanjanje duplikata i ako se primjenjuju pravila za uklanjanje duplikata koja je definirao sustav, ovo polje možda nećete pronaći u entitetu izlazne vrijednosti uklanjanja duplikata.
+  - Deduplication_WinnerId: Ovo polje sadrži ID pobjednika iz identificiranih grupa ili klastera. Ako je Deduplication_WinnerId jednak vrijednosti primarnog ključa za zapis, to znači da je zapis pobjednički zapis.
+- Polja koja se koriste za definiranje pravila za uklanjanje duplikata.
+- Polja Pravilo i Ocjena označavaju koja su pravila za uklanjanja duplikata primijenjena i ocjenu koju vraća algoritam podudaranja.
 
 ## <a name="review-and-validate-your-matches"></a>Pregled i provjera valjanosti vaših uparivanja
 
@@ -200,6 +211,11 @@ Povećajte kvalitetu rekonfiguracijom nekih parametara uparivanja:
   > [!div class="mx-imgBorder"]
   > ![Dupliciranje pravila](media/configure-data-duplicate-rule.png "Dupliciranje pravila")
 
+- **Deaktiviraj pravilo** zadržava pravilo podudaranja dok ga isključuje iz postupka podudaranja.
+
+  > [!div class="mx-imgBorder"]
+  > ![Deaktiviraj pravilo](media/configure-data-deactivate-rule.png "Deaktiviraj pravilo")
+
 - **Uredite pravila** odabirom simbola **Uredi**. Možete izvršiti sljedeće promjene:
 
   - Promjena atributa za uvjet: Odaberite nove atribute unutar određenog retka uvjeta.
@@ -229,6 +245,8 @@ Možete odrediti uvjete s kojima bi se određeni zapisi trebali uvijek ili nikad
     - Ključ entiteta2: 34567
 
    Ista datoteka predloška može odrediti zapise prilagođenog uparivanja iz više entiteta.
+   
+   Ako želite navesti prilagođeno podudaranje za uklanjanje duplikata na entitetu, navedite isti entitet kao Entitet1 i Entitet2 i postavite različite vrijednosti primarnog ključa.
 
 5. Nakon dodavanja svih poništavanja koje želite primijeniti, spremite datoteku predloška.
 
@@ -250,3 +268,6 @@ Možete odrediti uvjete s kojima bi se određeni zapisi trebali uvijek ili nikad
 ## <a name="next-step"></a>Sljedeći korak
 
 Nakon dovršetka procesa uparivanja za barem jedan par uparivanja, moguće proturječnosti u podacima možete riješiti temom [**Spajanje**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

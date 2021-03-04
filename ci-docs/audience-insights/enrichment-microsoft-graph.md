@@ -1,26 +1,26 @@
 ---
 title: Obogaćivanje profila klijenata pomoću platforme Microsoft Graph
 description: Koristite vlasničke podatke iz programa Microsoft Graph da biste obogatili svoje podatke o klijentu s afinitetima prema robnoj marki i interesima.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405306"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269321"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogaćivanje profila klijenta s afinitetima prema robnoj marki i interesima (pretpregled)
 
 Koristite vlasničke podatke iz programa Microsoft Graph da biste obogatili svoje podatke o klijentu s afinitetima prema robnoj marki i interesima. Ti se afiniteti određuju na temelju podataka osoba koje imaju slične demografske podatke kao i vaši klijenti. Ove informacije pomažu vam da bolje razumijete i segmentirate svoje klijente na temelju njihovih afiniteta prema određenim robnim markama i interesima.
 
-U uvidima u ciljnu skupinu, idite na **Podaci** > **Obogaćivanje** da biste [konfigurirali i pregledali obogaćivanja](enrichment-hub.md).
+U uvidima u ciljnu skupinu idite na **Podaci** > **Obogaćivanje** da biste [konfigurirali i pregledali obogaćivanja](enrichment-hub.md).
 
 Da biste konfigurirali obogaćivanje afiniteta robne marke, idite na karticu **Otkrij** i odaberite **Obogati moje podatke** na pločici **Robne marke**.
 
@@ -35,16 +35,21 @@ Koristimo podatke mrežnog pretraživanja iz programa Microsoft Graph da bismo p
 
 [Saznajte više o programu Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Rezultat i pouzdanost afiniteta
+## <a name="affinity-level-and-score"></a>Razina i ocjena afiniteta
 
-**Rezultat afiniteta** izračunava se na skali od 100 bodova, a 100 predstavlja segment koji ima najveći afinitet prema robnoj marki ili interesu.
+Na svakom obogaćenom profilu klijenta pružamo dvije povezane vrijednosti – razinu afiniteta i ocjenu afiniteta. Te vam vrijednosti pomažu odrediti koliko je jak afinitet prema demografskom segmentu tog profila, prema marki ili interesu u usporedbi s ostalim demografskim segmentima.
 
-**Pouzdanost afiniteta** izračunava se i na ljestvici od 100 bodova. Označava razinu pouzdanosti sustava da segment ima afinitet prema robnoj marki ili interesu. Razina pouzdanosti temelji se na veličini segmenta i granularnosti segmenta. Veličina segmenta određena je količinom podataka koju imamo za određeni segment. Granularnost segmenta određuje se time koliko je atributa (dob, spol, mjesto) dostupno na profilu.
+*Razina afiniteta* sastoji se od četiri razine, a *ocjena afiniteta* izračunava se na skali od 100 točaka koja se mapira na razine afiniteta.
 
-Ne normaliziramo rezultate za vaš skup podataka. Zbog toga možda nećete vidjeti sve moguće vrijednosti rezultata afiniteta za svoj skup podataka. Na primjer, u vašim podacima možda neće biti obogaćenog profila klijenta s ocjenom afiniteta 100. To je moguće ako u demografskom segmentu nema klijenta koji je postigao 100 za određenu robnu marku ili interes.
 
-> [!TIP]
-> Kada [stvarate segmente](segments.md) pomoću rezultata afiniteta, pregledajte raspodjelu rezultata afiniteta za svoj skup podataka prije nego što odlučite o odgovarajućim graničnim rezultatima. Na primjer, rezultat afiniteta od 10 može se smatrati značajnim u skupu podataka koji ima najviši rezultat afiniteta od samo 25 za određenu robnu marku ili interes.
+|Razina afiniteta |Ocjena afiniteta  |
+|---------|---------|
+|Vrlo visoko     | 85 – 100       |
+|Visoko     | 70 – 84        |
+|Srednji     | 35 – 69        |
+|Nisko     | 1 – 34        |
+
+Ovisno o granularnosti koju biste željeli za mjerenje afiniteta, možete koristiti razinu ili ocjenu afiniteta. Ocjena afiniteta daje vam precizniju kontrolu.
 
 ## <a name="supported-countriesregions"></a>Podržane zemlje/regije
 
@@ -54,17 +59,13 @@ Za odabir zemlje otvorite **Obogaćivanje marki** ili **Obogaćivanje interesa**
 
 ### <a name="implications-related-to-country-selection"></a>Implikacije povezane s odabirom zemlje
 
-- Prilikom [odabira vlastitih marki](#define-your-brands-or-interests), pružit ćemo prijedloge na temelju odabrane zemlje/regije.
+- Kada [odabirete vlastite marke](#define-your-brands-or-interests), sustav pruža prijedloge na temelju odabrane države ili regije.
 
-- Pri [odabiru industrije](#define-your-brands-or-interests), identificirat ćemo najrelevantnije marke ili interese na temelju odabrane zemlje/regije.
+- Kada [odabirete industriju](#define-your-brands-or-interests), dobit ćete najrelevantnije marke ili interese na temelju odabrane države ili regije.
 
-- Prilikom [mapiranja vaših polja](#map-your-fields), ako polje Zemlja/regija nije mapirano, koristit ćemo podatke iz Microsoft Graph iz odabrane zemlje/regije za obogaćivanje korisničkih profila. Taj ćemo odabir koristiti i za obogaćivanje korisničkih profila koji nemaju dostupne podatke o zemlji/regiji.
-
-- Prilikom [obogaćivanja profila](#refresh-enrichment) obogatit ćemo sve profile klijenata za koje imamo dostupne podatke iz Microsoft Graph za odabrane marke i interese, uključujući profile koji nisu u odabranoj zemlji/regiji. Na primjer, ako ste odabrali Njemačku, obogatit ćemo profile smještene u Sjedinjenim Državama ako imamo dostupne podatke iz Microsoft Graph za odabrane marke i interese u SAD-u.
+- Kada [obogaćujete profile](#refresh-enrichment), obogatit ćemo sve profile klijenata za koje dobivamo podatke za odabrane marke i interese. Uključujući profile koji nisu u odabranoj državi ili regiji. Na primjer, ako ste odabrali Njemačku, obogatit ćemo profile smještene u Sjedinjenim Državama ako imamo dostupne podatke iz Microsoft Graph za odabrane marke i interese u SAD-u.
 
 ## <a name="configure-enrichment"></a>Konfiguracija obogaćivanja
-
-Konfiguriranje obogaćivanja robnih marki ili interesa sastoji se od dva koraka:
 
 ### <a name="define-your-brands-or-interests"></a>Definirajte svoje robne marke ili interese
 
@@ -75,9 +76,19 @@ Odaberite jednu od sljedećih mogućnosti:
 
 Da biste dodali robnu marku ili interes, unesite je u područje za unos da biste dobili prijedloge utemeljene na podudaranju uvjeta. Ako nismo naveli robnu marku ili interes koji tražite, pošaljite nam povratne informacije putem veze **Predloži**.
 
+### <a name="review-enrichment-preferences"></a>Preferencije obogaćivanja pregleda
+
+Pregledajte zadane preference obogaćivanja i ažurirajte ih ako je potrebno.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Snimka zaslona prozora s preferencama obogaćivanja.":::
+
+### <a name="select-entity-to-enrich"></a>Odabir entiteta za obogaćivanje
+
+Odaberite **Obogaćeni entitet** i odaberite skup podataka koji želite obogatiti podacima o tvrtki iz sustava Microsoft Graph. Možete odabrati entitet Klijent za obogaćivanje svih vaših profila klijenta ili odaberite segmentni entitet za obogaćivanje samo profila klijenata sadržanih u tom segmentu.
+
 ### <a name="map-your-fields"></a>Mapirajte svoja polja
 
-Mapirajte polja s vašeg objedinjenog entiteta klijenta u najmanje dva atributa za definiranje demografskog segmenta koji želite koristiti za obogaćivanje podataka o klijentu. Odaberite **Uredi** da biste definirali mapiranje polja i odaberite **Primijeni** kada završite. Odaberite **Spremi** da biste dovršili mapiranje polja.
+Mapirajte polja iz svojeg objedinjenog entiteta klijenta da biste definirali demografski segment koji želite da sustav koristi za obogaćivanje vaših podataka o klijentu. Mapirajte državu/regiju i najmanje atribute Datum rođenja ili Spol. Usto, morate mapirati barem jedan grad (i saveznu državu/pokrajinu) ili poštanski broj. Odaberite **Uredi** da biste definirali mapiranje polja i odaberite **Primijeni** kada završite. Odaberite **Spremi** da biste dovršili mapiranje polja.
 
 Sljedeći su formati i vrijednosti podržani, a vrijednosti ne razlikuju velika i mala slova:
 
@@ -120,3 +131,6 @@ Afiniteti robne marke i interesa mogu se pogledati i na pojedinačnim karticama 
 ## <a name="next-steps"></a>Sljedeći koraci
 
 Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [Segmente](segments.md), [Mjere](measures.md), čak [izvezite podatke](export-destinations.md) da biste pružili personalizirano iskustvo svojim klijentima.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

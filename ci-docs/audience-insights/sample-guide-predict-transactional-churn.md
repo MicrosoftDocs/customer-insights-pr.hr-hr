@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643584"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269781"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Vodič uzorka za predviđanje transakcijskog gubitka (pretpregled)
 
@@ -49,7 +49,7 @@ Pregledajte članke [o unosu podataka](data-sources.md) i posebice o [uvozu izvo
    [!div class="mx-imgBorder"]
    ![Promijenite DoB u Datum](media/ecommerce-dob-date.PNG "pretvori datum rođenja u datum")
 
-1. U polju „Naziv” u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **Kontakti e-trgovine**
+1. U polju **Naziv** u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **eCommerceContacts**
 
 1. Spremite izvor podataka.
 
@@ -66,7 +66,7 @@ Pregledajte članke [o unosu podataka](data-sources.md) i posebice o [uvozu izvo
    - **PurchasedOn**: datum/vrijeme
    - **Ukupna cijena**: valuta
    
-1. U polju „Naziv” u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **Kupovine putem e-trgovine**.
+1. U polju **Naziv** u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **eCommercePurchases**.
 
 1. Spremite izvor podataka.
 
@@ -84,7 +84,7 @@ Pregledajte članke [o unosu podataka](data-sources.md) i posebice o [uvozu izvo
    - **Nagradni bodovi**: cijeli broj
    - **Datum stvaranja**: datum/vrijeme
 
-1. U polju „Naziv” u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **Odanost klijenata**.
+1. U polju **Naziv** u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **Odanost klijenata**.
 
 1. Spremite izvor podataka.
 
@@ -166,7 +166,7 @@ S uspostavljenim objedinjenim profilima klijenata, sada možemo pokrenuti predvi
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Odaberite poluge modela Prozor predviđanja i definicija gubitka.":::
 
-1. Odaberite **Povijest kupovine (obavezno)** i za povijest pretplate odaberite **Dodaj podatke**.
+1. Odaberite **Povijest kupnje (obavezno)** i odaberite **Dodaj podatke** za povijest kupnje.
 
 1. Dodajte entitet **Kupovine e-trgovine: e-trgovina** i mapirajte polja iz e-trgovine u odgovarajuća polja koja model zahtijeva.
 
@@ -195,7 +195,7 @@ Možete stvoriti novi segment na temelju entiteta stvorenog prema modelu.
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Stvaranje segmenta s izlazom modela.":::
 
 1. Odaberite krajnju točku **Predviđanje gubitka pretplate OOB** i definirajte segment: 
-   - Polje: rezultat gubitka
+   - Polje: rezultat odbijanja
    - Operator: veće je od
    - Vrijednost: 0,6
    
@@ -204,3 +204,6 @@ Možete stvoriti novi segment na temelju entiteta stvorenog prema modelu.
 Sada imate segment koji se dinamički ažurira i koji identificira kupce s visokim rizikom za ovu pretplatu.
 
 Za dodatne informacije, pogledajte [Stvaranje segmenata i upravljanje njima](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

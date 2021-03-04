@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653971"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269827"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Vodič uzorka za predviđanje gubitka pretplate (pretpregled)
 
@@ -46,10 +46,9 @@ Pregledajte članke [o unosu podataka](data-sources.md) i posebice o [uvozu izvo
    - **Datum rođenja**: Datum
    - **Datum izrade**: datum/vrijeme/vremenska zona
 
-   [!div class="mx-imgBorder"]
-   ![Promijenite DoB u Datum](media/ecommerce-dob-date.PNG "pretvori datum rođenja u datum")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Pretvorite datum rođenja u datum.":::
 
-1. U polju „Naziv” u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **Kontakti e-trgovine**
+1. U polju **Naziv** u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **eCommerceContacts**
 
 1. Spremite izvor podataka.
 
@@ -67,7 +66,7 @@ Pregledajte članke [o unosu podataka](data-sources.md) i posebice o [uvozu izvo
    - **Nagradni bodovi**: cijeli broj
    - **Datum stvaranja**: datum/vrijeme
 
-1. U polju „Naziv” u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **Odanost klijenata**.
+1. U polju **Naziv** u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **Odanost klijenata**.
 
 1. Spremite izvor podataka.
 
@@ -90,7 +89,7 @@ Pregledajte članke [o unosu podataka](data-sources.md) i posebice o [uvozu izvo
    - **Is_auto_renew**: točno/netočno
    - **Ponavljajuća frekvencija u mjesecima**: cijeli broj
 
-1. U polju „Naziv” u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **Povijest pretplate**.
+1. U polju **Naziv** u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **Povijest pretplate**.
 
 1. Spremite izvor podataka.
 
@@ -230,3 +229,6 @@ Možete stvoriti novi segment na temelju entiteta stvorenog prema modelu.
 Sada imate segment koji se dinamički ažurira i koji identificira kupce s visokim rizikom za ovu pretplatu.
 
 Za dodatne informacije, pogledajte [Stvaranje segmenata i upravljanje njima](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405340"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269861"
 ---
 # <a name="relationships-between-entities"></a>Odnosi među entitetima
 
@@ -28,8 +28,8 @@ Tijekom procesa uparivanja i spajanja, sistemski odnosi izrađuju se iza scene n
 > ![Izrada odnosa](media/relationships-entities-merge.png "Izrada odnosa")
 
 - ***CustomerToContact* odnos** izrađen je između entiteta Klijent i entiteta Kontakt. Entitet Klijent dobiva polje ključa **Contact_contactId** za povezivanje s poljem ključa **contactId** entiteta Kontakt.
-- **_CustomerToAccount_ odnos** izrađen je između entiteta Klijent i entiteta Račun. Entitet Klijent dobiva polje ključa **Account_accountId** za povezivanje s poljem ključa **accountId** entiteta Račun.
-- **_CustomerToWebAccount_ odnos** izrađen je između entiteta Klijent i entiteta Web-račun. Entitet Klijent dobiva polje ključa **WebAccount_webaccountId** za povezivanje s poljem ključa **webaccountId** entiteta Web-račun.
+- ***CustomerToAccount* odnos** izrađen je između entiteta Klijent i entiteta Račun. Entitet Klijent dobiva polje ključa **Account_accountId** za povezivanje s poljem ključa **accountId** entiteta Račun.
+- ***CustomerToWebAccount* odnos** izrađen je između entiteta Klijent i entiteta Web-račun. Entitet Klijent dobiva polje ključa **WebAccount_webaccountId** za povezivanje s poljem ključa **webaccountId** entiteta Web-račun.
 
 ## <a name="create-a-relationship"></a>Izrada odnosa
 
@@ -69,3 +69,6 @@ Definirajte prilagođene odnose na stranici **Odnosi**. Svaki se odnos sastoji o
 ## <a name="next-step"></a>Sljedeći korak
 
 Sistemski i prilagođeni odnosi koriste se za izradu segmenata na temelju više izvora podataka koji se više ne biraju. Dodatne informacije potražite u dijelu [Segmenti](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

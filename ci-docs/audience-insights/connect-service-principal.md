@@ -1,20 +1,20 @@
 ---
 title: Povezivanje se s računom za Azure Data Lake Storage Gen2 s upraviteljem servisa
-description: koristite upravitelja servisa Azure za uvide ciljne skupine da biste se povezali s vlastitim podatkovnim jezerom kada ga priključite uvidima ciljne skupine.
-ms.date: 11/24/2020
+description: Koristite upravitelja servisa Azure za uvide u ciljnu skupinu da biste se povezali s vlastitim data lake kada ga priključite uvidima u ciljnu skupinu.
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644079"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267713"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Povezivanje na račun servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure za uvide ciljne skupine
 
@@ -22,7 +22,9 @@ Automatizirani alati koji koriste servise Azure uvijek bi trebali imati ogranič
 
 Upravitelja servisa možete koristiti za sigurno [dodavanje ili uređivanje mape Common Data Model kao izvor podataka](connect-common-data-model.md) ili [stvaranje novog ili ažuriranje postojećeg okruženja](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Za izradu upravitelja servisa trebaju vam administratorske dozvole za vašu pretplatu na Azure.
+> [!IMPORTANT]
+> - Račun za pohranu Azure Data Lake druge generacije koji namjerava koristiti upravitelja servisa mora imati [Hijerarhijski prostor naziva (HNS) omogućen](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Za izradu upravitelja servisa trebaju vam administratorske dozvole za vašu pretplatu na Azure.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Stvaranje upravitelja servisa Azure za uvide ciljne skupine
 
@@ -83,7 +85,7 @@ Priložite račun za Azure Data Lake Storage u uvide ciljne skupine radi [pohran
 
 Slijedite korake u nastavku kako biste pružili potrebne informacije o odabranom pristupu.
 
-### <a name="resounce-based-storage-account-connection"></a>Veza računa utemeljena na resursima
+### <a name="resource-based-storage-account-connection"></a>Veza računa pohrane temeljena na resursima
 
 1. Idite na [Azure administrativni portal](https://portal.azure.com), prijavite se na svoju pretplatu i otvorite račun za pohranu.
 
@@ -108,7 +110,8 @@ Slijedite korake u nastavku kako biste pružili potrebne informacije o odabranom
 1. Pregledajte **Pretplatu**, **Grupu resursa** i **Naziv** računa za pohranu kako biste bili sigurni da ste odabrali prave vrijednosti u uvidima ciljne skupine.
 
 1. U uvidima ciljne skupine odaberite vrijednosti ili za odgovarajuća polja prilikom prilaganja računa za pohranu.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Unesite podatke ID-a resursa računa za pohranu.":::
    
 1. Nastavite s preostalim koracima u uvidima ciljne skupine da biste priložili račun za pohranu.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
