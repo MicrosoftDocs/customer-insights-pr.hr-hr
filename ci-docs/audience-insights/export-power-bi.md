@@ -2,19 +2,19 @@
 title: Poveznik za Power BI
 description: Saznajte kako upotrebljavati poveznik značajke Dynamics 365 Customer Insights u programu Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477079"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596030"
 ---
 # <a name="connector-for-power-bi-preview"></a>Poveznik za Power BI (pretpregled)
 
@@ -23,7 +23,7 @@ Stvorite vizualne prikaze za svoje podatke pomoću usluge Power BI Desktop. Gene
 ## <a name="prerequisites"></a>Preduvjeti
 
 - Imate objedinjene profile klijenata.
-- Najnovija verzija usluge [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) instalirana je na vašem računalu. [Saznajte više o Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- Najnovija verzija servisa [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) je instalirana na vašem računalu. [Saznajte više o Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Konfiguracija poveznika za Power BI
 
@@ -47,7 +47,7 @@ Stvorite vizualne prikaze za svoje podatke pomoću usluge Power BI Desktop. Gene
 
 ## <a name="large-data-sets"></a>Veliki skupovi podataka
 
-Priključak za Customer Insights za Power BI dizajniran je da funkcionira za skupove podataka koji sadrže do 1 milijun korisničkih profila. Uvoz većih skupova podataka može funkcionirati, ali to traje dugo. Osim toga, postupak bi mogao biti vremenski ograničen zbog ograničenja za Power BI. Za više informacija pogledajte [Power BI: Preporuke za velike skupove podataka](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Priključak za Customer Insights za Power BI dizajniran je da funkcionira za skupove podataka koji sadrže do 1 milijun korisničkih profila. Uvoz većih skupova podataka može funkcionirati, ali to traje dugo. Osim toga, postupak bi mogao biti vremenski ograničen zbog ograničenja za Power BI. Za više informacija pogledajte [Power BI: Preporuke za velike skupove podataka](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Rad s podskupom podataka
 
@@ -70,4 +70,3 @@ Možete identificirati i ukloniti duplicirane odnose.
 Nakon uklanjanja dupliciranih odnosa, pokušajte ponovno konfigurirati poveznik za Power BI. Okruženje bi sada trebalo biti dostupno.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

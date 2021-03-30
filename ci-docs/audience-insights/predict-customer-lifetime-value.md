@@ -2,19 +2,19 @@
 title: Predviđanje cjeloživotne vrijednosti klijenta (CLV)
 description: Predvidite potencijalni prihod za aktivne klijente u budućnosti.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268585"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595790"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Cjeloživotna vrijednost klijenta (CLV) (Pretpregled)
 
@@ -194,11 +194,11 @@ Postoje tri primarna odjeljka podataka na stranici s rezultatima.
   
   - **Stopa uspješnosti u predviđanju visokovrijednih klijenata**
 
-  Pogledajte razliku u predviđanju visokovrijednih klijenata pomoću modela umjetne inteligencije u usporedbi s osnovnim modelom. Na primjer, stopa uspješnosti od 84 % znači da je od svih visokovrijednih klijenata u podacima obuke model umjetne inteligencije uspio točno zabilježiti 84 %. Zatim uspoređujemo ovu stopu uspješnosti sa stopom uspješnosti osnovnog modela kako bismo izvijestili o relativnoj promjeni. Ova se vrijednost koristi za dodjeljivanje ocjene modelu.
+    Pogledajte razliku u predviđanju visokovrijednih klijenata pomoću modela umjetne inteligencije u usporedbi s osnovnim modelom. Na primjer, stopa uspješnosti od 84 % znači da je od svih visokovrijednih klijenata u podacima obuke model umjetne inteligencije uspio točno zabilježiti 84 %. Zatim uspoređujemo ovu stopu uspješnosti sa stopom uspješnosti osnovnog modela kako bismo izvijestili o relativnoj promjeni. Ova se vrijednost koristi za dodjeljivanje ocjene modelu.
 
   - **Metrike pogreške**
     
-  Drugo mjerilo omogućuje vam pregled ukupnih performansi modela u smislu pogreške u predviđanju budućih vrijednosti. Za procjenu ove pogreške koristimo ukupnu metriku korijenske srednje kvadratne pogreške (RMSE). RMSE je standardni način mjerenja pogreške modela u predviđanju kvantitativnih podataka. RMSE modela umjetne inteligencije uspoređuje se s RMSE-om osnovnog modela i dobiva se izvješće o relativnoj razlici.
+    Drugo mjerilo omogućuje vam pregled ukupnih performansi modela u smislu pogreške u predviđanju budućih vrijednosti. Za procjenu ove pogreške koristimo ukupnu metriku korijenske srednje kvadratne pogreške (RMSE). RMSE je standardni način mjerenja pogreške modela u predviđanju kvantitativnih podataka. RMSE modela umjetne inteligencije uspoređuje se s RMSE-om osnovnog modela i dobiva se izvješće o relativnoj razlici.
 
   Model umjetne inteligencije daje prednost točnom rangiranju klijenata prema vrijednosti koju oni donose vašem poslovanju. Dakle, za dobivanje konačne ocjene modela koristi se samo se stopa uspješnosti predviđanja visokovrijednih klijenata. Metrika RMSE je osjetljiva na netipične vrijednosti. U scenarijima gdje imate mali postotak klijenata s izvanredno visokim vrijednostima kupnje, ukupna metrika RMSE možda neće dati cjelovitu sliku performansi modela.   
 

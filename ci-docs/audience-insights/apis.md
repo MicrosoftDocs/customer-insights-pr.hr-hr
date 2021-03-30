@@ -1,20 +1,20 @@
 ---
 title: Rad s API-jima
 description: Koristite API-je i shvatite ograničenja.
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267515"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710451"
 ---
 # <a name="work-with-customer-insights-apis"></a>Rad s API-jima Customer Insights
 
@@ -36,7 +36,7 @@ Ovaj članak vodi vas do pristupa API-jiima za Customer Insights, izrade registr
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Omogućavanje API-jeva za Customer Insights":::
 
-1. Odaberite **Istražite naše API-je** da isprobate API-je.
+1. Odaberite **Istražite naše API-je** da [isprobate API-je](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
 1. Odaberite operaciju API-ja pa odaberite **Isprobaj**.
 
@@ -47,6 +47,9 @@ Ovaj članak vodi vas do pristupa API-jiima za Customer Insights, izrade registr
 1. Pomaknite se do dna bočnog okna pa odaberite **Pošalji**.
 
 HTTP odgovor uskoro će se pojaviti u nastavku.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="Animirani gif koji pokazuje kako odabrati testiranje API-ja.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Stvaranje nove registracije aplikacije na Azure portalu
 
@@ -61,6 +64,8 @@ Ovi vam koraci pomažu u početku korištenja API-ja Customer Insights u Azure a
 
 1. Na novoj registraciji aplikacije idite na **Dozvole API-ja**.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Animirani gif za postavljanje dozvole API-ja u registraciji aplikacije.":::
+
 1. Odaberite **Dodaj dozvolu** pa odaberite **Customer Insights** u bočnom oknu.
 
 1. Za **Vrsta dozvole** odaberite **Delegirane dozvole** pa odaberite dozvolu **user_impersonation**.
@@ -71,9 +76,11 @@ Ovi vam koraci pomažu u početku korištenja API-ja Customer Insights u Azure a
 
 Možete koristiti ID aplikacije/klijenta za registraciju ove aplikacije u Microsoftovoj biblioteci za provjeru autentičnosti (MSAL) da biste dobili token nositelja koji će se s vašim zahtjevom poslati API-ju.
 
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Animirani gif za davanje pristanka administratora.":::
+
 Za više informacija o MSAL-u pogledajte [Pregled Microsoftove biblioteke za provjeru autentičnosti (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
 
-Za više informacija o registraciji aplikacija na platformi Azure pogledajte [Novo iskustvo registracije aplikacija Azure portala](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Za više informacija o registraciji aplikacija na platformi Azure pogledajte [Novo iskustvo registracije aplikacija Azure portala](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 Za informacije o korištenju API-ja naših klijentskih biblioteke pogledajte [Klijentske biblioteke Customer Insights](#customer-insights-client-libraries).
 
@@ -101,6 +108,8 @@ U [odjeljku za registraciju aplikacije](#create-a-new-app-registration-in-the-az
 
 1. Odaberite **Daj pristanak administratora za...** da biste dovršili registraciju aplikacije.
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Animirani gif za davanje pristanka administratora.":::
+
 1. Da zaključimo, moramo dodati naziv registracije aplikacije kao korisnika u Customer Insights.    
    Otvorite Customer Insights, idite na **Administrator** > **Dozvole** pa odaberite **Dodaj korisnika**.
 
@@ -108,7 +117,7 @@ U [odjeljku za registraciju aplikacije](#create-a-new-app-registration-in-the-az
 
 ## <a name="customer-insights-client-libraries"></a>Klijentske biblioteke Customer Insights
 
-Ovaj vam odjeljak pomaže u početku korištenja klijentskih knjižnica dostupnih za API-je Customer Insights.
+Ovaj vam odjeljak pomaže u početku korištenja klijentskih knjižnica dostupnih za API-je Customer Insights. Svi izvorni kodovi biblioteke i ogledne aplikacije mogu se naći na [stranici servisa GitHub za Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,7 +136,7 @@ Naučite kako započeti s korištenjem klijentskih biblioteka za C# s NuGet.org.
 
 #### <a name="use-the-c-client-library"></a>Korištenje klijentske biblioteke za C#
 
-1. Koristite [Microsoftovu biblioteku za provjeru autentičnosti (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) da biste dobili `AccessToken` koristeći svoju postojeću [Registraciju Azure aplikacije](#create-a-new-app-registration-in-the-azure-portal).
+1. Koristite [Microsoftovu biblioteku za provjeru autentičnosti (MSAL)](/azure/active-directory/develop/msal-overview) da biste dobili `AccessToken` koristeći svoju postojeću [Registraciju Azure aplikacije](#create-a-new-app-registration-in-the-azure-portal).
 
 1. Nakon uspješne autentifikacije i stjecanja tokena, izgradite novi ili upotrijebite postojeći `HttpClient` s dodatnim **DefaultRequestHeaders "Authorization"** postavljenim na **Nositelj <access token>** i **Ocp-Apim-Subscription-Key** postavljenim na [**ključ pretplate** iz svog okruženja Customer Insights](#get-started-trying-the-customer-insights-apis).    
    Po potrebi resetirajte zaglavlje **Authorization**. Primjerice, kada token istekne.
@@ -141,5 +150,12 @@ Naučite kako započeti s korištenjem klijentskih biblioteka za C# s NuGet.org.
 1. Odgovor će vjerojatno biti vrste `object` jer metoda može vratiti više vrsta (primjerice `IList<InstanceInfo>` i `ApiErrorResult`). Da biste provjerili vrstu povrata, možete sigurno pretvoriti objekte u vrste odgovora navedene na [stranica s pojedinostima API-ja](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) za tu operaciju.    
    Ako su potrebne dodatne informacije o zahtjevu, upotrijebite **http metode poruka** za pristup neobrađenom objektu odgovora.
 
+### <a name="nodejs-package"></a>Paket NodeJS
+
+Upotrijebite klijentske biblioteke NodeJS dostupne putem NPM-a: https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Paket Python
+
+Upotrijebite klijentske biblioteke Python dostupne putem PyPi-ja: https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -2,23 +2,23 @@
 title: Unos podataka putem konektora Power Query
 description: Poveznici za izvore podataka koji se temelje na platformi Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267759"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596904"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezivanje s izvorom podataka platforme Power Query
 
-Power Query nudi širok skup poveznika za unos podataka. Većinu ovih poveznika podržava aplikacija Dynamics 365 Customer Insights. Dodavanje izvora podataka koji se temelje na poveznicima platforme Power Query obično slijedi korake navedene u sljedećem odjeljku. Međutim, ovisno o povezniku koji upotrebljavate, potrebni su različiti podaci. Dodatne informacije potražite u dokumentaciji o pojedinim poveznicima u odjeljku [Reference poveznika platforme Power Query](https://docs.microsoft.com/power-query/connectors/).
+Power Query nudi širok skup poveznika za unos podataka. Većinu ovih poveznika podržava aplikacija Dynamics 365 Customer Insights. Dodavanje izvora podataka koji se temelje na poveznicima platforme Power Query obično slijedi korake navedene u sljedećem odjeljku. Međutim, ovisno o povezniku koji upotrebljavate, potrebni su različiti podaci. Dodatne informacije potražite u dokumentaciji o pojedinim poveznicima u odjeljku [Reference poveznika platforme Power Query](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Izrada novog izvora podataka
 
@@ -44,7 +44,7 @@ Power Query nudi širok skup poveznika za unos podataka. Većinu ovih poveznika 
    > [!div class="mx-imgBorder"]
    > ![Dijaloški okvir uređivanja upita](media/data-manager-configure-edit-queries.png "Dijaloški okvir uređivanja upita")
 
-1. Podatke možete i pretvoriti. Odaberite entitet koji želite urediti ili pretvoriti. Upotrijebite mogućnosti u prozoru platforme Power Query za primjenu pretvorbi. Svaka se pretvorba navodi pod stavkom **Primijenjeni koraci**. Power Query pruža brojne unaprijed izgrađene mogućnosti pretvorbe. Dodatne informacije potražite u odjeljku [Pretvorbe platforme Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. Podatke možete i pretvoriti. Odaberite entitet koji želite urediti ili pretvoriti. Upotrijebite mogućnosti u prozoru platforme Power Query za primjenu pretvorbi. Svaka se pretvorba navodi pod stavkom **Primijenjeni koraci**. Power Query pruža brojne unaprijed izgrađene mogućnosti pretvorbe. Dodatne informacije potražite u odjeljku [Pretvorbe platforme Power Query](/power-query/power-query-what-is-power-query#transformations).
 
 1. U izvor podataka možete dodati dodatne entitete tako da odaberete **Dohvati podatke** u dijalogu **Uređivanje upita**.
 
@@ -59,7 +59,7 @@ Power Query nudi širok skup poveznika za unos podataka. Većinu ovih poveznika 
 
 ## <a name="available-power-query-data-sources"></a>Dostupni izvori podataka platforme Power Query
 
-Pogledajte članak [Referenca poveznika platforme Power Query](https://docs.microsoft.com/power-query/connectors/) za ažurirani popis poveznika koje možete odabrati za uvoz podataka u aplikaciju Customer Insights. 
+Pogledajte članak [Referenca poveznika platforme Power Query](/power-query/connectors/) za ažurirani popis poveznika koje možete odabrati za uvoz podataka u aplikaciju Customer Insights. 
 
 Poveznici s kvačicom u stupcu **Customer Insights (tijekovi podataka)** dostupni su za stvaranje novih izvora podataka koji se temelje na platformi Power Query. Pregledajte dokumentaciju određenog poveznika kako biste saznali više o njegovim preduvjetima, ograničenjima i ostalim pojedinostima.
 

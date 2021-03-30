@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267897"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597410"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Korištenje modela utemeljenih na Strojnom učenju Azure
 
@@ -29,9 +29,9 @@ Objedinjeni podaci u sustavu Dynamics 365 Customer Insights izvor su za izgradnj
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Postavljanje radnog prostora Strojnog učenja Azure
 
-1. Pogledajte članak [Stvaranje radnog prostora Strojnog učenja Azure](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) za različite opcije za stvaranje radnog prostora. Za najbolje performanse stvorite radni prostor u Azure regiji koja je geografski najbliža vašem okruženju Customer Insights.
+1. Pogledajte članak [Stvaranje radnog prostora Strojnog učenja Azure](/azure/machine-learning/concept-workspace#-create-a-workspace) za različite opcije za stvaranje radnog prostora. Za najbolje performanse stvorite radni prostor u Azure regiji koja je geografski najbliža vašem okruženju Customer Insights.
 
-1. Pristupite svom radnom prostoru putem programa [Azure Machine Learning Studio](https://ml.azure.com/). Ima nekoliko [načina interakcije](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) sa svojim radnim prostorom.
+1. Pristupite svom radnom prostoru putem programa [Azure Machine Learning Studio](https://ml.azure.com/). Ima nekoliko [načina interakcije](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) sa svojim radnim prostorom.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Rad s dizajnerom za Strojno učenje Azure
 
@@ -39,13 +39,13 @@ Dizajner za Strojno učenje Azure pruža vizualno radno područje na kojem može
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Rad s SDK-om za Strojno učenje Azure
 
-Podatkovni znanstvenici i programeri za umjetnu inteligenciju koriste [SDK za Strojno učenje Azure](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) za izgradnju Strojno učenje tijekova rada. Trenutačno se modeli obučeni pomoću SDK-a ne mogu izravno integrirati u Customer Insights. Skupni cjevovod za procjenjivanje koji troši taj model potreban je za integraciju sa servisom Customer Insights.
+Podatkovni znanstvenici i programeri za umjetnu inteligenciju koriste [SDK za Strojno učenje Azure](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) za izgradnju Strojno učenje tijekova rada. Trenutačno se modeli obučeni pomoću SDK-a ne mogu izravno integrirati u Customer Insights. Skupni cjevovod za procjenjivanje koji troši taj model potreban je za integraciju sa servisom Customer Insights.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Zahtjevi za integraciju skupnog cjevovoda sa servisom Customer Insights
 
 ### <a name="dataset-configuration"></a>Konfiguracija skupa podataka
 
-Morate stvoriti skupove podataka da biste koristili podatke entiteta iz servisa Customer Insights za svoj skupni cjevovod za procjenjivanje. Te skupove podataka treba registrirati u radnom prostoru. Trenutačno podržavamo samo [tablične skupove podataka](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) u formatu .csv. Skupovi podataka koji odgovaraju podacima entiteta moraju se parametrizirati kao parametar cjevovoda.
+Morate stvoriti skupove podataka da biste koristili podatke entiteta iz servisa Customer Insights za svoj skupni cjevovod za procjenjivanje. Te skupove podataka treba registrirati u radnom prostoru. Trenutačno podržavamo samo [tablične skupove podataka](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) u formatu .csv. Skupovi podataka koji odgovaraju podacima entiteta moraju se parametrizirati kao parametar cjevovoda.
    
 * Parametri skupa podataka u Dizajneru
    
@@ -76,7 +76,7 @@ Morate stvoriti skupove podataka da biste koristili podatke entiteta iz servisa 
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Uvoz podataka cjevovoda u Customer Insights
 
-* Dizajner pruža [Modul za izvoz podataka](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) koji omogućuje izvoz izlaznih podataka cjevovoda u pohranu platforme Azure. Modul trenutačno mora koristiti vrstu spremišta podataka **Pohrana blobova platforme Azure** i parameterizirati **Spremište podataka** i relativnu **Putanju**. Customer Insights nadjačava oba ova parametra tijekom izvođenja cjevovoda sa spremištem podataka i putanjom koja je dostupna proizvodu.
+* Dizajner pruža [Modul za izvoz podataka](/azure/machine-learning/algorithm-module-reference/export-data) koji omogućuje izvoz izlaznih podataka cjevovoda u pohranu platforme Azure. Modul trenutačno mora koristiti vrstu spremišta podataka **Pohrana blobova platforme Azure** i parameterizirati **Spremište podataka** i relativnu **Putanju**. Customer Insights nadjačava oba ova parametra tijekom izvođenja cjevovoda sa spremištem podataka i putanjom koja je dostupna proizvodu.
    > [!div class="mx-imgBorder"]
    > ![Konfiguracija modula za izvoz podataka](media/intelligence-designer-importdata.png "Konfiguracija modula za izvoz podataka")
    

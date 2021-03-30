@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267713"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596490"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Povezivanje na račun servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure za uvide ciljne skupine
 
@@ -23,7 +23,7 @@ Automatizirani alati koji koriste servise Azure uvijek bi trebali imati ogranič
 Upravitelja servisa možete koristiti za sigurno [dodavanje ili uređivanje mape Common Data Model kao izvor podataka](connect-common-data-model.md) ili [stvaranje novog ili ažuriranje postojećeg okruženja](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - Račun za pohranu Azure Data Lake druge generacije koji namjerava koristiti upravitelja servisa mora imati [Hijerarhijski prostor naziva (HNS) omogućen](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Račun za pohranu Azure Data Lake druge generacije koji namjerava koristiti upravitelja servisa mora imati [Hijerarhijski prostor naziva (HNS) omogućen](/azure/storage/blobs/data-lake-storage-namespace).
 > - Za izradu upravitelja servisa trebaju vam administratorske dozvole za vašu pretplatu na Azure.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Stvaranje upravitelja servisa Azure za uvide ciljne skupine
@@ -48,7 +48,7 @@ Prije stvaranja novog upravitelja usluge za uvide ciljne skupine provjerite post
 
 ### <a name="create-a-new-service-principal"></a>Stvaranje novog upravitelja servisa
 
-1. Instalirajte najnoviju verziju **Azure Active Directory PowerShell za graf**. Za više informacija pogledajte [Instalacija Azure Active Directory PowerShell za graf](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Instalirajte najnoviju verziju **Azure Active Directory PowerShell za graf**. Za više informacija pogledajte [Instalacija Azure Active Directory PowerShell za graf](/powershell/azure/active-directory/install-adv2).
    - Na računalu na tipkovnici odaberite tipku Windows pa potražite **Windows PowerShell** i **Pokreni kao administrator**.
    
    - U prozoru PowerShell koji se otvori unesite `Install-Module AzureAD`.

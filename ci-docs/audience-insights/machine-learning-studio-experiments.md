@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270195"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598330"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Korištenje modela na temelju Azure Machine Learning Studio (klasični)
 
@@ -37,7 +37,7 @@ U prvom koraku moramo stvoriti radni prostor i otvoriti Machine Learning Studio 
 
 1. Pretražite **Radni prostor za Strojno učenje Studio** i odaberite **Stvori**.
 
-1. Unesite potrebne pojedinosti za [stvaranje radnog prostora](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Odaberite **Razina cijena plana web-servisa** na temelju količine podataka koje planirate uvesti. Za najbolju izvedbu odaberite **Mjesto** koje vam je geografski najbliže.
+1. Unesite potrebne pojedinosti za [stvaranje radnog prostora](/azure/machine-learning/studio/create-workspace). Odaberite **Razina cijena plana web-servisa** na temelju količine podataka koje planirate uvesti. Za najbolju izvedbu odaberite **Mjesto** koje vam je geografski najbliže.
 
 1. Nakon stvaranja resursa, prikazuje se nadzorna ploča radnog prostora za Strojno učenje Studio. Odaberite **Pokreni Strojno učenje Studio**.
 
@@ -65,7 +65,7 @@ Sada možete stvoriti novi eksperiment ili uvesti postojeći predložak eksperim
 
    ![Postavljanje prediktivne web-usluge](media/predictive-webservice-control.png)
 
-1. Nakon uspješnog eksperimenta web-usluge možete je implementirati za automatsko zakazivanje. Da bi web-usluga radila sa značajkom Customer Insights, odaberite **Uvedi web-uslugu** > **Uvedi pregled web-usluge [novo]**. [Saznajte više o uvođenju web-usluge](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Nakon uspješnog eksperimenta web-usluge možete je implementirati za automatsko zakazivanje. Da bi web-usluga radila sa značajkom Customer Insights, odaberite **Uvedi web-uslugu** > **Uvedi pregled web-usluge [novo]**. [Saznajte više o uvođenju web-usluge](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Uvođenje prediktivne web-usluge](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Slika u nastavku prikazuje kanal za uvježbavanje i procjenu modela u Strojnom u
 
 ![Model odustajanja u Strojnom učenju Azure Studio](media/azure-machine-learning-model.png)
 
-Primjenjujemo i tehniku zvanu **Važnost značajke permutacije**, što je važan aspekt optimizacije modela. Ugrađeni modeli pružaju slab ili nikakav uvid u utjecaj određenih značajki na konačno predviđanje. Kalkulator važnosti značajki koristi prilagođeni algoritam za izračunavanje utjecaja pojedinih značajki na ishod određenog modela. Važnost značajki normirana je između +1 do -1. Negativni utjecaj znači da odgovarajuća značajka ima suprotan utjecaj na ishod i da je treba ukloniti iz modela. Pozitivan utjecaj ukazuje na to da značajka značajno doprinosi predviđanju. Te vrijednosti nisu koeficijenti korelacije jer su različiti mjerni podaci. Dodatne informacije potražite u odjeljku [Važnost značajki permutacije](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Primjenjujemo i tehniku zvanu **Važnost značajke permutacije**, što je važan aspekt optimizacije modela. Ugrađeni modeli pružaju slab ili nikakav uvid u utjecaj određenih značajki na konačno predviđanje. Kalkulator važnosti značajki koristi prilagođeni algoritam za izračunavanje utjecaja pojedinih značajki na ishod određenog modela. Važnost značajki normirana je između +1 do -1. Negativni utjecaj znači da odgovarajuća značajka ima suprotan utjecaj na ishod i da je treba ukloniti iz modela. Pozitivan utjecaj ukazuje na to da značajka značajno doprinosi predviđanju. Te vrijednosti nisu koeficijenti korelacije jer su različiti mjerni podaci. Dodatne informacije potražite u odjeljku [Važnost značajki permutacije](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Cijeli [eksperiment odustajanja dostupan je u AI galeriji platforme Azure](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Cijelom [eksperimentu preporuke proizvoda može se pristupiti u AI galeriji plat
 
 ## <a name="integrate-custom-models"></a>Integrirani prilagođeni modeli
 
-Da biste koristili ta predviđanja u značajci Customer Insights trebate **izvesti** predviđanja zajedno s ID-jevima klijenata. [Izvezite ih na isto mjesto spremišta blobova platforme Azure](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) u koji izvozite izvorne podatke. Može se zakazati redovito pokretanje prediktivne web-usluge i ažuriranje ocjena.
+Da biste koristili ta predviđanja u značajci Customer Insights trebate **izvesti** predviđanja zajedno s ID-jevima klijenata. [Izvezite ih na isto mjesto spremišta blobova platforme Azure](/azure/storage/common/storage-import-export-data-from-blobs) u koji izvozite izvorne podatke. Može se zakazati redovito pokretanje prediktivne web-usluge i ažuriranje ocjena.
 
 Podaci generirani prema prilagođenom modelu mogu se koristiti za dodatno obogaćivanje podataka o klijentima. Za dodatne informacije pogledajte [Prilagođeni modeli strojnog učenja](custom-models.md).
 

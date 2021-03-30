@@ -2,19 +2,19 @@
 title: Izvoz podataka usluge Customer Insights u Azure Data Lake Storage druge generacije
 description: Saznajte kako konfigurirati vezu s uslugom Azure Data Lake Storage druge generacije.
 ms.date: 02/04/2021
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: b00c3d6178150cbc93fe800779f094809d4dc67b
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 7c0eef575f745efa6312d7141a6dd96607f9797e
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477170"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596628"
 ---
 # <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Poveznik za Azure Data Lake Storage druge generacije (pretpregled)
 
@@ -29,8 +29,8 @@ Pohranite podatke iz usluge Customer Insights na Azure Data Lake Storage druge g
 1. Dodijelite odredištu prepoznatljivi naziv u polju **Zaslonski naziv**.
 
 1. Unesite **Naziv računa**, **Ključ računa** i **Spremnik** za svoj Azure Data Lake Storage druge generacije.
-    - Da biste saznali kako stvoriti račun za pohranu za korištenje uz Azure Data Lake Storage druge generacije, pogledajte [Stvaranje računa za pohranu](https://docs.microsoft.com/azure/storage/blobs/create-data-lake-storage-account). 
-    - Da biste saznali više o tome kako pronaći naziv računa za pohranu Azure Data Lake druge generacije i ključ računa, pogledajte [Upravljanje postavkama računa za pohranu na portalu Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
+    - Da biste saznali kako stvoriti račun za pohranu za korištenje uz Azure Data Lake Storage druge generacije, pogledajte [Stvaranje računa za pohranu](/azure/storage/blobs/create-data-lake-storage-account). 
+    - Da biste saznali više o tome kako pronaći naziv računa za pohranu Azure Data Lake druge generacije i ključ računa, pogledajte [Upravljanje postavkama računa za pohranu na portalu Azure](/azure/storage/common/storage-account-manage).
 
 1. Odaberite **Dalje**.
 

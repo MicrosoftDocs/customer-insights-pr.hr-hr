@@ -2,19 +2,19 @@
 title: Obogaćivanje pomoću obogaćivanja treće strane tvrke Experian
 description: Opće informacije o obogaćivanju treće strane tvrtke Experian.
 ms.date: 12/10/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: kishorem-ms
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269551"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597778"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obogaćivanje profila klijenata demografskim podacima tvrtke Experian (pretpregled)
 

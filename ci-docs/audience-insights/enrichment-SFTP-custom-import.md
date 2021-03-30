@@ -2,19 +2,19 @@
 title: Obogaćivanje pomoću SFTP prilagođenog uvoza
 description: Opće informacije o obogaćivanju SFTP prilagođenog uvoza.
 ms.date: 11/18/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jdahl
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269597"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595846"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogaćivanje profila klijenata pomoću prilagođenih podataka (pretpregled)
 
@@ -50,7 +50,7 @@ Da biste konfigurirali SFTP prilagođeni uvoz, moraju biti ispunjeni sljedeći p
 
 ## <a name="defining-field-mappings"></a>Definiranje mapiranja polja 
 
-Direktorij koji sadrži datoteku koju treba uvesti na SFTP poslužitelj mora sadržavati i *model.json* datoteku. Ova datoteka definira shemu koja će se koristiti za uvoz podataka. Shema mora koristiti [Common Data Model](https://docs.microsoft.com/common-data-model/) za određivanje mapiranja polja. Jednostavan primjer model.json datoteke izgleda ovako:
+Direktorij koji sadrži datoteku koju treba uvesti na SFTP poslužitelj mora sadržavati i *model.json* datoteku. Ova datoteka definira shemu koja će se koristiti za uvoz podataka. Shema mora koristiti [Common Data Model](/common-data-model/) za određivanje mapiranja polja. Jednostavan primjer model.json datoteke izgleda ovako:
 
 ```
 {

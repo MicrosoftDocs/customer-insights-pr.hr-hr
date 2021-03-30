@@ -2,19 +2,19 @@
 title: Unos podataka i ograničenja u stvarnom vremenu
 description: Opće informacije o mogućnostima u stvarnom vremenu u uvidima u ciljnu skupinu.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270271"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598560"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Unos podataka u stvarnom vremenu (pretpregled)
 
@@ -54,7 +54,7 @@ API u stvarnom vremenu omogućuje vam objavljivanje nove aktivnosti iz vašeg iz
 
 Dva su načina povezivanja s API-jem u stvarnom vremenu:
 
-- [posredno](#connect-via-the-dynamics-365-customer-insights-connector), korištenjem [Dynamics 365 Customer Insights poveznika](https://docs.microsoft.com/connectors/customerinsights/)
+- [posredno](#connect-via-the-dynamics-365-customer-insights-connector), korištenjem [Dynamics 365 Customer Insights poveznika](/connectors/customerinsights/)
 - [izravno](#connect-directly-to-the-real-time-api), s kodom
 
 Oba načina dijele iste sljedeće preduvjete:
@@ -66,13 +66,13 @@ Oba načina dijele iste sljedeće preduvjete:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Povezivanje putem Dynamics 365 Customer Insights poveznika
 
-API u stvarnom vremenu može unositi podatke s namjenskog Power Platform poveznika, [Dynamics 365 Customer Insights poveznika](https://docs.microsoft.com/connectors/customerinsights/), bez potrebe za pisanjem i implementiranjem bilo kojeg koda.    
-Poveznik može raditi iste radnje u stvarnom vremenu kao API. Za vrhunske poveznike potrebna je valjana licenca. Za dodatne informacije pogledajte [Najčešća pitanja o licenciranju za Power Apps i Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+API u stvarnom vremenu može unositi podatke s namjenskog Power Platform poveznika, [Dynamics 365 Customer Insights poveznika](/connectors/customerinsights/), bez potrebe za pisanjem i implementiranjem bilo kojeg koda.    
+Poveznik može raditi iste radnje u stvarnom vremenu kao API. Za vrhunske poveznike potrebna je valjana licenca. Za dodatne informacije pogledajte [Najčešća pitanja o licenciranju za Power Apps i Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps i/ili Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logičke aplikacije](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps i/ili Power Automate](/connectors/)
+- Azure [Logičke aplikacije](/azure/connectors/apis-list)
 
-Za pojedinosti o stvaranju tokova pogledajte [Dokumentaciju za Power Automate](https://docs.microsoft.com/power-automate/).
+Za pojedinosti o stvaranju tokova pogledajte [Dokumentaciju za Power Automate](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Izravno povezivanje s API-jem u stvarnom vremenu
 

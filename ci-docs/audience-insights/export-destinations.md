@@ -2,19 +2,19 @@
 title: Odredišta izvoza
 description: Izvezite podatke i upravljajte odredištima izvoza.
 ms.date: 07/21/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477124"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596076"
 ---
 # <a name="export-destinations-preview-overview"></a>Odredišta izvoza (pretpregled) pregled
 
@@ -22,22 +22,29 @@ Stranica **Odredišta izvoza** prikazuje sva mjesta koja ste postavili za izvoz 
 
 Otvorite **Administrator** > **Odredišta izvoza** kako biste pronašli sljedeće mogućnosti proširenja:
 
-- [Dodatak za korisničku karticu za Dynamics 365 Customer](customer-card-add-in.md)
-- [Facebook Poveznik upravitelja oglasa](export-facebook.md)
-- [Poveznik za Power Automate](export-power-automate.md)
-- [Poveznik za Power Apps](export-power-apps.md)
-- [Poveznik za Power BI](export-power-bi.md)
+- [Adobe Campaign Standard](export-adobe-campaign-standard.md)
+- [Adobe Experience Platform](export-adobe-experience-platform.md)
+- [AdRoll](export-adroll.md)
 - [Autopilot](export-autopilot.md)
-- [DotDigital](export-dotdigital.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Spremište Azure bloba](export-azure-blob-storage.md)
 - [Azure Data Lake Storage druge generacije](export-azure-data-lake-storage-gen2.md)
-- [SendGrid](export-sendgrid.md)
-- [LiveRamp&reg; poveznik](export-liveramp.md)
 - [Bot za Microsoft Teams](export-teams-bot.md)
-- [Mailchimp](export-mailchimp.md)
 - [API za Customer Insights](apis.md)
+- [DotDigital](export-dotdigital.md)
+- [Dynamics 365 Customer Service (Dodatak za korisničku karticu)](customer-card-add-in.md)
+- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
+- [Dynamics 365 Sales](export-dynamics365-sales.md)
+- [Središte za prodaju sustava Dynamics 365 (Dodatak za korisničku karticu)](customer-card-add-in.md)
+- [Upravitelj oglasa za Facebook](export-facebook.md)
+- [Google Ads](export-google-ads.md)
+- [LiveRamp&reg;](export-liveramp.md)
+- [Mailchimp](export-mailchimp.md)
+- [Marketo](export-marketo.md)
+- [Power Automate](export-power-automate.md)
+- [Power Apps](export-power-apps.md)
+- [Power BI](export-power-bi.md)
+- [SendGrid](export-sendgrid.md)
+- [SFTP](export-sftp.md)
 
 ## <a name="add-a-new-export-destination"></a>Dodavanje novog odredišta izvoza
 
