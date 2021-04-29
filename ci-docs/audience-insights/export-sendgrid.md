@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka usluge Customer Insights u SendGrid
-description: Saznajte kako konfigurirati vezu s uslugom SendGrid.
-ms.date: 12/08/2020
+description: Saznajte kako konfigurirati vezu i izvesti u SendGrid.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,57 +9,23 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 1a1f679fa42d47d524ebfdd6e931ae2822565f77
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a4c64cf77c682e07f3d0759c43355336b5806fc8
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597272"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759756"
 ---
-# <a name="connector-for-sendgrid-preview"></a>Poveznik za SendGrid (pretpregled)
+# <a name="export-segments-to-sendgrid-preview"></a>Izvoz segmenata u SendGrid (pretpregled)
 
 Izvezite segmente objedinjenih profila klijenata u popise kontakata usluge SendGrid i koristite ih za kampanje i marketing putem e-pošte u usluzi SendGrid. 
 
-## <a name="prerequisites"></a>Preduvjeti
+## <a name="prerequisites-for-a-connection"></a>Preduvjeti za vezu
 
 -   Imate [račun za SendGrid](https://sendgrid.com/) i odgovarajuće vjerodajnice administratora.
 -   SendGrid sadrži postojeće popise kontakata i odgovarajuće ID-jeve. Za dodatne informacije pogledajte [SendGrid – Upravljanje kontaktima](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts).
 -   Imate [konfigurirane segmente](segments.md) u uvidima u ciljnu skupinu.
 -   Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
-
-## <a name="connect-to-sendgrid"></a>Povezivanje s uslugom SendGrid
-
-1. Otvorite **Administrator** > **Izvozna odredišta**.
-
-1. Pod **SendGrid** odaberite **Postavi**.
-
-1. Dodijelite odredištu izvoza prepoznatljiv naziv u polju **Zaslonski naziv**.
-
-   :::image type="content" source="media/export-sendgrid.PNG" alt-text="Okno za konfiguraciju izvoza usluge SendGrid.":::
-
-1. Unesite svoj **Ključ za API za SendGrid** [Ključ za API za SendGrid](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
-
-1. Unesite svoj **[ID popisa usluge SendGridI](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
-
-1. Odaberite **Prihvaćam** da biste potvrdili **Privatnost podataka i sukladnost**.
-
-1. Odaberite **Poveži** za inicijalizaciju veze s uslugom SendGrid.
-
-1. Odaberite **Dodajte se kao korisnik izvoza** i unesite svoje vjerodajnice za Customer Insights.
-
-1. Odaberite **Dalje** da biste konfigurirali izvoz.
-
-## <a name="configure-the-connector"></a>Konfiguracija poveznika
-
-1. U odjeljku **Podudaranje podataka**, u polju **E-pošta**, odaberite polje u vašem objedinjenom profilu klijenta koje predstavlja adresu e-pošte klijenta. Ponovite iste korake za ostala neobavezna polja kao što su **Ime**, **Prezime**, **Zemlja/Regija**, **Država**, **Grad** i **Poštanski broj**.
-
-1. Odaberite segmente koje želite izvesti. Snažno **preporučujemo da ne izvozite više od ukupno 100 000 profila klijenata** u uslugu SendGrid. 
-
-1. Odaberite **Spremi**.
-
-## <a name="export-the-data"></a>Izvoz podataka
-
-Možete [izvesti podatke na zahtjev](export-destinations.md). Podaci će se izvoziti uz svako [zakazano osvježavanje](system.md#schedule-tab).
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
@@ -67,6 +33,48 @@ Možete [izvesti podatke na zahtjev](export-destinations.md). Podaci će se izvo
 - Izvoz u SendGrid ograničen je na segmente.
 - Izvoz do 100 000 profila u SendGrid može potrajati do nekoliko sati. 
 - Broj profila koje možete izvesti u SendGrid ovisi i ograničen je vašim ugovorom s tvrtkom SendGrid.
+
+## <a name="set-up-connection-to-sendgrid"></a>Postavljanje veze sa SendGrid
+
+1. Idite na **Admin** > **Veze**.
+
+1. Odaberite **Dodaj vezu** i odaberite **SendGrid** za konfiguriranje veze.
+
+1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
+
+1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Unesite svoj **Ključ za API za SendGrid** [Ključ za API za SendGrid](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
+
+1. Odaberite **Prihvaćam** da biste potvrdili **Privatnost podataka i sukladnost**.
+
+1. Odaberite **Poveži** za inicijalizaciju veze s uslugom SendGrid.
+
+1. Odaberite **Dodajte se kao korisnik izvoza** i unesite svoje vjerodajnice za Customer Insights.
+
+1. Odaberite **Spremi** da biste završili vezu.
+
+## <a name="configure-an-export"></a>Konfiguracija izvoza
+
+Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Idite na **Podaci** > **Izvozi**.
+
+1. Da biste stvorili novi izvoz, odaberite **Dodaj odredište**.
+
+1. U polju **Veza za izvoz** odaberite vezu iz odjeljka SendGrid. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
+
+1. Unesite svoj **[ID popisa usluge SendGridI](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
+
+1. U odjeljku **Podudaranje podataka**, u polju **E-pošta**, odaberite polje u vašem objedinjenom profilu klijenta koje predstavlja adresu e-pošte klijenta. Ponovite iste korake za ostala neobavezna polja kao što su **Ime**, **Prezime**, **Zemlja/Regija**, **Država**, **Grad** i **Poštanski broj**.
+
+1. Odaberite segmente koje želite izvesti. Snažno **preporučujemo da ne izvozite više od ukupno 100 000 profila klijenata** u uslugu SendGrid. 
+
+1. Odaberite **Spremi**.
+
+Spremanje izvoza ne pokreće izvoz odmah.
+
+Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
 

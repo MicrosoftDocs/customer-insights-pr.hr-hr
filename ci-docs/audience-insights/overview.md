@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598621"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896456"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Uvidi u ciljnu skupinu za pregled za Dynamics 365 Customer Insights
 
@@ -27,9 +27,9 @@ Uvidi u ciljnu skupinu pomažu vam da izgradite dublje razumijevanje svojih klij
   - Jednostavno povežite i objedinite svoje podatke – unesite podatke o transakcijama, promatranju i ponašanju iz popularnih [izvora podataka korištenjem unaprijed ugrađenih poveznika](data-sources.md).
   - Pametno transformirajte podatke o klijentima – izradite objedinjene profile klijenata u skladu s formatom [Common Data Model](/common-data-model/). Razriješite identitete klijenata pomoću preporuka usmjerenih na AI/ML.
 
-- **Obogatiti podatke inteligencijom publike s platforme Microsoft Graph**
+- **Obogaćivanje podacima o ciljnoj skupini**
 
-  - Izradite bogatije profile klijenata [uključivanjem podataka o ciljnoj skupini koji se nalaze na platformmi Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Izradite bogatije profile klijenata [uključivanjem obogaćenih podataka](enrichment-hub.md).  
 
 - **Unaprijediti svoje poslovne procese i prilagođene korisničke doživljaje**
 
@@ -43,7 +43,7 @@ Uvidi u ciljnu skupinu pomažu vam da izgradite dublje razumijevanje svojih klij
 
   - Pristupite bogatoj zbirci poveznika za obradu svih podataka o klijentima.
   - Sposobnost objedinjavanja podataka o klijentima i njihova pretvaranja u format [Common Data Model](/common-data-model/).
-  - Obogatite podatke o klijentima uvidima inteligencije publike s platforme Microsoft Graph, kao što su afiniteti prema markama i interesi.
+  - Obogatite informacije o klijentima uvidima iz podataka o ciljnoj skupini, kao što su afiniteti prema brendu i interesi.
   - Konfiguracija „klikova bez koda” i iskustvo ispravljanja pogrešaka pomažu vam jednostavno konfigurirati uvide u ciljnu skupinu i prepoznati moguće probleme.
   - Očistite i standardizirajte podatke o klijentima iz različitih izvora pomoću preporuka koje se temelje na AI-u.  
 

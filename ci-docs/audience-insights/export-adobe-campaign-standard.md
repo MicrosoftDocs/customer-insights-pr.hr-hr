@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka servisa Customer Insights u Adobe Campaign Standard
 description: Saznajte kako koristiti segmente uvida u ciljnu skupinu u servisu Adobe Campaign Standard.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596306"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760272"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Korištenje segmenata servisa Customer Insights u servisu Adobe Campaign Standard (pretpregled)
 
@@ -48,15 +48,21 @@ E-pošta s ponudom koju želite poslati sadržavat će ime, prezime i datum zavr
 
 ## <a name="export-your-target-audience"></a>Izvoz ciljne skupine
 
+### <a name="configure-a-connection"></a>Konfiguracija veze
+
 Nakon što identificiramo našu ciljnu skupinu, možemo konfigurirati izvoz iz uvida u ciljnu skupinu na račun za Azure spremište blobova.
 
-1. U uvidima u ciljnu skupinu idite na **Administrator** > **Odredišta izvoza**.
+1. U uvidima u ciljnu skupinu idite na **Admin** > **Veze**.
 
-1. Na pločici **Adobe Campaign** odaberite **Postavljanje**.
+1. Odaberite **Dodaj vezu** i odaberite **Adobe Campaign** za konfiguriranje veze ili odaberite **Postavi** na pločici **Adobe Campaign**
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Pločica za konfiguraciju za Adobe Campaign Standard.":::
 
-1. Navedite **zaslonski naziv** za ovo novo odredište izvoza, a zatim unesite **Naziv računa**, **Ključ računa** i **Spremnik** računa za Azure spremište blobova na koji želite izvesti segment.  
+1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
+
+1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Unesite **Naziv računa**, **Ključ računa** i **Spremnik** računa spremnika za pohranu bloba za Azure na koji želite izvesti segment.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Snimka zaslona konfiguracije računa za pohranu. "::: 
 
@@ -64,7 +70,17 @@ Nakon što identificiramo našu ciljnu skupinu, možemo konfigurirati izvoz iz u
 
    - Pogledajte kako stvoriti spremnik [Stvaranje spremnika](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Odaberite **Dalje**.
+1. Odaberite **Spremi** da biste završili vezu.
+
+### <a name="configure-an-export"></a>Konfiguracija izvoza
+
+Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Idite na **Podaci** > **Izvozi**.
+
+1. Da biste stvorili novi izvoz, ddaberite **Dodaj izvoz**.
+
+1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Adobe Campaign. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
 
 1. Odaberite segment koji želite izvesti. U ovom primjeru je to **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Nakon što identificiramo našu ciljnu skupinu, možemo konfigurirati izvoz iz u
 
 1. Odaberite **Spremi**.
 
-Nakon spremanja odredišta izvoza, pronaći ćete ga u odjeljku **Administrator** > **Izvozi** > **Moja odredišta izvoza**.
+Nakon spremanja izvoznog odredišta pronaći ćete ga na **Podaci** > **Izvozi**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Snimka zaslona s istaknutim popisom izvoza i uzorkom segmenta.":::
-
-Sada možete [izvesti segment na zahtjev](export-destinations.md#export-data-on-demand). Podaci će se izvoziti uz svako [zakazano osvježavanje](system.md).
+Sada možete [izvesti segment na zahtjev](export-destinations.md#run-exports-on-demand). Podaci će se izvoziti uz svako [zakazano osvježavanje](system.md).
 
 > [!NOTE]
 > Provjerite je li broj zapisa u izvezenom segmentu unutar dopuštenog ograničenja vaše licence za Adobe Campaign Standard.

@@ -9,12 +9,12 @@ author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 14ebff30d3ec7fc52dca6f86136309a3f454fa27
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9a4cb77bb4c6ef0d88b3f00802f66baab5520a07
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597456"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896410"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integracija web-podataka iz uvida u angažman s uvidima u ciljnu skupinu
 
@@ -46,7 +46,7 @@ Razmatranja prilikom stvaranja redefiniranih događaja:
     - Signal.Action.Name – označava pojedinosti o aktivnosti
     - Signal.User.Id – koristi se za mapiranje pomoću ID-ja klijenta
     - Signal.View.Uri – koristi se kao web-adresa kao osnova za segmente ili mjere
-    - Signal.Export.Id – koristiti kao primarni ključ za događaje <!-- system generated, do we need to list?-->
+    - Signal.Export.Id – koristiti kao primarni ključ za događaje
     - Signal.Timestamp – za određivanje datuma i vremena aktivnosti
 
 Odaberite filtre da biste se usredotočili na događaje i stranice koji su bitni za vaš slučaj korištenja. U ovom ćemo primjeru koristiti naziv radnje „Promocija putem e-pošte”.

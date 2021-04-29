@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597180"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906847"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transakcijsko predviđanje gubitka (pretpregled)
 
@@ -46,6 +46,14 @@ Transakcijsko predviđanje gubitka pomaže predvidjeti hoće li klijent prestati
         - **Vremenska oznaka:** Datum i vrijeme događaja identificirani pomoću primarnog ključa.
         - **Događaj:** Odredite naziv za događaj koji želite koristiti. Na primjer, polje pod nazivom „UserAction” u trgovini mješovite robe može biti kupon koji kupac koristi.
         - **Pojedinosti:** Detaljne informacije o događaju. Na primjer, polje pod nazivom „CouponValue” u trgovini mješovite robe može biti vrijednost valute kupona.
+- Značajke predloženih podataka:
+    - Dovoljno povijesnih podataka: Podaci o transakciji za najmanje dvostruko veći odabrani vremenski okvir. Po mogućnosti dvije do tri godine podataka o pretplati. 
+    - Više kupnji po klijentu: Idealno najmanje dvije transakcije po klijentu.
+    - Broj klijenata: Najmanje 10 profila klijenata, po mogućnosti više od 1 000 jedinstvenih klijenata. Model neće uspjeti s manje od 10 klijenata i nedovoljnim povijesnim podacima.
+    - Kompletnost podataka: Manje od 20 % vrijednosti koje nedostaju u podatkovnom polju navedenog entiteta.
+
+> [!NOTE]
+> Za tvrtku s velikom učestalošću kupnji klijenata (svakih nekoliko tjedana) preporučuje se odabir kraćeg okvira predviđanja i definicije gubitka. Za nisku učestalost kupnje (svakih nekoliko mjeseci ili jednom godišnje) odaberite dulji okvir predviđanja i definicije gubitka.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Stvaranje transakcijskog predviđanja gubitka
 
@@ -129,7 +137,9 @@ Transakcijsko predviđanje gubitka pomaže predvidjeti hoće li klijent prestati
 1. Odaberite predviđanje koje želite pregledati.
    - **Naziv predviđanja:** Naziv predviđanja naveden je pri stvaranju.
    - **Vrsta predviđanja:** Vrsta modela koji se koristi za predviđanje
-   - **Entitet rezultata:** Naziv entiteta za pohranu rezultata predviđanja. Entitet ovog naziva možete pronaći u **Podaci** > **Entiteti**.
+   - **Entitet rezultata:** Naziv entiteta za pohranu rezultata predviđanja. Entitet ovog naziva možete pronaći u **Podaci** > **Entiteti**.    
+     U izlaznom je entitetu *ChurnScore* predviđena vjerojatnost gubitka i *IsChurn* binarna oznaka koja se temelji na *ChurnScore* s pragom od 0,5. Zadani prag možda neće funkcionirati za vaš scenarij. [Stvorite novi segment](segments.md#create-a-new-segment) s vašim željenim pragom.
+     Nisu svi klijenti nužno i aktivni klijenti. Neki od njih možda već dugo nisu imali nikakve aktivnosti i već se smatraju izgubljenima na temelju vaše definicije gubitka. Predviđanje rizika gubitka za klijente koji su već izgubljeni nije korisno jer nisu zanimljiva ciljna skupina.
    - **Predviđeno polje:** Ovo se polje popunjava samo za neke vrste predviđanja i ne koristi se u predviđanju gubitka.
    - **Stanje:** Stanje pokretanja predviđanja.
         - **U redu čekanja:** Predviđanje čeka da se drugi procesi pokrenu.

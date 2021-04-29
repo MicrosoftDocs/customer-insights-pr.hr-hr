@@ -1,7 +1,7 @@
 ---
 title: Stvaranje i upravljanje mjerama
 description: Definirajte mjere za analizu i odražavanje uspješnosti svojeg poslovanja.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654723"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887931"
 ---
 # <a name="define-and-manage-measures"></a>Definiranje i upravljanje mjerama
 
-Mjere vam pomažu da bolje razumijete ponašanje klijenata i poslovne performanse dohvaćanjem relevantnih vrijednosti iz [objedinjenih profila](data-unification.md). Na primjer, tvrtka želi vidjeti *ukupnu potrošnju po klijentu* da bi razumjela povijest kupnje pojedinog klijenta. Ili izmjeriti *ukupnu prodaju tvrtke* da bi razumjela ukupnu razinu prihoda u cijelom poslovanju.  
+Mjere vam pomažu da bolje razumijete ponašanja klijenata i poslovne performanse. Gledaju na relevantne vrijednosti iz [objedinjenih profila](data-unification.md). Na primjer, tvrtka želi vidjeti *ukupnu potrošnju po klijentu* kako bi razumjela povijest kupnje pojedinog klijenta ili mjeri *ukupnu prodaju tvrtke* kako bi razumjela ukupnu razinu prihoda u cijelom poslovanju.  
 
 Mjere se stvaraju pomoću alata za izradu mjera, platforme za upite podataka s različitim operatorima i jednostavnim mogućnostima mapiranja. Omogućuje vam filtriranje podataka, grupiranje rezultata, otkrivanje [putanja odnosa entiteta](relationships.md) i pretpregled izlazne vrijednosti.
 
 Koristite alat za izradu mjera za planiranje poslovnih aktivnosti ispitivanjem podataka o klijentima i izvozom uvida. Na primjer, stvaranje mjere *ukupna potrošnja po klijentu* i *ukupan povrat po klijentu* pomaže identificirati grupu klijenata s visokom potrošnjom, ali i visokim povratom. Možete [stvoriti segment](segments.md) za pokretanje sljedećih najboljih radnji. 
 
-## <a name="create-a-measure"></a>Izrada mjere
+## <a name="build-your-own-measure-from-scratch"></a>Izrada vlastitih mjera od nule
 
 Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Možete izraditi mjeru s atributima podataka iz podatkovnih entiteta koji imaju uspostavljen odnos za povezivanje s entitetom Klijent. 
 
 1. U uvidima u ciljnu skupinu idite na **Mjere**.
 
-1. Odaberite **Novo**.
+1. Odaberite **Novo** i odaberite **Izradi vlastiti**.
 
 1. Odaberite **Uredi naziv** i navedite **Naziv** za mjeru. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Možete izraditi m
    1. Odaberite **Uredi dimenzije** za dodavanje atributa podataka po kojima želite grupirati vrijednosti mjere. Na primjer, grad ili spol. Prema zadanim postavkama dimenzija *CustomerID* odabrana je za stvaranje *mjera na razini klijenta*. Možete ukloniti zadanu dimenziju ako želite stvoriti *mjere na poslovnoj razini*.
    1. Odaberite **Gotovo** za dodavanje dimenzija mjeri.
 
+1. Ako u vašim podacima postoje vrijednosti koje trebate zamijeniti cijelim brojem, na primjer, zamijeniti *null* s *0*, odaberite **Pravila**. Konfigurirajte pravilo i obavezno odaberite samo cijele brojeve kao zamjene.
+
 1. Ako postoji više putanja između entiteta podataka koji ste mapirali i entiteta *Klijent*, morate odabrati jednu od identificiranih [putanja odnosa entiteta](relationships.md). Rezultati mjerenja mogu se razlikovati ovisno o odabranoj putanji. 
    1. Odaberite **Preference podataka** i odaberite putanju entiteta koju treba koristiti za identificiranje vaše mjere. Ako postoji samo jedna putanja do entiteta *Klijent*, ova se kontrola neće prikazati.
    1. Odaberite **Gotovo** da biste primijenili svoj odabir. 
@@ -88,9 +90,57 @@ Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Možete izraditi m
 
 1. Idite na **Mjere** da biste na popisu vidjeli novostvorenu mjeru.
 
+## <a name="use-a-template-to-build-a-measure"></a>Korištenje predloška za izradu mjera
+
+Za njihovo stvaranje možete koristiti unaprijed definirane predloške najčešće korištenih mjera. Detaljni opisi predložaka i vođeno iskustvo pomažu vam u učinkovitom stvaranju mjera. Predlošci se nadovezuju na mapirane podatke iz entiteta *Objedinjena aktivnost*. Stoga provjerite jeste li konfigurirali [aktivnosti klijenata](activities.md) prije nego što stvorite mjeru iz predloška.
+
+Dostupni predlošci mjera: 
+- Prosječna vrijednost transakcije (ATV)
+- Ukupna vrijednost transakcije
+- Prosječni dnevni prihod
+- Prosječni godišnji prihod
+- Broj transakcija
+- Zarađeni bodovi vjernosti
+- Iskorišteni bodovi vjernosti
+- Bilanca stanja bodova vjernosti
+- Životni vijek aktivnog klijenta
+- Trajanje članstva u programu vjernosti
+- Vrijeme od zadnje kupnje
+
+Sljedeći postupak opisuje korake za izradu nove mjere pomoću predloška.
+
+1. U uvidima u ciljnu skupinu idite na **Mjere**.
+
+1. Odaberite **Novo**, a zatim odaberite **Odaberi predložak**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Snimka zaslona padajućeg izbornika prilikom stvaranja nove mjere s naglaskom na predložak.":::
+
+1. Pronađite predložak koji odgovara vašim potrebama i odaberite **Odaberi predložak**.
+
+1. Pregledajte potrebne podatke i odaberite **Započni** ako imate sve podatke na mjestu.
+
+1. U oknu **Uredi naziv** postavite naziv mjere i izlazni entitet. 
+
+1. Odaberite **Gotovo**.
+
+1. U odjeljku **Postavi vremensko razdoblje** definirajte vremenski okvir podataka koji će se koristiti. Odaberite želite li da nova mjera pokriva cijeli skup podataka odabirom **Cijelo vrijeme**. Ili želite li da se mjera usredotoči na **Određeno vremensko razdoblje**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Snimka zaslona koja prikazuje odjeljak vremenskog razdoblja prilikom konfiguriranja mjere iz predloška.":::
+
+1. U sljedećem odjeljku odaberite **Dodaj podatke** za odabir aktivnosti i mapiranje odgovarajućih podataka iz vašeg entiteta *Objedinjena aktivnost*.
+
+    1. Korak 1 od 2: Pod **Vrsta aktivnosti** odaberite vrstu entiteta koju želite koristiti. Za **Aktivnosti** odaberite entitete koje želite mapirati.
+    1. Korak 2 od 2: Odaberite atribut iz entiteta *Objedinjena aktivnost* za komponentu koju zahtijeva formula. Na primjer, za Prosječna vrijednost transakcije to je atribut koji predstavlja vrijednost Transakcije. Za **Vremenska oznaka aktivnosti** odaberite atribut iz entiteta Objedinjena aktivnost koji predstavlja datum i vrijeme aktivnosti.
+   
+1. Nakon što mapiranje podataka bude uspješno, možete vidjeti status kao **Dovršeno** te naziv mapiranih aktivnosti i atributa.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Snimka zaslona dovršene konfiguracije predloška mjere.":::
+
+1. Sada možete odabrati **Pokreni** za izračunavanje rezultata mjere. Da biste je kasnije pročistili, odaberite **Spremi nacrt**.
+
 ## <a name="manage-your-measures"></a>Upravljanje mjerama
 
-Nakon [stvaranja mjere](#create-a-measure) vidjet ćete popis mjera na stranici **Mjere**.
+Popis mjera možete pronaći na stranici **Mjere**.
 
 Pronaći ćete informacije o vrsti mjere, autoru, datumu stvaranja, statusu i stanju. Kada odaberete mjeru s popisa, možete pretpregledati izlaznu vrijednost i preuzeti .CSV datoteku.
 

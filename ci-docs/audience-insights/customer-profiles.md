@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596858"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896318"
 ---
 # <a name="customer-profiles"></a>Profili klijenata
 
@@ -59,7 +59,7 @@ Pojedinosti o klijentu uključuju sljedeće:
 
 -   **Pločica profila klijenta:** Ova pločica prikazuje različite vrijednosti iz entiteta jedinstvenog profila kupca. Te pojedinosti mogu uključivati adresu e-pošte, ime, grad itd. 
 
--   **Potencijalni interesi, potencijalni brendovi:** Pokazuje jeste li konfigurirali obogaćivanje prve strane. Predstavlja potencijalne interese i afinitete za brendove koje može imati klijent s profilom sličnim ovom klijentu. Za više informacija pogledajte [Obogaćivanje profila klijenata afinitetima za robne marke i interese](enrichment-microsoft-graph.md).
+-   **Potencijalni interesi, potencijalni brendovi:** Pokazuje jeste li konfigurirali obogaćivanje prve strane. Predstavlja potencijalne interese i afinitete za brendove koje može imati klijent s profilom sličnim ovom klijentu. Za više informacija pogledajte [Obogaćivanje profila klijenata afinitetima za robne marke i interese](enrichment-microsoft.md).
 
 -   **Mjerenja:** Pokazuje jeste li konfigurirali jedno ili više mjerenja određene vrste: mjerenja korisničkih atributa. Uključuju izračunate KPI-jeve oko vaših klijenata na razini pojedinačnog klijenta. Za više informacija pogledajte [Definiranje i upravljanje mjerama](measures.md).
 

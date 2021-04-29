@@ -1,7 +1,7 @@
 ---
 title: Obogaćivanje objedinjenih profila klijenata
 description: Koristite mogućnosti za obogaćivanje podataka o klijentima.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597686"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895996"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za korisničke profile (pretpregled)
 
@@ -27,8 +27,8 @@ Da biste stvorili ili uredili obogaćivanja, morate imati dozvole Suradnik ili A
 
 Na kartici **Otkrivanje** pronaći ćete sljedeća obogaćivanja:
 
-- [Robne marke](enrichment-microsoft-graph.md) pruža Microsoft Graph
-- [Interesi](enrichment-microsoft-graph.md) pruža Microsoft Graph
+- [Brendovi](enrichment-microsoft.md) koje je omogućio Microsoft
+- [Interesi](enrichment-microsoft.md) koje je omogućio Microsoft
 - [Podatke o tvrtki](enrichment-leadspace.md) omogućuje tvrtka Leadspace
 - [Demografske podatke](enrichment-experian.md) omogućuje tvrtka Experian
 - [Podatke o lokaciji](enrichment-here.md) pruža tvrtka HERE Technologies
@@ -40,7 +40,7 @@ Na kartici **Moja obogaćivanja** možete vidjeti obogaćivanja koja ste konfigu
 
 Idite na **Moja obogaćivanja** da biste vidjeli sva konfigurirana obogaćivanja. Svako obogaćivanje predstavljeno je kao redak koji uključuje dodatne informacije o obogaćivanju.
 
-Odaberite obogaćivanje da biste vidjeli dostupne mogućnosti. Ili možete odabrati elipsu (...) na stavci popisa da biste vidjeli mogućnosti.
+Odaberite obogaćivanje da biste vidjeli dostupne mogućnosti. Možete odabrati i elipsu (...) na stavci popisa da biste vidjeli mogućnosti.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Mogućnosti upravljanja obogaćivanjima na popisu obogaćivanja":::
 
@@ -52,5 +52,12 @@ Odaberite obogaćivanje da biste vidjeli dostupne mogućnosti. Ili možete odabr
 
 Možete pokrenuti ili deaktivirati više obogaćivanja odjednom njihovim odabirom na popisu. Mogućnosti prikaza i uređivanja nisu dostupne kao skupna radnja i istovremeno rade samo za jedno obogaćivanje.
 
+## <a name="enrichments-and-connections"></a>Obogaćivanja i veze
+
+Obogaćivanja treće strane konfigurirana su pomoću [veza](connections.md) koje administrator postavlja s vjerodajnicama i daje pristanak za prijenos podataka. Vezu mogu koristiti administratori i suradnici da bi konfigurirali obogaćivanja.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Višestruka obogaćivanja iste vrste
+
+Entitet koji treba obogatiti naveden je tijekom konfiguracije obogaćivanja, što vam omogućuje obogaćivanje samo podskupina vaših profila. Na primjer, obogatite podatke samo za određeni segment. Možete konfigurirati nekoliko obogaćivanja iste vrste i ponovno koristiti istu vezu. Neka obogaćivanja imat će ograničenja u broju obogaćivanja iste vrste koja se mogu stvoriti. Ograničenja i trenutna upotreba mogu se vidjeti na stranici **Obogaćivanje**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

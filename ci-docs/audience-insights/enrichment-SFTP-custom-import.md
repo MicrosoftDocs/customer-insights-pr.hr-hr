@@ -1,7 +1,7 @@
 ---
 title: Obogaćivanje pomoću SFTP prilagođenog uvoza
 description: Opće informacije o obogaćivanju SFTP prilagođenog uvoza.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,44 +9,63 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595846"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896272"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogaćivanje profila klijenata pomoću prilagođenih podataka (pretpregled)
 
-Prilagođeni uvoz Protokola sigurnog prijenosa datoteka (SFTP) omogućava vam uvoz podataka koji ne moraju proći kroz postupak objedinjavanja podataka. To je fleksibilan, siguran i jednostavan način unosa podataka. SFTP prilagođeni uvoz može se koristiti u kombinaciji sa [SFTP izvozom](export-sftp.md) koji vam omogućava izvoz podataka profila klijenata potrebnih za obogaćivanje. Podaci se zatim mogu obrađivati i obogaćivati, a SFTP prilagođeni uvoz može se koristiti za vraćanje obogaćenih podataka u mogućnost uvida u ciljnu skupinu usluge Dynamics 365 Customer Insights.
+Prilagođeni uvoz sigurnog protokola prijenosa datoteka (SFTP) omogućuje vam uvoz podataka koji ne moraju proći kroz postupak objedinjavanja podataka. To je fleksibilan, siguran i jednostavan način unosa podataka. SFTP prilagođeni uvoz može se koristiti u kombinaciji sa [SFTP izvozom](export-sftp.md) koji vam omogućava izvoz podataka profila klijenata potrebnih za obogaćivanje. Podaci se zatim mogu obrađivati i obogaćivati, a SFTP prilagođeni uvoz može se koristiti za vraćanje obogaćenih podataka u mogućnost uvida u ciljnu skupinu usluge Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Preduvjeti
 
 Da biste konfigurirali SFTP prilagođeni uvoz, moraju biti ispunjeni sljedeći preduvjeti:
 
-- Imate korisničke vjerodajnice (korisničko ime i lozinku) za SFTP lokaciju podataka koji će se uvoziti.
-- Imate URL i broj priključka (obično 22) za STFP glavno računalo.
-- Imate naziv datoteke i mjesto datoteke koja će se uvesti na SFTP glavnom računalu.
-- Postoji *model.json* datoteka koja specificira shemu za podatke koje treba uvesti. Ova datoteka mora biti u istom direktoriju kao i datoteka za uvoz.
-- Imate dozvolu [administratora](permissions.md#administrator).
+- Imate naziv datoteke i lokaciju (putanju) datoteke koju želite uvesti na glavno računalo SFTP.
+- Postoji datoteka *model.json* koja navodi [shemu Common Data Model](/common-data-model/) za podatke koji se trebaju uvesti. Ova datoteka mora biti u istom direktoriju kao i datoteka za uvoz.
+- Administrator je već konfigurirao vezu SFTP *ili* imate [administratorske](permissions.md#administrator) dozvole. Trebat će vam vjerodajnice korisnika, URL i broj priključka za lokaciju SFTP odakle želite uvesti podatke.
 
-## <a name="configuration"></a>Konfiguracija
+
+## <a name="configure-the-import"></a>Konfiguracija uvoza
 
 1. Idite na **Podaci** > **Obogaćivanje** i odaberite karticu **Pronađi**.
 
-1. Na **pločici SFTP prilagođenog uvoza** odaberite **Obogaćivanje mojih podataka**.
+1. Na **Pločici za prilagođeni uvoz SFTP** odaberite **Obogati moje podatke** i zatim odaberite **Započni**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Pločica SFTP prilagođenog uvoza](media/SFTP_Custom_Import_tile.png "Pločica SFTP prilagođenog uvoza")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Pločica za prilagođeni uvoz SFTP.":::
 
-1. Odaberite **Početak** i navedite vjerodajnice i adresu za SFTP poslužitelj. Na primjer, sftp://mysftpserver.com:22.
+1. Odaberite [vezu](connections.md) s padajućeg popisa. Ako nijedna veza nije dostupna, obratite se administratoru. Ako ste administrator, vezu možete stvoriti odabirom **Dodaj vezu** i odabirom **Prilagođeni uvoz SFTP** s padajućeg izbornika.
 
-1. Unesite naziv datoteke koja sadrži podatke i put do datoteke na SFTP poslužitelju ako nije u korijenskoj mapi.
+1. Odaberite **Poveži se s prilagođenim uvozom** za potvrdu odabrane veze.
 
-1. Potvrdite sve unose odabirom stavke **Povezivanje s prilagođenim uvozom**.
+1.  Odaberite **Sljedeće** i unesite **Naziv datoteke** i **Putanju** podatkovne datoteke koju želite uvesti.
 
-   > [!div class="mx-imgBorder"]
-   > ![Potpaleta konfiguracije SFTP prilagođenog uvoza](media/SFTP_Custom_Import_Configuration_flyout.png "Potpaleta konfiguracije SFTP prilagođenog uvoza")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Snimka zaslona prilikom unosa lokacije podataka.":::
+
+1. Odaberite **Sljedeće** i navedite naziv za obogaćivanje i naziv za izlazni entitet. 
+
+1. Odaberite **Spremi obogaćivanje** nakon pregledavanja svojih odabira.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfiguriranje veze za prilagođeni uvoz SFTP 
+
+Morate biti administrator da biste konfigurirali veze. Odaberite **Dodaj vezu** prilikom konfiguriranja obogaćivanja *ili* idite na **Admin** > **Veze** i odaberite **Postavi** na pločici Prilagođeni uvoz.
+
+1. Unesite naziv za vezu u dijaloški okvir **Zaslonski naziv**.
+
+1. Unesite valjano korisničko ime, lozinku i URL glavnog računala za poslužitelja STFP na kojem se nalaze podaci za uvoz.
+
+1. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usklađenost** odabirom potvrdnog okvira **Slažem se**.
+
+1. Odaberi **Potvrdi** za provjeru valjanosti konfiguracije.
+
+1. Nakon završetka provjere valjanosti vezu možete spremiti klikom na **Spremi**.
+
+> [!div class="mx-imgBorder"]
+   > ![Stranica za konfiguraciju veze za Experian](media/enrichment-SFTP-connection.png "Stranica za konfiguraciju veze za Experian")
+
 
 ## <a name="defining-field-mappings"></a>Definiranje mapiranja polja 
 
@@ -105,8 +124,5 @@ Detaljnom prikazu svakog obogaćenog profila možete pristupiti odabirom **Prika
 ## <a name="next-steps"></a>Sljedeći koraci
 
 Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [segmente](segments.md) i [mjere](measures.md) i [izvezite podatke](export-destinations.md) kako biste svojim klijentima ponudili personalizirana iskustva.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

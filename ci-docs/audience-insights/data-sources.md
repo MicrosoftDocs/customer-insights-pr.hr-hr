@@ -1,7 +1,7 @@
 ---
 title: Upotreba izvora podataka za unos podataka
 description: Saznajte način uvoza podataka iz različitih izvora.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595938"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887885"
 ---
 # <a name="data-sources-overview"></a>Pregled izvora podataka
 
@@ -32,8 +32,15 @@ Izvor podataka možete dodati na tri osnovna načina:
 - [Iz mape Common Data Model](connect-common-data-model.md)
 - [Iz svog vlastitog jezera aplikacije Common Data Service](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Još uvijek ne možete dodati podatke iz lokalnih izvora podataka.
+## <a name="add-data-from-on-premises-data-sources"></a>Dodavanje podataka iz lokalnih izvora podataka
+
+Unošenje podataka iz lokalnih izvora podataka u Audience Insights podržano je na temelju tijekova podataka platforme Power Platform. Tijekovi podataka mogu se omogućiti u Customer Insights pomoću [pružanja URL-a okruženja Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) prilikom postavljanja okruženja.
+
+Izvori podataka koji se stvaraju nakon pridruživanja okruženja Dataverse uz Customer Insights koristit će [Power Platform tijekove podataka](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) prema zadanim postavkama. Tijekovi podataka podržavaju lokalnu povezaivost pomoću pristupnika za podatke. Uklonite i ponovno stvorite izvore podataka koji su postojali prije nego je okruženje Dataverse bilo je povezano za korištenje lokalnih pristupnika za podatke.
+
+Pristupnici za podatke iz postojećeg okruženja Power BI ili Power Apps bit će vidljivi i možete ih ponovno koristiti u Customer Insights. Stranica izvora podataka prikazuje veze do okruženja Power Platform u kojem možete pregledavati i konfigurirati lokalne pristupnike za podatke.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Snimka zaslona stranice izvora podataka koja prikazuje veze koje usmjeravaju na okruženje Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Pregled unijetih podataka
 
@@ -65,7 +72,7 @@ Da biste osvježili izvor podataka na zahtjev, slijedite korake u nastavku:
 
 2. Odaberite vertikalnu elipsu pored izvora podataka koji želite osvježiti i s padajućeg popisa odaberite **Osvježavanje**.
 
-3. Izvor podataka sada se pokreće za ručno osvježavanje. Osvježavanjem izvora podataka ažurirat će se i shema entiteta, kao i podaci za sve entitete navedene u izvoru podataka.
+3. Izvor podataka sada se pokreće za ručno osvježavanje. Osvježavanje izvora podataka ažurirat će i shemu entiteta i podatke za sve entitete navedene u izvoru podataka.
 
 4. Odaberite **Zaustavljanje osvježavanja** ako želite otkazati postojeće osvježavanje i izvor podataka će se vratiti na posljednji status osvježavanja.
 

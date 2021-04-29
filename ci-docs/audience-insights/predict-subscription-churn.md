@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595647"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906893"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predviđanje gubitaka pretplate (pretpregled)
 
@@ -49,6 +49,12 @@ Predviđanje gubitaka pretplate pomaže u predviđanju postoji li opasnost da ć
         - **Vremenska oznaka:** Datum i vrijeme događaja identificirani pomoću primarnog ključa.
         - **Događaj:** Odredite naziv za događaj koji želite koristiti. Na primjer, polje pod nazivom „UserAction” u usluzi strujanja videa moglo bi imati vrijednost „Prikazano”.
         - **Pojedinosti:** Detaljne informacije o događaju. Na primjer, polje pod nazivom „ShowTitle” u usluzi strujanja videa moglo bi imati vrijednost naziva videa koji je klijent pogledao.
+- Značajke predloženih podataka:
+    - Dovoljno povijesnih podataka: Podaci o pretplati za najmanje dvostruko veći odabrani vremenski okvir. Po mogućnosti dvije do tri godine podataka o pretplati.
+    - Status pretplate: Podaci uključuju aktivne i neaktivne pretplate za svakog klijenta, tako da postoji više unosa po ID-ju klijenta.
+    - Broj klijenata: Najmanje 10 profila klijenata, po mogućnosti više od 1 000 jedinstvenih klijenata. Model neće uspjeti s manje od 10 klijenata i nedovoljnim povijesnim podacima.
+    - Kompletnost podataka: Manje od 20 % vrijednosti koje nedostaju u podatkovnom polju navedenog entiteta.
+   
    > [!NOTE]
    > Trebat će vam najmanje dva zapisa aktivnosti za 50% klijenata za koje želite izračunati gubitak.
 
@@ -67,7 +73,7 @@ Predviđanje gubitaka pretplate pomaže u predviđanju postoji li opasnost da ć
 ### <a name="define-customer-churn"></a>Definirajte gubitak klijenta
 
 1. Unesite broj **Dana od isteka pretplate** za koju vaša tvrtka smatra da predstavlja izgubljenog klijenta. Ovo se razdoblje obično vezuje uz poslovne aktivnosti poput ponuda ili drugih marketinških napora kojima se pokušava spriječiti gubitak klijenta.
-1. Unesite broj **Dana u budućnosti za predviđanje gubitka** da biste postavili prozor za predviđanje gubitka. Na primjer, za predviđanje rizika gubitka za vaše klijente tijekom sljedećih 90 dana kako bi se uskladili s vašim naporima da zadržite marketing. Predviđanje rizika gubitka na dulja ili kraća vremenska razdoblja može otežati adresiranje čimbenika na vašem profilu rizika gubitka, ali to uvelike ovisi o vašim specifičnim poslovnim zahtjevima. Za nastavak odaberite **Dalje**
+1. Unesite broj **Dana u budućnosti za predviđanje gubitka** da biste postavili prozor za predviđanje gubitka. Na primjer, za predviđanje rizika gubitka za vaše klijente tijekom sljedećih 90 dana kako bi se uskladili s vašim naporima da zadržite marketing. Predviđanje rizika gubitka na dulja ili kraća vremenska razdoblja može otežati adresiranje čimbenika u vašem profilu rizika gubitka, ovisno o vašim specifičnim poslovnim zahtjevima. Za nastavak odaberite **Dalje**
    >[!TIP]
    > Možete odabrati **Spremi i zatvori** u bilo kojem trenutku kako biste predviđanje spremili kao skicu. Za nastavak, skicu predviđanja naći ćete na kartici **Moja predviđanja**.
 
@@ -113,7 +119,8 @@ Predviđanje gubitaka pretplate pomaže u predviđanju postoji li opasnost da ć
 1. Odaberite predviđanje koje želite pregledati.
    - **Naziv predviđanja:** Naziv predviđanja naveden prilikom njegovog stvaranja.
    - **Vrsta predviđanja:** Vrsta modela korištenog za to predviđanje
-   - **Entitet rezultata:** Naziv entiteta za pohranu rezultata predviđanja. Entitet ovog naziva možete pronaći u **Podaci** > **Entiteti**.
+   - **Entitet rezultata:** Naziv entiteta za pohranu rezultata predviđanja. Entitet ovog naziva možete pronaći u **Podaci** > **Entiteti**.    
+     U izlaznom je entitetu *ChurnScore* predviđena vjerojatnost gubitka i *IsChurn* binarna oznaka koja se temelji na *ChurnScore* s pragom od 0,5. Zadani prag možda neće funkcionirati za vaš scenarij. [Stvorite novi segment](segments.md#create-a-new-segment) s vašim željenim pragom.
    - **Polje predviđanja:** Ovo polje popunjava se samo za neke vrste predviđanja i ne koristi se za predviđanje gubitka pretplate.
    - **Status:** Trenutačni status izvršenja predviđanja.
         - **Na čekanju:** Predviđanje trenutno čeka na pokretanje drugih procesa.

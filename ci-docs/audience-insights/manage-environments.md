@@ -1,7 +1,7 @@
 ---
 title: Izrada okruženja i upravljanje njima
 description: Saznajte kako se prijaviti za uslugu i kako upravljati okruženjima.
-ms.date: 02/01/2021
+ms.date: 03/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598284"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887977"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
@@ -44,6 +44,9 @@ Ovaj članak objašnjava kako stvoriti novu tvrtku ili ustanovu i kako pripremit
 
 Novo okruženje moguće je stvoriti na dva načina. Možete odrediti potpuno novu konfiguraciju ili kopirati neke postavke konfiguracije iz postojećeg okruženja.
 
+> [!NOTE]
+> Tvrtke ili ustanove mogu stvoriti *dva* okruženja za svaku licencu za Customer Insights. Ako vaša tvrtka ili ustanova kupi više od jedne licence, [obratite se našem timu za podršku](https://go.microsoft.com/fwlink/?linkid=2079641) kako bi se povećao broj dostupnih okruženja. Za više informacija o kapacitetu i dodatnom kapacitetu preuzmite [Vodič za licenciranje za Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 Da biste stvorili okruženje:
 
 1. Odaberite birač **Okruženja** u zaglavlju aplikacije.
@@ -55,14 +58,14 @@ Da biste stvorili okruženje:
 
 1. U dijaloškom okviru **Stvori novo okruženje** odaberite **Novo okruženje**.
 
-   Ako želite [kopirati podatke iz trenutačnog okruženja](#additional-considerations-for-copy-configuration-preview), odaberite mogućnnost **Kopiraj iz postojećeg okruženja**. Vidjet ćete popis svih dostupnih okruženja u svojoj tvrtki ili ustanovi iz kojih možete kopirati podatke.
+   Ako želite [kopirati podatke iz trenutačnog okruženja](#considerations-for-copy-configuration-preview), odaberite mogućnnost **Kopiraj iz postojećeg okruženja**. Vidjet ćete popis svih dostupnih okruženja u svojoj tvrtki ili ustanovi iz kojih možete kopirati podatke.
 
 1. Navedite sljedeće pojedinosti:
    - **Naziv**: Naziv za ovo okruženje. Ovo je polje već popunjeno ako ste kopirali iz postojećeg okruženja, ali to možete promijeniti.
    - **Regija**: Regija u kojoj je usluga uvedena i udomaćena.
    - **Tip**: Odaberite želite li stvoriti proizvodno okruženje ili okruženje sigurnosne ograde.
 
-2. Po želji, možete odabrati **Napredne postavke**:
+1. Po želji, možete odabrati **Napredne postavke**:
 
    - **Spremi sve podatke u**: Određuje gdje želite pohraniti izlazne podatke generirane iz aplikacije Customer Insights. Imat ćete dvije mogućnosti: **Pohrana aplikacije Customer Insights** (pohrana Azure Data Lake kojom upravlja tim za Customer Insights) i **Azure Data Lake Storage Gen2** (vaša vlastita pohrana Azure Data Lake Storage). Prema zadanome je odabrana mogućnost pohrane aplikacije Customer Insights.
 
@@ -75,20 +78,20 @@ Da biste stvorili okruženje:
 
    - Za mogućnost Azure Data Lake Storage Gen2 možete birati između mogućnosti koja se temelji na resursima i mogućnosti koja se temelji na pretplati za provjeru autentičnosti. Za više informacija pogledajte [Povezivanje uvida ciljne skupine s računom servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure](connect-service-principal.md). Naziv **spremnika** ne može se promijeniti i bit će „customerinsights”.
    
-   - Ako želite koristiti [predviđanja](predictions.md) ili konfigurirati dijeljenje podataka s aplikacijama i rješenjima na temelju Microsoft Dataverse, navedite URL okruženja Microsoft Dataverse pod **Konfiguriraj dijeljenje podataka pomoću Microsoft Dataverse i omogući dodatne mogućnosti**. Odaberite **Omogući dijeljenje podataka** za dijeljenje izlaznih podataka usluge Customer Insights pomoću Microsoft Dataverse Managed Data Lake.
+   - Ako želite koristiti [predviđanja](predictions.md), konfigurirati dijeljenje podataka s aplikacijama i rješenjima na temelju Microsoft Dataverse ili omogućiti unos podataka iz lokalnih izvora podataka, navedite URL okruženja Microsoft Dataverse pod **Konfiguriraj dijeljenje podataka uz Microsoft Dataverse i omogući dodatne mogućnosti**. Odaberite **Omogući dijeljenje podataka** za dijeljenje izlaznih podataka usluge Customer Insights pomoću Microsoft Dataverse Managed Data Lake.
 
      > [!NOTE]
      > - Dijeljenje podataka pomoću Microsoft Dataverse Managed Data Lake trenutno nije podržano kada sve podatke spremite u vlastiti Azure Data Lake Storage.
      > - [Predviđanje vrijednosti koje nedostaju u entitetu](predictions.md) trenutno nije podržano kada omogućite dijeljenje podataka pomoću Microsoft Dataverse Managed Data Lake.
 
      > [!div class="mx-imgBorder"]
-     > ![Mogućnosti konfiguracije za omogućavanje dijeljenja podataka pomoću Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
+     > ![Mogućnosti konfiguracije za omogućavanje dijeljenja podataka pomoću Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
    Kada pokrenete procese, kao što su obrada podataka ili stvaranje segmenta, na računu za pohranu koji ste gore odredili stvorit će se odgovarajuće mape. Stvorit će se podatkovne datoteke i datoteke model.json i dodati u odgovarajuće podmape na temelju procesa koji pokrećete.
 
    Ako stvorite više okruženja značajke Customer Insights i odaberete spremiti izlazne entitete iz tih okruženja na svoj račun za pohranu, za svako će se okruženje stvoriti zasebne mape s ci_<environmentid> u spremniku.
 
-### <a name="additional-considerations-for-copy-configuration-preview"></a>Dodatna razmatranja o konfiguraciji kopije (pretpregled)
+### <a name="considerations-for-copy-configuration-preview"></a>Razmatranja oko konfiguracije kopiranja (pretpregled)
 
 Kopirane su sljedeće postavke konfiguracije:
 
@@ -136,6 +139,18 @@ Možete urediti neke pojedinosti postojećih okruženja.
 4. Ako je okruženje konfigurirano za pohranu podataka u pohrani Azure Data Lake Storage Gen2, možete ažurirati **Ključ računa**. Međutim, ne možete promijeniti **Naziv računa** ili naziv **Spremnik**.
 
 5. Ako želite, možete ažurirati vezu koja se temelji na ključu računa na vezu koja se temelji na resursima ili pretplati. Nakon nadogradnje i nakon ažuriranja ne možete se vratiti na prethodni ključ računa. Za više informacija pogledajte [Povezivanje uvida ciljne skupine s računom servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure](connect-service-principal.md). Ne možete promijeniti podatke za **Spremnik** prilikom ažuriranja veze.
+
+6. Neobavezno možete navesti URL okruženja Microsoft Dataverse pod **Konfiguriraj dijeljenje podataka uz Microsoft Dataverse i omogući dodatne mogućnosti**. Te mogućnosti uključuju razmjenu podataka s aplikacijama i rješenjima koja se temelje na Microsoft Dataverse, unosu podataka iz lokalnih izvora podataka ili korištenju [predviđanja](predictions.md). Odaberite **Omogući dijeljenje podataka** za dijeljenje izlaznih podataka usluge Customer Insights pomoću Microsoft Dataverse Managed Data Lake.
+
+   > [!NOTE]
+   > - Dijeljenje podataka pomoću Microsoft Dataverse Managed Data Lake trenutno nije podržano kada sve podatke spremite u vlastiti Azure Data Lake Storage.
+   > - [Predviđanje vrijednosti koje nedostaju u entitetu](predictions.md) trenutno nije podržano kada omogućite dijeljenje podataka uz Microsoft Dataverse Managed Data Lake.
+
+   Nakon što omogućite dijeljenje podataka uz Microsoft Dataverse, pokrenut će se potpuno osvježavanje vaših izvora podataka i ostalih procesa. Ako se procesi trenutno izvode i nalaze u redu čekanja, nećete vidjeti mogućnost za omogućavanje dijeljenja podataka uz Microsoft Dataverse. Možete pričekati da se ti procesi dovrše ili ih otkazati da biste omogućili dijeljenje podataka. 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Mogućnosti konfiguracije za omogućavanje dijeljenja podataka uz Microsoft Dataverse.":::
+   
+   Kada pokrenete procese, kao što su obrada podataka ili stvaranje segmenta, na računu za pohranu koji ste gore odredili stvorit će se odgovarajuće mape. Datoteke podataka i datoteke model.json stvorit će se i dodati u odgovarajuće podmape, ovisno o procesu koji pokrenete.
 
 ## <a name="reset-an-existing-environment"></a>Ponovno postavljanje postojećeg okruženja
 
