@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595555"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085613"
 ---
 # <a name="match-entities"></a>Slaganje entiteta
 
@@ -103,6 +103,18 @@ Pravila uparivanja predstavljaju skupove uvjeta. Za uparivanje entiteta prema uv
 
 > [!NOTE]
 > Bitan je redoslijed pravila. Algoritam uparivanja pokušava uparivati na temelju vašeg prvog pravila i prelazi na drugo pravilo samo ako s prvim pravilom nisu identificirana uparivanja.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Promjena redoslijeda entiteta u pravilima uparivanja
+
+Možete promijeniti redoslijed entiteta za pravila uparivanja kako biste promijenili redoslijed kojim se obrađuju. Pravila koja su u sukobu zbog promijenjenog redoslijeda će se ukloniti. Uklonjena pravila morate ponovno stvoriti ažuriranom konfiguracijom.
+
+1. Idite u odjeljak **Podaci** > **Objedini** > **Upari** pa odaberite **Uredi**.
+
+1. U oknu **Uredi pravilo** odaberite kontrolu **Pomakni gore/dolje** ili povucite i ispustite entitete da biste promijenili redoslijed.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Mogućnosti za promjenu redoslijeda obrade entiteta u fazi uparivanja.":::
+
+1. Odaberite **Gotovo** da biste spremili pravilo.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definiranje uklanjanja duplikata na entitetu podudaranja
 

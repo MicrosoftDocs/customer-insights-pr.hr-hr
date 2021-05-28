@@ -1,7 +1,7 @@
 ---
 title: Spajanje entiteta u objedinjavanju podataka
 description: Spojite entitete da biste stvorili objedinjene profile klijenata.
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,61 +9,100 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896502"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085567"
 ---
 # <a name="merge-entities"></a>Spajanje entiteta
 
 Faza spajanja zadnja je faza u procesu objedinjavanja podataka. Njezina je svrha usklađivanje zbunjujućih podataka. Primjeri sukobljenih podataka mogu uključivati ime klijenta koje se nalazi u dvama skupovima podataka, ali se malo drugačije prikazuje u svakome od njih („Grant Marshall” u odnosu na „Grant Marshal”) ili telefonski broj koji se razlikuje u obliku (617-803-091X u odnosu na 617803091X). Spajanje tih zbunjujućih podatkovnih točaka vrši se na osnovi atribut prema atributu.
 
+:::image type="content" source="media/merge-fields-page.png" alt-text="Stranica spajanja u postupku objedinjavanja podataka koja prikazuje tablicu sa spojenim poljima koja definiraju objedinjeni profil klijenta.":::
+
 Nakon dovršetka [faze uparivanja](match-entities.md) fazu spajanja možete započeti odabirom pločice **Spajanje** na stranici **Objedinjavanje**.
 
 ## <a name="review-system-recommendations"></a>Pregled preporuka sustava
 
-Na stranici **Spajanje** možete odabrati i isključiti atribute koji će se spajati unutar vašeg objedinjenog entiteta profila klijenta (rezultat procesa konfiguracije). Sustav automatski spaja neke atribute.
+U odjeljku **Podaci** > **Objedini** > **Spoji** odabirete i isključujete atribute za spajanje unutar vašeg entiteta objedinjenog profila klijenta. Objedinjeni profil klijenta rezultat je postupka objedinjavanja podataka. Sustav automatski spaja neke atribute.
 
-### <a name="view-merged-attributes"></a>Prikaz spojenih atributa
+Da biste pregledali atribute koji su uključeni u jedan od vaših automatski spojenih atributa, odaberite taj spojeni atribut na kartici **Polja klijenata** za tablicu. Atributi koji čine taj spojeni atribut prikazuju se u dva nova retka ispod spojenog atributa.
 
-Da biste prikazali atribute koji su uključeni u jedan od vaših automatski spojenih atributa, odaberite taj spojeni atribut. Dva atributa koja čine taj spojeni atribut prikazat će se u dva nova reda ispod spojenog atributa.
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Razdvajanje, preimenovanje, isključivanje i uređivanje spojenih polja
 
-> [!div class="mx-imgBorder"]
-> ![Odabir spojenog atributa](media/configure-data-merge-profile-attributes.png "Odabir spojenog atributa")
+Možete promijeniti način na koji sustav obrađuje spojene atribute kako bi stvorio objedinjeni profil klijenta. Odaberite **Prikaži više** i odaberite što želite promijeniti.
 
-### <a name="separate-merged-attributes"></a>Odvajanje spojenih atributa
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Mogućnosti u padajućem izborniku Prikaži više za upravljanje spojenim atributima.":::
 
-Da biste odvojili ili odspojili bilo koji od automatski spojenih atributa, pronađite atribut u tablici **Atributi profila**.
+Dodatne informacije potražite u sljedećim odjeljcima.
 
-1. Odaberite gumb trotočke (...).
+## <a name="separate-merged-fields"></a>Razdvajanje spojenih polja
+
+Da biste razdvojili spojena polja, pronađite atribut u tablici. Razdvojena polja prikazuju se kao pojedinačne podatkovne točke na objedinjenom profilu klijenta. 
+
+1. Odaberite spojeno polje.
   
-2. Na padajućem popisu odaberite **Odvoji polja**.
+1. Odaberite **Prikaži više** pa odaberite **Razdvoji polja**.
+ 
+1. Potvrdite razdvajanje.
 
-### <a name="remove-merged-attributes"></a>Uklanjanje spojenih atributa
+1. Odaberite **Spremi** i **Pokreni** za obradu promjena.
 
-Da biste atribut isključili iz konačnog entiteta profila klijenta, pronađite ga u tablici **Atributi profila**.
+## <a name="rename-merged-fields"></a>Preimenovanje spojenih polja
 
-1. Odaberite gumb trotočke (...).
+Promijenite zaslonski naziv spojenih atributa. Ne možete promijeniti naziv izlaznog entiteta.
+
+1. Odaberite spojeno polje.
   
-2. Na padajućem popisu odaberite **Nemoj spojiti**.
+1. Odaberite **Prikaži više** pa odaberite **Preimenuj**.
 
-   Atribut je premješten u odjeljak **Uklonjeno iz zapisa klijenta**.
+1. Potvrdite promijenjeni zaslonski naziv. 
 
-## <a name="manually-add-a-merged-attribute"></a>Ručno dodavanje spojenog atributa
+1. Odaberite **Spremi** i **Pokreni** za obradu promjena.
 
-Da biste dodali spojeni atribut, idite na stranicu **Spoji**.
+## <a name="exclude-merged-fields"></a>Isključivanje spojenih polja
 
-1. Odaberite **Dodaj spojeni atribut**.
+Isključite atribut iz objedinjenog profila klijenta. Ako se polje koristi u drugim postupcima, npr. u segmentu, uklonite ga iz tih postupaka prije nego što ga isključite iz profila klijenta. 
 
-2. Unesite **Naziv** da biste ga kasnije identificirali na stranici **Spoji**.
+1. Odaberite spojeno polje.
+  
+1. Odaberite **Prikaži više** pa odaberite **Isključi**.
 
-3. Ako želite, unesite **Zaslonski naziv** koji će se pojaviti u objedinjenom entitetu profila klijenta.
+1. Potvrdite isključivanje.
 
-4. Konfigurirajte **Odaberi duplicirane atribute** da biste odabrali atribute koje želite spojiti iz uparenih entiteta. Također možete tražiti atribute.
+1. Odaberite **Spremi** i **Pokreni** za obradu promjena. 
 
-5. Postavite **Poredak po značaju** da biste dali prednost jednom atributu iznad ostalih. Na primjer, ako *WebAccountCSV* entitet uključuje najtočnije podatke o atributu *Puni nazivi*, možete dati prednost ovom entitetu iznad *ContactCSV* odabirom *WebAccountCSV*. Kao rezultat, *WebAccountCSV* prelazi na prvi prioritet, dok *ContactCSV* prelazi na drugi prioritet pri povlačenju vrijednosti za atribut *Puni naziv*.
+Na stranici **Spajanje** odaberite **Isključena polja** da biste vidjeli popis svih isključenih polja. Ovo okno omogućuje vraćanje isključenih polja.
+
+## <a name="manually-combine-fields"></a>Ručno kombiniranje polja
+
+Ručno navedite spojeni atribut. 
+
+1. Na stranici **Spajanje** odaberite **Kombiniraj polja**.
+
+1. Navedite **Naziv** i **Naziv polja rezultata**.
+
+1. Odaberite polje za dodavanje. Odaberite **Dodaj polja** za kombiniranje više polja.
+
+1. Potvrdite isključivanje.
+
+1. Odaberite **Spremi** i **Pokreni** za obradu promjena. 
+
+## <a name="change-the-order-of-fields"></a>Promjena redoslijeda polja
+
+Neki entiteti sadrže više pojedinosti od drugih. Ako entitet uključuje najnovije podatke o polju, možete mu dati prednost nad drugim entitetima pri spajanju vrijednosti.
+
+1. Odaberite spojeno polje.
+  
+1. Odaberite **Prikaži više** pa odaberite **Uredi**.
+
+1. U oknu **Kombiniraj polja** odaberite **Pomakni gore/dolje** za postavljanje redoslijeda ili ih povucite i ispustite u željeni položaj.
+
+1. Potvrdite promjenu.
+
+1. Odaberite **Spremi** i **Pokreni** za obradu promjena.
 
 ## <a name="run-your-merge"></a>Pokretanje spajanja
 
@@ -72,11 +111,11 @@ Bilo da ručno spajate atribute ili da ih spaja sustav, uvijek možete pokrenuti
 > [!div class="mx-imgBorder"]
 > ![Spremi i pokreni spajanje podataka](media/configure-data-merge-save-run.png "Spremi i pokreni spajanje podataka")
 
-Da biste napravili dodatne promjene i ponovo pokrenuli korak, možete otkazati slaganje u tijeku. Odaberite **Osvježavanje...** i odaberite **Otkaži posao**  na bočnom oknu koje se pojavljuje.
+Odaberite **Pokreni samo spajanje** ako želite vidjeti samo rezultat koji se odražava u objedinjenom entitetu klijenta. Nizvodni procesi bit će osvježeni kako je [definirano u rasporedu osvježavanja](system.md#schedule-tab).
 
-Nakon što se tekst **Osvježavanje...** promijeni u **Uspješno**, spajanje se dovršilo i riješilo kontradikcije u podacima prema pravilima koje ste definirali. Spojeni i nespojeni atributi uključeni su u objedinjeni entitet profila. Isključeni atributi nisu uključeni u objedinjeni entitet profila.
+Odaberite **Pokreni spajanje i nizvodne procese** kako biste sustav osvježili svojim promjenama. Svi procesi, uključujući obogaćivanje, segmente i mjere automatski će se ponovno pokrenuti. Nakon završetka svih nizvodnih procesa, profili klijenata odražavaju sve promjene koje ste napravili.
 
-Ako nije prvi put da ste uspješno pokrenuli spajanje, svi postupci, uključujući obogaćivanje, segmentaciju i mjere, automatski će se ponovno pokrenuti. Nakon što su se svi postupci ponovno pokrenuli, profili klijenta odražavaju sve promjene.
+Da biste izvršili više promjena i ponovno pokrenuli korak, možete otkazati spajanje u tijeku. Odaberite **Osvježavanje...** i odaberite **Otkaži posao**  na bočnom oknu koje se pojavljuje.
 
 > [!TIP]
 > Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Osim toga, većina procesa [ovisi o ostalim procesima](system.md#refresh-policies). Možete odabrati status procesa da biste vidjeli pojedinosti o tijeku cijelog posla. Nakon odabira mogućnosti **Pogledaj pojedinosti** za jedan od zadataka posla pronaći ćete dodatne informacije: vrijeme obrade, zadnji datum obrade te sve pogreške i upozorenja povezana sa zadatkom.
@@ -85,9 +124,6 @@ Ako nije prvi put da ste uspješno pokrenuli spajanje, svi postupci, uključuju�
 
 Konfigurirajte [aktivnosti](activities.md), [obogaćivanje](enrichment-hub.md) ili [odnose](relationships.md) za više uvida u svoje klijente.
 
-Ako ste već konfigurirali aktivnosti, obogaćivanje ili odnose ili ako ste definirali segmente, oni će se automatski obraditi kako bi se upotrijebili najnoviji podaci o klijentima.
-
-
-
+Ako ste već konfigurirali aktivnosti, obogaćivanje ili segmente, obrađivat će se automatski kako bi se upotrijebili najnoviji podaci o klijentu.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

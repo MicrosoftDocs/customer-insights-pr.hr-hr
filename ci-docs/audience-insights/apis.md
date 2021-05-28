@@ -1,7 +1,7 @@
 ---
 title: Rad s API-jima
 description: Koristite API-je i shvatite ograničenja.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873653"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016583"
 ---
 # <a name="work-with-customer-insights-apis"></a>Rad s API-jima Customer Insights
 
@@ -90,19 +90,13 @@ U [odjeljku za registraciju aplikacije](#create-a-new-app-registration-in-the-az
 
 1. Na registraciji svoje aplikacije na Azure portalu idite na **Dozvole API-ja**.
 
-1. Odaberite **Dodaj dozvolu** pa odaberite **Customer Insights** u bočnom oknu.
+1. Odaberite **Dodaj dozvolu**. 
+
+1. Odaberite karticu **API-ji koje koristi moja tvrtka ili ustanova** pa s popisa odaberite **Dynamics 365 AI za Customer Insights**. 
 
 1. Za **Vrsta dozvole** odaberite **Dozvole aplikacija** pa odaberite dozvolu **CustomerInsights.Api.All**.
 
 1. Odaberite **Dodaj dozvole**.
-
-1. Da biste dali pristanak administratora na ovu dozvolu aplikaciju, morate dodati upravitelja servisa.
-
-   1. Instalirajte Azure Active Directory (AD) PowerShell modul: `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Povežite se na svoj račun za AD: `Connect-AzureAD -TenantId <your tenant id>`. Svoj ID klijenta možete pronaći na **Pregled** > **Azure Active Directory**.
-   1. Pokrenite sljedeću naredbu za dodavanje Azure AD upravitelja servisa: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` Parametar AppId odnosi se na aplikaciju Customer Insights API-ja.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Ogledni upravitelj servisa":::
 
 1. Vratite se na **Dozvole API-ja** za registraciju svoje aplikacije.
 

@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887931"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049241"
 ---
 # <a name="define-and-manage-measures"></a>Definiranje i upravljanje mjerama
 
@@ -34,7 +34,7 @@ Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Možete izraditi m
 
 1. Odaberite **Uredi naziv** i navedite **Naziv** za mjeru. 
    > [!NOTE]
-   > Ako vaša nova konfiguracija mjere ima samo dva polja, za primjer, CustomerID i jedan izračun, izlazna će se vrijednost dodati kao novi stupac entitetu koji je generirao sustav pod nazivom Customer_Measure. Vrijednost mjere moći ćete vidjeti u objedinjenom profilu klijenta. Ostale će mjere generirati vlastite entitete.
+   > Ako vaša nova konfiguracija mjera ima samo dva polja, npr. CustomerID i jedan izračun, rezultat će se dodati kao novi stupac u entitet koji je generirao sustav pod nazivom Customer_Measure. Vrijednost mjere moći ćete vidjeti u objedinjenom profilu klijenta. Ostale će mjere generirati vlastite entitete.
 
 1. U području konfiguracije odaberite funkciju skupljanja u padajućem izborniku **Odabir funkcije**. Funkcije skupljanja uključuju: 
    - **Zbroj**

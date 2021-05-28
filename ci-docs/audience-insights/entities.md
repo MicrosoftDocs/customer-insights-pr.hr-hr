@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596398"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049385"
 ---
 # <a name="entities-in-audience-insights"></a>Entiteti u uvidima u ciljnu skupinu
 
@@ -35,14 +35,14 @@ Stranica **Entiteti** navodi entitete i uključuje nekoliko stupaca:
 Odaberite entitet za istraživanje različitih polja i zapisa koji su uključeni u taj entitet.
 
 > [!div class="mx-imgBorder"]
-> ![Odaberite entitet](media/data-manager-entities-data.png "Odaberite entitet")
+> ![Odabir entiteta](media/data-manager-entities-data.png "Odaberite entitet")
 
-- Kartica **Podaci** odabrana je prema zadanim postavkama i prikazuje tablicu s detaljima o pojedinačnim zapisima o entitetu.
+- Kartica **Podaci** prikazuje tablicu s popisom pojedinosti o pojedinačnim zapisima entiteta.
 
 > [!div class="mx-imgBorder"]
 > ![Tablica polja](media/data-manager-entities-fields.PNG "Tablica polja")
 
-- Kartica **Polja** prikazuje tablicu za pregled detalja za odabrani entitet, kao što su nazivi polja, vrste podataka i vrste. Stupac **Vrsta** prikazuje povezane vrste modela uobičajenih podataka, koji automatski identificira sustav ili [ručno mapiraju](map-entities.md) korisnici. To su semantičke vrste koje se mogu razlikovati ovisno o vrstama podataka atributa – primjerice polje *E-pošta* u nastavku ima vrstu podataka *Tekst*, ali njegova (semantička) vrsta modela uobičajenih podataka može biti *E-pošta* ili *Adresa e-pošte*.
+- Kartica **Atributi** je odabrana prema zadanim postavkama i prikazuje tablicu za pregled pojedinosti za odabrani entitet, kao što su nazivi polja, vrste podataka i vrste. Stupac **Vrsta** prikazuje povezane vrste modela uobičajenih podataka, koji automatski identificira sustav ili [ručno mapiraju](map-entities.md) korisnici. To su semantičke vrste koje se mogu razlikovati ovisno o vrstama podataka atributa – primjerice polje *E-pošta* u nastavku ima vrstu podataka *Tekst*, ali njegova (semantička) vrsta modela uobičajenih podataka može biti *E-pošta* ili *Adresa e-pošte*.
 
 > [!NOTE]
 > Obje tablice prikazuju samo uzorak podataka entiteta. Za prikaz cijelog skupa podataka idite na stranicu **Izvori podataka**, odaberite entitet, nakon toga **Uredi** i zatim pregledajte podatke tog entiteta uz pomoć alata za uređivanje Power Query, kao što je objašnjeno u poglavlju [Izvori podataka](data-sources.md).
