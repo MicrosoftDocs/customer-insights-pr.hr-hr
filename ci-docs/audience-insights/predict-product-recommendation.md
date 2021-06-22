@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906755"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095547"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predviđanje preporuka proizvoda (pretpregled)
 
@@ -205,33 +205,9 @@ Ponekad su samo određeni proizvodi korisni ili prikladni za vrstu predviđanja 
        > [!div class="mx-imgBorder"]
        > ![Popis koji prikazuje prijedloge visoke pouzdanosti za odabrani skup pojedinačnih klijenata](media/product-recommendation-highconfidence.PNG "Popis koji prikazuje prijedloge visoke pouzdanosti za odabrani skup pojedinačnih klijenata")
 
-## <a name="fix-a-failed-prediction"></a>Popravak neuspjelog predviđanja
+## <a name="manage-predictions"></a>Upravljanje predviđanjima
 
-1. Idite na karticu **Moja predviđanja** pod **Inteligencija** > **Predviđanja**.
-
-1. Odaberite predviđanje čije zapisnike o pogreškama želite pregledati i odaberite **Zapisnici**.
-
-1. Pregledajte sve pogreške. Može se dogoditi nekoliko vrsta pogrešaka i one opisuju kakvo je stanje prouzročilo pogrešku. Na primjer, pogreška da nema dovoljno podataka za precizno predviđanje obično se rješava učitavanjem više podataka u Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Osvježavanje predviđanja
-
-Predviđanja se automatski osvježavaju prema istom [rasporedu prema kojem se osvježavaju podaci](system.md#schedule-tab) kako je konfigurirano u postavkama.
-
-1. Idite na karticu **Moja predviđanja** pod **Inteligencija** > **Predviđanja**.
-
-1. Odaberite okomitu trotočku uz predviđanje koje želite osvježiti.
-
-1. Odaberite **Osvježi**.
-
-## <a name="delete-a-prediction"></a>Brisanje predviđanja
-
-Brisanjem predviđanja uklonit će se i njegov izlazni entitet.
-
-1. Idite na karticu **Moja predviđanja** pod **Inteligencija** > **Predviđanja**.
-
-1. Odaberite okomitu trotočku uz predviđanje koje želite izbrisati.
-
-1. Odaberite **Obriši**.
+Predviđanja je moguće optimizirati, riješiti, osvježiti ili izbrisati. Pregledajte izvješće o upotrebljivosti ulaznih podataka da biste saznali kako predviđanje učiniti bržim i pouzdanijim. Dodatne informacije potražite u odjeljku [Upravljanje predviđanjima](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

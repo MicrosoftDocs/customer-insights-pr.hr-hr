@@ -96,30 +96,40 @@
           href: audience-insights/measures.md
     - name: Predviđanja
       items:
-        - name: Dovršetak podataka pomoću predviđanja vrijednosti
-          href: audience-insights/predictions.md
-        - name: Predviđanje gubitaka pretplate
-          href: audience-insights/predict-subscription-churn.md
-        - name: Vodič uzorka za predviđanje gubitka pretplate
-          href: audience-insights/sample-guide-predict-subscription-churn.md
-        - name: Predvidite transakcijski gubitak
-          href: audience-insights/predict-transactional-churn.md
-        - name: Vodič uzorka za predviđanje transakcijskog gubitka
-          href: audience-insights/sample-guide-predict-transactional-churn.md
-        - name: Predviđanje cjeloživotne vrijednosti klijenta (CLV)
-          href: audience-insights/predict-customer-lifetime-value.md
-        - name: Predviđanje preporuka proizvoda
-          href: audience-insights/predict-product-recommendation.md
-        - name: Uzorak vodiča za predviđanje preporuka proizvoda
-          href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Predviđanje podataka uz pomoć umjetne inteligencije
+          items:
+            - name: Pregled modela predviđanja
+              href: audience-insights/predictions-overview.md
+            - name: Predviđanje cjeloživotne vrijednosti klijenta (CLV)
+              href: audience-insights/predict-customer-lifetime-value.md
+            - name: Predviđanje preporuka proizvoda
+              href: audience-insights/predict-product-recommendation.md
+            - name: Predviđanje gubitaka pretplate
+              href: audience-insights/predict-subscription-churn.md
+            - name: Predvidite transakcijski gubitak
+              href: audience-insights/predict-transactional-churn.md
+            - name: Upotreba prilagođenih modela pomoću Strojnog učenja Azure
+              href: audience-insights/custom-models.md
+            - name: Dovršavanje podataka koji djelomično nedostaju
+              href: audience-insights/predictions.md
+        - name: Uzorci vodiča
+          items:
+            - name: Uzorak vodiča za CLV predviđanje
+              href: audience-insights/sample-guide-predict-clv.md
+            - name: Vodič uzorka za predviđanje gubitka pretplate
+              href: audience-insights/sample-guide-predict-subscription-churn.md
+            - name: Vodič uzorka za predviđanje transakcijskog gubitka
+              href: audience-insights/sample-guide-predict-transactional-churn.md
+            - name: Uzorak vodiča za predviđanje preporuka proizvoda
+              href: audience-insights/sample-guide-predict-product-recommendation.md
+            - name: Eksperimenti sa Strojnim učenjem Azure
+              href: audience-insights/azure-machine-learning-experiments.md
+            - name: Eksperimenti sa strojnim učenjem Azure Machine Learning studio
+              href: audience-insights/machine-learning-studio-experiments.md
+        - name: Upravljanje predviđanjima
+          href: audience-insights/manage-predictions.md
         - name: Stvaranje segmenata na temelju predviđanja
           href: audience-insights/prediction-based-segment.md
-        - name: Implementacija prilagođenih modela strojnog učenja
-          href: audience-insights/custom-models.md
-        - name: Eksperimenti sa Strojnim učenjem Azure
-          href: audience-insights/azure-machine-learning-experiments.md
-        - name: Eksperimenti sa strojnim učenjem Azure Machine Learning studio
-          href: audience-insights/machine-learning-studio-experiments.md
     - name: Mogućnosti izvoza
       items:
         - name: Izvozi
@@ -154,12 +164,18 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: LinkedIn Ads
+              href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
               href: audience-insights/export-liveramp.md
             - name: Mailchimp
               href: audience-insights/export-mailchimp.md
             - name: Marketo
               href: audience-insights/export-marketo.md
+            - name: Microsoftovo oglašavanje
+              href: audience-insights/export-microsoft-advertising.md
+            - name: Omnisend
+              href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
             - name: SendGrid
@@ -200,6 +216,8 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Pregled shema entiteta u modelu Common Data Model
           href: audience-insights/entity-schemas.md
+        - name: Podaci rješenja Customer Insights u servisu Dataverse
+          href: audience-insights/customer-insights-dataverse.md
         - name: Rad s API-jima
           href: audience-insights/apis.md
         - name: API reference
@@ -240,6 +258,12 @@
           href: engagement-insights/custom-reports.md
         - name: Stvorite izvješća objedinjenog profila
           href: engagement-insights/profile-reports.md
+        - name: Prikaz i stvaranje dimenzija
+          href: engagement-insights/dimensions.md
+        - name: Prikaz i stvaranje metrike
+          href: engagement-insights/metrics.md
+        - name: Prikaz i stvaranje segmenata
+          href: engagement-insights/segments.md
     - name: Analitika puta
       items:
         - name: Stvaranje i upravljanje izvješćima o kanalu

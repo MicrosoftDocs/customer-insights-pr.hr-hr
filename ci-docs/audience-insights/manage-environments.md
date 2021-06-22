@@ -1,7 +1,7 @@
 ---
 title: Izrada okruženja i upravljanje njima
 description: Saznajte kako se prijaviti za uslugu i kako upravljati okruženjima.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887977"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259090"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
@@ -76,9 +76,9 @@ Da biste stvorili okruženje:
    > Podržavamo samo račune za pohranu Azure Data Lake Gen2 iz iste Azure regije koju ste odabrali prilikom stvaranja okruženja.
    > Podržavamo samo račune za pohranu Azure Data Lake Gen2 s omogućenom značajkom hijerarhijskog prostora za naziv (HNS).
 
-   - Za mogućnost Azure Data Lake Storage Gen2 možete birati između mogućnosti koja se temelji na resursima i mogućnosti koja se temelji na pretplati za provjeru autentičnosti. Za više informacija pogledajte [Povezivanje uvida ciljne skupine s računom servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure](connect-service-principal.md). Naziv **spremnika** ne može se promijeniti i bit će „customerinsights”.
+   - Za mogućnost Azure Data Lake Storage Gen2 možete birati između mogućnosti koja se temelji na resursima i mogućnosti koja se temelji na pretplati za provjeru autentičnosti. Za više informacija pogledajte [Povezivanje uvida ciljne skupine s računom servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure](connect-service-principal.md). Naziv **Spremnika** se ne može promijeniti i bit će `customerinsights`.
    
-   - Ako želite koristiti [predviđanja](predictions.md), konfigurirati dijeljenje podataka s aplikacijama i rješenjima na temelju Microsoft Dataverse ili omogućiti unos podataka iz lokalnih izvora podataka, navedite URL okruženja Microsoft Dataverse pod **Konfiguriraj dijeljenje podataka uz Microsoft Dataverse i omogući dodatne mogućnosti**. Odaberite **Omogući dijeljenje podataka** za dijeljenje izlaznih podataka usluge Customer Insights pomoću Microsoft Dataverse Managed Data Lake.
+   - Ako želite koristiti [predviđanja](predictions.md), konfigurirati dijeljenje podataka sa servisom Microsoft Dataverse ili omogućiti unos podataka iz lokalnih izvora podataka, navedite URL okruženja Microsoft Dataverse pod **Konfiguriraj dijeljenje podataka uz Microsoft Dataverse i omogući dodatne mogućnosti**. Odaberite **Omogući dijeljenje podataka** za dijeljenje izlaznih podataka usluge Customer Insights pomoću Microsoft Dataverse Managed Data Lake.
 
      > [!NOTE]
      > - Dijeljenje podataka pomoću Microsoft Dataverse Managed Data Lake trenutno nije podržano kada sve podatke spremite u vlastiti Azure Data Lake Storage.
@@ -87,7 +87,7 @@ Da biste stvorili okruženje:
      > [!div class="mx-imgBorder"]
      > ![Mogućnosti konfiguracije za omogućavanje dijeljenja podataka pomoću Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Kada pokrenete procese, kao što su obrada podataka ili stvaranje segmenta, na računu za pohranu koji ste gore odredili stvorit će se odgovarajuće mape. Stvorit će se podatkovne datoteke i datoteke model.json i dodati u odgovarajuće podmape na temelju procesa koji pokrećete.
+   Kada pokrenete procese, kao što su obrada podataka ili stvaranje segmenta, na računu za pohranu koji ste gore odredili stvorit će se odgovarajuće mape. Datoteke podataka i datoteke model.json stvorit će se i dodati u mape na temelju naziva postupka.
 
    Ako stvorite više okruženja značajke Customer Insights i odaberete spremiti izlazne entitete iz tih okruženja na svoj račun za pohranu, za svako će se okruženje stvoriti zasebne mape s ci_<environmentid> u spremniku.
 
@@ -140,13 +140,13 @@ Možete urediti neke pojedinosti postojećih okruženja.
 
 5. Ako želite, možete ažurirati vezu koja se temelji na ključu računa na vezu koja se temelji na resursima ili pretplati. Nakon nadogradnje i nakon ažuriranja ne možete se vratiti na prethodni ključ računa. Za više informacija pogledajte [Povezivanje uvida ciljne skupine s računom servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure](connect-service-principal.md). Ne možete promijeniti podatke za **Spremnik** prilikom ažuriranja veze.
 
-6. Neobavezno možete navesti URL okruženja Microsoft Dataverse pod **Konfiguriraj dijeljenje podataka uz Microsoft Dataverse i omogući dodatne mogućnosti**. Te mogućnosti uključuju razmjenu podataka s aplikacijama i rješenjima koja se temelje na Microsoft Dataverse, unosu podataka iz lokalnih izvora podataka ili korištenju [predviđanja](predictions.md). Odaberite **Omogući dijeljenje podataka** za dijeljenje izlaznih podataka usluge Customer Insights pomoću Microsoft Dataverse Managed Data Lake.
+6. Neobavezno možete navesti URL okruženja Microsoft Dataverse pod **Konfiguriraj dijeljenje podataka uz Microsoft Dataverse i omogući dodatne mogućnosti**. Te mogućnosti uključuju razmjenu podataka s aplikacijama i rješenjima koja se temelje na servisu Microsoft Dataverse, unosu podataka iz lokalnih izvora podataka ili korištenju [predviđanja](predictions.md). Odaberite **Omogući dijeljenje podataka** za dijeljenje izlaznih podataka usluge Customer Insights pomoću Microsoft Dataverse Managed Data Lake.
 
    > [!NOTE]
    > - Dijeljenje podataka pomoću Microsoft Dataverse Managed Data Lake trenutno nije podržano kada sve podatke spremite u vlastiti Azure Data Lake Storage.
    > - [Predviđanje vrijednosti koje nedostaju u entitetu](predictions.md) trenutno nije podržano kada omogućite dijeljenje podataka uz Microsoft Dataverse Managed Data Lake.
 
-   Nakon što omogućite dijeljenje podataka uz Microsoft Dataverse, pokrenut će se potpuno osvježavanje vaših izvora podataka i ostalih procesa. Ako se procesi trenutno izvode i nalaze u redu čekanja, nećete vidjeti mogućnost za omogućavanje dijeljenja podataka uz Microsoft Dataverse. Možete pričekati da se ti procesi dovrše ili ih otkazati da biste omogućili dijeljenje podataka. 
+   Nakon što se omogući dijeljenje podataka uz Microsoft Dataverse, pokreće se potpuno osvježavanje vaših izvora podataka i ostalih procesa. Ako se procesi trenutno izvode, ne vidite mogućnost za omogućavanje dijeljenja podataka uz Microsoft Dataverse. Pričekajte da se ti procesi dovrše ili ih otkažite da biste omogućili dijeljenje podataka. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Mogućnosti konfiguracije za omogućavanje dijeljenja podataka uz Microsoft Dataverse.":::
    

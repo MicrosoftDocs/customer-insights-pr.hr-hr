@@ -1,7 +1,7 @@
 ---
 title: Obogaćivanje profila klijenata podacima tvrtke Microsoft
 description: Koristite vlasničke podatke tvrtke Microsoft za obogaćivanje podataka o klijentima afinitetima prema brendovima i interesima.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064882"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245698"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogaćivanje profila klijenta s afinitetima prema robnoj marki i interesima (pretpregled)
 
@@ -69,12 +69,10 @@ Vođeno iskustvo pomaže vam u konfiguraciji obogaćivanja.
 
 ### <a name="define-your-brands-or-interests"></a>Definirajte svoje robne marke ili interese
 
-Odaberite jednu od sljedećih mogućnosti:
+Odaberite do pet robnih marki ili interesa pomoću jedne ili obje ove mogućnosti:
 
-- **Industrija**: sustav identificira najbolje robne marke ili interese koji se odnose na vašu industriju i njima obogaćuje vaše podatke o klijentu.
-- **Odaberite vlastito**: na popisu robnih marki ili interesa koji su najvažniji za vašu tvrtku ili ustanovu odaberite do pet stavki.
-
-Da biste dodali robnu marku ili interes, unesite je u područje za unos da biste dobili prijedloge utemeljene na podudaranju uvjeta. Ako nismo naveli robnu marku ili interes koji tražite, pošaljite nam povratne informacije putem veze **Predloži**.
+- **Djelatnost**: Na padajućem popisu odaberite svoju djelatnost, a zatim odaberite vodeće marke ili interese za tu djelatnost.
+- **Odaberite vlastito**: Unesite marku ili interes koji su relevantni za vašu tvrtku ili ustanovu, a zatim odaberite među odgovarajućim prijedlozima. Ako nismo naveli robnu marku ili interes koji tražite, pošaljite nam povratne informacije putem veze **Predloži**.
 
 ### <a name="review-enrichment-preferences"></a>Preferencije obogaćivanja pregleda
 

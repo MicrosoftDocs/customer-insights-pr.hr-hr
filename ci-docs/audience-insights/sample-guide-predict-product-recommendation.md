@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595264"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129890"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Uzorak vodiča za predviđanje preporuka proizvoda (pretpregled)
 
@@ -22,7 +22,7 @@ Preko primjera ćemo vas provesti kroz predviđanje preporuka proizvoda pomoću 
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je tvrtka koja proizvodi visokokvalitetnu kavu i aparate za kavu koje prodaju putem svoje web-stranice Contoso Coffee. Cilj im je razumjeti koje proizvode trebaju preporučiti svojim redovnim klijentima. Znanje o tome što će klijenti **vjerojatnije kupiti** može im pomoći sačuvati marketinške napore usredotočujući se na određene stavke.
+Contoso je tvrtka koja proizvodi visokokvalitetnu kavu i aparate za kavu, koje prodaju putem svog web-mjesta Kava Contoso. Cilj im je razumjeti koje proizvode trebaju preporučiti svojim redovnim klijentima. Znanje o tome što će klijenti **vjerojatnije kupiti** može im pomoći sačuvati marketinške napore usredotočujući se na određene stavke.
 
 ## <a name="prerequisites"></a>Preduvjeti
 
@@ -65,7 +65,7 @@ Pregledajte članke [o unosu podataka](data-sources.md) i posebice o [uvozu izvo
 
 1. U polju **Naziv** u bočnom oknu preimenujte svoj izvor podataka iz **Upit** u **eCommercePurchases**.
 
-1. Spremite izvor podataka.
+1. **Spremi** izvor podataka.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Unesite podatke o klijentima iz sheme vjernosti
@@ -83,11 +83,11 @@ Pregledajte članke [o unosu podataka](data-sources.md) i posebice o [uvozu izvo
 
 1. U polju **Naziv** u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **Odanost klijenata**.
 
-1. Spremite izvor podataka.
+1. **Spremi** izvor podataka.
 
 ## <a name="task-2---data-unification"></a>Zadatak 2 - Objedinjavanje podataka
 
-Nakon unosa podataka, sada započinjemo postupak **Karta, podudaranje, spajanje** za stvaranje objedinjenog profila kupca. Dodatne informacije potražite u odjeljku [Objedinjavanje podataka](data-unification.md).
+Nakon unosa podataka, započinjemo postupak objedinjavanja podataka kako bismo stvorili objedinjeni profil klijenta. Dodatne informacije potražite u odjeljku [Objedinjavanje podataka](data-unification.md).
 
 ### <a name="map"></a>Mapa
 
@@ -156,7 +156,7 @@ S uspostavljenim objedinjenim profilima klijenata, sada možemo pokrenuti predvi
 
    - **Broj proizvoda**: Postavite ovu vrijednost na **5**. Ova postavka definira koliko proizvoda želite preporučiti svojim klijentima.
 
-   - **Predložiti proizvode koje su klijenti nedavno kupili?**: Odaberite **Da** da biste naznačili da u preporuku želite uključiti proizvode koje su vaši klijenti ranije kupili.
+   - **Očekivane ponovne kupnje**: Odaberite **Da** kako biste naznačili da u preporuku želite uključiti proizvode koje su vaši klijenti ranije kupili.
 
    - **Pogled unatrag:** Odaberite barem **365 dana**. Ova postavka definira koliko će unatrag model pregledavati aktivnosti klijenata da bi to iskoristio kao ulazne vrijednosti za preporuke.
    

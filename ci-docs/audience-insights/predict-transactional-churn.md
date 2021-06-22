@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906847"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095593"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transakcijsko predviđanje gubitka (pretpregled)
 
@@ -144,7 +144,7 @@ Transakcijsko predviđanje gubitka pomaže predvidjeti hoće li klijent prestati
    - **Stanje:** Stanje pokretanja predviđanja.
         - **U redu čekanja:** Predviđanje čeka da se drugi procesi pokrenu.
         - **Osvježavanje:** Predviđanje je trenutno pokrenuto za stvaranje rezultata koji će ići u izlazni entitet.
-        - **Neuspjelo:** Pokretanje predviđanja nije uspjelo. [Pregledajte zapisnike](#troubleshoot-a-failed-prediction) za dodatne pojedinosti.
+        - **Neuspjelo:** Pokretanje predviđanja nije uspjelo. [Pregledajte zapisnike](manage-predictions.md#troubleshoot-a-failed-prediction) za dodatne pojedinosti.
         - **Uspjelo:** Predviđanje je uspjelo. Odaberite **Prikaz** ispod okomitih točkica kako biste pregledali predviđanje
    - **Uređeno:** Promijenjen je datum konfiguriranja za predviđanje.
    - **Zadnji put osvježeno:** Datum kada je predviđanje osvježilo rezultate u entitetu rezultata.
@@ -168,35 +168,9 @@ Transakcijsko predviđanje gubitka pomaže predvidjeti hoće li klijent prestati
        
     1. **Najutjecajniji faktori:** Mnogo je faktora koji se uzimaju u obzir prilikom izrade predviđanja. Svaki od čimbenika ima svoju važnost izračunatu za skupna predviđanja koja model stvara. Pomoću tih faktora možete potvrditi rezultate predviđanja. Također, ove podatke možete kasnije koristiti da [stvorite segmente](segments.md) koji mogu pomoći u smanjenju rizika od gubitka klijenata.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Otklanjanje poteškoća s neuspjelim predviđanjem
+## <a name="manage-predictions"></a>Upravljanje predviđanjima
 
-1. Idite na **Obavještavanje** > **Predviđanja** i odaberite karticu **Moja predviđanja**.
-
-1. Odaberite okomite elipse pored predviđanja za koje želite pregledati zapisnike pogrešaka.
-
-1. Odaberite **Zapisnici**.
-
-1. Pregledajte sve pogreške. Može se dogoditi nekoliko vrsta pogrešaka i one opisuju kakvo je stanje prouzročilo pogrešku. Na primjer, pogreška za koju nema dovoljno podataka da bi se točno predvidjela obično se razrješava učitavanjem dodatnih podataka u Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Osvježavanje predviđanja
-
-Predviđanja će se automatski osvježiti na istom [rasporedu osvježavanja podataka](system.md#schedule-tab) kao što je konfigurirano u postavkama. Možete ih osvježiti i ručno.
-
-1. Idite na **Obavještavanje** > **Predviđanja** i odaberite karticu **Moja predviđanja**.
-
-1. Odaberite okomitu trotočku uz predviđanje koje želite osvježiti.
-
-1. Odaberite **Osvježi**.
-
-## <a name="delete-a-prediction"></a>Brisanje predviđanja
-
-Brisanjem predviđanja uklanja se i njegov izlazni entitet.
-
-1. Idite na **Obavještavanje** > **Predviđanja** i odaberite karticu **Moja predviđanja**.
-
-1. Odaberite okomitu trotočku uz predviđanje koje želite izbrisati.
-
-1. Odaberite **Obriši**.
+Predviđanja je moguće optimizirati, riješiti, osvježiti ili izbrisati. Pregledajte izvješće o upotrebljivosti ulaznih podataka da biste saznali kako predviđanje učiniti bržim i pouzdanijim. Dodatne informacije potražite u odjeljku [Upravljanje predviđanjima](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

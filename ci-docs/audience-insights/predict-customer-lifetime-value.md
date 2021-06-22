@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954570"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095501"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Cjeloživotna vrijednost klijenta (CLV) (Pretpregled)
 
@@ -149,7 +149,6 @@ Podaci koji odražavaju ključne interakcije klijenata (poput weba, službe za k
 
 1. Odaberite **Dalje**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Pregled i pokretanje konfiguracije modela
 
 1. U koraku **Pregledajte pojedinosti o svom modelu** provjerite konfiguraciju predviđanja. Možete se vratiti bilo kojem dijelu konfiguracije predviđanja odabirom **Uredi** ispod prikazane vrijednosti. Korak konfiguracije možete odabrati i iz pokazatelja napretka.
@@ -170,11 +169,10 @@ Podaci koji odražavaju ključne interakcije klijenata (poput weba, službe za k
 - **Status**: status pokretanja predviđanja.
     - **U redu čekanja**: predviđanje čeka da se drugi procesi dovrše.
     - **Osvježavanje**: predviđanje je trenutno pokrenuto za stvaranje rezultata koji će ići u izlazni entitet.
-    - **Neuspjelo**: pokretanje predviđanja nije uspjelo. [Pregledajte zapisnike](#troubleshoot-a-failed-prediction) za dodatne pojedinosti.
+    - **Neuspjelo**: pokretanje predviđanja nije uspjelo. [Pregledajte zapisnike](manage-predictions.md#troubleshoot-a-failed-prediction) za dodatne pojedinosti.
     - **Uspjelo**: predviđanje je uspjelo. Odaberite **Prikaz** ispod vertikalnih elipsi za pregled rezultata predviđanja.
 - **Uređeno**: promijenjen je datum konfiguriranja za predviđanje.
 - **Zadnji put osvježeno**: datum kada je predviđanje osvježilo rezultate u izlaznom entitetu.
-
 
 ### <a name="review-prediction-results"></a>Pregled rezultata predviđanja
 
@@ -216,28 +214,8 @@ Postoje tri primarna odjeljka podataka na stranici s rezultatima.
 
 - **Najutjecajniji faktori**: Prilikom stvaranja vašeg CLV predviđanja na temelju ulaznih podataka pruženih modelu umjetne inteligencije uzimaju se u obzir različiti faktori. Svaki od tih faktora ima svoju važnost izračunatu za skupna predviđanja koja model stvara. Pomoću tih faktora možete potvrditi rezultate predviđanja. Ovi faktori također pružaju bolji uvid u najutjecajnije faktore koji su pridonijeli predviđanju CLV-a za sve vaše klijente.
 
-## <a name="refresh-a-prediction"></a>Osvježavanje predviđanja
+## <a name="manage-predictions"></a>Upravljanje predviđanjima
 
-Predviđanja se automatski osvježavaju prema istom [rasporedu prema kojem se osvježavaju podaci](system.md#schedule-tab) kako je konfigurirano u postavkama. Možete ih osvježiti i ručno.
-
-1. Idite na **Obavještavanje** > **Predviđanja** i odaberite karticu **Moja predviđanja**.
-2. Odaberite okomitu trotočku uz predviđanje koje želite osvježiti.
-3. Odaberite **Osvježi**.
-
-## <a name="delete-a-prediction"></a>Brisanje predviđanja
-
-Brisanjem predviđanja uklanja se i njegov izlazni entitet.
-
-1. Idite na **Obavještavanje** > **Predviđanja** i odaberite karticu **Moja predviđanja**.
-2. Odaberite okomitu trotočku uz predviđanje koje želite izbrisati.
-3. Odaberite **Obriši**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Otklanjanje poteškoća s neuspjelim predviđanjem
-
-1. Idite na **Obavještavanje** > **Predviđanja** i odaberite karticu **Moja predviđanja**.
-2. Odaberite okomite elipse pored predviđanja za koje želite pregledati zapisnike pogrešaka.
-3. Odaberite **Zapisnici**.
-4. Pregledajte sve pogreške. Može se dogoditi nekoliko vrsta pogrešaka i one opisuju kakvo je stanje prouzročilo pogrešku. Na primjer, pogreška u kojoj nema dovoljno podataka za točno predviđanje obično se rješava učitavanjem više podataka u uvide u ciljnu skupinu.
-
+Predviđanja je moguće optimizirati, riješiti, osvježiti ili izbrisati. Pregledajte izvješće o upotrebljivosti ulaznih podataka da biste saznali kako predviđanje učiniti bržim i pouzdanijim. Dodatne informacije potražite u odjeljku [Upravljanje predviđanjima](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
