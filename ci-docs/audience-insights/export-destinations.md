@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka iz Customer Insights
 description: Upravljajte izvozima da biste dijelili podatke.
-ms.date: 03/25/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,70 +9,108 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
+ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016605"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6253031"
 ---
-# <a name="exports-preview-overview"></a><span data-ttu-id="2d295-103">Pregled izvoza (pretpregled)</span><span class="sxs-lookup"><span data-stu-id="2d295-103">Exports (preview) overview</span></span>
+# <a name="exports-preview-overview"></a><span data-ttu-id="31b44-103">Pregled izvoza (pretpregled)</span><span class="sxs-lookup"><span data-stu-id="31b44-103">Exports (preview) overview</span></span>
 
-<span data-ttu-id="2d295-104">Stranica **Izvozi** prikazuje sve konfigurirane izvoze.</span><span class="sxs-lookup"><span data-stu-id="2d295-104">The **Exports** page shows you all configured exports.</span></span> <span data-ttu-id="2d295-105">Izvozi dijele određene podatke s različitim aplikacijama.</span><span class="sxs-lookup"><span data-stu-id="2d295-105">Exports share specific data with various applications.</span></span> <span data-ttu-id="2d295-106">Mogu uključivati profile ili entitete klijenata, sheme i pojedinosti mapiranja.</span><span class="sxs-lookup"><span data-stu-id="2d295-106">They can include customer profiles or entities, schemas, and mapping details.</span></span> <span data-ttu-id="2d295-107">Svaki izvoz zahtijeva [vezu koju je postavio administrator za upravljanje provjerom autentičnosti i pristupom](connections.md).</span><span class="sxs-lookup"><span data-stu-id="2d295-107">Each export requires a [connection, set up by an administrator, to manage authentication and access](connections.md).</span></span>
+<span data-ttu-id="31b44-104">Stranica **Izvozi** prikazuje sve konfigurirane izvoze.</span><span class="sxs-lookup"><span data-stu-id="31b44-104">The **Exports** page shows you all configured exports.</span></span> <span data-ttu-id="31b44-105">Izvozi dijele određene podatke s različitim aplikacijama.</span><span class="sxs-lookup"><span data-stu-id="31b44-105">Exports share specific data with various applications.</span></span> <span data-ttu-id="31b44-106">Mogu uključivati profile ili entitete klijenata, sheme i pojedinosti mapiranja.</span><span class="sxs-lookup"><span data-stu-id="31b44-106">They can include customer profiles or entities, schemas, and mapping details.</span></span> <span data-ttu-id="31b44-107">Svaki izvoz zahtijeva [vezu koju je postavio administrator za upravljanje provjerom autentičnosti i pristupom](connections.md).</span><span class="sxs-lookup"><span data-stu-id="31b44-107">Each export requires a [connection, set up by an administrator, to manage authentication and access](connections.md).</span></span>
 
-<span data-ttu-id="2d295-108">Idite na **Podaci** > **Izvozi** za prikaz stranice izvoza.</span><span class="sxs-lookup"><span data-stu-id="2d295-108">Go to **Data** > **Exports** to view the exports page.</span></span> <span data-ttu-id="2d295-109">Sve korisničke uloge imaju pristup za prikaz konfiguriranih izvoza.</span><span class="sxs-lookup"><span data-stu-id="2d295-109">All user roles have access to view configured exports.</span></span> <span data-ttu-id="2d295-110">Korištenje polja za pretraživanje na naredbenoj traci za pronalaženje izvoza prema njihovu nazivu, nazivu veze ili vrsti veze.</span><span class="sxs-lookup"><span data-stu-id="2d295-110">Use of the search field in the command bar to find exports by their name, connection name, or connection type.</span></span>
+<span data-ttu-id="31b44-108">Idite na **Podaci** > **Izvozi** za prikaz stranice izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-108">Go to **Data** > **Exports** to view the exports page.</span></span> <span data-ttu-id="31b44-109">Sve korisničke uloge imaju pristup za prikaz konfiguriranih izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-109">All user roles have access to view configured exports.</span></span> <span data-ttu-id="31b44-110">Korištenje polja za pretraživanje na naredbenoj traci za pronalaženje izvoza prema njihovu nazivu, nazivu veze ili vrsti veze.</span><span class="sxs-lookup"><span data-stu-id="31b44-110">Use of the search field in the command bar to find exports by their name, connection name, or connection type.</span></span>
 
-## <a name="set-up-a-new-export"></a><span data-ttu-id="2d295-111">Postavljanje novog izvoza</span><span class="sxs-lookup"><span data-stu-id="2d295-111">Set up a new export</span></span>
+## <a name="set-up-a-new-export"></a><span data-ttu-id="31b44-111">Postavljanje novog izvoza</span><span class="sxs-lookup"><span data-stu-id="31b44-111">Set up a new export</span></span>
 
-<span data-ttu-id="2d295-112">Da biste postavili ili uredili izvoz, trebate imati dostupne veze.</span><span class="sxs-lookup"><span data-stu-id="2d295-112">To set up or edit an export, you need to have connections available to you.</span></span> <span data-ttu-id="2d295-113">Veze ovise o vašoj [korisničkoj ulozi](permissions.md):</span><span class="sxs-lookup"><span data-stu-id="2d295-113">Connections depend on your [user role](permissions.md):</span></span>
-- <span data-ttu-id="2d295-114">Administratori imaju pristup svim vezama.</span><span class="sxs-lookup"><span data-stu-id="2d295-114">Administrators have access to all connections.</span></span> <span data-ttu-id="2d295-115">Također mogu stvoriti nove veze prilikom postavljanja izvoza.</span><span class="sxs-lookup"><span data-stu-id="2d295-115">They can also create new connections when setting up an export.</span></span>
-- <span data-ttu-id="2d295-116">Suradnici mogu imati pristup određenim vezama.</span><span class="sxs-lookup"><span data-stu-id="2d295-116">Contributors can have access to specific connections.</span></span> <span data-ttu-id="2d295-117">Ovise o administratorima za konfiguriranje i dijeljenje veza.</span><span class="sxs-lookup"><span data-stu-id="2d295-117">They depend on administrators to configure and share connections.</span></span> <span data-ttu-id="2d295-118">Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="2d295-118">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
-- <span data-ttu-id="2d295-119">Gledatelji mogu samo pregledavati postojeće izvoze, ali ne mogu ih stvarati.</span><span class="sxs-lookup"><span data-stu-id="2d295-119">Viewers can only view existing exports but not create them.</span></span>
+<span data-ttu-id="31b44-112">Da biste postavili ili uredili izvoz, trebate imati dostupne veze.</span><span class="sxs-lookup"><span data-stu-id="31b44-112">To set up or edit an export, you need to have connections available to you.</span></span> <span data-ttu-id="31b44-113">Veze ovise o vašoj [korisničkoj ulozi](permissions.md):</span><span class="sxs-lookup"><span data-stu-id="31b44-113">Connections depend on your [user role](permissions.md):</span></span>
+- <span data-ttu-id="31b44-114">Administratori imaju pristup svim vezama.</span><span class="sxs-lookup"><span data-stu-id="31b44-114">Administrators have access to all connections.</span></span> <span data-ttu-id="31b44-115">Također mogu stvoriti nove veze prilikom postavljanja izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-115">They can also create new connections when setting up an export.</span></span>
+- <span data-ttu-id="31b44-116">Suradnici mogu imati pristup određenim vezama.</span><span class="sxs-lookup"><span data-stu-id="31b44-116">Contributors can have access to specific connections.</span></span> <span data-ttu-id="31b44-117">Ovise o administratorima za konfiguriranje i dijeljenje veza.</span><span class="sxs-lookup"><span data-stu-id="31b44-117">They depend on administrators to configure and share connections.</span></span> <span data-ttu-id="31b44-118">Popis izvoza pokazuje suradnicima mogu li uređivati ili samo pregledavati izvoz u stupcu **Vaše dozvole**.</span><span class="sxs-lookup"><span data-stu-id="31b44-118">The exports list shows contributors whether they can edit or only view an export in the **Your permissions** column.</span></span> <span data-ttu-id="31b44-119">Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="31b44-119">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
+- <span data-ttu-id="31b44-120">Gledatelji mogu samo pregledavati postojeće izvoze, ali ne mogu ih stvarati.</span><span class="sxs-lookup"><span data-stu-id="31b44-120">Viewers can only view existing exports but not create them.</span></span>
 
-1. <span data-ttu-id="2d295-120">Idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="2d295-120">Go to **Data** > **Exports**.</span></span>
+### <a name="define-a-new-export"></a><span data-ttu-id="31b44-121">Definiranje novog izvoza</span><span class="sxs-lookup"><span data-stu-id="31b44-121">Define a new export</span></span>
 
-1. <span data-ttu-id="2d295-121">Odaberite **Dodaj izvoz** da biste stvorili novo izvozno odredište.</span><span class="sxs-lookup"><span data-stu-id="2d295-121">Select **Add export** to create a new export destination.</span></span>
+1. <span data-ttu-id="31b44-122">Idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="31b44-122">Go to **Data** > **Exports**.</span></span>
 
-1. <span data-ttu-id="2d295-122">U oknu **Postavi izvoz** odaberite koju ćete vezu koristiti.</span><span class="sxs-lookup"><span data-stu-id="2d295-122">In the **Set up export** pane, select which connection to use.</span></span> <span data-ttu-id="2d295-123">[Vezama](connections.md) upravljaju administratori.</span><span class="sxs-lookup"><span data-stu-id="2d295-123">[Connections](connections.md) are managed by administrators.</span></span> 
+1. <span data-ttu-id="31b44-123">Odaberite **Dodaj izvoz** za stvaranje novog izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-123">Select **Add export** to create a new export.</span></span>
 
-1. <span data-ttu-id="2d295-124">Navedite potrebne pojedinosti i odaberite **Spremi** da biste stvorili izvoz.</span><span class="sxs-lookup"><span data-stu-id="2d295-124">Provide the required details and select **Save** to create the export.</span></span>
+1. <span data-ttu-id="31b44-124">U oknu **Postavi izvoz** odaberite koju ćete vezu koristiti.</span><span class="sxs-lookup"><span data-stu-id="31b44-124">In the **Set up export** pane, select which connection to use.</span></span> <span data-ttu-id="31b44-125">[Vezama](connections.md) upravljaju administratori.</span><span class="sxs-lookup"><span data-stu-id="31b44-125">[Connections](connections.md) are managed by administrators.</span></span> 
 
-### <a name="edit-an-export"></a><span data-ttu-id="2d295-125">Uređivanje izvoza</span><span class="sxs-lookup"><span data-stu-id="2d295-125">Edit an export</span></span>
+1. <span data-ttu-id="31b44-126">Navedite potrebne pojedinosti i odaberite **Spremi** da biste stvorili izvoz.</span><span class="sxs-lookup"><span data-stu-id="31b44-126">Provide the required details and select **Save** to create the export.</span></span>
 
-1. <span data-ttu-id="2d295-126">Odaberite okomitu elipsu za izvozno odredište koje želite urediti.</span><span class="sxs-lookup"><span data-stu-id="2d295-126">Select the vertical ellipsis for the export destination you want to edit.</span></span>
+### <a name="define-a-new-export-based-on-an-existing-export"></a><span data-ttu-id="31b44-127">Definiranje novog izvoza na temelju postojećeg</span><span class="sxs-lookup"><span data-stu-id="31b44-127">Define a new export based on an existing export</span></span>
 
-1. <span data-ttu-id="2d295-127">Odaberite **Uredi** na padajućem izborniku.</span><span class="sxs-lookup"><span data-stu-id="2d295-127">Select **Edit** from the drop-down menu.</span></span>
+1. <span data-ttu-id="31b44-128">Idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="31b44-128">Go to **Data** > **Exports**.</span></span>
 
-1. <span data-ttu-id="2d295-128">Promijenite vrijednosti koje želite ažurirati i odaberite **Spremi**.</span><span class="sxs-lookup"><span data-stu-id="2d295-128">Change the values you want to update and select **Save**.</span></span>
+1. <span data-ttu-id="31b44-129">Na popisu izvoza odaberite izvoz koji želite duplicirati.</span><span class="sxs-lookup"><span data-stu-id="31b44-129">In the list of exports, select the export you want to duplicate.</span></span>
 
-## <a name="view-exports-and-export-details"></a><span data-ttu-id="2d295-129">Prikaz Izvoza i pojedinosti o izvozu</span><span class="sxs-lookup"><span data-stu-id="2d295-129">View Exports and export details</span></span>
+1. <span data-ttu-id="31b44-130">Odaberite **Stvori duplikat** na naredbenoj traci za otvaranje okna **Postavi izvoz** s pojedinostima odabranog izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-130">Select **Create duplicate** in the command bar to open the **Set up export** pane with the details of the selected export.</span></span>
 
-<span data-ttu-id="2d295-130">Nakon stvaranja izvoznih odredišta ona se navode na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="2d295-130">After creating export destinations, they are listed on **Data** > **Exports**.</span></span> <span data-ttu-id="2d295-131">Svi korisnici mogu vidjeti koji se podaci dijele i njihov najnoviji status.</span><span class="sxs-lookup"><span data-stu-id="2d295-131">All users can see which data is shared and its latest status.</span></span>
+1. <span data-ttu-id="31b44-131">Pregledajte i prilagodite izvoz te odaberite **Spremi** za stvaranje novog izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-131">Review and adapt the export and select **Save** to create a new export.</span></span>
 
-1. <span data-ttu-id="2d295-132">Idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="2d295-132">Go to **Data** > **Exports**.</span></span>
+### <a name="edit-an-export"></a><span data-ttu-id="31b44-132">Uređivanje izvoza</span><span class="sxs-lookup"><span data-stu-id="31b44-132">Edit an export</span></span>
 
-1. <span data-ttu-id="2d295-133">Korisnici bez dozvola za uređivanje odabiru **Prikaz** umjesto **Uredi** da bi vidjeli pojedinosti o izvozu.</span><span class="sxs-lookup"><span data-stu-id="2d295-133">Users without edit permissions select **View** instead of **Edit** see the export details.</span></span>
+1. <span data-ttu-id="31b44-133">Idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="31b44-133">Go to **Data** > **Exports**.</span></span>
 
-1. <span data-ttu-id="2d295-134">To bočno okno prikazuje postavku tog izvoza.</span><span class="sxs-lookup"><span data-stu-id="2d295-134">This side pane shows the set up of this export.</span></span> <span data-ttu-id="2d295-135">Bez dozvola za uređivanje ne možete promijeniti vrijednosti.</span><span class="sxs-lookup"><span data-stu-id="2d295-135">Without edit permissions, you can't change values.</span></span> <span data-ttu-id="2d295-136">Odaberite **Zatvori** za povratak na stranicu izvoza.</span><span class="sxs-lookup"><span data-stu-id="2d295-136">Select **Close** to return to the exports page.</span></span>
+1. <span data-ttu-id="31b44-134">Na popisu izvoza odaberite izvoz koji želite urediti.</span><span class="sxs-lookup"><span data-stu-id="31b44-134">In the list of exports, select the export you want to edit.</span></span>
 
-## <a name="run-exports-on-demand"></a><span data-ttu-id="2d295-137">Pokretanje izvoza na zahtjev</span><span class="sxs-lookup"><span data-stu-id="2d295-137">Run exports on demand</span></span>
+1. <span data-ttu-id="31b44-135">Odaberite **Uredi** na naredbenoj traci.</span><span class="sxs-lookup"><span data-stu-id="31b44-135">Select **Edit** in the command bar.</span></span>
 
-<span data-ttu-id="2d295-138">Nakon konfiguriranja izvoza pokrenut će se sa svakim [zakazanim osvježavanjem](system.md#schedule-tab) sve dok ima funkcionalnu vezu.</span><span class="sxs-lookup"><span data-stu-id="2d295-138">After configuring an export, it will run with every [scheduled refresh](system.md#schedule-tab) as long as it has a working connection.</span></span>
+1. <span data-ttu-id="31b44-136">Promijenite vrijednosti koje želite ažurirati i odaberite **Spremi**.</span><span class="sxs-lookup"><span data-stu-id="31b44-136">Change the values you want to update and select **Save**.</span></span>
 
-<span data-ttu-id="2d295-139">Da biste izvezli podatke bez čekanja na zakazano osvježavanje, idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="2d295-139">To export data without waiting for a scheduled refresh, go to **Data** > **Exports**.</span></span> <span data-ttu-id="2d295-140">Postoje dvije mogućnosti:</span><span class="sxs-lookup"><span data-stu-id="2d295-140">You have two options:</span></span>
+## <a name="view-exports-and-export-details"></a><span data-ttu-id="31b44-137">Prikaz izvoza i pojedinosti o izvozu</span><span class="sxs-lookup"><span data-stu-id="31b44-137">View exports and export details</span></span>
 
-- <span data-ttu-id="2d295-141">Da biste pokrenuli sve izvoze, odaberite **Pokreni sve** na naredbenoj traci.</span><span class="sxs-lookup"><span data-stu-id="2d295-141">To run all exports, select **Run all** in the command bar.</span></span> 
-- <span data-ttu-id="2d295-142">Da biste pokrenuli pojedinačni izvoz, odaberite elipsu (...) na stavci popisa, a zatim odaberite **Pokreni**.</span><span class="sxs-lookup"><span data-stu-id="2d295-142">To run a single export, select the ellipsis (...) on a list item and then choose **Run**.</span></span>
+<span data-ttu-id="31b44-138">Nakon stvaranja izvoznih odredišta ona su navedena u odjeljku **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="31b44-138">After creating export destinations, they're listed on **Data** > **Exports**.</span></span> <span data-ttu-id="31b44-139">Svi korisnici mogu vidjeti koji se podaci dijele i njihov najnoviji status.</span><span class="sxs-lookup"><span data-stu-id="31b44-139">All users can see which data is shared and its latest status.</span></span>
 
-## <a name="remove-an-export"></a><span data-ttu-id="2d295-143">Uklanjanje Izvoza</span><span class="sxs-lookup"><span data-stu-id="2d295-143">Remove an Export</span></span>
+1. <span data-ttu-id="31b44-140">Idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="31b44-140">Go to **Data** > **Exports**.</span></span>
 
-1. <span data-ttu-id="2d295-144">Idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="2d295-144">Go to **Data** > **Exports**.</span></span>
+1. <span data-ttu-id="31b44-141">Korisnici bez dozvola za uređivanje odabiru **Prikaz** umjesto **Uredi** da bi vidjeli pojedinosti o izvozu.</span><span class="sxs-lookup"><span data-stu-id="31b44-141">Users without edit permissions select **View** instead of **Edit** see the export details.</span></span>
 
-1. <span data-ttu-id="2d295-145">Odaberite okomitu elipsu za Izvoz koji želite ukloniti.</span><span class="sxs-lookup"><span data-stu-id="2d295-145">Select the vertical ellipsis for the Export you want to remove.</span></span>
+1. <span data-ttu-id="31b44-142">Bočno okno prikazuje konfiguraciju izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-142">The side pane shows the configuration of an export.</span></span> <span data-ttu-id="31b44-143">Bez dozvola za uređivanje ne možete promijeniti vrijednosti.</span><span class="sxs-lookup"><span data-stu-id="31b44-143">Without edit permissions, you can't change values.</span></span> <span data-ttu-id="31b44-144">Odaberite **Zatvori** za povratak na stranicu izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-144">Select **Close** to return to the exports page.</span></span>
 
-1. <span data-ttu-id="2d295-146">Na padajućem popisu odaberite **Ukloni**.</span><span class="sxs-lookup"><span data-stu-id="2d295-146">Select **Remove** from the dropdown menu.</span></span>
+## <a name="schedule-and-run-exports"></a><span data-ttu-id="31b44-145">Zakazivanje i pokretanje izvoza</span><span class="sxs-lookup"><span data-stu-id="31b44-145">Schedule and run exports</span></span>
 
-1. <span data-ttu-id="2d295-147">Potvrdite uklanjanje odabirom opcije **Ukloni** na zaslonu za potvrdu.</span><span class="sxs-lookup"><span data-stu-id="2d295-147">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
+<span data-ttu-id="31b44-146">Svaki izvoz koji konfigurirate ima raspored osvježavanja.</span><span class="sxs-lookup"><span data-stu-id="31b44-146">Each export you configure has a refresh schedule.</span></span> <span data-ttu-id="31b44-147">Tijekom osvježavanja sustav traži nove ili ažurirane podatke koje će uključiti u izvoz.</span><span class="sxs-lookup"><span data-stu-id="31b44-147">During a refresh, the system looks for new or updated data to include in an export.</span></span> <span data-ttu-id="31b44-148">Prema zadanim postavkama izvozi se izvode kao dio svakog [zakazanog osvježavanja sustava](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="31b44-148">By default, exports are run as part of every [scheduled system refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="31b44-149">Raspored osvježavanja možete prilagoditi ili ga isključiti za ručno pokretanje izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-149">You can customize the refresh schedule or turn it off to run exports manually.</span></span>
+
+<span data-ttu-id="31b44-150">Rasporedi izvoza ovise o stanju vašeg okruženja.</span><span class="sxs-lookup"><span data-stu-id="31b44-150">Export schedules depend on the state of your environment.</span></span> <span data-ttu-id="31b44-151">Ako ima ažuriranja na [ovisnostima](system.md#refresh-policies) u tijeku kada bi trebao započeti zakazani izvoz, sustav će prvo dovršiti ovisnosti, a zatim pokrenuti izvoz.</span><span class="sxs-lookup"><span data-stu-id="31b44-151">If there are updates on [dependencies](system.md#refresh-policies) in progress when a scheduled export should start, the system will first complete the dependencies and then run the export.</span></span> <span data-ttu-id="31b44-152">U stupcu **Osvježeno** možete vidjeti kad je izvoz zadnji put bio osvježen.</span><span class="sxs-lookup"><span data-stu-id="31b44-152">You can see when an export was last refreshed in column **Refreshed**.</span></span>
+
+### <a name="schedule-exports"></a><span data-ttu-id="31b44-153">Zakazivanje izvoza</span><span class="sxs-lookup"><span data-stu-id="31b44-153">Schedule exports</span></span>
+
+<span data-ttu-id="31b44-154">Možete definirati prilagođene rasporede osvježavanja za pojedinačne izvoze ili više izvoza odjednom.</span><span class="sxs-lookup"><span data-stu-id="31b44-154">You can define custom refresh schedules for individual exports or several exports at once.</span></span> <span data-ttu-id="31b44-155">Trenutno definirani raspored naveden je u stupcu **Raspored** na popisu izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-155">The currently defined schedule is listed in the **Schedule** column of the export list.</span></span> <span data-ttu-id="31b44-156">Dozvola za promjenu rasporeda je ista kao i za [uređivanje i definiranje izvoza](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="31b44-156">The permission to change the schedule is the same as for [editing and defining exports](export-destinations.md#set-up-a-new-export).</span></span> 
+
+1. <span data-ttu-id="31b44-157">Idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="31b44-157">Go to **Data** > **Exports**.</span></span>
+
+1. <span data-ttu-id="31b44-158">Odaberite izvoz koji želite zakazati.</span><span class="sxs-lookup"><span data-stu-id="31b44-158">Select the export you want to schedule.</span></span>
+
+1. <span data-ttu-id="31b44-159">Odaberite **Raspored** na naredbenoj traci.</span><span class="sxs-lookup"><span data-stu-id="31b44-159">Select **Schedule** in the command bar.</span></span>
+
+1. <span data-ttu-id="31b44-160">U oknu **Zakazivanje izvoza** postavite **Pokretanje rasporeda** na **Uključeno** za automatsko pokretanje izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-160">In the **Schedule export** pane, set the **Schedule run** to **On** to run the export automatically.</span></span> <span data-ttu-id="31b44-161">Postavite na **Isključeno** da ga osvježite ručno.</span><span class="sxs-lookup"><span data-stu-id="31b44-161">Set it to **Off** to refresh it manually.</span></span>
+
+1. <span data-ttu-id="31b44-162">Za automatski osvježene izvoze odaberite vrijednost **Ponavljanje** i za nju navedite pojedinosti.</span><span class="sxs-lookup"><span data-stu-id="31b44-162">For automatically refreshed exports, choose a **Recurrence** value and specify the details for it.</span></span> <span data-ttu-id="31b44-163">Definirano vrijeme odnosi se na sve slučajeve ponavljanja.</span><span class="sxs-lookup"><span data-stu-id="31b44-163">The time defined applies to all instances of a recurrence.</span></span> <span data-ttu-id="31b44-164">To je vrijeme kada bi se izvoz trebao početi osvježavati.</span><span class="sxs-lookup"><span data-stu-id="31b44-164">It's the time when an export should start refreshing.</span></span>
+
+1. <span data-ttu-id="31b44-165">Primijenite i aktivirajte promjene odabirom mogućnosti **Spremi**.</span><span class="sxs-lookup"><span data-stu-id="31b44-165">Apply and activate your changes by selecting **Save**.</span></span>
+
+<span data-ttu-id="31b44-166">Pri uređivanju rasporeda za nekoliko izvoza, morate izvršiti odabir u odjeljku **Sačuvaj ili zamijeni rasporede**:</span><span class="sxs-lookup"><span data-stu-id="31b44-166">When editing the schedule for several exports, you need to make a selection under **Keep or override schedules**:</span></span>
+- <span data-ttu-id="31b44-167">**Sačuvaj pojedinačne rasporede**: Zadržite prethodno definirani raspored za odabrane izvoze i samo ih onemogućite ili omogućite.</span><span class="sxs-lookup"><span data-stu-id="31b44-167">**Keep individual schedules**: Persist the previously defined schedule for the selected exports and only disable or enable them.</span></span>
+- <span data-ttu-id="31b44-168">**Definiraj novi raspored za sve odabrane izvoze**: Zamijenite postojeće rasporede odabranih izvoza.</span><span class="sxs-lookup"><span data-stu-id="31b44-168">**Define new schedule for all selected exports**: Override the existing schedules of the selected exports.</span></span>
+
+### <a name="run-exports-on-demand"></a><span data-ttu-id="31b44-169">Pokretanje izvoza na zahtjev</span><span class="sxs-lookup"><span data-stu-id="31b44-169">Run exports on demand</span></span>
+
+<span data-ttu-id="31b44-170">Da biste izvezli podatke bez čekanja na zakazano osvježavanje, idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="31b44-170">To export data without waiting for a scheduled refresh, go to **Data** > **Exports**.</span></span>
+
+- <span data-ttu-id="31b44-171">Da biste pokrenuli sve izvoze, odaberite **Pokreni sve** na naredbenoj traci.</span><span class="sxs-lookup"><span data-stu-id="31b44-171">To run all exports, select **Run all** in the command bar.</span></span> <span data-ttu-id="31b44-172">Ovom akcijom pokrenut će se samo izvozi sa aktivnim rasporedom.</span><span class="sxs-lookup"><span data-stu-id="31b44-172">This action will only run exports that have an active schedule.</span></span>
+- <span data-ttu-id="31b44-173">Da biste pokrenuli jedan izvoz, odaberite ga na popisu i odaberite **Pokreni** na naredbenoj traci.</span><span class="sxs-lookup"><span data-stu-id="31b44-173">To run a single export, select it in the list and select **Run** in the command bar.</span></span> <span data-ttu-id="31b44-174">Tako pokrećete izvoz bez aktivnog rasporeda.</span><span class="sxs-lookup"><span data-stu-id="31b44-174">That's how you run exports with no active schedule.</span></span> 
+
+## <a name="remove-an-export"></a><span data-ttu-id="31b44-175">Uklanjanje Izvoza</span><span class="sxs-lookup"><span data-stu-id="31b44-175">Remove an Export</span></span>
+
+1. <span data-ttu-id="31b44-176">Idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="31b44-176">Go to **Data** > **Exports**.</span></span>
+
+1. <span data-ttu-id="31b44-177">Odaberite izvoz koji želite ukloniti.</span><span class="sxs-lookup"><span data-stu-id="31b44-177">Select the export you want to remove.</span></span>
+
+1. <span data-ttu-id="31b44-178">Odaberite **Ukloni** na naredbenoj traci.</span><span class="sxs-lookup"><span data-stu-id="31b44-178">Select **Remove** in the command bar.</span></span>
+
+1. <span data-ttu-id="31b44-179">Potvrdite uklanjanje odabirom opcije **Ukloni** na zaslonu za potvrdu.</span><span class="sxs-lookup"><span data-stu-id="31b44-179">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
