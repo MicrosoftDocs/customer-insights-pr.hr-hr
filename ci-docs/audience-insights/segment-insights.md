@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595325"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306065"
 ---
 # <a name="segment-insights-preview"></a>Uvidi u segmente (pretpregled)
 
@@ -50,7 +50,7 @@ Odaberite uvid da biste vidjeli rezultate analize:
 
 - Broj članova kod kojih se preklapaju segmenti odabrani za analizu.
 - Broj članova koji su uključeni u jedan od segmenata, ali ne i u ostale segmente.
-- Ako ste tijekom konfiguriranja analize preklapanja odabrali polja, naći ćete ih na odgovarajućim karticama. Pomoću padajućeg izbornika filtra možete odabrati bilo koju razinu atributa koja vas zanima, a tablica pri dnu prikazat će odgovarajuće podatke.
+- Ako ste tijekom konfiguriranja analize preklapanja odabrali polja, naći ćete ih na odgovarajućim karticama. Pomoću padajućeg izbornika filtra možete odabrati bilo koju razinu atributa koja vas zanima, a tablica na dnu prikazat će odgovarajuće podatke.
 
 ## <a name="segment-differentiators"></a>Diferencijatori segmenta
 

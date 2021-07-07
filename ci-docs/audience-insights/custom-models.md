@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700659"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305615"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli za strojno učenje
 
@@ -72,7 +72,7 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
       > [!div class="mx-imgBorder"]
       > ![Okno izlaznog parametra modela](media/intelligence-screen3-outputparameters.png "Okno izlaznog parametra modela")
 
-1. Odaberite odgovarajući atribut s padajućeg popisa **ID klijenta u rezultatima** koji identificira klijente pa odaberite **Spremanje**.
+1. Odaberite odgovarajući atribut s padajućeg popisa **ID klijenta u rezultatima** kojim se identificiraju klijenti pa odaberite **Spremi**.
 
    > [!div class="mx-imgBorder"]
    > ![Okno usklađivanja rezultata s podacima klijenta](media/intelligence-screen4-relatetocustomer.png "Okno usklađivanja rezultata s podacima klijenta")
@@ -100,7 +100,7 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
       1. Odaberite **Izlazni naziv parametra pohrane podataka** za testni kanal.
       1. Odaberite **Izlazni naziv parametra puta** za testni kanal.
 
-1. Odaberite odgovarajući atribut s padajućeg popisa **ID klijenta u rezultatima** koji identificira klijente pa odaberite **Spremanje**.
+1. Odaberite odgovarajući atribut s padajućeg popisa **ID klijenta u rezultatima** kojim se identificiraju klijenti pa odaberite **Spremi**.
    Odaberite atribut iz zaključnih rezultata s vrijednostima sličnim stupcu ID klijenta entiteta Klijent. Ako nemate takav stupac u svom skupu podataka, odaberite atribut koji jedinstveno identificira redak.
 
 ## <a name="run-a-workflow"></a>Pokretanje tijeka rada

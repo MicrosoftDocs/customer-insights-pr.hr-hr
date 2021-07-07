@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085613"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306019"
 ---
 # <a name="match-entities"></a>Slaganje entiteta
 
@@ -209,7 +209,7 @@ Isprobajte različite pragove preciznosti u uvjetima kako biste pronašli optima
 
 Većinu parametara uparivanja možete ponovno konfigurirati i fino podesiti.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Snimka zaslona padajućeg izbornika s mogućnostima pravila uparivanja.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Snimka zaslona padajućeg izbornika s opcijama pravila podudaranja.":::
 
 - **Promijenite redoslijed pravila** ako ste definirali više pravila. Redoslijed pravila uparivanja možete izmijeniti odabirom mogućnosti **Pomakni prema gore** i **Pomakni prema dolje** ili povlačenjem i ispuštanjem.
 
@@ -247,7 +247,7 @@ Možete odrediti uvjete s kojima bi se određeni zapisi trebali uvijek ili nikad
 
 1. Idite na **Podaci** > **Izvori podataka** i unesite datoteke predloška kao nove entitete. Nakon uvođenja, možete ih koristiti za određivanje konfiguracije uparivanja.
 
-1. Nakon što ste prenijeli datoteke i ako su entiteti dostupni, ponovno odaberite mogućnost **Prilagođeno uparivanje**. Vidjet ćete mogućnosti za određivanje entiteta koje želite uključiti. Odaberite tražene entitete s padajućeg izbornika.
+1. Nakon što ste prenijeli datoteke i ako su entiteti dostupni, ponovno odaberite mogućnost **Prilagođeno uparivanje**. Vidjet ćete mogućnosti za određivanje entiteta koje želite uključiti. Na padajućem izborniku odaberite potrebne entitete.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Snimka zaslona dijaloga za odabir nadjačavanja za scenarij prilagođenog uprivanja.":::
 

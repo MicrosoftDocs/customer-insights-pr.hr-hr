@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895904"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305193"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Obogaćivanje profila tvrtke uz Leadspace (pretpregled)
 
@@ -57,13 +57,13 @@ Za konfiguriranje Leadspacea, potrebno je ispuniti sljedeće preduvjete:
 
 Morate biti administrator da biste konfigurirali veze. Odaberite **Dodaj vezu** prilikom konfiguriranja obogaćivanja *ili* idite na **Admin** > **Veze** i odaberite **Postavi** na pločici Leadspace.
 
-1. Odaberite **Početak rada** 
+1. Odaberite **Početak rada**. 
 
 1. Unesite naziv za vezu u dijaloški okvir **Zaslonski naziv**.
 
 1. Navedite valjani token za Leadspace.
 
-1. Pregledajte i dajte svoj pristanak za **Zaštita privatnosti podataka i usklađenost** odabirom potvrdnog okvira **Slažem se**
+1. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usklađenost** odabirom opcije **Slažem se**.
 
 1. Odaberi **Potvrdi** za provjeru valjanosti konfiguracije.
 
@@ -81,7 +81,7 @@ Za dodatne informacije pogledajte [API-ji za Leadspace](https://support.leadspac
 
 ## <a name="next-steps"></a>Sljedeći koraci
 
-Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [segmente](segments.md), [mjere](measures.md), pa i [izvezite podatke](export-destinations.md) kako biste svojim klijentima pružili personalizirano iskustvo.
+Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [segmente](segments.md) i [mjere](measures.md), pa čak i [izvezite podatke](export-destinations.md) radi pružanja personaliziranih iskustava svojim klijentima.
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
 

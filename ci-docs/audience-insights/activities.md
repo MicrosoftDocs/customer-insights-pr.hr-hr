@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866398"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304917"
 ---
 # <a name="customer-activities"></a>Aktivnosti klijenta
 
@@ -53,23 +53,23 @@ Vaši izvori podataka mogu uključivati entitete s podacima o transakcijama i ak
 
 1. U koraku **Objedinjavanje aktivnosti** odaberite događaj aktivnosti i vrijeme početka svoje aktivnosti. 
    - **Obvezna polja**
-      1. **Aktivnost događaja**: Polje koje je događaj za ovu aktivnost
-      2. **Vremenska oznaka**: Polje koje predstavlja vrijeme početka vaše aktivnosti.
+      - **Aktivnost događaja**: Polje koje je događaj za ovu aktivnost.
+      - **Vremenska oznaka**: Polje koje predstavlja vrijeme početka vaše aktivnosti.
 
    - **Neobvezna polja**
-      1. **Dodatna pojedinost**: Polje s relevantnim informacijama za ovu aktivnost.
-      2. **Ikona**: Ikona koja najbolje predstavlja ovu vrstu aktivnosti.
-      3. **Web-adresa**: Polje koje sadrži URL s informacijama o ovoj aktivnosti. Na primjer, transakcijski sustav iz kojega je potekla ova aktivnost. Ovaj URL može biti bilo koje polje iz izvora podataka ili se može konstruirati kao novo polje s pomoću transformacije Power Query. Podaci o URL-u bit će pohranjeni u entitetu *Objedinjena aktivnost* koji se može konzumirati prema dolje pomoću [API-ja](apis.md).
+      - **Dodatna pojedinost**: Polje s relevantnim informacijama za ovu aktivnost.
+      - **Ikona**: Ikona koja najbolje predstavlja ovu vrstu aktivnosti.
+      - **Web-adresa**: Polje koje sadrži URL s informacijama o ovoj aktivnosti. Na primjer, transakcijski sustav iz kojega je potekla ova aktivnost. Ovaj URL može biti bilo koje polje iz izvora podataka ili se može konstruirati kao novo polje s pomoću transformacije Power Query. Podaci o URL-u bit će pohranjeni u entitetu *Objedinjena aktivnost* koji se može konzumirati prema dolje pomoću [API-ja](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Navedite podatke o aktivnostima klijenta u entitetu Objedinjene aktivnosti.":::
 
 1. Odaberite **Sljedeće** da biste se pomaknuli na sljedeći korak. Možete odabrati **Završi i pregledaj** da biste sada spremili aktivnost s vrstom aktivnosti postavljenom na **Ostalo**. 
 
-1. U koraku **Vrsta aktivnosti** odaberite vrstu aktivnosti i neobavezno odaberite želite li semantički mapirati neke od vrsta aktivnosti za korištenje u ostalim područjima Customer Insights. Trenutno se vrste aktivnosti *Pretplata* & *SalesOrderLine* mogu se semantički mapirati nakon dogovora o mapiranju polja. Ako vrsta aktivnosti nije relevantna za novu aktivnost, možete odabrati *Ostalo* ili *Stvori novo* za prilagođenu vrstu aktivnosti.
+1. U koraku **Vrsta aktivnosti** odaberite vrstu aktivnosti i neobavezno odaberite želite li semantički mapirati neke od vrsta aktivnosti za korištenje u ostalim područjima Customer Insights. Trenutačno, vrste aktivnosti *Pretplata* i *SalesOrderLine* mogu se semantički preslikati nakon pristanka na preslikavanje polja. Ako vrsta aktivnosti nije relevantna za novu aktivnost, možete odabrati *Ostalo* ili *Stvori novo* za prilagođenu vrstu aktivnosti.
 
 1. Odaberite **Sljedeće** da biste se pomaknuli na sljedeći korak. 
 
-1. U koraku **Pregled** provjerite svoje odabire. Vratite se na bilo koji od prethodnih koraka i ažurirajte informacije ako je potrebno.
+1. U koraku **Pregled** provjerite svoje odabire. Vratite se na bilo koji od prethodnih koraka i ažurirajte podatke ako je potrebno.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Pregledajte navedena polja za aktivnost.":::
    
@@ -89,7 +89,7 @@ Sljedeće su radnje dostupne kada odaberete aktivnost.
 
 - **Uredi**: Otvara postavljanje aktivnosti u koraku pregleda. U ovom koraku možete promijeniti bilo koju ili sve trenutne konfiguracije. Nakon promjene konfiguracije odaberite **Spremi aktivnost**, a zatim odaberite **Pokreni** za obradu promjena.
 
-- **Preimenuj**: Otvara dijaloški okvir u koji ćete unijeti drugi naziv za odabranu aktivnost. Odaberite **Spremi** za primjenu izmjena.
+- **Preimenuj** : Otvara dijaloški okvir u koji možete unijeti drugi naziv za odabranu aktivnost. Odaberite **Spremi** za primjenu izmjena.
 
 - **Izbriši**: Otvara dijaloški okvir za potvrdu brisanja odabrane aktivnosti. Možete i izbrisati više aktivnosti odjednom odabirom aktivnosti, a zatim odabirom ikone za brisanje. Odaberite **Izbriši** da biste potvrdili brisanje.
 

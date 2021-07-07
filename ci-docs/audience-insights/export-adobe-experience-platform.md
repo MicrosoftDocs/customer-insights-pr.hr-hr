@@ -1,6 +1,6 @@
 ---
 title: Izvoz podataka servisa Customer Insights u Adobe Experience Platform
-description: Saznajte kako koristiti segmente uvida u ciljnu skupinu u servisu Adobe Experience Platform.
+description: Naučite kako koristiti segmente uvida publike na platformi Adobe Experience.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760092"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305515"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Korištenje segmenata servisa Customer Insights u servisu Adobe Experience Platform (pretpregled)
 
-Možda ste kao korisnik uvida u ciljnu skupinu za Dynamics 365 Customer Insights stvorili segmente kako biste svoje marketinške kampanje učinili učinkovitijim ciljanjem relevantnih ciljnih skupina. Da biste koristili segment iz uvida u ciljnu skupinu u servisu Adobe Experience Platform i aplikacijama kao što je Adobe Campaign Standard, morate slijediti nekoliko koraka navedenih u ovom članku.
+Kao korisnik uvida u publiku značajke Dynamics 365 Customer Insights možda ste stvorili segmente kako biste svoje marketinške kampanje učinili učinkovitijim ciljanjem relevantne publike. Da biste koristili segment iz uvida u ciljnu skupinu u servisu Adobe Experience Platform i aplikacijama kao što je Adobe Campaign Standard, morate slijediti nekoliko koraka navedenih u ovom članku.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Dijagram procesa koraka opisanih u ovom članku.":::
 
@@ -55,15 +55,15 @@ Nakon što identificiramo našu ciljnu skupinu, možemo konfigurirati izvoz iz u
 
 1. Idite na **Admin** > **Veze**.
 
-1. Odaberite **Dodaj vezu** i odaberite **Spremnik za pohranu bloba za Azure** ili odaberite **Postavi** na pločici **Spremnik za pohranu bloba za Azure**:
+1. Odaberite **Dodaj vezu** pa odaberite **Azure Blob Storage** ili odaberite **Postavljanje** na pločici **Azure Blob Storage** radi konfiguriranja veze.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Pločica za konfiguraciju za Azure spremište blobova."::: da biste konfigurirali vezu.
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Pločica za konfiguraciju za Azure spremište blobova."::: 
 
 1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
 
 1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Unesite **Naziv računa**, **Ključ računa** i **Spremnik** za vaš račun spremnika za pohranu bloba na koji želite izvesti segment.  
+1. Unesite **Naziv računa**, **Ključ računa** i **Spremnik** za svoj račun spremnika za pohranu bloba na koji želite izvesti segment.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Snimka zaslona konfiguracije računa za pohranu. "::: 
    
@@ -80,7 +80,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 1. Da biste stvorili novi izvoz, ddaberite **Dodaj izvoz**.
 
-1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Spremnik za pohranu bloba za Azure. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
+1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Spremnik za pohranu bloba za Azure. Ako ne vidite naziv ovog odjeljka, tada vam nisu dostupne veze ove vrste.
 
 1. Odaberite segment koji želite izvesti. U ovom primjeru je to **ChurnProneCustomers**.
 
@@ -121,9 +121,10 @@ Nakon definiranja izvorne veze, [konfigurirajte tok podataka](https://experience
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Stvaranje ciljne skupine u servisu Adobe Campaign Standard
 
-Za slanje e-pošte za ovu kampanju koristit ćemo Adobe Campaign Standard. Nakon uvoza podataka u Adobe Experience Platform, trebamo [stvoriti ciljnu skupinu](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) u servisu Adobe Campaign Standard koristeći podatke u servisu Adobe Experience Platform.
+Da bismo slali e-poštu za ovu kampanju, upotrijebit ćemo Adobe Campaign Standard. Nakon uvoza podataka u Adobe Experience Platform, trebamo [stvoriti ciljnu skupinu](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) u servisu Adobe Campaign Standard koristeći podatke u servisu Adobe Experience Platform.
 
-Saznajte kako [koristiti sastavljač segmenata](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment) u servisu Adobe Campaign Standard za definiranje ciljne skupine na temelju podataka u servisu Adobe Experience Platform.
+
+Saznajte kako [koristiti sastavljač segmenata](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) u servisu Adobe Campaign Standard za definiranje ciljne skupine na temelju podataka u servisu Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Stvaranje i slanje e-pošte pomoću servisa Adobe Campaign Standard
 

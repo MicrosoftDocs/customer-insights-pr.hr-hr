@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954478"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305239"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za korisničke profile (pretpregled)
 
@@ -22,7 +22,8 @@ Koristite podatke iz izvora poput Microsofta i drugih partnera kako biste obogat
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Stranica središta za obogaćivanje":::
 
-U uvidima u ciljnu skupinu idite na **Podaci** > **Obogaćivanje** za rad s mogućnostima obogaćivanja.    
+U uvidima u ciljnu skupinu idite na **Podaci** > **Obogaćivanje** za rad s mogućnostima obogaćivanja.  
+
 Da biste stvorili ili uredili obogaćivanja, morate imati dozvole Suradnik ili Administrator. Za dodatne informacije pogledajte [Dozvole](permissions.md).
 
 Na kartici **Otkrivanje** pronaći ćete sljedeća obogaćivanja:
@@ -31,7 +32,7 @@ Na kartici **Otkrivanje** pronaći ćete sljedeća obogaćivanja:
 - [Interesi](enrichment-microsoft.md) koje je omogućio Microsoft
 - [Poboljšane adrese](enrichment-enhanced-addresses.md) koje je omogućio Microsoft
 - [Podatke o tvrtki](enrichment-leadspace.md) omogućuje tvrtka Leadspace
-- [Demografske podatke](enrichment-experian.md) omogućuje tvrtka Experian
+- [Demografske podatke](enrichment-experian.md) pruža Experian
 - [Podatke o lokaciji](enrichment-here.md) pruža tvrtka HERE Technologies
 - [Prilagođeni podaci](enrichment-SFTP-custom-import.md) putem Protokola sigurnog prijenosa datoteka (SFTP)
 
@@ -39,7 +40,7 @@ Na kartici **Moja obogaćivanja** možete vidjeti obogaćivanja koja ste konfigu
 
 ## <a name="manage-existing-enrichments"></a>Upravljanje postojećim obogaćivanjima
 
-Idite na **Moja obogaćivanja** da biste vidjeli sva konfigurirana obogaćivanja. Svako obogaćivanje predstavljeno je kao redak koji uključuje dodatne informacije o obogaćivanju.
+Idite na karticu **Moja obogaćivanja** da biste vidjeli sva konfigurirana obogaćivanja. Svako obogaćivanje predstavljeno je kao redak koji uključuje dodatne informacije o obogaćivanju.
 
 Odaberite obogaćivanje da biste vidjeli dostupne mogućnosti. Možete odabrati i elipsu (...) na stavci popisa da biste vidjeli mogućnosti.
 

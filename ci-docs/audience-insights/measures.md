@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049241"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304780"
 ---
 # <a name="define-and-manage-measures"></a>Definiranje i upravljanje mjerama
 
-Mjere vam pomažu da bolje razumijete ponašanja klijenata i poslovne performanse. Gledaju na relevantne vrijednosti iz [objedinjenih profila](data-unification.md). Na primjer, tvrtka želi vidjeti *ukupnu potrošnju po klijentu* kako bi razumjela povijest kupnje pojedinog klijenta ili mjeri *ukupnu prodaju tvrtke* kako bi razumjela ukupnu razinu prihoda u cijelom poslovanju.  
+Mjere vam pomažu da bolje razumijete ponašanja klijenata i poslovne performanse. Gledaju na relevantne vrijednosti iz [objedinjenih profila](data-unification.md). Na primjer poduzeće želi vidjeti *ukupnu potrošnju po kupcu* za razumijevanje povijesti kupca pojedinog kupca ili mjerenje *ukupne prodaje društva* kako bi se razumio ukupni prihod u cijelom poslovanju.  
 
 Mjere se stvaraju pomoću alata za izradu mjera, platforme za upite podataka s različitim operatorima i jednostavnim mogućnostima mapiranja. Omogućuje vam filtriranje podataka, grupiranje rezultata, otkrivanje [putanja odnosa entiteta](relationships.md) i pretpregled izlazne vrijednosti.
 
@@ -36,7 +36,7 @@ Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Možete izraditi m
    > [!NOTE]
    > Ako vaša nova konfiguracija mjera ima samo dva polja, npr. CustomerID i jedan izračun, rezultat će se dodati kao novi stupac u entitet koji je generirao sustav pod nazivom Customer_Measure. Vrijednost mjere moći ćete vidjeti u objedinjenom profilu klijenta. Ostale će mjere generirati vlastite entitete.
 
-1. U području konfiguracije odaberite funkciju skupljanja u padajućem izborniku **Odabir funkcije**. Funkcije skupljanja uključuju: 
+1. U konfiguracijskom području odaberite funkciju agregacije iz padajućeg izbornika **Odabir funkcije**. Funkcije skupljanja uključuju: 
    - **Zbroj**
    - **Prosječno**
    - **Brojanje**
@@ -64,17 +64,19 @@ Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Možete izraditi m
 
 1. Da biste dodali filtre, odaberite **Filtar** u području konfiguracije. 
   
-   1. U odjeljku **Dodaj atribut** okna **Filtri** odaberite atribut koji želite koristiti za stvaranje filtara.
+   1. U odjeljku **Dodavanje atributa** okna **Filtri** odaberite atribut koji želite koristiti za stvaranje filtara.
    1. Postavite operatore filtra da definiraju filtar za svaki odabrani atribut.
    1. Odaberite **Primijeni** za dodavanje filtara mjeri.
 
 1. Da biste dodali dimenzije, odaberite **Dimenzija** u području konfiguracije. Dimenzije će se prikazati kao stupci u entitetu izlazne vrijednosti mjere.
+ 
    1. Odaberite **Uredi dimenzije** za dodavanje atributa podataka po kojima želite grupirati vrijednosti mjere. Na primjer, grad ili spol. Prema zadanim postavkama dimenzija *CustomerID* odabrana je za stvaranje *mjera na razini klijenta*. Možete ukloniti zadanu dimenziju ako želite stvoriti *mjere na poslovnoj razini*.
    1. Odaberite **Gotovo** za dodavanje dimenzija mjeri.
 
 1. Ako u vašim podacima postoje vrijednosti koje trebate zamijeniti cijelim brojem, na primjer, zamijeniti *null* s *0*, odaberite **Pravila**. Konfigurirajte pravilo i obavezno odaberite samo cijele brojeve kao zamjene.
 
 1. Ako postoji više putanja između entiteta podataka koji ste mapirali i entiteta *Klijent*, morate odabrati jednu od identificiranih [putanja odnosa entiteta](relationships.md). Rezultati mjerenja mogu se razlikovati ovisno o odabranoj putanji. 
+   
    1. Odaberite **Preference podataka** i odaberite putanju entiteta koju treba koristiti za identificiranje vaše mjere. Ako postoji samo jedna putanja do entiteta *Klijent*, ova se kontrola neće prikazati.
    1. Odaberite **Gotovo** da biste primijenili svoj odabir. 
 
@@ -113,7 +115,7 @@ Sljedeći postupak opisuje korake za izradu nove mjere pomoću predloška.
 
 1. Odaberite **Novo**, a zatim odaberite **Odaberi predložak**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Snimka zaslona padajućeg izbornika prilikom stvaranja nove mjere s naglaskom na predložak.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Snimka zaslona padajućeg izbornika prilikom izrade nove mjere s istaknutim predloškom.":::
 
 1. Pronađite predložak koji odgovara vašim potrebama i odaberite **Odaberi predložak**.
 
@@ -123,7 +125,7 @@ Sljedeći postupak opisuje korake za izradu nove mjere pomoću predloška.
 
 1. Odaberite **Gotovo**.
 
-1. U odjeljku **Postavi vremensko razdoblje** definirajte vremenski okvir podataka koji će se koristiti. Odaberite želite li da nova mjera pokriva cijeli skup podataka odabirom **Cijelo vrijeme**. Ili želite li da se mjera usredotoči na **Određeno vremensko razdoblje**.
+1. U odjeljku **Postavi vremensko razdoblje** definirajte vremenski okvir podataka koji će se koristiti. Odaberite želite li da nova mjera pokriva cijeli skup podataka odabirom **Cijelo vrijeme** ili ako želite da se mjera usredotoči na **Određeno vremensko razdoblje**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Snimka zaslona koja prikazuje odjeljak vremenskog razdoblja prilikom konfiguriranja mjere iz predloška.":::
 
@@ -142,12 +144,12 @@ Sljedeći postupak opisuje korake za izradu nove mjere pomoću predloška.
 
 Popis mjera možete pronaći na stranici **Mjere**.
 
-Pronaći ćete informacije o vrsti mjere, autoru, datumu stvaranja, statusu i stanju. Kada odaberete mjeru s popisa, možete pretpregledati izlaznu vrijednost i preuzeti .CSV datoteku.
+Pronaći ćete informacije o vrsti mjere, autoru, datumu stvaranja, statusu i stanju. Kada odaberete mjeru s popisa, možete pretpregledati izlaz i preuzeti CSV datoteku.
 
 Da biste istovremeno osvježili sve svoje mjere, odaberite **Osvježi sve** bez odabiranja određene mjere.
 
 > [!div class="mx-imgBorder"]
-> ![Radnje za upravljanje jedinstvenim mjerama](media/measure-actions.png "Radnje za upravljanje jedinstvenim mjerama")
+> ![Radnje za upravljanje jedinstvenim mjerama.](media/measure-actions.png "Radnje za upravljanje jedinstvenim mjerama.")
 
 Odaberite mjeru s popisa za sljedeće mogućnosti:
 
@@ -159,11 +161,11 @@ Odaberite mjeru s popisa za sljedeće mogućnosti:
 - **Aktiviraj** ili **Deaktiviraj**. Neaktivne mjere neće se osvježavati tijekom [zakazanog osvježavanja](system.md#schedule-tab).
 
 > [!TIP]
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Osim toga, većina procesa [ovisi o ostalim procesima](system.md#refresh-policies). Možete odabrati status procesa da biste vidjeli pojedinosti o tijeku cijelog posla. Nakon odabira mogućnosti **Pogledaj pojedinosti** za jedan od zadataka posla pronaći ćete dodatne informacije: vrijeme obrade, zadnji datum obrade te sve pogreške i upozorenja povezana sa zadatkom.
+> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Osim toga, većina procesa [ovisi o ostalim procesima](system.md#refresh-policies). Možete odabrati status procesa da biste vidjeli pojedinosti o tijeku cijelog posla. Nakon odabira **Pogledaj pojedinosti** za jedan od zadataka posla pronaći ćete dodatne informacije: vrijeme obrade, datum posljednje obrade i sve pogreške i upozorenja povezana sa zadatkom.
 
 ## <a name="next-step"></a>Sljedeći korak
 
-Možete koristit postojeće mjere da biste stvorili [segment klijenta](segments.md).
+Možete koristiti postojeće mjere za stvaranje [segmenta klijenta](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

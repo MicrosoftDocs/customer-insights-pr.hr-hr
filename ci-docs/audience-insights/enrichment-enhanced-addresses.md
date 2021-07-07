@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965569"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305423"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogaćivanje profila klijenata s poboljšanim adresama
 
@@ -22,7 +22,7 @@ Adrese u vašim podacima mogu biti nestrukturirane, nepotpune ili netočne. Kori
 
 ## <a name="how-we-enhance-addresses"></a>Kako poboljšavamo adrese
 
-Naš model prolazi postupak u dva koraka za poboljšanje adrese. Prvo raščlanjuje adresu kako bi identificirao njezine komponente i stavlja ih u strukturirani format. Zatim koristimo umjetnu inteligenciju da bismo ispravili, upotpunili i standardizirali vrijednosti u adresi.
+Naš model prolazi postupak u dva koraka za poboljšanje adrese. Prvo raščlanjuje adresu kako bi identificirao njezine komponente i stavlja ih u strukturirani format. Zatim koristimo AI za ispravljanje, popunjavanje i standardizaciju vrijednosti u adresi.
 
 ### <a name="example"></a>Primjer
 
@@ -50,7 +50,7 @@ Poboljšane adrese funkcioniraju samo s vrijednostima koje već postoje u unesen
 2. Provjerava je li bilo koja vrijednost, poput poštanskih brojeva ili naziva ulica, valjana.
 3. Mijenja vrijednosti koje ne prepoznaje.
 
-Model koristi tehnike temeljene na strojnom učenju za poboljšanje adresa. Iako primjenjujemo visoki prag pouzdanosti kada model mijenja ulaznu vrijednost, kao i kod bilo kojeg modela temeljenog na strojnom učenju, točnost od 100 % nije zajamčena.
+Model koristi tehnike temeljene na strojnom učenju za poboljšanje adresa. Iako primjenjujemo visoki prag pouzdanosti kada model mijenja ulaznu vrijednost, kao i kod svakog modela temeljenog na strojnom učenju, 100-postotna točnost nije zajamčena.
 
 ## <a name="supported-countries-or-regions"></a>Podržane države ili regije
 
@@ -76,7 +76,7 @@ Adrese moraju sadržavati vrijednost države/regije. Ne obrađujemo adrese za dr
 1. Odaberite način formatiranja adresa u vašem skupu podataka. Odaberite **Adresa s jednim atributom** ako adrese u vašim podacima koriste jedno polje. Odaberite **Adresa s više atributa** ako adrese u vašim podacima koriste više od jednog polja podataka.
 
    > [!NOTE]
-   > Država/regija je obavezna i za adresu s jednim atributom i za adresu s više atributa. Adrese koje ne sadrže valjane ili podržane vrijednosti države/regije neće biti obogaćene
+   > Država/regija obavezna je i za adrese s jednim i za one s više atributa. Adrese koje ne sadrže valjane ili podržane vrijednosti države/regije neće biti obogaćene.
 
 1.  Mapirajte polja adrese iz vašeg objedinjenog entiteta klijenta.
 
@@ -98,6 +98,6 @@ Detaljnom prikazu svakog obogaćenog profila možete pristupiti odabirom **Prika
 
 ## <a name="next-steps"></a>Sljedeći koraci
 
-Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [segmente](segments.md), [mjere](measures.md), pa i [izvezite podatke](export-destinations.md) kako biste svojim klijentima pružili personalizirano iskustvo.
+Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [segmente](segments.md) i [mjere](measures.md), pa čak i [izvezite podatke](export-destinations.md) radi pružanja personaliziranih iskustava svojim klijentima.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

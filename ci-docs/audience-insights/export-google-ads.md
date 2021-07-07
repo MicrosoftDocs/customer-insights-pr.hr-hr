@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976309"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305331"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Izvoz segmenata u Google Ads (pretpregled)
 
-Izvezite segmente objedinjenih profila klijenata u popis ciljnih skupina usluge Google Ads i upotrijebite ih za oglašavanje na uslugama Google pretraživanje, Gmail, YouTube i Google prikazivačkoj mreži. 
+Izvezite segmente objedinjenih korisničkih profila na popis publike servisa Google Ads i upotrijebite ih za oglašavanje na servisima Google Search, Gmail, YouTube i Google Display Network. 
 
 ## <a name="prerequisites-for-connection"></a>Preduvjeti za vezu
 
 -   Imate [račun za Google Ads](https://ads.google.com/) i odgovarajuće vjerodajnice administratora.
--   Imate [odobreni token za Google Ads Developer](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Ispunjavate zahtjeve [Pravila podudaranja klijenata](https://support.google.com/adspolicy/answer/6299717)
--   Ispunjavate zahtjeve [veličina popisa ponovno zainteresiranih](https://support.google.com/google-ads/answer/7558048) 
-
+-   Imate [odobreni token za Google Ads Developer](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Ispunjavate zahtjeve [Pravila podudaranja klijenata](https://support.google.com/adspolicy/answer/6299717).
+-   Ispunjavate zahtjeve [veličina popisa ponovno zainteresiranih](https://support.google.com/google-ads/answer/7558048).
 -   Google Ads sadrži postojeće ciljne skupine i odgovarajuće ID-ove. Dodatne informacije potražite u [ciljnim skupinama usluge Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Imate [konfigurirane segmente](segments.md)
--   Objedinjeni profili klijenata u izvezenim segmentima sadrže polja koja predstavljaju adresu e-pošte, ime i prezime
+-   Imate [konfigurirane segmente](segments.md).
+-   Objedinjeni profili klijenata u izvezenim segmentima sadrže polja koja predstavljaju adresu e-pošte, ime i prezime.
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
@@ -68,7 +67,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 1. Da biste stvorili novi izvoz, odaberite **Dodaj odredište**.
 
-1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Google Ads. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
+1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Google Ads. Ako ne vidite naziv ovog odjeljka, tada vam nisu dostupne veze ove vrste.
 
 1. Unesite svoj **[ID ciljne skupine za Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** i odaberite **Povezivanje** za inicijalizaciju veze s uslugom Google Ads.
 
@@ -78,7 +77,9 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 Spremanje izvoza ne pokreće izvoz odmah.
 
-Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
+Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). 
+
+Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
 

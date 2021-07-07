@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896088"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304963"
 ---
 # <a name="connections-preview-overview"></a>Pregled (pretpregled) veza
 
@@ -74,7 +74,9 @@ Kada postavljate ili uređujete vezu za izvoz, odabirete koji korisnici smiju ko
 
 ## <a name="remove-a-connection"></a>Uklanjanje veze
 
-Ako se veza koju uklanjate koristi za obogaćivanje ili izvoze, najprije ih morate odvojiti ili ukloniti. Dijaloški okvir za uklanjanje vodit će vas do relevantnih obogaćivanja ili izvoza. Odvojena obogaćivanja i izvozi postaju neaktivni. Ponovno ih aktivirate tako da im dodate drugu vezu na stranici [Obogaćivanja](enrichment-hub.md) ili [Izvozi](export-destinations.md).
+Ako se veza koju uklanjate koristi za obogaćivanje ili izvoze, najprije ih morate odvojiti ili ukloniti. Dijaloški okvir za uklanjanje vodit će vas do relevantnih obogaćivanja ili izvoza. 
+
+Odvojena obogaćivanja i izvozi postaju neaktivni. Ponovno ih aktivirate tako da im dodate drugu vezu na stranici [Obogaćivanja](enrichment-hub.md) ili [Izvozi](export-destinations.md).
 
 1. Idite na **Admin** > **Veze (pretpregled)**.
 

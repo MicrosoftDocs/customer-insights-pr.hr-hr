@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595417"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306111"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Vodič uzorka za predviđanje transakcijskog gubitka (pretpregled)
 
-Ovaj će vam vodič objasniti kroz primjer predviđanje transakcijskog gubitka u usluzi Customer Insights s pomoću podataka uzorka navedenih u nastavku. Svi podaci koji se koriste u ovom vodiču nisu stvarni podaci o klijentu i dio su skupa podataka Contoso koji se nalazi u okruženju *Demo* unutar pretplate na Customer Insights.
+Ovaj će vam vodič objasniti kroz primjer predviđanje transakcijskog gubitka u usluzi Customer Insights s pomoću podataka uzorka navedenih u nastavku. Podaci korišteni u ovom vodiču nisu stvarni klijentski podaci i dio su skupa podataka Contoso koji se nalazi u okruženju *Demo* u sklopu pretplate na Customer Insights.
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je tvrtka koja proizvodi visokokvalitetnu kavu i aparate za kavu koje prodaju putem svoje web-stranice Contoso Coffee. Cilj im je znati koji će klijenti koji obično redovito kupuju njihove proizvode prestati biti aktivni kupci u sljedećih 60 dana. Znajući tko će od njihovih klijenata **vjerojatno prekinuti**, može im pomoći uštedjeti na marketinškim aktivnostima usredotočujući se na njihovo zadržavanje.
+Contoso je tvrtka koja proizvodi visokokvalitetnu kavu i aparate za kavu, koje prodaju putem svog web-mjesta Kava Contoso. Cilj im je znati koji će klijenti koji obično redovito kupuju njihove proizvode prestati biti aktivni kupci u sljedećih 60 dana. Znajući tko će od njihovih klijenata **vjerojatno prekinuti**, može im pomoći uštedjeti na marketinškim aktivnostima usredotočujući se na njihovo zadržavanje.
 
 ## <a name="prerequisites"></a>Preduvjeti
 
@@ -109,9 +109,9 @@ Nakon unosa podataka, sada započinjemo postupak **Karta, podudaranje, spajanje*
 
 1. Idite na karticu **Usklađivanje** i odaberite **Naruči**.
 
-1. Na padajućem popisu **Primarni** odaberite **Kontakti e-trgovine: etrgovina** kao primarni izvor i uključite sve zapise.
+1. Na padajućem popisu **Primarni** odaberite **eCommerceContacts: eCommerce** kao primarni izvor i uključite sve zapise.
 
-1. Na padajućem popisu **Entitet 2** odaberite **Odani klijenti: Shema odanosti** i uključite sve zapise.
+1. Na padajućem popisu **Entitet 2** odaberite **loyCustomers: LoyaltyScheme** i uključite sve zapise.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="objedinite usklađivanje e-trgovine i odanost.":::
 
@@ -119,16 +119,16 @@ Nakon unosa podataka, sada započinjemo postupak **Karta, podudaranje, spajanje*
 
 1. Dodajte svoj prvi uvjet pomoću programa FullName.
 
-   * Za eCommerceContacts u padajućem izborniku odaberite **Puni naziv**.
-   * Za loyCustomers u padajućem izborniku odaberite **Puni naziv**.
+   * Za eCommerceContacts odaberite **FullName** na padajućem popisu.
+   * Za loyCustomers odaberite **FullName** na padajućem popisu.
    * Odaberite padajući izbornik **Normaliziraj** i odaberite **Vrsta (telefon, ime, adresa, ...)**.
    * Postavite **Razina preciznosti**: **Osnovna** i **Vrijednost**: **Visoko**.
 
 1. Unesite naziv **Puno ime, e-pošta** za novo pravilo.
 
    * Odaberite drugi uvjet za adresu e-pošte tako da odaberete **Dodaj uvjet**
-   * Za entitet eCommerceContacts u padajućem izborniku odaberite **E-pošta**.
-   * Za entitet loyCustomers u padajućem izborniku odaberite **E-pošta**. 
+   * Za entitet eCommerceContacts odaberite **E-pošta** na padajućem popisu.
+   * Za entitet loyCustomers odaberite **E-pošta** na padajućem popisu. 
    * Ostavite praznim polje Normaliziraj. 
    * Postavite **Razina preciznosti**: **Osnovna** i **Vrijednost**: **Visoko**.
 
