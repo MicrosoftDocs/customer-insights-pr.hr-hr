@@ -72,7 +72,7 @@
           href: audience-insights/enrichment-here.md
         - name: Obogaćivanje s Leadspaceom
           href: audience-insights/enrichment-leadspace.md
-        - name: Obogaćivanje s pomoću tvrtke Experian
+        - name: Obogaćivanje uz Experian
           href: audience-insights/enrichment-experian.md
         - name: Obogaćivanje uz prilagođeni unos SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -136,15 +136,17 @@
           items:
             - name: Pregled izvoza
               href: audience-insights/export-destinations.md
+            - name: Active Campaign
+              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
               href: audience-insights/export-autopilot.md
             - name: Azure Blob Storage
               href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage Gen2
+            - name: Azure Data Lake Storage druge generacije
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Analitika servisa Azure Synapse
+            - name: Analitika usluge Azure Synapse
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
@@ -178,8 +180,12 @@
               href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
+            - name: Salesforce Marketing Cloud
+              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
+            - name: SendInBlue
+              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
@@ -238,17 +244,17 @@
       items:
         - name: Početak
           href: engagement-insights/get-started.md
-        - name: Stvorite radni prostor
+        - name: Stvaranje radnog prostora
           href: engagement-insights/create-workspace.md
-        - name: Uredite svoje web-mjesto
-          href: engagement-insights/instrument-website.md
+        - name: Snimanje događaja s web-mjesta i iz mobilnih aplikacija
+          href: engagement-insights/developer-resources.md
         - name: Koncepti i terminologija
           href: engagement-insights/glossary.md
     - name: Događaji
       items:
         - name: Stvorite i izmijenite događaje
           href: engagement-insights/refined-events.md
-        - name: Izvoz događaja
+        - name: Izvezi događaje
           href: engagement-insights/export-events.md
     - name: Izvješća
       items:
@@ -272,10 +278,18 @@
       items:
         - name: Pregled resursa za razvojne inženjere
           href: engagement-insights/developer-resources.md
-        - name: Vodič za web SDK
+        - name: Korisnički priručnik za Web SDK
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Uzorci za web SDK
           href: engagement-insights/websdk-sample.md
+        - name: Vodič za Android SDK
+          href: engagement-insights/get-started-android.md
+        - name: Android SDK uzorak
+          href: engagement-insights/androidsdk-sample.md
+        - name: Korisnički priručnik za iOS SDK
+          href: engagement-insights/get-started-ios.md
+        - name: Uzorak SDK-a za iOS
+          href: engagement-insights/iossdk-sample.md
     - name: Administracija
       items:
         - name: Uloge i dozvole
