@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596536"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554885"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povezivanje s mapom značajke Common Data Model s pomoću računa za Azure Data Lake
 
@@ -45,7 +45,7 @@ Ovaj članak pruža informacije o unosu podataka iz mape Common Data Model pomo�
 
 1. Možete birati između korištenja mogućnosti koja se temelji na resursima i mogućnosti koja se temelji na pretplati za provjeru autentičnosti. Za više informacija pogledajte [Povezivanje uvida ciljne skupine s računom servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure](connect-service-principal.md). Unesite podatke za **Spremnik** pa odaberite **Dalje**.
    > [!div class="mx-imgBorder"]
-   > ![Dijaloški okvir za unos novih pojedinosti o vezi za Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Dijaloški okvir za unos novih pojedinosti o vezi za Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Potrebna vam je jedna od sljedećih uloga u gore navedenom spremniku ili računu za pohranu da biste se mogli povezati i stvoriti izvor podataka:
    >  - Čitač podataka bloba pohrane
@@ -58,11 +58,11 @@ Ovaj članak pruža informacije o unosu podataka iz mape Common Data Model pomo�
 
 1. Dobit ćete popis dostupnih entiteta u odabranoj datoteci model.json ili manifest.json. Možete pregledati i odabrati neki s popisa dostupnih entiteta i odabrati **Spremi**. Svi odabrani entiteti unijet će se iz novog izvora podataka.
    > [!div class="mx-imgBorder"]
-   > ![Dijaloški okvir s popisom entiteta iz datoteke model.json](media/review-entities.png)
+   > ![Dijaloški okvir s popisom entiteta iz datoteke model.json.](media/review-entities.png)
 
 8. Navedite za koje entitete podataka želite omogućiti profiliranje podataka pa odaberite **Spremi**. Profiliranje podataka omogućuje analitiku i druge mogućnosti. Možete odabrati cijeli entitet koji odabire sve atribute iz entiteta ili odabrati određene atribute po svom izboru. Prema zadanim postavkama nijedan entitet nije omogućen za profiliranje podataka.
    > [!div class="mx-imgBorder"]
-   > ![Dijaloški okvir u kojem se prikazuje profiliranje podataka](media/dataprofiling-entities.png)
+   > ![Dijaloški okvir u kojemu se prikazuje profiliranje podataka.](media/dataprofiling-entities.png)
 
 9. Nakon spremanja odabira otvara se stranica **Izvori podataka**. Sada biste trebali vidjeti vezu mape Common Data Model kao izvor podataka.
 
@@ -81,12 +81,12 @@ Možete ažurirati pristupni ključ za račun pohrane koji sadrži mapu Common D
 
 4. Ako želite ažurirajte **Pristupni ključ** i odaberite **Sljedeće**.
 
-   ![Dijaloški okvir za uređivanje i ažuriranje pristupnog ključa za postojeći izvor podataka](media/edit-access-key.png)
+   ![Dijaloški okvir za uređivanje i ažuriranje pristupnog ključa za postojeći izvor podataka.](media/edit-access-key.png)
 
 5. Ako želite, možete ažurirati s veze ključa računa na vezu koja se temelji na resursima ili pretplati. Za više informacija pogledajte [Povezivanje uvida ciljne skupine s računom servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure](connect-service-principal.md). Ne možete promijeniti podatke za **Spremnik** prilikom ažuriranja veze.
    > [!div class="mx-imgBorder"]
 
-   > ![Dijaloški okvir za unos pojedinosti o vezi za Azure Data Lake na postojeći račun za pohranu](media/enter-existing-storage-details.png)
+   > ![Dijaloški okvir za unos pojedinosti o vezi za Azure Data Lake na postojeći račun za pohranu.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Potrebna vam je jedna od sljedećih uloga u gore navedenom spremniku ili računu za pohranu da biste se mogli povezati i stvoriti izvor podataka:

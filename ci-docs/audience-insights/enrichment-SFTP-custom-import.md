@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 9331cf8057850e2fbe03622831f388e73056d938
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304641"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555390"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogaćivanje profila klijenata pomoću prilagođenih podataka (pretpregled)
 
@@ -64,7 +64,7 @@ Morate biti administrator da biste konfigurirali veze. Odaberite **Dodaj vezu** 
 1. Nakon završetka provjere vezu možete spremiti odabirom **Spremi**.
 
    > [!div class="mx-imgBorder"]
-   > ![Stranica konfiguracije veze na Experian](media/enrichment-SFTP-connection.png "Stranica konfiguracije veze na Experian")
+   > ![Stranica konfiguracije veze za Experian.](media/enrichment-SFTP-connection.png "Stranica konfiguracije veze na Experian")
 
 
 ## <a name="defining-field-mappings"></a>Definiranje mapiranja polja 

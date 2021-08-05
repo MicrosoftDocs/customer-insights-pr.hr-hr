@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304687"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692426"
 ---
 # <a name="data-sources-overview"></a>Pregled izvora podataka
 
@@ -30,13 +31,13 @@ Izvor podataka možete dodati na tri osnovna načina:
 
 - [Putem desetaka poveznika aplikacije Power Query](connect-power-query.md)
 - [Iz mape Common Data Model](connect-common-data-model.md)
-- [Iz svog vlastitog jezera aplikacije Microsoft Dataverse](connect-common-data-service-lake.md)
+- [Iz svog vlastitog jezera aplikacije Microsoft Dataverse](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Dodavanje podataka iz lokalnih izvora podataka
 
-Unošenje podataka iz lokalnih izvora podataka u uvidima publike podržano je na temelju tijekova podataka platforme Microsoft Power Platform. Tijekovi podataka mogu se omogućiti u Customer Insights pomoću [pružanja URL-a okruženja Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) prilikom postavljanja okruženja.
+Unošenje podataka iz lokalnih izvora podataka u uvidima publike podržano je na temelju tijekova podataka platforme Microsoft Power Platform. Tijekovi podataka mogu se omogućiti u Customer Insights pomoću [pružanja URL-a okruženja Microsoft Dataverse](get-started-paid.md) prilikom postavljanja okruženja.
 
-Izvori podataka koji se stvaraju nakon pridruživanja okruženja Dataverse uz Customer Insights koristit će [Power Platform tijekove podataka](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) prema zadanim postavkama. Tijekovi podataka podržavaju lokalnu povezivost pomoću pristupnika za podatke. Uklonite i ponovno stvorite izvore podataka koji su postojali prije nego je okruženje Dataverse bilo povezano za [korištenje lokalnih pristupnika za podatke](/data-integration/gateway/service-gateway-app.md).
+Izvori podataka koji se stvaraju nakon pridruživanja okruženja Dataverse uz Customer Insights koristit će [Power Platform tijekove podataka](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) prema zadanim postavkama. Tijekovi podataka podržavaju lokalnu povezivost pomoću pristupnika za podatke. Uklonite i ponovno stvorite izvore podataka koji su postojali prije nego je okruženje Dataverse bilo povezano za [korištenje lokalnih pristupnika za podatke](/data-integration/gateway/service-gateway-app).
 
 Pristupnici za podatke iz postojećeg okruženja Power BI ili Power Apps bit će vidljivi i možete ih ponovno koristiti u Customer Insights. Stranica izvora podataka prikazuje veze do okruženja platforme Microsoft Power Platform u kojem možete pregledavati i konfigurirati lokalne pristupnike za podatke.
 
@@ -45,7 +46,7 @@ Pristupnici za podatke iz postojećeg okruženja Power BI ili Power Apps bit će
 Vidjet ćete naziv svakog unijetog izvor podataka, njegov status i zadnji put kada su podaci iz tog izvora osvježavani. Popis izvora podataka možete sortirati prema svakom stupcu.
 
 > [!div class="mx-imgBorder"]
-> ![Dodan je izvor podataka](media/configure-data-datasource-added.png "Dodan je izvor podataka")
+> ![Dodan je izvor podataka.](media/configure-data-datasource-added.png "Dodan je izvor podataka")
 
 |Stanje  |Opis  |
 |---------|---------|

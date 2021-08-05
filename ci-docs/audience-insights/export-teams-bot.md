@@ -9,19 +9,19 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 03299610fd41a7e142e3c9723fad56ce7f90e083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: e563619f40be859f3f02638adbd60b80423182b3
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267943"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554347"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot Timovi za Dynamics 365 Customer Insights (pretpregled)
 
 Povežite se s Microsoft Teams kako bi bot mogao potražiti objedinjene profile klijenata na kanalima Timovi.
 
 > [!div class="mx-imgBorder"]
-> ![Botovi timova koji pokazuju zapis o klijentu](media/teams-bot.png "Botovi timova koji pokazuju zapis o klijentu")
+> ![Bot za Teams koji pokazuje zapis o klijentu.](media/teams-bot.png "Botovi timova koji pokazuju zapis o klijentu")
 
 ## <a name="prerequisites"></a>Preduvjeti
 

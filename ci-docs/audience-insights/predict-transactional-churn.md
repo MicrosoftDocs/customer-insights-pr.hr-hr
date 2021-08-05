@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095593"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559396"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transakcijsko predviđanje gubitka (pretpregled)
 
@@ -47,7 +47,7 @@ Transakcijsko predviđanje gubitka pomaže predvidjeti hoće li klijent prestati
         - **Događaj:** Odredite naziv za događaj koji želite koristiti. Na primjer, polje pod nazivom „UserAction” u trgovini mješovite robe može biti kupon koji kupac koristi.
         - **Pojedinosti:** Detaljne informacije o događaju. Na primjer, polje pod nazivom „CouponValue” u trgovini mješovite robe može biti vrijednost valute kupona.
 - Značajke predloženih podataka:
-    - Dovoljno povijesnih podataka: Podaci o transakciji za najmanje dvostruko veći odabrani vremenski okvir. Po mogućnosti dvije do tri godine podataka o pretplati. 
+    - Dovoljno povijesnih podataka: Podaci o transakciji za najmanje dvostruko veći odabrani vremenski okvir. Ako je moguće, dvije do tri godine povijesti transakcija. 
     - Više kupnji po klijentu: Idealno najmanje dvije transakcije po klijentu.
     - Broj klijenata: Najmanje 10 profila klijenata, po mogućnosti više od 1 000 jedinstvenih klijenata. Model neće uspjeti s manje od 10 klijenata i nedovoljnim povijesnim podacima.
     - Kompletnost podataka: Manje od 20 % vrijednosti koje nedostaju u podatkovnom polju navedenog entiteta.

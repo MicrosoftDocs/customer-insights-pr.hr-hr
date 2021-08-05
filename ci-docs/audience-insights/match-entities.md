@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306019"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650309"
 ---
 # <a name="match-entities"></a>Slaganje entiteta
 
@@ -138,7 +138,7 @@ Navođenje pravila za uklanjanje duplikata nije obavezno. Ako takva pravila nisu
    - **Najstariji**: Identificira pobjednički zapis na temelju starosti. Zahtijeva datum ili numeričko polje za definiranje nedavnosti.
  
    > [!div class="mx-imgBorder"]
-   > ![Korak 1 pravila uklanjanja duplikata](media/match-selfconflation.png "Korak 1 pravila uklanjanja duplikata")
+   > ![Korak 1 pravila za uklanjanje duplikata.](media/match-selfconflation.png "Korak 1 pravila uklanjanja duplikata")
  
 1. Nakon što se odaberu entiteti i postave njihove preference spajanja, odaberite **Dodavanje pravila** kako bi se definirala pravila uklanjanja duplikata na razini entiteta.
    - **Odabir polja** navodi sva dostupna polja iz tog entiteta. Odaberite polje u kojem želite provjeriti duplikate. Odaberite polja koja su vjerojatno jedinstvena za svakog pojedinog klijenta. Na primjer, adresa e-pošte ili kombinacija imena, grada i telefonskog broja.
@@ -146,7 +146,7 @@ Navođenje pravila za uklanjanje duplikata nije obavezno. Ako takva pravila nisu
    - Definirajte više uvjeta odabirom mogućnosti **Dodavanje uvjeta**.
  
    > [!div class="mx-imgBorder"]
-   > ![Korak 2 pravila uklanjanja duplikata](media/match-selfconflation-rules.png "Korak 2 pravila uklanjanja duplikata")
+   > ![Korak 2 pravila za uklanjanje duplikata.](media/match-selfconflation-rules.png "Korak 2 pravila uklanjanja duplikata")
 
   Možete stvoriti više pravila za uklanjanje duplikata za entitet. 
 
@@ -179,7 +179,9 @@ Idite u odjeljak **Podaci** > **Objedinjavanje** > **Uparivanje** i odaberite **
 Rezultat uspješnog pokretanja, jedinstveni entitet profila klijenta, pronaći ćete na stranici **Entiteti**. Vaš objedinjeni entitet klijenta naziva se **Klijenti** u odjeljku **Profili**. Prvo uspješno pokretanje uparivanja stvara objedinjeni entitet *Klijent*. Sva sljedeća pokretanja uparivanja proširuju taj entitet.
 
 > [!TIP]
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Osim toga, većina procesa [ovisi o ostalim procesima](system.md#refresh-policies). Možete odabrati status procesa da biste vidjeli pojedinosti o tijeku cijelog posla. Nakon odabira mogućnosti **Pogledaj pojedinosti** za jedan od zadataka posla pronaći ćete dodatne informacije: vrijeme obrade, zadnji datum obrade te sve pogreške i upozorenja povezana sa zadatkom.
+> Nakon pokretanja procesa podudaranja odaberite status procesa da biste otvorili okno **Pojedinosti o zadatku** . On daje pregled o vremenu obrade, posljednjem datumu obrade i svim pogreškama i upozorenjima povezanima sa zadatkom. Odaberite **Pogledaj pojedinosti** da biste vidjeli koji su entiteti sudjelovali u procesu podudaranja, koja su se pravila na njih primijenila i jesu li ažuriranja uspješno objavljena.  
+> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Osim toga, većina procesa [ovisi o ostalim procesima](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Detaljna putanja za pristup pojedinostima obrade s veze statusa zadatka.":::
 
 ## <a name="review-and-validate-your-matches"></a>Pregled i provjera valjanosti vaših uparivanja
 

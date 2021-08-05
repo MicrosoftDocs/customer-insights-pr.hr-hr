@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304595"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554609"
 ---
 # <a name="customer-profiles"></a>Profili klijenata
 
@@ -23,11 +23,11 @@ Na stranici **Klijenti** prikazuje se kombinirani prikaz vaših klijenata na tem
 Klijenti mogu biti pojedinci ili organizacije (pretpregled). Svaki profil klijenta ili organizacije predstavljen je pločicom. Odaberite pločicu da biste vidjeli dodatne informacije o tom određenom klijentu ili organizaciji. Upotrijebite kontrole za postavljanje stranica na dnu stranice za prikaz dodatnih zapisa.
 
 > [!div class="mx-imgBorder"] 
-> ![B2C profili klijenata](media/profiles-customers.png "B2C profili klijenata")
+> ![Profili klijenata B2C.](media/profiles-customers.png "B2C profili klijenata")
 
 Organizacije (pretpregled)
 > [!div class="mx-imgBorder"] 
-> ![B2B profili klijenata](media/profile-customers-b2b.png "B2B profili klijenata")
+> ![Profili klijenata B2B.](media/profile-customers-b2b.png "B2B profili klijenata")
 
 > [!NOTE]
 > Ako ne možete vidjeti pločice kada odaberete **Klijenti** na navigacijskoj traci, vaš administrator treba [definirati barem jedan atribut koji se može pretraživati](search-filter-index.md) na **Indeksu pretraživanja i filtriranja**.
@@ -47,7 +47,7 @@ Možete filtrirati klijente prema poljima entiteta Profil klijenta. Slično pret
 2. Potvrdite okvire pored atributa prema kojima želite filtrirati klijente.
 
    > [!div class="mx-imgBorder"] 
-   > ![Profili klijenata](media/profiles-customers3.png "Profili klijenata")
+   > ![Profili klijenata.](media/profiles-customers3.png "Profili klijenata")
 
 3. Uklonite filtre odabirom opcije **Obriši filtre** na stranici **Klijenti**.
 

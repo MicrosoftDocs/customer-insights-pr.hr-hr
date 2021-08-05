@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049385"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553966"
 ---
 # <a name="entities-in-audience-insights"></a>Entiteti u uvidima u ciljnu skupinu
 
@@ -30,19 +30,19 @@ Stranica **Entiteti** navodi entitete i uključuje nekoliko stupaca:
 - **Posljednji put ažurirano**: datum i vrijeme posljednjeg ažuriranja entiteta
 - **Posljednji put osvježeno**: datum i vrijeme posljednjeg osvježavanja podataka
 
-## <a name="exploring-a-specific-entitys-data"></a>Istraživanje podataka određenog entiteta
+## <a name="explore-a-specific-entitys-data"></a>Istraživanje podataka određenih entiteta
 
 Odaberite entitet za istraživanje različitih polja i zapisa koji su uključeni u taj entitet.
 
 > [!div class="mx-imgBorder"]
-> ![Odabir entiteta](media/data-manager-entities-data.png "Odaberite entitet")
+> ![Odaberite entitet.](media/data-manager-entities-data.png "Odabir entiteta")
 
 - Kartica **Podaci** prikazuje tablicu s popisom pojedinosti o pojedinačnim zapisima entiteta.
 
 > [!div class="mx-imgBorder"]
-> ![Tablica polja](media/data-manager-entities-fields.PNG "Tablica polja")
+> ![Tablica polja.](media/data-manager-entities-fields.PNG "Tablica polja")
 
-- Kartica **Atributi** je odabrana prema zadanim postavkama i prikazuje tablicu za pregled pojedinosti za odabrani entitet, kao što su nazivi polja, vrste podataka i vrste. Stupac **Vrsta** prikazuje povezane vrste modela uobičajenih podataka, koji automatski identificira sustav ili [ručno mapiraju](map-entities.md) korisnici. To su semantičke vrste koje se mogu razlikovati ovisno o vrstama podataka atributa – primjerice polje *E-pošta* u nastavku ima vrstu podataka *Tekst*, ali njegova (semantička) vrsta modela uobičajenih podataka može biti *E-pošta* ili *Adresa e-pošte*.
+- Kartica **Atributi** je odabrana prema zadanim postavkama i prikazuje tablicu za pregled pojedinosti za odabrani entitet, kao što su nazivi polja, vrste podataka i vrste. Stupac **Vrsta** prikazuje povezane vrste modela uobičajenih podataka, koji automatski identificira sustav ili [ručno mapiraju](map-entities.md) korisnici. Te su vrste semantičke vrste koje se mogu razlikovati od vrsta podataka atributa. Na primjer, polje *E -pošta* u nastavku ima vrstu podataka *Tekst*, ali bi njegova (semantička) vrsta Common Data Model mogla biti *E -pošta* ili *Adresa e-pošte*.
 
 > [!NOTE]
 > Obje tablice prikazuju samo uzorak podataka entiteta. Za prikaz cijelog skupa podataka idite na stranicu **Izvori podataka**, odaberite entitet, nakon toga **Uredi** i zatim pregledajte podatke tog entiteta uz pomoć alata za uređivanje Power Query, kao što je objašnjeno u poglavlju [Izvori podataka](data-sources.md).
@@ -52,11 +52,28 @@ Da biste saznali više o podacima koji su uneseni u entitet, stupac **Sažetak**
 Odaberite ikonu grafikona za prikaz sažetka podataka.
 
 > [!div class="mx-imgBorder"]
-> ![Simbol sažetka](media/data-manager-entities-summary.png "Tablica sažetka podataka")
+> ![Simbol sažetka.](media/data-manager-entities-summary.png "Tablica sažetka podataka")
 
-### <a name="next-step"></a>Sljedeći korak
+## <a name="entity-specific-information"></a>Informacija za određeni entitet
 
-Pogledajte temu [Ujedinjavanje](data-unification.md) da biste saznali kako *mapirati*, *upariti* i *spojiti* unesene podatke.
+Sljedeći odjeljak pruža informacije o nekim entitetima koje je stvorio sustav.
+
+### <a name="corrupted-data-sources"></a>Oštećeni izvori podataka
+
+Polja iz obrađenog izvora podataka mogu sadržavati oštećene podatke. Zapisi s oštećenim poljima izloženi su u entitetima koje je stvorio sustav. Poznavanje oštećenih zapisa pomaže vam identificirati koje podatke pregledati i ažurirati u izvornom sustavu. Nakon sljedećeg osvježavanja izvora podataka ispravljeni zapisi unose se u Customer Insights i prosljeđuju nizvodnim procesima. 
+
+Na primjer, stupac 'rođendan' ima vrstu podataka postavljenu kao „datum”. U zapisu klijenta rođendan je unesen kao '01/01/19777'. Sustav će označiti ovaj zapis kao oštećen. Netko sada može promijeniti rođendan u izvornom sustavu na '1977'. Nakon automatskog osvježavanja izvora podataka polje sada ima valjani format i zapis će biti uklonjen iz oštećenog entiteta. 
+
+Idite na **Podaci** > **Entiteti** i potražite oštećene entitete u odjeljku **Sustav**. Shema imenovanja oštećenih entiteta: 'DataSourceName_EntityName_corrupt'.
+
+Customer Insights i dalje obrađuje oštećene zapise. Međutim, mogu uzrokovati probleme prilikom rada s objedinjenim podacima.
+
+Sljedeće provjere izvode se na unesenim podacima kako bi se otkrili oštećeni zapisi: 
+
+- Vrijednost polja ne podudara se s vrstom podataka njegova stupca.
+- Polja sadrže znakove koji uzrokuju da stupci ne odgovaraju očekivanoj shemi. Na primjer: pogrešno oblikovane ponude, neprespojne ponude ili znakovi novog retka.
+- Ako postoje stupci datetime/date/datetimeoffset, njihov format treba navesti u modelu ako ne slijedi standardni ISO format.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

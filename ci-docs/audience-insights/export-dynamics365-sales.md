@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 328bb2f26ebcea234fb645e5225930ab12f82a8b
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 9f11ab189117da5bcc1aee843b73962ec6615e82
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976217"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692289"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Korištenje segmenata u Dynamics 365 Sales (pretpregled)
 
@@ -24,7 +24,7 @@ Upotrijebite podatke o klijentima za izradu popisa zainteresiranih, daljnje pra�
 
 ## <a name="prerequisite-for-connection"></a>Preduvjet za vezu
 
-1. Zapisi o kontaktima moraju biti prisutni u sustavu Dynamics 365 Sales prije nego što možete izvesti segment iz Customer Insights u Sales. Pročitajte više o tome kako preuzeti kontakte u [Dynamics 365 Sales pomoću Common Data Services](connect-power-query.md).
+1. Zapisi o kontaktima moraju biti prisutni u sustavu Dynamics 365 Sales prije nego što možete izvesti segment iz Customer Insights u Sales. Pročitajte više o tome kako preuzeti kontakte u [Dynamics 365 Sales pomoću Microsoft Dataverse](connect-power-query.md).
 
    > [!NOTE]
    > Izvoz segmenata iz uvida u ciljnu skupinnu u Sales neće stvoriti nove zapise o kontaktima u instancama programa Sales. Zapisi o kontaktima iz programa Sales moraju se preuzeti u uvide u ciljnu skupinu i koristiti kao izvor podataka. Trebaju se uključiti i u objedinjeni entitet Klijent da bi mapirali ID-jeve klijenta u ID-jeve kontakta prije nego što se segmenti mogu izvesti.

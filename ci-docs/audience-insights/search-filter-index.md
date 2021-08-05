@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597134"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554012"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profili klijenta: indeks pretraživanja i filtriranja
 
 Rezultat objedinjavanja podataka vaših klijenata jest entitet Profil klijenta koji pruža objedinjeni pregled nad ukupnom bazom klijenata. Da biste brzo [pronašli informacije o određenom klijentu ili grupi klijenata](customer-profiles.md) možete konfigurirati mogućnosti **Pretraži** i **Filtriraj** na stranici **Klijenti**. Pročitajte više o tome kako administratori mogu uređivati atribute na stranici **Pretraži i filtriraj indeks**, koja je dostupna korisnicima za pretraživanje i filtriranje.
 
 > [!div class="mx-imgBorder"]
-> ![Pretraži filtar](media/search-filter.png "Pretraži filtar")
+> ![Filtar za pretraživanje.](media/search-filter.png "Pretraži filtar")
 
 ## <a name="add-fields-and-specify-attributes"></a>Dodajte polja i odredite atribute
 

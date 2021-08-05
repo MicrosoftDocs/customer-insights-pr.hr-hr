@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597502"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554299"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahtjevi subjekta podataka (ZSP) za prava pod OUZP-om
 
@@ -40,7 +40,7 @@ Administrator za Customer Insights može slijediti ove korake kako bi uklonio ko
    2. Provjerite status izvora podataka pod **Status**. Oznaka kvačice znači da je osvježavanja bilo uspješno. Trokut upozorenja znači da je došlo do pogreške. Ako se prikaže znak upozorenja, kontaktirajte D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
-> ![Upravljanje zahtjevima za brisanje OUZP-a za podatke o klijentima](media/gdpr-data-sources.png "Upravljanje zahtjevima za brisanje OUZP-a za podatke o klijentima")
+> ![Upravljanje zahtjevima za brisanje OUZP-a za podatke o klijentima.](media/gdpr-data-sources.png "Upravljanje zahtjevima za brisanje OUZP-a za podatke o klijentima")
 
 #### <a name="manage-delete-requests-for-user-data"></a>Upravljanje zahtjevima za brisanje za podatke o korisniku
 
@@ -52,7 +52,7 @@ Administrator za Customer Insights može poduzeti ove korake za brisanje podatak
 4. Odaberite mogućnost **Ukloni**.
 
 > [!div class="mx-imgBorder"]
-> ![Upravljanje OUZP zahtjevima za brisanje za podatke o korisniku](media/gdpr-permissions.png "Upravljanje OUZP zahtjevima za brisanje za podatke o korisniku")
+> ![Upravljanje zahtjevima za brisanje OUZP-a za podatke o korisniku.](media/gdpr-permissions.png "Upravljanje OUZP zahtjevima za brisanje za podatke o korisniku")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>Odgovaranje na OUZP zahtjeve ispitanika za izvoz
 

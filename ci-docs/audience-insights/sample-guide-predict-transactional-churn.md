@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72f3bd1f32b813fef04dc14618331e3d707b5052
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306111"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556252"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Vodič uzorka za predviđanje transakcijskog gubitka (pretpregled)
 
@@ -47,7 +47,7 @@ Pregledajte članke [o unosu podataka](data-sources.md) i posebice o [uvozu izvo
    - **Datum izrade**: datum/vrijeme/vremenska zona
 
    [!div class="mx-imgBorder"]
-   ![Promijenite DoB u Datum](media/ecommerce-dob-date.PNG "pretvori datum rođenja u datum")
+   ![Pretvorite DoB u Datum.](media/ecommerce-dob-date.PNG "pretvori datum rođenja u datum")
 
 1. U polju **Naziv** u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **eCommerceContacts**
 

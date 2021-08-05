@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095547"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556115"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predviđanje preporuka proizvoda (pretpregled)
 
@@ -64,7 +64,7 @@ Ako ste zainteresirani za isprobavanje ove značajke, ali nemate podatke za ispu
 
 1. Odaberite pločicu **Model preporuka proizvoda (pretpregled)** i odaberite **Koristi ovaj model**.
    > [!div class="mx-imgBorder"]
-   > ![Pločica modela preporuka proizvoda s gumbom Koristi ovaj model](media/product-recommendation-usethismodel.PNG "Pločica modela preporuka proizvoda s gumbom Koristi ovaj model")
+   > ![Pločica modela preporuke proizvoda s gumbom Koristi ovaj model.](media/product-recommendation-usethismodel.PNG "Pločica modela preporuka proizvoda s gumbom Koristi ovaj model")
 
 1. Pregledajte informacije o zahtjevima modela. Ako imate potrebne podatke, odaberite **Početak**.
 
@@ -93,7 +93,7 @@ Ako ste zainteresirani za isprobavanje ove značajke, ali nemate podatke za ispu
 
 1. Mapirajte semantička polja na atribute unutar entiteta povijesti kupnje i odaberite **Sljedeće**. Za opis polja pogledajte [preduvjete](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Definiranje odnosa entiteta](media/product-recommendation-purchasehistorymapping.PNG "Stranica povijesti kupnji koja prikazuje semantičke atribute koji su mapirani u polja u odabranom entitetu povijesti kupnji")
+   > ![Definirajte odnos entiteta.](media/product-recommendation-purchasehistorymapping.PNG "Stranica povijesti kupnji koja prikazuje semantičke atribute koji su mapirani u polja u odabranom entitetu povijesti kupnji")
 
 1. Ako polja nisu popunjena, konfigurirajte odnos između entiteta povijesti kupnji i entiteta *Klijent*.
     1. Odaberite **Entitet povijesti kupnje**.
@@ -101,7 +101,7 @@ Ako ste zainteresirani za isprobavanje ove značajke, ali nemate podatke za ispu
     1. Odaberite **Entitet klijenta** koji odgovara vašem primarnom entitetu klijenta.
     1. Unesite naziv koji opisuje odnos.
        > [!div class="mx-imgBorder"]
-       > ![Stranica povijesti kupnji koja prikazuje stvaranje odnosa s klijentom](media/model-purchase-join.png "Stranica povijesti kupnji koja prikazuje stvaranje odnosa s klijentom")
+       > ![Stranica povijesti kupnje koja prikazuje stvaranje odnosa s klijentom.](media/model-purchase-join.png "Stranica povijesti kupnji koja prikazuje stvaranje odnosa s klijentom")
 
 1. Odaberite **Spremi**.
 
@@ -145,7 +145,7 @@ Ponekad su samo određeni proizvodi korisni ili prikladni za vrstu predviđanja 
 
 1. Idite na karticu **Moja predviđanja** pod **Inteligencija** > **Predviđanja**.
    > [!div class="mx-imgBorder"]
-   > ![Pogledajte stranicu Moja predviđanja](media/product-recommendation-mypredictions.PNG "Pogledajte stranicu Moja predviđanja")
+   > ![Prikaz stranice Moja predviđanja.](media/product-recommendation-mypredictions.PNG "Pogledajte stranicu Moja predviđanja")
 
 1. Odaberite predviđanje koje želite pregledati.
    - **Naziv predviđanja:** Naziv predviđanja naveden prilikom njegovog stvaranja.
@@ -163,7 +163,7 @@ Ponekad su samo određeni proizvodi korisni ili prikladni za vrstu predviđanja 
 
 1. Odaberite okomitu trotočku uz predviđanje čije rezultate želite pregledati i odaberite **Prikaz**.
    > [!div class="mx-imgBorder"]
-   > ![Prikaz izbornika okomite trotočke s mogućnostima za predviđanje, u koje spadaju uređivanje, osvježavanje, prikaz, zapisnici i brisanje](media/product-recommendation-verticalellipses.PNG "Prikaz izbornika okomite trotočke s mogućnostima za predviđanje, u koje spadaju uređivanje, osvježavanje, prikaz, zapisnici i brisanje")
+   > ![Prikaz mogućnosti u izborniku okomitog trotočja za predviđanje, uključujući uređivanje, osvježavanje, prikaz, zapisnike i brisanje.](media/product-recommendation-verticalellipses.PNG "Prikaz izbornika okomite trotočke s mogućnostima za predviđanje, u koje spadaju uređivanje, osvježavanje, prikaz, zapisnici i brisanje")
 
 1. Na stranici rezultata nalazi se pet primarnih odjeljaka podataka:
     1. **Performanse modela obuke:** Mogući rezultati su A, B ili C. Ovaj rezultat označava performanse predviđanja i može vam pomoći da donesete odluku o korištenju rezultata pohranjenih u entitetu rezultata.
@@ -173,13 +173,13 @@ Ponekad su samo određeni proizvodi korisni ili prikladni za vrstu predviđanja 
             - **C** Model će se smatrati **C** kvalitetom ako je metrika „Uspjeh @ K” manja od osnovne vrijednosti.
                
                > [!div class="mx-imgBorder"]
-               > ![Prikaz rezultata performansi modela](media/product-recommendation-modelperformance.PNG "Prikaz rezultata performansi modela")
+               > ![Prikaz rezultata performansi modela.](media/product-recommendation-modelperformance.PNG "Prikaz rezultata performansi modela")
             - **Osnovna vrijednost**: Model uzima najviše preporučene proizvode prema broju kupnji kod svih klijenata i koristi naučena pravila koja je identificirao model za stvaranje skupa preporuka za klijente. Predviđanja se zatim uspoređuju s najboljim proizvodima, što se računa brojem klijenata koji su kupili proizvod. Ako klijent ima barem jedan proizvod u preporučenim proizvodima, što se također vidi u najčešće kupljenim proizvodima, smatra se dijelom osnovne vrijednosti. Kad bi od ukupno 100 klijenata 10 kupilo preporučeni proizvod, polazište bi bilo 10%.
             - **Uspjeh @ K**: Korištenjem skupa provjere vremenskog razdoblja transakcija stvaraju se preporuke za sve klijente i uspoređuju se sa skupom provjere transakcija. Na primjer, u razdoblju od 12 mjeseci, 12. mjesec može se izdvojiti kao skup provjere podataka. Ako model predvidi barem jednu stvar koju biste kupili u 12. mjesecu na temelju onoga što je naučio iz prethodnih 11 mjeseci, klijent će povećati metriku "Uspjeh @ K".
     
     1. **Najčešće predlagani proizvodi (s brojačem):** Pet najboljih proizvoda predviđenih za vaše klijente.
        > [!div class="mx-imgBorder"]
-       > ![Grafikon koji prikazuje 5 najviše preporučenih proizvoda](media/product-recommendation-topproducts.PNG "Grafikon koji prikazuje 5 najviše preporučenih proizvoda")
+       > ![Grafikon koji prikazuje 5 najviše preporučenih proizvoda.](media/product-recommendation-topproducts.PNG "Grafikon koji prikazuje 5 najviše preporučenih proizvoda")
     
     1. **Ključni čimbenici preporuke:** Model koristi povijest transakcija klijenata za davanje preporuka za proizvode. Uči uzorke na temelju prošlih kupnji i pronalazi sličnosti između klijenata i proizvoda. Te se sličnosti zatim koriste za generiranje preporuka za proizvode.
     U nastavku se nalaze čimbenici koji mogu utjecati na preporuke za proizvode koje generira model. 
@@ -190,20 +190,20 @@ Ponekad su samo određeni proizvodi korisni ili prikladni za vrstu predviđanja 
         Na svaku preporuku za proizvod utječe jedan ili više ovih čimbenika. Postotak preporuka u kojima je svaki čimbenik utjecaja igrao ulogu prikazan je na grafikonu. U sljedećem primjeru na 100 % preporuka utjecale su prošle transakcije, 60 % sličnost klijenata i 22 % sličnost proizvoda. Zadržite pokazivač iznad traka na grafikonu da biste vidjeli točan postotak doprinosa čimbenika utjecaja.
 
         > [!div class="mx-imgBorder"]
-        > ![Ključni faktori preporuke](media/product-recommendation-keyrecommendationfactors.png "Ključni čimbenici za preporuku koje je model naučio za generiranje preporuka za proizvode")
+        > ![Ključni faktori preporuke.](media/product-recommendation-keyrecommendationfactors.png "Ključni čimbenici za preporuku koje je model naučio za generiranje preporuka za proizvode")
        
      
    1. **Statistika podataka**: Daje pregled broja transakcija, klijenata i proizvoda koje je model razmatrao. Temelji se na ulaznim podacima koji su korišteni za učenje uzoraka i generiranje preporuka za proizvode.
 
       > [!div class="mx-imgBorder"]
-      > ![Statistički podaci](media/product-recommendation-datastatistics.png "Statistika podataka oko ulaznih podataka koje model koristi za učenje uzoraka")
+      > ![Statistički podaci.](media/product-recommendation-datastatistics.png "Statistika podataka oko ulaznih podataka koje model koristi za učenje uzoraka")
 
       Ovaj odjeljak prikazuje statistiku oko podatkovnih točaka koje je model koristio za učenje uzoraka i generiranje preporuka za proizvode. Filtriranje, kako je konfigurirano u konfiguraciji modela, primijenit će se na izlaz koji generira model. Međutim, model koristi sve dostupne podatke za učenje uzoraka. Stoga ako u konfiguraciji modela koristite filtriranje proizvoda, ovaj će odjeljak prikazati ukupni broj proizvoda koje je model analizirao kako bi naučio uzorke koji se mogu razlikovati od broja proizvoda koji odgovaraju definiranim kriterijima filtriranja.
 
    1. **Preporuke proizvoda s visokom pouzdanošću:** Uzorak preporuka koji se pruža vašim klijentima, a za koje model smatra da će ih klijent vjerojatno kupiti.    
       Ako se doda katalog proizvoda, ID-jevi proizvoda zamjenjuju se nazivima proizvoda. Nazivi proizvoda pružaju djelotvornije i intuitivnije informacije o predviđanjima.
        > [!div class="mx-imgBorder"]
-       > ![Popis koji prikazuje prijedloge visoke pouzdanosti za odabrani skup pojedinačnih klijenata](media/product-recommendation-highconfidence.PNG "Popis koji prikazuje prijedloge visoke pouzdanosti za odabrani skup pojedinačnih klijenata")
+       > ![Popis koji prikazuje prijedloge visoke pouzdanosti za odabrani skup pojedinačnih klijenata.](media/product-recommendation-highconfidence.PNG "Popis koji prikazuje prijedloge visoke pouzdanosti za odabrani skup pojedinačnih klijenata")
 
 ## <a name="manage-predictions"></a>Upravljanje predviđanjima
 

@@ -1,7 +1,7 @@
 ---
 title: Poveznik za Power BI
 description: Saznajte kako upotrebljavati poveznik značajke Dynamics 365 Customer Insights u programu Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596030"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661093"
 ---
 # <a name="connector-for-power-bi-preview"></a>Poveznik za Power BI (pretpregled)
 
@@ -39,7 +39,7 @@ Stvorite vizualne prikaze za svoje podatke pomoću usluge Power BI Desktop. Gene
 
 1. U dijaloškom okviru **Navigator**. vidjet ćete popis svih okruženja kojima imate pristup. Proširite okruženje i otvorite bilo koju mapu (entiteti, mjere, segmenti, obogaćenja). Na primjer, otvorite mapu **Entiteti** da prikažete sve entitete koje možete uvesti.
 
-   ![Navigator poveznika programa Power BI](media/power-bi-navigator.png "Navigator poveznika programa Power BI")
+   ![Navigator poveznika programa Power BI.](media/power-bi-navigator.png "Navigator poveznika programa Power BI")
 
 1. Odaberite potvrdne okvire pored entiteta koje treba uključiti i **Učitaj**. Možete odabrati više entiteta iz više okruženja.
 
@@ -68,5 +68,11 @@ Možete identificirati i ukloniti duplicirane odnose.
 3. Uklonite sve identificirane duplicirane odnose.
 
 Nakon uklanjanja dupliciranih odnosa, pokušajte ponovno konfigurirati poveznik za Power BI. Okruženje bi sada trebalo biti dostupno.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Pogreške u poljima datuma prilikom učitavanja entiteta u Power BI Desktop
+
+Prilikom učitavanja entiteta koji sadrže polja s formatom datuma poput MM/DD/GGGG, možete naići na pogreške zbog neusklađenih formata lokalizacije. Ovo se nepodudaranje događa kada se datoteka Power BI Desktop postavi na drugi jezik osim engleskog (Sjedinjene Države), jer se polja datuma u uvidima u ciljnu skupinu spremaju u američkom formatu.
+
+Datoteka Power BI Desktop ima jednu postavku jezika koja se primjenjuje prilikom preuzimanja podataka. Da biste ispravno protumačili ova polja s datumom, postavite jezik .BPI datoteke na engleski (Sjedinjene Države). [Saznajte kako promijeniti jezik datoteke Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

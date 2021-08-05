@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305285"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555298"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obogaćivanje profila klijenata pomoću usluge HERE Technologies (pretpregled)
 
@@ -35,7 +35,7 @@ Da biste konfigurirali obogaćivanje usluge HERE Technologies, moraju biti ispun
 1. Odaberite **Obogati moje podatke** na pločici HERE Technologies i odaberite **Započni**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pločica za HERE Technologies](media/HERE-tile.png "Pločica za HERE Technologies")
+   > ![Pločica za HERE Technologies.](media/HERE-tile.png "Pločica za HERE Technologies")
 
 1. Odaberite [vezu](connections.md) s padajućeg popisa. Ako nijedna veza nije dostupna, obratite se administratoru. Ako ste administrator, vezu možete stvoriti odabirom **Dodaj vezu**. Odaberite **HERE Technologies** na padajućem popisu. 
 
@@ -50,7 +50,7 @@ Da biste konfigurirali obogaćivanje usluge HERE Technologies, moraju biti ispun
 1. Definirajte koja se polja iz vaših objedinjenih profila trebaju koristiti za traženje odgovarajućih podataka o lokaciji iz usluge HERE Technologies. Polja **Ulica 1** i **Poštanski broj** su obavezna za odabranu primarnu i/ili sekundarnu adresu. Za veću točnost podudaranja može se dodati više polja.
 
    > [!div class="mx-imgBorder"]
-   > ![Stranica za konfiguraciju obogaćivanja usluge HERE Technologies](media/enrichment-HERE-configuration.png "Stranica za konfiguraciju obogaćivanja usluge HERE Technologies")
+   > ![Stranica za konfiguraciju obogaćivanja usluge HERE Technologies.](media/enrichment-HERE-configuration.png "Stranica za konfiguraciju obogaćivanja usluge HERE Technologies")
 
 1. Odaberite **Sljedeće** da biste dovršili mapiranje polja.
 
@@ -73,7 +73,7 @@ Morate biti administrator da biste konfigurirali veze. Odaberite **Dodaj vezu** 
 1. Nakon dovršetka provjere valjanosti odaberite **Spremi**.
 
    > [!div class="mx-imgBorder"]
-   > ![Stranica za konfiguraciju veze za HERE technologies](media/enrichment-HERE-connection.png "Stranica za konfiguraciju veze za HERE technologies")
+   > ![Stranica za konfiguraciju veze za HERE technologies.](media/enrichment-HERE-connection.png "Stranica za konfiguraciju veze za HERE technologies")
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 

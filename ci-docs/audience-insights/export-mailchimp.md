@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124218"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362500"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Izvoz segmenata u Mailchimp (pretpregled)
 
@@ -38,7 +38,7 @@ Izvezite segmente objedinjenih profila klijenata u Mailchimp da biste stvorili b
 
 1. Idite na **Admin** > **Veze**.
 
-1. Odaberite **Dodaj vezu** i odaberite **Autopilot** za konfiguriranje veze.
+1. Odaberite **Dodaj vezu** i odaberite **Mailchimp** za konfiguriranje veze.
 
 1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
 

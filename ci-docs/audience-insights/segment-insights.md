@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306065"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554976"
 ---
 # <a name="segment-insights-preview"></a>Uvidi u segmente (pretpregled)
 
@@ -44,7 +44,7 @@ Također, možete analizirati kako se preklapanje mijenja za određene atribute.
 Nakon dovršetka analize, pronađite detalje o ovom uvidu u **Segmenti** > **Uvidi (pretpregled)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Pojedinosti uvida o preklapanju segmenta":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Pojedinosti uvida u preklapanje segmenta.":::
 
 Odaberite uvid da biste vidjeli rezultate analize:
 
@@ -77,7 +77,7 @@ Elementi razlikovanja segmenata pomažu vam otkriti po čemu se neki segment raz
 Nakon dovršetka analize, pronađite detalje o ovom uvidu u **Segmenti** > **Uvidi (pretpregled)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Pojedinosti uvida u elemente razlikovanja segmenta":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Pojedinosti uvida u elemente razlikovanja segmenta.":::
 
 Odaberite uvid da biste vidjeli rezultate analize. Analiza elemenata razlikovanja uključuje dvije kartice. Na kartici **Atributi** nalaze se atributi profila koji se smatraju elementima razlikovanja. Na kartici **Mjere** nalaze se elementi razlikovanja. Svaka kartica sadrži sljedeće detalje:
 

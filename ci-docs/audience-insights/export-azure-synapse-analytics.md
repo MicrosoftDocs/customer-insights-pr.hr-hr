@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977368"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327355"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvoz podataka u Analitiku servisa Azure Synapse (Pretpregled)
 
@@ -74,8 +74,10 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Dodatne infor
 1. Navedite prepoznatljiv **zaslonski naziv** za vaš izvoz i **naziv baze podataka**.
 
 1. Odaberite koje entitete želite izvesti u Analitiku servisa Azure Synapse.
+   > [!NOTE]
+   > Izvori podataka temeljeni na [Mapi Common Data Model](connect-common-data-model.md) nisu podržani.
 
-1. Odaberite **Spremi**.
+2. Odaberite **Spremi**.
 
 Spremanje izvoza ne pokreće izvoz odmah.
 

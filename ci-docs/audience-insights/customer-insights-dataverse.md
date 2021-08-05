@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259182"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650033"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad s podacima rješenja Customer Insights u servisu Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Customer Insights pruža mogućnost omogućivanja izlaznih entiteta u servisu [M
 
 **Tvrtke ili ustanove s postojećim okruženjima Dataverse**
 
-Tvrtke ili ustanove koje već koriste Dataverse mogu [koristiti jedno od svojih postojećih okruženja Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) kada administrator postavi uvide u ciljne skupine. Pružanjem URL-a okruženju Dataverse, povezuje se s njihovim novim okruženjem uvida u ciljne skupine. Kako bi se osigurale najbolje moguće performanse, Customer Insights i okruženja Dataverse moraju biti udomaćena u istoj regiji.
+Tvrtke ili ustanove koje već koriste Dataverse mogu [koristiti jedno od svojih postojećih okruženja Dataverse](get-started-paid.md) kada administrator postavi uvide u ciljne skupine. Pružanjem URL-a okruženju Dataverse, povezuje se s njihovim novim okruženjem uvida u ciljne skupine. Kako bi se osigurale najbolje moguće performanse, Customer Insights i okruženja Dataverse moraju biti udomaćena u istoj regiji.
 
 Za povezivanje okruženja Dataverse proširite **Napredne postavke** prilikom stvaranja okruženja uvida u ciljne skupine. Navedite **URL okruženja Microsoft Dataverse** i potvrdite okvir za **Omogućivanje dijeljenja podataka**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Nova tvrtka ili ustanova**
 

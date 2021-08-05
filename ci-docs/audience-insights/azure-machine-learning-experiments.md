@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597410"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554426"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Korištenje modela utemeljenih na Strojnom učenju Azure
 
@@ -52,7 +52,7 @@ Morate stvoriti skupove podataka da biste koristili podatke entiteta iz servisa 
      U dizajneru, otvorite **Odabir stupaca u skupu podataka** pa odaberite **Postavi kao parametar cjevovoda** gdje ćete navesti naziv parametra.
 
      > [!div class="mx-imgBorder"]
-     > ![Parametrizacija skupa podataka u dizajneru](media/intelligence-designer-dataset-parameters.png "Parametrizacija skupa podataka u dizajneru")
+     > ![Parametarizacija skupa podataka u dizajneru.](media/intelligence-designer-dataset-parameters.png "Parametrizacija skupa podataka u dizajneru")
    
 * Parametar skupa podataka u SDK-u (Python)
    
@@ -78,7 +78,7 @@ Morate stvoriti skupove podataka da biste koristili podatke entiteta iz servisa 
 
 * Dizajner pruža [Modul za izvoz podataka](/azure/machine-learning/algorithm-module-reference/export-data) koji omogućuje izvoz izlaznih podataka cjevovoda u pohranu platforme Azure. Modul trenutačno mora koristiti vrstu spremišta podataka **Pohrana blobova platforme Azure** i parameterizirati **Spremište podataka** i relativnu **Putanju**. Customer Insights nadjačava oba ova parametra tijekom izvođenja cjevovoda sa spremištem podataka i putanjom koja je dostupna proizvodu.
    > [!div class="mx-imgBorder"]
-   > ![Konfiguracija modula za izvoz podataka](media/intelligence-designer-importdata.png "Konfiguracija modula za izvoz podataka")
+   > ![Konfiguracija modula za izvoz podataka.](media/intelligence-designer-importdata.png "Konfiguracija modula za izvoz podataka")
    
 * Prilikom pisanja izlazne vrijednosti procjenjivanja u kodu možete prenijeti izlazun vrijednost na putanju unutar *registriranog spremišta podataka* u radnom prostoru. Ako su putanja i spremište podataka parametrizirani u cjevovodu, uvidi o klijenatima moći će čitati i uvesti izlaznu vrijednost zaključka. Trenutačno je podržana jedna tablična izlazna vrijednost u formatu csv. Putanja mora sadržavati direktorij i naziv datoteke.
 

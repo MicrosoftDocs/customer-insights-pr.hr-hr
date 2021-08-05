@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596766"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554196"
 ---
 # <a name="similar-customers-preview"></a>Slični klijenti (pretpregled)
 
@@ -50,7 +50,7 @@ Ova značajka omogućuje vam pronaći klijente u svojoj bazi klijenata koristeć
 Nakon obrade sličnog segmenta, novi ćete segment pronaći na stranici **Segmenti**.
 
 > [!div class="mx-imgBorder"]
-> ![Segment sa sličnim klijentima](media/expanded-segment.png "Segment sa sličnim klijentima")
+> ![Segment sa sličnim klijentima.](media/expanded-segment.png "Segment sa sličnim klijentima")
 
 Odaberite **Prikaz** na akcijskoj traci kako bi se otvorile pojedinosti segmenta. Ovaj prikaz sadrži informacije o raspodjeli rezultata po različitim [ocjenama sličnosti](#about-similarity-scores). Vrijednosti ocjena sličnosti također ćete pronaći u **Pretpregled članova segmenta**.
 

@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka usluge Customer Insights u Spremnik za pohranu bloba za Azure
 description: Saznajte kako konfigurirati vezu i izvesti u Spremnik za pohranu bloba.
-ms.date: 03/03/2021
+ms.date: 06/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c19dc6d4956a33a5bd3cea706f8a154198d487f
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e38fc06a948178fcbc62c08a4cf4816e1d030e79
+ms.sourcegitcommit: 656b1a6cdff37ba4f808311fd0327ab38e02ed13
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976125"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6318290"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Izvoz popisa segmenata i ostalih podataka u Spremnik za pohranu bloba za Azure (pretpregled)
 
 Pohranite podatke usluge Customer Insights na Spremnik za pohranu bloba ili ih koristite za prijenos svojih podataka u ostale aplikacije.
 
-## <a name="set-up-the-connection-to-blob-storage"></a>Postavite vezu sa Spremnikom za pohranu bloba
+## <a name="set-up-the-connection-to-blob-storage"></a>Postavljanje veze za pohranu bloba
 
 1. Idite na **Admin** > **Veze**.
 
@@ -30,7 +30,7 @@ Pohranite podatke usluge Customer Insights na Spremnik za pohranu bloba ili ih k
 
 1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Unesite **Naziv računa**, **Ključ računa** i **Spremnik** za svoj račun za Spremnik za pohranu bloba.
+1. Unesite **Naziv računa**, **Ključ računa** i **Spremnik** za svoj račun za pohranu bloba.
     - Da biste saznali više o tome kako pronaći naziv računa apremnika za pohranu bloba i ključ računa, pogledajte [Upravljanje postavkama računa za pohranu na portalu Azure](/azure/storage/common/storage-account-manage).
     - Pogledajte kako stvoriti spremnik [Stvaranje spremnika](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
@@ -40,11 +40,14 @@ Pohranite podatke usluge Customer Insights na Spremnik za pohranu bloba ili ih k
 
 Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
 
+> [!IMPORTANT]
+> Ako ste uključili postavku mekanog brisanja za račun za pohranu bloba servisa Azure, izvozi neće uspjeti. Isključite mekano brisanje za izvoz podataka u blobove. Za više informacija pogledajte [Omogućavanje mekanog brisanja bloba](/azure/storage/blobs/soft-delete-blob-enable.md)
+
 1. Idite na **Podaci** > **Izvozi**.
 
 1. Da biste stvorili novi izvoz, odaberite **Dodaj odredište**.
 
-1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Spremnik za pohranu bloba za Azure. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
+1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Spremnik za pohranu bloba za Azure. Ako ne vidite naziv ovog odjeljka, tada vam nisu dostupne veze ove vrste.
 
 1. Označite okvir pokraj svakog entiteta koji želite izvesti na ovo odredište.
 
@@ -53,13 +56,16 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 Spremanje izvoza ne pokreće izvoz odmah.
 
 Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab).     
+
 Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
 
 Izvezeni podaci pohranjuju se u spremnik za pohranu bloba koji ste konfigurirali. Sljedeći se putovi mapa automatski stvaraju u vašem spremniku:
 
-- Za izvorne entitete i entitete koje generira sustav: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
+- Za izvorne entitete i entitete koje generira sustav:   
+  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Primjer: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- Model.json za izvezene entitete bit će na razini %ExportDestinationName%
+ 
+- Model.json za izvezene entitete bit će na razini %ExportDestinationName%.  
   - Primjer: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

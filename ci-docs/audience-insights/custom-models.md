@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305615"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554839"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli za strojno učenje
 
@@ -42,7 +42,7 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 1. Dodijelite prilagođenom modelu neki prepoznatljiv naziv u polju **Naziv**.
 
    > [!div class="mx-imgBorder"]
-   > ![Snimak zaslona okna Novi tijek rada](media/new-workflowv2.png "Snimak zaslona okna Novi tijek rada")
+   > ![Snimka zaslona okna Novi tijek rada.](media/new-workflowv2.png "Snimak zaslona okna Novi tijek rada")
 
 1. Odaberite tvrtku ili ustanovu koja sadrži web-servis u **Klijent koji sadrži vaš web-servis**.
 
@@ -59,7 +59,7 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
    > Tijek rada prilagođenog modela primijenit će heuristiku za mapiranje polja za unos web-usluga u atribute entiteta na temelju naziva i vrste podataka polja. Vidjet ćete pogrešku ako se polje web-usluge ne može mapirati na entitet.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfiguracija tijeka rada](media/intelligence-screen2-updated.png "Konfiguracija tijeka rada")
+   > ![Konfigurirajte tijek rada.](media/intelligence-screen2-updated.png "Konfiguracija tijeka rada")
 
 1. U koraku **Izlazni parametri modela**, postavite sljedeća svojstva:
    - Studio strojnog učenja (klasični)
@@ -70,12 +70,12 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
       1. S padajućeg popisa odaberite **Izlazni naziv parametra puta** skupnog kanala.
 
       > [!div class="mx-imgBorder"]
-      > ![Okno izlaznog parametra modela](media/intelligence-screen3-outputparameters.png "Okno izlaznog parametra modela")
+      > ![Okno izlaznog parametra modela.](media/intelligence-screen3-outputparameters.png "Okno izlaznog parametra modela")
 
 1. Odaberite odgovarajući atribut s padajućeg popisa **ID klijenta u rezultatima** kojim se identificiraju klijenti pa odaberite **Spremi**.
 
    > [!div class="mx-imgBorder"]
-   > ![Okno usklađivanja rezultata s podacima klijenta](media/intelligence-screen4-relatetocustomer.png "Okno usklađivanja rezultata s podacima klijenta")
+   > ![Okno povezivanja rezultata s podacima klijenta.](media/intelligence-screen4-relatetocustomer.png "Okno usklađivanja rezultata s podacima klijenta")
 
 1. Vidjet ćete zaslon **Tijek rada spremljen** s pojedinostima o tijeku rada.    
    Ako ste konfigurirali tijek rada za kanal Strojno učenje Azure, uvidi u ciljnu skupinu će se pridružiti radnom prostoru koji sadrži kanal. Uvidi u ciljnu skupinu dobit će ulogu **Suradnik** u radnom prostoru usluge Azure.
