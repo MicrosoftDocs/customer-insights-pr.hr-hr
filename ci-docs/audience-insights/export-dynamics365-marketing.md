@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka usluge Customer Insights u Dynamics 365 Marketing
 description: Saznajte kako konfigurirati vezu i izvesti u Dynamics 365 Marketing.
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
+ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692472"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "7417196"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Korištenje segmenata u Dynamics 365 Marketing (pretpregled)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Upotrijebite [segmente](segments.md) za stvaranje kampanja i kontaktiranje određenih grupa klijenata koristeći Dynamics 365 Marketing. Za dodatne informacije pogledajte [Korištenje segmenata iz sustava Dynamics 365 Customer Insights s uslugom Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
+Upotrijebite [segmente](segments.md) za stvaranje kampanja i kontaktiranje određenih grupa klijenata koristeći Dynamics 365 Marketing. Više informacija potražite u članku [Upotreba segmenata iz usluge Dynamics 365 Customer Insights s uslugom Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
+
+Ako se koristite novim mogućnostima usluge Dynamics 365 Marketing za organizaciju puta klijenta u stvarnom vremenu u Dataverse organizaciji, ne morate izraditi standardni izvoz u uslugu Dynamics 365 Marketing. Kontakti i segmenti iz uvida u ciljnu skupinu dostupni su izravno u usluzi Dynamics 365 Marketing nakon povezivanja usluge Marketing i usluge Customer Insights. Prije nego što izbrišete postojeće izvoze pregledajte dokumentaciju o tome [kako povezati uvide u ciljnu skupinu i organizaciju puta klijenta usluge Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Preduvjet za vezu
 

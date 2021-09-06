@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685453"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377779"
 ---
 # <a name="create-and-manage-segments"></a>Stvaranje i upravljanje segmentima
 
@@ -26,7 +26,24 @@ ms.locfileid: "6685453"
 > - Bit će dostupna ugniježđena pravila koja počinju uvjetom OR. Uvjet AND više nije potreban u krajnjem vanjskom sloju.
 > - Bočno okno za odabir atributa bit će stalno dostupno.
 > - Mogućnost odabira putanja odnosa entiteta.
-> Da biste isprobali novi alat za stvaranje segmenata, pošaljite e-poštu s predmetom „Zahtjev za omogućavanje novog alata za stvaranje segmenata” na cihelp [at] microsoft.com. Uključite naziv vaše tvrtke ili ustanove i ID vašeg okruženja sigurnosne ograde.
+> Da biste isprobali novi alat za stvaranje segmenata, pošaljite e-poštu s predmetom „Zahtjev za omogućavanje novog alata za stvaranje segmenata” na cihelp [at] microsoft.com. Uključite naziv svoje tvrtke i ID vašeg testnog okruženja.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elementi sastavljača segmenata." lightbox="media/segment-builder-overview.png":::
+>
+> 1 – Organizirajte svoj segment pravilima i podpravilima. Svako pravilo ili podpravilo sastoji se od uvjeta. Kombinirajte uvjete s logičkim operatorima
+>
+> 2 – Odaberite [putanju odnosa](relationships.md) između entiteta koja se primjenjuje na pravilo. Putanja odnosa određuje koji se atributi mogu koristiti u uvjetu.
+>
+> 3 – Upravljajte pravilima i podpravilima. Promijenite položaj pravila ili ga izbrišite.
+>
+> 4 – Dodajte uvjete i izgradite odgovarajuću razinu ugnježđivanja pomoću podpravila.
+>
+> 5 - Primijenite zadane operacije na povezana pravila.
+>
+> 6 – Pomoću okna atributa dodajte dostupne atribute entiteta ili izradite uvjete na temelju atributa. Okno prikazuje popis entiteta i atributa na temelju odabrane putanje odnosa koji su dostupni za odabrano pravilo.
+>
+> 7 – Dodajte uvjete na temelju atributa postojećim pravilima i podpravilima ili ih dodajte novom pravilu.
+>
+> 8 – Poništite i ponovite promjene tijekom sastavljanja segmenta.
 
 Definirajte složene filtre oko objedinjenog entiteta klijenta i s njime povezanih entiteta. Nakon obrade, svaki segment stvara skup zapisa o klijentima koji možete izvesti i koristiti za rad. Segmentima se upravlja na stranici **Segmenti**. 
 
@@ -147,6 +164,6 @@ Brzi segmenti omogućuju vam brzu izgradnju jednostavnih segmenata s jednim oper
 
 ## <a name="next-steps"></a>Sljedeći koraci
 
-[Izvezite segment](export-destinations.md) i istražite [Korisničku karticu](customer-card-add-in.md) i [Poveznike](export-power-bi.md) da biste dobili uvide na razini klijenta.
+[Izvezite segment](export-destinations.md) i istražite [integraciju usluge Customer Card](customer-card-add-in.md) za upotrebu segmenata u drugim aplikacijama.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

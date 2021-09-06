@@ -3,21 +3,21 @@ title: Pregled proizvoda
 author: m-hartmann
 description: Nabavite pregled za Dynamics 365 Customer Insights i njegove mogućnosti.
 ms.author: mhart
-ms.date: 02/16/2021
+ms.date: 07/30/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 1bc75959229fd2ffef9a5fd5617889888eb72e55
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539380"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036502"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Pregled proizvoda za Dynamics 365 Customer Insights
 
-Dynamics 365 Customer Insights dio je Microsoftove platforme za podatke o klijentima (CDP) koja pomaže u pružanju personaliziranih korisničkih iskustava. Mogućnosti platforme pružaju uvide u to tko su vaši kupci i kako stupaju u interakciju s vašom platformom. Objedinite podatke o klijentima iz više izvora da biste dobili jedinstveni prikaz klijenata.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) dio je Microsoftove platforme za podatke o klijentima (CDP) koja pomaže u pružanju personaliziranih iskustava klijenata. Mogućnosti platforme pružaju uvide u to tko su vaši kupci i kako stupaju u interakciju s vašom platformom. Objedinite podatke o klijentima iz više izvora da biste dobili jedinstveni prikaz klijenata.
 
 
 - [Uvidi u ciljnu skupinu](audience-insights/overview.md) pomažu vam transformirati vaše poslovanje u tvrtku ili ustanovu kojoj je u središtu klijent. Stručnjaci za marketing, prodaju i usluge imaju uvide potrebne za personalizaciju iskustava. Povežite podatke iz transakcijskih, biheviorističkih i promatračkih izvora da biste stvorili cjeloviti prikaz klijenta. Brže pogledajte rezultate pomoću CDP-a osmišljenog da pruži uvide na temelju kojih možete djelovati. 
