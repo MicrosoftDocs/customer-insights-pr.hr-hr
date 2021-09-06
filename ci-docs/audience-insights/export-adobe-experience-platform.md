@@ -1,6 +1,6 @@
 ---
-title: Izvoz podataka servisa Customer Insights u Adobe Experience Platform
-description: Naučite kako koristiti segmente uvida publike na platformi Adobe Experience.
+title: Izvoz podataka usluge Customer Insights u Adobe Experience Platform
+description: Saznajte kako se koristiti segmentima uvida u ciljnu skupinu u alatu Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,31 +9,31 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305515"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032108"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Korištenje segmenata servisa Customer Insights u servisu Adobe Experience Platform (pretpregled)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Upotreba segmenata usluge Customer Insights u alatu Adobe Experience Platform (pregled)
 
-Kao korisnik uvida u publiku značajke Dynamics 365 Customer Insights možda ste stvorili segmente kako biste svoje marketinške kampanje učinili učinkovitijim ciljanjem relevantne publike. Da biste koristili segment iz uvida u ciljnu skupinu u servisu Adobe Experience Platform i aplikacijama kao što je Adobe Campaign Standard, morate slijediti nekoliko koraka navedenih u ovom članku.
+Kao korisnik uvida u publiku značajke Dynamics 365 Customer Insights možda ste stvorili segmente kako biste svoje marketinške kampanje učinili učinkovitijim ciljanjem relevantne publike. Za upotrebu segmenta iz uvida u ciljnu publiku u alatu Adobe Experience Platform i aplikacija poput Adobe Campaign Standard morate slijediti nekoliko koraka navedenih u ovom članku.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Dijagram procesa koraka opisanih u ovom članku.":::
 
 ## <a name="prerequisites"></a>Preduvjeti
 
 -   Licenca sustava Dynamics 365 Customer Insights
--   Licenca za Adobe Experience Platform
+-   Licenca sustava Adobe Experience Platform
 -   Licenca za Adobe Campaign Standard
 -   Račun za Azure spremište blobova
 
 ## <a name="campaign-overview"></a>Pregled kampanje
 
-Da biste bolje razumjeli kako možete koristiti segmente iz uvida u ciljnu skupinu u servisu Adobe Experience Platform, pogledajmo fiktivni primjer kampanje.
+Da biste bolje razumjeli kako možete upotrebljavati segmente iz uvida u ciljnu skupinu u alatu Adobe Experience Platform pogledajmo primjer ogledne kampanje.
 
-Pretpostavimo da vaša tvrtka nudi mjesečnu uslugu zasnovanu na pretplati vašim klijentima u Sjedinjenim Državama. Želite identificirati klijente čije pretplate trebaju biti obnovljene u sljedećih osam dana, ali koji još nisu obnovili pretplatu. Da biste zadržali te klijente, želite im poslati promotivnu ponudu putem e-pošte koristeći Adobe Experience Platform.
+Pretpostavimo da vaša tvrtka nudi mjesečnu uslugu zasnovanu na pretplati vašim klijentima u Sjedinjenim Državama. Želite identificirati klijente čije pretplate trebaju biti obnovljene u sljedećih osam dana, ali koji još nisu obnovili pretplatu. Da biste zadržali te klijente, želite im putem e-pošte poslati promotivnu ponudu koristeći se alatom Adobe Experience Platform.
 
 U ovom primjeru želimo jednom provesti promotivnu kampanju putem e-pošte. Ovaj članak ne pokriva slučaj upotrebe za provođenje kampanje više puta.
 
@@ -93,7 +93,7 @@ Nakon spremanja izvoznog odredišta pronaći ćete ga na **Podaci** > **Izvozi**
 Sada možete [izvesti segment na zahtjev](export-destinations.md#run-exports-on-demand). Podaci će se izvoziti uz svako [zakazano osvježavanje](system.md).
 
 > [!NOTE]
-> Provjerite je li broj zapisa u izvezenom segmentu unutar dopuštenog ograničenja vaše licence za Adobe Campaign Standard.
+> Provjerite je li količina zapisa u izvezenom segmentu unutar dopuštenog ograničenja vaše licence za Adobe Campaign Standard.
 
 Izvezeni podaci pohranjeni su u spremniku Azure spremište blobova koji ste ranije konfigurirali. Sljedeća putanja mape stvara se automatski u vašem spremniku:
 
@@ -105,29 +105,29 @@ Primjer: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24
 
 Primjer: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Definiranje Podatkovnog modela iskustva (XDM) u servisu Adobe Experience Platform
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Definiranje specifikacije Experience Data Model (XDM) u alatu Adobe Experience Platform
 
-Prije nego što se izvezeni podaci iz uvida u ciljnu skupinu mogu upotrijebiti u servisu Adobe Experience Platform, moramo definirati shemu Podatkovnog modela iskustva i [konfigurirati podatke za profil klijenta u stvarnom vremenu](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Prije nego što se izvezeni podaci iz uvida u ciljnu skupinu mogu koristiti unutar alata Adobe Experience Platform moramo definirati Experience Data Model shemu i [konfigurirati podatke za uslugu Real-time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Saznajte [što je XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) i usvojite [osnove sastavljanja sheme](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
 ## <a name="import-data-into-adobe-experience-platform"></a>Uvoz podataka u Adobe Experience Platform
 
-Sad kad je sve na svom mjestu, trebamo uvesti pripremljene podatke o ciljnim skupinama iz uvida u ciljnu skupinu u Adobe Experience Platform.
+Sada kada je sve na svom mjestu, moramo uvesti pripremljene podatke ciljne skupine iz uvida u ciljnu skupinu u alat Adobe Experience Platform.
 
 Najprije [stvorite izvornu vezu za Azure spremište blobova](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Nakon definiranja izvorne veze, [konfigurirajte tok podataka](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) za skup veza za pohranu u oblaku za uvoz rezultata segmenta iz uvida u ciljnu skupinu u Adobe Experience Platform.
+Nakon definiranja veze izvora [konfigurirajte tok podataka](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) za skupnu vezu pohrane u oblaku da biste uvezli izlaz segmenta iz uvida u ciljnu publiku u alat Adobe Experience Platform.
 
-## <a name="create-an-audience-in-adobe-campaign-standard"></a>Stvaranje ciljne skupine u servisu Adobe Campaign Standard
+## <a name="create-an-audience-in-adobe-campaign-standard"></a>Izrada ciljne skupine u alatu Adobe Campaign Standard
 
-Da bismo slali e-poštu za ovu kampanju, upotrijebit ćemo Adobe Campaign Standard. Nakon uvoza podataka u Adobe Experience Platform, trebamo [stvoriti ciljnu skupinu](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) u servisu Adobe Campaign Standard koristeći podatke u servisu Adobe Experience Platform.
+Za slanje e-pošte za ovu kampanju upotrijebit ćemo Adobe Campaign Standard. Nakon uvoza podataka u alat Adobe Experience Platform moramo [izraditi ciljnu skupinu](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) u alatu Adobe Campaign Standard koristeći se podacima iz alata Adobe Experience Platform.
 
 
-Saznajte kako [koristiti sastavljač segmenata](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) u servisu Adobe Campaign Standard za definiranje ciljne skupine na temelju podataka u servisu Adobe Experience Platform.
+Naučite kako [se koristiti sastavljačem segmenata](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) u alatu Adobe Campaign Standard za definiranje ciljne skupine na temelju podataka u alatu Adobe Experience Platform.
 
-## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Stvaranje i slanje e-pošte pomoću servisa Adobe Campaign Standard
+## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Izrada i slanje e-pošte pomoću alata Adobe Campaign Standard
 
 Stvorite sadržaj e-pošte, a zatim [testirajte i pošaljite](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) svoju poruku e-pošte.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Ogledna poruka e-pošte s ponudom za obnovu iz servisa Adobe Campaign Standard.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Ogledna poruka e-pošte s ponudom za obnovu iz alata Adobe Campaign Standard.":::

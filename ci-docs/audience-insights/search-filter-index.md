@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: e53d87c4f633cba09fecbc1c219f0ac2ec6bb5598a7902cbcf7398d26d6d7c6b
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554012"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7029390"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profili klijenta: indeks pretraživanja i filtriranja
 
@@ -60,7 +60,7 @@ Izbornik **Filtar** na stranici **Klijenti** može uključivati različit broj r
 
 ## <a name="next-steps"></a>Sljedeći koraci
 
-Idite na stranicu **Klijenti** za pretraživanje korisničkih profila ili upotrijebite indeksirana polja za prikaz podskupa svih korisničkih profila.
+Pregledajte [stranicu objedinjenih profila](customer-profiles.md) da biste potražili profile ili se koristili indeksiranim poljima za pregled podskupa svih objedinjenih profila.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
