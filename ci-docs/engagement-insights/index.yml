@@ -1,0 +1,86 @@
+### YamlMime:Landing
+title: Mogućnost uvida u angažman (pretpregled) u sustavu Dynamics 365 Customer Insights
+summary: Prikupljajte podatke za svoje web-stranice. Interaktivno shvatite interakciju i korištenje klijenata na vašim web-mjestima. Koristite duboku integraciju između uvida u angažman i uvida u ciljnu skupinu da biste obogatili svoju analitiku ponašanja u stvarnom vremenu s izvješćima o profilu klijenata. Obogatite profile klijenata web-aktivnostima kako biste dobili podatke o ponašanju u stvarnom vremenu zajedno s relevantnim podacima o klijentima. Pretvorite svoje poslovanje da biste iz podataka o klijentu izvukli trenutnu vrijednost.
+metadata:
+  title: Dokumentacija o uvidima o angažmanu (pretpregled)
+  description: Središte za pomoć s ključnim vezama za uvide u angažman.
+  ms.service: customer-insights
+  ms.subservice: engagement-insights
+  ms.topic: hub-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.reviewer: mhart
+  ms.date: 07/30/2021
+  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.translationtype: HT
+  ms.contentlocale: hr-HR
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036229"
+landingContent:
+- title: Više o
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Pregled mogućnosti
+      url: overview.md
+    - text: Uvjeti i koncepti
+      url: glossary.md
+    - text: Otkrijte uvide u angažman
+      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+- title: Uključivanje
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Početak
+      url: get-started.md
+    - text: Stvaranje radnog prostora
+      url: create-workspace.md
+    - text: Uredite svoje web-mjesto
+      url: instrument-website.md
+- title: Izvješća
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Prikaz izvješća
+      url: view-reports.md
+    - text: Izrada prilagođenih izvješća
+      url: custom-reports.md
+    - text: Prikaz objedinjenog izvješća o profilima
+      url: profile-reports.md
+    - text: Izrada izvješća o kanalima
+      url: funnel-reports.md
+- title: Događaji
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Stvori događaje sužene pretrage
+      url: refined-events.md
+    - text: Izvezi događaje
+      url: export-events.md
+    - text: Brisanje i izvoz osobnih podataka
+      url: delete-export-personal-data.md
+- title: Resursi za razvojne inženjere
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Resursi za razvojne inženjere
+      url: developer-resources.md
+    - text: Uzorak WebSDK
+      url: websdk-sample.md
+    - text: Napredni scenariji web SDK
+      url: advanced-SDK-implementation.md
+    - text: Android SDK uzorak
+      url: get-started-android.md
+    - text: Uzorak SDK-a za iOS
+      url: get-started-ios.md
+- title: Administracija
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Upravljajte okruženjima i radnim prostorima
+      url: manage-environments-workspaces.md
+    - text: Povezivanje s uvidima u ciljne skupine
+      url: configure-connections.md
+    - text: Upravljanje kolačićima i pristankom korisnika
+      url: user-consent-storage.md
