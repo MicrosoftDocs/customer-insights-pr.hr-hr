@@ -4,17 +4,17 @@ description: Kako upotrijebiti izvješća o kanalima kako biste razumjeli kako c
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032246"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498633"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Stvaranje i upravljanje izvješćima o kanalu
 
@@ -158,4 +158,21 @@ Možete promijeniti naziv izvješća o kanalu, izbrisati ga ili izmijeniti korak
 1. Odaberite naziv za otvaranje izvješća.
 
 1. Odaberite korak koji želite ukloniti, a zatim odaberite **Izbriši**.
+
+## <a name="funnel-insights"></a>Uvidi u kanal 
+
+Uvidi u angažman sada klijentima nude uvide u kanal. Koristite uvide u kanal kako biste stekli dublji uvid u ponašanje klijenta o koracima u izvješću o kanalu. Kada stvorite i spremite novo izvješće o kanalu, za vaše izvješće automatski se generiraju uvidi u kanal. 
+
+Možete vidjeti uvide u kanal iz sljedećih kategorija, i na glavnoj i na razini koraka: 
+
+ - Stopa konverzije 
+ - Vrijeme prijelaza 
+ - Vrijeme dovršetka 
+
+Pomoću ovih uvida dublje istražite ponašanje klijenata i bolje razumijte ispusne točke i konverzije za svoje izvješće o kanalu. 
+
+Uvidi u kanal preračunavaju se svaka 24 sata ili kada odaberete **Spremi** izvješće o kanalu. 
+
+> [!NOTE]
+> Da biste vidjeli uvide za svoj kanal, morate spremiti izvješće svaki put kada unesete izmjene. 
 

@@ -1,7 +1,7 @@
 ---
 title: Obogaćivanje objedinjenih profila klijenata
 description: Koristite mogućnosti za obogaćivanje podataka o klijentima.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032519"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469949"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za korisničke profile (pretpregled)
 
@@ -29,6 +29,7 @@ Da biste stvorili ili uredili obogaćivanja, morate imati dozvole Suradnik ili A
 
 Na kartici **Otkrivanje** pronaći ćete sljedeća obogaćivanja:
 
+- [Azure karte](enrichment-azure-maps.md) omogućuje Microsoft
 - [Brendovi](enrichment-microsoft.md) koje je omogućio Microsoft
 - [Interesi](enrichment-microsoft.md) koje je omogućio Microsoft
 - [Poboljšane adrese](enrichment-enhanced-addresses.md) koje je omogućio Microsoft
@@ -62,5 +63,17 @@ Obogaćivanja treće strane konfigurirana su pomoću [veza](connections.md) koje
 ## <a name="multiple-enrichments-of-the-same-type"></a>Višestruka obogaćivanja iste vrste
 
 Entitet koji treba obogatiti naveden je tijekom konfiguracije obogaćivanja, što vam omogućuje obogaćivanje samo podskupina vaših profila. Na primjer, obogatite podatke samo za određeni segment. Možete konfigurirati nekoliko obogaćivanja iste vrste i ponovno koristiti istu vezu. Neka obogaćivanja imat će ograničenja u broju obogaćivanja iste vrste koja se mogu stvoriti. Ograničenja i trenutna upotreba mogu se vidjeti na stranici **Obogaćivanje**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Pogledajte napredak procesa obogaćivanja
+
+Možete pronaći pojedinosti o obradi obogaćivanja, uključujući status i potencijalne probleme dok se osvježava ili nakon dovršetka osvježavanja. Razumijte koji su procesi uključeni za osvježavanje obogaćivanja i koliko je vremena potrebno za pokretanje procesa. Status obogaćivanja podržan je za Experian, Leadspace, HERE Technologies, SFTP Import i Azure karte.
+
+Da biste vidjeli status obogaćivanja
+
+1. Idite na **Podaci** > **Obogaćivanje**. 
+1. Na kartici **Moja obogaćivanja** odaberite status obogaćivanja da biste otvorili bočno okno. 
+1. U oknu **Pojedinosti o napretku** proširite odjeljak **Obogaćivanja**. 
+1. Pod obogaćivanjem za koje želite vidjeti napredak odaberite **Pogledaj pojedinosti**. 
+1. U oknu **Pojedinosti o zadatku** odaberite **Pokaži pojedinosti** da biste vidjeli procese koji su uključeni u ažuriranje obogaćivanja i njihov status. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

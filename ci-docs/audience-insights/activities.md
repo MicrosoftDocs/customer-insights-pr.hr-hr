@@ -1,20 +1,20 @@
 ---
 title: Aktivnosti klijenta
-description: Definirajte aktivnosti kupaca i pregledajte ih na vremenskoj traci klijenta.
-ms.date: 04/07/2021
+description: Definirajte aktivnosti klijenta i prikažite ih na vremenskoj traci na profilima klijenata.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033622"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494402"
 ---
 # <a name="customer-activities"></a>Aktivnosti klijenta
 
@@ -60,12 +60,15 @@ Vaši izvori podataka mogu uključivati entitete s podacima o transakcijama i ak
       - **Dodatna pojedinost**: Polje s relevantnim informacijama za ovu aktivnost.
       - **Ikona**: Ikona koja najbolje predstavlja ovu vrstu aktivnosti.
       - **Web-adresa**: Polje koje sadrži URL s informacijama o ovoj aktivnosti. Na primjer, transakcijski sustav iz kojega je potekla ova aktivnost. Ovaj URL može biti bilo koje polje iz izvora podataka ili se može konstruirati kao novo polje s pomoću transformacije Power Query. Podaci o URL-u bit će pohranjeni u entitetu *Objedinjena aktivnost* koji se može konzumirati prema dolje pomoću [API-ja](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Navedite podatke o aktivnostima klijenta u entitetu Objedinjene aktivnosti.":::
+
+   - **Prikaži na vremenskoj traci**
+      - Odaberite želite li prikazati tu aktivnost na prikazu vremenske trake profila klijenta. Odaberite **Da** za prikaz aktivnosti na vremenskoj traci ili **Ne** za sakrivanje.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Navedite podatke o aktivnostima klijenta u entitetu Objedinjene aktivnosti.":::
 
 1. Odaberite **Sljedeće** da biste se pomaknuli na sljedeći korak. Možete odabrati **Završi i pregledaj** da biste sada spremili aktivnost s vrstom aktivnosti postavljenom na **Ostalo**. 
 
-1. U koraku **Vrsta aktivnosti** odaberite vrstu aktivnosti i neobavezno odaberite želite li semantički mapirati neke od vrsta aktivnosti za korištenje u ostalim područjima Customer Insights. Trenutačno, vrste aktivnosti *Pretplata* i *SalesOrderLine* mogu se semantički preslikati nakon pristanka na preslikavanje polja. Ako vrsta aktivnosti nije relevantna za novu aktivnost, možete odabrati *Ostalo* ili *Stvori novo* za prilagođenu vrstu aktivnosti.
+1. U koraku **Vrsta aktivnosti** odaberite vrstu aktivnosti i neobavezno odaberite želite li semantički mapirati neke od vrsta aktivnosti za korištenje u ostalim područjima Customer Insights. Trenutno vrste aktivnosti *Povratna informacija*, *Vjernost*, *Nalog za prodaju*, *Redak naloga za prodaju* i *Pretplata* mogu se semantički mapirati nakon pristanka na mapiranje polja. Ako vrsta aktivnosti nije relevantna za novu aktivnost, možete odabrati *Ostalo* ili *Stvori novo* za prilagođenu vrstu aktivnosti.
 
 1. Odaberite **Sljedeće** da biste se pomaknuli na sljedeći korak. 
 

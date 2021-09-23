@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Nove i ažurirane značajke
       href: audience-insights/whats-new-audience-insights.md
-    - name: Stvaranje novog okruženja
-      href: audience-insights/get-started-paid.md
+    - name: Početak
+      items:
+        - name: Vodič za brzi početak
+          href: audience-insights/get-started.md
+        - name: Stvaranje novog okruženja
+          href: audience-insights/get-started-paid.md
+        - name: Istraživanje uvida u ciljnu skupinu
+          href: audience-insights/home.md
     - name: Objašnjenje modula
       items:
         - name: Unesite podatke
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Poboljšane adrese
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Obogaćivanje pomoću Azure karata
+          href: audience-insights/enrichment-azure-maps.md
         - name: Obogaćivanje uz HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Obogaćivanje s Leadspaceom
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: API reference
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Ograničenja usluge
-      href: audience-insights/service-limits.md
-    - name: DSR zahtjevi prema OUZP-u
-      href: audience-insights/gdpr.md
 - name: Uvidi u angažman (pretpregled)
   items:
     - name: Središte za pomoć
       href: engagement-insights/index.yml
     - name: Pregled mogućnosti
       href: engagement-insights/overview.md
-    - name: Besplatna probna verzija
-      href: 'https://pi.dynamics.com/'
     - name: Početak
       items:
-        - name: Početak
+        - name: Vodič za brzi početak
           href: engagement-insights/get-started.md
         - name: Stvaranje radnog prostora
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Upravljajte okruženjima i radnim prostorima
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Konfigurirajte vezu
-          href: engagement-insights/configure-connections.md
         - name: Upravljanje kolačićima i pristankom korisnika
           href: engagement-insights/user-consent-storage.md
-    - name: GDPR
-      items:
-        - name: Brisanje i izvoz osobnih podataka
-          href: engagement-insights/delete-export-personal-data.md
     - name: Regionalna dostupnost
       href: engagement-insights/regional-availability.md
-    - name: Ograničenja usluge
-      href: engagement-insights/quotas.md
 - name: Integracija uvida u ciljnu skupinu i uvida u angažman
   items:
     - name: Povezivanje uvida u ciljnu skupinu i uvida u angažman
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Upotreba demografskih dimenzija za razdjeljivanje podataka o ponašanju
       href: engagement-insights/curate-dimensions.md
+- name: Ograničenja usluge
+  href: service-limits.md
+- name: Prava i zahtjevi DSR-a
+  href: dsr-rights-requests.md
 - name: Zatražite podršku
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

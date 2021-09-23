@@ -1,19 +1,19 @@
 ---
 title: Izrada veze između uvida u ciljnu skupinu i uvida u angažman
 description: Izradite aktivnu vezu između uvida u ciljnu skupinu i uvida u angažman da biste omogućili dvosmjerno dijeljenje podataka.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461004"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487098"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Izrada veze između uvida u ciljnu skupinu i uvida u angažman
 
@@ -26,14 +26,14 @@ Upotrijebite objedinjene profile i segmente iz uvida u ciljnu skupinu za više m
 ## <a name="prerequisites"></a>Preduvjeti
 
 - Profili uvida u ciljnu skupinu moraju se pohraniti na Azure Data Lake Storage račun koji posjedujete ili u [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash; upravljano jezero podataka. 
-
+- Vaše okruženje uvida u ciljnu skupinu treba imati pridruženo okruženje Dataverse. I ako to okruženje koristi Dataverse i za pohranu podataka provjerite mogućnost **Omogući dijeljenje podataka** u uvidima u ciljnu skupinu. Više informacija pogledajte u [Stvaranje i konfiguriranje plaćenog okruženja u uvidima u ciljnu skupinu](../audience-insights/get-started-paid.md).
 - Za okruženja uvida u angažman i uvida u ciljnu skupinu potrebne su vam administratorske dozvole.
-
 - Povezana okruženja moraju se nalaziti u istoj zemljopisnoj regiji.
 
 > [!NOTE]
-> - Ako imate probnu verziju pretplate na uvide u ciljnu skupinu za koju se upotrebljava interno upravljano jezero podataka uvida u ciljnu skupinu, za pomoć se obratite na [pirequest@microsoft.com](mailto:pirequest@microsoft.com). 
-> - Ako vaše okruženje uvida u ciljnu skupinu upotrebljava vaš vlastiti Azure Data Lake Storage za pohranu podataka, svom računu za pohranu morate dodati upravitelja usluge Azure za uvide u angažman. Pojedinosti potražite u članku [Spajanje na Azure Data Lake Storage račun upotrebom upravitelja usluge Azure za uvide u ciljnu skupinu](../audience-insights/connect-service-principal.md). Nadalje, vaše okruženje uvida u ciljnu skupinu treba imati pridruženo [Dataverse okruženje](../audience-insights/get-started-paid.md). 
+> - Ako imate probnu verziju pretplate na uvide u ciljnu skupinu koja koristi interno upravljano data lake uvida u ciljnu skupinu, za pomoć se obratite na [pirequest@microsoft.com](mailto:pirequest@microsoft.com). 
+> - Ako vaše okruženje uvida u ciljnu skupinu upotrebljava vaš vlastiti Azure Data Lake Storage za pohranu podataka, svom računu za pohranu morate dodati upravitelja usluge Azure za uvide u angažman. Pojedinosti potražite u članku [Spajanje na Azure Data Lake Storage račun upotrebom upravitelja usluge Azure za uvide u ciljnu skupinu](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Izrada veze okruženja
 
@@ -75,6 +75,7 @@ Nakon povezivanja okruženja možete odabrati neobavezne značajke za povezana o
 
    > [!IMPORTANT]
    > Ako u ovom koraku izričito ne dodate korisnike, podaci će biti skriveni od korisnika u uvidima u angažman.
+   > Da bi se segmenti uvida u ciljnu skupinu prikazivali u uvidima u angažman, prvo morate [pokrenuti spajanje i nizvodne procese](../audience-insights/merge-entities.md). Nizvodni procesi važni su jer generiraju jedinstvenu tablicu koja priprema segmente uvida u ciljnu skupinu za dijeljenje s uvidima u angažman. (Ako je zakazano osvježavanje sustava, ono će automatski uključiti nizvodne procese.)
 
 1. Pregledajte svoj odabir, a zatim odaberite **Završi**.
 
