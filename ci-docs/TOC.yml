@@ -242,7 +242,7 @@
   items:
     - name: Središte za pomoć
       href: engagement-insights/index.yml
-    - name: Pregled mogućnosti
+    - name: O uvidima u angažman
       href: engagement-insights/overview.md
     - name: Početak
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Regionalna dostupnost
       href: engagement-insights/regional-availability.md
-- name: Integracija uvida u ciljnu skupinu i uvida u angažman
+- name: Dijeljenje podataka među sposobnostima
   items:
     - name: Povezivanje uvida u ciljnu skupinu i uvida u angažman
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: Prava i zahtjevi DSR-a
   href: dsr-rights-requests.md
-- name: Zatražite podršku
-  href: 'https://dynamics.microsoft.com/support/'

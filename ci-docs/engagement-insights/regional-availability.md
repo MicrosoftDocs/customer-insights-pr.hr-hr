@@ -4,16 +4,16 @@ description: Saznajte više o regijama i geografskim lokacijama u koje se usluga
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
+ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483288"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "7564585"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Regionalna dostupnost za Dynamics 365 Customer Insights
 
@@ -21,9 +21,9 @@ ms.locfileid: "7483288"
 
 Uvidi u angažman, mogućnost Dynamics 365 Customer Insights, postupno uvodi sve više regija u kojima klijenti mogu odabrati pohraniti svoje podatke. Administratori mogu odabrati regiju kada [stvore novo okruženje](manage-environments-workspaces.md#create-an-environment). 
 
-Kada prvi put postavite uvide u angažman, možete odabrati regiju dok prolazite kroz [vođeno iskustvo prvog pokretanja](quickstart.md). Kasnije vam svako novo okruženje omogućuje odabir regije u koju će se podaci pohranjivati.
+Kada prvi put postavite uvide u angažman, možete odabrati regiju dok prolazite kroz [vođeno iskustvo prvog pokretanja](quickstart.md). Kasnije, svako novo okruženje omogućuje vam odabir regije u kojoj će se podaci pohraniti.
 
-Trenutno postoje dvije regije: SAD i Europa. Korisnici mogu odabrati između regije Zapadni SAD i Sjeverna Europa.
+Trenutačno podržavamo zemljopisna područja SAD -a i Europe. Korisnici mogu birati između ovih regija: zapadnog SAD-a, istočnog SAD-a, sjeverne Europe i zapadne Europe.
 
 Tvrtka ili ustanova može održavati okruženja u različitim regijama. Na primjer, Okruženje A pohranjuje podatke u Zapadnom SAD-u i Okruženje B u Sjevernoj Europi.
 

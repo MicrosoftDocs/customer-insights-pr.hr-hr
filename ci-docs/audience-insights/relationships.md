@@ -1,20 +1,20 @@
 ---
 title: Odnosi među entitetima i putanjama entiteta
 description: Stvorite i upravljajte odnosima između entiteta iz više izvora podataka.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035222"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557343"
 ---
 # <a name="relationships-between-entities"></a>Odnosi među entitetima
 
@@ -93,11 +93,11 @@ Dostupne mogućnosti:
 - **Promjena na vodoravni/okomiti raspored**: Promijenite poravnanje entiteta i odnosa.
 - **Uređivanje**: Ažurirajte svojstva prilagođenih odnosa u oknu za uređivanje i spremite promjene.
 
-### <a name="relationship-path"></a>Putanja odnosa
+## <a name="relationship-paths"></a>Putanje odnosa
 
-Putanja odnosa opisuje entitete koji su povezani s odnosima između izvornog entiteta i ciljnog entiteta. Koristi se pri izradi segmenta ili mjere koja uključuje druge entitete koji nisu entitet objedinjenog profila, a postoji više mogućnosti za dosezanje entiteta objedinjenog profila.
+Putanja odnosa opisuje entitete koji su povezani s odnosima između izvornog entiteta i ciljnog entiteta. Koristi se pri izradi segmenta ili mjere koja uključuje druge entitete koji nisu entitet objedinjenog profila, a postoji više mogućnosti za dosezanje entiteta objedinjenog profila. 
 
-Putanja odnosa obavještava sustav preko kojeg odnosa može pristupiti entitetu objedinjenog profila. Različite putanje odnosa mogu dati različite rezultate.
+Putanja odnosa informira sustav preko kojeg odnosa može pristupiti jedinstvenom entitetu profila. Različite putanje odnosa mogu dati različite rezultate.
 
 Na primjer, entitet *eCommerce_eCommercePurchases* ima sljedeći odnos s entitetom *Klijent* objedinjenog profila:
 
@@ -105,7 +105,43 @@ Na primjer, entitet *eCommerce_eCommercePurchases* ima sljedeći odnos s entitet
 - eCommerce_eCommercePurchases> eCommerce_eCommerceContacts> POS_posPurchases> Klijent
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klijent 
 
-Putanja odnosa određuje koje entitete možete upotrebljavati pri izradi pravila za mjere ili segmente. Odabir opcije s najdužom putanjom odnosa vjerojatno će dati manje rezultata jer podudarajući zapisi moraju biti dio svih entiteta. U ovom primjeru klijent mora kupiti robu putem e-trgovine (eCommerce_eCommercePurchases) na prodajnom mjestu (POS_posPurchases) i sudjelovati u našem programu vjernosti (loyaltyScheme_loyCustomers). Odabirom prve opcije vjerojatno biste dobili više rezultata jer kupci trebaju postojati samo u jednom dodatnom entitetu.
+Putanja odnosa određuje kojim se entitetima možete koristiti pri stvaranju pravila za mjere ili segmente. Odabir opcije s najdužom putanjom odnosa vjerojatno će dati manje rezultata jer podudarajući zapisi moraju biti dio svih entiteta. U ovom primjeru klijent mora kupiti robu putem e-trgovine (eCommerce_eCommercePurchases) na prodajnom mjestu (POS_posPurchases) i sudjelovati u našem programu vjernosti (loyaltyScheme_loyCustomers). Odabirom prve opcije vjerojatno biste dobili više rezultata jer kupci trebaju postojati samo u jednom dodatnom entitetu.
+
+### <a name="direct-relationship"></a>Izravan odnos
+
+Odnos se klasificira kao **izravan odnos** kada se izvorni entitet odnosi na ciljni entitet sa samo jednim odnosom.
+
+Na primjer, ako se entitet aktivnosti pod nazivom *eCommerce_eCommercePurchases* povezuje sa ciljnim entitetom entitetom *eCommerce_eCommerceContacts* samo kroz *ContactId*, to je izravan odnos.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Izvorni entitet povezuje se izravno s ciljnim entitetom.":::
+
+#### <a name="multi-path-relationship"></a>Odnos s više putanja
+
+**Odnos s više putanja** posebna je vrsta izravnog odnosa koji povezuje izvorni entitet s više ciljnih entiteta.
+
+Na primjer, ako se entitet aktivnosti pod nazivom *eCommerce_eCommercePurchases* odnosi na dva ciljna entiteta *eCommerce_eCommerceContacts* i *loyaltyScheme_loyCustomers*, to je odnos s više putanja.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Izvorni entitet povezuje se izravno s više ciljnih entiteta putem odnosa s više preskoka.":::
+
+### <a name="indirect-relationship"></a>Neizravan odnos
+
+Odnos se klasificira kao **neizravan odnos** kada se izvorni entitet odnosi na jedan dodatni entitet ili više dodatnih entiteta prije nego se odnosi na ciljni entitet.
+
+#### <a name="multi-hop-relationship"></a>Odnos s više preskoka
+
+*Odnos s više preskoka* je *neizravan odnos* koji vam omogućuje povezivanje izvornog entiteta s ciljnim entitetom putem jednog posredničkog entiteta ili više njih.
+
+Na primjer, ako se entitet aktivnosti pod nazivom *eCommerce_eCommercePurchasesWest* povezuje s posredničkim entitetom pod nazivom *eCommerce_eCommercePurchasesEast*, a zatim se povezuje s ciljnim entitetom pod nazivom *eCommerce_eCommerceContacts*, to je odnos s više preskoka.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Izvorni entitet povezuje se izravno s ciljnim entitetom s posredničkim entitetom.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Odnos s više preskoka, više putanja
+
+Odnosi s više preskoka i više putanja mogu se upotrebljavati zajedno za stvaranje **odnosa s više preskoka i više putanja**. Ova posebna vrsta kombinira funkcije **odnosa s više preskoka** i **više putanja**. Omogućuje vam povezivanje s više ciljnih entiteta koristeći posredničke entitete.
+
+Na primjer, ako se entitet aktivnosti pod nazivom  *eCommerce_eCommercePurchasesWest* povezuje s posredničkim entitetom pod nazivom *eCommerce_eCommercePurchasesEast*, a zatim se povezuje s ciljnim entitetima pod nazivom *eCommerce_eCommerceContacts* i *loyaltyScheme_loyCustomers*, to je odnos s više preskoka i više putanja.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Izvorni entitet povezuje se izravno s jednim ciljnim entitetom i povezuje se s drugim ciljnim entitetom putem posredničkog entiteta.":::
 
 ## <a name="manage-existing-relationships"></a>Upravljanje postojećim odnosima 
 

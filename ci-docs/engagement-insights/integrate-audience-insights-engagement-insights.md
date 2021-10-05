@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487098"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559009"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Izrada veze između uvida u ciljnu skupinu i uvida u angažman
 
@@ -54,6 +54,9 @@ Vezu okruženja možete izraditi ažuriranjem postavki **Administrator** > **Okr
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Omogućavanje atributa i segmenata objedinjenih profila uvida u ciljnu skupinu
 
 Nakon povezivanja okruženja možete odabrati neobavezne značajke za povezana okruženja. Te značajke omogućavaju atribute i segmente objedinjenih profila iz uvida u ciljnu skupinu za interaktivnu analizu podataka klijenta.
+
+> [!IMPORTANT]
+> Da bi se segmenti uvida u ciljnu skupinu prikazivali u uvidima u angažman, prvo morate [pokrenuti spajanje i nizvodne procese](../audience-insights/merge-entities.md). Nizvodni procesi važni su jer generiraju jedinstvenu tablicu koja priprema segmente uvida u ciljnu skupinu za dijeljenje s uvidima u angažman. (Ako je zakazano osvježavanje sustava, ono će automatski uključiti nizvodne procese.)
 
 **Analiza web-podataka u uvidima u angažman**
 

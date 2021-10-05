@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f038dedd369ac9e623146b66528efa87c47a8c23769037d8709fa9b804a0b723
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3a235e924395a606b9332de3d205289288a597a9
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035406"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558814"
 ---
 # <a name="set-up-a-trial-environment"></a>Postavljanje probnog okruženja 
 
@@ -95,7 +95,7 @@ Sada možete koristiti unesene podatke za prilagođavanje Customer Insights svom
 
 - Probne su verzije prema zadanim postavkama aktivne 30 dana. Međutim, možete ih produžiti nakon 23. dana od kada se prijavite za probno razdoblje.
 - Ne možete koristiti vlastiti račun za Azure Data Lake Storage za pohranu izlaznih podataka tijekom probnog razdoblja. Međutim, možete unijeti podatke s računa za pohranu Data Lake.
-- Možete pohraniti do 3 GB podataka u okruženje Dataverse koje se automatski dodjeljuje kada započnete probnu verziju Customer Insights.
+- Možete spremiti do 3 GB podataka u Dataverse okruženje kojemu se automatski dodjeljuju sredstva kada pokrenete probnu verziju usluge Customer Insights.
 
 ## <a name="copy-data-from-a-trial-to-a-paid-subscription"></a>Kopiranje podataka iz probne verzije na plaćenu pretplatu
 
