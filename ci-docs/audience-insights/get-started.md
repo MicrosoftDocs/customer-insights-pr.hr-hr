@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466568"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645255"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Započnite sa sposobnošću uvida u ciljnu skupinu u Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ Uvidi u ciljnu skupinu mogu vam pomoći u stjecanju boljeg razumijevanja vaših 
 
 ## <a name="step-1-create-an-environment"></a>Korak 1: Stvaranje okruženja
 
-Za početak najprije morate stvoriti okruženje za rad. Ako je vaša tvrtka ili ustanova već kupila licencu, pogledajte [Započnite s plaćenom pretplatom](get-started-paid.md). Za početak probnog razdoblja za uvide u ciljnu skupinu pogledajte [Postavljanje probnog okruženja](get-started-trial.md). 
+Za početak najprije morate stvoriti okruženje za rad. Ako je vaša tvrtka ili ustanova već kupila licencu, pogledajte [Stvaranje okruženja](create-environment.md). Za početak probnog razdoblja za uvide u ciljnu skupinu pogledajte [Postavljanje probnog okruženja](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Korak 2: Istraživanje uvida u ciljnu skupinu
 

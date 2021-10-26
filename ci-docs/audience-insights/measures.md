@@ -1,7 +1,7 @@
 ---
 title: Stvaranje i upravljanje mjerama
 description: Definirajte mjere za analizu i odražavanje uspješnosti svojeg poslovanja.
-ms.date: 04/12/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3593a02ce89233cf1e66c6beee669dd6dd261ba3b0e1d2d0cc966731349d7d0b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036999"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622850"
 ---
 # <a name="define-and-manage-measures"></a>Definiranje i upravljanje mjerama
 
@@ -26,15 +26,15 @@ Koristite alat za izradu mjera za planiranje poslovnih aktivnosti ispitivanjem p
 
 ## <a name="build-your-own-measure-from-scratch"></a>Izrada vlastitih mjera od nule
 
-Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Možete izraditi mjeru s atributima podataka iz podatkovnih entiteta koji imaju uspostavljen odnos za povezivanje s entitetom Klijent. 
+Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Mjeru s atributima podataka možete sastaviti iz podatkovnih entiteta koji imaju postavljen odnos za povezivanje s entitetom objedinjenog profila klijenta.
+
+# <a name="individual-customers-b2c"></a>[Pojedinačni klijenti (B2C)](#tab/b2c)
 
 1. U uvidima u ciljnu skupinu idite na **Mjere**.
 
 1. Odaberite **Novo** i odaberite **Izradi vlastiti**.
 
 1. Odaberite **Uredi naziv** i navedite **Naziv** za mjeru. 
-   > [!NOTE]
-   > Ako vaša nova konfiguracija mjera ima samo dva polja, npr. CustomerID i jedan izračun, rezultat će se dodati kao novi stupac u entitet koji je generirao sustav pod nazivom Customer_Measure. Vrijednost mjere moći ćete vidjeti u objedinjenom profilu klijenta. Ostale će mjere generirati vlastite entitete.
 
 1. U konfiguracijskom području odaberite funkciju agregacije iz padajućeg izbornika **Odabir funkcije**. Funkcije skupljanja uključuju: 
    - **Zbroj**
@@ -53,7 +53,7 @@ Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Možete izraditi m
    1. Odaberite karticu **Atributi**. 
    1. Entitet podataka: odaberite entitet koji uključuje atribut koji želite mjeriti. 
    1. Atribut podataka: Odaberite atribut koji želite koristiti u funkciji skupljanja za izračunavanje mjere. Odjednom možete odabrati samo jedan atribut.
-   1. Možete odabrati i atribut podataka iz postojeće mjere odabirom kartice **Mjere**. Ili možete tražiti naziv entiteta ili mjere. 
+   1. Možete odabrati i atribut podataka iz postojeće mjere odabirom kartice **Mjere** ili možete tražiti naziv entiteta ili mjere. 
    1. Odaberite **Dodaj** za dodavanje odabranog atributa mjeri.
 
    :::image type="content" source="media/measure-attribute-selection.png" alt-text="Odaberite atribut koji ćete koristiti u izračunima.":::
@@ -73,11 +73,11 @@ Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Možete izraditi m
    1. Odaberite **Uredi dimenzije** za dodavanje atributa podataka po kojima želite grupirati vrijednosti mjere. Na primjer, grad ili spol. Prema zadanim postavkama dimenzija *CustomerID* odabrana je za stvaranje *mjera na razini klijenta*. Možete ukloniti zadanu dimenziju ako želite stvoriti *mjere na poslovnoj razini*.
    1. Odaberite **Gotovo** za dodavanje dimenzija mjeri.
 
-1. Ako u vašim podacima postoje vrijednosti koje trebate zamijeniti cijelim brojem, na primjer, zamijeniti *null* s *0*, odaberite **Pravila**. Konfigurirajte pravilo i obavezno odaberite samo cijele brojeve kao zamjene.
+1. Ako u vašim podacima postoje vrijednosti koje morate zamijeniti cijelim brojem, odaberite **Pravila**. Konfigurirajte pravilo i obavezno odaberite samo cijele brojeve kao zamjene. Na primjer, zamijenite *nula* s *0*.
 
 1. Ako postoji više putanja između entiteta podataka koji ste mapirali i entiteta *Klijent*, morate odabrati jednu od identificiranih [putanja odnosa entiteta](relationships.md). Rezultati mjerenja mogu se razlikovati ovisno o odabranoj putanji. 
    
-   1. Odaberite **Preference podataka** i odaberite putanju entiteta koju treba koristiti za identificiranje vaše mjere. Ako postoji samo jedna putanja do entiteta *Klijent*, ova se kontrola neće prikazati.
+   1. Odaberite **Putanja odnosa** i odaberite putanju entiteta koji bi se trebao koristiti za identifikaciju mjere. Ako postoji samo jedna putanja do entiteta *Klijent*, ova se kontrola neće prikazati.
    1. Odaberite **Gotovo** da biste primijenili svoj odabir. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Odaberite putanju entiteta za mjeru.":::
@@ -92,7 +92,79 @@ Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Možete izraditi m
 
 1. Idite na **Mjere** da biste na popisu vidjeli novostvorenu mjeru.
 
+# <a name="business-accounts-b2b"></a>[Poslovni računi (B2B)](#tab/b2b)
+
+1. U uvidima u ciljnu skupinu idite na **Mjere**.
+
+1. Odaberite **Novo** i odaberite **Izradi vlastiti**.
+
+1. Odaberite **Uredi naziv** i navedite **Naziv** za mjeru. 
+
+1. U konfiguracijskom području odaberite funkciju agregacije iz padajućeg izbornika **Odabir funkcije**. Funkcije skupljanja uključuju: 
+   - **Zbroj**
+   - **Prosječno**
+   - **Brojanje**
+   - **Jedinstveni broj**
+   - **Max**
+   - **Min**
+   - **Prvi**: uzima prvu vrijednost zapisa podataka
+   - **Posljednji**: uzima posljednju vrijednost koja je dodana u zapis podataka
+
+   :::image type="content" source="media/measure-operators.png" alt-text="Operatori za izračun mjera.":::
+
+1. Odaberite **Dodaj atribut** za odabir podataka koji su vam potrebni za stvaranje ove mjere.
+   
+   1. Odaberite karticu **Atributi**. 
+   1. Entitet podataka: odaberite entitet koji uključuje atribut koji želite mjeriti. 
+   1. Atribut podataka: Odaberite atribut koji želite koristiti u funkciji skupljanja za izračunavanje mjere. Odjednom možete odabrati samo jedan atribut.
+   1. Možete odabrati i atribut podataka iz postojeće mjere odabirom kartice **Mjere** ili možete tražiti naziv entiteta ili mjere. 
+   1. Odaberite **Dodaj** za dodavanje odabranog atributa mjeri.
+
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Odaberite atribut koji ćete koristiti u izračunima.":::
+
+1. Da biste izradili složenije mjere, možete dodati više atributa ili koristiti matematičke operatore u svojoj funkciji mjere.
+
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Stvorite složenu mjeru s matematičkim operatorima.":::
+
+1. Da biste dodali filtre, odaberite **Filtar** u području konfiguracije. 
+  
+   1. U odjeljku **Dodavanje atributa** okna **Filtri** odaberite atribut koji želite koristiti za stvaranje filtara.
+   1. Postavite operatore filtra da definiraju filtar za svaki odabrani atribut.
+   1. Odaberite **Primijeni** za dodavanje filtara mjeri.
+
+1. Da biste dodali dimenzije, odaberite **Dimenzija** u području konfiguracije. Dimenzije će se prikazati kao stupci u entitetu izlazne vrijednosti mjere.
+ 
+   1. Odaberite **Uredi dimenzije** za dodavanje atributa podataka po kojima želite grupirati vrijednosti mjere. Na primjer, grad ili spol. Prema zadanim postavkama dimenzija *CustomerID* odabrana je za stvaranje *mjera na razini klijenta*. Možete ukloniti zadanu dimenziju ako želite stvoriti *mjere na poslovnoj razini*.
+   1. Odaberite **Gotovo** za dodavanje dimenzija mjeri.
+
+1. Ako u vašim podacima postoje vrijednosti koje morate zamijeniti cijelim brojem, odaberite **Pravila**. Konfigurirajte pravilo i obavezno odaberite samo cijele brojeve kao zamjene. Na primjer, zamijenite *nula* s *0*.
+
+1. Možete koristiti preklopni gumb **Prikupljanje podračuna** ako [koristite račune s hijerarhijom](relationships.md#set-up-account-hierarchies).
+   - Ako je postavljeno na **Isključeno**, mjera se izračunava za svaki račun. Svaki račun ima svoj rezultat.
+   - Ako je postavljeno na **Uključeno**, odaberite **Uredi** za odabir hijerarhije računa prema unesenoj hijerarhiji. Mjera će dati samo jedan rezultat jer je agregirana s podračunima.
+
+1. Ako postoji više putanja između entiteta podataka koji ste mapirali i entiteta *Klijent*, morate odabrati jednu od identificiranih [putanja odnosa entiteta](relationships.md). Rezultati mjerenja mogu se razlikovati ovisno o odabranoj putanji. 
+   
+   1. Odaberite **Putanja odnosa** i odaberite putanju entiteta koji bi se trebao koristiti za identifikaciju mjere. Ako postoji samo jedna putanja do entiteta *Klijent*, ova se kontrola neće prikazati.
+   1. Odaberite **Gotovo** da biste primijenili svoj odabir. 
+
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Odaberite putanju entiteta za mjeru.":::
+
+1. Odaberite **...** na izračunu da biste proveli **Dupliciraj**, **Preimenuj** ili **Ukloni** izračun iz mjere.
+
+1. U području **Pretpregled** vidjet ćete shemu podataka entiteta izlazne vrijednosti mjere, uključujući filtre i dimenzije. Pretpregled dinamički reagira na promjene u konfiguraciji.
+
+1. Odaberite **Pokreni** za izračunavanje rezultata za konfiguriranu mjeru. Odaberite **Spremi i zatvori** ako želite zadržati trenutnu konfiguraciju i kasnije pokrenuti mjeru.
+
+1. Idite na **Mjere** da biste na popisu vidjeli novostvorenu mjeru.
+
+---
+
 ## <a name="use-a-template-to-build-a-measure"></a>Korištenje predloška za izradu mjera
+
+Za njihovo stvaranje možete koristiti unaprijed definirane predloške najčešće korištenih mjera. Detaljni opisi predložaka i vođeno iskustvo pomažu vam u učinkovitom stvaranju mjera. Predlošci se nadovezuju na mapirane podatke iz entiteta *Objedinjena aktivnost*. Stoga provjerite jeste li konfigurirali [aktivnosti klijenata](activities.md) prije nego što stvorite mjeru iz predloška.
+
+# <a name="individual-customers-b2c"></a>[Pojedinačni klijenti (B2C)](#tab/b2c)
 
 Za njihovo stvaranje možete koristiti unaprijed definirane predloške najčešće korištenih mjera. Detaljni opisi predložaka i vođeno iskustvo pomažu vam u učinkovitom stvaranju mjera. Predlošci se nadovezuju na mapirane podatke iz entiteta *Objedinjena aktivnost*. Stoga provjerite jeste li konfigurirali [aktivnosti klijenata](activities.md) prije nego što stvorite mjeru iz predloška.
 
@@ -140,6 +212,12 @@ Sljedeći postupak opisuje korake za izradu nove mjere pomoću predloška.
 
 1. Sada možete odabrati **Pokreni** za izračunavanje rezultata mjere. Da biste je kasnije pročistili, odaberite **Spremi nacrt**.
 
+# <a name="business-accounts-b2b"></a>[Poslovni računi (B2B)](#tab/b2b)
+
+Ova je značajka dostupna samo za mjere stvorene u okruženjima s pojedinačnim klijentima kao primarnom ciljnom skupinom.
+
+---
+
 ## <a name="manage-your-measures"></a>Upravljanje mjerama
 
 Popis mjera možete pronaći na stranici **Mjere**.
@@ -166,6 +244,5 @@ Odaberite mjeru s popisa za sljedeće mogućnosti:
 ## <a name="next-step"></a>Sljedeći korak
 
 Možete koristiti postojeće mjere za stvaranje [segmenta klijenta](segments.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

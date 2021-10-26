@@ -2,8 +2,14 @@
   href: index.yml
 - name: Pregled proizvoda
   href: overview.md
-- name: Stvaranje probnog okruženja
-  href: audience-insights/get-started-trial.md
+- name: Besplatna probna verzija
+  items:
+    - name: Prijava u besplatnu probnu verziju
+      href: trial-signup.md
+    - name: Česta pitanja o probnoj verziji
+      href: trial-FAQ.md
+- name: Početak rada s plaćenom licencom
+  href: paid-license.md
 - name: Pristupite okruženju
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Uvidi u ciljne skupine
@@ -19,9 +25,11 @@
         - name: Vodič za brzi početak
           href: audience-insights/get-started.md
         - name: Stvaranje novog okruženja
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Istraživanje uvida u ciljnu skupinu
           href: audience-insights/home.md
+    - name: Rad s poslovnim računima
+      href: audience-insights/work-with-business-accounts.md
     - name: Objašnjenje modula
       items:
         - name: Unesite podatke
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Popis aktivnosti klijenata
           href: audience-insights/activities.md
+        - name: Definiranje semantičkih mapiranja
+          href: audience-insights/semantic-mappings.md
     - name: Obogaćivanje podataka
       items:
         - name: Obogaćivanje korisničkih profila
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Predviđanje gubitaka pretplate
               href: audience-insights/predict-subscription-churn.md
-            - name: Predvidite transakcijski gubitak
+            - name: Predviđanje gubitka transakcija
               href: audience-insights/predict-transactional-churn.md
             - name: Upotreba prilagođenih modela pomoću Strojnog učenja Azure
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Vodič uzorka za predviđanje gubitka pretplate
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Vodič uzorka za predviđanje transakcijskog gubitka
+            - name: Primjer vodiča za predviđanje gubitka transakcija
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Uzorak vodiča za predviđanje preporuka proizvoda
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Upravljanje s više okruženja
           href: audience-insights/manage-environments.md
-        - name: Povežite se s računom za pohranu ADLS koristeći glavnu uslugu
-          href: audience-insights/connect-service-principal.md
         - name: Podržani jezici
           href: audience-insights/supported-languages.md
+        - name: Sigurnost
+          items:
+            - name: Povezivanje vlastitog sefa za ključeve
+              href: audience-insights/use-azure-key-vault.md
+            - name: Povežite se s računom za pohranu ADLS koristeći glavnu uslugu
+              href: audience-insights/connect-service-principal.md
     - name: Proširivost
       items:
         - name: Integracija web-podataka iz uvida u angažman
@@ -248,6 +262,8 @@
       items:
         - name: Vodič za brzi početak
           href: engagement-insights/get-started.md
+        - name: Stvaranje okruženja
+          href: engagement-insights/create-new-environment.md
         - name: Stvaranje radnog prostora
           href: engagement-insights/create-workspace.md
         - name: Snimanje događaja s web-mjesta i iz mobilnih aplikacija

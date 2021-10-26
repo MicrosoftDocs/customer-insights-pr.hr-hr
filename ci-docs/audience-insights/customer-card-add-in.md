@@ -1,7 +1,7 @@
 ---
 title: Dodatak kartice klijenta za aplikacije Dynamics 365
 description: Pomoću ovog dodatka prikažite podatke iz uvida u ciljne skupine u aplikacijama Dynamics 365.
-ms.date: 05/18/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,39 +9,40 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0f6c922104df229980b308136a4d764938121b35d6d744f41b1530bdb5515e7f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032979"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643353"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatak kartice klijenta (pretpregled)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Dobijte prikaz svojih klijenata od 360 stupnjeva izravno u Dynamics 365 aplikacijama. Pomoću dodatka kartice klijenta instaliranog u podržanoj aplikaciji Dynamics 365 možete odabrati prikaz demografskih podataka, uvida i vremenskih traka aktivnosti. Dodatak će dohvatiti podatke iz usluge Customer Insights bez utjecaja na podatke u povezanoj aplikaciji Dynamics 365. 
+Dobijte prikaz svojih klijenata od 360 stupnjeva izravno u Dynamics 365 aplikacijama. S dodatkom kartice klijenta instaliranim u podržanoj aplikaciji Dynamics 365, možete odabrati prikaz polja profila klijenta, uvida i vremenske trake aktivnosti. Dodatak će dohvatiti podatke iz usluge Customer Insights bez utjecaja na podatke u povezanoj aplikaciji Dynamics 365.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
 ## <a name="prerequisites"></a>Preduvjeti
 
 - Dodatak funkcionira samo s aplikacijama Dynamics 365 stvorenim prema modelu, kao što su Sales ili Customer Service verzije 9.0 i novije.
-- Da bi se vaši podaci sustava Dynamics 365 preslikali u profile klijenata uvida u ciljne skupine, moraju se [unijeti iz aplikacije Dynamics 365 pomoću poveznika Microsoft Dataverse](connect-power-query.md).
+- Da bi se vaši podaci sustava Dynamics 365 preslikali u profile klijenata uvida u ciljne skupine, moraju se [unijeti iz aplikacije Dynamics 365 s pomoću poveznika Microsoft Dataverse](connect-power-query.md).
 - Svi korisnici sustava Dynamics 365 za dodatak kartice klijenta moraju se [dodati kao korisnici](permissions.md) u uvidima u ciljne skupine da bi vidjeli podatke.
 - [Konfigurirane mogućnosti pretraživanja i filtriranja](search-filter-index.md) u uvidima u ciljne skupine su potrebne za funkcioniranje pretraživanja podataka.
-- Svaka kontrola dodatka oslanja se na određene podatke u uvidima u ciljne skupine:
-  - Kontrola mjerenja: Zahtijeva [konfigurirana mjerenja](measures.md).
-  - Kontrola inteligencije: zahtijeva podatke stvorene pomoću [predviđanja](predictions.md) ili [prilagođenih modela](custom-models.md).
-  - Kontrola demografije: demografska polja (kao što su dob ili spola) dostupna su u objedinjenom profilu klijenta.
-  - Kontrola obogaćivanja: Zahtijeva aktivna [obogaćivanja](enrichment-hub.md) primijenjena na profile klijenata.
-  - Kontrola vremenske trake: Zahtijeva [konfigurirane aktivnosti](activities.md).
+- Svaka kontrola dodatka oslanja se na određene podatke u uvidima u ciljne skupine. Neki podaci i kontrole dostupni su samo u okruženjima određenih vrsta. Konfiguracija dodatka obavijestit će vas ako kontrola nije dostupna zbog odabrane vrste okruženja. Saznajte više o [slučajevima upotrebe okruženja](work-with-business-accounts.md).
+  - **Kontrola mjera**: Zahtijeva [konfigurirane mjere](measures.md) atributa vrste klijenta.
+  - **Kontrola inteligencije**: zahtijeva podatke stvorene s pomoću [predviđanja](predictions.md) ili [prilagođenih modela](custom-models.md).
+  - **Kontrola pojedinosti o klijentu**: Sva polja iz profila dostupna su u objedinjenom profilu klijenta.
+  - **Kontrola obogaćivanja**: Zahtijeva aktivna [obogaćivanja](enrichment-hub.md) primijenjena na profile klijenata.
+  - **Kontrola kontakata**: Zahtijeva definiciju semantičkog entiteta vrste kontakata.
+  - **Kontrola vremenske trake**: Zahtijeva [konfigurirane aktivnosti](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instaliranje dodatka za korisničku karticu
 
 Dodatak za korisničku karticu rješenje je za aplikacije Customer Engagement u programu Dynamics 365. Da biste instalirali rješenje, idite na AppSource i potražite **Kartica klijenta Dynamics**. Odaberite [Dodatak kartice klijenta na AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) i odaberite **Nabavi odmah**.
 
-Možda ćete se trebati prijaviti s vjerodajnicama svog administratora za aplikaciju Dynamics 365 da biste postavili rješenje.
-
-Možda će biti potrebno neko vrijeme da se rješenje instalira u vaše okruženje.
+Možda ćete se trebati prijaviti s vjerodajnicama svog administratora za aplikaciju Dynamics 365 da biste postavili rješenje. Možda će biti potrebno neko vrijeme da se rješenje instalira u vaše okruženje.
 
 ## <a name="configure-the-customer-card-add-in"></a>Konfiguriranje dodatka kartice klijenta
 
@@ -50,7 +51,7 @@ Možda će biti potrebno neko vrijeme da se rješenje instalira u vaše okružen
 1. Odaberite vezu **Naziv zaslona** za rješenje **Dynamics 365 Customer Insights dodatak kartice klijenta (pretpregled)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Odaberite zaslonski naziv.](media/select-display-name.png "Odabir zaslonskog naziva")
+   > ![Odaberite zaslonski naziv.](media/select-display-name.png "Odaberite zaslonski naziv.")
 
 1. Odaberite **Prijavi se** i unesite vjerodajnice za administratorski račun koji koristite za konfiguriranje aplikacije Customer Insights.
 
@@ -64,7 +65,7 @@ Možda će biti potrebno neko vrijeme da se rješenje instalira u vaše okružen
    - Za mapiranje računom odaberite polje u entitetu Kupac koje se podudara s ID-om entiteta vašeg računa.
 
    > [!div class="mx-imgBorder"]
-   > ![Polje za ID kontakta.](media/contact-id-field.png "Polje za ID kontakta")
+   > ![Polje za ID kontakta.](media/contact-id-field.png "Polje za ID kontakta.")
 
 1. Odaberite **Spremi konfiguraciju** da biste spremili postavke.
 
@@ -73,17 +74,19 @@ Možda će biti potrebno neko vrijeme da se rješenje instalira u vaše okružen
 1. Dodijelite ulogu **osobe za prilagodbu kartice Customer Insights** korisnicima koji će cijeloj organizaciji prilagoditi sadržaj prikazan na kartici.
 
 ## <a name="add-customer-card-controls-to-forms"></a>Dodavanje kontrola kartice klijenta u obrasce
-  
+
+Ovisno o vašem scenariju, možete odabrati dodavanje kontrola bilo u obrazac **Kontakt** ili **Račun**. Ako je vaše okruženje uvida u ciljne skupine za poslovne račune, preporučujemo da dodate kontrole u obrazac Račun. U tom slučaju, u sljedećim koracima zamijenite „kontakt” s „račun”.
+
 1. Da biste dodali kontrole kartice klijenta u obrazac za kontakt, idite na **Postavke** > **Prilagodbe** u sustavu Dynamics 365.
 
 1. Odaberite **Prilagođavanje sustava**.
 
 1. Idite na entitet **Kontakt**, proširite ga i odaberite **Obrasci**.
 
-1. Odaberite obrazac za kontakt kojemu želite dodati kontrole kartice klijenta.
+1. Odaberite obrazac za kontakt kojem želite dodati kontrole kartice klijenta.
 
     > [!div class="mx-imgBorder"]
-    > ![Odaberite obrazac Kontakt.](media/contact-active-forms.png "Odabir obrasca za kontakt")
+    > ![Odaberite obrazac Kontakt.](media/contact-active-forms.png "Odaberite obrazac za kontakt.")
 
 1. Da biste dodali kontrolu, u uređivaču obrazaca povucite bilo koje polje iz **Preglednika polja** tamo gdje želite da se kontrola pojavi.
 
@@ -102,7 +105,8 @@ Možda će biti potrebno neko vrijeme da se rješenje instalira u vaše okružen
 1. Da biste prilagodili ono što želite prikazati na prilagođenoj kontroli, odaberite gumb za uređivanje u gornjem desnom kutu.
 
 ## <a name="upgrade-customer-card-add-in"></a>Nadogradnja dodatka za karticu kupca
-Dodatak za karticu kupca ne nadograđuje se automatski. Da biste nadogradili na najnoviju verziju, slijedite ovaj postupak u aplikaciji Dynamics 365 u kojoj je instaliran dodatak.
+
+Dodatak za karticu kupca ne nadograđuje se automatski. Za nadogradnju na najnoviju verziju slijedite ove korake u aplikaciji Dynamics 365 s instaliranim dodatkom.
 
 1. U aplikaciji Dynamics 365 idite na **Postavke** > **Prilagođavanje** i odaberite **Rješenja**.
 

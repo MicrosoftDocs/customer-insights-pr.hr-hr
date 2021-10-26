@@ -1,7 +1,7 @@
 ---
 title: Početna stranica u uvidima u ciljnu skupinu
 description: Počnite istraživati aplikaciju na početnoj stranici.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469948"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617685"
 ---
 # <a name="explore-audience-insights"></a>Istraživanje uvida u ciljnu skupinu
 
@@ -23,7 +23,7 @@ Možete [pristupiti uvidima u ciljnu skupinu iz Dynamics 365 Customer Insights](
 
 :::image type="content" source="media/home-page.png" alt-text="Snimka zaslona početnog zaslona koja prikazuje uzorke uvida.":::
 
-1 – Prebacivanje između mogućnosti Customer Insights 2 – Korištenje lijevog okna za kretanje između različitih područja 3 – Saznajte u kojem okruženju radite i upravljajte okruženjima kao administrator 4 – Navedite osobne postavke za Customer Insights
+1 - Prebacivanje između mogućnosti aplikacije Customer Insights 2 - Koristite lijevo okno za kretanje između različitih područja i odaberite primarnu ciljnu skupinu 3 - Saznajte u kojem okruženju radite i upravljajte okruženjima kao administrator 4 - Navedite osobne postavke za Customer Insights
 
 u odjeljku **Najnoviji segmenti** prikazuju se grupe klijenata na temelju demografskih, bihevioralnih ili transakcijskih atributa koje ste definirali. [Stvaranje segmenata](segments.md) pomaže vam da grupirate svoju bazu klijenata i bolje usmjerite svoje poslovne aktivnosti.
 

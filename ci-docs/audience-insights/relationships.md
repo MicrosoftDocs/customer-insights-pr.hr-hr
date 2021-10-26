@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557343"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622990"
 ---
 # <a name="relationships-between-entities"></a>Odnosi među entitetima
 
@@ -67,6 +67,20 @@ Odnos se sastoji od *izvornog entiteta* koji sadrži vanjski ključ i *ciljnog e
    - **Polje ciljnog ključa**: polje ključa ciljnog entiteta. Primjer Klijent bi mogao koristiti polje ključa **CustomerID**.
 
 4. Odaberite **Spremi** za stvaranje prilagođenog odnosa.
+
+## <a name="set-up-account-hierarchies"></a>Postavljanje hijerarhija računa
+
+Okruženja koja su konfigurirana za korištenje poslovnih računa kao primarne ciljne skupine mogu konfigurirati hijerarhije računa za povezane poslovne račune. Na primjer, tvrtka koja ima zasebne poslovne jedinice. 
+
+Tvrtke ili ustanove stvaraju hijerarhije računa za bolje upravljanje računima i njihovim međusobnim odnosima. Mogućnost uvida u ciljne skupine podržava nadređene i podređene hijerarhije računa koje već postoje u unesenim podacima o klijentima. Na primjer, računi iz programa Dynamics 365 Sales. Ove se hijerarhije mogu konfigurirati na stranici **Odnosi** u uvidima ciljne skupine na kartici hijerarhije računa.
+
+1. Idite na **Podaci** > **Odnosi**.
+1. Odaberite karticu **Hijerarhija računa**.
+1. Odaberite **Nova hijerarhija računa**. 
+1. U oknu **Hijerarhija računa** navedite naziv za hijerarhiju. Sustav stvara naziv za izlazni entitet. Možete promijeniti naziv entiteta izlaznog naziva.
+1. Odaberite entitet koji sadrži hijerarhiju vašeg računa. Uobičajeno se nalazi u istom entitetu koji sadrži račune.
+1. Odaberite **ID računa** i **Nadređeni ID računa** iz odabranog entiteta 
+1. Odaberite **Spremi** kako biste primijenili postavke i dovršili hijerarhiju računa.
 
 ## <a name="view-relationships"></a>Prikaz odnosa
 

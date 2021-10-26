@@ -1,7 +1,7 @@
 ---
 title: Izrada okruženja i upravljanje njima
 description: Saznajte kako se prijaviti za uslugu i kako upravljati okruženjima.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034168"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645117"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
@@ -26,7 +26,7 @@ Odaberite kontrolu **Okruženje** u gornjem desnom kutu stranice kako biste se p
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Snimka zaslona kontrole za promjenu okruženja.":::
 
-Administratori mogu [stvarati](get-started-paid.md) i upravljati okruženjima.
+Administratori mogu [stvarati](create-environment.md) i upravljati okruženjima.
 
 ## <a name="edit-an-existing-environment"></a>Uređivanje postojećeg okruženja
 
@@ -36,23 +36,9 @@ Možete urediti neke pojedinosti postojećih okruženja.
 
 2.  Odaberite ikonu **Uredi**.
 
-3. U okviru **Uredi okruženje** možete ažurirati **Zaslonski naziv** okruženja, ali ne možete promijeniti svojstva **Regija** ili **Vrsta**.
+3. U okviru **Uredi okruženje** možete ažurirati postavke okruženja.
 
-4. Ako je okruženje konfigurirano za pohranu podataka u Azure Data Lake Storage, možete ažurirati **Ključ računa**. Međutim, ne možete promijeniti **Naziv računa** ili naziv **Spremnik**.
-
-5. Ako želite, možete ažurirati vezu koja se temelji na ključu računa na vezu koja se temelji na resursima ili pretplati. Nakon nadogradnje i nakon ažuriranja ne možete se vratiti na prethodni ključ računa. Za više informacija pogledajte [Povezivanje uvida ciljne skupine s računom servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure](connect-service-principal.md). Ne možete promijeniti podatke za **Spremnik** prilikom ažuriranja veze.
-
-6. Neobavezno možete navesti URL okruženja Microsoft Dataverse pod **Konfiguriraj dijeljenje podataka uz Microsoft Dataverse i omogući dodatne mogućnosti**. Te mogućnosti uključuju razmjenu podataka s aplikacijama i rješenjima koja se temelje na servisu Microsoft Dataverse, unosu podataka iz lokalnih izvora podataka ili korištenju [predviđanja](predictions.md). Odaberite **Omogući dijeljenje podataka** za dijeljenje izlaznih podataka usluge Customer Insights pomoću Microsoft Dataverse Managed Data Lake.
-
-   > [!NOTE]
-   > - Dijeljenje podataka pomoću Microsoft Dataverse Managed Data Lake trenutno nije podržano kada sve podatke spremite u vlastiti Azure Data Lake Storage.
-   > - [Predviđanje vrijednosti koje nedostaju u entitetu](predictions.md) i PowerBI ugrađenim izvješćima u uvidima u ciljnu skupinu (ako su omogućena u vašem okruženju) trenutno nisu podržana kada omogućite dijeljenje podataka uz data lake kojim upravlja Microsoft Dataverse .
-
-   Nakon što se omogući dijeljenje podataka uz Microsoft Dataverse, pokreće se potpuno osvježavanje vaših izvora podataka i ostalih procesa. Ako se procesi trenutno izvode, ne vidite mogućnost za omogućavanje dijeljenja podataka uz Microsoft Dataverse. Pričekajte da se ti procesi dovrše ili ih otkažite da biste omogućili dijeljenje podataka. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Mogućnosti konfiguracije za omogućavanje dijeljenja podataka uz Microsoft Dataverse.":::
-   
-   Kada pokrenete procese, kao što su obrada podataka ili stvaranje segmenta, na računu za pohranu koji ste gore odredili stvorit će se odgovarajuće mape. Datoteke podataka i datoteke model.json stvorit će se i dodati u odgovarajuće podmape, ovisno o procesu koji pokrenete.
+Dodatne informacije o postavkama okruženja potražite u odjeljku [Stvaranje novog okruženja](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Kopiranje konfiguracije okruženja
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032703"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618673"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogaćivanje profila klijenata pomoću prilagođenih podataka (pretpregled)
 
@@ -44,6 +44,8 @@ Da biste konfigurirali SFTP prilagođeni uvoz, moraju biti ispunjeni sljedeći p
 1.  Odaberite **Dalje** pa unesite podatke **Putanja** i **Naziv datoteke** za podatkovnu datoteku koju želite uvesti.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Snimka zaslona prilikom unosa lokacije podataka.":::
+
+1. Odaberite **Dalje** i odaberite skup podataka klijenta. To mogu biti svi profili klijenata ili segment.
 
 1. Odaberite **Sljedeće** i navedite naziv za obogaćivanje i naziv za izlazni entitet. 
 
@@ -123,6 +125,6 @@ Detaljnom prikazu svakog obogaćenog profila možete pristupiti odabirom **Prika
 
 ## <a name="next-steps"></a>Sljedeći koraci
 
-Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [segmente](segments.md) i [mjere](measures.md) pa [izvezite podatke](export-destinations.md) radi pružanja personaliziranih iskustava svojim klijentima.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

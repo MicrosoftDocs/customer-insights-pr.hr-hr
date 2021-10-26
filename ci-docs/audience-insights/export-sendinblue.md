@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka značajke Customer Insights u Sendinblue
 description: Saznajte kako konfigurirati vezu i izvesti u Sendinblue.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036046"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617776"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Izvoz segmenata u Sendinblue (pretpregled)
 
@@ -29,10 +29,10 @@ Segmente objedinjenih klijenskih profila izvezite za generiranje kampanja, pruž
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Do 1 milijun profila po izvozu u Sendinblue.
+- Do 1 milijun profila klijenata po izvozu u Sendinblue.
 - Izvoz u Sendinblue ograničen je na segmente.
-- Izvoz segmenata s ukupno 1 milijun profila može trajati do 90 minuta. 
-- Broj profila koje možete izvesti u Sendinblue ovisi o vašem ugovoru sa servisom Sendinblue i njime je ograničen.
+- Izvoz segmenata s ukupno 1 milijun profila klijenata može potrajati do 90 minuta. 
+- Broj profila klijenata koje možete izvesti u Sendinblue ovisi i ograničen je ugovorom s uslugom Sendinblue.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Postavljanje veze na Sendinblue
 
@@ -64,7 +64,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 1. Unesite svoj **ID popisa za Sendinblue** 
 
-1. U odjeljku **Podudaranje podataka**, u polju **E-pošta**, odaberite polje u vašem objedinjenom profilu klijenta koje predstavlja adresu e-pošte klijenta. 
+1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. 
 
 1. Po želji možete izvesti **Ime**, **Prezime** i **Telefon**  da biste stvorili personaliziraniju e-poštu. Odaberite **Dodavanje atributa** za mapiranje ovih polja.
 

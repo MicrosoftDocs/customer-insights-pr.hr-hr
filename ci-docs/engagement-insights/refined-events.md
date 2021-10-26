@@ -1,72 +1,97 @@
 ---
-title: Stvaranje i izmjena događaja sužene pretrage
-description: Kako stvoriti i izmijeniti pročišćene događaje.
+title: Stvorite i izmijenite događaje
+description: Kako stvarati i izmjenjivati događaje.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 04/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 0344bac5f4d43df853309f43c94d95f962937f77c936ed7305c5de4a08835f04
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 935dc4cd41218842e8406b747daef47de04e337a
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034765"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606187"
 ---
-# <a name="create-and-modify-refined-events"></a>Stvaranje i izmjena događaja sužene pretrage
+# <a name="create-and-modify-events"></a>Stvorite i izmijenite događaje
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
-
 
 Događaj je podatak koji predstavlja ponašanje korisnika, kao što je aktivnost na web-mjestu.
 
 - *Osnovni* događaj bilježi kada korisnik pregleda stranicu (događaj prikaza) ili kada stupi u interakciju sa sadržajem (događaj radnje).
 - *Pročišćeni* događaj virtualni je prikaz osnovnog događaja. Pročišćene događaje definirate uklanjanjem i dodavanjem svojstava ili filtriranjem događaja na temelju vrijednosti svojstava.
 
+## <a name="prerequisites"></a>Preduvjeti
+
+Da bi dohvatilo događaje, web-mjesto mora se prvo povezati s uvidima u angažman s pomoću isječka koda. Dodatne informacije potražite u odjeljku [Instaliranje web-SDK-a na web-mjestu](instrument-website.md).
+
+ :::image type="content" source="media/new-events-connect-data.png" alt-text="Prvo povežite svoje podatke.":::
+
+## <a name="create-refined-events"></a>Stvori događaje sužene pretrage
+
 Koristite pročišćene događaje za smanjivanje djelokruga osnovnog događaja za [izvoz](export-events.md) ili uklanjanje svojstava koja nisu potrebna za izlaganje.
 
-## <a name="create-refined-events"></a>Stvaranje profinjenih događaja
+> [!NOTE]
+> Nakon što na web-mjesto dodate web-SDK, možete pregledati osnovne događaje i stvoriti događaje sužene pretrage. 
 
-Postoje tri načina za stvaranje pročišćenog događaja iz osnovnog događaja. 
+Za prikaz osnovnih događaja:
 
-1. Idite na **Podaci**> **Događaji** i odaberite jednu od sljedećih mogućnosti:
-    - Odaberite **Novi događaji** i zatim odaberite **Stvori pročišćene događaje**.
-    - Odaberite osnovni događaj da biste otvorili detaljan prikaz i odaberite **Stvori pročišćene događaje** s gornjeg izbornika.
-    - Odaberite **Više [...]** za otvaranje izbornika prečaca za osnovni događaj. Zatim odaberite **Stvori pročišćene događaje**.
-    
-    :::image type="content" source="media/create-refined-events-options.png" alt-text="Mogućnosti za stvaranje pročišćenih događaja.":::
+1. Idite u odjeljak **Podaci** u lijevom navigacijskom oknu.
 
-1. U dijaloškom okviru **Stvori pročišćene događaje** unesite sljedeće podatke:
+1. Odaberite **Događaji** da biste vidjeli popis svih događaja u radnom prostoru.
 
-- Odaberite događaj iz padajućeg izbornika **Osnovni događaji** ako stvarate novi događaj.
-- Unesite naziv u okvir **Pročišćeni zaslonski naziv događaja**.
-- Neobavezno ažurirajte predloženi **Stvarni naziv** bez korištenja razmaka.
+    :::image type="content" source="media/data-events.png" alt-text="Pregledajte događaje.":::
 
-3. Odaberite **Stvori** da biste primijenili svoje postavke.
+Da biste stvorili događaj sužene pretrage od osnovnog događaja: 
 
-1. U detaljnom prikazu svojeg pročišćenog događaja odaberite **Dodaj i ukloni svojstva** da biste otvorili okno **Uredi svojstva**. 
+1. Idite na **Podaci** > **Događaji** i odaberite **+ Novi događaji** na vrhu zaslonu.
 
-1. Pomoću potvrdnih okvira odaberite svojstva koja želite prikazati i ona koja želite sakriti. 
-   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Uredite svojstva za pročišćene događaje.":::
+1. U dijaloškom okviru **Novi događaji** odaberite **Stvori događaje sužene pretrage**, a zatim odaberite **Dalje**.
+   
+     :::image type="content" source="media/new-events-wizard.png" alt-text="Čarobnjak za stvaranje novih događaja.":::
+     
+1. U dijaloškom okviru **Novi događaji** unesite sljedeće podatke:
 
-1. Odaberite **Potvrdi** da biste primijenili svoj odabir.
+   - Odaberite događaj s padajućeg popisa **Osnovni događaji**.
+   - Unesite naziv u okvir **Pročišćeni zaslonski naziv događaja**.
+   - Neobavezno ažurirajte predloženi **Stvarni naziv** bez korištenja razmaka.
 
-1. Odaberite **Spremi** da biste spremili konfiguraciju.
+1. Odaberite **Stvori** da biste primijenili svoje postavke.
 
-## <a name="edit-refined-events"></a>Uređivanje pročišćenih događaja
-
-Možete promijeniti naziv i svojstva pročišćenog događaja.
+Događaj sužene pretrage sad se prikazuje na popisu **Događaji**.
 
 ### <a name="edit-event-name"></a>Uređivanje naziva događaja
 
-1. Idite na **Podaci** > **Događaji**. 
-1. Odaberite **Više [...]** za događaj i odaberite **Uredi naziv**.
-1. Ažurirajte naziv događaja i odaberite **Preimenuj**.
+Možete promijeniti naziv i svojstva osnovnog događaja ili događaja sužene pretrage.
 
-### <a name="edit-selected-properties"></a>Uređivanje odabranih svojstava
+1. Idite na **Podaci** > **Događaji**. 
+
+1. Odaberite **Više [...]** za događaj i odaberite **Uredi naziv**.
+    
+     :::image type="content" source="media/create-refined-events-options.png" alt-text="Mogućnosti za stvaranje pročišćenih događaja.":::
+
+3. Ažurirajte naziv događaja i odaberite **Preimenuj**.
+
+### <a name="view-the-details-of-a-refined-event"></a>Prikaz pojedinosti događaja sužene pretrage:
+
+1. Na popisu **Događaj** odaberite osnovni događaj ili događaj sužene pretrage. 
+
+1. Odaberite **Dodaj i ukloni svojstva** pri vrhu zaslona da biste otvorili okno **Uredi svojstva**. 
+
+     :::image type="content" source="media/add-remove-properties.png" alt-text="Dodajte i uklonite svojstva.":::
+
+1. Pomoću potvrdnih okvira odaberite svojstva koja želite prikazati i ona koja želite sakriti. 
+
+   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Uredite svojstva za pročišćene događaje.":::
+
+1. Odaberite **Potvrdi** da biste primijenili svoj odabir, a zatim odaberite **Spremi**.
+
+
+### <a name="edit-selected-properties-for-a-refined-event"></a>Uređivanje odabranih svojstava za događaj sužene pretrage
 
 1. Idite na **Podaci** > **Događaji** i odaberite pročišćene događaje da biste otvorili detaljan prikaz.
 1. Odaberite **Dodaj i ukloni svojstva**. 

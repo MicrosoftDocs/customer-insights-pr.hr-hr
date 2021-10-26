@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka usluge Customer Insights u DotDigital
 description: Saznajte kako konfigurirati vezu i izvesti u DotDigital.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f09be0dfa599c1ef7cf0055b7ce1df8784cf447ada64b56bc7543c214f9a5b99
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3e3a79603f9f5746ee176d3d4299a30510c7459e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034627"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618374"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Izvoz segmenata u DotDigital (pretpregled)
 
@@ -22,17 +22,17 @@ Izvezite segmente objedinjenih profila klijenata u adresare usluge DotDigital i 
 
 ## <a name="prerequisites-for-a-connection"></a>Preduvjeti za vezu
 
--   Imate [račun za DotDigital](https://dotdigital.com/) i odgovarajuće vjerodajnice administratora.
+-   Imate [račun za DotDigital](https://dotdigital.com/) i stvorili ste [korisnika API-ja](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Za stvaranje veze trebate koristiti vjerodajnice korisnika API -ja
 -   DotDigital sadrži postojeće adresare i odgovarajuće ID-ove. ID se može pronaći u URL-u kada odaberete i otvorite adresar. Dodatne informacije potražite u [adresarima usluge DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Imate [konfigurirane segmente](segments.md) u uvidima u ciljnu skupinu.
 -   Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Do 1 milijun profila po izvozu u DotDigital.
+- Do 1 milijun profila klijenata po izvozu u DotDigital.
 - Izvoz u DotDigital ograničen je na segmente.
-- Izvoz segmenata s ukupno milijun profila može potrajati do 3 sata zbog ograničenja na strani davatelja usluga. 
-- Broj profila koje možete izvesti u DotDigital ovisi i ograničen je vašim ugovorom s tvrtkom DotDigital.
+- Izvoz segmenata s ukupno 1 milijun profila klijenata može potrajati i do 3 sata zbog ograničenja na strani davatelja usluga. 
+- Broj profila klijenata koje možete izvesti u DotDigital ovisi i ograničen je ugovorom s uslugom DotDigital.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Postavljanje veze s DotDigital
 
@@ -44,7 +44,7 @@ Izvezite segmente objedinjenih profila klijenata u adresare usluge DotDigital i 
 
 1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Unesite **korisničko ime i lozinku za DotDigital**.
+1. Unesite **korisničko ime i lozinku API-ja za DotDigital**. 
 
 1. Unesite svoj **[ID adresara usluge DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
 
@@ -67,7 +67,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 1. U polju **Veza za izvoz** odaberite vezu iz odjeljka DotDigital. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
 
 
-1. U odjeljku **Podudaranje podataka**, u polju **E-pošta**, odaberite polje u vašem objedinjenom profilu klijenta koje predstavlja adresu e-pošte klijenta. Ponovite iste korake za druga neobavezna polja kao što su **Ime**, **Prezime**, **Puno ime**, **Spol** i **Poštanski broj**.
+1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. Ponovite iste korake za druga neobavezna polja kao što su **Ime**, **Prezime**, **Puno ime**, **Spol** i **Poštanski broj**.
 
 1. Odaberite segmente koje želite izvesti. U DotDigital možete ukupno izvesti do 1 milijun profila klijenata.
 

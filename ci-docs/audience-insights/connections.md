@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033209"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605940"
 ---
 # <a name="connections-preview-overview"></a>Pregled (pretpregled) veza
 
@@ -47,6 +47,7 @@ Da biste dodali veze, morate imati [administratorske dozvole](permissions.md). A
 1. U oknu **Postavi vezu** okno navedite potrebne pojedinosti. 
    1. **Zaslonski naziv** i vrsta veze opisuju vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj te veze.
    1. Točna polja ovise o tome na koju se uslugu povezujete. O pojedinostima određene vrste veze možete saznati u članku o ciljnoj usluzi.
+   1. Ako [koristite vlastiti sef za ključeve](use-azure-key-vault.md) za pohranu tajni, aktivirajte **Upotrijebi sef za ključeve** i odaberite tajnu s popisa.
 
 1. Da biste stvorili vezu, odaberite **Spremi**.
 
@@ -93,3 +94,6 @@ Odvojena obogaćivanja i izvozi postaju neaktivni. Ponovno ih aktivirate tako da
 
 1. Da biste potvrdili brisanje, odaberite **Ukloni**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Uspostavljanje veza s tajnama kojima upravlja vaš vlastiti sef za ključeve
+
+Za neke veze potrebne su tajne poput API ključeva ili lozinki. Neke veze podržavaju tajne pohranjene u sefu za ključeve. Saznajte više o podržanim vezama i načinu postavljanja na [vlastiti sef za ključeve za uvide u ciljne skupine](use-azure-key-vault.md).

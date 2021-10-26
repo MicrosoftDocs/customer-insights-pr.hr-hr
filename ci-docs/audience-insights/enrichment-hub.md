@@ -1,7 +1,7 @@
 ---
 title: Obogaćivanje objedinjenih profila klijenata
 description: Koristite mogućnosti za obogaćivanje podataka o klijentima.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469949"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617546"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za korisničke profile (pretpregled)
 
@@ -27,16 +27,26 @@ U uvidima u ciljnu skupinu idite na **Podaci** > **Obogaćivanje** za rad s mogu
 
 Da biste stvorili ili uredili obogaćivanja, morate imati dozvole Suradnik ili Administrator. Za dodatne informacije pogledajte [Dozvole](permissions.md).
 
-Na kartici **Otkrivanje** pronaći ćete sljedeća obogaćivanja:
+Na kartici **Otkrij** pronaći ćete sve podržane mogućnosti obogaćivanja.
 
-- [Azure karte](enrichment-azure-maps.md) omogućuje Microsoft
+# <a name="individual-customers-b2c"></a>[Pojedinačni klijenti (B2C)](#tab/b2c)
+
 - [Brendovi](enrichment-microsoft.md) koje je omogućio Microsoft
 - [Interesi](enrichment-microsoft.md) koje je omogućio Microsoft
-- [Poboljšane adrese](enrichment-enhanced-addresses.md) koje je omogućio Microsoft
-- [Podatke o tvrtki](enrichment-leadspace.md) omogućuje tvrtka Leadspace
+- [Poboljšane adrese](enrichment-enhanced-addresses.md) koje je omogućio Microsoft 
 - [Demografske podatke](enrichment-experian.md) pruža Experian
-- [Podatke o lokaciji](enrichment-here.md) pruža tvrtka HERE Technologies
-- [Prilagođeni podaci](enrichment-SFTP-custom-import.md) putem Protokola sigurnog prijenosa datoteka (SFTP)
+- [Prilagođeni podaci](enrichment-SFTP-custom-import.md) putem Protokola sigurnog prijenosa datoteka (SFTP) 
+- [Azure karte](enrichment-azure-maps.md) omogućuje Microsoft
+
+# <a name="business-accounts-b2b"></a>[Poslovni računi (B2B)](#tab/b2b)
+
+- [Podatke o tvrtki](enrichment-leadspace.md) omogućuje tvrtka Leadspace
+- [Poboljšane adrese](enrichment-enhanced-addresses.md) koje je omogućio Microsoft 
+- [Podatke o lokaciji](enrichment-here.md) pruža tvrtka HERE Technologies 
+- [Prilagođeni podaci](enrichment-SFTP-custom-import.md) putem Protokola sigurnog prijenosa datoteka (SFTP) 
+- [Azure karte](enrichment-azure-maps.md) omogućuje Microsoft
+
+---
 
 Na kartici **Moja obogaćivanja** možete vidjeti obogaćivanja koja ste konfigurirali i urediti njihova svojstva.
 
@@ -58,7 +68,7 @@ Pokrenite ili deaktivirajte više obogaćivanja odjednom tako da ih odaberete na
 
 ## <a name="enrichments-and-connections"></a>Obogaćivanja i veze
 
-Obogaćivanja treće strane konfigurirana su pomoću [veza](connections.md) koje administrator postavlja s vjerodajnicama i daje pristanak za prijenos podataka. Vezu mogu koristiti administratori i suradnici da bi konfigurirali obogaćivanja.  
+Obogaćivanja treće strane konfigurirana su pomoću [veza](connections.md) koje administrator postavlja s vjerodajnicama i daje pristanak za prijenos podataka. Veze mogu upotrebljavati administratori i suradnici za konfiguriranje obogaćivanja.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Višestruka obogaćivanja iste vrste
 

@@ -4,17 +4,17 @@ description: Kako stvarati, uređivati i brisati metriku.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 97189168e0f5586aad8be8089a1f9e27893c2115c7e805ddaab1efc00e11b860
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 79600a14bc7e98dfd066270f19c353fd007e1341
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034260"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623713"
 ---
 # <a name="view-and-create-metrics"></a>Prikaz i stvaranje metrike
 
@@ -38,21 +38,24 @@ Te se metrike sustava temelje na postojećim svojstvima događaja u osnovnim dog
 1. Idite u odjeljak **Podaci** u lijevom navigacijskom oknu. 
 1. Odaberite karticu **Metrika** da biste vidjeli popis svih metrika u radnom prostoru. 
    > [!NOTE]
-   > Metrika koju generira sustav je samo za čitanje. Ne možete je promijeniti ili izbrisati. Stvarati i uređivati možete samo prilagođenu metriku.
+   > Metrika koju generira sustav je samo za čitanje. Ne možete je uređivati ili brisati. Stvarati i uređivati možete samo prilagođenu metriku.
 
 ## <a name="create-a-metric"></a>Stvaranje metrike
 
 Metriku mogu stvarati administratori okruženja i radnog prostora. Svojstva događaja moraju se poslati u radni prostor prije nego što stvorite metriku. Možete stvoriti metriku na temelju svojstava događaja koja šalju osnovni događaji ili koristiti web SDK za [slanje prilagođenih svojstava događaja](advanced-SDK-implementation.md).
 
 1. Idite u odjeljak **Podaci** > **Metrika**.
-1. Odaberite **Nova metrika**.
+1. Odaberite **Nova metrika** da biste otvorili **Biblioteku resursa** i dijaloški okvir **Nova metrika bez naziva**.
 
    :::image type="content" source="media/new-metric.png" alt-text="Dodajte događaju metriku.":::
 
-1. Za format odaberite vrstu podataka **Cijeli broj** ili **Dvostruko**. Integer je cijeli broj. Za Dvostruko možete odabrati između jedne i tri decimale.
-1. U oknu **Biblioteka resursa** pronađite svojstvo događaja na kojem će se temeljiti metrika.
-1. Odaberite **znak plus (+)** pored svojstva da biste ga koristili u formuli. Formulu možete stvoriti samo na temelju jednog svojstva. 
-1. Odaberite jednu od sljedećih agregatnih funkcija. 
+1. U dijaloškom okviru **Nova metrika bez naziva** odaberite padajući popis **Format** te odaberite vrstu podataka **Cijeli broj** ili **Dvostruko**. Integer je cijeli broj. Za Dvostruko možete odabrati jedno i tri decimalna mjesta.
+
+   :::image type="content" source="media/create-new-metric.png" alt-text="Stvorite novu metriku.":::
+   
+5. U oknu **Biblioteka resursa** pronađite svojstvo događaja na kojem će se temeljiti metrika.
+6. Odaberite **znak plus (+)** pored svojstva da biste ga koristili u formuli. Formulu možete stvoriti samo na temelju jednog svojstva. 
+7. Odaberite jednu od sljedećih agregatnih funkcija. 
 
    - Zbroj: aritmetički zbroj svih vrijednosti 
    - Prosjek: srednji prosjek svih vrijednosti
@@ -68,12 +71,16 @@ Metrika može potrajati do minute prije nego što je možete upotrijebiti za [st
 
 ## <a name="edit-a-metric"></a>Uređivanje metrike
 
+Možete uređivati samo prilagođenu metriku.
+
 1. Idite u odjeljak **Podaci** > **Metrika**.
 1. Odaberite metriku s popisa.
 1. Promjena definicije metrike
 1. Odaberite **Spremi**.
 
 ## <a name="change-the-name-of-a-metric"></a>Promjena naziva metrike
+
+Možete promijeniti samo naziv prilagođene metrike.
 
 1. Idite u odjeljak **Podaci** > **Metrika**.
 1. Odaberite **Više [...]** za metriku i odaberite **Uredi naziv**.
@@ -82,11 +89,15 @@ Metrika može potrajati do minute prije nego što je možete upotrijebiti za [st
 
 ## <a name="delete-a-metric"></a>Brisanje metrike
 
+Možete brisati samo prilagođenu metriku.
+
 1. Idite u odjeljak **Podaci** > **Metrika**.
 1. Odaberite **Više [...]** za metriku i odaberite **Izbriši**.
 
    :::image type="content" source="media/delete-metric.png" alt-text="Izbrišite metriku za događaj.":::
 
 1. Odaberite **Izbriši** da biste potvrdili brisanje.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

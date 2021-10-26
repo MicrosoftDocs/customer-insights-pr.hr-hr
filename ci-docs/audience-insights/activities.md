@@ -1,7 +1,7 @@
 ---
 title: Aktivnosti klijenta
 description: Definirajte aktivnosti klijenta i prikažite ih na vremenskoj traci na profilima klijenata.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494402"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617960"
 ---
 # <a name="customer-activities"></a>Aktivnosti klijenta
 
@@ -24,8 +24,7 @@ Kombinirajte aktivnosti klijenta iz [različitih izvora podataka](data-sources.m
 
 Vaši izvori podataka mogu uključivati entitete s podacima o transakcijama i aktivnostima iz više izvora podataka. Identificirajte te entitete i odaberite aktivnosti koje želite prikazati na vremenskoj traci klijenta. Odaberite entitet koji uključuje vašu ciljanu aktivnost ili aktivnosti.
 
-> [!NOTE]
-> Entitet mora imati najmanje jedan atribut vrste **Datum** da bi se uključio u vremensku traku klijenta i ne možete dodavati entitete bez polja **Datum**. Kontrola **Dodaj aktivnost** onemogućena je ako nije pronađen takav entitet.
+Entitet mora imati najmanje jedan atribut vrste **Datum** da bi se uključio u vremensku traku klijenta i ne možete dodavati entitete bez polja **Datum**. Kontrola **Dodaj aktivnost** onemogućena je ako nije pronađen takav entitet.
 
 1. U uvidima u ciljnu skupinu idite na **Podaci** > **Aktivnosti**.
 
@@ -41,13 +40,16 @@ Vaši izvori podataka mogu uključivati entitete s podacima o transakcijama i ak
 
 1. Odaberite **Sljedeće** da biste prešli na sljedeći korak.
 
-1. U koraku **Odnos** konfigurirajte pojedinosti za povezivanje podataka o aktivnosti s odgovarajućim klijentom. Ovaj korak vizualizira vezu među entitetima.  
+1. U kkoraku **Odnos** konfigurirajte pojedinosti za povezivanje podataka o aktivnosti s odgovarajućim zapisom klijenta. Ovaj korak vizualizira vezu među entitetima.  
 
    - **Prvi**: Strano polje u vašem entitetu aktivnosti koje će se koristiti za uspostavljanje odnosa s drugim entitetom.
    - **Drugi**: Odgovarajući izvorni entitet klijenta s kojim će vaš entitet aktivnosti biti u odnosu. Možete se odnositi samo na izvorne entitete klijenata koji se koriste u procesu objedinjavanja podataka.
    - **Treći**: Ako odnos između ovog entiteta aktivnosti i odabranog izvornog entiteta klijenta već postoji, naziv odnosa bit će u načinu samo za čitanje. Ako takav odnos ne postoji, stvorit će se novi odnos s nazivom koji navedete u ovom okviru.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definirajte odnos entiteta.":::
+
+   > [!TIP]
+   > U B2B okruženjima možete birati između entiteta računa i drugih entiteta. Ako odaberete entitet računa, automatski se postavlja putanja odnosa. Za druge entitete morate definirati putanju odnosa preko jednog ili više posrednih entiteta dok ne dođete do entiteta računa.
 
 1. Odaberite **Sljedeće** da biste prešli na sljedeći korak. 
 
@@ -95,5 +97,34 @@ Sljedeće su radnje dostupne kada odaberete aktivnost.
 - **Preimenuj** : Otvara dijaloški okvir u koji možete unijeti drugi naziv za odabranu aktivnost. Odaberite **Spremi** za primjenu izmjena.
 
 - **Izbriši**: Otvara dijaloški okvir za potvrdu brisanja odabrane aktivnosti. Možete i izbrisati više aktivnosti odjednom odabirom aktivnosti, a zatim odabirom ikone za brisanje. Odaberite **Izbriši** da biste potvrdili brisanje.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Prikaz vremenskih traka aktivnosti na profilima klijenata
+
+Nakon što konfigurirate aktivnosti klijenta, odaberite **Prikaži na vremenskoj traci aktivnosti** u konfiguraciji aktivnosti kako biste pronašli sve aktivnosti klijenta na profilu klijenta.
+
+Da biste otvorili vremensku traku za klijenta, idite na **Klijenti** i odaberite profil klijenta koji želite vidjeti.
+
+Ako je klijent sudjelovao u aktivnosti koju ste konfigurirali, pronaći ćete je u odjeljku **Vremenska traka aktivnosti**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Pregledajte konfigurirane aktivnosti u profilima klijenata.":::
+
+Postoji nekoliko načina za filtriranje aktivnosti na vremenskoj traci aktivnosti:
+
+- Možete odabrati jednu ili više ikona aktivnosti da biste poboljšali rezultate tako da uključuju samo odabrane vrste.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrirajte aktivnosti prema vrsti s pomoću ikona.":::
+
+- Možete odabrati **Filtar** za otvaranje panela s filtrima za konfiguriranje filtara vremenske trake.
+
+   1. Možete filtrirati prema *Vrsti aktivnosti* i *Datumu*
+   1. Odaberite **Primijeni** za biste upotrijebili filtre na vremenskoj traci aktivnosti.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="S pomoću panela filtra konfigurirajte uvjete filtra.":::
+
+Da biste uklonili filtre, odaberite **x** pored svakog filtra primijenjenog na vremensku traku ili odaberite **Očisti filtre**.
+
+
+> [!NOTE]
+> Filtri aktivnosti uklanjaju se kada napustite profil klijenta. Morate ih primijeniti svaki put kada otvorite profil klijenta.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

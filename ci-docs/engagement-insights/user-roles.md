@@ -4,27 +4,33 @@ description: Pregled dostupnih uloga i dozvola za članove radnog prostora.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036684"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645528"
 ---
 # <a name="roles-and-permissions"></a>Uloge i dozvole
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Radni prostor način je za pohranu i upravljanje događajima i izvješćima. Član je korisnik koji može pristupiti radnom prostoru. Možete svojem radnom prostoru dodijeliti članove i definirati njihove uloge i dozvole. Uloge administratora upravljaju radnim prostorima i okruženjima te konfiguriraju uvide u angažman za ostale korisnike. Uloge suradnika namijenjene su analitičarima koji ne trebaju konfigurirati uvide u angažman, već žele stvarati vlastita izvješća, kanale ili segmente.
+Radni prostor mjesto je za pohranu i upravljanje događajima i izvješćima. Dodatne informacije potražite u odjeljku [Stvaranje radnog prostora i dodavanje članova](create-workspace.md). 
+
+Radni prostor može uključivati sljedeće uloge i dozvole:
+
+- Uloge *Član* su korisnici koji mogu pristupiti radnom prostoru. Možete svojem radnom prostoru dodijeliti članove i definirati njihove uloge i dozvole. 
+- Uloge *Administrator* upravljaju radnim prostorima i okruženjima te konfiguriraju uvide u angažman za ostale korisnike. 
+- Uloge *Suradnik* usmjerene su na analitičare koji ne moraju konfigurirati uvide u angažman, nego žele stvoriti vlastita izvješća, kanale ili segmente.
 
 ## <a name="permissions"></a>Dopuštenja
   
-Sljedeći grafikon identificira dozvole za svaku ulogu. 
+Sljedeća tablica identificira dozvole za svaku ulogu. 
 
 | Dozvola | Administrator okruženja | Administrator radnog prostora | Suradnik za okruženje | Suradnik za radni prostor | 
 |--|--|--|--|--|

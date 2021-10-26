@@ -8,18 +8,18 @@ ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
-ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
+ms.openlocfilehash: 82591919b44eaac8a251d7fdb148253d5cac23c3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "7564585"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645392"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Regionalna dostupnost za Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Uvidi u angažman, mogućnost Dynamics 365 Customer Insights, postupno uvodi sve više regija u kojima klijenti mogu odabrati pohraniti svoje podatke. Administratori mogu odabrati regiju kada [stvore novo okruženje](manage-environments-workspaces.md#create-an-environment). 
+Uvidi u angažman, mogućnost Dynamics 365 Customer Insights, postupno uvodi sve više regija u kojima klijenti mogu odabrati pohraniti svoje podatke. Administratori mogu odabrati regiju kada [stvore novo okruženje](create-new-environment.md). 
 
 Kada prvi put postavite uvide u angažman, možete odabrati regiju dok prolazite kroz [vođeno iskustvo prvog pokretanja](quickstart.md). Kasnije, svako novo okruženje omogućuje vam odabir regije u kojoj će se podaci pohraniti.
 
