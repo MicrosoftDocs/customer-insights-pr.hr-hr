@@ -1,7 +1,7 @@
 ---
 title: Stvaranje segmenata pomoću graditelja segmenata
 description: Izradite segmente klijenata da biste ih grupirali na temelju različitih atributa.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622862"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673541"
 ---
 # <a name="create-segments"></a>Stvaranje segmenata
 
@@ -23,6 +23,7 @@ Definirajte složene filtre oko objedinjenog entiteta klijenta i s njime povezan
 > [!TIP]
 > - Brzi segmenti podržani su samo u okruženjima za **pojedinačne klijente**.    
 > - Segmenti temeljeni na **pojedinačnim klijentima** automatski uključuju dostupne podatke za kontakt za brojeve segmenta. U okruženjima za **poslovne račune** segmenti se temelje na računima (tvrtke ili podružnice). Za uključivanje podataka o kontaktu u segment koristite funkciju **Atributi projekta** u sastavljaču segmenata.
+>    - Provjerite jesu li izvori podataka o kontaktu [semantički mapirani na entitetu ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Graditelj segmenata
 
@@ -52,7 +53,7 @@ Gornji primjer ilustrira sposobnost segmentacije. Definirali smo segment za klij
 
 Postoji više načina za stvaranje novog segmenta. Ovaj odjeljak opisuje kako izgraditi vlastiti segment od nule. Također možete stvoriti *brzi segment* na temelju postojećih entiteta ili iskoristiti modele strojnog učenja da biste dobili *predložene segmente*. Dodatne informacije potražite u odjeljku [Pregled segmenata](segments.md).
 
-Tijekom izrade segmenta možete spremiti skicu. U fazi skice, segment se sprema kao neaktivan segment. Kada dovršite konfiguraciju segmenta, pokrenite je da biste aktivirali segment. Alternativno, možete _ **Aktivirati** _ segment na stranici **Svi segmenti**.
+Tijekom izrade segmenta možete spremiti skicu. U fazi skice, segment se sprema kao neaktivan segment. Kada dovršite konfiguraciju segmenta, pokrenite je da biste aktivirali segment. Možete i odabrati **Aktiviraj** segment na stranici **Svi segmenti**.
 
 1. Idite na stranicu **Segmenti**.
 
@@ -86,17 +87,25 @@ Tijekom izrade segmenta možete spremiti skicu. U fazi skice, segment se sprema 
 
    Prilikom korištenja operatora OR svi se uvjeti moraju temeljiti na entitetima uključenima u putanju odnosa.
 
-   - Možete stvoriti više pravila za stvaranje različitih skupova zapisa klijenta. Možete kombinirati grupe da biste uključili klijente potrebne za vaš poslovni slučaj. Da biste stvorili novo pravilo, odaberite **Dodaj pravilo**. Konkretno, ako ne možete uključiti entitet u pravilo zbog navedene putanje odnosa, morate stvoriti novo pravilo kako biste odabrali atribute koji ga čine.
+   - Možete stvoriti više pravila za stvaranje različitih skupova zapisa klijenta. Možete kombinirati grupe da biste uključili klijente potrebne za vaš poslovni slučaj. Da biste stvorili novo pravilo, odaberite **Dodaj pravilo**. Konkretno, ako ne možete uključiti i entitet u pravilo zbog navedene putanje odnosa, morate stvoriti novo pravilo da odaberete atribute iz njega.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Dodajte novo pravilo segmentu i odaberite operator skupa.":::
 
    - Odaberite jednog od postavljenih operatora: **Unija**, **Unakrsno** ili **Izuzmi**.
 
       - **Unija** objedinjuje dvije grupe.
-      - **Unakrsno** preklapa dvije grupe. Samo podaci koji su *zajednički* u obje grupe zadržavaju se u objedinjenoj grupi.
-      - **Izuzmi** kombinira dvije grupe. Zadržavaju se samo podaci u grupi A koji *nisu zajednički* s podacima grupe B.
+      - **Unakrsno** preklapa dvije grupe. Samo podaci koji *su zajednički* objema grupama ostaju u objedinjenoj grupi.
+      - **Izuzmi** kombinira dvije grupe. Zadržavaju se samo podaci u grupi A koji *nisu zajednički* podacima u grupi B.
 
-1. Prema zadanim postavkama segmenti generiraju izlazni entitet koji sadrži sve atribute profila klijenata koji odgovaraju definiranim filtrima. Ako se segment temelji na drugim entitetima osim na entitetu *Klijent*, izlaznom entitetu možete dodati više atributa iz tih entiteta. Odaberite stavku **Atributi projekta** za odabir atributa koji će se dodati izlaznom entitetu.  
+1. Prema zadanim postavkama segmenti generiraju izlazni entitet koji sadrži sve atribute profila klijenata koji odgovaraju definiranim filtrima. Ako se segment temelji na drugim entitetima osim na entitetu *Klijent*, izlaznom entitetu možete dodati više atributa iz tih entiteta. Odaberite stavku **Atributi projekta** za odabir atributa koji će se dodati izlaznom entitetu. 
+
+   > [!IMPORTANT]
+   > Za segmente koji se temelje na poslovnim računima, pojedinosti o jednom ili više kontakata svakog računa iz entiteta *ContactProfile* moraju biti uključeni u segment kako bi se omogućilo aktiviranje tog segmenta ili izvezeni na odredišta koja zahtijevaju podatke o kontaktu. Za više informacija o entitetu *ContactProfile* pogledajte [Semantička mapiranja](semantic-mappings.md).
+   > Uzorak izlaza za segment koji se temelji na poslovnim računima s predviđenim atributima kontakata mogao bi izgledati ovako: 
+   >
+   > |ID  |Ime kupca  |Prihod  |Naziv kontakta  | Uloga kontakta|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100 tisuća | [Abbie Moss, Ruth Soto]  | [Generalni direktor, Voditelj nabave]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Primjer projiciranih atributa odabranih u bočnom oknu za dodavanje izlaznom entitetu.":::
   
@@ -107,13 +116,14 @@ Tijekom izrade segmenta možete spremiti skicu. U fazi skice, segment se sprema 
    > - Ako je atribut koji želite projicirati udaljen više od jednog koraka od entiteta *Klijent*, kako je definirano odnosom, taj bi se atribut trebao koristiti u svakom pravilu upita segmenta koji sastavljate. 
    > - Ako je atribut koji želite projicirati udaljen samo jedan korak od entiteta *Klijent*, taj se atribut ne treba koristiti u svakom pravilu upita segmenta koji sastavljate. 
    > - **Projicirani atributi** uzimaju se u obzir pri korištenju postavljenih operatora.
-   > - Za segmente temeljene na poslovnim računima, pojedinosti o jednom ili više kontakata svakog računa moraju biti uključene u segment kako bi se omogućilo aktiviranje tog segmenta ili izvoz na odredišta koja zahtijevaju podatke za kontakt.
 
 1. Prije nego spremite i pokrenete segment, odaberite **Uredi pojedinosti** pored naziva segmenta. Navedite naziv za svoj segment i ažurirajte predloženi **Naziv izlaznog entiteta** za segment. Segmentu možete dodati i opis.
 
 1. Odaberite **Pokreni** da biste spremili segment, aktivirajte ga i počnite obrađivati segment na temelju svih pravila i uvjeta. U protivnom će biti spremljen kao neaktivan segment.
-
+   
 1. Odaberite **Natrag na segmente** za povratak na stranicu **Segmenti**.
+
+1. Prema zadanim se postavkama segment stvara kao dinamički segment. To znači da se segment osvježava tijekom osvježavanja sustava. Da biste [zaustavili automatsko osvježavanje](segments.md#manage-existing-segments), odaberite segment i odaberite mogućnost **Učini statičkim**. Statički segmenti mogu se [ručno osvježavati](segments.md#refresh-segments) u bilo kojem trenutku.
 
 > [!TIP]
 > - Graditelj segmenata neće predlagati valjane vrijednosti entiteta prilikom postavljanja operatora za uvjete. Možete otići na **Podaci** > **Entiteti** i preuzeti podatke entiteta kako biste vidjeli koje su vrijednosti dostupne.

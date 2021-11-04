@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645117"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673724"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
@@ -67,7 +67,8 @@ Sljedeći podaci *nisu* kopirani:
 
 - Profili klijenata.
 - Vjerodajnice izvora podataka. Morat ćete navesti vjerodajnice za svaki izvor podataka i ručno osvježiti izvore podataka.
-- Izvori podataka iz mape Common Data Model i značajke Data Lake kojom upravlja Dataverse. Te izvore podataka morat ćete stvoriti ručno s istim nazivom kao u izvornom okruženju.
+
+- Izvori podataka iz mape Common Data Model i Dataverse – upravljano data lake. Te izvore podataka morat ćete stvoriti ručno s istim nazivom kao u izvornom okruženju.
 
 Kad kopirate okruženje, vidjet ćete potvrdnu poruku da je stvoreno novo okruženje. Odaberite **Idi na izvore podataka** da biste vidjeli popis izvora podataka.
 

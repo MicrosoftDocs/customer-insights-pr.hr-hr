@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606047"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673806"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Što je novo u mogućnosti uvida u ciljnu skupinu Dynamics 365 Customer Insights
 
@@ -166,7 +166,7 @@ Ažuriranja u ožujku 2021. uključuju nekoliko značajki, nadogradnje performan
 - **Izvoz segmenata u Constant Contact** Proširili smo naša izvozna odredišta tako da uključuju i Constant Contact. Sada možete izvesti segmente iz Customer Insights na popise Constant Contact i koristiti ih kao polaznu osnovu za vaše marketinške kampanje.   
    Za više informacija pogledajte [Izvoz u Constant Contact](export-constant-contact.md).
 
-- **Izvoz segmenata u RollWorks** Proširili smo naša izvozna odredišta tako da uključuju i RollWorks. Sada možete izvesti segmente iz Customer Insights u ciljne skupine RollWorks i koristiti ih kao polaznu osnovu za vaše B2B oglašavanje.    
+- **Izvoz segmenata u RollWorks** Proširili smo naša izvozna odredišta tako da uključuju i RollWorks. Sada možete izvesti segmente iz Customer Insights u ciljanu publiku RollWorks i koristiti ih kao osnovu za svoje B2B oglašavanje.    
    Za više informacija pogledajte [Izvoz u RollWorks ](export-rollworks.md).
 
 - **Izvoz segmenata u Snapchat** Proširili smo naša izvozna odredišta tako da uključuju i Snapchat. Sada možete izvesti segmente iz Customer Insights u ciljne skupine Snapchat i koristiti ih kao polaznu osnovu za vaše oglašavanje.     

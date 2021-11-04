@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622850"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673361"
 ---
 # <a name="define-and-manage-measures"></a>Definiranje i upravljanje mjerama
 
@@ -28,7 +28,7 @@ Koristite alat za izradu mjera za planiranje poslovnih aktivnosti ispitivanjem p
 
 Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Mjeru s atributima podataka možete sastaviti iz podatkovnih entiteta koji imaju postavljen odnos za povezivanje s entitetom objedinjenog profila klijenta.
 
-# <a name="individual-customers-b2c"></a>[Pojedinačni klijenti (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
 
 1. U uvidima u ciljnu skupinu idite na **Mjere**.
 
@@ -92,7 +92,7 @@ Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Mjeru s atributima
 
 1. Idite na **Mjere** da biste na popisu vidjeli novostvorenu mjeru.
 
-# <a name="business-accounts-b2b"></a>[Poslovni računi (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Poslovni računi (B-to-B)](#tab/b2b)
 
 1. U uvidima u ciljnu skupinu idite na **Mjere**.
 
@@ -164,7 +164,7 @@ Ovaj vas odjeljak vodi kroz stvaranje nove mjere od početka. Mjeru s atributima
 
 Za njihovo stvaranje možete koristiti unaprijed definirane predloške najčešće korištenih mjera. Detaljni opisi predložaka i vođeno iskustvo pomažu vam u učinkovitom stvaranju mjera. Predlošci se nadovezuju na mapirane podatke iz entiteta *Objedinjena aktivnost*. Stoga provjerite jeste li konfigurirali [aktivnosti klijenata](activities.md) prije nego što stvorite mjeru iz predloška.
 
-# <a name="individual-customers-b2c"></a>[Pojedinačni klijenti (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
 
 Za njihovo stvaranje možete koristiti unaprijed definirane predloške najčešće korištenih mjera. Detaljni opisi predložaka i vođeno iskustvo pomažu vam u učinkovitom stvaranju mjera. Predlošci se nadovezuju na mapirane podatke iz entiteta *Objedinjena aktivnost*. Stoga provjerite jeste li konfigurirali [aktivnosti klijenata](activities.md) prije nego što stvorite mjeru iz predloška.
 
@@ -212,7 +212,7 @@ Sljedeći postupak opisuje korake za izradu nove mjere pomoću predloška.
 
 1. Sada možete odabrati **Pokreni** za izračunavanje rezultata mjere. Da biste je kasnije pročistili, odaberite **Spremi nacrt**.
 
-# <a name="business-accounts-b2b"></a>[Poslovni računi (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Poslovni računi (B-to-B)](#tab/b2b)
 
 Ova je značajka dostupna samo za mjere stvorene u okruženjima s pojedinačnim klijentima kao primarnom ciljnom skupinom.
 

@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623092"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673314"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvoza (pretpregled)
 
@@ -33,13 +33,13 @@ Postoje dvije glavne vrste izvoza:
 ### <a name="export-segments"></a>Izvoz segmenata
 
 **Izvoz segmenata u okruženja za poslovne račune (B2B) ili pojedinačne klijente (B2C)**  
-Većina opcija izvoza podržava obje vrste okruženja. Izvoz segmenata u različite ciljne sustave ima posebne zahtjeve. Općenito govoreći, broj segmenta, profil klijenta, sadrži podatke za kontakt. Iako je to uobičajeno slučaj sa segmentima sastavljen na pojedinačnim klijentima (B2C), to ne mora nužno biti slučaj sa segmentima koji se temelje na poslovnim računima (B2B). 
+Većina opcija izvoza podržava obje vrste okruženja. Izvoz segmenata u različite ciljne sustave ima posebne zahtjeve. Općenito govoreći, broj segmenta, profil klijenta, sadrži podatke za kontakt. Iako je to uobičajeno u slučaju segmenata izgrađenima na pojedinačnim klijentima (B2C), to ne mora nužno biti slučaj sa segmentima koji se temelje na poslovnim računima (B2B). 
 
-**Segmentiranje okruženja izvoza za poslovne račune (B2B)**  
+**Segment izvozi okruženja za poslovne račune (B2B)**  
 - Segmenti u kontekstu okruženja za poslovne račune izgrađeni su na entitetu *račun*. Za izvoz segmenata računa kakvi jesu, ciljni sustav mora podržavati čiste segmente računa. To je slučaj za [LinkedIn](export-linkedin-ads.md) kada odaberete opciju **tvrtka** prilikom definiranja izvoza.
 - Svi drugi ciljni sustavi zahtijevaju polja iz entiteta kontakta. Kako bi se osiguralo da segmenti računa mogu dohvatiti podatke iz povezanih kontakata, definicija segmenta mora projicirati atribute entiteta kontakta. Saznajte više o tome kako [konfigurirati segmente i atribute projekta](segment-builder.md).
 
-**Segmentiranje izvoza u okruženja za pojedinačne klijente (B2C)**  
+**Segment izvozi u okruženja za pojedinačne klijente (B2C)**  
 - Segmenti u kontekstu okruženja za pojedinačne klijente sastavljeni su na entitetu *objedinjeni profil klijenta*. Svaki segment koji zadovoljava zahtjeve ciljnih sustava (na primjer, adresa e -pošte) može se izvesti.
 
 **Ograničenja izvoza segmenata**  

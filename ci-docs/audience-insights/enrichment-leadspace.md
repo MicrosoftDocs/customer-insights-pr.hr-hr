@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 685b1683b0c90eab04b130552d2cb23a8ab7a235
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617342"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673221"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Obogaćivanje profila tvrtke uz Leadspace (pretpregled)
 
-Leadspace je tvrtka za proučavanje podataka koja pruža B2B platformu za podatke o klijentima. Omogućuje okruženjima s objedinjenim profilima klijenata koji se temelje na računima da obogate svoje podatke. Obogatite *Profile klijenata* atributima kao što su veličina tvrtke, lokacija ili industrija. Obogatite *Profile kontakta* atributima poput naslova, osobe ili potvrde e-pošte.
+Leadspace je tvrtka za znanost o podacima koja nudi B-to-B platformu za podatke o klijentima. Omogućuje okruženjima s objedinjenim profilima klijenata koji se temelje na računima da obogate svoje podatke. Obogatite *Profile klijenata* atributima kao što su veličina tvrtke, lokacija ili industrija. Obogatite *Profile kontakta* atributima poput naslova, osobe ili potvrde e-pošte.
 
 ## <a name="prerequisites"></a>Preduvjeti
 

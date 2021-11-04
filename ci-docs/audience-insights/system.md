@@ -1,7 +1,7 @@
 ---
 title: Konfiguracija sustava u uvidima u ciljnu skupinu
 description: Saznajte više o postavkama sustava u mogućnosti uvidi u ciljnu skupinu Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035887"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651831"
 ---
 # <a name="system-configuration"></a>Konfiguracija sustava
 
@@ -24,9 +24,9 @@ Stranica **Sustav** uključuje sljedeće kartice:
 - [Upotreba API-ja](#api-usage-tab)
 - [Više o](#about-tab)
 - [Općenito](#general-tab)
+- [Sigurnost](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Stranica sustava.](media/system-tabs.png "Stranica sustava")
+:::image type="content" source="media/system-tabs.png" alt-text="Kartice postavki na stranici sustava.":::
 
 ## <a name="status-tab"></a>Kartica Status
 
@@ -84,9 +84,15 @@ Kartica **O programu** sadrži podatke vaše tvrtke ili ustanove **Zaslonsko ime
 
 ## <a name="general-tab"></a>Kartica Općenito
 
-Postoje dvije mogućnosti na karticama **Općenito**, **Jezik** i **Oblik države/regije**.
+Možete promijeniti jezik i format zemlje/regije na kartici **Općenito**.
 
-Aplikacija [podržava brojne jezike](supported-languages.md). Da biste promijenili željeni jezik, odaberite **Jezik** s padajućeg izbornika.
+Customer Insights [podržava brojne jezike](/dynamics365/get-started/availability). Aplikacija upotrebljava vaše jezične postavke za prikaz elemenata poput izbornika, teksta oznake te poruka sustava na željenom jeziku.
+
+Uvezeni podaci i informacije koje ste ručno unijeli se ne prevode.
+
+### <a name="update-the-settings"></a>Ažuriraj postavke
+
+Da biste promijenili željeni jezik, odaberite **Jezik** s padajućeg izbornika.
 
 Da biste promijenili željeno oblikovanje za datum, vrijeme i brojeve, koristite padajući izbornik **Oblik države/regije**. Pod ovim se poljem prikazuje pretpregled oblikovanja. Sustav će automatski predložiti odabir kada odaberete novi jezik.
 
@@ -105,6 +111,13 @@ Pronađite pojedinosti o korištenju API-ja u stvarnom vremenu i pogledajte koji
 
    Operacije koje koriste [unos podataka u stvarnom vremenu](real-time-data-ingestion.md) sadrže gumb sa simbolom dalekozora za prikaz korištenja API-ja u stvarnom vremenu. Odaberite gumb da biste otvorili bočno okno s detaljima o upotrebi API-ja u stvarnom vremenu u trenutačnom okruženju.   
    Koristite okvir **Grupiraj prema** u oknnu **Korištenje API-ja u stvarnom vremenu** da biste odabrali način kako najbolje predstaviti svoje interakcije u stvarnom vremenu. Možete grupirati podatke prema načinu rada API-ja, nazivu kvalificiranog entiteta (uvučeni entitet), kreatoru (izvor događaja), rezultatu (uspjeh ili neuspjeh) ili kodovima pogrešaka. Podaci su dostupni u vidu povijesnog grafikona i tablice.
+
+## <a name="security-tab"></a>Kartica Sigurnost
+
+Kartica **Sigurnost** omogućuje vam povezivanje i upravljanje vlastitim [sefom za ključeve servisa Azure](/azure/key-vault/general/basic-concepts) u okruženju.
+Namjenski sef za ključeve može se koristiti za postavljanje i korištenje tajni u granicama usklađenosti tvrtke ili ustanove. Uvidi u ciljne skupine mogu koristiti tajne u sefu za ključeve platforme Azure za [uspostavu veza](connections.md) sa sustavima trećih strana.
+
+Za više informacija pogledajte [Donesite svoj vlastiti sef za ključeve servisa Azure](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

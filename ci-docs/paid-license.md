@@ -8,12 +8,12 @@ ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645671"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673427"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Početak rada nakon kupnje usluge Customer Insights
 
@@ -29,7 +29,7 @@ Ako želite isprobati uslugu i značajke, pogledajte [Postavljanje probnog okru�
 
 ## <a name="start-with-customer-insights"></a>Započnite s radom u programu Customer Insights
 
-Iskustvo prvog pokretanja pomaže vam da odaberete početni fokus na usluzi Customer Insights i istražite mogućnosti s oglednim podacima. Kao sljedeći korak, možete stvoriti vlastito okruženje i raditi s vlastitim podacima.
+Iskustvo prvog pokretanja pomaže vam da odaberete početni fokus u usluzi Customer Insights i istražite mogućnosti s oglednim podacima. Kao sljedeći korak, možete stvoriti vlastito okruženje i raditi s vlastitim podacima.
 
 **Za prvu prijavu**:
 
