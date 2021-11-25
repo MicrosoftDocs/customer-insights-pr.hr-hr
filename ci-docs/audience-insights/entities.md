@@ -1,7 +1,7 @@
 ---
 title: Entiteti i skupovi podataka
 description: Pogledajte podatke na stranici Entiteti.
-ms.date: 04/16/2020
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 137de726b243b501491fcbe7866820aaee26097fcf379270c423c277374ae9a4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033806"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732071"
 ---
 # <a name="entities-in-audience-insights"></a>Entiteti u uvidima u ciljnu skupinu
 
-Nakon [konfiguriranja izvora podataka](data-sources.md) otvorite stranicu **Entiteti** za evaluaciju kvalitete unesenih podataka. Entiteti se smatraju skupovima podataka. Više mogućnosti servisa Dynamics 365 Customer Insights izgrađeno je oko ovih entiteta. Ako ih pažljivo pregledate, mogli biste provjeriti rezultate tih mogućnosti.
+Nakon [konfiguriranja izvora podataka](data-sources.md) otvorite stranicu **Entiteti** za evaluaciju kvalitete unesenih podataka. Entiteti se smatraju skupovima podataka. Oko tih entiteta izgrađeno je više mogućnosti Dynamics 365 Customer Insights. Ako ih pažljivo pregledate, mogli biste provjeriti rezultate tih mogućnosti.
 
 Stranica **Entiteti** navodi entitete i uključuje nekoliko stupaca:
 
@@ -26,9 +26,10 @@ Stranica **Entiteti** navodi entitete i uključuje nekoliko stupaca:
 - **Izvor**: vrsta izvora podataka koji su uneseni za entitet
 - **Autor**: ime osobe koja je izradila entitet
 - **Izrađeno**: datum i vrijeme izrade entiteta
-- **Ažurirao**: ime osobe koja je ažurirala entitet
-- **Posljednji put ažurirano**: datum i vrijeme posljednjeg ažuriranja entiteta
-- **Posljednji put osvježeno**: datum i vrijeme posljednjeg osvježavanja podataka
+- **Ažurirano** : ime osobe koja je ažurirala entitet
+- **Stanje** : Detalji o posljednjem ažuriranju entiteta
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Istraživanje podataka određenih entiteta
 

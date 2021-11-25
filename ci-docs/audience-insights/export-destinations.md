@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka iz Customer Insights
 description: Upravljajte izvozima da biste dijelili podatke.
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673314"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732126"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvoza (pretpregled)
 
@@ -97,7 +97,9 @@ Nakon stvaranja izvoznih odredišta ona su navedena u odjeljku **Podaci** > **Iz
 
 Svaki izvoz koji konfigurirate ima raspored osvježavanja. Tijekom osvježavanja sustav traži nove ili ažurirane podatke koje će uključiti u izvoz. Prema zadanim postavkama izvozi se izvode kao dio svakog [zakazanog osvježavanja sustava](system.md#schedule-tab). Raspored osvježavanja možete prilagoditi ili ga isključiti za ručno pokretanje izvoza.
 
-Rasporedi izvoza ovise o stanju vašeg okruženja. Ako su u tijeku ažuriranja na [ovisnostima](system.md#refresh-policies) kada bi trebao započeti planirani izvoz, sustav će prvo dovršiti ažuriranja, a zatim pokrenuti izvoz. U stupcu **Osvježeno** možete vidjeti kad je izvoz zadnji put bio osvježen.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+Rasporedi izvoza ovise o stanju vašeg okruženja. Ako su u tijeku ažuriranja na [ovisnostima](system.md#refresh-processes) kada bi trebao započeti planirani izvoz, sustav će prvo dovršiti ažuriranja, a zatim pokrenuti izvoz. U stupcu **Osvježeno** možete vidjeti kad je izvoz zadnji put bio osvježen.
 
 ### <a name="schedule-exports"></a>Zakazivanje izvoza
 

@@ -1,7 +1,7 @@
 ---
 title: Podudaranje entiteta za objedinjavanje podataka
 description: Uskladite entitete za kombiniranje skupova podataka i stvaranje objedinjenih profila klijenata.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648199"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732625"
 ---
 # <a name="match-entities"></a>Slaganje entiteta
 
@@ -180,10 +180,7 @@ Idite u odjeljak **Podaci** > **Objedinjavanje** > **Uparivanje** i odaberite **
 
 Rezultat uspješnog pokretanja, jedinstveni entitet profila klijenta, pronaći ćete na stranici **Entiteti**. Vaš objedinjeni entitet klijenta naziva se **Klijenti** u odjeljku **Profili**. Prvo uspješno pokretanje uparivanja stvara objedinjeni entitet *Klijent*. Sva sljedeća pokretanja uparivanja proširuju taj entitet.
 
-> [!TIP]
-> Nakon pokretanja procesa podudaranja odaberite status procesa da biste otvorili okno **Pojedinosti o zadatku** . On daje pregled o vremenu obrade, posljednjem datumu obrade i svim pogreškama i upozorenjima povezanima sa zadatkom. Odaberite **Pogledaj pojedinosti** da biste vidjeli koji su entiteti sudjelovali u procesu podudaranja, koja su se pravila na njih primijenila i jesu li ažuriranja uspješno objavljena.  
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Osim toga, većina procesa [ovisi o ostalim procesima](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Detaljna putanja za pristup pojedinostima obrade s veze statusa zadatka.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Pregled i provjera valjanosti vaših uparivanja
 

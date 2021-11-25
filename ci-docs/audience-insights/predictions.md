@@ -1,7 +1,7 @@
 ---
 title: Dopunite djelomične podatke pomoću predviđanja
 description: Koristite predviđanja za popunjavanje nepotpunih podataka o kupcima.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,31 +9,32 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645025"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732369"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Dopunite djelomične podatke predviđanjima
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Dovršavanje djelomičnih podataka predviđanjima (zastarjelo)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Ova će značajka biti **zastarjela** od **5. studenog 2021**. Trenutne implementacije nastavit će raditi dok se značajka ne ukloni, ali nećete moći stvoriti nove integracije pomoću uputa u nastavku.
 
 Predviđanja omogućuju lako stvaranje predviđenih vrijednosti koje mogu poboljšati razumijevanje klijenta. Na stranici **Inteligencija** > **Predviđanja** možete odabrati **Moja predviđanja** da biste vidjeli predviđanja koja ste konfigurirali u drugim dijelovima uvida u ciljne skupine i omogućili vam da ih dodatno prilagodite.
 
 > [!NOTE]
 > Ne možete upotrebljavati tu značajku ako vaše okruženje koristi pohranu Azure Data Lake Gen 2 Storage.
 >
-> Značajka predviđanja upotrebljava automatizirana sredstva za procjenu podataka i predviđanja na temelju tih podataka, pa se stoga može upotrijebiti kao metoda profiliranja jer je taj pojam definiran Općom uredbom o zaštiti podataka (GDPR odn. OUZP). Klijentova upotreba ove značajke za obradu podataka može biti podložna OUZP-u ili drugim zakonima ili propisima. Odgovorni ste osigurati da je da vaše korištenje Dynamics 365 Customer Insights, uključujući predviđanja, u skladu sa svim primjenjivim zakonima i uredbama, uključujući zakone koji se odnose na privatnost, osobne podatke, biometrijske podatke, zaštitu podataka i povjerljivost komunikacija.
+> Značajka predviđanja upotrebljava automatizirana sredstva za procjenu podataka i predviđanja na temelju tih podataka, pa se stoga može upotrijebiti kao metoda profiliranja jer je taj pojam definiran Općom uredbom o zaštiti podataka (GDPR odn. OUZP). Klijentova upotreba ove značajke za obradu podataka može biti podložna OUZP-u ili drugim zakonima ili propisima. Odgovorni ste za osiguravanje da je vaša upotreba Dynamics 365 Customer Insights, uključujući predviđanja, u skladu sa svim primjenjivim zakonima i propisima, uključujući zakone koji se odnose na privatnost, osobne podatke, biometrijske podatke, zaštitu podataka i povjerljivost komunikacija.
 
 ## <a name="prerequisites"></a>Preduvjeti
 
 Da bi vaša tvrtka ili ustanova mogla upotrebljavati značajku predviđanja, mora ispuniti sljedeće preduvjete:
 
-1. Vaša tvrtka ili ustanova ima instancu [postavljenu u Microsoft Dataverse](/ai-builder/build-model#prerequisites) i u istoj je tvrtki ili ustanovi kao i Customer Insights.
+1. Vaša tvrtka ili ustanova ima instancu [postavljenu u Microsoft Dataverse](/ai-builder/build-model#prerequisites) i nalazi se u istoj tvrtki ili ustanovi kao i Customer Insights.
 
-2. Vaše okruženje uvida u ciljnu skupinu povezano je s vašom instancom Dataverse.
+2. Vaše okruženje publika uvida priloženo je vašoj Dataverse slučaju.
 
 Dodatne informacije potražite u odjeljku [Stvaranje novog okruženja](create-environment.md).
 
@@ -60,6 +61,8 @@ Dodatne informacije potražite u odjeljku [Stvaranje novog okruženja](create-en
    > ![Primjer koji pokazuje mapirane vrijednosti polja u kategorije.](media/intelligence-categorymapping.png "Primjer koji prikazuje preslikane vrijednosti polja u kategorije")
 
 8. Odaberite **Gotovo** i predviđanje će se obraditi. Obrada traje neko vrijeme, ovisno o veličini i složenosti podataka. Rezultati će biti dostupni u novom entitetu temeljenom na **Nazivu izlaznog entiteta** predviđanja koje ste stvorili.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Stvaranje predviđanja tijekom stvaranja segmenta
 
@@ -139,7 +142,7 @@ Sljedeće pokretanje predviđanja upotrebljavat će ažurirani model koji ste st
 
 ## <a name="troubleshooting"></a>Rješavanje problema
 
-Ako ne možete dovršiti proces prilaganja usluge Dataverse zbog pogreške, možete pokušati ručno dovršiti proces. Postoje dva poznata problema koji se mogu pojaviti u procesu prilaganja:
+Ako zbog pogreške ne možete dovršiti postupak Dataverse privitka, postupak možete pokušati dovršiti ručno. Postoje dva poznata problema koji se mogu pojaviti u procesu prilaganja:
 
 - Rješenje dodatka za korisničku karticu nije instalirano.
     1. Dopunite upute za [instaliranje i konfiguriranje rješenja](customer-card-add-in.md).

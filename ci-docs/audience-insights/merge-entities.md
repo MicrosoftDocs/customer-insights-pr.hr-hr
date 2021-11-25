@@ -1,7 +1,7 @@
 ---
 title: Spajanje entiteta u objedinjavanju podataka
 description: Spojite entitete da biste stvorili objedinjene profile klijenata.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648245"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732763"
 ---
 # <a name="merge-entities"></a>Spajanje entiteta
 
@@ -187,10 +187,9 @@ Odaberite **Pokreni spajanje i nizvodne procese** kako biste sustav osvježili s
 
 Da biste izvršili više promjena i ponovno pokrenuli korak, možete otkazati spajanje u tijeku. Odaberite **Osvježavanje...** i odaberite **Otkaži posao**  na bočnom oknu koje se pojavljuje.
 
-> [!TIP]
-> Nakon pokretanja procesa spajanja odaberite status procesa da biste otvorili okno **Pojedinosti o zadatku** . On daje pregled o vremenu obrade, posljednjem datumu obrade i svim pogreškama i upozorenjima povezanima sa zadatkom. Odaberite **Pogledaj pojedinosti** da biste vidjeli koji su entiteti sudjelovali u procesu podudaranja, je li uspjelo razrješavanje sukoba i jesu li ažuriranja uspješno objavljena.  
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Osim toga, većina procesa [ovisi o ostalim procesima](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Detaljna putanja za pristup pojedinostima obrade s veze statusa zadatka.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Detaljna putanja za pristup pojedinostima obrade s veze statusa zadatka.":::
 
 ## <a name="next-step"></a>Sljedeći korak
 

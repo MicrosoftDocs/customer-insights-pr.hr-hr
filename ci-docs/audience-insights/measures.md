@@ -1,7 +1,7 @@
 ---
 title: Stvaranje i upravljanje mjerama
 description: Definirajte mjere za analizu i odražavanje uspješnosti svojeg poslovanja.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673361"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732717"
 ---
 # <a name="define-and-manage-measures"></a>Definiranje i upravljanje mjerama
 
@@ -238,8 +238,7 @@ Odaberite mjeru s popisa za sljedeće mogućnosti:
 - Odaberite **Izbriši** mjeru.
 - **Aktiviraj** ili **Deaktiviraj**. Neaktivne mjere neće se osvježavati tijekom [zakazanog osvježavanja](system.md#schedule-tab).
 
-> [!TIP]
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Osim toga, većina procesa [ovisi o ostalim procesima](system.md#refresh-policies). Možete odabrati status procesa da biste vidjeli pojedinosti o tijeku cijelog posla. Nakon odabira **Pogledaj pojedinosti** za jedan od zadataka posla pronaći ćete dodatne informacije: vrijeme obrade, datum posljednje obrade i sve pogreške i upozorenja povezana sa zadatkom.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="next-step"></a>Sljedeći korak
 

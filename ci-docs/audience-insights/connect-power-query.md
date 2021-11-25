@@ -1,7 +1,7 @@
 ---
 title: Unos podataka putem konektora Power Query
 description: Poveznici za izvore podataka koji se temelje na platformi Power Query.
-ms.date: 09/29/2020
+ms.date: 11/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
-ms.translationtype: HT
+ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643485"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732209"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezivanje s izvorom podataka platforme Power Query
 
-Power Query nudi širok skup poveznika za unos podataka. Većinu ovih poveznika podržava aplikacija Dynamics 365 Customer Insights. Dodavanje izvora podataka koji se temelje na poveznicima platforme Power Query obično slijedi korake navedene u sljedećem odjeljku. Međutim, ovisno o povezniku koji upotrebljavate, potrebni su različiti podaci. Dodatne informacije potražite u dokumentaciji o pojedinim poveznicima u odjeljku [Reference poveznika platforme Power Query](/power-query/connectors/).
+Power Query nudi širok skup poveznika za unos podataka. Većinu tih konektora podržavaju Dynamics 365 Customer Insights. Dodavanje izvora podataka koji se temelje na poveznicima platforme Power Query obično slijedi korake navedene u sljedećem odjeljku. Međutim, ovisno o povezniku koji upotrebljavate, potrebni su različiti podaci. Dodatne informacije potražite u dokumentaciji o pojedinim poveznicima u odjeljku [Reference poveznika platforme Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -79,6 +79,8 @@ Poveznici s kvačicom u stupcu **Customer Insights (tijekovi podataka)** dostupn
    > [!div class="mx-imgBorder"]
    > ![Mogućnost uređivanja.](media/edit-option-data-sources.png "Uređivanje mogućnosti")
 
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
 3. Primijenite svoje promjene i pretvorbe u dijaloškom okviru **Power Query – Uređivanje upita** onako kao je opisano u odjeljku [Stvaranje novog izvora podataka](#create-a-new-data-source).
 
 4. Kako biste nakon dovršetka uređivanja spremili promjene na platformu Power Query, odaberite **Spremi**.

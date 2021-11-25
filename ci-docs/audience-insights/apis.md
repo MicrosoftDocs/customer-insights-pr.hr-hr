@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033576"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732255"
 ---
 # <a name="work-with-customer-insights-apis"></a>Rad s API-jima Customer Insights
 
-Dynamics 365 Customer Insights pruža API-je za izradu vlastitih aplikacija na temelju vaših podataka u značajci Customer Insights.
+Dynamics 365 Customer Insights pruža API-je za izradu vlastitih aplikacija na temelju vaših podataka u Customer Insights.
 
 > [!IMPORTANT]
 > Pojedinosti o tim API-jima navedeni su u [Referenci za API-je za Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Oni uključuju dodatne informacije o operacijama, parametrima i odgovorima.
@@ -115,27 +115,27 @@ U [odjeljku za registraciju aplikacije](#create-a-new-app-registration-in-the-az
 
 Ovaj vam odjeljak pomaže u početku korištenja klijentskih knjižnica dostupnih za API-je Customer Insights. Svi izvorni kodovi biblioteke i ogledne aplikacije mogu se naći na [stranici servisa GitHub za Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
-### <a name="c-nuget"></a>C# NuGet
+### <a name="c-nuget"></a>C # NuGet
 
-Naučite kako započeti s korištenjem klijentskih biblioteka za C# s NuGet.org. Za više informacija o paketu NuGet pogledajte [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Trenutačno ovaj paket cilja okvire netstandard2.0 i netcoreapp2.0.
+Saznajte kako početi koristiti C# klijentske biblioteke iz NuGet.org. Dodatne informacije o paketu NuGet potražite u [članku Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Trenutačno ovaj paket cilja okvire netstandard2.0 i netcoreapp2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Dodavanje klijentske biblioteke za C# projektu u C#
 
-1. U Visual Studio otvorite **Upravitelj paketa NuGet** za svoj projekt.
+1. U Visual Studio otvorite **upravitelj paketa NuGet** za svoj projekt.
 
 1. Potražite **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Odaberite **Instaliraj** za dodavanje paketa u projekt.
  
-   Alternativno, pokrenite ovu naredbu u **Konzoli upravitelja paketa NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Tu naredbu možete pokrenuti i na **konzoli upravitelja paketa NuGet** :`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Dodajte paket NuGet projektu u programu Visual Studio.":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Dodajte NuGet paket u Visual Studio projekt.":::
 
 #### <a name="use-the-c-client-library"></a>Korištenje klijentske biblioteke za C#
 
 1. Koristite [Microsoftovu biblioteku za provjeru autentičnosti (MSAL)](/azure/active-directory/develop/msal-overview) da biste dobili `AccessToken` koristeći svoju postojeću [Registraciju Azure aplikacije](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Nakon uspješne autentifikacije i stjecanja tokena, izgradite novi ili upotrijebite postojeći `HttpClient` s dodatnim **DefaultRequestHeaders "Authorization"** postavljenim na **Nositelj <access token>** i **Ocp-Apim-Subscription-Key** postavljenim na [**ključ pretplate** iz svog okruženja Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Nakon uspješne provjere autentičnosti i stjecanja tokena, konstruirajte novi ili upotrijebite postojeći `HttpClient` s **dodatnim DefaultRequestHeaders "Autorizacija"** postavljenim na **Bearer "pristupni token"** i **Ocp-Apim-Subscription-Key** postavljen na ključ [**pretplate** iz okruženja Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Po potrebi resetirajte zaglavlje **Authorization**. Primjerice, kada token istekne.
 

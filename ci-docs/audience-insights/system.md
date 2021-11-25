@@ -1,7 +1,7 @@
 ---
 title: Konfiguracija sustava u uvidima u ciljnu skupinu
-description: Saznajte više o postavkama sustava u mogućnosti uvidi u ciljnu skupinu Dynamics 365 Customer Insights.
-ms.date: 10/15/2021
+description: Informirajte se o postavkama sustava u Dynamics 365 Customer Insights publika mogućnosti uvida.
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
-ms.translationtype: HT
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651831"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732352"
 ---
 # <a name="system-configuration"></a>Konfiguracija sustava
+
+Da biste pristupili konfiguracijama sustava u publika uvidima, na lijevoj navigacijskoj traci **odaberite** > **Administratorski sustav** da biste vidjeli popis sistemskih zadataka i procesa.
 
 Stranica **Sustav** uključuje sljedeće kartice:
 - [Stanje](#status-tab)
@@ -30,39 +32,55 @@ Stranica **Sustav** uključuje sljedeće kartice:
 
 ## <a name="status-tab"></a>Kartica Status
 
-**Kartica statusa** omogućuje vam praćenje napretka unosa podataka, izvoza podataka i nekoliko drugih važnih procesa proizvoda. Pregledajte podatke na ovoj kartici da biste osigurali dovršetak aktivnih procesa.
+**Kartica Status omogućuje praćenje** tijeka zadataka, unosa podataka, izvoza podataka i nekoliko drugih važnih procesa proizvoda. Pregledajte informacije na ovoj kartici kako biste osigurali potpunost aktivnih zadataka i procesa.
 
-Ova kartica uključuje tablice s informacijama o statusu i obradi za različite procese. Svaka tablica prati **Naziv** zadatka i odgovarajućeg entiteta, **Status** najnovijeg pokretanja i vrijeme za **Zadnje ažuriranje**.
+Ova kartica uključuje tablice s informacijama o statusu i obradi za različite procese. Svaka tablica prati **Naziv** zadatka i odgovarajućeg entiteta, **Status** najnovijeg pokretanja i vrijeme za **Zadnje ažuriranje**. Detalje posljednjih nekoliko pokretanja možete vidjeti odabirom naziva zadatka ili procesa. 
 
-Prikažite pojedinosti o posljednjih nekoliko pokretanja zadatka odabirom njegova naziva.
+Odaberite status pokraj zadatka ili procesa u **stupcu Status** da biste otvorili **okno s detaljima o** tijeku.
 
-### <a name="status-types"></a>Vrste statusa
+   :::image type="content" source="media/system-progress-details.png" alt-text="Okno s detaljima o tijeku sustava":::
 
-Postoji šest vrsta stanja za zadatke. Sljedeće vrste statusa prikazuju se i na stranicama *Podudaranje*, *Spajanje*, *Izvori podataka*, *Segmenti*, *Mjere*, *Obogaćivanje*, *Aktivnosti* i *Predviđanja*:
+### <a name="status-definitions"></a>Definicije stanja
 
-- **Obrada:** zadatak je u tijeku. Status se može promijeniti u Uspješno ili Neuspješno.
-- **Uspješno:** zadatak je uspješno dovršen.
-- **Preskočen:** Zadatak je preskočen. Jedan ili više postupaka u nastavku o kojima ovaj zadatak ovisi nisu uspjeli ili su preskočeni.
-- **Neuspješno:** obrada zadatka nije uspjela.
-- **Otkazano:** korisnik je otkazao obradu prije nego što je dovršena.
-- **U redu čekanja:** Obrada je u redu čekanja i započet će nakon dovršetka svih zadataka. Za dodatne informacije pogledajte [Pravila osvježavanja](#refresh-policies).
+Sustav koristi sljedeće statuse za zadatke i procese:
 
-### <a name="refresh-policies"></a>Pravila osvježavanja
+|Stanje  |Definicija  |
+|---------|---------|
+|Otkazano |Korisnik je prekinuo obradu prije nego što je dovršena.   |
+|Neuspjelo   |Došlo je do pogreške pri unosu podataka.         |
+|Nije uspjelo  |Obrada nije uspjela.  |
+|Nije pokrenuto   |Izvor podataka još nema unesenih podataka ili je još uvijek u načinu skice.         |
+|Obrada u tijeku  |Zadatak ili proces su u tijeku.  |
+|Osvježavanje    |U tijeku je unos podataka. Ovu operaciju možete otkazati tako da odaberete **Prekini osvježavanje** u stupcu **Radnje**. Ako prekinete osvježavanje, izvor podataka vratit će se na posljednje stanje osvježavanja.       |
+|Preskočeno  |Zadatak ili proces su preskočeni. Jedan ili više postupaka u nastavku o kojima ovaj zadatak ovisi nisu uspjeli ili su preskočeni.|
+|Uspješno  |Zadatak ili proces uspješno su dovršeni. Za izvore podataka označava da su podaci uspješno progutani ako se u **stupcu Osvježeno spominje** vrijeme.|
+|U redu čekanja | Obrada je u redu čekanja i započet će nakon dovršetka svih uzlaznih zadataka i procesa. Dodatne informacije potražite [u odjeljku Osvježavanje procesa](#refresh-processes).|
 
-Ovaj popis prikazuje pravila osvježavanja za svaki od glavnih postupaka:
+### <a name="refresh-processes"></a>Osvježavanje procesa
 
-- **Izvori podataka:** pokreću se prema [konfiguriranom rasporedu](#schedule-tab). Ne ovisi ni o kojem drugom procesu. Podudaranje ovisi o uspješnom dovršetku ovog postupka.
-- **Podudaranje:** pokreće se prema [konfiguriranom rasporedu](#schedule-tab). Ovisi o obradi izvora podataka koji se koriste u definiciji podudaranja. Spajanje ovisi o uspješnom dovršetku ovog postupka.
-- **Spajanje**: pokreće se prema [konfiguriranom rasporedu](#schedule-tab). Ovisi o dovršetku postupka podudaranja. Segmenti, mjere, obogaćivanje, pretraživanje, aktivnosti, predviđanja i priprema podataka ovise o uspješnom dovršetku ovog procesa.
-- **Segmenti**: pokreću se ručno (jednokratno osvježavanje) i u skladu s [konfiguriranim rasporedom](#schedule-tab). Ovise o spajanju. Uvidi ovise o njihovoj obradi.
-- **Mjere**: pokreću se ručno (jednokratno osvježavanje) i u skladu s [konfiguriranim rasporedom](#schedule-tab). Ovise o spajanju.
-- **Aktivnosti**: pokreću se ručno (jednokratno osvježavanje) i u skladu s [konfiguriranim rasporedom](#schedule-tab). Ovise o spajanju.
-- **Obogaćivanje**: pokreće se ručno (jednokratno osvježavanje) i u skladu s [konfiguriranim rasporedom](#schedule-tab). Ovise o spajanju.
-- **Pretraživanje**: pokreće se ručno (jednokratno osvježavanje) i u skladu s [konfiguriranim rasporedom](#schedule-tab). Ovise o spajanju.
-- **Priprema podataka:** pokreće se prema [konfiguriranom rasporedu](#schedule-tab). Ovise o spajanju.
-- **Uvidi**: pokreću se ručno (jednokratno osvježavanje) i u skladu s [konfiguriranim rasporedom](#schedule-tab). Ovise o segmentima.
+Osvježavanje za zadatke i procese izvodi se prema [konfiguriranim rasporedima](#schedule-tab). 
 
-Odaberite status zadatka da biste vidjeli pojedinosti o tijeku cijelog posla. Gore navedena pravila osvježavanja mogu vam pomoći da shvatite što možete učiniti za rješavanje zadatka **Preskočeno** ili **U redu čekanja**.
+|Proces  |Opis  |
+|---------|---------|
+|Aktivnost  |Pokreće se ručno (jednokratno osvježavanje). Ovisi o procesu spajanja. Uvidi ovise o njihovoj obradi.|
+|Povezivanje analize |Pokreće se ručno (jednokratno osvježavanje). Ovisi o segmentima.  |
+|Priprema analize |Pokreće se ručno (jednokratno osvježavanje). Ovisi o segmentima.  |
+|Priprema podataka   |Ovisi o spajanju.   |
+|Izvori podataka   |Ne ovisi ni o kojem drugom procesu. Podudaranje ovisi o uspješnom dovršetku ovog postupka.  |
+|Obogaćivanja   |Pokreće se ručno (jednokratno osvježavanje). Ovisi o procesu spajanja. |
+|Izvozi odredišta |Pokreće se ručno (jednokratno osvježavanje). Ovisi o segmentima.  |
+|Uvidi |Pokreće se ručno (jednokratno osvježavanje). Ovisi o segmentima.  |
+|Intelligence   |Ovisi o spajanju.   |
+|Usklađivanje |Ovisi o obradi izvora podataka koji se koriste u definiciji podudaranja.      |
+|Mjerila  |Pokreće se ručno (jednokratno osvježavanje). Ovisi o procesu spajanja.  |
+|Spoji   |Ovisi o dovršetku postupka podudaranja. Segmenti, mjere, obogaćivanje, pretraživanje, aktivnosti, predviđanja i priprema podataka ovise o uspješnom dovršetku ovog procesa.   |
+|Profili   |Pokreće se ručno (jednokratno osvježavanje). Ovisi o procesu spajanja. |
+|Traži   |Pokreće se ručno (jednokratno osvježavanje). Ovisi o procesu spajanja. |
+|Segmenti  |Pokreće se ručno (jednokratno osvježavanje). Ovisi o procesu spajanja. Uvidi ovise o njihovoj obradi.|
+|Sustav   |Ovisi o dovršetku postupka podudaranja. Segmenti, mjere, obogaćivanje, pretraživanje, aktivnosti, predviđanja i priprema podataka ovise o uspješnom dovršetku ovog procesa.   |
+|User  |Pokreće se ručno (jednokratno osvježavanje). Ovisi o entitetima.  |
+
+Odaberite status procesa da biste vidjeli detalje napretka cijelog posla u kojem se nalazio. Gore navedeni procesi osvježavanja mogu vam pomoći da shvatite što možete učiniti da biste riješili **zadatak ili proces preskočenog** ili u redu **čekanja**.
 
 ## <a name="schedule-tab"></a>Kartica Raspored
 
@@ -86,7 +104,7 @@ Kartica **O programu** sadrži podatke vaše tvrtke ili ustanove **Zaslonsko ime
 
 Možete promijeniti jezik i format zemlje/regije na kartici **Općenito**.
 
-Customer Insights [podržava brojne jezike](/dynamics365/get-started/availability). Aplikacija upotrebljava vaše jezične postavke za prikaz elemenata poput izbornika, teksta oznake te poruka sustava na željenom jeziku.
+Customer Insights [podržava mnoge jezike](/dynamics365/get-started/availability). Aplikacija upotrebljava vaše jezične postavke za prikaz elemenata poput izbornika, teksta oznake te poruka sustava na željenom jeziku.
 
 Uvezeni podaci i informacije koje ste ručno unijeli se ne prevode.
 
@@ -109,7 +127,7 @@ Pronađite pojedinosti o korištenju API-ja u stvarnom vremenu i pogledajte koji
 
 -  **Operacije** – tablica s recima za svaku dostupnu operaciju API-ja i pojedinostima o korištenju operacija. Možete odabrati naziv operacije na koju želite ići [referenca za API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Operacije koje koriste [unos podataka u stvarnom vremenu](real-time-data-ingestion.md) sadrže gumb sa simbolom dalekozora za prikaz korištenja API-ja u stvarnom vremenu. Odaberite gumb da biste otvorili bočno okno s detaljima o upotrebi API-ja u stvarnom vremenu u trenutačnom okruženju.   
+   Operacije koje koriste [unos podataka u stvarnom](real-time-data-ingestion.md) vremenu sadrže gumb sa simbolom dalekozora za prikaz korištenja API-ja u stvarnom vremenu. Odaberite gumb da biste otvorili bočno okno s detaljima o upotrebi API-ja u stvarnom vremenu u trenutačnom okruženju.   
    Koristite okvir **Grupiraj prema** u oknnu **Korištenje API-ja u stvarnom vremenu** da biste odabrali način kako najbolje predstaviti svoje interakcije u stvarnom vremenu. Možete grupirati podatke prema načinu rada API-ja, nazivu kvalificiranog entiteta (uvučeni entitet), kreatoru (izvor događaja), rezultatu (uspjeh ili neuspjeh) ili kodovima pogrešaka. Podaci su dostupni u vidu povijesnog grafikona i tablice.
 
 ## <a name="security-tab"></a>Kartica Sigurnost
