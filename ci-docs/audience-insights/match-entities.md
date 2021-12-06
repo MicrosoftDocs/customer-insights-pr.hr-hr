@@ -1,7 +1,7 @@
 ---
 title: Podudaranje entiteta za objedinjavanje podataka
-description: Uskladite entitete za kombiniranje skupova podataka i stvaranje objedinjenih profila klijenata.
-ms.date: 11/01/2021
+description: Prilagodite entitete da biste stvorili objedinjene profile klijenata.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732625"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863802"
 ---
 # <a name="match-entities"></a>Slaganje entiteta
 
@@ -224,17 +224,24 @@ Većinu parametara uparivanja možete ponovno konfigurirati i fino podesiti.
 
 ## <a name="specify-custom-match-conditions"></a>Određivanje prilagođenih uvjeta uparivanja
 
-Možete odrediti uvjete s kojima bi se određeni zapisi trebali uvijek ili nikada uparivati. Ta se pravila mogu prenijeti kako bi zamijenila standardni postupak uparivanja. Na primjer, ako u našim zapisima postoje John Doe I i John Doe II, sustav bi ih mogao upariti kao jednu osobu. Prilagođena pravila uparivanja omogućuju vam da odredite da se njihovi profili odnose na različite osobe. 
+Možete navesti uvjete koji nadjačavaju zadanu logiku podudaranja. Dostupne su četiri mogućnosti: 
+
+|Mogućnost  |Opis |Primjer  |
+|---------|---------|---------|
+|Uvijek se podudara     | Definira vrijednosti koje se uvijek podudaraju.         |  Uvijek odgovara *Mikeu* i *Mikeru*.       |
+|Nikad se ne podudara     | Definira vrijednosti koje se nikada ne podudaraju.        | Nikad ne odgovara *Johnu* i *Jonathanu*.        |
+|Prilagođeno zaobilaženje     | Definira vrijednosti koje sustav uvijek treba zanemariti u fazi podudaranja. |  Zanemarite vrijednosti *11111* i *Nepoznato* tijekom utakmice.        |
+|Mapiranje pseudonima    | Definiranje vrijednosti koje bi sustav trebao smatrati istom vrijednošću.         | Smatrajte *Joea* jednakim *Josephu*.        |
 
 1. Idite u odjeljak **Podaci** > **Objedinjavanje** > **Uparivanje** i odaberite **Prilagođeno uparivanje** u odjeljku **Pojedinosti o uparenim zapisima**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Snimka zaslona odjeljka s pravilima uparivanja s istaknutom kontrolom prilagođenog uparivanja.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Snimka zaslona odjeljka s pravilima uparivanja s istaknutom kontrolom prilagođenog uparivanja.":::
 
-1. Ako niste postavili pravila za prilagođeno uparivanje, vidjet ćete novo okno **Prilagođeno uparivanje** s više pojedinosti.
+1. U **oknu** Prilagođeno idite na **karticu** Zapisi.
 
-1. Odaberite **Ispuni predložak** da biste dobili datoteku predloška koja može odrediti koji se zapisi iz kojih entiteta trebaju uvijek ili nikada uparivati. Morat ćete zasebno ispuniti zapise "uvijek uparuj" i "nikada ne uparuj" u dvije različite datoteke.
+1. Na padajućem izborniku Prilagođena vrsta odaberite mogućnost prilagođeno **podudaranje**, a zatim **odaberite Preuzmi predložak**. Potreban vam je zaseban predložak za svaku mogućnost podudaranja.
 
-1. Predložak sadrži polja za određivanje entiteta i vrijednosti primarnog ključa entiteta koji će se koristiti u prilagođenom uparivanju. Na primjer, ako želite da se primarni ključ *12345* iz entiteta *Prodaja* uvijek upari s primarnim ključem *34567* iz entiteta *Kontakt*, ispunite predložak:
+1. Preuzima se datoteka predloška. Otvorite ga i ispunite detalje. Predložak sadrži polja za određivanje entiteta i vrijednosti primarnog ključa entiteta koji će se koristiti u prilagođenom uparivanju. Na primjer, ako želite da se primarni ključ *12345* iz entiteta *Prodaja* uvijek upari s primarnim ključem *34567* iz entiteta *Kontakt*, ispunite predložak:
     - Entitet1: Prodaja
     - Ključ entiteta1: 12345
     - Entitet2: Kontakt
@@ -244,26 +251,32 @@ Možete odrediti uvjete s kojima bi se određeni zapisi trebali uvijek ili nikad
    
    Ako želite navesti prilagođeno podudaranje za uklanjanje duplikata na entitetu, navedite isti entitet kao Entitet1 i Entitet2 i postavite različite vrijednosti primarnog ključa.
 
-1. Nakon dodavanja svih poništavanja koje želite primijeniti, spremite datoteku predloška.
+1. Nakon dodavanja svih poništenja spremite datoteku predloška.
 
-1. Idite na **Podaci** > **Izvori podataka** i unesite datoteke predloška kao nove entitete. Nakon uvođenja, možete ih koristiti za određivanje konfiguracije uparivanja.
+1. Idite na **Podaci** > **Izvori podataka** i unesite datoteke predloška kao nove entitete.
 
-1. Nakon što ste prenijeli datoteke i ako su entiteti dostupni, ponovno odaberite mogućnost **Prilagođeno uparivanje**. Vidjet ćete mogućnosti za određivanje entiteta koje želite uključiti. Na padajućem izborniku odaberite potrebne entitete.
+1. Nakon što ste prenijeli datoteke i ako su entiteti dostupni, ponovno odaberite mogućnost **Prilagođeno uparivanje**. Vidjet ćete mogućnosti za određivanje entiteta koje želite uključiti. Na padajućem izborniku odaberite potrebne entitete i odaberite **Gotovo**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Snimka zaslona dijaloga za odabir nadjačavanja za scenarij prilagođenog uprivanja.":::
 
-1. Odaberite entitete koje želite koristiti za **Uvijek uparuj** i **Nikada ne uparuj** i odaberite **Gotovo**.
+1. Primjena prilagođenog podudaranja ovisi o mogućnosti podudaranja koju želite koristiti. 
+
+   - U **odjeljku Uvijek se** podudaraj ili **Nikad ne** podudaraj prijeđite na sljedeći korak.
+   - Za **prilagođeno zaobilaženje** ili **mapiranje pseudonima** odaberite **Uredi na** postojećem pravilu podudaranja ili stvorite novo pravilo. Na padajućem izborniku Normalizacije odaberite **mogućnost Prilagođeno zaobilaženje** ili **Mapiranje** pseudonima, a zatim **Odaberite Gotovo**.
 
 1. Odaberite **Spremanje** na stranici **Uparivanje** za primjenu konfiguracije prilagođenog uparivanja.
 
 1. Odaberite **Pokretanje** na stranici **Uparivanje** za pokretanje postupka uparivanja. Ostala navedena pravila uparivanja se zamjenjuju konfiguracijom prilagođenog uparivanja.
 
-> [!TIP]
-> Idite u odjeljak **Podaci** > **Entiteti** i pregledajte entitet **ConflationMatchPair** za potvrdu primjene nadjačavanja.
+### <a name="known-issues"></a>Poznati problemi
+
+- Samo-konfekcija ne prikazuje normalizirane podatke u deduplikacijskim entitetima. Međutim, ona primjenjuje normalizaciju interno tijekom deduplikacije. To je po dizajnu za sve normalizacije. 
+- Ako se postavka semantičkog tipa ukloni u **fazi Karte kada pravilo** podudaranja koristi alias mapiranje ili prilagođeno zaobilaženje, normalizacija se neće primijeniti. To se događa samo ako očistite semantičku vrstu nakon konfiguriranja normalizacije u pravilu utakmice jer semantička vrsta neće biti poznata.
+
 
 ## <a name="next-step"></a>Sljedeći korak
 
-Nakon dovršetka procesa uparivanja za barem jedan par uparivanja, moguće proturječnosti u podacima možete riješiti temom [**Spajanje**](merge-entities.md).
+Nakon dovršetka postupka podudaranja za barem jedan par podudaranja prijeđite na [**korak**](merge-entities.md) spajanja.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
