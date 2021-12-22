@@ -1,7 +1,7 @@
 ---
 title: Nove i nadolazeće značajke
 description: Informacije o novim značajkama, poboljšanjima i ispravcima programskih pogrešaka.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,35 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753108"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884253"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novosti u sposobnosti uvida u publika Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Što je novo u mogućnosti uvida u ciljnu skupinu Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Sa zadovoljstvom objavljujemo naša najnovija ažuriranja! Ovaj članak daje javni pretpregled značajki, poboljšanja opće dostupnosti i ažuriranja značajki. Da biste vidjeli dugoročne planove značajki, pogledajte [planove izdanja sustava Dynamics 365 i Power Platform](/dynamics365/release-plans/).
+Sa zadovoljstvom objavljujemo naša najnovija ažuriranja! Ovaj članak daje javni pretpregled značajki, poboljšanja opće dostupnosti i ažuriranja značajki. Kako biste vidjeli dugoročne planove značajki, pogledajte članak [Raspored izdanja sustava Dynamics 365 i rješenje Power Platform](/dynamics365/release-plans/).
 
 Ažuriranja unosimo po regijama. Tako bi neke regije mogle vidjeti značajke prije drugih. Ako nije drugačije određeno, ne morate poduzimati ništa i automatski ćemo ažurirati aplikaciju bez prekida u radu.
 
 > [!TIP]
 > Za kontakt i glasanje o zahtjevima za značajkama i prijedlozima o proizvodu idite na [portal sa zamislima za aplikacije Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="november-2021-updates"></a>Ažuriranja obavljena u studenom 2021.
+
+Ažuriranja u studenom 2021. uključuju nove značajke, nadogradnje performansi i ispravke pogrešaka.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Članstvo u segmentu sada je dostupno u programu Dataverse
+
+Informacije o članstvu u segmentu za korisničke profile sada su Dataverse dostupne zajedno s profilima i uvidima kupaca. Akcijske aplikacije sustava Dynamics 365 i aplikacije utemeljene na modelu mogu koristiti te podatke za traženje pojedinosti o članstvu u segmentu za određenog korisnika.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivnosti podržavaju podatke na razini kontakta za poslovne račune
+
+Sada možete konfigurirati, prikazati i filtrirati aktivnosti za kontakte na vremenskim crtama aktivnosti poslovnog računa da biste bolje razumjeli koji su kontakti poslovnog subjekta sudjelovali u određenim aktivnostima.
 
 ## <a name="october-2021-updates"></a>Ažuriranja iz listopada 2021.
 
@@ -113,7 +125,7 @@ Ažuriranja u svibnju 2021. uključuju nekoliko značajki, nadogradnje performan
 
 ### <a name="data-ingestion"></a>Obrada podataka
 
-- **Prikaz ili izmjena metapodataka ili definicije entiteta prilikom prilaganja podataka iz Azure Data Lake Storage** Sada možete pregledavati i uređivati metapodatke ili definiciju entiteta u publika uvidima prilikom prilaganja podataka iz mape Zajednički podatkovni model u Azure Data Lake Storage. Ova mogućnost pruža povratne informacije u stvarnom vremenu, provjeru valjanosti modela i provjeru pogrešaka. Omogućuje vam uređivanje modela.json i manifest.json bez problema.
+- **Pregledajte ili izmijenite metapodatke ili definiciju entiteta tijekom prilaganja podataka iz vašeg spremišta Azure Data Lake Storage**. Sada možete pregledavati i uređivati metapodatke ili definiciju entiteta u uvidima u ciljne skupine tijekom prilaganja podataka iz mape Common Data Model u vašem spremištu Azure Data Lake Storage. Ova mogućnost pruža povratne informacije u stvarnom vremenu, provjeru valjanosti modela i provjeru pogrešaka. Omogućuje vam uređivanje modela.json i manifest.json bez problema.
 
 ### <a name="extensibility"></a>Proširivost
 
@@ -188,7 +200,7 @@ Ažuriranja u ožujku 2021. uključuju nekoliko značajki, nadogradnje performan
 
 ### <a name="data-ingestion"></a>Obrada podataka
 
-- **Povezivanje s lokalno izvorima podataka pomoću Power Platform protoka podataka i pristupnika** Zadovoljstvo nam je najaviti pregled Power Platform protoka podataka i lokalno povezivanja pomoću pristupnika u Customer Insights s pridruženim Power Platform ili Dataverse okoliš. Svi novi izvori podataka stvoreni u okruženju customer insights s povezanim Dataverse okruženjem zadano će Power Platform protoka podataka koji donose lokalno podatkovnu povezivost i bogat skup konektora i mogućnosti transformacije.
+- **Povežite se s lokalnim izvorima podataka pomoću Power Platform tijekova podataka i pristupnika** Zadovoljstvo nam je objaviti pretpregled Power Platform tijekova podataka i lokalne povezivosti pomoću pristupnika u Customer Insights s pridruženim okruženjem Power Platform ili Dataverse. Svi novi izvori podataka stvoreni u okruženju Customer Insights s povezanim okruženjem Dataverse bit će zadani na Power Platform tijekovima podataka donoseći lokalnu podatkovnu povezivot i bogat skup poveznika i mogućnosti transformacije.
 
 ### <a name="extensibility"></a>Proširivost
 
@@ -250,7 +262,7 @@ Ažuriranja u veljači 2021. uključuju nekoliko značajki, nadogradnje performa
 
 - **Okruženje za kopiranje podržava više vrsta izvora podataka**
 
-  Administratori mogu kopirati konfiguracije okruženja u novo okruženje u istoj tvrtki ili ustanovi. Ova značajka proširuje funkcionalnost okruženja kopiranja za slučajeve u kojima se koriste izvori podataka koji se temelje na Microsoft Dataverse upravljanom podatkovnom jezeru ili mapi Common Data Model.
+  Administratori mogu kopirati konfiguracije okruženja u novo okruženje u istoj tvrtki ili ustanovi. Ova značajka proširuje funkcionalnost okruženja za kopiranje u slučajevima u kojima se izvori podataka temelje na data lake kojim upravlja Microsoft Dataverse ili se koristi mapa Common Data Model.
 
 ## <a name="january-2021-updates"></a>Ažuriranja iz siječnja 2021.
 
@@ -276,7 +288,7 @@ Ažuriranja u siječnju 2021. uključuju nekoliko značajki, nadogradnje perform
 
 #### <a name="system-administration"></a>Administracija sustava
 
-- **Besprijekorno dijelite podatke s Microsoft Dataverse** Sada možete dijeliti izlaz Customer Insights s Microsoft Dataverse aplikacijama pomoću Microsoft Dataverse upravljanog podatkovnog jezera. Nakon što Dataverse okruženje povežete s customer insights, dobivate mogućnost omogućavanja dijeljenja podataka.
+- **Lako dijeljenje podataka s platformom Microsoft Dataverse** Sada možete dijeliti rezultat servisa Customer Insights s aplikacijama platforme Microsoft Dataverse pomoću upravljanog jezera podataka Microsoft Dataverse Data Lake. Kada povežete okruženje platforme Dataverse sa servisom Customer Insights, dobit ćete mogućnost za omogućivanje dijeljenja podataka.
   Dodatne informacije potražite u odjeljku [Upravljanje okruženjima](manage-environments.md).
 
 

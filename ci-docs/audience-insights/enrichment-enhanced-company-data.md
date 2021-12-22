@@ -1,7 +1,7 @@
 ---
 title: Poboljšanje podataka tvrtke
 description: Obogatite i normalizirajte podatke tvrtke Microsoftovim modelima.
-ms.date: 11/15/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7815885"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927573"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obogaćivanje profila tvrtke poboljšanim podacima tvrtke
 
@@ -83,6 +83,16 @@ Kako biste započeli postupak obogaćivanja, odaberite **Pokreni** iz naredbene 
 Nakon završetka postupka obogaćivanja, podatke o novoobogaćenim profilima klijenata možete pregledati pod stavkom **Moja obogaćivanja**. Uz to ćete pronaći vrijeme zadnjeg ažuriranja i broj obogaćenih profila.
 
 Detaljnom prikazu svakog obogaćenog profila možete pristupiti odabirom **Prikaz obogaćenih podataka**.
+
+### <a name="overview-card"></a>Kartica pregleda
+
+Kartica pregleda prikazuje detalje o pokrivenosti obogaćivanja. 
+
+* **Kupci obrađeni i** promijenjeni : Broj profila kupaca koji su uspješno obogaćeni.
+
+* **Kupci obrađeni i ne mijenjaju se** : broj profila kupaca koji su prepoznati, ali nisu promijenjeni. To se obično događa kada su ulazni podaci valjani i ne mogu se poboljšati obogaćivanjem.
+
+* **Kupci nisu obrađeni i nisu se** promijenili : broj profila koji nisu prepoznati. Obično za ulazne podatke koji nisu valjani ili nisu podržani obogaćivanjem.
 
 ## <a name="next-steps"></a>Sljedeći koraci
 

@@ -1,7 +1,7 @@
 ---
-title: Unos podataka putem konektora Power Query
+title: Unos podataka putem Power Query poveznika (video)
 description: Poveznici za izvore podataka koji se temelje na platformi Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732209"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903831"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezivanje s izvorom podataka platforme Power Query
 
-Power Query nudi širok skup poveznika za unos podataka. Većinu tih konektora podržavaju Dynamics 365 Customer Insights. Dodavanje izvora podataka koji se temelje na poveznicima platforme Power Query obično slijedi korake navedene u sljedećem odjeljku. Međutim, ovisno o povezniku koji upotrebljavate, potrebni su različiti podaci. Dodatne informacije potražite u dokumentaciji o pojedinim poveznicima u odjeljku [Reference poveznika platforme Power Query](/power-query/connectors/).
+Power Query nudi širok skup poveznika za unos podataka. Većinu ovih poveznika podržava aplikacija Dynamics 365 Customer Insights. 
+
+Dodavanje izvora podataka na temelju Power Query poveznika obično slijedi korake navedene u ovom odjeljku. Međutim, ovisno o povezniku koji upotrebljavate, potrebni su različiti podaci. Dodatne informacije potražite u dokumentaciji o pojedinačnim poveznicima u [referenci Power Query poveznika](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query nudi širok skup poveznika za unos podataka. Većinu tih konektora p
 
 1. Odaberite **Dodaj izvor podataka**.
 
-1. Odaberite način **Uvoz podataka** i zatim **Dalje**.
+1. Odaberite **Microsoft Power Query, a** zatim **Dalje**.
 
-1. Navedite **Naziv** izvora podataka i odaberite **Dalje** kako biste stvorili izvor podataka. Imenujte smjernice: 
-   - Započnite slovom.
-   - Koristite samo slova i brojeve. Nisu dopušteni posebni znakovi i razmaci.
-   - Koristite između 3 i 64 znaka.
+1. Navedite **Naziv** izvora podataka i odaberite **Dalje** kako biste stvorili izvor podataka.
 
-1. Odaberite jedan od [dostupnih poveznika](#available-power-query-data-sources). Za ovaj primjer odabiremo poveznik **Tekst/CSV**.
+1. Odaberite jedan od [dostupnih poveznika](#available-power-query-data-sources). U ovom primjeru odabiremo **poveznik** Tekst/CSV.
 
 1. Unesite potrebne pojedinosti u **Postavke veze** za odabrani poveznike i odaberite **Dalje** kako biste vidjeli pregled podataka.
 
@@ -50,7 +49,7 @@ Power Query nudi širok skup poveznika za unos podataka. Većinu tih konektora p
 
 1. U izvor podataka možete dodati dodatne entitete tako da odaberete **Dohvati podatke** u dijalogu **Uređivanje upita**.
 
-   Preporučene su sljedeće pretvorbe:
+   Preporučujemo da koristite sljedeće transformacije:
 
    - Ako unosite podatke iz CSV datoteke, prvi redak često sadrži zaglavlja. Idite na stavku **Tablica pretvorbe** i odaberite mogućnost **Uporaba zaglavlja kao prvog reda**.
    - Provjerite je li vrsta podataka postavljena na odgovarajući način.
@@ -61,7 +60,7 @@ Power Query nudi širok skup poveznika za unos podataka. Većinu tih konektora p
 
 ## <a name="available-power-query-data-sources"></a>Dostupni izvori podataka platforme Power Query
 
-Pogledajte članak [Referenca poveznika platforme Power Query](/power-query/connectors/) za ažurirani popis poveznika koje možete odabrati za uvoz podataka u aplikaciju Customer Insights. 
+Pogledajte [referencu Power Query poveznika](/power-query/connectors/) za popis poveznika pomoću kojih možete uvoziti podatke u Customer Insights. 
 
 Poveznici s kvačicom u stupcu **Customer Insights (tijekovi podataka)** dostupni su za stvaranje novih izvora podataka koji se temelje na platformi Power Query. Pregledajte dokumentaciju određenog poveznika kako biste saznali više o njegovim preduvjetima, ograničenjima i ostalim pojedinostima.
 
@@ -70,7 +69,7 @@ Poveznici s kvačicom u stupcu **Customer Insights (tijekovi podataka)** dostupn
 > [!NOTE]
 > Možda nećete moći izmijeniti izvore podataka koji se trenutačno koriste u jednom od postupaka aplikacije (npr. *segmentacija*, *podudaranje* ili *spajanje*). 
 >
-> Pomoću stranice **Postavke** možete pratiti napredak pojedinih aktivnih postupaka. Kada se postupak dovrši, možete se vratiti na stranicu **Izvori podataka** i unijeti promjene.
+> Na **stranici Postavke** možete pratiti napredak svakog aktivnog procesa. Kada se postupak dovrši, možete se vratiti na stranicu **Izvori podataka** i unijeti promjene.
 
 1. U uvidima u ciljnu skupinu idite na **Podaci** > **Izvori podataka**.
 

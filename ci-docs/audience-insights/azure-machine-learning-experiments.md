@@ -1,7 +1,7 @@
 ---
 title: Eksperimenti Strojnog učenja Azure
 description: Koristite modele utemeljene na Strojnom učenju Azure sustavu Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033163"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881729"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Korištenje modela utemeljenih na Strojnom učenju Azure
 
-Objedinjeni podaci u sustavu Dynamics 365 Customer Insights izvor su za izgradnju modela strojnog učenja koji mogu stvoriti dodatne poslovne uvide. Customer Insights integrira se s r programom Machine Learning Studio (klasični) i Strojnim učenjem Azure kako bi koristio vlastite prilagođene modele. Pogledajte članak [Eksperimenti programa Machine Learning Studio (klasični)](machine-learning-studio-experiments.md) za primjere eksperimenata izrađenih u programu Machine Learning Studio (klasični). 
+Objedinjeni podaci u sustavu Dynamics 365 Customer Insights izvor su za izgradnju modela strojnog učenja koji mogu stvoriti dodatne poslovne uvide. Customer Insights integrira se sa Strojnim učenjem Azure da biste mogli koristiti vlastite prilagođene modele.
 
 ## <a name="prerequisites"></a>Preduvjeti
 
@@ -35,7 +35,7 @@ Objedinjeni podaci u sustavu Dynamics 365 Customer Insights izvor su za izgradnj
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Rad s dizajnerom za Strojno učenje Azure
 
-Dizajner za Strojno učenje Azure pruža vizualno radno područje na kojem možete povlačiti i ispuštati skupove podataka i module, slično kao u programu Machine Learning Studio (klasični). Skupni cjevovod stvoren u dizajneru može se integrirati u Customer Insights ako je odgovarajuće konfiguriran. 
+Azure Strojno učenje designer pruža vizualno platno na kojem možete povlačiti i ispuštati skupove podataka i module. Skupni cjevovod stvoren u dizajneru može se integrirati u Customer Insights ako je odgovarajuće konfiguriran. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Rad s SDK-om za Strojno učenje Azure
 

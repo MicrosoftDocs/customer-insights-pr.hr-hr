@@ -1,7 +1,7 @@
 ---
 title: Entiteti i skupovi podataka
 description: Pogledajte podatke na stranici Entiteti.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,51 +9,57 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732071"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900418"
 ---
 # <a name="entities-in-audience-insights"></a>Entiteti u uvidima u ciljnu skupinu
 
-Nakon [konfiguriranja izvora podataka](data-sources.md) otvorite stranicu **Entiteti** za evaluaciju kvalitete unesenih podataka. Entiteti se smatraju skupovima podataka. Oko tih entiteta izgrađeno je više mogućnosti Dynamics 365 Customer Insights. Ako ih pažljivo pregledate, mogli biste provjeriti rezultate tih mogućnosti.
+Nakon [konfiguriranja izvora podataka](data-sources.md) otvorite stranicu **Entiteti** za evaluaciju kvalitete unesenih podataka. Entiteti se smatraju skupovima podataka. Više mogućnosti servisa Dynamics 365 Customer Insights izgrađeno je oko ovih entiteta. Ako ih pažljivo pregledate, mogli biste provjeriti rezultate tih mogućnosti.
 
-Stranica **Entiteti** navodi entitete i uključuje nekoliko stupaca:
+Stranica **Entiteti** popisuje entitete i sadrži ove stupce:
 
-- **Naziv**: naziv entiteta podatka. Ako vidite znak upozorenja pored naziva entiteta to znači da se podaci za taj entitet nisu uspješno učitali.
-- **Izvor**: vrsta izvora podataka koji su uneseni za entitet
-- **Autor**: ime osobe koja je izradila entitet
-- **Izrađeno**: datum i vrijeme izrade entiteta
-- **Ažurirano** : ime osobe koja je ažurirala entitet
-- **Stanje** : Detalji o posljednjem ažuriranju entiteta
+- **Naziv** : naziv podatkovnog entiteta. Ako vidite znak upozorenja pored naziva entiteta to znači da se podaci za taj entitet nisu uspješno učitali.
+- **Izvor** : vrsta izvor podataka koja je progutala entitet.
+- **Ažurirano** : vrijeme zadnjeg ažuriranja entiteta.
+- **Status** : Detalji o posljednjem ažuriranju entiteta.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Istraživanje podataka određenih entiteta
 
-Odaberite entitet za istraživanje različitih polja i zapisa koji su uključeni u taj entitet.
+1. U uvidima u ciljnu skupinu idite na **Podaci** > **Entiteti**.
+1. Na **stranici Entiteti** odaberite entitet da biste otvorili stranicu s detaljima.  
+1. Istražite različita polja i zapise obuhvaćene tim entitetom.
 
-> [!div class="mx-imgBorder"]
-> ![Odaberite entitet.](media/data-manager-entities-data.png "Odabir entiteta")
-
-- Kartica **Podaci** prikazuje tablicu s popisom pojedinosti o pojedinačnim zapisima entiteta.
+- Kartica **Atributi** je odabrana prema zadanim postavkama i prikazuje tablicu za pregled pojedinosti za odabrani entitet, kao što su nazivi polja, vrste podataka i vrste. Stupac **Vrsta** prikazuje povezane vrste modela uobičajenih podataka, koji automatski identificira sustav ili [ručno mapiraju](map-entities.md) korisnici. Te su vrste semantičke vrste koje se mogu razlikovati od vrsta podataka atributa. Na primjer, polje *E -pošta* u nastavku ima vrstu podataka *Tekst*, ali bi njegova (semantička) vrsta Common Data Model mogla biti *E -pošta* ili *Adresa e-pošte*.
 
 > [!div class="mx-imgBorder"]
 > ![Tablica polja.](media/data-manager-entities-fields.PNG "Tablica polja")
 
-- Kartica **Atributi** je odabrana prema zadanim postavkama i prikazuje tablicu za pregled pojedinosti za odabrani entitet, kao što su nazivi polja, vrste podataka i vrste. Stupac **Vrsta** prikazuje povezane vrste modela uobičajenih podataka, koji automatski identificira sustav ili [ručno mapiraju](map-entities.md) korisnici. Te su vrste semantičke vrste koje se mogu razlikovati od vrsta podataka atributa. Na primjer, polje *E -pošta* u nastavku ima vrstu podataka *Tekst*, ali bi njegova (semantička) vrsta Common Data Model mogla biti *E -pošta* ili *Adresa e-pošte*.
-
 > [!NOTE]
-> Obje tablice prikazuju samo uzorak podataka entiteta. Za prikaz cijelog skupa podataka idite na stranicu **Izvori podataka**, odaberite entitet, nakon toga **Uredi** i zatim pregledajte podatke tog entiteta uz pomoć alata za uređivanje Power Query, kao što je objašnjeno u poglavlju [Izvori podataka](data-sources.md).
+> Ova stranica prikazuje samo uzorak podataka entiteta. Za prikaz cijelog skupa podataka idite na stranicu **Izvori podataka**, odaberite entitet, nakon toga **Uredi** i zatim pregledajte podatke tog entiteta uz pomoć alata za uređivanje Power Query, kao što je objašnjeno u poglavlju [Izvori podataka](data-sources.md).
 
-Da biste saznali više o podacima koji su uneseni u entitet, stupac **Sažetak** pruža vam neke važne karakteristike podataka, kao što su nule, vrijednosti koje nedostaju, brojevi i distribucije, kako je primjenjivo za vaše podatke.
-
-Odaberite ikonu grafikona za prikaz sažetka podataka.
+Da biste saznali više o podacima koji su uneseni u entitet, stupac **Sažetak** pruža vam neke važne karakteristike podataka, kao što su nule, vrijednosti koje nedostaju, brojevi i distribucije, kako je primjenjivo za vaše podatke. Odaberite ikonu grafikona za prikaz sažetka podataka.
 
 > [!div class="mx-imgBorder"]
 > ![Simbol sažetka.](media/data-manager-entities-summary.png "Tablica sažetka podataka")
+
+- Kartica **Podaci** prikazuje tablicu s popisom pojedinosti o pojedinačnim zapisima entiteta. Navedeni detalji ovise o vrsti podataka entiteta.
+
+> [!div class="mx-imgBorder"]
+> ![Odaberite entitet.](media/data-manager-entities-data.png "Odabir entiteta")
+
+- **Kartica Izvješća** (dostupna za neke entitete) omogućuje vizualizaciju podataka stvaranjem izvješća i sadrži sljedeće stupce:
+
+  - **Naziv** izvješća : naziv izvješća.
+  - **Kreirano po** imenu osobe koja je kreirala entitet.
+  - **Kreirano** : datum i vrijeme stvaranja entiteta.
+  - **Uredio** : Ime osobe koja je izmijenila entitet.
+  - **Uređeno** : datum i vrijeme izmjene entiteta. 
 
 ## <a name="entity-specific-information"></a>Informacija za određeni entitet
 
@@ -73,8 +79,7 @@ Sljedeće provjere izvode se na unesenim podacima kako bi se otkrili oštećeni 
 
 - Vrijednost polja ne podudara se s vrstom podataka njegova stupca.
 - Polja sadrže znakove koji uzrokuju da stupci ne odgovaraju očekivanoj shemi. Na primjer: pogrešno oblikovane ponude, neprespojne ponude ili znakovi novog retka.
-- Ako postoje stupci datetime/date/datetimeoffset, njihov format treba navesti u modelu ako ne slijedi standardni ISO format.
-
+- Ako postoje stupci datetime/date/datetimeoffset, njihov oblik mora biti naveden u modelu ako ne slijedi standardni ISO format.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

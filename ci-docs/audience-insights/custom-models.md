@@ -1,7 +1,7 @@
 ---
 title: Prilagođeni modeli za strojno učenje | Microsoft Docs
 description: Radite s prilagođenim modelima iz Strojnog učenja Azure u aplikaciji Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032933"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881775"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli za strojno učenje
+
+> [!NOTE]
+> Podrška za Strojno učenje Studio (classic) završit će 31. kolovoza 2024. Preporučujemo da do tog datuma prijeđete [na Azure](/azure/machine-learning/overview-what-is-azure-machine-learning) Strojno učenje.
+>
+> Od 1. prosinca 2021. nećete moći stvarati nove Strojno učenje Studio (klasične) resurse. Do 31. kolovoza 2024. možete nastaviti koristiti postojeće Strojno učenje Studio (klasične) resurse. Dodatne informacije [potražite u članku Migracija na Azure Strojno učenje](/azure/machine-learning/migrate-overview).
+
 
 **Inteligencija** > **Prilagođeni modeli** omogućava upravljanje tijekovima rada na temelju modela strojnog učenja Azure. Tijekovi rada pomažu vam u odabiru podataka iz kojih želite generirati uvide i mapiranju rezultata u vaše objedinjene podatke o klijentima. Dodatne informacije o izradi prilagođenih modela strojnog učenja potražite u odjeljku [Upotreba modela na temelju Strojnog učenja Azure](azure-machine-learning-experiments.md).
 
@@ -26,7 +32,7 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 
 ## <a name="prerequisites"></a>Preduvjeti
 
-- Trenutno ova značajka podržava web-servise objavljene putem [Studija strojnog učenja (klasično)](https://studio.azureml.net) i [skupnih kanala Strojnog učenja Azure](/azure/machine-learning/concept-ml-pipelines).
+- Ova značajka podržava web-usluge objavljene putem [skupnih cjevovoda Azure Strojno učenje](/azure/machine-learning/concept-ml-pipelines).
 
 - Za upotrebu ove značajke potreban vam je račun za pohranu Azure Data Lake Gen2 povezan s instancom Azure Studio. Dodatne informacije potražite u odjeljku [Stvaranje računa za pohranu Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 
 1. Ako je pretplata na Strojno učenje Azure u nekom drugom klijentu, a ne u sustavu Customer Insights, odaberite **Prijava** s vjerodajnicama za odabranu tvrtku ili ustanovu.
 
-1. Odaberite **Radne prostore** povezane s vašim web-servisom. Navedena su dva odjeljka, jedan za Strojno učenje Azure v1 (Studio strojnog učenja (klasični)) i Strojno učenje Azure v2 (Strojno učenje Azure). Ako niste sigurni koji radni prostor odgovara vašem web-servisu Studio strojnog učenja (klasični), odaberite **Bilo koji**.
+1. Odaberite **Radne prostore** povezane s vašim web-servisom. 
 
-1. Odaberite web-servis Studio strojnog učenja (klasični) ili kanal Strojno učenje Azure na padajućem popisu **Web-servis koji sadrži vaš model**. Zatim odaberite **Dalje**.
-   - Saznajte više o [objavljivanju web-servisa u Studiju strojnog učenja (klasični)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Saznajte više o [objavljivanju kanala u Strojnom učenju Azure pomoću dizajnera](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [SDK-a](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš kanal mora biti objavljen pod [krajnjom točkom kanala](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Na padajućem izborniku web-usluge koja sadrži model odaberite kanal Azure **Strojno** učenje. Zatim odaberite **Dalje**.    
+   Saznajte više o [objavljivanju kanala u Strojnom učenju Azure pomoću dizajnera](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [SDK-a](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš kanal mora biti objavljen pod [krajnjom točkom kanala](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Za svaki **Ulazni podatak web-servisa** odaberite odgovarajući **Entitet** iz uvida u ciljnu skupinu pa odaberite **Dalje**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
    > ![Konfigurirajte tijek rada.](media/intelligence-screen2-updated.png "Konfiguracija tijeka rada")
 
 1. U koraku **Izlazni parametri modela**, postavite sljedeća svojstva:
-   - Studio strojnog učenja (klasični)
-      1. Unesite izlazni **Naziv entiteta** u koji želite da idu izlazni rezultati web-servisa.
-   - Strojno učenje Azure
       1. Unesite izlazni **Naziv entiteta** u koji želite da idu izlazni rezultati kanala.
       1. S padajućeg popisa odaberite **Izlazni naziv parametra pohrane podataka** skupnog kanala.
       1. S padajućeg popisa odaberite **Izlazni naziv parametra puta** skupnog kanala.
@@ -93,9 +95,6 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 1. Za svaki **Ulazni podatak web-servisa** možete ažurirati odgovarajući **Entitet** iz uvida u ciljnu skupinu. Zatim odaberite **Dalje**.
 
 1. U koraku **Izlazni parametri modela**, postavite sljedeća svojstva:
-   - Studio strojnog učenja (klasični)
-      1. Unesite izlazni **Naziv entiteta** u koji želite da idu izlazni rezultati web-servisa.
-   - Strojno učenje Azure
       1. Unesite izlazni **Naziv entiteta** u koji želite da idu izlazni rezultati kanala.
       1. Odaberite **Izlazni naziv parametra pohrane podataka** za testni kanal.
       1. Odaberite **Izlazni naziv parametra puta** za testni kanal.

@@ -1,7 +1,7 @@
 ---
 title: Izrada okruženja i upravljanje njima
 description: Saznajte kako se prijaviti za uslugu i kako upravljati okruženjima.
-ms.date: 11/12/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7815895"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892375"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
@@ -40,18 +40,21 @@ Možete urediti neke pojedinosti postojećih okruženja.
 
 Dodatne informacije o postavkama okruženja potražite u odjeljku [Stvaranje novog okruženja](create-environment.md).
 
-## <a name="connect-to-microsoft-dataverse"></a>Povezivanje s Microsoft Dataverse
+## <a name="connect-to-microsoft-dataverse"></a>Povezivanje sa sustavom Microsoft Dataverse
    
-Korak **Microsoft Dataverse omogućuje vam povezivanje** uvida u korisnike s Dataverse okruženjem.
+Korak **Microsoft Dataverse** omogućuje vam da povežete Customer Insights s okruženjem Dataverse.
 
-Da biste [koristili gotove predviđanje modele](predictions-overview.md#out-of-box-models), konfigurirajte zajedničko korištenje podataka pomoću Dataverse. Ili možete omogućiti unos podataka iz lokalno izvora podataka, pružajući URL Microsoft Dataverse okruženja kojim upravlja vaša tvrtka ili ustanova. Odaberite **Omogući zajedničko korištenje podataka da biste** izlazne podatke customer insights zajednički koristili s podatkovnim jezerom kojim upravlja Dataverse.
+Da biste koristili [gotove modele predviđanja](predictions-overview.md#out-of-box-models), konfigurirajte dijeljenje podataka s platformom Dataverse. Ili možete omogućiti uvoz podataka iz lokalnih izvora podataka, navodeći URL okruženja Microsoft Dataverse kojim upravlja vaša tvrtka ili ustanova. Odaberite **Omogući dijeljenje podataka** za dijeljenje izlaznih podataka usluge Customer Insights pomoću data lake kojim upravlja Dataverse.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Mogućnosti konfiguracije za omogućavanje zajedničkog korištenja podataka s Microsoft Dataverse.":::
+> [!IMPORTANT]
+> Customer Insights i Dataverse moraju biti u istoj regiji kako bi omogućili dijeljenje podataka.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Mogućnosti konfiguracije za omogućavanje dijeljenja podataka uz Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights ne podržava sljedeće scenarije dijeljenja podataka:
-> - Ako sve podatke spremite u vlastitu Azure Data Lake Storage, nećete moći omogućiti dijeljenje podataka s podatkovnim jezerom kojim upravlja Dataverse.
-> - Ako omogućite zajedničko korištenje podataka sa Dataverse, nećete moći [stvarati predviđene ili nedostajuće vrijednosti u entitetu](predictions.md).
+> - Ako sve podatke spremite na vlastiti Azure Data Lake Storage, nećete moći omogućiti dijeljenje podataka s data lake kojim upravlja Dataverse.
+> - Ako omogućite dijeljenje podataka s Dataverse, nećete moći [stvoriti predviđene ili nedostajuće vrijednosti u entitetu](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Kopiranje konfiguracije okruženja
 
@@ -81,7 +84,7 @@ Sljedeći podaci *nisu* kopirani:
 - Profili klijenata.
 - Vjerodajnice izvora podataka. Morat ćete navesti vjerodajnice za svaki izvor podataka i ručno osvježiti izvore podataka.
 
-- Izvori podataka iz mape Zajednički podatkovni model i podatkovnog jezera s upravljanjem dataverse. Te izvore podataka morat ćete stvoriti ručno s istim nazivom kao u izvornom okruženju.
+- Izvori podataka iz mape Common Data Model i Dataverse – upravljano data lake. Te izvore podataka morat ćete stvoriti ručno s istim nazivom kao u izvornom okruženju.
 
 Kad kopirate okruženje, vidjet ćete potvrdnu poruku da je stvoreno novo okruženje. Odaberite **Idi na izvore podataka** da biste vidjeli popis izvora podataka.
 

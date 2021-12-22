@@ -1,7 +1,7 @@
 ---
 title: Spajanje na Azure Data Lake Storage račun upotrebom upravitelja usluge
 description: Upotrijebite upravitelja usluge Azure da biste se spojili na vlastito jezero podataka.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645163"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900234"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Spajanje na Azure Data Lake Storage račun upotrebom upravitelja usluge Azure
 
-Automatizirani alati koji koriste servise Azure uvijek bi trebali imati ograničene dozvole. Umjesto da se aplikacije prijavljuju kao potpuno privilegirani korisnik, Azure nudi upravitelje servisa. U nastavku je opisano kako povezati uslugu Dynamics 365 Customer Insights s Azure Data Lake Storage računom upotrebom upravitelja usluge Azure, umjesto upotrebom ključeva računa za pohranu. 
+U ovom se članku objašnjava kako se povezati Dynamics 365 Customer Insights s Azure Data Lake Storage računom pomoću upravitelja servisa Azure umjesto ključeva računa za pohranu. 
 
-Upravitelja usluge možete upotrijebiti da biste sigurno [dodali ili uredili Common Data Model mapu kao izvor podataka](connect-common-data-model.md) ili [izradili ili ažurirali okruženje](create-environment.md).
+Automatizirani alati koji koriste servise Azure uvijek bi trebali imati ograničene dozvole. Umjesto da se aplikacije prijavljuju kao potpuno privilegirani korisnik, Azure nudi upravitelje servisa. Pomoću upravitelja servisa možete sigurno [dodati ili urediti mapu Zajednički podatkovni model kao izvor podataka](connect-common-data-model.md) ili [stvoriti ili ažurirati okruženje](create-environment.md).
 
 > [!IMPORTANT]
 > - Račun za pohranu Data Lake koji će koristiti upravitelj usluge mora imati [omogućen hijerarhijski prostor naziva](/azure/storage/blobs/data-lake-storage-namespace).
-> - Za izradu upravitelja servisa trebaju vam administratorske dozvole za vašu pretplatu na Azure.
+> - Da biste stvorili glavnog servisa, potrebne su vam administratorske dozvole za pretplatu na Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Izrada upravitelja usluge Azure za uslugu Customer Insights
 
-Prije izrade novog upravitelja usluge za uvide u ciljnu skupinu ili uvide u angažman, provjerite postoji li on već u vašoj organizaciji.
+Prije stvaranja novog direktora servisa za Uvide u klijente provjerite postoji li već u vašoj tvrtki ili ustanovi.
 
 ### <a name="look-for-an-existing-service-principal"></a>Traženje postojećeg upravitelja servisa
 

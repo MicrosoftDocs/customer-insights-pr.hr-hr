@@ -1,5 +1,5 @@
 ---
-title: Izvoz podataka usluge Customer Insights na glavna računala SFTP
+title: Izvoz podataka customer insights na SFTP hostove (Video)
 description: Saznajte kako konfigurirati vezu i izvesti na SFTP lokaciju.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a54025588945e4db6ab800dca034520b5f08d49b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 568e5826175417175bd09435d697031f0ab64223
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673907"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927548"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Izvoz segmenata i ostalih podataka na SFTP (pretpregled)
 
@@ -28,6 +28,7 @@ Koristite svoje podatke o klijentima u aplikacijama trećih strana tako što će
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- SFTP odredišta iza vatrozida trenutno nisu podržana. 
 - Vrijeme izvoza ovisi o performansama vašeg sustava. Preporučujemo dvije CPU jezgre i 1 Gb memorije kao minimalnu konfiguraciju vašeg poslužitelja. 
 - Izvoz entiteta s do 100 milijuna profila klijenata može potrajati 90 minuta kada se koristi preporučena minimalna konfiguracija dviju CPU jezgri i 1 Gb memorije. 
 

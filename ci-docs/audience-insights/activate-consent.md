@@ -1,7 +1,7 @@
 ---
 title: Aktiviranje pravila pristanka za segmente
 description: Slijedite ove korake da biste povezali podatke o pristanku i aktivirali provjere pristanka u publika uvidima. Administrator također može onemogućiti provjere pristanka.
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7815889"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884065"
 ---
 # <a name="activate-consent-rules"></a>Aktiviranje pravila pristanka
 
@@ -49,3 +49,6 @@ Da bi prestao koristiti podatke o pristanku u publika uvidima, administrator mor
 1. Odaberite **karticu Pristanak** (pretpregled).
 
 1. U **odjeljku Omogući provjere** pristanka postavite preklopni gumb na **Isključeno**.
+
+> [!TIP]
+> Da biste prestali koristiti mogućnost upravljanja pristankom, pročitajte [članak Postavke sustava u centru za pristanak (pretpregled).](../consent-management/system-settings.md)
