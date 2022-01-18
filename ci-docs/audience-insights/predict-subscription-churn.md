@@ -1,5 +1,5 @@
 ---
-title: Predviđanje pretplate (videozapis)
+title: Predviđanje za pretplatu (sadrži videozapis)
 description: Predvidite postoji li opasnost da će klijent prestati koristiti pretplaćene proizvode ili usluge vaše tvrtke.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903940"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967692"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predviđanje gubitaka pretplate (pretpregled)
 
@@ -77,7 +77,7 @@ Predviđanje gubitaka pretplate pomaže u predviđanju postoji li opasnost da ć
 1. Unesite broj **Dana od isteka pretplate** za koju vaša tvrtka smatra da predstavlja izgubljenog klijenta. Ovo se razdoblje obično vezuje uz poslovne aktivnosti poput ponuda ili drugih marketinških napora kojima se pokušava spriječiti gubitak klijenta.
 1. Unesite broj **Dana u budućnosti za predviđanje gubitka** da biste postavili prozor za predviđanje gubitka. Na primjer, za predviđanje rizika gubitka za vaše klijente tijekom sljedećih 90 dana kako bi se uskladili s vašim naporima da zadržite marketing. Predviđanje rizika gubitka na dulja ili kraća vremenska razdoblja može otežati adresiranje čimbenika u vašem profilu rizika gubitka, ovisno o vašim specifičnim poslovnim zahtjevima. Za nastavak odaberite **Dalje**
    >[!TIP]
-   > Možete odabrati **Spremi i zatvori** u bilo kojem trenutku kako biste predviđanje spremili kao skicu. Za nastavak, skicu predviđanja naći ćete na kartici **Moja predviđanja**.
+   > U bilo kojem trenutku možete **odabrati Spremi** skicu da biste predviđanje spremili kao skicu. Za nastavak, skicu predviđanja naći ćete na kartici **Moja predviđanja**.
 
 ### <a name="add-required-data"></a>Dodajte potrebne podatke
 
