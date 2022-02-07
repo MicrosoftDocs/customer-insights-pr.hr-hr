@@ -9,25 +9,20 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: hr-HR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900142"
 ---
+
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povezivanje s podacima iz rješenja Data Lake kojim upravlja platforma Microsoft Dataverse.
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Ovaj članak pruža informacije o tome kako Dataverse se korisnici mogu brzo povezati s analitičkim entitetima u Microsoft Dataverse upravljanom jezeru. 
+
+Ovaj članak pruža informacije o tome kako Dataverse se korisnici mogu brzo povezati s analitičkim entitetima u upravljanom jezeru Microsoft Dataverse. 
 
 > [!NOTE]
-> Da biste Dataverse nastavili i pogledali popis entiteta dostupnih u upravljanom jezeru, morate biti administrator u tvrtki ili ustanovi.
+> Da biste nastavili i pogledali popis entiteta dostupnih u upravljanom jezeru Dataverse, morate biti administrator u tvrtki ili ustanovi.
 
 ## <a name="important-considerations"></a>Važne stavke
 
-Podaci pohranjeni u internetskom servisu kao što je Azure Data Lake Storage mogu biti pohranjeni na mjestu drugačijem od onoga na kojemu se podaci obrađuju ili pohranjuju u sustavu Dynamics 365 Customer Insights.Uvozom ili povezivanjem s podacima pohranjenima u mrežnim servisima suglasni ste da se podaci mogu prenositi i pohranjivati sa sustavom Dynamics 365 Customer Insights .  [Saznajte više u Microsoftovu centru za pouzdanost](https://www.microsoft.com/trust-center).
+Podaci pohranjeni u internetskom servisu kao što je Azure Data Lake Storage mogu biti pohranjeni na mjestu drugačijem od onoga na kojemu se podaci obrađuju ili pohranjuju u sustavu Dynamics 365 Customer Insights.Uvozom ili povezivanjem s podacima pohranjenima u mrežnim servisima suglasni ste da se podaci mogu prenositi i pohranjivati sa sustavom Dynamics 365 Customer Insights. [Saznajte više u Microsoftovu centru za pouzdanost](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Povezivanje s jezerom za upravljanje Dataverse
 

@@ -1,7 +1,7 @@
 ---
 title: Obogaćivanje poboljšanja adrese (sadrži videozapis)
 description: Obogatite i normalizirajte podatke o adresi profila klijenata pomoću Microsoftovih modela.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
-ms.translationtype: MT
-ms.contentlocale: hr-HR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934914"
 ---
+
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogaćivanje profila klijenata s poboljšanim adresama
 
 Adrese u vašim podacima mogu biti nestrukturirane, nepotpune ili netočne. Koristite Microsoftove modele za normalizaciju i obogaćivanje adresa u [format Common Data Model](/common-data-model/schema/core/applicationcommon/address) radi veće preciznosti i uvida.
@@ -100,17 +95,17 @@ Kako biste započeli postupak obogaćivanja, odaberite **Pokreni** iz naredbene 
 
 Nakon završetka postupka obogaćivanja, podatke o novoobogaćenim profilima klijenata možete pregledati pod stavkom **Moja obogaćivanja**. Uz to ćete pronaći vrijeme zadnjeg ažuriranja i broj obogaćenih profila.
 
-Detaljnom prikazu svakog obogaćenog profila možete pristupiti odabirom **Prikaz obogaćenih podataka**.
+Uzorak obogaćenih podataka možete vidjeti na pločici **Pretpregled** obogaćenih korisnika. Odaberite **Pogledajte više** i odaberite karticu **Podaci** da biste pristupili detaljnom prikazu svakog obogaćenog profila.
 
 ### <a name="overview-card"></a>Kartica pregleda
 
 Kartica pregleda prikazuje detalje o pokrivenosti obogaćivanja. 
 
-* **Kupci obrađeni i** promijenjeni : Broj profila kupaca koji su uspješno obogaćeni.
+* **Adrese obrađene i promijenjene**: broj profila klijenata s uspješno obogaćenim adresama.
 
-* **Kupci obrađeni i ne mijenjaju se** : broj profila kupaca koji su prepoznati, ali nisu promijenjeni. To se obično događa kada su ulazni podaci valjani i ne mogu se poboljšati obogaćivanjem.
+* **Adrese obrađene i ne mijenjaju se**: broj profila klijenata s adresama koje su prepoznate, ali nisu promijenjene. To se obično događa kada su ulazni podaci valjani i ne mogu se poboljšati obogaćivanjem.
 
-* **Kupci nisu obrađeni i nisu se** promijenili : broj profila koji nisu prepoznati. Obično za ulazne podatke koji nisu valjani ili nisu podržani obogaćivanjem.
+* **Adrese koje nisu obrađene i nisu promijenjene**: broj profila s adresama koje nisu prepoznate. Obično za ulazne podatke koji nisu valjani ili nisu podržani obogaćivanjem.
 
 ## <a name="next-steps"></a>Sljedeći koraci
 

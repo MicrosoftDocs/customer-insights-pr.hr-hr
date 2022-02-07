@@ -1,7 +1,7 @@
 ---
 title: Poboljšanje podataka tvrtke
 description: Obogatite i normalizirajte podatke tvrtke Microsoftovim modelima.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,15 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: MT
-ms.contentlocale: hr-HR
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927573"
 ---
+
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obogaćivanje profila tvrtke poboljšanim podacima tvrtke
 
-Koristite Microsoftove modele i sastavljene podatke tvrtke da biste ispravili, dopunili i standardizirali profile svoje tvrtke. Za bolju točnost i uvide koristit ćemo [format Common Data](/common-data-model/schema/core/applicationcommon/account) Model.
+Koristite Microsoftove modele i sastavljene podatke tvrtke da biste ispravili, dopunili i standardizirali profile svoje tvrtke. Za bolju točnost i uvide [koristit ćemo format](/common-data-model/schema/core/applicationcommon/account) Common Data Model.
 
 ## <a name="how-we-enhance-company-data"></a>Kako poboljšavamo podatke tvrtke
 
-Naš model prolazi kroz proces u dva koraka kako bi poboljšao profil tvrtke. Prvo, normalizira naziv tvrtke. Na primjer, *Microsoft Corp će se* ispraviti i standardizirati na *Microsoft Corporation*. Pokušava pronaći podudaranje u Microsoftovim prikupljenim podacima tvrtke. Ako se pronađe podudaranje, profil tvrtke obogaćujemo podacima iz naših prikupljenih podataka tvrtke, uključujući naziv tvrtke.
+Naš model prolazi kroz proces u dva koraka kako bi poboljšao profil tvrtke. Prvo, normalizira naziv tvrtke. Na primjer, *Microsoft Corp* će se ispraviti i standardizirati na *Microsoft Corporation*. Pokušava pronaći podudaranje u Microsoftovim prikupljenim podacima tvrtke. Ako se pronađe podudaranje, profil tvrtke obogaćujemo podacima iz naših prikupljenih podataka tvrtke, uključujući naziv tvrtke.
 
 
 ### <a name="example"></a>Primjer
@@ -58,7 +53,7 @@ Postoji nekoliko ograničenja s poboljšanim podacima. Model ne podržava stavke
 
 1. Idite na **Podaci** > **Obogaćivanje**.
 
-1. Na pločici s poboljšanim podacima tvrtke odaberite **Obogati moje** **podatke**.
+1. Na pločici s poboljšanim podacima tvrtke odaberite **Obogati moje podatke** **.**
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Pločica za obogaćivanje u središtu za obogaćivanje podataka tvrtke.":::
 
@@ -82,17 +77,17 @@ Kako biste započeli postupak obogaćivanja, odaberite **Pokreni** iz naredbene 
 
 Nakon završetka postupka obogaćivanja, podatke o novoobogaćenim profilima klijenata možete pregledati pod stavkom **Moja obogaćivanja**. Uz to ćete pronaći vrijeme zadnjeg ažuriranja i broj obogaćenih profila.
 
-Detaljnom prikazu svakog obogaćenog profila možete pristupiti odabirom **Prikaz obogaćenih podataka**.
+Uzorak obogaćenih podataka možete vidjeti na pločici **Pretpregled** obogaćenih korisnika. Odaberite **Pogledajte više** i odaberite karticu **Podaci** da biste pristupili detaljnom prikazu svakog obogaćenog profila.
 
 ### <a name="overview-card"></a>Kartica pregleda
 
 Kartica pregleda prikazuje detalje o pokrivenosti obogaćivanja. 
 
-* **Kupci obrađeni i** promijenjeni : Broj profila kupaca koji su uspješno obogaćeni.
+* **Tvrtke obrađene i promijenjene**: Broj profila tvrtki kupaca koji su uspješno obogaćeni.
 
-* **Kupci obrađeni i ne mijenjaju se** : broj profila kupaca koji su prepoznati, ali nisu promijenjeni. To se obično događa kada su ulazni podaci valjani i ne mogu se poboljšati obogaćivanjem.
+* **Tvrtke obrađene i ne mijenjaju se**: broj profila poduzeća kupaca koji su prepoznati, ali nisu promijenjeni. To se obično događa kada su ulazni podaci valjani i ne mogu se poboljšati obogaćivanjem.
 
-* **Kupci nisu obrađeni i nisu se** promijenili : broj profila koji nisu prepoznati. Obično za ulazne podatke koji nisu valjani ili nisu podržani obogaćivanjem.
+* **Tvrtke koje nisu obrađene i nisu promijenjene**: broj profila poduzeća kupaca koji nisu prepoznati. To se obično događa za ulazne podatke koji nisu valjani ili nisu podržani obogaćivanjem.
 
 ## <a name="next-steps"></a>Sljedeći koraci
 

@@ -1,7 +1,7 @@
 ---
 title: Nove i nadolazeće značajke
-description: Informacije o novim značajkama, poboljšanjima i ispravcima programskih pogrešaka.
-ms.date: 12/02/2021
+description: 'Informacije o novim značajkama, poboljšanjima i ispravcima programskih pogrešaka.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: MT
-ms.contentlocale: hr-HR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884253"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Što je novo u mogućnosti uvida u ciljnu skupinu Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Sa zadovoljstvom objavljujemo naša najnovija ažuriranja! Ovaj članak daje javni pretpregled značajki, poboljšanja opće dostupnosti i ažuriranja značajki. Kako biste vidjeli dugoročne planove značajki, pogledajte članak [Raspored izdanja sustava Dynamics 365 i rješenje Power Platform](/dynamics365/release-plans/).
 
@@ -27,13 +22,57 @@ Ažuriranja unosimo po regijama. Tako bi neke regije mogle vidjeti značajke pri
 > [!TIP]
 > Za kontakt i glasanje o zahtjevima za značajkama i prijedlozima o proizvodu idite na [portal sa zamislima za aplikacije Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="december-2021-updates"></a>Ažuriranja u prosincu 2021.
+
+Ažuriranja u prosincu 2021. uključuju nove značajke, nadogradnje performansi i ispravke pogrešaka.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Prosljeđivanje zapisnika uvida klijenata na Azure Monitor
+
+Customer Insights omogućuje izravnu integraciju sa Azure Monitorom. Ova značajka uključuje revizijske događaje i operativne događaje. Zapisi resursa servisa Azure Monitor omogućuju vam nadzor i slanje zapisnika u Azure Storage, Azure Log Analytics ili njihovo strujanje na Azure Središta događaja.
+
+Dodatne informacije potražite u članku [Prijava prosljeđivanja pomoću Dynamics 365 Customer Insights značajke Azure Monitor (pretpregled)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Obogaćivanje profila kupaca podacima o angažmanu
+
+Koristite podatke iz Microsoft Office 365 da biste obogatili profile korisničkog računa uvidima u angažmane putem Office 365 aplikacija. Podaci o angažmanu sastoje se od aktivnosti e-pošte i sastanka, koja se objedinjuje na razini računa. Na primjer, broj poruka e-pošte s poslovnog računa ili broj sastanaka s računom. Ne dijele se podaci o pojedinačnim korisnicima. Ovo obogaćivanje dostupno je u sljedećim regijama: Velikoj Britaniji, Europi, Sjevernoj Americi.
+
+Dodatne informacije potražite u članku [Obogaćivanje profila korisnika podacima o angažmanu (pretpregled)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Napredne značajke ujedinjenja podataka
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Omogući pravila za rješavanje sukoba na razini pojedinačnih atributa
+
+Prilikom zaključivanja zapisa o klijentima unutar entiteta možda nećete htjeti odabrati cijeli zapis kao pobjednika. Sada vam omogućujemo spajanje najboljih polja iz različitih zapisa na temelju pravila za svaki atribut. Na primjer, možete odabrati zadržavanje najnovije e-pošte i najpotpunije adrese iz različitih zapisa. 
+
+Sada možete definirati zasebna pravila spajanja za pojedinačne atribute uz zaključujući i spajajući zapise unutar jednog entiteta. Prethodno smo vam dopustili da odaberete samo jedno pravilo spajanja (vođenje zapisa na temelju dovršenosti podataka o recesiji) i to se pravilo primijenilo na razini zapisa na sve atribute. To nije idealno kada se neki podaci koje želite zadržati nalaze u zapisu A, a drugi dobri podaci nalaze se u zapisu B.
+
+Više informacija pogledajte u [Definirajte uklanjanje duplikata u entitetu podudarnosti](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Prilagođena pravila za podudaranje
+
+Postoje slučajevi kada trebate navesti iznimku od općih pravila kako ne biste odgovarali zapisima. To se može dogoditi kada više pojedinaca dijeli dovoljno informacija kako bi im sustav odgovarao kao pojedinac. Na primjer, blizanci s istim prezime, žive u istom gradu i dijele datum rođenja.
+
+Iznimkama se osigurava da se netočno ujedinjenje podataka može riješiti u pravilima ujedinjenja. Pravilu možete dodati više iznimaka.
+
+Dodatne informacije potražite u članku [Dodavanje iznimaka u pravilo](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Pružanje dodatnih pravila za rješavanje sukoba i omogućavanje grupiranja atributa
+
+Ova značajka omogućuje tretiranje grupe polja kao jedne jedinice. Na primjer, kada naši zapisi sadrže polja Adresa1, Adresa2, Grad, Država i Zip. Vjerojatno se ne želimo spojiti u adresu2 drugog zapisa, misleći da će to učiniti naše podatke potpunijima.
+
+Sada možete kombinirati grupu povezanih polja i primijeniti jedno pravilo spajanja na grupu. 
+
+Dodatne informacije potražite u članku [Kombiniranje grupe polja](merge-entities.md#combine-a-group-of-fields).
+
+
 ## <a name="november-2021-updates"></a>Ažuriranja obavljena u studenom 2021.
 
 Ažuriranja u studenom 2021. uključuju nove značajke, nadogradnje performansi i ispravke pogrešaka.
 
 ### <a name="segment-membership-now-available-in-dataverse"></a>Članstvo u segmentu sada je dostupno u programu Dataverse
 
-Informacije o članstvu u segmentu za korisničke profile sada su Dataverse dostupne zajedno s profilima i uvidima kupaca. Akcijske aplikacije sustava Dynamics 365 i aplikacije utemeljene na modelu mogu koristiti te podatke za traženje pojedinosti o članstvu u segmentu za određenog korisnika.
+Informacije o članstvu u Dataverse segmentu za korisničke profile sada su dostupne zajedno s profilima i uvidima kupaca. Akcijske aplikacije sustava Dynamics 365 i aplikacije utemeljene na modelu mogu koristiti te podatke za traženje pojedinosti o članstvu u segmentu za određenog korisnika.
 
 ### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivnosti podržavaju podatke na razini kontakta za poslovne račune
 
@@ -51,11 +90,11 @@ U sljedećim se odjeljcima ističu neka od ključnih područja koja su prilagođ
 
 #### <a name="export-segments-based-on-business-accounts"></a>Izvoz segmenata na temelju poslovnih računa
 
-Sav izvoz segmenata u publika uvidi dostupni su u kontekstu poslovnih računa. Za većinu izvoza segmenata potrebna je dodatna konfiguracija i [podaci za kontakt projicirani u](segment-builder.md#create-a-new-segment) segmentima u podlozi kako bi bili valjani za poslovne račune. Dodatne informacije potražite u [članku Izvoz segmenata](export-destinations.md#export-segments).
+Sav izvoz segmenata u publika uvidi dostupni su u kontekstu poslovnih računa. Za većinu izvoza segmenata potrebna je dodatna konfiguracija i [podaci za kontakt projicirani](segment-builder.md#create-a-new-segment) u segmentima u podlozi kako bi bili valjani za poslovne račune. Dodatne informacije potražite u članku [Izvoz segmenata](export-destinations.md#export-segments).
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Korištenje izvoza LinkedIn Adsa s poslovnim računima
 
-Izvoz LinkedIn Adsa sada je dostupan za ciljanje kontakata i tvrtki u kontekstu poslovnih računa. Prilikom odabira ciljanja tvrtke kao primarnog fokusa linkedin izvoza možete izvesti segmente izgrađene na poslovnim računima bez potrebe za projiciranjem podataka za kontakt. Dodatne informacije potražite u dokumentima o [izvozu LinkedIn](export-linkedin-ads.md) Oglasa i razlici između [ciljanja kontakata](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) i [ciljanja tvrtke](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+Izvoz LinkedIn Adsa sada je dostupan za ciljanje kontakata i tvrtki u kontekstu poslovnih računa. Prilikom odabira ciljanja tvrtke kao primarnog fokusa linkedin izvoza možete izvesti segmente izgrađene na poslovnim računima bez potrebe za projiciranjem podataka za kontakt. Dodatne informacije potražite u dokumentima o [izvozu](export-linkedin-ads.md) LinkedIn Oglasa i razlici između [ciljanja](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) kontakata i [ciljanja](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) tvrtke. 
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Stvaranje mjera na temelju poslovnih računa i njihove hijerarhije
 
@@ -63,15 +102,15 @@ Sastavljač mjera omogućuje vam stvaranje mjera oko poslovnih računa i po žel
 
 #### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Stvaranje segmenata na temelju poslovnih računa i njihove hijerarhije
 
-Sastavljač segmenata omogućuje vam stvaranje segmenata poslovnih računa koji po želji uključuju podatke za kontakt za svaki račun u segmentu. Ako imate postavljenu hijerarhiju računa, u stvaranju segmenta možete koristiti informacije o hijerarhiji računa. Dodatne informacije potražite [u članku Kreiranje novog segmenta](segment-builder.md#create-a-new-segment).
+Sastavljač segmenata omogućuje vam stvaranje segmenata poslovnih računa koji po želji uključuju podatke za kontakt za svaki račun u segmentu. Ako imate postavljenu hijerarhiju računa, u stvaranju segmenta možete koristiti informacije o hijerarhiji računa. Dodatne informacije potražite u članku [Stvaranje novog segmenta](segment-builder.md#create-a-new-segment).
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Zadržite svoje poslovne račune s dubokim uvidom u njihovu tendenciju
 
-Model predviđanje kupca sada podržava i poslovne račune. Možete procijeniti rizik od gubitka ne samo za račun, već i za kombinaciju računa i kategorije proizvoda ili usluge koju kupuju od vas. Ovaj dodatak pomaže vam da shvatite je li vjerojatnije da će račun prestati kupovati od vas općenito ili samo za određenu kategoriju robe ili usluga. Da bi vam dodatno pomogao u korištenju ovog modela AI, navodi se i razloge zbog kojih će se račun vjerojatno razbjesniti. Dodatne informacije potražite [u odjeljku Predviđanje transakcije (pretpregled).](predict-transactional-churn.md)
+Model predviđanje kupca sada podržava i poslovne račune. Možete procijeniti rizik od gubitka ne samo za račun, već i za kombinaciju računa i kategorije proizvoda ili usluge koju kupuju od vas. Ovaj dodatak pomaže vam da shvatite je li vjerojatnije da će račun prestati kupovati od vas općenito ili samo za određenu kategoriju robe ili usluga. Da bi vam dodatno pomogao u korištenju ovog modela AI, navodi se i razloge zbog kojih će se račun vjerojatno razbjesniti. Dodatne informacije potražite u [odjeljku Predviđanje (pretpregled)](predict-transactional-churn.md) transakcije.
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Prikaz kontakata poslovnog računa u prikazu kupca
 
-Ako su poslovni računi mapirani na povezane račune, aplikacija Uvidi u klijenta prikazuje te povezane kontakte kao dio prikaza pojedinosti o klijentu. Dodatne informacije potražite u [odjeljku Profili kupaca](customer-profiles.md).
+Ako su poslovni računi mapirani na povezane račune, aplikacija Uvidi u klijenta prikazuje te povezane kontakte kao dio prikaza pojedinosti o klijentu. Dodatne informacije potražite u članku [Profili kupaca](customer-profiles.md).
 
 
 ## <a name="september-2021-updates"></a>Ažuriranja u rujnu 2021.

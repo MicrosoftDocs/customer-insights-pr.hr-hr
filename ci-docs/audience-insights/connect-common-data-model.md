@@ -1,7 +1,7 @@
 ---
 title: Povezivanje podataka oblika Common Data Model s računom servisa Azure Data Lake
 description: Rad s podacima oblika Common Data Model pomoću servisa Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: hr-HR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900188"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povezivanje s mapom značajke Common Data Model s pomoću računa za Azure Data Lake
 
 Ovaj članak pruža informacije o unosu podataka iz mape Common Data Model pomoću vašeg računa servisa Azure Data Lake Storage Gen2.
@@ -26,11 +21,13 @@ Ovaj članak pruža informacije o unosu podataka iz mape Common Data Model pomo�
 
 - Unos podataka podržava isključivo račune servis za pohranu Azure Data Lake *Gen2*. Ne možete koristiti račune za pohranu servisa Azure Data Lake Gen1 za unos podataka.
 
+- Račun za pohranu na Azure Data Lakeu mora imati [omogućen hijerarhijski prostor naziva](/azure/storage/blobs/data-lake-storage-namespace).
+
 - Da biste provjerili autentičnost s upraviteljem servisa Azure, provjerite je li konfiguriran na vašem klijentu. Za više informacija pogledajte [Povezivanje uvida ciljne skupine s računom servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure](connect-service-principal.md).
 
 - Azure Data Lake s kojim se želite povezati i s kojeg želite unositi podatke mora biti u istoj regiji platforme Azure kao i okruženje Dynamics 365 Customer Insights. Veze s mapom Common Data Model iz podatkovnog jezera u drugoj Azure regiji nisu podržane. Da biste znali koja je Azure regija okruženja, idite na **Administrator** > **Sustav** > **O sustavu** u uvidima ciljne skupine.
 
-- Podaci pohranjeni u mrežnim servisima mogu se pohraniti na lokaciji različitoj od mjesta obrade ili pohranjivanja podataka u sustavu Dynamics 365 Customer Insights.Uvozom ili povezivanjem s podacima pohranjenima u mrežnim servisima suglasni ste da se podaci mogu prenositi i pohranjivati sa sustavom Dynamics 365 Customer Insights .  [Saznajte više u Microsoftovu centru za pouzdanost](https://www.microsoft.com/trust-center).
+- Podaci pohranjeni u mrežnim servisima mogu se pohraniti na lokaciji različitoj od mjesta obrade ili pohranjivanja podataka u sustavu Dynamics 365 Customer Insights.Uvozom ili povezivanjem s podacima pohranjenima u mrežnim servisima suglasni ste da se podaci mogu prenositi i pohranjivati sa sustavom Dynamics 365 Customer Insights. [Saznajte više u Microsoftovu centru za pouzdanost](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Spojite se na mapu Common Data Model
 
@@ -38,11 +35,11 @@ Ovaj članak pruža informacije o unosu podataka iz mape Common Data Model pomo�
 
 1. Odaberite **Dodaj izvor podataka**.
 
-1. Odaberite **Spremište podatkovnog jezera Azure**, unesite **naziv** izvor podataka, a zatim **dalje**.
+1. Odaberite Spremište **podatkovnog jezera Azure, unesite** naziv **izvor podataka, a zatim dalje** **.**
 
    - Ako se to od vas zatraži, odaberite jedan od oglednih skupova podataka koji se odnose na vašu industriju, a zatim odaberite **Dalje**. 
 
-1. Možete birati između korištenja mogućnosti koja se temelji na resursima i mogućnosti koja se temelji na pretplati za provjeru autentičnosti. Za više informacija pogledajte [Povezivanje uvida ciljne skupine s računom servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure](connect-service-principal.md). Unesite **adresu poslužitelja**, odaberite Prijava, a **zatim** Dalje **·**.
+1. Možete birati između korištenja mogućnosti koja se temelji na resursima i mogućnosti koja se temelji na pretplati za provjeru autentičnosti. Za više informacija pogledajte [Povezivanje uvida ciljne skupine s računom servisa Azure Data Lake Storage Gen2 s upraviteljem servisa Azure](connect-service-principal.md). Unesite adresu **poslužitelja**, odaberite **Prijava**, a zatim **Dalje**.
    > [!div class="mx-imgBorder"]
    > ![Dijaloški okvir za unos novih pojedinosti o vezi za Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
