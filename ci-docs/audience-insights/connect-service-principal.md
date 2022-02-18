@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900234"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088109"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Spajanje na Azure Data Lake Storage račun upotrebom upravitelja usluge Azure
 
-U ovom se članku objašnjava kako se povezati Dynamics 365 Customer Insights s Azure Data Lake Storage računom pomoću upravitelja servisa Azure umjesto ključeva računa za pohranu. 
+U ovom se članku objašnjava kako se povezati Dynamics 365 Customer Insights s računom Azure Data Lake Storage pomoću upravitelja servisa Azure umjesto ključeva računa za pohranu. 
 
 Automatizirani alati koji koriste servise Azure uvijek bi trebali imati ograničene dozvole. Umjesto da se aplikacije prijavljuju kao potpuno privilegirani korisnik, Azure nudi upravitelje servisa. Pomoću upravitelja servisa možete sigurno [dodati ili urediti mapu Zajednički podatkovni model kao izvor podataka](connect-common-data-model.md) ili [stvoriti ili ažurirati okruženje](create-environment.md).
 
 > [!IMPORTANT]
-> - Račun za pohranu Data Lake koji će koristiti upravitelj usluge mora imati [omogućen hijerarhijski prostor naziva](/azure/storage/blobs/data-lake-storage-namespace).
+> - Račun za pohranu jezera podataka koji će koristiti glavni servis mora biti Gen2 i imati [omogućen hijerarhijski prostor naziva](/azure/storage/blobs/data-lake-storage-namespace). Računi za pohranu na Azure Data Lake Gen1 nisu podržani.
 > - Da biste stvorili glavnog servisa, potrebne su vam administratorske dozvole za pretplatu na Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Izrada upravitelja usluge Azure za uslugu Customer Insights

@@ -1,7 +1,7 @@
 ---
 title: Podudaranje entiteta za objedinjavanje podataka
 description: Prilagodite entitete da biste stvorili objedinjene profile klijenata.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: hr-HR
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098826"
 ---
-
 # <a name="match-entities"></a>Slaganje entiteta
 
 Faza uparivanja određuje kako kombinirati skupove podataka u objedinjeni skup podataka profila klijenta. Nakon dovršetka [koraka mapiranja](map-entities.md) u postupku objedinjavanja podataka spremni ste za uparivanje vaših entiteta. Faza uparivanja zahtijeva najmanje dva mapirana entiteta.
@@ -24,13 +29,7 @@ Stranica uparivanja sastoji se od tri odjeljka:
 
 ## <a name="specify-the-match-order"></a>Zadavanje redoslijeda uparivanja
 
-Idite na **Podaci** > **Objedini** > **Upari** i odaberite **Postavi redoslijed** za početak faze podudaranja.
-
-Svako uparivanje ujedinjuje dva ili više entiteta u jedan objedinjeni entitet. Istodobno vodi jedinstvenu evidenciju klijenata. Na primjer, odabrali smo dva entiteta: **eCommerce:eCommerceContacts** kao primarni entitet i **LoyaltyScheme:loyCustomers** kao drugi entitet. Redoslijed entiteta određuje kojim će redoslijedom sustav pokušati upariti zapise.
-
-:::image type="content" source="media/match-page.png" alt-text="Snimka zaslona stranice Uparivanje u području Objedinjavanje za postupak objedinjavanja podataka.":::
-  
-Primarni entitet *eCommerce:eCommerceContacts* uparuje se sa sljedećim entitetom *LoyaltyScheme:loyCustomers*. Skup podataka koji proizlazi iz prvog koraka podudaranja podudara se sa sljedećim entitetom ako imate više od dva entiteta.
+Svako uparivanje ujedinjuje dva ili više entiteta u jedan objedinjeni entitet. Istodobno vodi jedinstvenu evidenciju klijenata. Redoslijed podudaranja označava redoslijed kojim sustav pokušava uskladiti zapise.
 
 > [!IMPORTANT]
 > Entitet koji odaberete kao primarni entitet poslužit će kao osnova za vaš objedinjeni skup podataka profila. Ovom entitetu dodat će se dodatni entiteti koji su odabrani tijekom faze uparivanja. To ne znači da će objedinjeni entitet uključivati *sve* podatke uključene u ovaj entitet.
@@ -38,9 +37,18 @@ Primarni entitet *eCommerce:eCommerceContacts* uparuje se sa sljedećim entiteto
 > Postoje dva razmatranja koja vam mogu pomoći da odaberete hijerarhiju entiteta:
 >
 > - Kao primarni entitet odaberite entitet s najpotpunijim i najpouzdanijim podacima profila o svojim klijentima.
-> - Kao primarni entitet odaberite entitet koji ima nekoliko zajedničkih atributa s drugim entitetima (npr. ime, telefonski broj ili adresa e-pošte).
+> - Odaberite entitet koji ima nekoliko zajedničkih atributa s drugim entitetima (na primjer, ime, telefonski broj ili adresa e-pošte) kao primarni entitet.
 
-Nakon što odredite redoslijed uparivanja, vidjet ćete definirane parove uparivanja u odjeljku **Pojedinosti o uparenim zapisima** u **Podaci** > **Objedinjavanje** > **Uparivanje**. Ključni mjerni podaci bit će prazni dok se ne dovrši postupak uparivanja.
+1. Idite na **Podaci** > **Objedini** > **Upari** i odaberite **Postavi redoslijed** za početak faze podudaranja.
+1. Odaberite **Redoslijed entiteta**. Na primjer, odaberite **eCommerce:eCommerceContacts** kao primarni entitet i **LoyaltyScheme:loyCustomers** kao drugi entitet. 
+1. Da biste imali svaki zapis u entitetu kao jedinstvenog klijenta i usklađen sa svakim sljedećim entitetom, odaberite **Uključi sve**.
+1. Odaberite **Gotovo**. 
+
+Nakon određivanja redoslijeda podudaranja, definirani parovi podudaranja prikazuju se u odjeljku Detalji podudarnih zapisa na **DataUnifyMatch** **·** > **.** > **·** Ključni mjerni podaci prazni su dok se postupak podudaranja ne dovrši.
+
+:::image type="content" source="media/match-page.png" alt-text="Snimka zaslona stranice Uparivanje u području Objedinjavanje za postupak objedinjavanja podataka.":::
+  
+Primarni entitet *eCommerce:eCommerceContacts* uparuje se sa sljedećim entitetom *LoyaltyScheme:loyCustomers*. Skup podataka koji proizlazi iz prvog koraka podudaranja podudara se sa sljedećim entitetom ako imate više od dva entiteta.
 
 ## <a name="define-rules-for-match-pairs"></a>Definiranje pravila za parove uparivanja
 
@@ -50,7 +58,7 @@ Upozorenje **Potrebna pravila** pored naziva entiteta sugerira da za par upariva
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Snimka zaslona odjeljka s pojedinostima o zapisu Upareno s istaknutom kontrolom za dodavanje pravila.":::
 
-1. Odaberite **Dodavanje pravila** ispod entiteta u odjeljku **Pojedinosti o uparenim zapisima** za definiranje pravila uparivanja.
+1. Odaberite **Dodaj pravilo** pod entitetom u odjeljku **Detalji podudarnih** zapisa da biste definirali pravila podudaranja.
 
 1. U oknu **Stvaranje pravila** konfigurirajte uvjete za pravilo.
 
@@ -61,15 +69,15 @@ Upozorenje **Potrebna pravila** pored naziva entiteta sugerira da za par upariva
    - **Entitet/Polje (drugi redak)**: Odaberite atribut koji se odnosi na atribut entiteta navedenog u prvom retku.
 
    - **Normalizacija**: Odaberite jednu od sljedećih mogućnosti normalizacije za odabrane atribute. 
-     - Praznina: uklanja sve razmake. *Pozdrav,   svijete* postaje *Pozdrav,svijete*.
+     - Brojevi: pretvara ostale brojevne sustave, poput rimskih brojeva, u arapske brojeve. *VIII* postaje *8*.
      - Simboli: uklanja sve simbole i posebne znakove. *Head&Shoulder* postaje *HeadShoulder*.
      - Tekst u mala slova: pretvara sve znakove u mala slova. *SVE VELIKA SLOVA i Velika početna slova* postaje *sve velika slova i velika početna slova*.
+     - Vrsta (telefon, ime, adresa, organizacija): standardizira imena, naslove, telefonske brojeve, adrese itd. 
      - Unicode u ASCII: pretvara unicode notaciju u ASCII znakove. */u00B2* postaje *2*.
-     - Brojevi: pretvara ostale brojevne sustave, poput rimskih brojeva, u arapske brojeve. *VIII* postaje *8*.
-     - Semantičke vrste: standardizira imena, titule, telefonske brojeve, adrese itd. 
+     - Praznina: uklanja sve razmake. *Pozdrav,   svijete* postaje *Pozdrav,svijete*.
 
    - **Preciznost**: postavite razinu preciznosti koja će se primjenjivati za ovaj uvjet. 
-     - **Osnovno**: odaberite između *Nisko*, *Srednje*, *Visoko* i *Točno*. Odaberite **Točno** da biste uparili samo zapise s podudaranjem od 100 posto. Odaberite jednu od ostalih razina za uparivanje zapisa koji nisu 100 posto identični.
+     - **Osnovno**: odaberite između *Nisko*, *Srednje*, *Visoko* i *Točno*. Odaberite **Točno** da bi se podudarali samo sa zapisima koji odgovaraju 100 posto. Odaberite jednu od ostalih razina za uparivanje zapisa koji nisu 100 posto identični.
      - **Prilagođeno**: postavite postotak kojem zapisi moraju odgovarati. Sustav će upariti samo zapise koji prelaze ovaj prag.
 
 1. Navedite **Naziv** za pravilo.
@@ -92,7 +100,7 @@ Da biste uparili entitete samo ako atributi ispunjavaju više uvjeta, dodajte jo
 
 ### <a name="add-rules-to-a-match-pair"></a>Dodavanje pravila paru uparivanja
 
-Pravila uparivanja predstavljaju skupove uvjeta. Za uparivanje entiteta prema uvjetima na temelju više atributa, dodajte još pravila
+Pravila uparivanja predstavljaju skupove uvjeta. Da biste entitete uskladili s uvjetima koji se temelje na više atributa, dodajte još pravila.
 
 1.  Idite u odjeljak **Podaci** > **Objedinjavanje** > **Uparivanje** i odaberite **Dodavanje pravila** na entitetu kojem želite dodati pravila.
 
@@ -117,7 +125,7 @@ Entitetima možete promijeniti redoslijed pravila podudaranja da biste promijeni
 
 Pored [pravila međuentitetskih uparivanja](#define-rules-for-match-pairs), također možete odrediti pravila o uklanjanju duplikata. *Uklanjanje duplikata* je još jedan postupak prilikom uparivanja zapisa. On identificira duplikate zapisa i spaja ih u jedan zapis. Izvorni zapisi povezuju se s objedinjenim zapisom sa zamjenskim ID-ovima.
 
-Zapisi kojima su uklonjeni duplikati upotrijebit će se u postupku međuentitetskih uparivanja. Uklanjanje duplikata se događa na pojedinačnim entitetima i može se konfigurirati za svaki entitet koji se koristi u parovima uparivanja.
+Deduplicatirani zapisi koriste se u postupku podudaranja između entiteta. Deduplikacija se događa na pojedinačnim entitetima i može se konfigurirati za svaki entitet koji se koristi u parovima podudaranja.
 
 Navođenje pravila za uklanjanje duplikata nije obavezno. Ako takva pravila nisu konfigurirana, primjenjuju se pravila koja je definirao sustav. Ona kombiniraju sve zapise u jedan zapis prije prosljeđivanja podataka entiteta međuentitetskom uparivanju radi poboljšane izvedbe.
 
@@ -134,7 +142,7 @@ Navođenje pravila za uklanjanje duplikata nije obavezno. Ako takva pravila nisu
       - **Najnoviji**: Identificira pobjednički zapis na temelju nedavnosti. Zahtijeva datum ili numeričko polje za definiranje nedavnosti.
       - **Najstariji**: Identificira pobjednički zapis na temelju starosti. Zahtijeva datum ili numeričko polje za definiranje nedavnosti.
 
-   1. Po želji odaberite **Napredno** da biste definirali pravila deduplikacije pojedinačnih atributa entiteta. Na primjer, možete odabrati zadržavanje najnovije e-pošte i najpotpunije adrese iz različitih zapisa. Proširite entitet da biste vidjeli sve njegove atribute i definirali koju mogućnost koristiti za pojedinačne atribute. Ako odaberete mogućnost koja se temelji na recesiji, morate navesti i polje datuma/vremena koje definira mogućnost recesije. 
+   1. Ako želite da biste definirali pravila deduplikacije pojedinačnih atributa entiteta, odaberite **Napredno**. Na primjer, možete odabrati zadržavanje najnovije e-pošte i najpotpunije adrese iz različitih zapisa. Proširite entitet da biste vidjeli sve njegove atribute i definirali koju mogućnost koristiti za pojedinačne atribute. Ako odaberete mogućnost koja se temelji na recesiji, morate navesti i polje datuma/vremena koje definira mogućnost recesije. 
  
       > [!div class="mx-imgBorder"]
       > ![Korak 1 pravila za uklanjanje duplikata.](media/match-selfconflation.png "Korak 1 pravila uklanjanja duplikata")

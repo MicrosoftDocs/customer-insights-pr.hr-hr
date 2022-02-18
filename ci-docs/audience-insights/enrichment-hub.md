@@ -1,7 +1,7 @@
 ---
 title: Obogaćivanje objedinjenih profila klijenata
 description: Koristite mogućnosti za obogaćivanje podataka o klijentima.
-ms.date: 11/05/2021
+ms.date: 02/07/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: MT
+ms.openlocfilehash: 5c3dda3b9bae828857258025ff79958ee22bdb6f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884207"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098780"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za korisničke profile (pretpregled)
 
@@ -37,6 +37,7 @@ Na kartici **Otkrij** pronaći ćete sve podržane mogućnosti obogaćivanja.
 - [Demografske podatke](enrichment-experian.md) pruža Experian
 - [Prilagođeni podaci](enrichment-SFTP-custom-import.md) putem Protokola sigurnog prijenosa datoteka (SFTP) 
 - [Azure karte](enrichment-azure-maps.md) omogućuje Microsoft
+- [Podatke o lokaciji](enrichment-here.md) pruža tvrtka HERE Technologies 
 
 # <a name="business-accounts-b-to-b"></a>[Poslovni računi (B-to-B)](#tab/b2b)
 
@@ -46,7 +47,7 @@ Na kartici **Otkrij** pronaći ćete sve podržane mogućnosti obogaćivanja.
 - [Podatke o lokaciji](enrichment-here.md) pruža tvrtka HERE Technologies 
 - [Prilagođeni podaci](enrichment-SFTP-custom-import.md) putem Protokola sigurnog prijenosa datoteka (SFTP) 
 - [Azure karte](enrichment-azure-maps.md) omogućuje Microsoft
-- [Podaci o angažmanu računa](enrichment-office.md) koje je dostavio Microsoft
+- [Podaci o](enrichment-office.md) angažmanu računa koje je dostavio Microsoft
 
 ---
 

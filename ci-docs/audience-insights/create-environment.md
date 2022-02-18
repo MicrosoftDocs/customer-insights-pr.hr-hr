@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892329"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088093"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Stvaranje okruženja u uvidima u ciljne skupine
 
@@ -28,7 +28,7 @@ Tvrtke ili ustanove mogu stvoriti *dva* okruženja za svaku licencu za Customer 
 
 ## <a name="create-a-new-environment"></a>Stvaranje novog okruženja
 
-Nakon što je kupio pretplatničku licencu za Customer Insights, globalni administrator klijenta Microsoft 365 prima poruku e-pošte koja ga poziva da stvori okruženje. Idite na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) za početak. 
+Nakon kupnje licence za pretplatu za Customer Insights, globalni administrator klijenta Microsoft 365 prima poruku e-pošte koja ih poziva da stvore okruženje. Idite na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) za početak. 
 
 Vođeno iskustvo pomaže vam kroz korake prikupiti sve potrebne informacije za novo okruženje. Za stvaranje ili upravljanje okruženjima potrebne su vam [administratorske dozvole](permissions.md) u uvidima u ciljne skupine.
 
@@ -64,7 +64,7 @@ Spremanjem podataka u repozitorij Azure Data Lake Storage, slažete se da će se
 > Customer Insights trenutačno podržava sljedeće:
 > - Uvezeni entiteti iz tokova podataka programa Power BI koji su pohranjeni u Data Lake kojim upravlja Microsoft Dataverse.  
 > - Računi za Azure Data Lake Storage iz iste regije za Azure koju ste odabrali prilikom stvaranja okruženja.
-> - Računi za Azure Data Lake Storage koji imaju omogućen *prostor za hijerarhijski naziv*.
+> - Azure Data Lake Storage račune koji su Gen2 i imaju *omogućen hijerarhijski prostor naziva*. Računi za pohranu na Azure Data Lake Gen1 nisu podržani.
 
 Za opciju Azure Data Lake Storage možete birati između opcije koja se temelji na resursima i opcije na temelju pretplate za provjeru autentičnosti. Za više informacija pogledajte [Povezivanje s računom Azure Data Lake Storage pomoću upravitelja usluge Azure](connect-service-principal.md). Naziv **Spremnika** bit će `customerinsights` i ne može se promijeniti.
 

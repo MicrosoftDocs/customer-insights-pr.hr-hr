@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645573"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8116005"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Izrada veze između uvida u ciljnu skupinu i uvida u angažman
 
@@ -25,7 +25,7 @@ Upotrijebite objedinjene profile i segmente iz uvida u ciljnu skupinu za više m
 
 ## <a name="prerequisites"></a>Preduvjeti
 
-- Profili uvida u ciljnu skupinu moraju se pohraniti na Azure Data Lake Storage račun koji posjedujete ili u [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash; upravljano jezero podataka. 
+- Profili uvida u ciljnu skupinu moraju se pohraniti na Azure Data Lake Storage račun koji posjedujete ili u [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash; upravljano jezero podataka. 
 - Vaše okruženje uvida u ciljnu skupinu treba imati pridruženo okruženje Dataverse. I ako to okruženje koristi Dataverse i za pohranu podataka provjerite mogućnost **Omogući dijeljenje podataka** u uvidima u ciljnu skupinu. Dodatne informacije potražite u odjeljku [Stvaranje i konfiguriranje okruženja u uvidima u ciljne skupine](../audience-insights/create-environment.md).
 - Za okruženja uvida u angažman i uvida u ciljnu skupinu potrebne su vam administratorske dozvole.
 - Povezana okruženja moraju se nalaziti u istoj zemljopisnoj regiji.

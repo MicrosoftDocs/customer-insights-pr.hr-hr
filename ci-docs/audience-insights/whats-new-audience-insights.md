@@ -1,7 +1,7 @@
 ---
 title: Nove i nadolazeće značajke
-description: 'Informacije o novim značajkama, poboljšanjima i ispravcima programskih pogrešaka.'
-ms.date: 01/27/2022
+description: Informacije o novim značajkama, poboljšanjima i ispravcima programskih pogrešaka.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: hr-HR
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088276"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Što je novo u mogućnosti uvida u ciljnu skupinu Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Ažuriranja unosimo po regijama. Tako bi neke regije mogle vidjeti značajke pri
 
 > [!TIP]
 > Za kontakt i glasanje o zahtjevima za značajkama i prijedlozima o proizvodu idite na [portal sa zamislima za aplikacije Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Ažuriranja iz siječnja 2022.
+
+Ažuriranja u siječnju 2022. uključuju nove značajke, nadogradnje performansi i ispravke pogrešaka.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analiza raspoloženja povratnih informacija vašeg klijenta
+
+Customer Insights pruža novu značajku koju pokreće umjetna inteligencija kako bi sintetizirala raspoloženje kupaca i identificirala određene poslovne aspekte kao prilike za ciljana poboljšanja. Analizom pisanih povratnih informacija vaših kupaca možete dobiti točne uvide po niskoj cijeni. Analiza raspoloženja koju pokreću modeli obrade prirodnog jezika (NLP) koji generiraju dva izvedena uvida za svaki ID kupca. Ocjena raspoloženja (od –5 do 5) i popis primjenjivih poslovnih aspekata. 
+
+Dodatne informacije potražite [u članku Analiza raspoloženja u povratnim informacijama korisnika (Pretpregled)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Ažuriranja u prosincu 2021.
@@ -37,7 +53,7 @@ Dodatne informacije potražite u članku [Prijava prosljeđivanja pomoću Dynami
 
 Koristite podatke iz Microsoft Office 365 da biste obogatili profile korisničkog računa uvidima u angažmane putem Office 365 aplikacija. Podaci o angažmanu sastoje se od aktivnosti e-pošte i sastanka, koja se objedinjuje na razini računa. Na primjer, broj poruka e-pošte s poslovnog računa ili broj sastanaka s računom. Ne dijele se podaci o pojedinačnim korisnicima. Ovo obogaćivanje dostupno je u sljedećim regijama: Velikoj Britaniji, Europi, Sjevernoj Americi.
 
-Dodatne informacije potražite u članku [Obogaćivanje profila korisnika podacima o angažmanu (pretpregled)](enrichment-office.md)
+Dodatne informacije potražite u članku [Obogaćivanje profila korisnika podacima o angažmanu (Pretpregled)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Napredne značajke ujedinjenja podataka
 
@@ -106,7 +122,7 @@ Sastavljač segmenata omogućuje vam stvaranje segmenata poslovnih računa koji 
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Zadržite svoje poslovne račune s dubokim uvidom u njihovu tendenciju
 
-Model predviđanje kupca sada podržava i poslovne račune. Možete procijeniti rizik od gubitka ne samo za račun, već i za kombinaciju računa i kategorije proizvoda ili usluge koju kupuju od vas. Ovaj dodatak pomaže vam da shvatite je li vjerojatnije da će račun prestati kupovati od vas općenito ili samo za određenu kategoriju robe ili usluga. Da bi vam dodatno pomogao u korištenju ovog modela AI, navodi se i razloge zbog kojih će se račun vjerojatno razbjesniti. Dodatne informacije potražite u [odjeljku Predviđanje (pretpregled)](predict-transactional-churn.md) transakcije.
+Model predviđanje kupca sada podržava i poslovne račune. Možete procijeniti rizik od gubitka ne samo za račun, već i za kombinaciju računa i kategorije proizvoda ili usluge koju kupuju od vas. Ovaj dodatak pomaže vam da shvatite je li vjerojatnije da će račun prestati kupovati od vas općenito ili samo za određenu kategoriju robe ili usluga. Da bi vam dodatno pomogao u korištenju ovog modela AI, navodi se i razloge zbog kojih će se račun vjerojatno razbjesniti. Dodatne informacije potražite u [odjeljku Predviđanje transakcije (pretpregled)](predict-transactional-churn.md).
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Prikaz kontakata poslovnog računa u prikazu kupca
 

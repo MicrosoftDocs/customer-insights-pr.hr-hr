@@ -1,7 +1,7 @@
 ---
 title: Dodatak kartice kupca za aplikacije sustava Dynamics 365 (sadrži videozapis)
 description: Pomoću ovog dodatka prikažite podatke iz uvida u ciljne skupine u aplikacijama Dynamics 365.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: hr-HR
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085198"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Dodatak kartice klijenta (pretpregled)
 
 
@@ -113,5 +118,26 @@ Dodatak za karticu kupca ne nadograđuje se automatski. Za nadogradnju na najnov
 
 1. Nakon pokretanja postupka nadogradnje vidjet ćete indikator učitavanja sve dok nadogradnja ne završi. Ako nema novije verzije, nadogradnja će prikazati poruku o pogrešci.
 
+## <a name="troubleshooting"></a>Rješavanje problema
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Kontrole iz dodatka kartice kupca ne pronalaze podatke
+
+**Problem:**
+
+Čak i uz ispravno konfigurirana ID polja, kontrole ne mogu pronaći podatke za bilo kojeg klijenta.  
+
+**Rješenje:**
+
+1. Provjerite jeste li konfigurirali dodatak kartice u skladu s uputama: [Konfiguriranje dodatka Kartica kupca](#configure-the-customer-card-add-in) 
+
+1. Pregledajte konfiguraciju unosa podataka. Uredite izvor podataka za sustav Dynamics 365 koji sadrži GUID ID-a kontakta. Ako je GUID ID-a kontakta prikazan s velikim slovima u Power Query uređivaču, pokušajte sljedeće: 
+    1. Uredite izvor podataka da biste otvorili izvor podataka u Power Query programu Editor.
+    1. Odaberite stupac ID kontakta.
+    1. Na traci zaglavlja odaberite **Pretvori** da biste vidjeli dostupne akcije.
+    1. Odaberite **malo slovo**. Provjerite jesu li GUID-ove u tablici sada mala.
+    1. Spremite izvor podataka.
+    1. Pokrenite unos podataka, ujedinjenje i nizvodne procese da biste proširili promjene GUID-a. 
+
+Nakon dovršetka potpunog osvježavanja kontrole dodatka korisničke kartice trebale bi prikazivati očekivane podatke. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
