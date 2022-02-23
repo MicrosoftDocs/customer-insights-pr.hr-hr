@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: hr-HR
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046554"
 ---
-
 # <a name="merge-entities"></a>Spajanje entiteta
 
 Faza spajanja zadnja je faza u procesu objedinjavanja podataka. Njezina je svrha usklađivanje zbunjujućih podataka. Primjeri sukobljenih podataka mogu uključivati ime klijenta koje se nalazi u dvama skupovima podataka, ali se malo drugačije prikazuje u svakome od njih („Grant Marshall” u odnosu na „Grant Marshal”) ili telefonski broj koji se razlikuje u obliku (617-803-091X u odnosu na 617803091X). Spajanje tih zbunjujućih podatkovnih točaka vrši se na osnovi atribut prema atributu.

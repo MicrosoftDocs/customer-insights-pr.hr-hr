@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: hr-HR
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008756"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analiza raspoloženja u povratnim informacijama korisnika (Pretpregled)
 
 Kupci ovih dana očekuju visokokvalitetne proizvode, usluge i iskustva. Pogotovo kupci koji dijele svoje povratne informacije. Tvrtkama i ustanovama vrlo je izazovno analizirati sve veću količinu podataka bez smanjenja točnosti i većih troškova rada. Dynamics 365 Customer Insights nudi model analize raspoloženja za povratne informacije kupaca koji tvrtkama i ustanovama omogućuje točnije i jeftinije analizu podataka.
