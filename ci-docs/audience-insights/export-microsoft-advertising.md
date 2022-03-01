@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka usluge Customer Insights u Microsoftovo oglašavanje
 description: Saznajte kako konfigurirati vezu i izvesti u Microsoftovo oglašavanje.
-ms.date: 10/08/2021
+ms.date: 05/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 12fd221acb7c0eed443c9b860aca42dcb2b3788c
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618052"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124465"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Izvoz segmenata u Microsoftovo oglašavanje (pretpregled)
 
@@ -29,9 +29,9 @@ Izvezite segmente usluge Customer Insights u Microsoftovo oglašavanje da biste 
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Možete izvesti do 500 tisuća profila klijenata po izvozu u Microsoft Advertising.
+- Možete izvesti do 500 000 profila po izvozu u Microsoftovo oglašavanje.
 - Izvoz u Microsoftovo oglašavanje ograničen je na segmente.
-- Izvoz do 500 tisuća profila klijenata u Microsoft Advertising može potrajati do 10 minuta. 
+- Izvoz do 500 000 profila u Microsoftovo oglašavanje može potrajati do 10 minuta. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Postavljanje veze s Microsoftovim oglašavanjem
@@ -68,7 +68,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 1. Unesite svoj **ID klijenta Microsoftova oglašavanja i ID računa**. ID klijenta (`cid`) i ID računa (`aid`) možete pronaći u parametrima URL-a kada ste prijavljeni u Microsoftovo oglašavanje.
 
-1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje s adresom e-pošte klijenta. Obavezno je izvoziti segmente u Microsoftovo oglašavanje.
+1. U odjeljku **Podudaranje podataka**, u polju **E-pošta**, odaberite polje u vašem objedinjenom profilu klijenta sa adresom e-pošte klijenta. Obavezno je izvoziti segmente u Microsoftovo oglašavanje.
 
 1. Odaberite **Spremi**.
 

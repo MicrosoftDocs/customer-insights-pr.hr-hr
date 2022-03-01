@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka usluge Customer Insights u Google Ads
 description: Saznajte kako konfigurirati vezu i izvesti u Google Ads.
-ms.date: 09/27/2021
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,19 +9,16 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
+ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617909"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6604268"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Izvoz segmenata u Google Ads (pretpregled)
 
 Izvezite segmente objedinjenih korisničkih profila na popis publike servisa Google Ads i upotrijebite ih za oglašavanje na servisima Google Search, Gmail, YouTube i Google Display Network. 
-
-> [!IMPORTANT]
-> Trenutačno možete stvoriti novu vezu i izvoziti podatke u Google Ads ako već imate odobreni token za razvojne inženjere usluge Google Ads. Zbog promjena pravila uskoro ćemo ažurirati izvoz usluge Google Ads i pružiti opciju izvoza koja neće zahtijevati token razvojnog inženjera kako bi se osigurao kontinuitet vašeg iskustva i pojednostavio izvoz u Google Ads. Preporučujemo da ne postavljate više veza s uslugom Google Ads radi lakšeg prelaska na novu opciju izvoza.
 
 ## <a name="prerequisites-for-connection"></a>Preduvjeti za vezu
 
@@ -35,9 +32,9 @@ Izvezite segmente objedinjenih korisničkih profila na popis publike servisa Goo
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Do 1 milijun profila klijenata po izvozu u Google Ads.
+- Do 1 milijun profila po izvozu u Google Ads.
 - Izvoz u Google Ads ograničen je na segmente.
-- Izvoz segmenata s ukupno 1 milijun profila klijenata može potrajati i do 5 minuta zbog ograničenja na strani davatelja usluga. 
+- Izvoz segmenata s ukupno milijun profila može potrajati do 5 minuta zbog ograničenja na strani davatelja usluga. 
 - Podudaranje u usluzi Google Ads može potrajati do 48 sati.
 
 ## <a name="set-up-connection-to-google-ads"></a>Postavljanje veze s Google Ads
@@ -74,7 +71,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 1. Unesite svoj **[ID ciljne skupine za Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** i odaberite **Povezivanje** za inicijalizaciju veze s uslugom Google Ads.
 
-1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta.
+1. U odjeljku **Podudaranje podataka**, u polju **E-pošta**, odaberite polje u vašem objedinjenom profilu klijenta koje predstavlja adresu e-pošte klijenta.
 
 1. Odaberite segmente koje želite izvesti. U Google Ads možete ukupno izvesti do 1 milijun profila klijenata.
 

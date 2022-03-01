@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka iz Customer Insights u Snapchat
 description: Saznajte kako konfigurirati vezu i izvesti u Snapchat.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618651"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760490"
 ---
-# <a name="export-segments-to-snapchat-preview"></a>Izvoz segmenata u Snapchat (pretpregled)
+# <a name="export-segment-lists-to-snapchat-preview"></a>Izvoz popisa segmenata u Snapchat (pretpregled)
 
 Izvezite segmente objedinjenih profila klijenata u Snapchat i koristite ih za oglašavanje. 
 
@@ -29,7 +29,7 @@ Izvezite segmente objedinjenih profila klijenata u Snapchat i koristite ih za og
 ## <a name="known-limitations"></a>Poznata ograničenja
 
 - Izvoz u Snapchat ograničen je na segmente.
-- Izvoz do 1 milijun profila klijenata u Snapchat može potrajati do 15 minuta. 
+- Izvoz do 1 milijun profila u Snapchat može potrajati do 15 minuta. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Postavljanje veze za Snapchat
 
@@ -63,7 +63,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 1. Unesite [**ID ciljne skupine za Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. Obavezno je izvoziti segmente u Snapchat.
+1. U odjeljku **Podudaranje podataka**, u polju **E-pošta**, odaberite polje u vašem objedinjenom profilu klijenta koje predstavlja adresu e-pošte klijenta. Obavezno je izvoziti segmente u Snapchat.
 
 1. Odaberite segmente koje želite izvesti. 
 

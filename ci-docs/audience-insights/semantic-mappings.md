@@ -1,7 +1,7 @@
 ---
 title: Semantička mapiranja (pretpregled)
 description: Pregled semantičkih mapiranja i njihove upotrebe.
-ms.date: 12/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881821"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622926"
 ---
-# <a name="semantic-mappings-preview"></a>Semantička mapiranja (pretpregled)
+# <a name="semantic-mappings"></a>Semantička mapiranja
 
 Semantičko mapiranje omogućuje vam mapiranje podataka o neaktivnosti u unaprijed definirane sheme. Ove sheme pomažu uvidima u ciljne skupine bolje razumjeti atribute podataka. Semantičko mapiranje i navedeni podaci omogućuju nove uvide i značajke uvida u ciljne skupine. Da biste svoje aktivnosti mapirali u sheme, pregledajte dokumentaciju [aktivnosti](activities.md).
 
@@ -75,7 +75,8 @@ Semantičko mapiranje omogućuje vam mapiranje podataka o neaktivnosti u unaprij
 
 1. Za naknadno pokretanje semantičkog mapiranja odaberite semantičko mapiranje i **Osvježi**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Osim toga, većina procesa [ovisi o ostalim procesima](system.md#refresh-policies). Možete odabrati status procesa da biste vidjeli pojedinosti o tijeku cijelog posla. Nakon odabira mogućnosti **Pogledaj pojedinosti** za jedan od zadataka posla pronaći ćete dodatne informacije: vrijeme obrade, zadnji datum obrade te sve pogreške i upozorenja povezana sa zadatkom.
 
 ## <a name="manage-existing-semantic-mappings"></a>Upravljanje postojećim semantičkim mapiranjima
 
@@ -90,41 +91,5 @@ U opciji **Podaci** > **Semantička mapiranja (pretpregled)** možete pregledati
 - **Preimenuj**: Otvara dijaloški okvir u koji možete unijeti drugačiji naziv za odabrano semantičko mapiranje. Odaberite **Spremi** za primjenu izmjena.
 
 - **Izbriši**: Otvara dijaloški okvir za potvrdu brisanja odabranog semantičkog mapiranja. Također možete izbrisati više od jednog semantičkog mapiranja odjednom tako da odaberete semantička mapiranja i ikonu za brisanje. Odaberite **Izbriši** da biste potvrdili brisanje.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Stvaranje aktivnosti na razini kontakta pomoću mapiranja semantičkog entiteta ContactProfile
-
-Nakon stvaranja *mapiranja* semantičkog entiteta ContactProfile možete snimiti aktivnosti kontakata. Omogućuje vam da na vremenskoj traci aktivnosti vidite poslovni subjekt koji je kontakt odgovoran za svaku aktivnost. Većina koraka slijedi uobičajenu konfiguraciju mapiranja aktivnosti.
-
-   > [!NOTE]
-   > Da bi aktivnosti na razini kontakta **funkcionirale, morate imati atribute ID poslovnog** subjekta i **ContactID** za svaki zapis unutar podataka o aktivnosti.
-
-1. [Definirajte *mapiranje* semantičkog entiteta ContactProfile.](#define-a-contactprofile-semantic-entity-mapping) I pokrenite semantičku kartografiju.
-
-1. U uvidima u ciljnu skupinu idite na **Podaci** > **Aktivnosti**.
-
-1. Odaberite **Dodaj aktivnost da biste** stvorili novu aktivnost.
-
-1. Imenujte aktivnost, odaberite entitet izvorne aktivnosti i odaberite primarni ključ entiteta aktivnosti.
-
-1. U **koraku Odnosi** stvorite neizravan odnos između izvornih podataka o aktivnosti s poslovnim subjektima pomoću podataka za kontakt kao posredničkog entiteta. Dodatne informacije potražite u [odjeljku Putovi izravnih i indirektnih odnosa](relationships.md#relationship-paths).
-   - Ogledni odnos za aktivnost pod nazivom *Nabava*:
-      - **Kupuje podatke o izvornim podacima o** > **aktivnostima podatke o** kontaktu na atributu **ContactID**
-      - **Podaci o računu podataka za kontakt** > **na** atributu **ID poslovnog subjekta**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Primjer postavljanja odnosa.":::
-
-1. Nakon postavljanja Odnosi odaberite **Dalje** i dovršite konfiguraciju mapiranja aktivnosti. Detaljne korake za kreiranje aktivnosti potražite [u članku definiranje aktivnosti](activities.md).
-
-1. Pokrenite mapiranja aktivnosti.
-
-1. Aktivnosti na razini kontakta sada će biti vidljive na vremenskoj crti klijenta.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Konačni rezultat nakon konfiguriranja aktivnosti kontakta":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtriranje vremenske trake aktivnosti na razini kontakta
-
-Nakon konfiguriranja mapiranja aktivnosti na razini kontakta i pokretanja, vremenska traka aktivnosti za vaše klijente ažurirat će se. Uključuje njihove ID-ove ili imena, ovisno o *konfiguraciji ContactProfilea,* za aktivnosti na kojima su djelovali. Aktivnosti možete filtrirati prema kontaktima na vremenskoj traci da biste vidjeli određene kontakte koji vas zanimaju. Uz to, možete vidjeti sve aktivnosti koje nisu dodijeljene određenom kontaktu odabirom aktivnosti koje **nisu mapirane u kontakt**.
-
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Mogućnosti filtriranja dostupne za aktivnosti na razini kontakta.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

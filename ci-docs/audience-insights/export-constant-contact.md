@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka o Customer Insights u Constant Contact
 description: Saznajte kako konfigurirati vezu i izvesti u Constant Contact.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619110"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124264"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Izvoz segmenata u Constant Contact (pretpregled)
 
@@ -28,10 +28,10 @@ Izvezite segmente objedinjenih profila klijenata u Constant Contact i koristite 
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Možete izvesti do 1 milijun profila klijenata po izvozu u Constant Contact.
+- Možete izvesti do 1 milijun profila po izvozu u Constant Contact.
 - Izvoz u Constant Contact ograničen je na segmente.
-- Izvoz do 1 milijun profila klijenata u Constant Contact može potrajati do 1 sat. 
-- Broj profila klijenata koje možete izvesti u Constant Contact ovisi i ograničen je ugovorom s uslugom Constant Contact.
+- Izvoz do 1 milijun profila u Constant Contact može potrajati do 1 sat. 
+- Broj profila koje možete izvesti u Constant Contact ovisi i ograničen je vašim ugovorom s tvrtkom Constant Contact.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Postavljanje veze s Constant Contact
 
@@ -47,7 +47,7 @@ Izvezite segmente objedinjenih profila klijenata u Constant Contact i koristite 
 
 1. Odaberite **Poveži** za inicijalizaciju veze s Constant Contact.
 
-1. Odaberite **Provjeri autentičnost stalnim kontaktom** i dostavite svoje administratorske vjerodajnice za stalni kontakt. 
+1. Odaberite **Provjeri autentičnost uz Constant Contact** i pružite svoje administratorske vjerodajnice za Constant Contactr. 
 
 1. Odaberite **Dodajte se kao korisnik izvoza** i unesite svoje vjerodajnice za Customer Insights.
 
@@ -65,7 +65,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 1. Unesite svoje [**ID popisa za Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists). Otvorite popis u Constant Contact da biste pronašli ID popisa u URL-u.
 
-1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. Obavezno je izvoziti segmente u Constant Contact.
+1. U odjeljku **Podudaranje podataka**, u polju **E-pošta**, odaberite polje u vašem objedinjenom profilu klijenta koje predstavlja adresu e-pošte klijenta. Obavezno je izvoziti segmente u Constant Contact.
 
 1. Ako želite, možete izvesti stavke Ime i Prezime kao dodatna polja za stvaranje osobnijih poruka e-pošte. Odaberite **Dodavanje atributa** za mapiranje ovih polja.
 

@@ -4,17 +4,17 @@ metadata:
   author: m-hartmann
   description: Pronađite relevantne članke da biste započeli sa sadržajem pomoći.
   ms.author: mhart
-  ms.date: 03/02/2022
+  ms.date: 10/29/2020
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e154b37f57bb2765f48a9f6b38f86dffcb05f403
-  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
   ms.translationtype: HT
   ms.contentlocale: hr-HR
-  ms.lasthandoff: 02/10/2022
-  ms.locfileid: "8107190"
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4405347"
 title: Dokumentacija za Dynamics 365 Customer Insights
-summary: Pronađite korisne resurse o značajkama i mogućnostima usluge Customer Insights te početku rada s njom.
+summary: Pronađite korisne resurse da biste započeli i naučili o značajkama i mogućnostima rješenja Customer Insights.
 landingContent:
 - title: Upoznajte Customer Insights
   linkLists:
@@ -23,41 +23,19 @@ landingContent:
     - text: Pregled rješenja Customer Insights
       url: overview.md
     - text: Planovi izdavanja
-      url: /dynamics365/release-plans/
-    - text: Otkrijte CDP
-      url: https://dynamics.microsoft.com/ai/customer-insights/
-  - linkListType: learn
-    links:
-    - text: Put učenja uvida u klijente
-      url: /learn/paths/build-customer-insights/
-- title: Početak rada uz Customer Insights
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Pristupite okruženju
+      url: https://home.ci.ai.dynamics.com/
+- title: Započnite s uvidima u ciljnu skupinu
   linkLists:
   - linkListType: get-started
     links:
     - text: Prijavite se za besplatnu probnu verziju
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Novosti u uvidima u ciljnu skupinu
+    - text: Novosti
       url: audience-insights/whats-new-audience-insights.md
-    - text: Vodič za brzi početak
-      url: audience-insights/get-started.md
-  - linkListType: learn
-    links:
-    - text: Započnite
-      url: /learn/modules/get-started-customer-data-platform/
-- title: Administriranje uvida u ciljne skupine
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Konfiguriranje sustava
-      url: audience-insights/system.md
-    - text: Definiranje korisničkih dozvola
-      url: audience-insights/permissions.md
-    - text: Upravljanje s više okruženja
-      url: audience-insights/manage-environments.md
-  - linkListType: learn
-    links:
-    - text: Upravljanje uslugom Customer Insights
-      url: /learn/modules/administer-customer-data-platform/
+    - text: Dokumentacija o uvidima u ciljnu skupinu
+      url: audience-insights/index.yml
 - title: Ostanite u kontaktu
   linkLists:
   - linkListType: overview
@@ -68,16 +46,16 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Prijavi problem
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Dijeljenje podataka među sposobnostima
+- title: Korisnički priručnici o uvidima u ciljnu skupinu
   linkLists:
-  - linkListType: how-to-guide
+  - linkListType: tutorial
     links:
-    - text: Stvaranje veze među sposobnostima
-      url: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - text: Stvaranje segmenata za korištenje u izvješćima
-      url: engagement-insights/integrate-audience-insights-segments.md
-    - text: Korištenje svojstava profila za interaktivnu analizu
-      url: engagement-insights/curate-dimensions.md
+    - text: Stvorite novo okruženje
+      url: audience-insights/home.md
+    - text: Stvaranje objedinjenih profila klijenta
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Rad s aplikacijom
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
 - title: Izvoz podataka o uvidima u ciljnu skupinu
   linkLists:
   - linkListType: how-to-guide
@@ -88,6 +66,16 @@ landingContent:
       url: audience-insights/customer-card-add-in.md
     - text: Poveznik za Power BI
       url: audience-insights/export-power-bi.md
+- title: Administriranje uvida u ciljne skupine
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfiguriranje sustava
+      url: audience-insights/system.md
+    - text: Definiranje korisničkih dozvola
+      url: audience-insights/permissions.md
+    - text: Upravljanje s više okruženja
+      url: audience-insights/manage-environments.md
 - title: O uvidima u angažmane (pretpregled)
   linkLists:
   - linkListType: overview

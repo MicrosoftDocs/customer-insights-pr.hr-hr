@@ -1,101 +1,68 @@
 ---
-title: Izvoz podataka o uvidima korisnika Facebook u Ads Manager (sadrži videozapis)
-description: Saznajte kako konfigurirati vezu i izvesti u Facebook Ads Manager.
-ms.date: 04/15/2021
-ms.reviewer: mhart
+title: Izvoz podataka usluge Customer Insights u Upravitelj Facebook oglasa
+description: Saznajte kako konfigurirati vezu s Upraviteljem Facebook oglasa.
+ms.date: 06/05/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ce1e63f7b20b757780f05895b725003e286f9dac
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7935015"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4643674"
 ---
-# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Izvoz popisa segmenata u Facebook Ads Manager (pretpregled)
+# <a name="connector-for-facebook-ads-manager-preview"></a>Poveznik za Upravitelj Facebook oglasa (pretpregled)
 
 Izvezite segmente objedinjenih korisničkih profila u Upravitelj Facebook oglasa radi izrade kampanja na Facebooku i Instagramu.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
+## <a name="prerequisites"></a>Preduvjeti
 
-## <a name="prerequisites-for-connection"></a>Preduvjeti za vezu
+- Trebate imati [račun **Facebook oglasa**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) koji obuhvaća [poslovni **Facebook račun**](https://business.facebook.com/).
+- Morate biti administrator za [račun **Facebook oglasa**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
-- Morate imati [**račun za Facebook oglase**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) koji uključuje [**poslovni račun za Facebook**](https://business.facebook.com/).
-- Morate biti administrator na [**računu za Facebook oglase**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+## <a name="connect-to-facebook-ads-manager"></a>Povezivanje s Upraviteljem Facebook oglasa
 
-## <a name="known-limitations"></a>Poznata ograničenja
+1. Otvorite **Administrator** > **Izvozna odredišta**.
 
-- Do 10 milijuna profila kupaca po izvozu u Facebook Upravitelj oglasa.
-- Izvoz u Facebook Ads Manager ograničen je na segmente.
-- Stvorite ili ažurirajte prilagođenu ciljnu skupinu na društvenoj mreži Facebook isključivo vrste *popis klijenata*.
-- Izvoz segmenata s ukupno 10 milijuna profila klijenata u može potrajati do 90 minuta.
+1. Pod **Upravitelj Facebook oglasa**, odaberite **Postavljanje**.
 
-## <a name="set-up-connection-to-facebook-ads-manager"></a>Postavljanje veze s Facebook Ads Manager
+1. Dodijelite odredištu izvoza prepoznatljiv naziv u polju **Zaslonski naziv**.
 
-Prije nego što korisnici mogu stvoriti izvoz, administrator mora konfigurirati vezu s uslugom i dopustiti suradnicima korištenje veze.
+1. Odaberite **Nastavi s Facebookom** da se prijavite na svoj račun Facebook oglasa.
 
-1. Idite na **Admin** > **Veze**.
+1. Omogućite dozvolu za **upravljanje oglasima** nakon provjere autentičnosti pomoću usluge Facebook.
 
-1. Odaberite **Dodaj vezu** i odaberite **Facebook Ads Manager** za konfiguriranje veze.
+1. Odaberite **Upravitelj Facebook oglasa** s kojim želite raditi.
 
-1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
+1. Odaberite **Postojeću prilagođenu publiku** s padajućeg popisa ili stvorite **Novu prilagođenu publiku**. Za više informacija pogledajte [**Publike u Upravitelju Facebook oglasa**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
 
-1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Odaberite **Prihvaćam** da biste potvrdili **Privatnost podataka i sukladnost**.
 
-1. Provjera autentičnosti uz Facebook Ads: 
+1. Odaberite **Dalje** da biste konfigurirali izvoz.
 
-   1. Odaberite **Nastavi uz Facebook** za prijavu na svoj račun za Facebook oglase.
+## <a name="configure-the-connector"></a>Konfiguracija poveznika
 
-   1. Omogućite dozvolu za **upravljanje oglasima** nakon provjere autentičnosti pomoću usluge Facebook.
-
-   1. Odaberite **Upravitelj Facebook oglasa** s kojim želite raditi.
-
-   1. Odaberite **Postojeća prilagođena publika** s padajućeg popisa ili stvorite opciju **Nova prilagođena publika**. Za više informacija pogledajte [**Publike u Upravitelju Facebook oglasa**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
-      > [!NOTE]
-      > S ovim izvozom na društvenoj mreži Facebook možete stvarati ili ažurirati isključivo prilagođene ciljne skupine vrste *popis klijenata*. U nekim slučajevima na padajućem popisu vidite prilagođene publike različitih vrsta. Odabir vrste različite od *popis klijenata* rezultirat će neuspjelim izvozom. 
-
-1. Pregledajte **Zaštita privatnosti podataka i usklađenost** i odaberite **Slažem se**.
-
-1. Odaberite **Spremi** da biste završili vezu.
-
-## <a name="configure-an-export"></a>Konfiguracija izvoza
-
-Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
-
-1. Idite na **Podaci** > **Izvozi**.
-
-1. Da biste stvorili novi izvoz, odaberite **Dodaj odredište**. 
-
-1. Pod **Veza za izvoz** odaberite vezu iz odjeljka **Facebook Ads Manager**. Ako ne vidite naziv ovog odjeljka, tada vam nisu dostupne veze ove vrste.
-
-1. U polju **Odaberite ključni identifikator**, odaberite **E-pošta**, **Ime i adresa** ili **Telefon** koji će se poslati u Upravitelj Facebook oglasa. 
-
-1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**.
+1. U polju **Odaberite ključni identifikator**, odaberite **E-pošta**, **Ime i adresa** ili **Telefon** koji će se poslati u Upravitelj Facebook oglasa.
 
 1. Mapirajte odgovarajuće atribute vašeg objedinjenog entiteta klijenta za odabrani identifikator ključa.
-   > [!TIP]
-   > Najveći izgledi za podudaranje pojavljuju se ako kao ključni identifikator odaberete **E-pošta**. Dodavanje dodatnih identifikatora može poboljšati podudaranje.
+   > [SAVJET] Najveće šanse za podudaranje pojavljuju se ako kao ključni identifikator odaberete **E-pošta**. Dodavanje dodatnih identifikatora može poboljšati podudaranje.
 
-1. Odaberite **Dodaj atribut** za mapiranje više atributa za slanje u Facebook Ads Manager. Atributi iz Facebook Ads Manager mapiraju se na sljedeće nazive prilagođene korisnicima: **FN** = **Ime**, **LN** = **Prezime**, **FI** = **Prvi inicijal**, **PHONE** = **Telefon**, **GEN** = **Spol**, **DOB** = **Datum rođenja**, **ST** = **Država**, **CT** = **Grad**, **ZIP** = **Poštanski broj**, **COUNTRY** = **Zemlja/regija**
+1. Odaberite **Dodaj atribut** da biste mapirali dodatnih atributa koji se šalju Upravitelju Facebook oglasa. Atributi iz Upravitelja Facebook oglasa preslikavaju se na sljedeća korisnička imena: **FN** = **Ime**, **LN** = **Prezime**, **FI** = **Prvi inicijal**, **PHONE** = **Telefon**, **GEN** = **Pol**, **DOB** = **Datum rođenja**, **ST** = **Savezna država**, **CT** = **Grad**, **ZIP** = **Poštanski broj**, **COUNTRY** = **Država / regija**
 
 1. Odaberite segmente koje želite izvesti.
 
 1. Odaberite **Spremi**.
 
-Spremanje izvoza ne pokreće izvoz odmah.
+## <a name="export-the-data"></a>Izvoz podataka
 
-Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). 
-
-Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
+Možete [izvesti podatke na zahtjev](export-destinations.md). Podaci će se izvoziti uz svako [zakazano osvježavanje](system.md#schedule-tab).
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
 
 Kada omogućite Dynamics 365 Customer Insights za prijenos podataka u Upravitelj Facebook oglasa, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prema vašoj uputi prenijeti takve podatke, ali vi ste odgovorni za to da usluga Facebook oglasi ispunjava sve obaveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš administrator usluge Dynamics 365 Customer Insights može ovo odredište izvoza ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

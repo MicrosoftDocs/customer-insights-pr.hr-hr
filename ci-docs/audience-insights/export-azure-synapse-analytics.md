@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka iz Customer Insights u Analitiku servisa Azure Synapse
 description: Saznajte kako konfigurirati vezu s Analitikom servisa Azure Synapse.
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951033"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5977368"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvoz podataka u Analitiku servisa Azure Synapse (Pretpregled)
 
@@ -49,8 +49,6 @@ U servisu Azure:
 
 ### <a name="configure-a-connection"></a>Konfiguracija veze
 
-Da biste stvorili vezu, direktor servisa i korisnički račun u customer insights trebaju **Čitatelj** dozvole za *grupu* resursa u kojoj se nalazi radni prostor usluge Synapse Analytics. Osim toga, direktor servisa i korisnik u radnom prostoru Synapse Analytics trebaju **dozvole administratora** sinapse. 
-
 1. Idite na **Admin** > **Veze**.
 
 1. Odaberite **Dodaj vezu** i odaberite **Analitika servisa Azure Synapse** ili odaberite **Postavi** na pločici **Analitika servisa Azure Synapse** za konfiguriranje veze.
@@ -65,7 +63,7 @@ Da biste stvorili vezu, direktor servisa i korisnički račun u customer insight
 
 ### <a name="configure-an-export"></a>Konfiguracija izvoza
 
-Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Da biste konfigurirali izvoz pomoću zajedničke veze, potrebne su vam barem **suradnik** dozvole u aplikaciji Customer Insights. Dodatne informacije potražite u odjeljku [dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Dodatne informacije potražite u odjeljku [dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
 
 1. Idite na **Podaci** > **Izvozi**.
 
@@ -76,16 +74,12 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Da biste konf
 1. Navedite prepoznatljiv **zaslonski naziv** za vaš izvoz i **naziv baze podataka**.
 
 1. Odaberite koje entitete želite izvesti u Analitiku servisa Azure Synapse.
-   > [!NOTE]
-   > Izvori podataka temeljeni na [Mapi Common Data Model](connect-common-data-model.md) nisu podržani.
 
-2. Odaberite **Spremi**.
+1. Odaberite **Spremi**.
 
 Spremanje izvoza ne pokreće izvoz odmah.
 
 Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand).
-
-Da biste ispitali podatke koji su izvezeni u Synapse Analytics, potrebni su vam **blob podaci za pohranu Čitatelj** pristup odredišnoj pohrani na radnom prostoru izvoza. 
 
 ### <a name="update-an-export"></a>Ažuriranje izvoza
 

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 8ca30193ae4f4ef3ed9c60f2d694cd11fad46c76
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967646"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881775"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli za strojno učenje
 
@@ -40,8 +40,6 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 
    > [!NOTE]
    > Podaci se prenose između instanci servisa Customer Insights i odabranih web-servisa Azure ili kanala u tijeku rada. Kada prenosite podatke na uslugu Azure, provjerite je li usluga konfigurirana za obradu podataka na način i na lokaciji koja je potrebna da ti podaci ispune sve pravne ili regulatorne zahtjeve vaše tvrtke ili ustanove.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Dodavanje novog tijeka rada
 

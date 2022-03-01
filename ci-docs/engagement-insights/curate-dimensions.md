@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466339"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461094"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Upotreba demografskih dimenzija za razdjeljivanje podataka o ponašanju
 
@@ -29,7 +29,7 @@ Upotrebom demografskih dimenzija objedinjenih profila korisnici uvida u angažma
 - Okruženje uvida u angažman u kojem imate podatke profila korisnika povezane s okruženjem uvida u ciljnu skupinu u kojem se izrađuju profili klijenata. Više informacija: [Izrada veze između uvida u ciljnu skupinu i uvida u angažman](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Nakon što izradite vezu između okruženja uvida u ciljnu skupinu i okruženja uvida u angažman, možda ćete htjeti samo podatke specifične za svojstva profila klijenta koji mogu biti korisni kao dimenzije u uvidima u angažman. Više informacija potražite u članku [Omogućavanje atributa i segmenata objedinjenih profila uvida u ciljnu skupinu](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
+> Nakon što izradite vezu između okruženja uvida u ciljnu skupinu i okruženja uvida u angažman, možda ćete htjeti samo podatke specifične za svojstva profila klijenta koji mogu biti korisni kao dimenzije u uvidima u angažman. Više informacija potražite u članku [Omogućavanje atributa i segmenata objedinjenih profila uvida u ciljnu skupinu](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>Izrada novog prilagođenog izvješća
 
