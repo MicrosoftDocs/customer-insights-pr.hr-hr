@@ -3,23 +3,20 @@ title: Uzorak vodiča za predviđanje preporuka proizvoda
 description: Koristite ovaj uzorak vodiča da biste isprobali gotove model predviđanja preporuka proizvoda.
 ms.date: 02/10/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: wameng
+author: diegogranados117
+ms.author: digranad
 manager: shellyha
-searchScope:
-- ci-predictions
-- ci-create-prediction
-- customerInsights
-ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354638"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595264"
 ---
-# <a name="product-recommendation-prediction-sample-guide"></a>Uzorak vodiča za predviđanje preporuka proizvoda
+# <a name="product-recommendation-prediction-preview-sample-guide"></a>Uzorak vodiča za predviđanje preporuka proizvoda (pretpregled)
 
 Preko primjera ćemo vas provesti kroz predviđanje preporuka proizvoda pomoću uzorka podataka navedenih u nastavku.
 
@@ -34,7 +31,7 @@ Contoso je tvrtka koja proizvodi visokokvalitetnu kavu i aparate za kavu koje pr
 
 ## <a name="task-1---ingest-data"></a>Zadatak 1 – Podaci za unos
 
-Pregledajte članke [o unosu](data-sources.md) podataka i [uvozu izvora podataka pomoću Power Query konektora](connect-power-query.md) posebno. Sljedeće informacije pretpostavljaju da ste se upoznali s unosom podataka općenito.
+Pregledajte članke [o unosu podataka](data-sources.md) i posebice o [uvozu izvora podataka pomoću konektora Power Query](connect-power-query.md). Sljedeće informacije pretpostavljaju da ste se upoznali s unosom podataka općenito.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Unesite podatke o klijentima s platforme eCommerce
 
@@ -68,7 +65,7 @@ Pregledajte članke [o unosu](data-sources.md) podataka i [uvozu izvora podataka
 
 1. U polju **Naziv** u bočnom oknu preimenujte svoj izvor podataka iz **Upit** u **eCommercePurchases**.
 
-1. **Spremi** izvor podataka.
+1. Spremite izvor podataka.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Unesite podatke o klijentima iz sheme vjernosti
@@ -86,11 +83,11 @@ Pregledajte članke [o unosu](data-sources.md) podataka i [uvozu izvora podataka
 
 1. U polju **Naziv** u desnom oknu preimenujte svoj izvor podataka iz **Upit** u **Odanost klijenata**.
 
-1. **Spremi** izvor podataka.
+1. Spremite izvor podataka.
 
 ## <a name="task-2---data-unification"></a>Zadatak 2 - Objedinjavanje podataka
 
-Nakon unosa podataka, započinjemo postupak objedinjavanja podataka kako bismo stvorili objedinjeni profil klijenta. Dodatne informacije potražite u odjeljku [Objedinjavanje podataka](data-unification.md).
+Nakon unosa podataka, sada započinjemo postupak **Karta, podudaranje, spajanje** za stvaranje objedinjenog profila kupca. Dodatne informacije potražite u odjeljku [Objedinjavanje podataka](data-unification.md).
 
 ### <a name="map"></a>Mapa
 
@@ -108,9 +105,9 @@ Nakon unosa podataka, započinjemo postupak objedinjavanja podataka kako bismo s
 
 1. Idite na karticu **Usklađivanje** i odaberite **Naruči**.
 
-2. Na padajućem popisu **Primarni** odaberite **eCommerceContacts: eCommerce** kao primarni izvor i uključite sve zapise.
+2. Na padajućem popisu **Primarni** odaberite **Kontakti e-trgovine: etrgovina** kao primarni izvor i uključite sve zapise.
 
-3. Na padajućem popisu **Entitet 2** odaberite **loyCustomers: LoyaltyScheme** i uključite sve zapise.
+3. Na padajućem popisu **Entitet 2** odaberite **Odani klijenti: Shema odanosti** i uključite sve zapise.
 
    ![objedinite usklađivanje e-trgovine i odanost.](media/unify-match-order.png)
 
@@ -118,16 +115,16 @@ Nakon unosa podataka, započinjemo postupak objedinjavanja podataka kako bismo s
 
 5. Dodajte svoj prvi uvjet pomoću programa FullName.
 
-   - Za eCommerceContacts odaberite **FullName** na padajućem popisu.
-   - Za loyCustomers odaberite **FullName** na padajućem popisu.
+   - Za eCommerceContacts u padajućem izborniku odaberite **Puni naziv**.
+   - Za loyCustomers u padajućem izborniku odaberite **Puni naziv**.
    - Odaberite padajući izbornik **Normaliziraj** i odaberite **Vrsta (telefon, ime, adresa, ...)**.
    - Postavite **Razina preciznosti**: **Osnovna** i **Vrijednost**: **Visoko**.
 
 6. Unesite naziv **Puno ime, e-pošta** za novo pravilo.
 
    - Odaberite drugi uvjet za adresu e-pošte tako da odaberete **Dodaj uvjet**
-   - Za entitet eCommerceContacts odaberite **E-pošta** na padajućem popisu.
-   - Za entitet loyCustomers odaberite **E-pošta** na padajućem popisu.
+   - Za entitet eCommerceContacts u padajućem izborniku odaberite **E-pošta**.
+   - Za entitet loyCustomers u padajućem izborniku odaberite **E-pošta**.
    - Ostavite praznim polje Normaliziraj.
    - Postavite **Razina preciznosti**: **Osnovna** i **Vrijednost**: **Visoko**.
 
@@ -159,7 +156,7 @@ S uspostavljenim objedinjenim profilima klijenata, sada možemo pokrenuti predvi
 
    - **Broj proizvoda**: Postavite ovu vrijednost na **5**. Ova postavka definira koliko proizvoda želite preporučiti svojim klijentima.
 
-   - **Očekivane ponovne kupnje**: Odaberite **Da** kako biste naznačili da u preporuku želite uključiti proizvode koje su vaši klijenti ranije kupili.
+   - **Predložiti proizvode koje su klijenti nedavno kupili?**: Odaberite **Da** da biste naznačili da u preporuku želite uključiti proizvode koje su vaši klijenti ranije kupili.
 
    - **Pogled unatrag:** Odaberite barem **365 dana**. Ova postavka definira koliko će unatrag model pregledavati aktivnosti klijenata da bi to iskoristio kao ulazne vrijednosti za preporuke.
    

@@ -5,15 +5,16 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 02/10/2022
 ms.topic: get-started
+ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229486"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8115959"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Najčešća pitanja u vezi probne verzije sustava Dynamics 365 Customer Insights
 
@@ -42,7 +43,7 @@ Kada se registrirate za probnu verziju, dobit ćete poruku e-pošte s pojedinost
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Kako mogu dodati veći broj korisnika probnoj verziji?
 
-Da biste dodali korisnike, idite u [Centar za administratore okruženja Microsoft 365](https://admin.microsoft.com) pomoću računa administratora za probnu verziju. Slijedite [Vodič centra za administratore](/microsoft-365/admin/add-users/add-users) da biste dodali korisnike do ograničenja licence probne verzije. Ako korisnik kojeg dodajete već ima Microsoft 365 račun, dodijelite mu odgovarajuću sigurnosna uloga u probnoj organizaciji. Dodatne informacije potražite u članku [Dodjela sigurnosna uloga korisniku](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Da biste dodali korisnike, idite u centar [Microsoft 365 za administratore](https://admin.microsoft.com) pomoću probnog administratorskog računa. Slijedite [Vodič centra za administratore](/microsoft-365/admin/add-users/add-users) da biste dodali korisnike do ograničenja licence probne verzije. Ako korisnik kojeg dodajete već ima Microsoft 365 račun, dodijelite mu odgovarajuću sigurnosna uloga u probnoj organizaciji. Dodatne informacije potražite u članku [Dodjela sigurnosna uloga korisniku](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Koliko korisnika mogu dodati u svoje probno okruženje?
 

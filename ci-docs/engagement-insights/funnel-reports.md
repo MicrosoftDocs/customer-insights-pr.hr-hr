@@ -4,16 +4,17 @@ description: Kako upotrijebiti izvješća o kanalima kako biste razumjeli kako c
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/21/2021
+ms.date: 09/17/2021
+ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7bb961c5ba8d42f704eefe0dcb22e561367f3efb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226251"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498633"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Stvaranje i upravljanje izvješćima o kanalu
 
@@ -162,23 +163,13 @@ Možete promijeniti naziv izvješća o kanalu, izbrisati ga ili izmijeniti korak
 
 Uvidi u angažman sada klijentima nude uvide u kanal. Koristite uvide u kanal kako biste stekli dublji uvid u ponašanje klijenta o koracima u izvješću o kanalu. Kada stvorite i spremite novo izvješće o kanalu, za vaše izvješće automatski se generiraju uvidi u kanal. 
 
-:::image type="content" source="media/funnel-insights.png" alt-text="Uvidi u kanal.":::
-
-> [!NOTE]
-> Uvid u kanal može se generirati samo za korake kanala koji **ne** uključuju prilagođene dimenzije. Da biste generirali uvide u kanal za sve korake u svom kanalu, upotrijebite uvide u angažman izvan okvira za izradu koraka za kanal. 
-
 Možete vidjeti uvide u kanal iz sljedećih kategorija, i na glavnoj i na razini koraka: 
 
- - Stopa konverzije
- -    Stopa pretvaranja između koraka Završetak plaćanja i Kupnja iznosi 22 %.
+ - Stopa konverzije 
  - Vrijeme prijelaza 
- -    Prosječno vrijeme prijelaza između koraka Košarica i Završetak kupnje iznosi 23 minute. 
  - Vrijeme dovršetka 
- -    Prosječno vrijeme potrebno klijentima za dovršetak kanala iznosi 47 minuta. 
 
 Pomoću ovih uvida dublje istražite ponašanje klijenata i bolje razumijte ispusne točke i konverzije za svoje izvješće o kanalu. 
-
-Da biste usporedili uvide u različitim koracima, odaberite **Prikaz raščlambe koraka** ili **Usporedba s drugim koracima** na kartici uvida. Oni će prikazati stupčasti grafikon koji uspoređuje mjerne podatke za svaki korak kanala. 
 
 Uvidi u kanal preračunavaju se svaka 24 sata ili kada odaberete **Spremi** izvješće o kanalu. 
 

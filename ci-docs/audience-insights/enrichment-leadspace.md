@@ -1,78 +1,54 @@
 ---
 title: Obogaćivanje profila tvrtki pomoću obogaćivanja treće strane tvrtke Leadspace
 description: Opće informacije o obogaćivanju treće strane tvrtke Leadspace.
-ms.date: 09/30/2021
+ms.date: 11/24/2020
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jodahlMSFT
-ms.author: jodahl
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230625"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597640"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Obogaćivanje profila tvrtke uz Leadspace (pretpregled)
 
-Leadspace je tvrtka za znanost o podacima koja nudi B-to-B platformu za podatke o klijentima. Omogućuje okruženjima s objedinjenim profilima klijenata koji se temelje na računima da obogate svoje podatke. Obogatite *Profile klijenata* atributima kao što su veličina tvrtke, lokacija ili industrija. Obogatite *Profile kontakta* atributima poput naslova, osobe ili potvrde e-pošte.
+Leadspace je tvrtka za proučavanje podataka koja pruža B2B platformu za podatke o klijentima. Klijentima pruža objedinjene korisničke profile kako bi tvrtke obogatile svoje podatke. Obogaćivanja uključuju dodatne atribute poput veličine tvrtke, lokacije, grane industrije i još mnogo toga.
 
 ## <a name="prerequisites"></a>Preduvjeti
 
 Za konfiguriranje Leadspacea, potrebno je ispuniti sljedeće preduvjete:
 
-- Imate aktivnu licencu Leadspace.
-- Imate [objedinjene profile klijenata](customer-profiles.md) na temelju računa.
-- Vezu Leadspace administrator je već konfigurirao ili imate [administratorske](permissions.md#administrator) dozvole i „trajni ključ” (u daljnjem tekstu **Token za Leadspace**). Obratite se izravno tvrtki [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) za pojedinosti o njihovu proizvodu.
+- Imate aktivnu licencu za Leadspace i "vječni ključ" (koji se naziva **Leadspace token**). Kontaktirajte izravno [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) za detalje o njihovom proizvodu.
+- Imate dozvole [administratora](permissions.md#administrator).
+- Imati [objedinjene korisničke profile](customer-profiles.md) za tvrtke.
 
-## <a name="configure-the-enrichment"></a>Konfiguracija za obogaćivanje
+## <a name="configuration"></a>Konfiguracija
 
 1. U uvidima u ciljnu skupinu idite u odjeljak **Podaci** > **Obogaćivanje**.
 
-1. Odaberite **Obogati moje podatke** na pločici Leadspace i odaberite **Započni**.
+1. Odaberite **Obogati moje podatke** na pločici Leadspace.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Snimka zaslona pločice Leadspace.":::
 
-1. Odaberite [vezu](connections.md) s padajućeg popisa. Ako nijedna veza nije dostupna, obratite se administratoru. Ako ste administrator, vezu možete stvoriti odabirom **Dodaj vezu** i **Leadspace**. 
+1. Odaberite **Početak**, a zatim unesite aktivni **Leadspace token** (vječni ključ). Pregledajte i dajte svoj pristanak za **Privatnost podataka i usklađenost** odabirom potvrdnog okvira **Slažem se**. Potvrdite oba unosa odabirom mogućnosti **Povezivanje s uslugom Leadspace**.
 
-1. Odaberite **Poveži se s Leadspace** za potvrdu veze.
+1. Odaberite **Mapiraj podatke** i odaberite skup podataka koji želite obogatiti podacima o tvrtki iz sustava Leadspace. Možete odabrati entitet *Klijent* za obogaćivanje svih vaših profila klijenta ili odaberite segmentni entitet za obogaćivanje samo profila klijenata sadržanih u tom segmentu.
 
-1. Odaberite **Sljedeće** i odaberite **Skup podataka klijenta** koji želite obogatiti podacima o tvrtki iz Leadspace. Možete odabrati entitet **Klijent** za obogaćivanje svih vaših korisničkih profila ili odaberite segmentni entitet za obogaćivanje samo korisničkih profila sadržanih u tom segmentu.
+   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Odaberite između profila klijenta i obogaćivanja segmenata.":::
 
-    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Snimka zaslona prilikom odabira skupa podataka o klijentu.":::
-
-1. Odaberite **Sljedeće** i definirajte koja se polja iz vaših objedinjenih profila koriste za traženje odgovarajućih podataka o tvrtki iz Leadspace. Polje **Naziv tvrtke** je obavezno. Za veću preciznost podudaranja, mogu se dodati do dva druga polja, **Web-stranica tvrtke** i **Lokacija tvrtke**.
+1. Odaberite **Sljedeće** i definirajte koja se polja iz vaših objedinjenih profila trebaju koristiti za traženje odgovarajućih podataka o tvrtki iz sustava Leadspace. Polje **Naziv tvrtke** je obavezno. Za veću preciznost podudaranja, mogu se dodati do dva druga polja, **Web-stranica tvrtke** i **Lokacija tvrtke**.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Okno za mapiranje polja usluge Leadspace.":::
-
-1. Odaberite **Sljedeće** da biste dovršili mapiranje polja.
-
-1. Potvrdite potvrdni okvir ako imate *Profile kontakta* koje biste htjeli obogatiti. Uvidi u ciljne skupine automatski će mapirati potrebna polja.
-
-   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Obogaćivanje zapisa o kontaktima na usluzi Leadspace.":::
- 
-1. Navedite naziv za obogaćivanje i odaberite **Spremi obogaćivanje** nakon pregledavanja svojih odabira.
-
-
-## <a name="configure-the-connection-for-leadspace"></a>Konfiguriranje veze za Leadspace 
-
-Morate biti administrator da biste konfigurirali veze. Odaberite **Dodaj vezu** prilikom konfiguriranja obogaćivanja *ili* idite na **Admin** > **Veze** i odaberite **Postavi** na pločici Leadspace.
-
-1. Odaberite **Početak rada**. 
-
-1. Unesite naziv za vezu u dijaloški okvir **Zaslonski naziv**.
-
-1. Navedite valjani token za Leadspace.
-
-1. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usklađenost** odabirom opcije **Slažem se**.
-
-1. Odaberi **Potvrdi** za provjeru valjanosti konfiguracije.
-
-1. Nakon dovršetka provjere valjanosti odaberite **Spremi**.
    
-   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Stranica za konfiguraciju veze za Leadspace.":::
+1. Odaberite **Primijeni** za dovršetak mapiranja polja.
+
+1. Odaberite **Pokreni** kako biste obogatili profile tvrtke. Trajanje obogaćivanja ovisi o broju objedinjenih profila klijenata.
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
@@ -84,8 +60,7 @@ Za dodatne informacije pogledajte [API-ji za Leadspace](https://support.leadspac
 
 ## <a name="next-steps"></a>Sljedeći koraci
 
-
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [segmente](segments.md), [mjere](measures.md), pa i [izvezite podatke](export-destinations.md) kako biste svojim klijentima pružili personalizirano iskustvo.
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
 

@@ -5,19 +5,17 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
+ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-searchScope:
-- ci-home
-- customerInsights
-ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353704"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645255"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Započnite sa sposobnošću uvida u ciljnu skupinu u Dynamics 365 Customer Insights
 
@@ -39,7 +37,7 @@ Prilikom prve prijave u uvide u ciljnu skupinu, možete konfigurirati postavke i
 
 Objedinjeni profili temelj su za stjecanje uvida i poduzimanje radnji u vezi s podacima. Unesite podatke iz različitih izvora i pokrenite proces objedinjavanja podataka kako biste kombinirali objedinjene profile. Navedite odnose između unesenih entiteta i koristite značajke obogaćivanja za dodavanje informacija profilima. 
 
-1. Unesite podatke stvaranjem izvora podataka iz više mogućnosti. Odaberite između [Power Query poveznika](connect-power-query.md), [mape](connect-common-data-model.md) Uobičajeni podatkovni model ili [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
+1. Unesite podatke stvaranjem izvora podataka iz više mogućnosti. Odaberite između [Poveznici Power Query](connect-power-query.md), [Mapa Common Data Model](connect-common-data-model.md) ili [Microsoft Dataverse](connect-common-data-service-lake.md). 
 
 1. Pokrenite [proces objedinjavanja podataka](data-unification.md) prolaskom kroz faze [mapiranja](map-entities.md), [podudaranja](match-entities.md) i [spajanja](merge-entities.md).
 

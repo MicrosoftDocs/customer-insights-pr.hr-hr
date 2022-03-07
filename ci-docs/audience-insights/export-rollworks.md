@@ -1,21 +1,22 @@
 ---
 title: Izvoz podataka iz Customer Insights u RollWorks
 description: Saznajte kako konfigurirati vezu i izvesti u RollWorks.
-ms.date: 10/08/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 392084105628ba4e6008a1386a5ac80c809a004e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 4979f0147dea2270f11342c1bb6b0693f3c24aea
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225556"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760493"
 ---
-# <a name="export-segments-to-rollworks-preview"></a>Izvoz segmenata u RollWorks (pretpregled)
+# <a name="export-segment-lists-to-rollworks-preview"></a>Izvoz popisa segmenata u RollWorks (pretpregled)
 
 Izvezite segmente objedinjenih profila klijenata u RollWorks i koristite ih za oglašavanje. 
 
@@ -27,11 +28,11 @@ Izvezite segmente objedinjenih profila klijenata u RollWorks i koristite ih za o
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Možete izvesti do 250 tisuća profila klijenata po izvozu u RollWorks.
-- Ne možete izvesti segmente s manje od 100 profila klijenata u RollWorks. 
+- Možete izvesti do 250 000 profila po izvozu u RollWorks.
+- Ne možete izvesti segmente s manje od 100 profila u RollWorks. 
 - Izvoz u RollWorks ograničen je na segmente.
-- Izvoz do 250 tisuća profila klijenata u RollWorks može potrajati do 10 minuta. 
-- Broj profila klijenata koje možete izvesti u RollWorks ovisi i ograničen je ugovorom s uslugom RollWorks.
+- Izvoz do 250 000 profila u RollWorks može potrajati do 10 minuta. 
+- Broj profila koje možete izvesti u RollWorks ovisi i ograničen je vašim ugovorom s tvrtkom RollWorks.
 
 ## <a name="set-up-connection-to-rollworks"></a>Postavljanje veze s RollWorks
 
@@ -65,7 +66,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 1. Unesite svoj **ID oglašivača za RollWorks** [Oglas za RollWorks](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. Obavezno je izvoziti segmente u RollWorks.
+3. U odjeljku **Podudaranje podataka**, u polju **E-pošta**, odaberite polje u vašem objedinjenom profilu klijenta koje predstavlja adresu e-pošte klijenta. Obavezno je izvoziti segmente u RollWorks.
 
 1. Odaberite segmente koje želite izvesti. Odaberite segment s najmanje 100 članova. Ne možete izvesti manje segmente. Uz to, maksimalna veličina segmenta za izvoz je 250 000 članova po izvozu. 
 

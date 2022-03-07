@@ -1,25 +1,24 @@
 ---
-title: Izvoz podataka customer insights na SFTP hostove (sadrži videozapis)
+title: Izvoz podataka usluge Customer Insights na glavna računala SFTP
 description: Saznajte kako konfigurirati vezu i izvesti na SFTP lokaciju.
 ms.date: 03/03/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7b09da093d6332c5081da1beadc1df59f63c31d2
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 000b44dc8e5cc419132bd17e359fbdd5879caf1b
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231145"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124310"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Izvoz segmenata i ostalih podataka na SFTP (pretpregled)
 
 Koristite svoje podatke o klijentima u aplikacijama trećih strana tako što ćete ih izvesti na lokaciju sigurnog protokola prijenosa datoteka (SFTP).
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Preduvjeti za vezu
 
@@ -27,7 +26,6 @@ Koristite svoje podatke o klijentima u aplikacijama trećih strana tako što će
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- SFTP odredišta iza vatrozida trenutno nisu podržana. 
 - Vrijeme izvoza ovisi o performansama vašeg sustava. Preporučujemo dvije CPU jezgre i 1 Gb memorije kao minimalnu konfiguraciju vašeg poslužitelja. 
 - Izvoz entiteta s do 100 milijuna profila klijenata može potrajati 90 minuta kada se koristi preporučena minimalna konfiguracija dviju CPU jezgri i 1 Gb memorije. 
 

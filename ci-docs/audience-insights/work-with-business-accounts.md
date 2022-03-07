@@ -1,28 +1,24 @@
 ---
 title: Početak rada s poslovnim računima kao primarnom ciljnom skupinom
 description: Saznajte više o poslovnim računima kao primarnoj ciljnoj skupini Dynamics 365 Customer Insights.
-ms.date: 10/19/2021
+ms.date: 09/30/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.custom: intro-internal
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-semantic-mapping
-- ci-connections
-- customerInsights
-ms.openlocfilehash: 88882dc727c37262c9f204fbc8049abe17bd21a3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353533"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7644979"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Rad s poslovnim računima u uvidima u ciljne skupine
 
-Mogućnost uvida u ciljnu skupinu u Dynamics 365 Customer Insights omogućuje vam da konfigurirate okruženje za različite primarne ciljne skupine: pojedinačne klijente (B2C) i poslovne račune (B2B). U B2C scenarijima podaci su usmjereni na pojedince. Za B2B primarne ciljne skupine su računi – organizacije ili tvrtke – i kontakti. Ovaj vam članak pomaže započeti raditi s okruženjem za poslovne račune. Navodi razlike za područja značajki u uvidima ciljnih skupina, ovisno o fokusu na vaše okruženje. Za dodatne informacije o razlikama pregledajte dokumente područja značajki. 
+Mogućnost uvida u ciljne skupine Dynamics 365 Customer Insights omogućuje vam da konfigurirate okruženje za različite primarne ciljne skupine: pojedinačne klijente (B2C) i poslovne račune (B2B). U B2C scenarijima, podaci su usmjereni na pojedince. Za B2B, primarna ciljna skupina su računi – organizacije ili tvrtke – i kontakti. Ovaj vam članak pomaže započeti raditi s okruženjem za poslovne račune. Navodi razlike za područja značajki u uvidima ciljnih skupina, ovisno o fokusu na vaše okruženje. Za dodatne informacije o razlikama pregledajte dokumente područja značajki. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Stvaranje okruženja za poslovne račune
 
@@ -36,7 +32,7 @@ Nakon objedinjavanja podataka [navedite hijerarhije računa](relationships.md#se
 
 Ako vaša tvrtka ili ustanova održava okruženja za pojedinačne klijente i poslovne račune, možete upotrijebiti preglednik u lijevom oknu za odabir primarne ciljne skupine.
 
-:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Preglednik za promjenu primarne ciljne skupine između pojedinačnih klijenata i poslovnih računa.":::
+:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Preglednik za promjenu primarne ciljne skupine između pojedinačnih klijenata i poslovnih računa.":::
 
 ## <a name="supported-feature-areas"></a>Podržana područja značajke
 

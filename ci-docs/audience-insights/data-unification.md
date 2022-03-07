@@ -1,24 +1,22 @@
 ---
-title: Stvaranje objedinjenog prikaza klijenata
-description: Prođite kroz proces objedinjavanja podataka sa svojim podacima kako biste stvorili objedinjeni glavni skup podataka profila klijenata.
-ms.date: 10/18/2021
-ms.reviewer: mhart
+title: Objedinjavanje podataka
+description: Saznajte kako objediniti unesene podatke.
+ms.date: 04/16/2020
+ms.reviewer: adkuppa
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
-author: adkuppa
-ms.author: adkuppa
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-map
-- customerInsights
-ms.openlocfilehash: 2012d32494ccd4639cbffbb81d4f6eac1258e23b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 24321e9e11f9fd4e800526673726e5146ed33674
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353810"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405302"
 ---
-# <a name="data-unification-overview"></a>Pregled objedinjavanja podataka
+# <a name="data-unification"></a>Objedinjavanje podataka
 
 Nakon [postavljanja izvora podataka](data-sources.md) možete objediniti podatke. Objedinjavanje podataka obuhvaća tri koraka: **Mapiranje**, **Podudaranje** i **Spajanje**.
 
@@ -33,6 +31,3 @@ Nakon dovršetka objedinjavanja podataka po želji možete
 - [postaviti odnose između entiteta](relationships.md) da biste stvorili sofisticirane segmente
 - [obogatiti podatke](enrichment-hub.md) da biste dobili širi raspon uvida o svojim klijentima
 - [definirati aktivnosti](activities.md) iz nekih unesenih atributa
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

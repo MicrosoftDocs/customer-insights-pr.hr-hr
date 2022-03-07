@@ -1,22 +1,20 @@
 ---
 title: Podaci rješenja Customer Insights u servisu Microsoft Dataverse
 description: Koristite entitete Customer Insights kao tablice u servisu Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 06/15/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-searchScope:
-- ci-system-diagnostic
-- customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355420"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259182"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad s podacima rješenja Customer Insights u servisu Microsoft Dataverse
 
@@ -26,7 +24,11 @@ Customer Insights pruža mogućnost omogućivanja izlaznih entiteta u servisu [M
 
 **Tvrtke ili ustanove s postojećim okruženjima Dataverse**
 
-Tvrtke ili ustanove koje već koriste Dataverse mogu [koristiti jedno od svojih postojećih okruženja Dataverse](create-environment.md) kada administrator postavi uvide u ciljne skupine. Pružanjem URL-a okruženju Dataverse, povezuje se s njihovim novim okruženjem uvida u ciljne skupine. Kako bi se osigurale najbolje moguće performanse, Customer Insights i okruženja Dataverse moraju biti udomaćena u istoj regiji.
+Tvrtke ili ustanove koje već koriste Dataverse mogu [koristiti jedno od svojih postojećih okruženja Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) kada administrator postavi uvide u ciljne skupine. Pružanjem URL-a okruženju Dataverse, povezuje se s njihovim novim okruženjem uvida u ciljne skupine. Kako bi se osigurale najbolje moguće performanse, Customer Insights i okruženja Dataverse moraju biti udomaćena u istoj regiji.
+
+Za povezivanje okruženja Dataverse proširite **Napredne postavke** prilikom stvaranja okruženja uvida u ciljne skupine. Navedite **URL okruženja Microsoft Dataverse** i potvrdite okvir za **Omogućivanje dijeljenja podataka**.
+
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
 
 **Nova tvrtka ili ustanova**
 
@@ -47,7 +49,6 @@ Neki izlazni entiteti iz uvida u ciljne skupine dostupni su kao tablice u servis
 - [CustomerMeasure](#customermeasure)
 - [Obogaćivanje](#enrichment)
 - [Predviđanje](#prediction)
-- [Članstvo u segmentu](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -124,16 +125,3 @@ Ova tablica sadrži rezultate predviđanja modela.
 | Vrijednosti               | Niz JSON | Popis atributa koje stvara model |
 | msdynci_predictionid | GUID        | Deterministički GUID generiran iz msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
-
-### <a name="segment-membership"></a>Članstvo u segmentu
-
-Ova tablica sadrži informacije o članstvu u segmentu profila kupaca.
-
-| Column        | Tip | Opis                        |
-|--------------------|--------------|-----------------------------|
-| CustomerId        | String       | ID profila klijenta        |
-| SegmentProvider      | String       | Aplikacija koja objavljuje segmente. Zadano: publika uvida         |
-| SegmentMembershipType | String       | Vrsta klijenta za ovaj zapis članstva u segmentu. Podržava više vrsta kao što su Klijent, Kontakt ili Poslovni subjekt. Zadano: Kupac  |
-| Segmenti       | Niz JSON  | Popis jedinstvenih segmenata u koje je profil kupca      |
-| msdynci_identifier  | String   | Jedinstveni identifikator zapisa članstva u segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministički GUID generiran iz`msdynci_identifier`          |
