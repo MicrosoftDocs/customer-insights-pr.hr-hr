@@ -1,113 +1,57 @@
 ---
-title: Stvaranje i uređivanje mjera
-description: Definirajte mjere povezane s klijentima kako biste analizirali i odrazili performanse određenih poslovnih područja.
-ms.date: 10/15/2020
-ms.service: customer-insights
+title: Razumijevanje mjera i upravljanje njima
+description: Saznajte kako mjere pomažu u analizi i odražavanja rezultata vaše tvrtke.
+ms.date: 02/28/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-ms.translationtype: HT
+searchScope:
+- ci-measures
+- ci-measure-builder
+- ci-measure-template
+- ci-enrichment-details
+- customerInsights
+ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
+ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405337"
+ms.lasthandoff: 02/28/2022
+ms.locfileid: "8359764"
 ---
-# <a name="define-and-manage-measures"></a>Definiranje i upravljanje mjerama
+# <a name="measures-overview"></a>Pregled mjera
 
-**Mjere** predstavljaju ključne pokazatelje uspješnosti (KPI-jeve) koji odražavaju performanse i stanje specifičnog poslovnog područja. Uvidi u ciljnu skupinu pružaju intuitivno iskustvo za izgradnju različitih vrsta mjera pomoću sastavljača upita koji ne zahtijeva ručno kodiranje ili provjeru valjanosti mjera. Poslovne mjere možete pratiti na stranici **Početna**, pregledati mjere za određene klijente na stavci **Kartica klijenta** i koristiti mjere za definiranje segmenata klijenata na stranici **Segmenti**.
+Mjere vam pomažu da bolje razumijete ponašanja klijenata i poslovne performanse. Gledaju na relevantne vrijednosti iz [objedinjenih profila](data-unification.md). Na primjer poduzeće želi vidjeti *ukupnu potrošnju po kupcu* za razumijevanje povijesti kupca pojedinog kupca ili mjerenje *ukupne prodaje društva* kako bi se razumio ukupni prihod u cijelom poslovanju.  
 
-## <a name="create-a-measure"></a>Izrada mjere
+Mjere se stvaraju [pomoću sastavljača](measure-builder.md) mjera, platforme za podatkovne upite s različitim operatorima i jednostavnim mogućnostima mapiranja. Omogućuje vam filtriranje podataka, grupiranje rezultata, otkrivanje [putanja odnosa entiteta](relationships.md) i pretpregled izlazne vrijednosti. Unaprijed definirane predloške [možete](measure-templates.md) koristiti za učinkovito konfiguriranje najčešće korištenih mjera.
 
-Ovaj vas dio vodi kroz izradu mjere od početka. Možete izraditi mjere s podacima iz više izvora podataka koji su povezani putem entiteta Klijent. Primjenjuju se neka [ograničenja usluge](service-limits.md).
-
-1. U uvidima u ciljnu skupinu idite na **Mjere**.
-
-2. Odaberite **Nova mjera**.
-
-3. Odaberite mjeru **Vrsta**:
-
-   - **Atribut klijenta**: jedno polje po klijentu koje odražava ocjenu, vrijednost ili stanje za klijenta. Atributi klijenta izrađeni su kao atributi u novom entitetu koji generira sustav naziva **Mjera klijenta**.
-
-   - **Mjera klijenta**: uvidi o klijentu o ponašanju klijenta s raščlambom odabranih dimenzija. Novi se entitet generira za svaku mjeru, potencijalno s više zapisa po klijentu.
-
-   - **Poslovna mjera**: prati poslovanje vaše tvrtke i stanje poslovnog odnosa. Poslovne mjere mogu imati dva različita rezultata: numerički rezultat koji se prikazuje na stranici **Početna** ili novi entitet koji možete pronaći na stranici **Entiteti**.
-
-4. Navedite **Naziv** i opcionalni **Zaslonski naziv** i zatim odaberite **Dalje**.
-
-5. U odjeljku **Entiteti** odaberite prvi entitet na padajućem izborniku. Ovdje biste trebali odlučiti jesu li dodatni entiteti potrebni kao dio definicije mjerenja.
-
-   > [!div class="mx-imgBorder"]
-   > ![Definicija mjerila](media/measure-definition.png "Definicija mjerila")
-
-   Za dodavanje više entiteta odaberite **Dodaj entitet** i odaberite entitete koje želite koristiti za mjerenje.
-
-   > [!NOTE]
-   > Možete odabrati samo entitete koji su u odnosu s vašim početnim entitetom. Za više informacija o definiranju odnosa pogledajte dio [Odnosi](relationships.md).
-
-6. Opcionalno možete konfigurirati varijable. U odjeljku **Varijable** odaberite **Nova varijabla**.
-
-   Varijable su izračuni koji se izvode za svaki vaš odabrani zapis. Na primjer, zbrajanje prodajnog mjesta (POS) i internetskih prodaja za svaki zapis vašeg klijenta.
-
-7. Navedite **Naziv** za varijablu.
-
-8. U dijelu **Izraz** odaberite polje s kojim čete započeti izračun.
-
-9. Upišite izraz u polje **Izraz** i pritom odaberite više polja koja će se uključiti u vaš izračun.
-
-   > [!NOTE]
-   > Trenutno su podržani samo aritmetički izrazi. Osim toga, izračun varijabli nije podržan za entitete s različitih [putova entiteta](relationships.md).
-
-10. Odaberite **Gotovo**.
-
-11. U odjeljku **Definicija mjere** definirat ćete kako se vaši odabrani entiteti i izračunate varijable agregiraju u novi entitet ili atribut mjere.
-
-12. Odaberite **Nova dimenzija**. Dimenzije možete shvatiti kao funkciju *grupiraj kao*. Rezultat podataka vašeg entiteta ili atributa Mjera bit će grupiran prema svim vašim definiranim dimenzijama.
-
-    > [!div class="mx-imgBorder"]
-    > ![Odaberite skupni ciklus](media/measures-businessreport-measure-definition2.png "Odaberite skupni ciklus")
-
-    Odaberite ili unesite sljedeće informacija kao dio definicije dimenzije:
-
-    - **EntitetEntity**: ako definirate entitet Mjera, on bi trebao uključivati barem jedan atribut. Ako definirate atribut Mjera, on će uključivati samo jedan atribut prema zadanim postavkama. Pri ovom se odabiru radi o odabiru entiteta koji uključuje taj atribut.
-    - **Polje**: odaberite specifični atribut koji će se uključiti u vaš entitet ili atribut Mjera.
-    - **Grupa**: odaberite želite li agregirati podatke na dnevnoj, mjesečnoj ili godišnjoj osnovi. To je obavezan odabir samo ako ste odabrali atribut vrste Datum.
-    - **Kao**: definira naziv vašeg novog polja.
-    - **Zaslonski naziv**: definira zaslonski naziv vašeg polja.
-
-    > [!NOTE]
-    > Vaša poslovna mjera bit će spremljena kao entitet s jednim brojem i prikazat će se na stranici **Početna**, osim ako ne dodate više dimenzija za svoju mjeru. Nakon što dodate više dimenzija, mjera se *neće* prikazati na stranici **Početna**.
-
-13. Izborno možete dodati funkcije agregacije. Svaka agregacija koje izradite može rezultirati novom vrijednosti unutar entiteta ili atributa Mjera. Podržane funkcije agregacije su: **Min**, **Maks**, **Prosjek**, **Medijan**, **Zbroj**, **Jedinstveni broj**, **Prvo** (uzima prvi zapis vrijednosti dimenzije) i **Posljednje** (uzima posljednji zapis dodan za vrijednost dimenzije).
-
-14. Odaberite **Spremi** kako biste spremili izmjene mjere.
+Koristite alat za izradu mjera za planiranje poslovnih aktivnosti ispitivanjem podataka o klijentima i izvozom uvida. Na primjer, stvaranje mjere *ukupna potrošnja po klijentu* i *ukupan povrat po klijentu* pomaže identificirati grupu klijenata s visokom potrošnjom, ali i visokim povratom. Segment možete [kreirati na temelju](segments.md) tih mjera da biste potaknuli sljedeće najbolje akcije. 
 
 ## <a name="manage-your-measures"></a>Upravljanje mjerama
 
-Nakon što stvorite barem jednu mjeru, vidjet ćete popis mjera na stranici **Mjere**.
+Popis mjera možete pronaći na stranici **Mjere**.
 
-Tu možete pronaći informacije o vrsti mjere, autoru, datumu i vremenu izrade, datumu i vremenu posljednjeg ažuriranja, statusu (je li mjera aktivna, neaktivna ili nije uspjela) i posljednjem datumu i vremenu osvježavanja. Kada s popisa odaberete mjeru, možete vidjeti pretpregled njezina izlaza.
+Pronaći ćete informacije o vrsti mjere, autoru, datumu stvaranja, statusu i stanju. Kada odaberete mjeru s popisa, možete pretpregledati izlaz i preuzeti CSV datoteku.
 
 Da biste istovremeno osvježili sve svoje mjere, odaberite **Osvježi sve** bez odabiranja određene mjere.
 
-> [!div class="mx-imgBorder"]
-> ![Radnje za upravljanje jedinstvenim mjerama](media/measure-actions.png "Radnje za upravljanje jedinstvenim mjerama")
+:::image type="content" source="media/measure-actions.png" alt-text="Radnje za upravljanje jedinstvenim mjerama.":::
 
-Ili odaberite mjeru s popisa i izvršite jednu od sljedećih radnji:
+Odaberite mjeru s popisa za sljedeće mogućnosti:
 
 - Odaberite naziv mjere da biste vidjeli njezine pojedinosti.
 - Odaberite **Uredi** konfiguraciju mjere.
+- **Osvježi** mjeru na temelju najnovijih podataka.
 - Odaberite **Preimenuj** mjeru.
 - Odaberite **Izbriši** mjeru.
-- Odaberite trotočku (...) i zatim **Osvježi** da biste započeli postupak osvježavanja mjere.
-- Odaberite trotočku (...) i zatim **Preuzmi** da biste dobili .CSV datoteku mjere.
+- **Aktiviraj** ili **Deaktiviraj**. Neaktivne mjere neće se osvježavati tijekom [zakazanog osvježavanja](system.md#schedule-tab).
 
-> [!TIP]
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Osim toga, većina procesa [ovisi o ostalim procesima](system.md#refresh-policies). Možete odabrati status procesa da biste vidjeli pojedinosti o tijeku cijelog posla. Nakon odabira mogućnosti **Pogledaj pojedinosti** za jedan od zadataka posla pronaći ćete dodatne informacije: vrijeme obrade, zadnji datum obrade te sve pogreške i upozorenja povezana sa zadatkom.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="next-step"></a>Sljedeći korak
 
-Možete upotrebljavati postojeće mjere za izradu prvog segmenta klijenta na stranici **Segmenti**. Dodatne informacije potražite u dijelu [Segmenti](segments.md).
+Možete koristiti postojeće mjere za stvaranje [segmenta klijenta](segments.md).
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

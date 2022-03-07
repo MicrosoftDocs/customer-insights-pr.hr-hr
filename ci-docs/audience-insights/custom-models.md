@@ -3,25 +3,27 @@ title: Prilagođeni modeli za strojno učenje | Microsoft Docs
 description: Radite s prilagođenim modelima iz Strojnog učenja Azure u aplikaciji Dynamics 365 Customer Insights.
 ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
-ms.translationtype: HT
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881775"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355042"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli za strojno učenje
 
 > [!NOTE]
-> Podrška za Strojno učenje Studio (classic) završit će 31. kolovoza 2024. Preporučujemo da do tog datuma prijeđete [na Azure](/azure/machine-learning/overview-what-is-azure-machine-learning) Strojno učenje.
+> Podrška za Strojno učenje Studio (classic) završit će 31. kolovoza 2024. Preporučujemo da do tog datuma prijeđete na [Azure Strojno učenje](/azure/machine-learning/overview-what-is-azure-machine-learning).
 >
-> Od 1. prosinca 2021. nećete moći stvarati nove Strojno učenje Studio (klasične) resurse. Do 31. kolovoza 2024. možete nastaviti koristiti postojeće Strojno učenje Studio (klasične) resurse. Dodatne informacije [potražite u članku Migracija na Azure Strojno učenje](/azure/machine-learning/migrate-overview).
+> Od 1. prosinca 2021. nećete moći stvarati nove Strojno učenje Studio (klasične) resurse. Do 31. kolovoza 2024. možete nastaviti koristiti postojeće Strojno učenje Studio (klasične) resurse. Dodatne informacije potražite u članku [Migracija na Azure Strojno učenje](/azure/machine-learning/migrate-overview).
 
 
 **Inteligencija** > **Prilagođeni modeli** omogućava upravljanje tijekovima rada na temelju modela strojnog učenja Azure. Tijekovi rada pomažu vam u odabiru podataka iz kojih želite generirati uvide i mapiranju rezultata u vaše objedinjene podatke o klijentima. Dodatne informacije o izradi prilagođenih modela strojnog učenja potražite u odjeljku [Upotreba modela na temelju Strojnog učenja Azure](azure-machine-learning-experiments.md).
@@ -41,6 +43,8 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
    > [!NOTE]
    > Podaci se prenose između instanci servisa Customer Insights i odabranih web-servisa Azure ili kanala u tijeku rada. Kada prenosite podatke na uslugu Azure, provjerite je li usluga konfigurirana za obradu podataka na način i na lokaciji koja je potrebna da ti podaci ispune sve pravne ili regulatorne zahtjeve vaše tvrtke ili ustanove.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
+
 ## <a name="add-a-new-workflow"></a>Dodavanje novog tijeka rada
 
 1. Idite u odjeljak **Inteligencija** > **Prilagođeni modeli** i odaberite **Novi tijek rada**.
@@ -56,7 +60,7 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 
 1. Odaberite **Radne prostore** povezane s vašim web-servisom. 
 
-1. Na padajućem izborniku web-usluge koja sadrži model odaberite kanal Azure **Strojno** učenje. Zatim odaberite **Dalje**.    
+1. Na padajućem izborniku web-usluge koja sadrži model **odaberite** kanal Azure Strojno učenje. Zatim odaberite **Dalje**.    
    Saznajte više o [objavljivanju kanala u Strojnom učenju Azure pomoću dizajnera](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [SDK-a](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš kanal mora biti objavljen pod [krajnjom točkom kanala](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Za svaki **Ulazni podatak web-servisa** odaberite odgovarajući **Entitet** iz uvida u ciljnu skupinu pa odaberite **Dalje**.

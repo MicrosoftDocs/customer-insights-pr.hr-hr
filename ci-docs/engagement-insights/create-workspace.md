@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 76b3466afd84aa439ea55afe90ae037825884f2d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645301"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229068"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Stvaranje novog radnog prostora i dodavanje članova
 
@@ -26,17 +25,17 @@ Kada stvarate radni prostor, odabirete vrstu podataka na koje se želite usredot
 
 ## <a name="create-a-new-workspace"></a>Stvaranje novog radnog prostora
 
-Postupak stvaranja radnog prostora uključuje postavljanje *okruženja* za organiziranje radnog prostora. Okruženje je prostor koji može sadržavati jedan ili više radnih prostora. Možete koristiti okruženje za upravljanje radnim prostorima i vezama s mogućnostima uvida ciljne skupine u aplikaciji Customer Insights.
+Postupak stvaranja radnog prostora uključuje postavljanje *okruženja* za organiziranje radnog prostora. Okruženje je prostor koji može sadržavati jedan ili više radnih prostora. Okruženjem možete upravljati svojim radnim prostorima i vezama s mogućnošću uvida u publika.
 
-1. Odaberite **Novi** u pregledniku radnih prostora.
+1. Na prekidaču radnog prostora odaberite **+Novo**.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Stranica Customer insights s oblačićem na navigacijskom oknu i opisom.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Stranica Uvidi u klijenta s oblačićim u navigacijskom oknu i opisu.":::
 
 1. U okno **Radni prostor** unesite **Naziv radnog prostora**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Unesite naziv radnog prostora.":::
 
-1. Odaberite vrstu platforme (web ili mobilna) koju želite izmjeriti.
+1. Odaberite vrstu platforme (web ili mobilnu) koju želite izmjeriti.
 
 1. Odaberite **Prikaži napredne postavke** da biste omogućili ili onemogućili te izborne postavke:
 

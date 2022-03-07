@@ -3,20 +3,24 @@ title: Predviđanje cjeloživotne vrijednosti klijenta (CLV)
 description: Predvidite potencijalni prihod za aktivne klijente u budućnosti.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035360"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355780"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Cjeloživotna vrijednost klijenta (CLV) (Pretpregled)
+# <a name="customer-lifetime-value-clv-prediction"></a>Predviđanje cjeloživotne vrijednosti klijenta (CLV)
 
 Predvidite potencijalnu vrijednost (prihod) koju će pojedini aktivni klijenti donijeti u vašu tvrtku u definiranom vremenskom razdoblju u budućnosti. Ova vam značajka može pomoći u postizanju različitih ciljeva: 
 - Prepoznati visokovrijedne klijente i obraditi ovaj uvid
@@ -65,7 +69,7 @@ Potrebni su sljedeći podaci i ako su označeni kao neobavezni, preporučuju se 
     - Potpunost podataka: manje od 20 % vrijednosti koje nedostaju u obaveznim poljima u ulaznim podacima   
 
 > [!NOTE]
-> - Model zahtijeva povijest transakcija vaših klijenata. Trenutno se može konfigurirati samo jedan entitet povijesti transakcija. Ako postoji više entiteta za kupnju/transakciju, možete ih spojiti u značajci Power Query prije unosa podataka.
+> - Model zahtijeva povijest transakcija vaših klijenata. Trenutno se može konfigurirati samo jedan entitet povijesti transakcija. Ako postoji više subjekata nabave/transakcije, možete ih udružiti Power Query prije unosa podataka.
 > - Međutim, za dodatne podatke o aktivnostima klijenata (neobavezno) možete dodati onoliko entiteta aktivnosti klijenata koliko želite da ih model uzme u obzir.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Stvaranje predviđanja cjeloživotne vrijednosti klijenta
@@ -74,7 +78,7 @@ Potrebni su sljedeći podaci i ako su označeni kao neobavezni, preporučuju se 
 
 1. Odaberite pločicu **Cjeloživotna vrijednost klijenta** pa odaberite **Koristi model**. 
 
-1. U oknu **Cjeloživotna vrijednost klijenta (pretpregled)** odaberite **Početak**.
+1. U oknu **s doživotnom vrijednošću** klijenta odaberite **Početak rada**.
 
 1. **Nazovite ovaj model** i **Naziv izlaznog entiteta** kako bi se razlikovali od ostalih modela ili entiteta.
 

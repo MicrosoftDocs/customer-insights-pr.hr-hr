@@ -1,22 +1,21 @@
 ---
 title: Predviđanje preporuka proizvoda
 description: Predvidite proizvode koje će klijent vjerojatno kupiti ili s kojima će biti u interakciji.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494530"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355742"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Predviđanje preporuka proizvoda (pretpregled)
+# <a name="product-recommendation-prediction"></a>Predviđanje preporuka proizvoda
 
 Model preporuke proizvoda stvara skupove prediktivnih preporuka proizvoda. Preporuke se temelje na prethodnom ponašanju pri kupnji i klijentima sa sličnim obrascima kupnje. Nova predviđanja preporuka proizvoda možete stvoriti na stranici **Inteligencija** > **Predviđanja**. Odaberite **Moja predviđanja** da biste vidjeli druga predviđanja koja ste stvorili.
 
@@ -54,7 +53,7 @@ Ako ste zainteresirani za isprobavanje ove značajke, ali nemate podatke za ispu
 
 > [!NOTE]
 > - Model zahtijeva povijest transakcija vaših klijenata. Definicija transakcije prilično je fleksibilna. Svi podaci koji opisuju interakciju korisnika i proizvoda mogu funkcionirati kao ulaz. Na primjer, kupnja proizvoda, pohađanje nastave ili prisustvovanje događaju.
-> - Trenutno se može konfigurirati samo jedan entitet povijesti transakcija. Ako postoji više entiteta za kupnju, spojite ih u Power Query prije unosa podataka.
+> - Trenutno se može konfigurirati samo jedan entitet povijesti transakcija. Ako postoji više subjekata za kupnju Power Query, udružite ih prije unosa podataka.
 > - Ako su narudžba i pojedinosti o narudžbi različiti entiteti, spojite ih prije korištenja u modelu. Model ne funkcionira samo s ID-jem narudžbe ili ID-jem potvrde u entitetu.
 
 
@@ -62,7 +61,7 @@ Ako ste zainteresirani za isprobavanje ove značajke, ali nemate podatke za ispu
 
 1. U aplikaciji Customer Insights idite na **Inteligencija** > **Predviđanja**.
 
-1. Odaberite pločicu **Model preporuka proizvoda (pretpregled)** i odaberite **Koristi ovaj model**.
+1. Odaberite pločicu **Modela** preporuka proizvoda, a zatim **Koristi ovaj model**.
    > [!div class="mx-imgBorder"]
    > ![Pločica modela preporuke proizvoda s gumbom Koristi ovaj model.](media/product-recommendation-usethismodel.PNG "Pločica modela preporuka proizvoda s gumbom Koristi ovaj model")
 
@@ -79,11 +78,11 @@ Ako ste zainteresirani za isprobavanje ove značajke, ali nemate podatke za ispu
 1. Postavite **Broj proizvoda** koje želite preporučiti klijentu. Ova vrijednost ovisi o tome kako vaš način isporuke ispunjava podatke. Ako možete preporučiti tri proizvoda, postavite ovu vrijednost u skladu s tim.
    
    >[!TIP]
-   > Možete odabrati **Spremi i zatvori** u bilo kojem trenutku kako biste predviđanje spremili kao skicu. Skicu predviđanja pronaći ćete na kartici **Moja predviđanja**.
+   > U bilo kojem trenutku možete odabrati **Spremi skicu** da biste predviđanje spremili kao skicu. Skicu predviđanja pronaći ćete na kartici **Moja predviđanja**.
 
-1. Odaberite da li želite **predložiti proizvode koje su klijenti nedavno kupili**.
+1. Odaberite želite li uključiti proizvode koje su kupci nedavno kupili **u polje Ponovi očekivane** nabave.
 
-1. Ako ste odabrali da *nećete* preporučiti nedavno kupljene proizvode, postavite **Prozor pogleda unatrag**. Ova postavka određuje vremenski okvir koji model uzima u obzir prije ponovnog preporučivanja proizvoda korisniku. Na primjer, naznačite da klijent kupuje prijenosno računalo svake dvije godine. Ovaj će okvir pogledati u povijest kupnje u posljednje dvije godine, a ako pronađe stavku, stavka će se filtrirati iz preporuka.
+1. Postavite **prozor Za gledanje unatrag**. Ova postavka određuje vremenski okvir koji model uzima u obzir prije ponovnog preporučivanja proizvoda korisniku. Na primjer, naznačite da klijent kupuje prijenosno računalo svake dvije godine. Ovaj će okvir pogledati u povijest kupnje u posljednje dvije godine, a ako pronađe stavku, stavka će se filtrirati iz preporuka.
 
 1. Odaberite **Sljedeće**
 

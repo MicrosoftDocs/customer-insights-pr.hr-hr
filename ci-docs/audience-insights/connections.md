@@ -3,18 +3,20 @@ title: Veze s ostalim uslugama iz Customer Insights.
 description: Podijelite podatke s drugim uslugama.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
-ms.translationtype: HT
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304963"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354374"
 ---
 # <a name="connections-preview-overview"></a>Pregled (pretpregled) veza
 
@@ -47,6 +49,7 @@ Da biste dodali veze, morate imati [administratorske dozvole](permissions.md). A
 1. U oknu **Postavi vezu** okno navedite potrebne pojedinosti. 
    1. **Zaslonski naziv** i vrsta veze opisuju vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj te veze.
    1. Točna polja ovise o tome na koju se uslugu povezujete. O pojedinostima određene vrste veze možete saznati u članku o ciljnoj usluzi.
+   1. Ako [koristite vlastiti sef za ključeve](use-azure-key-vault.md) za pohranu tajni, aktivirajte **Upotrijebi sef za ključeve** i odaberite tajnu s popisa.
 
 1. Da biste stvorili vezu, odaberite **Spremi**.
 
@@ -93,3 +96,6 @@ Odvojena obogaćivanja i izvozi postaju neaktivni. Ponovno ih aktivirate tako da
 
 1. Da biste potvrdili brisanje, odaberite **Ukloni**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Uspostavljanje veza s tajnama kojima upravlja vaš vlastiti sef za ključeve
+
+Za neke veze potrebne su tajne poput API ključeva ili lozinki. Neke veze podržavaju tajne pohranjene u sefu za ključeve. Saznajte više o podržanim vezama i načinu postavljanja na [vlastiti sef za ključeve za uvide u ciljne skupine](use-azure-key-vault.md).

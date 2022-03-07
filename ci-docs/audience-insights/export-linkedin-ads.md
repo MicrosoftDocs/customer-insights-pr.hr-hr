@@ -3,18 +3,17 @@ title: Izvoz podataka iz Customer Insights u LinkedIn Ads
 description: Saznajte kako konfigurirati vezu i izvesti u LinkedIn Ads.
 ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+ms.openlocfilehash: 7a6bb466652b8703a4784329a5e675965f557e82
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618282"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231094"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Izvoz segmenata u LinkedIn Ads (pretpregled)
 
@@ -28,6 +27,7 @@ Izvezite segmente objedinjenih profila klijenata u LinkedIn Ads kako biste stvor
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Vaš segment u customer insights mora sadržavati najmanje 300 jedinstvenih profila. 
 - Možete izvesti do 100 tisuća profila klijenata po izvozu u LinkedIn Ads.
 - Izvoz u LinkedIn Ads ograničen je na segmente.
 - Izvoz do 100 tisuća profila klijenata u LinkedIn Ads može potrajati do 10 minuta. 

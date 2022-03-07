@@ -1,20 +1,19 @@
 ---
-title: Obogaćivanje pomoću obogaćivanja treće strane tvrke HERE Technologies
+title: Obogaćivanje uz obogaćivanje treće strane HERE Technologies
 description: Opće informacije o obogaćivanju treće strane tvrtke HERE Technologies.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 8e8d6bfea4e0df54682501f60759c24c893444af
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597732"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230373"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obogaćivanje profila klijenata pomoću usluge HERE Technologies (pretpregled)
 
@@ -26,35 +25,54 @@ Da biste konfigurirali obogaćivanje usluge HERE Technologies, moraju biti ispun
 
 - Imate aktivnu pretplatu za HERE Technologies. Da biste dobili pretplatu, možete se [prijaviti ovdje](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ili izravno [kontaktirati tvrtku HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Saznajte više o obogaćivanju lokacije tvrtke HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Imate API ključ za HERE Technologies.
+- Dostupna je [veza](connections.md) na HERE *ili* imate dozvole [administratora](permissions.md#administrator) i API ključ za HERE Technologies.
 
-- Imate dozvole [administratora](permissions.md#administrator).
+## <a name="configure-the-enrichment"></a>Konfiguracija za obogaćivanje
 
-## <a name="configuration"></a>Konfiguracija
+1. Idite na **Podaci** > **Obogaćivanje**. 
 
-1. Idite na **Podaci** > **Obogaćivanje**.
-
-1. Odaberite **Obogaćivanje mojih podataka** na pločici za HERE Technologies.
+1. Odaberite **Obogati moje podatke** na pločici HERE Technologies i odaberite **Započni**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pločica za HERE Technologies](media/HERE-tile.png "Pločica za HERE Technologies")
+   > ![Pločica za HERE Technologies.](media/HERE-tile.png "Pločica za HERE Technologies")
 
-1. Unesite aktivni **API ključ za HERE Technologies**. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usklađenost** odabirom potvrdnog okvira **Slažem se**. 
+1. Odaberite [vezu](connections.md) s padajućeg popisa. Ako nijedna veza nije dostupna, obratite se administratoru. Ako ste administrator, vezu možete stvoriti odabirom **Dodaj vezu**. Odaberite **HERE Technologies** na padajućem popisu. 
 
-1. Potvrdite oba unosa odabirom mogućnosti **Povezivanje s uslugom HERE**.
+1. Odaberite **Poveži se s HERE Technologies** za potvrdu odabira.
 
-1.  Odaberite **Dodaj podatke** i odaberite **Skup korisničkih podataka** koji želite obogatiti podacima o mjestu iz sustava HERE Technologies. Možete odabrati entitet **Klijent** za obogaćivanje svih vaših korisničkih profila ili odaberite segmentni entitet za obogaćivanje samo korisničkih profila sadržanih u tom segmentu.
+1.  Odaberite **Sljedeće** i odaberite **Skup podataka klijenta** koji želite obogatiti lokacijskim podacima iz HERE Technologies. Možete odabrati entitet **Klijent** za obogaćivanje svih vaših korisničkih profila ili odaberite segmentni entitet za obogaćivanje samo korisničkih profila sadržanih u tom segmentu.
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Snimka zaslona prilikom odabira skupa podataka o klijentu.":::
 
-1. Odaberite želite li mapirati polja na primarnu i/ili sekundarnu adresu. Možete odrediti mapiranje polja za obje adrese (na primjer, kućnu i poslovnu adresu) i obogatiti profile za obje adrese zasebno. Odaberite **Dalje**.
+1. Odaberite želite li mapirati polja na primarnu i/ili sekundarnu adresu. Možete odrediti mapiranje polja za obje adrese i obogatiti profile za obje adrese zasebno. Na primjer, ako postoji kućna i poslovna adresa. Odaberite **Dalje**.
 
 1. Definirajte koja se polja iz vaših objedinjenih profila trebaju koristiti za traženje odgovarajućih podataka o lokaciji iz usluge HERE Technologies. Polja **Ulica 1** i **Poštanski broj** su obavezna za odabranu primarnu i/ili sekundarnu adresu. Za veću točnost podudaranja može se dodati više polja.
 
    > [!div class="mx-imgBorder"]
-   > ![Stranica za konfiguraciju obogaćivanja usluge HERE Technologies](media/enrichment-HERE-configuration.png "Stranica za konfiguraciju obogaćivanja usluge HERE Technologies")
+   > ![Stranica za konfiguraciju obogaćivanja usluge HERE Technologies.](media/enrichment-HERE-configuration.png "Stranica za konfiguraciju obogaćivanja usluge HERE Technologies")
 
-1. Odaberite **Primijeni** za dovršetak mapiranja polja.
+1. Odaberite **Sljedeće** da biste dovršili mapiranje polja.
+
+1. Navedite naziv za obogaćivanje. 
+
+1. Odaberite **Spremi obogaćivanje** nakon pregledavanja svojih odabira.
+
+## <a name="configure-the-connection-for-here-technologies"></a>Konfiguriranje veze za HERE Technologies 
+
+Morate biti administrator da biste konfigurirali veze. Odaberite **Dodaj vezu** prilikom konfiguriranja obogaćivanja *ili* idite na **Admin** > **Veze** i odaberite **Postavi** na pločici HERE Technologies.
+
+1. Unesite naziv za vezu u dijaloški okvir **Zaslonski naziv**.
+
+1. Navedite valjani ključ za API za HERE Technologies.
+
+1. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usklađenost** odabirom opcije **Slažem se**.
+
+1. Odaberi **Potvrdi** za provjeru valjanosti konfiguracije.
+
+1. Nakon dovršetka provjere valjanosti odaberite **Spremi**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Stranica za konfiguraciju veze za HERE technologies.](media/enrichment-HERE-connection.png "Stranica za konfiguraciju veze za HERE technologies")
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
@@ -66,7 +84,7 @@ Detaljnom prikazu svakog obogaćenog profila možete pristupiti odabirom **Prika
 
 ## <a name="next-steps"></a>Sljedeći koraci
 
-Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [segmente](segments.md), [mjere](measures.md), pa i [izvezite podatke](export-destinations.md) kako biste svojim klijentima pružili personalizirano iskustvo.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
 

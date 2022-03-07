@@ -1,27 +1,26 @@
 ---
 title: Bot za Microsoft Teams
 description: Potražite objedinjene profile klijenata u Microsoft Teams pomoću bota.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-ms.translationtype: HT
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405327"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232093"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot Timovi za Dynamics 365 Customer Insights (pretpregled)
 
 Povežite se s Microsoft Teams kako bi bot mogao potražiti objedinjene profile klijenata na kanalima Timovi.
 
 > [!div class="mx-imgBorder"]
-> ![Botovi timova koji pokazuju zapis o klijentu](media/teams-bot.png "Botovi timova koji pokazuju zapis o klijentu")
+> ![Bot za Teams koji pokazuje zapis o klijentu.](media/teams-bot.png "Botovi timova koji pokazuju zapis o klijentu")
 
 ## <a name="prerequisites"></a>Preduvjeti
 
@@ -31,7 +30,10 @@ Da biste postavili i konfigurirali bot, moraju se ispuniti sljedeći preduvjeti:
 - [Proces objedinjavanja](data-unification.md) je dovršen.
 - Polja se dodaju u [index pretraživanja i filtera](search-filter-index.md).
 - Customer Insights i Timovi su u istoj tvrtki ili ustanovi.
+- Okruženje ima primarnu ciljnu skupinu postavljen na pojedinačne klijente. Poslovni računi nisu podržani.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Konfiguriranje bota
 
 1. U uvidima u ciljnu skupinu idite na **Administrator** > **Odredišta za izvoz**.
@@ -52,3 +54,6 @@ Bot pruža mogućnosti pretraživanja za objedinjene profile klijenata.
 - Ako vaša tvrtka ili ustanova održava više okruženja Customer Insights u istoj tvrtki ili ustanovi, možete pristupiti **zamjeni instance** da biste odabrali u koje okruženje želite povezati bot.
 
 - Unesite **pomoć** da bi se prikazao popis dostupnih naredbi za bot.  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

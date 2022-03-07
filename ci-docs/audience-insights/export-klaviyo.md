@@ -1,20 +1,19 @@
 ---
 title: Izvoz podataka usluge Customer Insights u Klaviyo
 description: Saznajte kako konfigurirati vezu i izvesti u Klaviyo.
-ms.date: 08/13/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
+ms.openlocfilehash: 027aee70d9fdab0a92d7fd99209a6ac2ca3cc361
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7385779"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225443"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Izvoz popisa segmenata u Klaviyo (pregled)
 
@@ -28,10 +27,10 @@ Izvezite segmente objedinjenih profila kupaca u Klaviyo i upotrijebite ih za mar
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Jednim izvozom možete izvesti do 100 000 profila u Klaviyo.
+- Možete izvesti do 100 tisuća profila klijenata po izvozu u Klaviyo.
 - Izvoz u Klaviyo ograničen je na segmente.
-- Izvoz do milijun profila u Klaviyo može potrajati do 20 minuta. 
-- Broj profila koje možete izvesti u Klaviyo ovisi o vašem ugovoru sa servisom Klaviyo i njime je ograničen.
+- Izvoz do 1 milijun profila klijenata u Klaviyo može potrajati do 20 minuta. 
+- Broj profila klijenata koje možete izvesti u Klaviyo ovisi i ograničen je ugovorom s uslugom Klaviyo.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Postavljanje veze sa servisom Klaviyo
 
@@ -67,7 +66,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 1. Unesite svoj [**Klaviyo ID popisa**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
 
-3. U odjeljku **Podudaranje podataka**, u polju **E-pošta**, odaberite polje u vašem objedinjenom profilu klijenta koje predstavlja adresu e-pošte klijenta. Obvezno je izvoziti segmente u Klaviyo.
+3. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. Obvezno je izvoziti segmente u Klaviyo.
 
 1. Odaberite **Spremi**.
 

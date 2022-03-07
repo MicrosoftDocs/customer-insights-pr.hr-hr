@@ -3,18 +3,22 @@ title: Dodatak kartice kupca za aplikacije sustava Dynamics 365 (sadrži videoza
 description: Pomoću ovog dodatka prikažite podatke iz uvida u ciljne skupine u aplikacijama Dynamics 365.
 ms.date: 02/02/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
-ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
-ms.translationtype: HT
+searchScope:
+- ci-customers-page
+- ci-search-filter
+- ci-customer-card
+- customerInsights
+ms.openlocfilehash: d67d8e2cb30cf20de204bfb293bb8ce81c7bb2f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "8085198"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353856"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatak kartice klijenta (pretpregled)
 
@@ -27,7 +31,7 @@ Dobijte prikaz svojih klijenata od 360 stupnjeva izravno u Dynamics 365 aplikaci
 ## <a name="prerequisites"></a>Preduvjeti
 
 - Dodatak funkcionira samo s aplikacijama Dynamics 365 stvorenim prema modelu, kao što su Sales ili Customer Service verzije 9.0 i novije.
-- Da bi se podaci sustava Dynamics 365 mapirali na publika uvide u profile klijenata, preporučujemo da se [unose iz aplikacije Dynamics 365 pomoću Microsoft Dataverse poveznika](connect-power-query.md). Ako koristite drugu metodu za unos kontakata (ili računa) sustava Dynamics 365, morate provjeriti je li `contactid` polje (ili`accountid`) postavljeno kao [primarni ključ za tu izvor podataka u koraku karte procesa ujedinjenja podataka](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Da bi se podaci sustava Dynamics 365 mapirali na publika uvide u profile klijenata, preporučujemo da se [unose iz aplikacije Dynamics 365 pomoću Microsoft Dataverse poveznika](connect-power-query.md). Ako koristite drugu metodu za unos kontakata (ili računa) sustava Dynamics 365, morate provjeriti je li `contactid` polje (ili`accountid`) postavljeno kao [primarni ključ za to izvor podataka u koraku karte procesa ujedinjenja podataka](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Svi korisnici sustava Dynamics 365 za dodatak kartice klijenta moraju se [dodati kao korisnici](permissions.md) u uvidima u ciljne skupine da bi vidjeli podatke.
 - [Konfigurirane mogućnosti pretraživanja i filtriranja](search-filter-index.md) u uvidima u ciljne skupine su potrebne za funkcioniranje pretraživanja podataka.
 - Svaka kontrola dodatka oslanja se na određene podatke u uvidima u ciljne skupine. Neki podaci i kontrole dostupni su samo u okruženjima određenih vrsta. Konfiguracija dodatka obavijestit će vas ako kontrola nije dostupna zbog odabrane vrste okruženja. Saznajte više o [slučajevima upotrebe okruženja](work-with-business-accounts.md).
@@ -131,7 +135,7 @@ Dodatak za karticu kupca ne nadograđuje se automatski. Za nadogradnju na najnov
 1. Provjerite jeste li konfigurirali dodatak kartice u skladu s uputama: [Konfiguriranje dodatka Kartica kupca](#configure-the-customer-card-add-in) 
 
 1. Pregledajte konfiguraciju unosa podataka. Uredite izvor podataka za sustav Dynamics 365 koji sadrži GUID ID-a kontakta. Ako je GUID ID-a kontakta prikazan s velikim slovima u Power Query uređivaču, pokušajte sljedeće: 
-    1. Uredite izvor podataka da biste otvorili izvor podataka u Power Query programu Editor.
+    1. Uredite izvor podataka da biste otvorili izvor podataka u Power Query uređivaču.
     1. Odaberite stupac ID kontakta.
     1. Na traci zaglavlja odaberite **Pretvori** da biste vidjeli dostupne akcije.
     1. Odaberite **malo slovo**. Provjerite jesu li GUID-ove u tablici sada mala.

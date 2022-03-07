@@ -1,22 +1,21 @@
 ---
-title: Izvoz podataka iz Customer Insights u Analitiku servisa Azure Synapse
-description: Saznajte kako konfigurirati vezu s Analitikom servisa Azure Synapse.
-ms.date: 04/12/2021
+title: Izvoz podataka usluge Customer Insights u Azure Synapse Analytics
+description: Saznajte kako konfigurirati vezu sa sustavom Azure Synapse Analytics.
+ms.date: 01/05/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
-ms.translationtype: HT
+ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977368"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231303"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvoz podataka u Analitiku servisa Azure Synapse (Pretpregled)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvoz podataka u Azure Synapse Analytics (pretpregled)
 
 Azure Synapse je analitička usluga koja ubrzava vrijeme za uvid u skladišta podataka i sustave velikih podataka. Svoje Customer Insights podatke možete unijeti i upotrijebiti u servisu [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -49,9 +48,11 @@ U servisu Azure:
 
 ### <a name="configure-a-connection"></a>Konfiguracija veze
 
+Da biste stvorili vezu, direktor servisa i korisnički račun u korisničkim uvidima trebaju **Čitatelj** dozvole za grupu *resursa* u kojoj se nalazi radni prostor usluge Synapse Analytics. Osim toga, direktor servisa i korisnik u radnom prostoru Synapse Analytics trebaju **dozvole administratora** sinapse. 
+
 1. Idite na **Admin** > **Veze**.
 
-1. Odaberite **Dodaj vezu** i odaberite **Analitika servisa Azure Synapse** ili odaberite **Postavi** na pločici **Analitika servisa Azure Synapse** za konfiguriranje veze.
+1. Odaberite **Dodaj vezu**, a zatim **Azure Synapse Analytics** odaberite ili odaberite **Postavljanje** na **Azure Synapse Analytics** pločici da biste konfigurirali vezu.
 
 1. Dodijelite vezi prepoznatljivi naziv u polju Zaslonski naziv. Naziv i vrsta veze opisuju ovu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
 
@@ -63,23 +64,27 @@ U servisu Azure:
 
 ### <a name="configure-an-export"></a>Konfiguracija izvoza
 
-Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Dodatne informacije potražite u odjeljku [dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Da biste konfigurirali izvoz pomoću zajedničke veze, potrebne su vam barem **suradnik** dozvole u korisničkim uvidima. Dodatne informacije potražite u odjeljku [dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
 
 1. Idite na **Podaci** > **Izvozi**.
 
 1. Da biste stvorili novi izvoz, ddaberite **Dodaj izvoz**.
 
-1. U polju **Veza za izvoz** odaberite vezu iz odjeljka **Analitika servisa Azure Synapse**. Ako ne vidite naziv ovog odjeljka, nema dostupnih [veza](connections.md) ove vrste.
+1. **U polju Veza za izvoz** odaberite vezu iz sekcije **Azure Synapse Analytics**. Ako ne vidite naziv ovog odjeljka, nema dostupnih [veza](connections.md) ove vrste.
 
 1. Navedite prepoznatljiv **zaslonski naziv** za vaš izvoz i **naziv baze podataka**.
 
-1. Odaberite koje entitete želite izvesti u Analitiku servisa Azure Synapse.
+1. Izaberite entitete u koje želite da izvozite Azure Synapse Analytics.
+   > [!NOTE]
+   > Izvori podataka temeljeni na [Mapi Common Data Model](connect-common-data-model.md) nisu podržani.
 
-1. Odaberite **Spremi**.
+2. Odaberite **Spremi**.
 
 Spremanje izvoza ne pokreće izvoz odmah.
 
 Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand).
+
+Da biste pitali podatke koji su izvezeni u Synapse Analytics, potrebni **su vam blob podaci za pohranu Čitatelj** pristup odredišnoj pohrani na radnom prostoru izvoza. 
 
 ### <a name="update-an-export"></a>Ažuriranje izvoza
 

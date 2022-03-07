@@ -2,21 +2,23 @@
 title: Integracija web-podataka iz uvida u angažman s uvidima u ciljnu skupinu
 description: Dobijte web-informacije o klijentima od uvida u angažman do uvida u ciljnu skupinu.
 ms.date: 06/24/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2789a7d1379e0cf56511b272a763c904d8a3d347058ea9e029aaff0f723a028
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 037e264658bc354618cff56a89645ef7552aeb13
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033760"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350536"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integracija web-podataka iz uvida u angažman s uvidima u ciljnu skupinu
+
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../engagement-insights/includes/cc-beta-prerelease-disclaimer.md)]
 
 Klijenti često obavljaju svakodnevne transakcije na mreži koristeći web-stranice. Mogućnost uvida u angažman (pregled) u značajci Dynamics 365 Customer Insights praktično je rješenje za integriranje web podataka kao izvora. Osim podataka o transakcijama, demografskim podacima ili podataka o ponašanju, aktivnosti na webu možemo vidjeti i u objedinjenim profilima klijenata. Te profile možemo koristiti za dobivanje dodatnih uvida poput segmenata, mjera ili predviđanja za aktivaciju publike.
 

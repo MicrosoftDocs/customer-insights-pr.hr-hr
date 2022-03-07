@@ -3,26 +3,28 @@ title: Vodič uzorka za predviđanje gubitka pretplate
 description: Upotrijebite ovaj uzorak vodiča da biste isprobali gotov model predviđanja gubitka pretplate.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306294"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355604"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Vodič uzorka za predviđanje gubitka pretplate (pretpregled)
+# <a name="subscription-churn-prediction-sample-guide"></a>Vodič uzorka za predviđanje gubitka pretplate
 
 Objasnit ćemo vam kroz primjer predviđanje odbijanja pretplate pomoću podataka uzorka navedenih u nastavku. 
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je tvrtka koja proizvodi visokokvalitetnu kavu i aparate za kavu, koje prodaju putem svog web-mjesta Kava Contoso. Nedavno su pokrenuli pretplatu za svoje kupce kako bi redovito dobivali kavu. Cilj im je razumjeti koji bi pretplaćeni kupci mogli otkazati pretplatu u sljedećih nekoliko mjeseci. Znajući tko će od njihovih klijenata **vjerojatno prekinuti**, može im pomoći uštedjeti na marketinškim aktivnostima usredotočujući se na njihovo zadržavanje.
+Contoso je tvrtka koja proizvodi visokokvalitetnu kavu i aparate za kavu koje prodaju putem svoje web-stranice Contoso Coffee. Nedavno su pokrenuli pretplatu za svoje kupce kako bi redovito dobivali kavu. Cilj im je razumjeti koji bi pretplaćeni kupci mogli otkazati pretplatu u sljedećih nekoliko mjeseci. Znajući tko će od njihovih klijenata **vjerojatno prekinuti**, može im pomoći uštedjeti na marketinškim aktivnostima usredotočujući se na njihovo zadržavanje.
 
 ## <a name="prerequisites"></a>Preduvjeti
 
@@ -31,7 +33,7 @@ Contoso je tvrtka koja proizvodi visokokvalitetnu kavu i aparate za kavu, koje p
 
 ## <a name="task-1---ingest-data"></a>Zadatak 1 – Podaci za unos
 
-Pregledajte članke [o unosu podataka](data-sources.md) i posebice o [uvozu izvora podataka pomoću konektora Power Query](connect-power-query.md). Sljedeće informacije pretpostavljaju da ste se upoznali s unosom podataka općenito. 
+Pregledajte članke [o unosu](data-sources.md) podataka i [uvozu izvora podataka pomoću Power Query konektora](connect-power-query.md) posebno. Sljedeće informacije pretpostavljaju da ste se upoznali s unosom podataka općenito. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Unesite podatke o klijentima s platforme eCommerce
 
@@ -168,7 +170,7 @@ Nakon unosa podataka, sada započinjemo postupak **Karta, podudaranje, spajanje*
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Zadatak 3 - Konfigurirajte predviđanje gubitka pretplate
 
-S uspostavljenim objedinjenim profilima klijenata, sada možemo pokrenuti predviđanje gubitka pretplate. Detaljne korake pogledajte u članku [Predviđanje odbijanja pretplate (pregled)](predict-subscription-churn.md). 
+S uspostavljenim objedinjenim profilima klijenata, sada možemo pokrenuti predviđanje gubitka pretplate. Detaljne korake potražite u članku [o predviđanje](predict-subscription-churn.md) pretplate. 
 
 1. Idite na **Obavještavanje** > **Otkrij** i odaberite **Model gubitka klijenta**.
 

@@ -1,38 +1,50 @@
 ---
 title: Izvoz podataka usluge Customer Insights u Dynamics 365 Sales
-description: Saznajte kako konfigurirati vezu s uslugom Dynamics 365 Sales.
-ms.date: 08/21/2020
-ms.reviewer: philk
-ms.service: customer-insights
+description: Saznajte kako konfigurirati vezu i izvesti u Dynamics 365 Sales.
+ms.date: 03/03/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
-ms.translationtype: HT
+searchScope:
+- ci-export
+- customerInsights
+ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643809"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355007"
 ---
-# <a name="connector-for-dynamics-365-sales-preview"></a>Poveznik za Dynamics 365 Sales (pretpregled)
+# <a name="use-segments-in-dynamics-365-sales-preview"></a>Korištenje segmenata u Dynamics 365 Sales (pretpregled)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Upotrijebite podatke o klijentima za izradu popisa zainteresiranih, daljnje praćenje tijekova rada i slanje promocija pomoću aplikacije Dynamics 365 Sales.
 
-## <a name="prerequisite"></a>Preduvjet
+## <a name="known-limitations"></a>Poznata ograničenja
 
-Zapisi kontakata [iz usluge Dynamics 365 Sales uneseni pomoću usluge Common Data Service](connect-power-query.md).
+- Izvoz u Dynamics 365 Sales ograničen je na 100 000 članova po segmentu.
+- Izvoz segmenta u Dynamics 365 Sales može potrajati do 3 sata. 
 
-## <a name="configure-the-connector-for-sales"></a>Konfiguracija poveznika za Sales
+## <a name="prerequisite-for-connection"></a>Preduvjet za vezu
 
-1. U uvidima u ciljnu skupinu idite na **Administrator** > **Odredišta izvoza**.
+1. Zapisi o kontaktima moraju biti prisutni u sustavu Dynamics 365 Sales prije nego što možete izvesti segment iz Customer Insights u Sales. Pročitajte više o tome kako preuzeti kontakte u [Dynamics 365 Sales pomoću Microsoft Dataverse](connect-power-query.md).
 
-1. U odjeljku **Dynamics 365 Sales** odaberite **Postavljanje**.
+   > [!NOTE]
+   > Izvoz segmenata iz uvida u ciljnu skupinnu u Sales neće stvoriti nove zapise o kontaktima u instancama programa Sales. Zapisi o kontaktima iz programa Sales moraju se preuzeti u uvide u ciljnu skupinu i koristiti kao izvor podataka. Trebaju se uključiti i u objedinjeni entitet Klijent da bi mapirali ID-jeve klijenta u ID-jeve kontakta prije nego što se segmenti mogu izvesti.
 
-1. Dodijelite odredištu izvoza prepoznatljiv naziv u polju **Zaslonski naziv**.
+## <a name="set-up-the-connection-to-sales"></a>Postavite vezu sa Sales
+
+1. Idite na **Admin** > **Veze**.
+
+1. Odaberite **Dodaj vezu** i odaberite **Dynamics 365 Sales** za konfiguriranje veze.
+
+1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
+
+1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Unesite URL za Sales vaše tvrtke ili ustanove u polje **Adresa poslužitelja**.
 
@@ -40,12 +52,24 @@ Zapisi kontakata [iz usluge Dynamics 365 Sales uneseni pomoću usluge Common Dat
 
 1. Mapirajte polje ID-a klijenta na ID kontakta sustava Dynamics 365.
 
-1. Odaberite **Dalje**.
+1. Odaberite **Spremi** da biste završili vezu. 
+
+## <a name="configure-an-export"></a>Konfiguracija izvoza
+
+Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Idite na **Podaci** > **Izvozi**.
+
+1. Da biste stvorili novi izvoz, odaberite **Dodaj odredište**.
+
+1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Dynamics 365 Sales. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
 
 1. Odaberite jedan segment ili više njih.
 
-1. Odaberite **Spremi**.
+1. Odaberite **Spremi**
 
-## <a name="export-the-data"></a>Izvoz podataka
+Spremanje izvoza ne pokreće izvoz odmah.
 
-Možete [izvesti podatke na zahtjev](export-destinations.md). Podaci će se izvoziti uz svako [zakazano osvježavanje](system.md#schedule-tab).
+Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

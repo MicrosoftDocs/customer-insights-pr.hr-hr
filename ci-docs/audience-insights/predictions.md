@@ -1,24 +1,28 @@
 ---
 title: Dopunite djelomične podatke pomoću predviđanja
 description: Koristite predviđanja za popunjavanje nepotpunih podataka o kupcima.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692518"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353994"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Dopunite djelomične podatke predviđanjima
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Dovršavanje djelomičnih podataka predviđanjima (zastarjelo)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Ova će značajka biti **zastarjela** od **5. studenog 2021**. Trenutne implementacije nastavit će raditi dok se značajka ne ukloni, ali nećete moći stvoriti nove integracije pomoću uputa u nastavku.
 
 Predviđanja omogućuju lako stvaranje predviđenih vrijednosti koje mogu poboljšati razumijevanje klijenta. Na stranici **Inteligencija** > **Predviđanja** možete odabrati **Moja predviđanja** da biste vidjeli predviđanja koja ste konfigurirali u drugim dijelovima uvida u ciljne skupine i omogućili vam da ih dodatno prilagodite.
 
@@ -35,7 +39,7 @@ Da bi vaša tvrtka ili ustanova mogla upotrebljavati značajku predviđanja, mor
 
 2. Vaše okruženje uvida u ciljnu skupinu povezano je s vašom instancom Dataverse.
 
-Ako [stvarate novo okruženje](get-started-paid.md), konfigurirajte ga u dijaloškom okviru **Stvaranje okruženja** i odaberite **Napredno**. Ako ste već stvorili okruženje, idite na njegove postavke i odaberite **Napredno**. U svakom slučaju, u odjeljak **Koristite predviđanja** unesite instancu URL-a Dataverse kojem želite priložiti svoje okruženje.
+Dodatne informacije potražite u odjeljku [Stvaranje novog okruženja](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Stvaranje predviđanja u entitetu klijenta
 
@@ -60,6 +64,8 @@ Ako [stvarate novo okruženje](get-started-paid.md), konfigurirajte ga u dijalo�
    > ![Primjer koji pokazuje mapirane vrijednosti polja u kategorije.](media/intelligence-categorymapping.png "Primjer koji prikazuje preslikane vrijednosti polja u kategorije")
 
 8. Odaberite **Gotovo** i predviđanje će se obraditi. Obrada traje neko vrijeme, ovisno o veličini i složenosti podataka. Rezultati će biti dostupni u novom entitetu temeljenom na **Nazivu izlaznog entiteta** predviđanja koje ste stvorili.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Stvaranje predviđanja tijekom stvaranja segmenta
 
@@ -110,7 +116,7 @@ Kao dio tog tijeka, odabirete određeni atribut na kojem ćete temeljiti svoj se
 
 ## <a name="edit-a-prediction"></a>Uređivanje predviđanja
 
-Nakon što ste stvorili predviđanje, možete prilagoditi model u alatu AI Builder kako biste povećali učinkovitost modela.  
+Nakon što izradite predviđanje, možete prilagoditi model u odjeljku AI Builder kako biste povećali učinkovitost modela.  
 
 1. U uvidima u ciljnu skupinu idite na **Inteligencija** > **Predviđanja** > **Moja predviđanja**.
 
@@ -118,14 +124,14 @@ Nakon što ste stvorili predviđanje, možete prilagoditi model u alatu AI Build
 
 3. Odaberite elipsu u stupcu **Radnje** i odaberite **Prikaz**.
 
-4. Odaberite **Prilagodi u alatu AI Builder**.
+4. Odaberite **Prilagodi u programu AI Builder**.
 
-5. Ažurirajte model u alatu AI Builder. [Saznajte više o upravljanju modelima u alatu AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models),
+5. Ažurirajte svoj model u AI Builder. [Saznajte više o upravljanju modelima u alatu AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models),
 
 Sljedeće pokretanje predviđanja upotrebljavat će ažurirani model koji ste stvorili.
 
 > [!NOTE]
-> Novi modeli stvoreni u značajci AI Builder neće se prikazivati u uvidima u ciljnu skupinu, osim ako model nije stvoren iz gore navedenih iskustava.
+> Novi modeli stvoreni u sustavu AI Builder neće se prikazivati u publika uvidima osim ako model nije stvoren iz gore navedenih iskustava.
 
 ## <a name="remove-a-prediction"></a>Uklanjanje predviđanja
 

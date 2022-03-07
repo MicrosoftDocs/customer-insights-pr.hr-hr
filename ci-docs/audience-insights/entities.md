@@ -3,36 +3,38 @@ title: Entiteti i skupovi podataka
 description: Pogledajte podatke na stranici Entiteti.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900418"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355289"
 ---
 # <a name="entities-in-audience-insights"></a>Entiteti u uvidima u ciljnu skupinu
 
 Nakon [konfiguriranja izvora podataka](data-sources.md) otvorite stranicu **Entiteti** za evaluaciju kvalitete unesenih podataka. Entiteti se smatraju skupovima podataka. Više mogućnosti servisa Dynamics 365 Customer Insights izgrađeno je oko ovih entiteta. Ako ih pažljivo pregledate, mogli biste provjeriti rezultate tih mogućnosti.
 
-Stranica **Entiteti** popisuje entitete i sadrži ove stupce:
+Stranica Entiteti **popisuje** entitete i sadrži ove stupce:
 
-- **Naziv** : naziv podatkovnog entiteta. Ako vidite znak upozorenja pored naziva entiteta to znači da se podaci za taj entitet nisu uspješno učitali.
-- **Izvor** : vrsta izvor podataka koja je progutala entitet.
-- **Ažurirano** : vrijeme zadnjeg ažuriranja entiteta.
-- **Status** : Detalji o posljednjem ažuriranju entiteta.
+- **Naziv**: naziv podatkovnog entiteta. Ako vidite znak upozorenja pored naziva entiteta to znači da se podaci za taj entitet nisu uspješno učitali.
+- **Izvor**: vrsta izvor podataka koja je progutala entitet.
+- **Ažurirano**: vrijeme zadnjeg ažuriranja entiteta.
+- **Stanje**: Pojedinosti o posljednjem ažuriranju entiteta.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Istraživanje podataka određenih entiteta
 
 1. U uvidima u ciljnu skupinu idite na **Podaci** > **Entiteti**.
-1. Na **stranici Entiteti** odaberite entitet da biste otvorili stranicu s detaljima.  
+1. Na stranici Entiteti **odaberite** entitet da biste otvorili stranicu s detaljima.  
 1. Istražite različita polja i zapise obuhvaćene tim entitetom.
 
 - Kartica **Atributi** je odabrana prema zadanim postavkama i prikazuje tablicu za pregled pojedinosti za odabrani entitet, kao što su nazivi polja, vrste podataka i vrste. Stupac **Vrsta** prikazuje povezane vrste modela uobičajenih podataka, koji automatski identificira sustav ili [ručno mapiraju](map-entities.md) korisnici. Te su vrste semantičke vrste koje se mogu razlikovati od vrsta podataka atributa. Na primjer, polje *E -pošta* u nastavku ima vrstu podataka *Tekst*, ali bi njegova (semantička) vrsta Common Data Model mogla biti *E -pošta* ili *Adresa e-pošte*.
@@ -41,7 +43,7 @@ Stranica **Entiteti** popisuje entitete i sadrži ove stupce:
 > ![Tablica polja.](media/data-manager-entities-fields.PNG "Tablica polja")
 
 > [!NOTE]
-> Ova stranica prikazuje samo uzorak podataka entiteta. Za prikaz cijelog skupa podataka idite na stranicu **Izvori podataka**, odaberite entitet, nakon toga **Uredi** i zatim pregledajte podatke tog entiteta uz pomoć alata za uređivanje Power Query, kao što je objašnjeno u poglavlju [Izvori podataka](data-sources.md).
+> Ova stranica prikazuje samo uzorak podataka entiteta. Da biste pogledali cijeli skup podataka, idite na **stranicu Izvori** podataka, odaberite entitet, odaberite **Uredi**, a zatim pregledajte podatke tog entiteta pomoću Power Query uređivača kako je objašnjeno u [izvorima](data-sources.md) podataka.
 
 Da biste saznali više o podacima koji su uneseni u entitet, stupac **Sažetak** pruža vam neke važne karakteristike podataka, kao što su nule, vrijednosti koje nedostaju, brojevi i distribucije, kako je primjenjivo za vaše podatke. Odaberite ikonu grafikona za prikaz sažetka podataka.
 
@@ -53,13 +55,13 @@ Da biste saznali više o podacima koji su uneseni u entitet, stupac **Sažetak**
 > [!div class="mx-imgBorder"]
 > ![Odaberite entitet.](media/data-manager-entities-data.png "Odabir entiteta")
 
-- **Kartica Izvješća** (dostupna za neke entitete) omogućuje vizualizaciju podataka stvaranjem izvješća i sadrži sljedeće stupce:
+- Kartica Izvješća **(dostupna** za neke entitete) omogućuje vizualizaciju podataka stvaranjem izvješća i sadrži sljedeće stupce:
 
-  - **Naziv** izvješća : naziv izvješća.
-  - **Kreirano po** imenu osobe koja je kreirala entitet.
-  - **Kreirano** : datum i vrijeme stvaranja entiteta.
-  - **Uredio** : Ime osobe koja je izmijenila entitet.
-  - **Uređeno** : datum i vrijeme izmjene entiteta. 
+  - **Naziv** izvješća: Naziv izvješća.
+  - **Kreirano po**: Ime osobe koja je stvorila entitet.
+  - **Kreirano**: datum i vrijeme stvaranja entiteta.
+  - **Uredi:** Ime osobe koja je izmijenila entitet.
+  - **Uređeno**: Datum i vrijeme izmjene entiteta. 
 
 ## <a name="entity-specific-information"></a>Informacija za određeni entitet
 
@@ -71,7 +73,9 @@ Polja iz obrađenog izvora podataka mogu sadržavati oštećene podatke. Zapisi 
 
 Na primjer, stupac 'rođendan' ima vrstu podataka postavljenu kao „datum”. U zapisu klijenta rođendan je unesen kao '01/01/19777'. Sustav će označiti ovaj zapis kao oštećen. Netko sada može promijeniti rođendan u izvornom sustavu na '1977'. Nakon automatskog osvježavanja izvora podataka polje sada ima valjani format i zapis će biti uklonjen iz oštećenog entiteta. 
 
-Idite na **Podaci** > **Entiteti** i potražite oštećene entitete u odjeljku **Sustav**. Shema imenovanja oštećenih entiteta: 'DataSourceName_EntityName_corrupt'.
+Idite na **Podaci** > **Entiteti** i potražite oštećene entitete u odjeljku **Sustav**. Shema imenovanja oštećenih entiteta: 'DataSourceName_EntityName_corrupt'. Odaberite oštećeni entitet da biste identificirali sva oštećena polja i razlog na razini pojedinačnog zapisa.
+> [!div class="mx-imgBorder"]
+> ![Razlog korupcije.](media/corruption-reason.png "Razlog korupcije")
 
 Customer Insights i dalje obrađuje oštećene zapise. Međutim, mogu uzrokovati probleme prilikom rada s objedinjenim podacima.
 

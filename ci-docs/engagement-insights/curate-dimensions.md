@@ -2,18 +2,17 @@
 title: Upotreba demografskih dimenzija za razdjeljivanje podataka o ponašanju (priređene dimenzije)
 description: Koristite se priređenim dimenzijama objedinjenih profila da biste omogućili svojstva profila klijenata uvida u ciljnu skupinu.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
-ms.translationtype: HT
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461094"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232958"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Upotreba demografskih dimenzija za razdjeljivanje podataka o ponašanju
 
@@ -29,7 +28,7 @@ Upotrebom demografskih dimenzija objedinjenih profila korisnici uvida u angažma
 - Okruženje uvida u angažman u kojem imate podatke profila korisnika povezane s okruženjem uvida u ciljnu skupinu u kojem se izrađuju profili klijenata. Više informacija: [Izrada veze između uvida u ciljnu skupinu i uvida u angažman](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Nakon što izradite vezu između okruženja uvida u ciljnu skupinu i okruženja uvida u angažman, možda ćete htjeti samo podatke specifične za svojstva profila klijenta koji mogu biti korisni kao dimenzije u uvidima u angažman. Više informacija potražite u članku [Omogućavanje atributa i segmenata objedinjenih profila uvida u ciljnu skupinu](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Nakon što izradite vezu između okruženja uvida u ciljnu skupinu i okruženja uvida u angažman, možda ćete htjeti samo podatke specifične za svojstva profila klijenta koji mogu biti korisni kao dimenzije u uvidima u angažman. Više informacija potražite u članku [Omogućavanje atributa i segmenata objedinjenih profila uvida u ciljnu skupinu](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Izrada novog prilagođenog izvješća
 

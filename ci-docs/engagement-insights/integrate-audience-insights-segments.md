@@ -2,18 +2,17 @@
 title: Upotreba segmenata uvida u ciljnu skupinu za filtriranje izvješća uvida o angažmanu
 description: Koristite segmente uvida u ciljnu skupinu u interaktivnoj analizi podataka o ponašanju prikupljenih uvidima u angažman na web-stranici klijenta.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bdd5641bb17384725491f22f70ae967ad90b1696
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
-ms.translationtype: HT
+ms.openlocfilehash: 9c8c7a1a9216e04ebee100c548afbc745af396ec
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461049"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230477"
 ---
 # <a name="use-audience-insights-segments-to-filter-engagement-insights-reports"></a>Upotreba segmenata uvida u ciljnu skupinu za filtriranje izvješća uvida o angažmanu
 

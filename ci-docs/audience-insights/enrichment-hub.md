@@ -1,21 +1,25 @@
 ---
 title: Obogaćivanje objedinjenih profila klijenata
 description: Koristite mogućnosti za obogaćivanje podataka o klijentima.
-ms.date: 09/30/2021
+ms.date: 02/18/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7672990"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372693"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za korisničke profile (pretpregled)
 
@@ -37,14 +41,18 @@ Na kartici **Otkrij** pronaći ćete sve podržane mogućnosti obogaćivanja.
 - [Demografske podatke](enrichment-experian.md) pruža Experian
 - [Prilagođeni podaci](enrichment-SFTP-custom-import.md) putem Protokola sigurnog prijenosa datoteka (SFTP) 
 - [Azure karte](enrichment-azure-maps.md) omogućuje Microsoft
+- [Podatke o lokaciji](enrichment-here.md) pruža tvrtka HERE Technologies 
+- [Identitet](enrichment-liveramp.md) pruža LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Poslovni računi (B-to-B)](#tab/b2b)
 
 - [Podatke o tvrtki](enrichment-leadspace.md) omogućuje tvrtka Leadspace
 - [Poboljšane adrese](enrichment-enhanced-addresses.md) koje je omogućio Microsoft 
+- [Poboljšani podaci tvrtke](enrichment-enhanced-company-data.md) koje pruža Microsoft
 - [Podatke o lokaciji](enrichment-here.md) pruža tvrtka HERE Technologies 
 - [Prilagođeni podaci](enrichment-SFTP-custom-import.md) putem Protokola sigurnog prijenosa datoteka (SFTP) 
 - [Azure karte](enrichment-azure-maps.md) omogućuje Microsoft
+- [Podaci o](enrichment-office.md) angažmanu računa koje je dostavio Microsoft
 
 ---
 
@@ -73,6 +81,10 @@ Obogaćivanja treće strane konfigurirana su pomoću [veza](connections.md) koje
 ## <a name="multiple-enrichments-of-the-same-type"></a>Višestruka obogaćivanja iste vrste
 
 Entitet koji treba obogatiti naveden je tijekom konfiguracije obogaćivanja, što vam omogućuje obogaćivanje samo podskupina vaših profila. Na primjer, obogatite podatke samo za određeni segment. Možete konfigurirati nekoliko obogaćivanja iste vrste i ponovno koristiti istu vezu. Neka obogaćivanja imat će ograničenja u broju obogaćivanja iste vrste koja se mogu stvoriti. Ograničenja i trenutna upotreba mogu se vidjeti na stranici **Obogaćivanje**.
+
+## <a name="enrich-data-sources-before-unification"></a>Obogaćivanje izvora podataka prije ujedinjenja
+
+Podatke o klijentima možete obogatiti prije ujedinjenja podataka kako biste povećali kvalitetu podudaranja podataka. Dodatne informacije potražite [izvor podataka obogaćivanju](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Pogledajte napredak procesa obogaćivanja
 

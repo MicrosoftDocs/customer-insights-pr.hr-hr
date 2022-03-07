@@ -1,30 +1,35 @@
 ---
 title: Povezivanje s tablicama u usluzi Microsoft Dataverse
 description: Uvoz podataka iz rješenja Data Lake kojim upravlja platforma Microsoft Dataverse.
-ms.date: 07/23/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: f92d64723e6a4d2fcebdbb3758519d4bfd4aeaf4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+searchScope:
+- ci-dataverse
+- customerInsights
+ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692565"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354132"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povezivanje s podacima iz rješenja Data Lake kojim upravlja platforma Microsoft Dataverse.
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Ovaj članak pruža informacije o tome kako se korisnici usluge Dataverse mogu brzo povezati sa svojim analitičkim entitetima u upravljanom jezeru usluge Dataverse. Morate biti administrator u tvrtki ili ustanovi platforme Dataverse kako biste nastavili i vidjeli popis entiteta dostupnih u upravljanom jezeru.
+
+Ovaj članak pruža informacije o tome kako Dataverse se korisnici mogu brzo povezati s analitičkim entitetima u upravljanom jezeru Microsoft Dataverse. 
+
+> [!NOTE]
+> Da biste nastavili i pogledali popis entiteta dostupnih u upravljanom jezeru Dataverse, morate biti administrator u tvrtki ili ustanovi.
 
 ## <a name="important-considerations"></a>Važne stavke
 
-Podaci pohranjeni u internetskom servisu kao što je Azure Data Lake Storage mogu biti pohranjeni na mjestu drugačijem od onoga na kojemu se podaci obrađuju ili pohranjuju u sustavu Dynamics 365 Customer Insights. Uvozom ili povezivanjem s podacima pohranjenima u internetskim servisima slažete se da se podaci mogu prenijeti i pohraniti sa sustavom Dynamics 365 Customer Insights. [Saznajte više u programu Microsoft Trust Center.](https://www.microsoft.com/trust-center)
+Podaci pohranjeni u internetskom servisu kao što je Azure Data Lake Storage mogu biti pohranjeni na mjestu drugačijem od onoga na kojemu se podaci obrađuju ili pohranjuju u sustavu Dynamics 365 Customer Insights.Uvozom ili povezivanjem s podacima pohranjenima u mrežnim servisima suglasni ste da se podaci mogu prenositi i pohranjivati sa sustavom Dynamics 365 Customer Insights. [Saznajte više u Microsoftovu centru za pouzdanost](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Povezivanje s jezerom za upravljanje Dataverse
 
@@ -32,12 +37,9 @@ Podaci pohranjeni u internetskom servisu kao što je Azure Data Lake Storage mog
 
 2. Odaberite **Dodaj izvor podataka**.
 
-3. Odaberite **Poveži se s upravljanim jezerom Microsoft Dataverse** i odaberite **Dalje**.
+3. Odaberite **Microsoft Dataverse** i odaberite **Dalje**.
 
-4. Unesite **Naziv** za izvor podataka i odaberite **Dalje**. Imenujte smjernice: 
-   - Započnite slovom.
-   - Koristite samo slova i brojeve. Nisu dopušteni posebni znakovi i razmaci.
-   - Koristite između 3 i 64 znaka.
+4. Unesite **Naziv** za izvor podataka i odaberite **Dalje**. 
 
 5. Omogućite **Adresa poslužitelja** za tvrtku ili ustanovu koja koristi Dataverse i odaberite **Prijavi se**.
 

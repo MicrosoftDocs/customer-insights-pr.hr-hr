@@ -3,20 +3,19 @@ title: Predviđanje za pretplatu (sadrži videozapis)
 description: Predvidite postoji li opasnost da će klijent prestati koristiti pretplaćene proizvode ili usluge vaše tvrtke.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
-ms.translationtype: HT
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967692"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354684"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Predviđanje gubitaka pretplate (pretpregled)
+# <a name="subscription-churn-prediction"></a>Predviđanje gubitka pretplate
 
 Predviđanje gubitaka pretplate pomaže u predviđanju postoji li opasnost da će klijent prestati koristiti pretplaćene proizvode ili usluge vaše tvrtke. Možete stvoriti novo predviđanje gubitaka pretplate na stranici **Inteligencija** > **Predviđanja**. Odaberite **Moja predviđanja** da biste vidjeli druga predviđanja koja ste stvorili.
 
@@ -63,7 +62,7 @@ Predviđanje gubitaka pretplate pomaže u predviđanju postoji li opasnost da ć
 ## <a name="create-a-subscription-churn-prediction"></a>Izrada predviđanja gubitaka pretplate
 
 1. U uvidima u ciljnu skupinu idite na **Obavještavanje** > **Predviđanja**.
-1. Odaberite pločicu **Predviđanje gubitaka pretplate (pretpregled)** i odaberite **Koristi ovaj model**.
+1. Odaberite pločicu **Model** bućkanja pretplate, a zatim **Koristi ovaj model**.
    > [!div class="mx-imgBorder"]
    > ![Pločica modela gubitka pretplate s gumbom Koristi ovaj model.](media/subscription-churn-usethismodel.PNG "Pločica Predviđanje gubitaka pretplate, pomoću gumba Koristi ovaj model")
 
@@ -77,7 +76,7 @@ Predviđanje gubitaka pretplate pomaže u predviđanju postoji li opasnost da ć
 1. Unesite broj **Dana od isteka pretplate** za koju vaša tvrtka smatra da predstavlja izgubljenog klijenta. Ovo se razdoblje obično vezuje uz poslovne aktivnosti poput ponuda ili drugih marketinških napora kojima se pokušava spriječiti gubitak klijenta.
 1. Unesite broj **Dana u budućnosti za predviđanje gubitka** da biste postavili prozor za predviđanje gubitka. Na primjer, za predviđanje rizika gubitka za vaše klijente tijekom sljedećih 90 dana kako bi se uskladili s vašim naporima da zadržite marketing. Predviđanje rizika gubitka na dulja ili kraća vremenska razdoblja može otežati adresiranje čimbenika u vašem profilu rizika gubitka, ovisno o vašim specifičnim poslovnim zahtjevima. Za nastavak odaberite **Dalje**
    >[!TIP]
-   > U bilo kojem trenutku možete **odabrati Spremi** skicu da biste predviđanje spremili kao skicu. Za nastavak, skicu predviđanja naći ćete na kartici **Moja predviđanja**.
+   > U bilo kojem trenutku možete odabrati **Spremi skicu** da biste predviđanje spremili kao skicu. Za nastavak, skicu predviđanja naći ćete na kartici **Moja predviđanja**.
 
 ### <a name="add-required-data"></a>Dodajte potrebne podatke
 

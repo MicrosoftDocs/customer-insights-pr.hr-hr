@@ -4,17 +4,16 @@ description: Kako stvarati, uređivati i brisati dimenzije.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: b575c5e84197d76f53a722bac60c5af928c917f9671720ede1de38c4a7478be4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: d35c72f73d2f3e202ae3c5a5ef26e9db89360084
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033988"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226294"
 ---
 # <a name="view-and-create-dimensions"></a>Prikaz i stvaranje dimenzija
 
@@ -22,7 +21,7 @@ ms.locfileid: "7033988"
 
 Dimenzija je atribut događaja koji može opisati, filtrirati ili grupirati podatke. Ako na svom web-mjestu provodite marketinšku promociju, dimenzije možete koristiti za sortiranje posjetitelja prema novim i povratnim korisnicima.  
 
-Uvidi o angažmanu uključuju gotove dimenzije za svojstva događaja. Primjeri:
+Uvidi o angažmanu uključuju gotove dimenzije (OOB) za svojstva događaja. Primjeri:
 
 - Naziv preglednika
 - Naziv stranice
@@ -44,17 +43,21 @@ Dimenzije se temelje na postojećim svojstvima događaja. Kada kôd za praćenje
 Uz dimenzije generirane sustavom, administratori okruženja i radnog prostora mogu stvoriti prilagođene dimenzije. Prilagođene dimenzije temelje se na zadanim svojstvima osnovnih događaja ili mogu koristiti [prilagođena svojstva događaja](advanced-SDK-implementation.md).
 
 1. Idite u odjeljak **Podaci** > **Dimenzije**.
-1. Odaberite **Dodaj dimenziju**.
+1. Odaberite **Nova dimenzija**.
 
    :::image type="content" source="media/add-dimension.png" alt-text="Dodajte dimenziju događaju.":::
 
 1. U oknu **Stvori dimenziju** odaberite svojstvo na kojem će se dimenzija temeljiti. Popis svojstava prikazat će sva svojstva u radnom prostoru koja nisu dodijeljena dimenziji.
-1. Unesite naziv u okvir **Zaslonski naziv**. Ako želite, možete dodati opis.
-1. Odaberite **Stvori** da biste spremili dimenziju. Može proći i do jedne minute prije nego što možete upotrijebiti dimenziju u [prilagođenom izvješću](custom-reports.md) ili [segmentu](segments.md). 
+   
+   :::image type="content" source="media/create-new-dimension.png" alt-text="Stvorite novu dimenziju.":::
+      
+3. Unesite naziv u okvir **Zaslonski naziv**. Ako želite, možete dodati **Opis**.
+4. Odaberite **Stvori** da biste spremili dimenziju. Može proći i do jedne minute prije nego što možete upotrijebiti dimenziju u [prilagođenom izvješću](custom-reports.md) ili [segmentu](segments.md). 
 
 ## <a name="edit-a-dimension"></a>Uređivanje dimenzije
 
-Možete promijeniti naziv i opis dimenzije.
+Možete promijeniti naziv i opis dimenzije. Možete uređivati samo dimenzije koje su stvorili korisnici, ali ne možete uređivati dimenzije sustava.
+
 
 1. Idite u odjeljak **Podaci** > **Dimenzije**.
 1. Odaberite dimenziju koju želite obrisati.

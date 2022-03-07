@@ -3,18 +3,17 @@ title: Uzorak vodiča za predviđanje cjeloživotne vrijednosti klijenta
 description: Koristite ovaj uzorak vodiča da biste isprobali model predviđanja cjeloživotne vrijednosti klijenta.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306340"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354822"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Uzorak vodiča za predviđanje cjeloživotne vrijednosti klijenta (CLV)
 
@@ -22,7 +21,7 @@ Ovaj vodič će vam detaljno objasniti primjer predviđanja cjeloživotne vrijed
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je tvrtka koja proizvodi visokokvalitetnu kavu i aparate za kavu. Proizvode prodaju putem svog web-mjesta Kava Contoso. Tvrtka želi razumjeti vrijednost (prihod) koju njihovi klijenti mogu stvoriti u sljedećih 12 mjeseci. Poznavanje očekivane vrijednosti njihovih klijenata u sljedećih 12 mjeseci pomoći će im da usmjere svoje marketinške napore na visokovrijedne klijente.
+Contoso je tvrtka koja proizvodi visokokvalitetne aparate za kavu i kavu. Proizvode prodaju putem svoje web stranice Contoso Coffee. Tvrtka želi razumjeti vrijednost (prihod) koju njihovi klijenti mogu stvoriti u sljedećih 12 mjeseci. Poznavanje očekivane vrijednosti njihovih klijenata u sljedećih 12 mjeseci pomoći će im da usmjere svoje marketinške napore na visokovrijedne klijente.
 
 ## <a name="prerequisites"></a>Preduvjeti
 
@@ -31,7 +30,7 @@ Contoso je tvrtka koja proizvodi visokokvalitetnu kavu i aparate za kavu. Proizv
 
 ## <a name="task-1---ingest-data"></a>Zadatak 1 – Podaci za unos
 
-Pregledajte članke [o unosu podataka](data-sources.md) i [uvozu izvora podataka pomoću poveznika Power Query](connect-power-query.md). Sljedeće informacije pretpostavljaju da ste se upoznali s unosom podataka općenito.
+Pregledajte članke [o unosu](data-sources.md) podataka i [uvozu izvora podataka pomoću Power Query poveznika](connect-power-query.md). Sljedeće informacije pretpostavljaju da ste se upoznali s unosom podataka općenito.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Unesite podatke o klijentima s platforme eCommerce
 
@@ -164,7 +163,7 @@ Nakon unosa podataka, započinjemo postupak objedinjavanja podataka kako bismo s
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Zadatak 3 - Konfiguracija predviđanja cjeloživotne vrijednosti klijenta
 
-S postavljenim objedinjenim profilima klijenata, sada možemo pokrenuti predviđanje cjeloživotne vrijednosti klijenta. Detaljne korake potražite u odjeljku [Predviđanje cjeloživotne vrijednosti klijenta (pretpregled)](predict-customer-lifetime-value.md).
+S postavljenim objedinjenim profilima klijenata, sada možemo pokrenuti predviđanje cjeloživotne vrijednosti klijenta. Detaljne korake potražite u odjeljku [Predviđanje Životna vrijednost kupca](predict-customer-lifetime-value.md).
 
 1. Idite u odjeljak **Inteligencija**  > **Predviđanja** i odaberite **Model cjeloživotne vrijednosti klijenta**.
 

@@ -1,24 +1,30 @@
 ---
 title: Konfiguracija sustava u uvidima u ciljnu skupinu
-description: Informirajte se o postavkama sustava u Dynamics 365 Customer Insights publika mogućnosti uvida.
+description: Saznajte više o postavkama sustava u mogućnosti uvidi u ciljnu skupinu Dynamics 365 Customer Insights.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732352"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354220"
 ---
 # <a name="system-configuration"></a>Konfiguracija sustava
 
-Da biste pristupili konfiguracijama sustava u publika uvidima, na lijevoj navigacijskoj traci **odaberite** > **Administratorski sustav** da biste vidjeli popis sistemskih zadataka i procesa.
+Da biste pristupili konfiguracijama sustava u publika uvidima, na lijevoj navigacijskoj traci odaberite **AdminSystem** > **da** biste vidjeli popis sistemskih zadataka i procesa.
 
 Stranica **Sustav** uključuje sljedeće kartice:
 - [Stanje](#status-tab)
@@ -32,11 +38,11 @@ Stranica **Sustav** uključuje sljedeće kartice:
 
 ## <a name="status-tab"></a>Kartica Status
 
-**Kartica Status omogućuje praćenje** tijeka zadataka, unosa podataka, izvoza podataka i nekoliko drugih važnih procesa proizvoda. Pregledajte informacije na ovoj kartici kako biste osigurali potpunost aktivnih zadataka i procesa.
+Kartica **Status** omogućuje praćenje tijeka zadataka, unosa podataka, izvoza podataka i nekoliko drugih važnih procesa proizvoda. Pregledajte informacije na ovoj kartici kako biste osigurali potpunost aktivnih zadataka i procesa.
 
 Ova kartica uključuje tablice s informacijama o statusu i obradi za različite procese. Svaka tablica prati **Naziv** zadatka i odgovarajućeg entiteta, **Status** najnovijeg pokretanja i vrijeme za **Zadnje ažuriranje**. Detalje posljednjih nekoliko pokretanja možete vidjeti odabirom naziva zadatka ili procesa. 
 
-Odaberite status pokraj zadatka ili procesa u **stupcu Status** da biste otvorili **okno s detaljima o** tijeku.
+Odaberite status pokraj zadatka ili procesa u stupcu **Status** da biste otvorili okno s detaljima o **tijeku**.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Okno s detaljima o tijeku sustava":::
 
@@ -53,12 +59,12 @@ Sustav koristi sljedeće statuse za zadatke i procese:
 |Obrada u tijeku  |Zadatak ili proces su u tijeku.  |
 |Osvježavanje    |U tijeku je unos podataka. Ovu operaciju možete otkazati tako da odaberete **Prekini osvježavanje** u stupcu **Radnje**. Ako prekinete osvježavanje, izvor podataka vratit će se na posljednje stanje osvježavanja.       |
 |Preskočeno  |Zadatak ili proces su preskočeni. Jedan ili više postupaka u nastavku o kojima ovaj zadatak ovisi nisu uspjeli ili su preskočeni.|
-|Uspješno  |Zadatak ili proces uspješno su dovršeni. Za izvore podataka označava da su podaci uspješno progutani ako se u **stupcu Osvježeno spominje** vrijeme.|
-|U redu čekanja | Obrada je u redu čekanja i započet će nakon dovršetka svih uzlaznih zadataka i procesa. Dodatne informacije potražite [u odjeljku Osvježavanje procesa](#refresh-processes).|
+|Uspješno  |Zadatak ili proces uspješno su dovršeni. Za izvore podataka označava da su podaci uspješno progutani ako se u **stupcu Osvježeno** spominje vrijeme.|
+|U redu čekanja | Obrada je u redu čekanja i započet će nakon dovršetka svih uzlaznih zadataka i procesa. Dodatne informacije potražite u članku [Osvježavanje](#refresh-processes) procesa.|
 
 ### <a name="refresh-processes"></a>Osvježavanje procesa
 
-Osvježavanje za zadatke i procese izvodi se prema [konfiguriranim rasporedima](#schedule-tab). 
+Osvježavanje za zadatke i procese izvodi se prema konfiguriranim [rasporedima](#schedule-tab). 
 
 |Proces  |Opis  |
 |---------|---------|
@@ -80,11 +86,15 @@ Osvježavanje za zadatke i procese izvodi se prema [konfiguriranim rasporedima](
 |Sustav   |Ovisi o dovršetku postupka podudaranja. Segmenti, mjere, obogaćivanje, pretraživanje, aktivnosti, predviđanja i priprema podataka ovise o uspješnom dovršetku ovog procesa.   |
 |User  |Pokreće se ručno (jednokratno osvježavanje). Ovisi o entitetima.  |
 
-Odaberite status procesa da biste vidjeli detalje napretka cijelog posla u kojem se nalazio. Gore navedeni procesi osvježavanja mogu vam pomoći da shvatite što možete učiniti da biste riješili **zadatak ili proces preskočenog** ili u redu **čekanja**.
+Odaberite status procesa da biste vidjeli detalje napretka cijelog posla u kojem se nalazio. Gore navedeni procesi osvježavanja mogu vam pomoći da shvatite što možete učiniti da biste riješili zadatak ili proces preskočenog **ili** **u redu čekanja**.
 
 ## <a name="schedule-tab"></a>Kartica Raspored
 
 Upotrijebite karticu **Raspored** da biste zakazali automatsko osvježavanje svih vaših [unesenih izvora podataka](data-sources.md). Automatska osvježavanja pomažu osigurati da se ažuriranja iz vaših izvora podataka odražavaju na objedinjenim profilima klijenata.
+
+> [!NOTE]
+> Izvore podataka kojima upravljate osvježavate prema vlastitim rasporedima. Da biste zakazali osvježavanje izvora podataka kojima upravljate, konfigurirajte postavke osvježavanja na tom određenom izvor podataka sa **stranice Izvori** podataka.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Postavke osvježavanja tijeka podataka.":::
 
 1. U uvidima u ciljnu skupinu idite na **Admin** > **Sustav** i odaberite karticu **Raspored**.
 

@@ -1,20 +1,19 @@
 ---
 title: Poveznik za Power Apps
 description: Povežite se s uslugama Power Apps i Power Automate.
-ms.date: 08/21/2020
-ms.reviewer: nikeller
-ms.service: customer-insights
+ms.date: 10/01/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-ms.translationtype: HT
+ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405296"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229022"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Poveznik za Microsoft Power Apps (pretpregled)
 
@@ -22,53 +21,55 @@ Unesite objedinjene profile klijenta u svoje personalizirane aplikacije pomoću 
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Povežite Power Apps i Dynamics 365 Customer Insights
 
-Customer Insights jedan je od mnogih [dostupnih izvora za podatke u Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights jedan je od mnogih [dostupnih izvora za podatke u Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Pogledajte dokumentaciju Power Apps da biste saznali kako [dodati podatkovnu vezu u aplikaciju](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Preporučujemo da pregledate i [kako Power Apps koristi delegiranje za obradu velikih skupova podataka u aplikacijama od gotovih gradivnih elemenata](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Pogledajte dokumentaciju Power Apps da biste saznali kako [dodati podatkovnu vezu u aplikaciju](/powerapps/maker/canvas-apps/add-data-connection). Preporučujemo da pregledate i [kako Power Apps koristi delegiranje za obradu velikih skupova podataka u aplikacijama od gotovih gradivnih elemenata](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Dostupni entiteti
 
 Nakon dodavanja Customer Insights kao podatkovne veze možete odabrati sljedeće entitete u Power Apps:
 
-- Klijent: za korištenje podataka s [objedinjenog profila klijenta](customer-profiles.md).
-- Objedinjena aktivnost klijenta: za prikaz [vremenske trake aktivnosti](activities.md) u aplikaciji.
+- **Klijent**: za korištenje podataka s [objedinjenog profila klijenta](customer-profiles.md).
+- **UnifiedActivity**: za prikaz [vremenske trake aktivnosti](activities.md) u aplikaciji.
+- **ContactProfile**: za prikaz kontakata klijenta. Taj entitet dostupan je samo u okruženjima uvida u ciljnu skupinu za poslovne račune.
 
 ## <a name="limitations"></a>Ograničenja
 
 ### <a name="retrievable-entities"></a>Dohvatljivi entiteti
 
-Možete dohvatiti samo entitete **Klijent**, **UnifiedActivity** i **Segmenti** putem priključka za Power Apps. Prikazani su drugi entiteti jer ih temeljni povezivač podržava putem okidača na usluzi Power Automate.  
+Entitete **Klijent**, **UnifiedActivity**, **Segmenti** i **ContactProfile** možete dohvatiti samo putem poveznika Power Apps. ContactProfile dostupan je samo u instanci uvida u ciljnu skupinu za poslovne račune. Prikazani su drugi entiteti jer ih temeljni povezivač podržava putem okidača na usluzi Power Automate.
 
 ### <a name="delegation"></a>Delegacija
 
-Delegiranje radi za entitet Klijent i entitet UnifiedActivity. 
+Delegiranje radi samo za entitet **Klijent** i **UnifiedActivity**. 
 
 - Delegiranje za entitet **Klijent**: da biste koristili delegiranje za ovaj entitet, polja treba indeksirati u [indeksu pretraživanja i filtriranja](search-filter-index.md).  
-
 - Delegiranje za entitet **UnifiedActivity**: Delegiranje za ovaj entitet radi samo za polja **ActivityId** i **CustomerId**.  
+- Delegiranje za **ContactProfile**: Delegiranje za ovaj entitet radi samo za polja **ContactId** i **CustomerId**. ContactProfile dostupan je samo u okruženjima uvida u ciljnu skupinu za poslovne račune.
 
-- Za više informacija o delegiranju pogledajte [Funkcije i operacije koje se mogu delegirati na usluzi Power Apps](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+Dodatne informacije o delegiranju potražite u odjeljku [Funkcije i radnje usluge Power Apps koje se mogu delegirati](/powerapps/maker/canvas-apps/delegation-overview). 
 
 ## <a name="example-gallery-control"></a>Primjer kontrole zbirke
 
-Na primjer, profile klijenata dodajete [kontroli galerije](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+Možete dodati profile klijenata u [kontrolu galerije](/powerapps/maker/canvas-apps/add-gallery).
 
-1. Dodajte kontrolu **Zbirka** aplikaciji koju gradite.
-
-> [!div class="mx-imgBorder"]
-> ![Dodavanje elementa galerije](media/connector-powerapps9.png "Dodavanje elementa galerije")
-
-1. Odaberite **Klijent** kao izvor podataka za stavke.
+1. Dodajte kontrolu **galerija** aplikaciji koju gradite.
 
     > [!div class="mx-imgBorder"]
-    > ![Odabir izvora podataka](media/choose-datasource-powerapps.png "Odabir izvora podataka")
+    > ![Dodajte element galerije.](media/connector-powerapps9.png "Dodajte element galerije.")
 
-1. Možete promijeniti podatkovni panel s desne strane da biste odabrali polje za prikaz entiteta Klijent u galeriji.
+2. Odaberite **Klijent** kao izvor podataka za stavke.
 
-1. Ako želite prikazati bilo koje polje odabranog klijenta u galeriji, ispunite svojstvo Tekst oznake:  **{Name_of_the_gallery}.Selected.{property_name}**
+    > [!div class="mx-imgBorder"]
+    > ![Odaberite izvor podataka.](media/choose-datasource-powerapps.png "Odaberite izvor podataka.")
 
-    Primjer: Gallery1.Selected.address1_city
+3. Možete promijeniti podatkovni panel s desne strane da biste odabrali polje za prikaz entiteta Klijent u galeriji.
 
-1. Da biste prikazali objedinjenu vremensku traku za klijenta, dodajte element Galerija i dodajte svojstvo Stavke: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
+4. Ako želite prikazati bilo koje polje odabranog klijenta u galeriji, ispunite svojstvo **Tekst** oznake s pomoću **{Name_of_the_gallery}.Selected.{property_name}**  
+    - Na primjer: _Gallery1.Selected.address1_city_
 
-    Primjer: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+5. Da biste prikazali objedinjenu vremensku traku za klijenta, dodajte element galerije i dodajte svojstvo **Stavke** s pomoću **Filter('UnifiedActivity', CustomerId = {Customer_Id})**  
+    - Na primjer: _Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
