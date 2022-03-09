@@ -1,21 +1,23 @@
 ---
 title: Stvaranje okruženja u aplikaciji Customer Insights
 description: Koraci za stvaranje okruženja s licenciranom pretplatom za Dynamics 365 Customer Insights.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892329"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354086"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Stvaranje okruženja u uvidima u ciljne skupine
 
@@ -28,7 +30,7 @@ Tvrtke ili ustanove mogu stvoriti *dva* okruženja za svaku licencu za Customer 
 
 ## <a name="create-a-new-environment"></a>Stvaranje novog okruženja
 
-Nakon što je kupio pretplatničku licencu za Customer Insights, globalni administrator klijenta Microsoft 365 prima poruku e-pošte koja ga poziva da stvori okruženje. Idite na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) za početak. 
+Nakon kupnje licence za pretplatu za Customer Insights, globalni administrator klijenta Microsoft 365 prima poruku e-pošte koja ih poziva da stvore okruženje. Idite na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) za početak. 
 
 Vođeno iskustvo pomaže vam kroz korake prikupiti sve potrebne informacije za novo okruženje. Za stvaranje ili upravljanje okruženjima potrebne su vam [administratorske dozvole](permissions.md) u uvidima u ciljne skupine.
 
@@ -64,7 +66,7 @@ Spremanjem podataka u repozitorij Azure Data Lake Storage, slažete se da će se
 > Customer Insights trenutačno podržava sljedeće:
 > - Uvezeni entiteti iz tokova podataka programa Power BI koji su pohranjeni u Data Lake kojim upravlja Microsoft Dataverse.  
 > - Računi za Azure Data Lake Storage iz iste regije za Azure koju ste odabrali prilikom stvaranja okruženja.
-> - Računi za Azure Data Lake Storage koji imaju omogućen *prostor za hijerarhijski naziv*.
+> - Azure Data Lake Storage računi koji su Gen2 i koji imaju *omogućen hijerarhijski prostor naziva*. Računi za pohranu na Azure Data Lake Gen1 nisu podržani.
 
 Za opciju Azure Data Lake Storage možete birati između opcije koja se temelji na resursima i opcije na temelju pretplate za provjeru autentičnosti. Za više informacija pogledajte [Povezivanje s računom Azure Data Lake Storage pomoću upravitelja usluge Azure](connect-service-principal.md). Naziv **Spremnika** bit će `customerinsights` i ne može se promijeniti.
 
@@ -76,12 +78,14 @@ Ako stvorite više okruženja za Customer Insights i odlučite spremiti izlazne 
    
 Korak **Microsoft Dataverse** omogućuje vam da povežete Customer Insights s okruženjem Dataverse.
 
-Da biste koristili [gotove modele predviđanja](predictions-overview.md#out-of-box-models), konfigurirajte dijeljenje podataka s platformom Dataverse. Ili možete omogućiti uvoz podataka iz lokalnih izvora podataka, navodeći URL okruženja Microsoft Dataverse kojim upravlja vaša tvrtka ili ustanova. Odaberite **Omogući dijeljenje podataka** za dijeljenje izlaznih podataka usluge Customer Insights pomoću data lake kojim upravlja Dataverse.
+Pružite vlastito Microsoft Dataverse okruženje za dijeljenje podataka (profila i uvida) s poslovnim aplikacijama koje se temelje na sustavu Dynamics 365 Marketing ili aplikacijama utemeljenima na Dataverse modelu u sustavu Power Apps. Ostavite ovo polje prazno ako nemate vlastito Dataverse okruženje i mi ćemo vam ga osigurati.
+
+Povezivanje s okolinom Dataverse omogućuje vam [i unos podataka iz lokalno izvora podataka pomoću Power Platform tokova podataka i pristupnika](data-sources.md#add-data-from-on-premises-data-sources). Također možete koristiti [gotove predviđanje modele](predictions-overview.md?tabs=b2c#out-of-box-models) povezivanjem s okolinom Dataverse.
 
 > [!IMPORTANT]
 > Customer Insights i Dataverse moraju biti u istoj regiji kako bi omogućili dijeljenje podataka.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Mogućnosti konfiguracije za omogućavanje dijeljenja podataka uz Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="dijeljenje podataka s Microsoft Dataverse automatskim omogućenim za nove neto instance.":::
 
 > [!NOTE]
 > Customer Insights ne podržava sljedeće scenarije dijeljenja podataka:

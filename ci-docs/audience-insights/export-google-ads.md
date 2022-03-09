@@ -1,39 +1,53 @@
 ---
 title: Izvoz podataka usluge Customer Insights u Google Ads
-description: Saznajte kako konfigurirati vezu s uslugom Google Ads.
-ms.date: 11/18/2020
-ms.reviewer: philk
-ms.service: customer-insights
+description: Saznajte kako konfigurirati vezu i izvesti u Google Ads.
+ms.date: 09/27/2021
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ba7c82e643ea0dc1897e0954e78646932cafffa3
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268953"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227001"
 ---
-# <a name="connector-for-google-ads-preview"></a>Poveznik za Google Ads (pretpregled)
+# <a name="export-segments-to-google-ads-preview"></a>Izvoz segmenata u Google Ads (pretpregled)
 
-Izvezite segmente objedinjenih profila klijenata u popis ciljnih skupina usluge Google Ads i upotrijebite ih za oglašavanje na uslugama Google pretraživanje, Gmail, YouTube i Google prikazivačkoj mreži. 
+Izvezite segmente objedinjenih korisničkih profila na popis publike servisa Google Ads i upotrijebite ih za oglašavanje na servisima Google Search, Gmail, YouTube i Google Display Network. 
 
-## <a name="prerequisites"></a>Preduvjeti
+> [!IMPORTANT]
+> Trenutačno možete stvoriti novu vezu i izvoziti podatke u Google Ads ako već imate odobreni token za razvojne inženjere usluge Google Ads. Zbog promjena pravila uskoro ćemo ažurirati izvoz usluge Google Ads i pružiti opciju izvoza koja neće zahtijevati token razvojnog inženjera kako bi se osigurao kontinuitet vašeg iskustva i pojednostavio izvoz u Google Ads. Preporučujemo da ne postavljate više veza s uslugom Google Ads radi lakšeg prelaska na novu opciju izvoza.
+
+## <a name="prerequisites-for-connection"></a>Preduvjeti za vezu
 
 -   Imate [račun za Google Ads](https://ads.google.com/) i odgovarajuće vjerodajnice administratora.
+-   Imate [odobreni token za Google Ads Developer](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Ispunjavate zahtjeve [Pravila podudaranja klijenata](https://support.google.com/adspolicy/answer/6299717).
+-   Ispunjavate zahtjeve [veličina popisa ponovno zainteresiranih](https://support.google.com/google-ads/answer/7558048).
 -   Google Ads sadrži postojeće ciljne skupine i odgovarajuće ID-ove. Dodatne informacije potražite u [ciljnim skupinama usluge Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Imate [konfigurirane segmente](segments.md)
--   Objedinjeni profili klijenata u izvezenim segmentima sadrže polja koja predstavljaju adresu e-pošte, ime i prezime
+-   Imate [konfigurirane segmente](segments.md).
+-   Objedinjeni profili klijenata u izvezenim segmentima sadrže polja koja predstavljaju adresu e-pošte, ime i prezime.
 
-## <a name="connect-to-google-ads"></a>Povezivanje s uslugom Google Ads
+## <a name="known-limitations"></a>Poznata ograničenja
 
-1. Otvorite **Administrator** > **Izvozna odredišta**.
+- Do 1 milijun profila klijenata po izvozu u Google Ads.
+- Izvoz u Google Ads ograničen je na segmente.
+- Izvoz segmenata s ukupno 1 milijun profila klijenata može potrajati i do 5 minuta zbog ograničenja na strani davatelja usluga. 
+- Podudaranje u usluzi Google Ads može potrajati do 48 sati.
 
-1. U odjeljku **Google Ads** odaberite **Postavljanje**.
+## <a name="set-up-connection-to-google-ads"></a>Postavljanje veze s Google Ads
 
-1. Dodijelite odredištu izvoza prepoznatljiv naziv u polju **Zaslonski naziv**.
+1. Idite na **Admin** > **Veze**.
+
+1. Odaberite **Dodaj vezu** i odaberite **Google Ads** za konfiguriranje veze.
+
+1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
+
+1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Unesite svoj **[ID klijenta za Google Ads](https://support.google.com/google-ads/answer/1704344)**.
 
@@ -41,34 +55,33 @@ Izvezite segmente objedinjenih profila klijenata u popis ciljnih skupina usluge 
 
 1. Odaberite **Prihvaćam** da biste potvrdili **Privatnost podataka i sukladnost**.
 
-1. Unesite svoj **[ID ciljne skupine za Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** i odaberite **Povezivanje** za inicijalizaciju veze s uslugom Google Ads.
-
 1. Odaberite mogućnost **Provjera autentičnosti pomoću usluge Google Ads** i unesite svoje vjerodajnice za Google Ads.
 
 1. Odaberite **Dodajte se kao korisnik izvoza** i unesite svoje vjerodajnice za Customer Insights.
 
-   :::image type="content" source="media/export-segments-googleads.PNG" alt-text="Snimka zaslona s izvozom za vezu s uslugom Google Ads":::
+1. Odaberite **Spremi** da biste završili vezu. 
 
-1. Odaberite **Dalje** da biste konfigurirali izvoz.
+## <a name="configure-an-export"></a>Konfiguracija izvoza
 
-## <a name="configure-the-connector"></a>Konfiguracija poveznika
+Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
 
-1. U odjeljku **Podudaranje podataka**, u polju **E-pošta**, odaberite polje u vašem objedinjenom profilu klijenta koje predstavlja adresu e-pošte klijenta. Ponovite iste korake za polja **Ime** i **Prezime**.
+1. Idite na **Podaci** > **Izvozi**.
+
+1. Da biste stvorili novi izvoz, odaberite **Dodaj odredište**.
+
+1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Google Ads. Ako ne vidite naziv ovog odjeljka, tada vam nisu dostupne veze ove vrste.
+
+1. Unesite svoj **[ID ciljne skupine za Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** i odaberite **Povezivanje** za inicijalizaciju veze s uslugom Google Ads.
+
+1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta.
 
 1. Odaberite segmente koje želite izvesti. U Google Ads možete ukupno izvesti do 1 milijun profila klijenata.
 
-1. Odaberite **Spremi**.
+Spremanje izvoza ne pokreće izvoz odmah.
 
-## <a name="export-the-data"></a>Izvoz podataka
+Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). 
 
-Možete [izvesti podatke na zahtjev](export-destinations.md). Podaci će se izvoziti uz svako [zakazano osvježavanje](system.md#schedule-tab). U usluzi Google Ads sada možete pronaći svoje segmente u odjeljku [ciljne skupine usluge Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en/).
-
-## <a name="known-limitations"></a>Poznata ograničenja
-
-- Do 1 milijun profila po izvozu u Google Ads.
-- Izvoz u Google Ads ograničen je na segmente.
-- Izvoz segmenata s ukupno milijun profila može potrajati do 5 minuta zbog ograničenja na strani davatelja usluga. 
-- Podudaranje u usluzi Google Ads može potrajati do 48 sati.
+Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
 

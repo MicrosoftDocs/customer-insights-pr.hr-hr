@@ -3,18 +3,20 @@ title: Rad s API-jima
 description: Koristite API-je i shvatite ograničenja.
 ms.date: 05/10/2021
 ms.reviewer: wimohabb
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
-ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
-ms.translationtype: HT
+searchScope:
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: b1e022f8afb8b7dbb707636009b6a25ee242a4e0
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "8100131"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354776"
 ---
 # <a name="work-with-customer-insights-apis"></a>Rad s API-jima Customer Insights
 

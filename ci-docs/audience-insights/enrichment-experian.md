@@ -1,63 +1,88 @@
 ---
-title: Obogaćivanje pomoću obogaćivanja treće strane tvrke Experian
-description: Opće informacije o obogaćivanju treće strane tvrtke Experian.
-ms.date: 09/17/2020
-ms.reviewer: kishorem
-ms.service: customer-insights
+title: Obogaćivanje uz obogaćivanje treće strane Experian
+description: Opće informacije o obogaćivanju treće strane Experian.
+ms.date: 04/09/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: kishorem-ms
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668796"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229955"
 ---
-# <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obogaćivanje profila klijenata demografskim podacima tvrtke Experian (pretpregled)
+# <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obogaćivanje klijentskih profila demografskim podacima tvrtke Experian (pretpregled)
 
-Experian je svjetski predvodnik u izvješćivanju o potrošačkim i poslovnim kreditima i marketinškim uslugama. Uz Experianove usluge obogaćivanja podataka možete izgraditi bolje temelje za razumijevanje svojih klijenata obogaćujući profile svojih klijenata demografskim podacima kao što su veličina kućanstva, prihod i još mnogo toga.
+Experian je svjetski predvodnik u izvještavanju o potrošačkim i poslovnim kreditima i marketinškim uslugama. Uz usluge obogaćivanja podataka tvrtke Experian možete steći dublje razumijevanje svojih klijenata obogaćujući klijentske profile demografskim podacima kao što su veličina kućanstva, prihod i još mnogo toga.
 
 ## <a name="prerequisites"></a>Preduvjeti
 
-Za konfiguraciju Experiana potrebno je ispuniti sljedeće preduvjete:
+Za konfiguriranja servisa Experian potrebno je ispuniti sljedeće preduvjete:
 
-- Trebate imati aktivnu pretplatu na Experian. Kako biste nabavili pretplatu, izravno se [obratite tvrtki Experian](https://www.experian.com/marketing-services/contact). [Saznajte više o obogaćivanju podataka od strane tvrtke Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Trebate imati ID korisnika, ID stranke i broj modela za svoj SSH-omogućeni račun sigurnog prijenosa (ST, Secure Transport) koji je Experian stvorio za vas.
-- Imate dozvole [administratora](permissions.md#administrator) u uvidima u ciljnu skupinu.
+- Imate aktivnu pretplatu na Experian. Da biste dobili pretplatu, izravno se [obratite Experianu](https://www.experian.com/marketing-services/contact). [Saznajte više o obogaćivanju podataka Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-## <a name="configuration"></a>Konfiguracija
+- Administrator je već konfigurirao vezu Experian *ili* imate [administratorske](permissions.md#administrator) dozvole. Također su vam potrebni Korisnički ID, ID stranke i Broj modela za vaš račun sigurnog prijenosa (ST) s omogućenim SSH koji je Experian stvorio za vas.
+
+## <a name="supported-countriesregions"></a>Podržane zemlje/regije
+
+Trenutno podržavamo obogaćivanje profila kupaca samo u Sjedinjenim Državama.
+
+## <a name="configure-the-enrichment"></a>Konfiguracija za obogaćivanje
 
 1. Idite na **Podaci** > **Obogaćivanje** i odaberite karticu **Pronađi**.
 
 1. Odaberite **Obogati moje podatke** na pločici Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![Pločica Experian](media/experian-tile.png "Pločica Experian")
+   > ![Pločica Experian.](media/experian-tile.png "Experian tile")
+   > 
 
-1. Odaberite **Početak** i unesite ID korisnika, ID stranke i broj modela za svoj Experian račun za siguran prijenos. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usklađenost** odabirom potvrdnog okvira **Slažem se**. Potvrdite sve unose odabirom mogućnosti **Primijeni**.
+1. Odaberite [vezu](connections.md) s padajućeg popisa. Ako nijedna veza nije dostupna, obratite se administratoru. Ako ste administrator, vezu možete stvoriti odabirom **Dodaj vezu** pa odabirom Experian s padajućeg popisa. 
 
-## <a name="map-your-fields"></a>Mapirajte svoja polja
+1. Odaberite **Spoji na Experian** za potvrdu odabira veze.
 
-1. Odaberite **Dodaj podatke** i odaberite svoje ključne identifikatore iz stavke **Ime i adresa**, **E-pošta** ili **Telefon** kako biste ih poslali Experianu radi rješavanja identiteta.
+1.  Odaberite **Dalje** pa odaberite **Skup podataka klijenta** koji želite obogatiti demografskim podacima servisa Experian. Možete odabrati entitet **Klijent** za obogaćivanje svih vaših korisničkih profila ili odaberite segmentni entitet za obogaćivanje samo korisničkih profila sadržanih u tom segmentu.
 
-   > [!TIP]
-   > Više atributa ključnih identifikatora poslanih Experianu vjerojatno daje veću stopu podudaranja.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Snimka zaslona prilikom odabira skupa podataka o klijentu.":::
 
-1. Odaberite **Dalje** i mapirajte odgovarajuće atribute iz vašeg objedinjenog entiteta klijenta za odabrana polja ključnih identifikatora.
+1. Odaberite **Dalje** pa definirajte koja se vrsta polja iz vaših objedinjenih profila treba koristiti za traženje odgovarajućih demografskih podataka servisa Experian. Potrebno je barem jedno od polja **Ime i adresa**, **Telefon** ili **E-pošta**. Za veću točnost podudaranja mogu se dodati do dva druga polja. Ovaj će odabir utjecati na polja za mapiranje kojima imate pristup u sljedećem koraku.
 
-1. Odaberite **Dodaj atribut** kako biste mapirali sve dodatne atribute koje biste željeli poslati Experianu.
+    > [!TIP]
+    > Više atributa identifikatora ključa poslanih servisu Experian vjerojatno donosi višu stopu podudaranja.
 
-1.  Odaberite **Spremi** da biste dovršili mapiranje polja.
+1. Odaberite **Sljedeće** da biste započeli mapiranje polja.
 
-   > [!div class="mx-imgBorder"]
-   > ![Mapiranja polja Experian](media/experian-field-mapping.png "Mapiranja polja Experian")
+1. Definirajte koja polja iz vaših objedinjenih profila treba koristiti za traženje odgovarajućih demografskih podataka servisa Experian. Obavezna su polja označena.
+
+1. Navedite naziv za obogaćivanje i naziv za izlazni entitet.
+
+1. Odaberite **Spremi obogaćivanje** nakon pregledavanja svojih odabira.
+
+## <a name="configure-the-connection-for-experian"></a>Konfiguriranje veze za Experian 
+
+Morate biti administrator da biste konfigurirali veze. Odaberite **Dodaj vezu** prilikom konfiguriranja obogaćivanja *ili* idite na **Administrator** > **Veze** pa odaberite **Postavljanje** na pločici Experian.
+
+1. Odaberite **Početak rada**.
+
+1. Unesite naziv za vezu u dijaloški okvir **Zaslonski naziv**.
+
+1. Unesite važeći Korisnički ID, ID stranke i Broj modela za svoj račun sigurnog prijenosa za Experian.
+
+1. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usklađenost** odabirom opcije **Slažem se**.
+
+1. Odaberi **Potvrdi** za provjeru valjanosti konfiguracije.
+
+1. Nakon dovršetka provjere valjanosti odaberite **Spremi**.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Okno konfiguracije veze na Experian.":::
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
-Kako biste započeli postupak obogaćivanja, odaberite **Pokreni** iz naredbene trake. Također možete pustiti sustav da automatski izvrši obogaćivanje kao dio [ planiranog osvježavanja](system.md#schedule-tab). Vrijeme obrade ovisit će o veličini vaših podataka o klijentu i postupcima obogaćivanja koje je za vaš račun postavio Experian.
+Kako biste započeli postupak obogaćivanja, odaberite **Pokreni** iz naredbene trake. Također možete pustiti sustav da automatski izvrši obogaćivanje kao dio [ planiranog osvježavanja](system.md#schedule-tab). Vrijeme obrade ovisit će o veličini vaših podataka o klijentima i postupcima obogaćivanja koje je za vaš račun postavio Experian.
 
 Nakon završetka postupka obogaćivanja, podatke o novoobogaćenim profilima klijenata možete pregledati pod stavkom **Moja obogaćivanja**. Uz to ćete pronaći vrijeme zadnjeg ažuriranja i broj obogaćenih profila.
 
@@ -65,9 +90,12 @@ Detaljnom prikazu svakog obogaćenog profila možete pristupiti odabirom **Prika
 
 ## <a name="next-steps"></a>Sljedeći koraci
 
-Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [segmente](segments.md), [mjere](measures.md), pa i [izvezite podatke](export-destinations.md) kako biste svojim klijentima pružili personalizirano iskustvo.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
 
-Kada omogućite Dynamics 365 Customer Insights za prijenos podataka u Experian, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prema vašoj uputi prenijeti takve podatke, ali vi ste odgovorni za to da Experian ispunjava sve obaveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
+Kad omogućite Dynamics 365 Customer Insights za prijenos podataka u Experian, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke poput osobnih podataka. Microsoft će prenositi takve podatke prema vašoj uputi, ali vi ste odgovorni za to da Experian ispunjava sve obveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš administrator usluge Dynamics 365 Customer Insights može ovo obogaćivanje ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

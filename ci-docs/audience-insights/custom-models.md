@@ -1,22 +1,30 @@
 ---
 title: Prilagođeni modeli za strojno učenje | Microsoft Docs
 description: Radite s prilagođenim modelima iz Strojnog učenja Azure u aplikaciji Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305615"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355042"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli za strojno učenje
+
+> [!NOTE]
+> Podrška za Strojno učenje Studio (classic) završit će 31. kolovoza 2024. Preporučujemo da do tog datuma prijeđete na [Azure Strojno učenje](/azure/machine-learning/overview-what-is-azure-machine-learning).
+>
+> Od 1. prosinca 2021. nećete moći stvarati nove Strojno učenje Studio (klasične) resurse. Do 31. kolovoza 2024. možete nastaviti koristiti postojeće Strojno učenje Studio (klasične) resurse. Dodatne informacije potražite u članku [Migracija na Azure Strojno učenje](/azure/machine-learning/migrate-overview).
+
 
 **Inteligencija** > **Prilagođeni modeli** omogućava upravljanje tijekovima rada na temelju modela strojnog učenja Azure. Tijekovi rada pomažu vam u odabiru podataka iz kojih želite generirati uvide i mapiranju rezultata u vaše objedinjene podatke o klijentima. Dodatne informacije o izradi prilagođenih modela strojnog učenja potražite u odjeljku [Upotreba modela na temelju Strojnog učenja Azure](azure-machine-learning-experiments.md).
 
@@ -26,7 +34,7 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 
 ## <a name="prerequisites"></a>Preduvjeti
 
-- Trenutno ova značajka podržava web-servise objavljene putem [Studija strojnog učenja (klasično)](https://studio.azureml.net) i [skupnih kanala Strojnog učenja Azure](/azure/machine-learning/concept-ml-pipelines).
+- Ova značajka podržava web-usluge objavljene putem [skupnih cjevovoda Azure Strojno učenje](/azure/machine-learning/concept-ml-pipelines).
 
 - Za upotrebu ove značajke potreban vam je račun za pohranu Azure Data Lake Gen2 povezan s instancom Azure Studio. Dodatne informacije potražite u odjeljku [Stvaranje računa za pohranu Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -35,6 +43,8 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
    > [!NOTE]
    > Podaci se prenose između instanci servisa Customer Insights i odabranih web-servisa Azure ili kanala u tijeku rada. Kada prenosite podatke na uslugu Azure, provjerite je li usluga konfigurirana za obradu podataka na način i na lokaciji koja je potrebna da ti podaci ispune sve pravne ili regulatorne zahtjeve vaše tvrtke ili ustanove.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
+
 ## <a name="add-a-new-workflow"></a>Dodavanje novog tijeka rada
 
 1. Idite u odjeljak **Inteligencija** > **Prilagođeni modeli** i odaberite **Novi tijek rada**.
@@ -42,40 +52,36 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 1. Dodijelite prilagođenom modelu neki prepoznatljiv naziv u polju **Naziv**.
 
    > [!div class="mx-imgBorder"]
-   > ![Snimak zaslona okna Novi tijek rada](media/new-workflowv2.png "Snimak zaslona okna Novi tijek rada")
+   > ![Snimka zaslona okna Novi tijek rada.](media/new-workflowv2.png "Snimak zaslona okna Novi tijek rada")
 
 1. Odaberite tvrtku ili ustanovu koja sadrži web-servis u **Klijent koji sadrži vaš web-servis**.
 
 1. Ako je pretplata na Strojno učenje Azure u nekom drugom klijentu, a ne u sustavu Customer Insights, odaberite **Prijava** s vjerodajnicama za odabranu tvrtku ili ustanovu.
 
-1. Odaberite **Radne prostore** povezane s vašim web-servisom. Navedena su dva odjeljka, jedan za Strojno učenje Azure v1 (Studio strojnog učenja (klasični)) i Strojno učenje Azure v2 (Strojno učenje Azure). Ako niste sigurni koji radni prostor odgovara vašem web-servisu Studio strojnog učenja (klasični), odaberite **Bilo koji**.
+1. Odaberite **Radne prostore** povezane s vašim web-servisom. 
 
-1. Odaberite web-servis Studio strojnog učenja (klasični) ili kanal Strojno učenje Azure na padajućem popisu **Web-servis koji sadrži vaš model**. Zatim odaberite **Dalje**.
-   - Saznajte više o [objavljivanju web-servisa u Studiju strojnog učenja (klasični)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Saznajte više o [objavljivanju kanala u Strojnom učenju Azure pomoću dizajnera](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [SDK-a](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš kanal mora biti objavljen pod [krajnjom točkom kanala](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Na padajućem izborniku web-usluge koja sadrži model **odaberite** kanal Azure Strojno učenje. Zatim odaberite **Dalje**.    
+   Saznajte više o [objavljivanju kanala u Strojnom učenju Azure pomoću dizajnera](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [SDK-a](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš kanal mora biti objavljen pod [krajnjom točkom kanala](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Za svaki **Ulazni podatak web-servisa** odaberite odgovarajući **Entitet** iz uvida u ciljnu skupinu pa odaberite **Dalje**.
    > [!NOTE]
    > Tijek rada prilagođenog modela primijenit će heuristiku za mapiranje polja za unos web-usluga u atribute entiteta na temelju naziva i vrste podataka polja. Vidjet ćete pogrešku ako se polje web-usluge ne može mapirati na entitet.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfiguracija tijeka rada](media/intelligence-screen2-updated.png "Konfiguracija tijeka rada")
+   > ![Konfigurirajte tijek rada.](media/intelligence-screen2-updated.png "Konfiguracija tijeka rada")
 
 1. U koraku **Izlazni parametri modela**, postavite sljedeća svojstva:
-   - Studio strojnog učenja (klasični)
-      1. Unesite izlazni **Naziv entiteta** u koji želite da idu izlazni rezultati web-servisa.
-   - Strojno učenje Azure
       1. Unesite izlazni **Naziv entiteta** u koji želite da idu izlazni rezultati kanala.
       1. S padajućeg popisa odaberite **Izlazni naziv parametra pohrane podataka** skupnog kanala.
       1. S padajućeg popisa odaberite **Izlazni naziv parametra puta** skupnog kanala.
 
       > [!div class="mx-imgBorder"]
-      > ![Okno izlaznog parametra modela](media/intelligence-screen3-outputparameters.png "Okno izlaznog parametra modela")
+      > ![Okno izlaznog parametra modela.](media/intelligence-screen3-outputparameters.png "Okno izlaznog parametra modela")
 
 1. Odaberite odgovarajući atribut s padajućeg popisa **ID klijenta u rezultatima** kojim se identificiraju klijenti pa odaberite **Spremi**.
 
    > [!div class="mx-imgBorder"]
-   > ![Okno usklađivanja rezultata s podacima klijenta](media/intelligence-screen4-relatetocustomer.png "Okno usklađivanja rezultata s podacima klijenta")
+   > ![Okno povezivanja rezultata s podacima klijenta.](media/intelligence-screen4-relatetocustomer.png "Okno usklađivanja rezultata s podacima klijenta")
 
 1. Vidjet ćete zaslon **Tijek rada spremljen** s pojedinostima o tijeku rada.    
    Ako ste konfigurirali tijek rada za kanal Strojno učenje Azure, uvidi u ciljnu skupinu će se pridružiti radnom prostoru koji sadrži kanal. Uvidi u ciljnu skupinu dobit će ulogu **Suradnik** u radnom prostoru usluge Azure.
@@ -93,9 +99,6 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 1. Za svaki **Ulazni podatak web-servisa** možete ažurirati odgovarajući **Entitet** iz uvida u ciljnu skupinu. Zatim odaberite **Dalje**.
 
 1. U koraku **Izlazni parametri modela**, postavite sljedeća svojstva:
-   - Studio strojnog učenja (klasični)
-      1. Unesite izlazni **Naziv entiteta** u koji želite da idu izlazni rezultati web-servisa.
-   - Strojno učenje Azure
       1. Unesite izlazni **Naziv entiteta** u koji želite da idu izlazni rezultati kanala.
       1. Odaberite **Izlazni naziv parametra pohrane podataka** za testni kanal.
       1. Odaberite **Izlazni naziv parametra puta** za testni kanal.

@@ -1,27 +1,30 @@
 ---
 title: Pretražite i filtrirajte profile klijenata
 description: Pronađite brzo informacije o objedinjenim profilima klijenata i filtrirajte određene atribute.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-ms.translationtype: HT
+searchScope:
+- ci-search-filter
+- customerInsights
+ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597134"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354500"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profili klijenta: indeks pretraživanja i filtriranja
 
 Rezultat objedinjavanja podataka vaših klijenata jest entitet Profil klijenta koji pruža objedinjeni pregled nad ukupnom bazom klijenata. Da biste brzo [pronašli informacije o određenom klijentu ili grupi klijenata](customer-profiles.md) možete konfigurirati mogućnosti **Pretraži** i **Filtriraj** na stranici **Klijenti**. Pročitajte više o tome kako administratori mogu uređivati atribute na stranici **Pretraži i filtriraj indeks**, koja je dostupna korisnicima za pretraživanje i filtriranje.
 
-> [!div class="mx-imgBorder"]
-> ![Pretraži filtar](media/search-filter.png "Pretraži filtar")
+   :::image type="content" source="media/search-filter.png" alt-text="Pretraži filtar":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Dodajte polja i odredite atribute
 
@@ -56,11 +59,11 @@ Izbornik **Filtar** na stranici **Klijenti** može uključivati različit broj r
 
 2. Odaberite **Spremi** za primjenu izmjena.
 
-3. Odaberite **Pokreni** kad budete spremni primijeniti svoje postavke.
+3. Odaberite **Pokreni** kad budete spremni primijeniti svoje postavke. Nakon obrade promjena, pronaći ćete ih u [karticama klijenta na stranici Klijenti](customer-profiles.md). 
 
 ## <a name="next-steps"></a>Sljedeći koraci
 
-Idite na stranicu **Klijenti** za pretraživanje korisničkih profila ili upotrijebite indeksirana polja za prikaz podskupa svih korisničkih profila.
+Pregledajte [stranicu objedinjenih profila](customer-profiles.md) da biste potražili profile ili se koristili indeksiranim poljima za pregled podskupa svih objedinjenih profila.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
