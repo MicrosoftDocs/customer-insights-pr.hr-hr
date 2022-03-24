@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 0bd2bfa7402ed19cb92ff1f35208b150cfec48c3
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353902"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455806"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Korištenje segmenata u Dynamics 365 Marketing (pretpregled)
 
@@ -28,7 +28,7 @@ Ako se koristite novim mogućnostima usluge Dynamics 365 Marketing za organizaci
 
 ## <a name="prerequisite-for-a-connection"></a>Preduvjet za vezu
 
-- Zapisi o kontaktima moraju biti prisutni u sustavu Dynamics 365 Marketing prije nego što možete izvesti segment iz Customer Insights u Marketing. Pročitajte više o tome kako preuzeti kontakte u [Dynamics 365 Marketing pomoću Microsoft Dataverse](connect-power-query.md).
+- Zapisi o kontaktima moraju biti prisutni u sustavu Dynamics 365 Marketing prije nego što možete izvesti segment iz Customer Insights u Marketing. Pročitajte više o tome kako preuzeti kontakte u [Dynamics 365 Marketing pomoću Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
   > [!NOTE]
   > Izvoz segmenata iz uvida u ciljnu skupinnu u Marketing neće stvoriti nove zapise o kontaktima u instancama programa Marketing. Zapisi o kontaktima iz programa Marketing moraju se preuzeti u uvide u ciljnu skupinu i koristiti kao izvor podataka. Trebaju se uključiti i u objedinjeni entitet Klijent da bi mapirali ID-jeve klijenta u ID-jeve kontakta prije nego što se segmenti mogu izvesti.
@@ -47,7 +47,7 @@ Ako se koristite novim mogućnostima usluge Dynamics 365 Marketing za organizaci
 
 1. U odjeljku **Račun administratora poslužitelja** odaberite **Prijava** i odaberite račun usluge Dynamics 365 Marketing.
 
-1. Mapirajte polje ID kontakta u entitetu Kupac u ID kontakta sustava Dynamics 365.
+1. Mapirajte polje ID kontakta u entitetu Kupac na ID kontakta sustava Dynamics 365.
 
 1. Odaberite **Spremi** da biste završili vezu. 
 

@@ -7,18 +7,18 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
-ms.translationtype: HT
+ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350122"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455989"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Početak rada nakon kupnje usluge Customer Insights
 
 Ovaj članak objašnjava kako napraviti prve korake u sustavu Dynamics 365 Customer Insights nakon što vaša tvrtka ili ustanova kupi pretplatu. Ako želite kupiti Customer Insights, naše su mogućnosti kontakta navedene na [web-stranici Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Nakon kupnje licence za pretplatu za Customer Insights, globalni administrator klijenta Microsoft 365 prima poruku e-pošte koja ih poziva da stvore okruženje. 
+Nakon kupnje licence za pretplatu za Customer Insights, globalni administrator Microsoft 365 klijenta prima e-poštu koja ih poziva na stvaranje okruženja. 
 
 Customer Insights licenciran je po klijentu i uključuje više mogućnosti. Možete kupiti dodatne kapacitete i licence za povećanje zadane kvote. 
 - [Pregled određivanja cijena](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -39,7 +39,4 @@ Iskustvo prvog pokretanja pomaže vam da odaberete početni fokus u usluzi Custo
 
 ## <a name="create-your-own-environment"></a>Stvaranje vlastitog okruženja
 
-Nakon prve prijave vidjet ćete okruženje s oglednim podacima. Te podatke možete koristiti za istraživanje značajki i upoznavanje s aplikacijom. Da biste koristili vlastite podatke, morate stvoriti [okruženje](audience-insights/get-started-paid.md).
-
-
-
+Nakon prve prijave vidjet ćete okruženje s oglednim podacima. Te podatke možete koristiti za istraživanje značajki i upoznavanje s aplikacijom. Da biste koristili vlastite podatke, morate [stvoriti okruženje](/dynamics365/customer-insights/audience-insights/create-environment).

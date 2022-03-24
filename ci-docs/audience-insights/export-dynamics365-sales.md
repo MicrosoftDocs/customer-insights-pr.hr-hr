@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355007"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455821"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Korištenje segmenata u Dynamics 365 Sales (pretpregled)
 
@@ -26,12 +26,12 @@ Upotrijebite podatke o klijentima za izradu popisa zainteresiranih, daljnje pra�
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Izvoz u Dynamics 365 Sales ograničen je na 100 000 članova po segmentu.
-- Izvoz segmenta u Dynamics 365 Sales može potrajati do 3 sata. 
+- Izvoz u Dynamics 365 Prodaja ograničena je na 100'000 članova po segmentu.
+- Izvoz segmenata u Dynamics 365 Prodaja može potrajati do 3 sata. 
 
 ## <a name="prerequisite-for-connection"></a>Preduvjet za vezu
 
-1. Zapisi o kontaktima moraju biti prisutni u sustavu Dynamics 365 Sales prije nego što možete izvesti segment iz Customer Insights u Sales. Pročitajte više o tome kako preuzeti kontakte u [Dynamics 365 Sales pomoću Microsoft Dataverse](connect-power-query.md).
+1. Zapisi o kontaktima moraju biti prisutni u sustavu Dynamics 365 Sales prije nego što možete izvesti segment iz Customer Insights u Sales. Pročitajte više o tome kako unijeti kontakte iz [sustava Dynamics 365 Sales pomoću programa Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > Izvoz segmenata iz uvida u ciljnu skupinnu u Sales neće stvoriti nove zapise o kontaktima u instancama programa Sales. Zapisi o kontaktima iz programa Sales moraju se preuzeti u uvide u ciljnu skupinu i koristiti kao izvor podataka. Trebaju se uključiti i u objedinjeni entitet Klijent da bi mapirali ID-jeve klijenta u ID-jeve kontakta prije nego što se segmenti mogu izvesti.

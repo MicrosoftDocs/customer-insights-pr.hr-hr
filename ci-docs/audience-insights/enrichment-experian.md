@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229955"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376683"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obogaćivanje klijentskih profila demografskim podacima tvrtke Experian (pretpregled)
 
@@ -25,7 +25,7 @@ Za konfiguriranja servisa Experian potrebno je ispuniti sljedeće preduvjete:
 
 - Imate aktivnu pretplatu na Experian. Da biste dobili pretplatu, izravno se [obratite Experianu](https://www.experian.com/marketing-services/contact). [Saznajte više o obogaćivanju podataka Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Administrator je već konfigurirao vezu Experian *ili* imate [administratorske](permissions.md#administrator) dozvole. Također su vam potrebni Korisnički ID, ID stranke i Broj modela za vaš račun sigurnog prijenosa (ST) s omogućenim SSH koji je Experian stvorio za vas.
+- Administrator je već konfigurirao vezu Experian *ili* imate [administratorske](permissions.md#admin) dozvole. Također su vam potrebni Korisnički ID, ID stranke i Broj modela za vaš račun sigurnog prijenosa (ST) s omogućenim SSH koji je Experian stvorio za vas.
 
 ## <a name="supported-countriesregions"></a>Podržane zemlje/regije
 

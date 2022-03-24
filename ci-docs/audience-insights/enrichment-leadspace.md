@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 0db0c984f6bf9f7ded0704b6fa0caf39c7dace3a
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230625"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376775"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Obogaćivanje profila tvrtke uz Leadspace (pretpregled)
 
@@ -25,7 +25,7 @@ Za konfiguriranje Leadspacea, potrebno je ispuniti sljedeće preduvjete:
 
 - Imate aktivnu licencu Leadspace.
 - Imate [objedinjene profile klijenata](customer-profiles.md) na temelju računa.
-- Vezu Leadspace administrator je već konfigurirao ili imate [administratorske](permissions.md#administrator) dozvole i „trajni ključ” (u daljnjem tekstu **Token za Leadspace**). Obratite se izravno tvrtki [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) za pojedinosti o njihovu proizvodu.
+- Vezu Leadspace administrator je već konfigurirao ili imate [administratorske](permissions.md#admin) dozvole i „trajni ključ” (u daljnjem tekstu **Token za Leadspace**). Obratite se izravno tvrtki [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) za pojedinosti o njihovu proizvodu.
 
 ## <a name="configure-the-enrichment"></a>Konfiguracija za obogaćivanje
 

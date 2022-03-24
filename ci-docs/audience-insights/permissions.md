@@ -1,7 +1,7 @@
 ---
 title: Upravljanje korisničkim dozvolama
 description: Saznajte više o dozvolama i korisničkim ulogama.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355928"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376729"
 ---
 # <a name="user-permissions"></a>Korisničke dozvole
 
@@ -48,7 +48,7 @@ Postoje tri vrste uloga:
 - Upravljajte konfiguracijom i obogaćujte korisničke profile sa stranice **Obogaćivanje** (samo za obogaćivanja prve strane).
 - Upravljajte i stvarajte izvoze na temelju veza koje se dijele sa suradnicima. [Saznajte više o tome kako administratori dopuštaju suradnicima korištenje veze za izvoze](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administrator
+## <a name="admin"></a>Administrativna cjelina
 
 - Sve dozvole koje su dostupne Suradniku.
 - Promijenite postavke na stranici **Sustav**, uključujući radni jezik i rasporede osvježavanja za vaše sistemske procese.
@@ -60,6 +60,12 @@ Postoje tri vrste uloga:
 - Instalirajte i koristite **Dodatak za karticu klijenta**.
 - Dodajte i koristite **Power Apps poveznik**.
 - Omogućite korištenje [API-jeva za Customer Insights](apis.md).
+- [Dodijelite vlasništvo nad](manage-environments.md#change-the-owner-of-an-environment) okolišem drugom administratoru.
+
+## <a name="admin-owner"></a>Administrator (vlasnik)
+
+- Sve dozvole dostupne administratoru.
+- [Resetirajte i izbrišite](manage-environments.md#reset-an-existing-environment) okruženje.
 
 ## <a name="assign-roles-and-permissions"></a>Dodjela uloga i dozvola
 

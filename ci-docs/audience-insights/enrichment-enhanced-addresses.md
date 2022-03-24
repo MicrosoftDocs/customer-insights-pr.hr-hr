@@ -14,16 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 2ab550e83a4969c1f547e66bcbf6ddb96d7789df
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353627"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376288"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogaćivanje profila klijenata s poboljšanim adresama
 
 Adrese u vašim podacima mogu biti nestrukturirane, nepotpune ili netočne. Koristite Microsoftove modele za normalizaciju i obogaćivanje adresa u [format Common Data Model](/common-data-model/schema/core/applicationcommon/address) radi veće preciznosti i uvida.
+
+Također [možete obogatiti adrese na izvorima](data-sources-enrichment.md) podataka kako biste poboljšali točnost podudaranja u procesu ujedinjenja podataka. 
 
 ## <a name="how-we-enhance-addresses"></a>Kako poboljšavamo adrese
 
@@ -105,15 +107,15 @@ Kako biste započeli postupak obogaćivanja, odaberite **Pokreni** iz naredbene 
 
 Nakon završetka postupka obogaćivanja, podatke o novoobogaćenim profilima klijenata možete pregledati pod stavkom **Moja obogaćivanja**. Uz to ćete pronaći vrijeme zadnjeg ažuriranja i broj obogaćenih profila.
 
-Uzorak obogaćenih podataka možete vidjeti na pločici **Pretpregled** obogaćenih korisnika. Odaberite **Pogledajte više** i odaberite karticu **Podaci** da biste pristupili detaljnom prikazu svakog obogaćenog profila.
+Uzorak obogaćenih podataka možete vidjeti u pločici pretpregleda **obogaćenih** kupaca. Odaberite **Vidi više** i odaberite karticu **Podaci** da biste pristupili detaljnom prikazu svakog obogaćenog profila.
 
-### <a name="overview-card"></a>Kartica pregleda
+### <a name="overview-card"></a>Kartica Pregled
 
-Kartica pregleda prikazuje detalje o pokrivenosti obogaćivanja. 
+Pregledna kartica prikazuje detalje o pokrivenosti obogaćivanja. 
 
-* **Adrese obrađene i promijenjene**: broj profila klijenata s uspješno obogaćenim adresama.
+* **Obrađene i promijenjene** adrese: broj profila kupaca s adresama koje su uspješno obogaćene.
 
-* **Adrese obrađene i ne mijenjaju se**: broj profila klijenata s adresama koje su prepoznate, ali nisu promijenjene. To se obično događa kada su ulazni podaci valjani i ne mogu se poboljšati obogaćivanjem.
+* **Adrese obrađene i nisu promijenjene**: broj profila klijenata s adresama koje su prepoznate, ali nisu promijenjene. To se obično događa kada su ulazni podaci valjani i ne mogu se poboljšati obogaćivanjem.
 
 * **Adrese koje nisu obrađene i nisu promijenjene**: broj profila s adresama koje nisu prepoznate. Obično za ulazne podatke koji nisu valjani ili nisu podržani obogaćivanjem.
 

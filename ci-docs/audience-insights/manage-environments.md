@@ -1,7 +1,7 @@
 ---
 title: Izrada okruženja i upravljanje njima
 description: Saznajte kako se prijaviti za uslugu i kako upravljati okruženjima.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354270"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376867"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
-
-
 
 ## <a name="switch-environments"></a>Prebacivanje okruženja
 
@@ -49,7 +47,7 @@ Korak **Microsoft Dataverse** omogućuje vam da povežete Customer Insights s ok
 Da biste koristili [gotove modele predviđanja](predictions-overview.md#out-of-box-models), konfigurirajte dijeljenje podataka s platformom Dataverse. Ili možete omogućiti uvoz podataka iz lokalnih izvora podataka, navodeći URL okruženja Microsoft Dataverse kojim upravlja vaša tvrtka ili ustanova.
 
 > [!IMPORTANT]
-> Customer Insights i Dataverse moraju biti u istoj regiji kako bi omogućili dijeljenje podataka.
+> Uvidi u kupce i Dataverse moraju biti u istoj regiji kako biste omogućili dijeljenje podataka.
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="Mogućnosti konfiguracije za omogućavanje dijeljenja podataka uz Microsoft Dataverse.":::
 
@@ -98,9 +96,29 @@ Nakon osvježenja izvora podataka, idite na **Podaci** > **Objedini**. Ovdje će
 
 Nakon završetka objedinjavanja podataka idite na **Mjere** i **Segmenti** da ih osvježite.
 
+## <a name="change-the-owner-of-an-environment"></a>Promjena vlasnika okruženja
+
+Iako nekoliko korisnika može imati administratorske dozvole u Customer Insights, samo je jedan korisnik vlasnik okruženja. Prema zadanim postavkama administrator je taj koji u početku stvara okruženje. Kao administrator okruženja možete dodijeliti vlasništvo drugom korisniku s administratorskim dozvolama.
+
+1. Odaberite birač **Okruženja** u zaglavlju aplikacije.
+
+1. Odaberite ikonu **Uredi**.
+
+1. U okviru Uređivanje okruženja **idite** na **korak Osnovne informacije**.
+
+1. **U polju Promjena vlasnika okruženja** odaberite novog vlasnika okruženja.  
+
+1. Odaberite **Pregled i završi**, a zatim **Ažuriraj** da biste primijenili promjene. 
+
+## <a name="claim-ownership-of-an-environment"></a>Potraživanje vlasništva nad okruženjem
+
+Ako vlasnik okruženja napusti organizaciju ili se njegov korisnički račun izbriše, okruženje neće imati vlasnika. Korisnik s administratorskim dozvolama može preuzeti vlasništvo i postati novi vlasnik. Oni mogu nastaviti posjedovati okoliš ili [promijeniti vlasništvo u drugog administratora](#change-the-owner-of-an-environment). 
+
+Da biste preuzeli vlasništvo, odaberite **gumb Preuzimanje vlasništva** koji se prikazuje pri vrhu svake stranice u korisničkom uvidu kada je izvorni vlasnik napustio tvrtku ili ustanovu.
+
 ## <a name="reset-an-existing-environment"></a>Ponovno postavljanje postojećeg okruženja
 
-Kao administrator možete ponovno postaviti okruženje u prazno stanje ako želite izbrisati sve konfiguracije i ukloniti unesene podatke.
+Kao vlasnik okruženja možete vratiti okruženje u prazno stanje ako želite izbrisati sve konfiguracije i ukloniti unesene podatke.
 
 1.  Odaberite birač **Okruženja** u zaglavlju aplikacije. 
 
@@ -112,7 +130,7 @@ Kao administrator možete ponovno postaviti okruženje u prazno stanje ako želi
 
 ## <a name="delete-an-existing-environment"></a>Brisanje postojećeg okruženja
 
-Kao administrator možete izbrisati okruženje koje administrirate.
+Kao vlasnik okruženja možete izbrisati okruženje kojim upravljate.
 
 1.  Odaberite birač **Okruženja** u zaglavlju aplikacije.
 
