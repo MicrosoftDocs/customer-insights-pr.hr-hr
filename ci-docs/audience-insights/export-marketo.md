@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231970"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487506"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Izvoz segmenata u Marketo (pretpregled)
 
@@ -63,7 +63,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 1. Unesite svoj **[ID popisa usluge Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID popisa je čisto numerička vrijednost. Na primjer, ako je vaš ID popisa usluge Marketo ST12345A7, uklonite znak prije i iza brojeva i unesite `12345`. 
 
-1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. 
+1. **U odjeljku Podudaranje** podataka odaberite barem jedno polje koje predstavlja korisnikovu adresu e-pošte ili korisnikov Marketo ID. 
 
 1. Neobavezno možete izvesti **Ime**, **Prezime**, **Grad**, **Država** **Zemlja/Regija**  za stvaranje personaliziranije e-pošte. Odaberite **Dodavanje atributa** za mapiranje ovih polja.
 

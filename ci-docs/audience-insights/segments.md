@@ -1,7 +1,7 @@
 ---
 title: Segmenti u uvidima u ciljne skupine
 description: Pregled segmenata i upute za stvaranje segmenata i upravljanje segmentima.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355974"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508557"
 ---
 # <a name="segments-overview"></a>Pregled segmenata
 
@@ -68,7 +68,9 @@ Sljedeća je radnja dostupna kada odaberete segment:
 
 ## <a name="refresh-segments"></a>Osvježavanje segmenata
 
-Možete osvježiti sve segmente odjednom odabirom mogućenosti **Osvježi sve** na stranici **Segmenti** ili možete osvježiti jedan ili više segmenata kada ih odaberete i zatim među opcijama odaberete **Osvježi**. Možete i konfigurirati ponavljajuće osvježavanje na **Admin** > **Sustav** > **Raspored**.
+Možete osvježiti sve segmente odjednom odabirom mogućenosti **Osvježi sve** na stranici **Segmenti** ili možete osvježiti jedan ili više segmenata kada ih odaberete i zatim među opcijama odaberete **Osvježi**. Možete i konfigurirati ponavljajuće osvježavanje na **Admin** > **Sustav** > **Raspored**. Kada je konfigurirano ponavljajuće osvježavanje, primjenjuju se sljedeća pravila:
+- Svi segmenti s vrstom **Dinamička** ili **Ekspanzija** automatski će se osvježiti na postavljenoj kadenci. Kada je osvježavanje dovršeno **, status** pokazuje je li bilo problema s osvježavanjem segmenta. Posljednji **osvježeni** prikazuje vremensku oznaku posljednjeg uspješnog osvježavanja. Ako dođe do pogreške, odaberite pogrešku da biste vidjeli detalje o tome što se dogodilo.
+- Segmenti vrste **Statik** *neće* se automatski osvježavati. Posljednji **osvježeni** prikazuje vremensku oznaku posljednjeg pokretanja ili osvježavanja statičkih segmenata ručno.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

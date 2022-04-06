@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354872"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523713"
 ---
 # <a name="customer-profiles"></a>Profili klijenata
 
 Stranica **Klijenti** prikazuje kombinirani prikaz objedinjenih profila klijenata. Profili klijenata dostupni su nakon što [stvorite objedinjeni entitet klijenta](data-unification.md). Stranica vam omogućuje pretraživanje klijenata i definiranje indeksa za pretraživanje.
 
-Klijenti mogu biti pojedinci ili tvrtke ili ustanove. Svaki profil klijenta predstavljen je pločicom. Za dobivanje više zapisa koristite kontrole označavanja stranica. Kartica prikazuje polja iz entiteta *Klijent* kako je definirano u opciji **Pretraži i filtriraj indeks**. Odaberite pločicu da biste vidjeli podatke o odabranom klijentu na namjenskoj stranici pod nazivom [Stranica s pojedinostima o klijentu](customer-profiles.md#customer-details-page).
+Klijenti mogu biti pojedinci ili tvrtke ili ustanove. Svaki profil klijenta predstavljen je pločicom. Za dobivanje više zapisa koristite kontrole označavanja stranica. Kartica prikazuje polja iz entiteta *Klijent* kako je definirano u opciji **Pretraži i filtriraj indeks**. Redoslijed polja unutar svake kartice odabire sustav.
+
+Odaberite pločicu da biste vidjeli podatke o odabranom klijentu na namjenskoj stranici pod nazivom [Stranica s pojedinostima o klijentu](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Stranica klijenata prikazuje pločice rezultata](media/customers-page-result-tiles-B2C.png "Stranica klijenata prikazuje pločice rezultata")

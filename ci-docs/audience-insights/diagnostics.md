@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376407"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523659"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prijava prosljeđivanja Dynamics 365 Customer Insights pomoću servisa Azure Monitor (pretpregled)
 
@@ -230,7 +230,7 @@ Događaji tijeka rada imaju sljedeća svojstva.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Jest      | Jest  | Uvijek `WorkflowEvent` označite događaj kao događaj tijeka rada.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Jest      | Jest  | Identifikator pokretanja tijeka rada. Svi događaji toka posla i zadataka unutar izvršavanja toka posla imaju isti `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Jest      | Jest  | Identifikator operacije, pročitajte članak [Vrste operacija].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Jest      | Jest  | Identifikator operacije potražite u članku [Vrste](#operation-types) operacija.                                                                                                                                                                               |
 | `properties.tasksCount`                      | Jest      | No   | Samo tijek rada. Broj zadataka koje tijek rada pokreće.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Jest      | No   | Nije obavezno. Samo događaji tijeka rada. ObjectId Azure Active Directory [korisnika](/azure/marketplace/find-tenant-object-id#find-user-object-id) koji je pokrenuo tijek rada, pogledajte i `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Jest      | No   | `full` ili `incremental` osvježiti.                                                                                                                                                                                                                            |

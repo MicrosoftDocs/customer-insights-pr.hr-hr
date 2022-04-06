@@ -24,8 +24,6 @@
       href: trial-signup.md
     - name: Česta pitanja o probnoj verziji
       href: trial-FAQ.md
-- name: Početak rada s plaćenom licencom
-  href: paid-license.md
 - name: Pristupite okruženju
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Uvidi u ciljne skupine
@@ -36,16 +34,18 @@
       href: audience-insights/overview.md
     - name: Nove i ažurirane značajke
       href: audience-insights/whats-new-audience-insights.md
-    - name: Početak
+    - name: Započnite
       items:
         - name: Vodič za brzi početak
           href: audience-insights/get-started.md
+        - name: Početak rada s plaćenom licencom
+          href: paid-license.md
         - name: Stvaranje novog okruženja
           href: audience-insights/create-environment.md
         - name: Istraživanje uvida u ciljnu skupinu
           href: audience-insights/home.md
-    - name: Rad s poslovnim računima
-      href: audience-insights/work-with-business-accounts.md
+        - name: Rad s poslovnim računima
+          href: audience-insights/work-with-business-accounts.md
     - name: Izvori podataka
       items:
         - name: Pregled izvora podataka
@@ -58,14 +58,12 @@
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Dodavanje platforme Azure Synapse Analytics
           href: audience-insights/connect-synapse.md
-        - name: Obogaćivanje izvora podataka
+        - name: Obogaćivanje za izvore podataka
           href: audience-insights/data-sources-enrichment.md
         - name: Inkrementalno osvježavanje za izvore podataka
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Unos podataka u stvarnom vremenu
           href: audience-insights/real-time-data-ingestion.md
-        - name: Objašnjenje entiteta i skupova podataka
-          href: audience-insights/entities.md
     - name: Objedinjavanje podataka
       items:
         - name: Pregled objedinjavanja podataka
@@ -76,16 +74,6 @@
           href: audience-insights/match-entities.md
         - name: Spajanje entiteta
           href: audience-insights/merge-entities.md
-        - name: Pregled objedinjenih korisničkih profila
-          href: audience-insights/customer-profiles.md
-        - name: Filtriranje objedinjenih korisničkih profila
-          href: audience-insights/search-filter-index.md
-        - name: Izgradnja odnosa i povezanih entiteta
-          href: audience-insights/relationships.md
-        - name: Popis aktivnosti klijenata
-          href: audience-insights/activities.md
-        - name: Definiranje semantičkih mapiranja
-          href: audience-insights/semantic-mappings.md
     - name: Obogaćivanje podataka
       items:
         - name: Obogaćivanje korisničkih profila
@@ -110,6 +98,14 @@
           href: audience-insights/enrichment-office.md
         - name: Obogaćivanje uz prilagođeni unos SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Objedinjeni profili
+      items:
+        - name: Pregled objedinjenih korisničkih profila
+          href: audience-insights/customer-profiles.md
+        - name: Filtriranje objedinjenih korisničkih profila
+          href: audience-insights/search-filter-index.md
+        - name: Definiranje aktivnosti kupaca
+          href: audience-insights/activities.md
     - name: Segmenti
       items:
         - name: Pregled segmenata
@@ -146,7 +142,7 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Predviđanje gubitka transakcija
               href: audience-insights/predict-transactional-churn.md
-            - name: Analiza raspoloženja u povratnim informacijama kupaca
+            - name: Analizirajte naklonost u povratnim informacijama klijenta
               href: audience-insights/sentiment-analysis.md
             - name: Upotreba prilagođenih modela pomoću Strojnog učenja Azure
               href: audience-insights/custom-models.md
@@ -190,6 +186,8 @@
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
+            - name: Kaliti
+              href: audience-insights/export-braze.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
             - name: Constant Contact
@@ -204,6 +202,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Iterable
+              href: audience-insights/export-iterable.md
             - name: Klaviyo
               href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
@@ -242,6 +242,18 @@
               href: audience-insights/export-power-automate.md
             - name: Power BI
               href: audience-insights/export-power-bi.md
+    - name: Entiteti
+      items:
+        - name: Objašnjenje entiteta
+          href: audience-insights/entities.md
+        - name: Pregled shema entiteta u modelu Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Podaci rješenja Customer Insights u servisu Dataverse
+          href: audience-insights/customer-insights-dataverse.md
+        - name: Izgradnja odnosa i povezanih entiteta
+          href: audience-insights/relationships.md
+        - name: Definiranje semantičkih mapiranja
+          href: audience-insights/semantic-mappings.md
     - name: Administracija
       items:
         - name: Postavljanje konfiguracije sustava
@@ -252,15 +264,17 @@
           href: audience-insights/connections.md
         - name: Upravljanje s više okruženja
           href: audience-insights/manage-environments.md
-        - name: Sigurnost
-          items:
-            - name: Povezivanje vlastitog sefa za ključeve
-              href: audience-insights/use-azure-key-vault.md
-            - name: Povežite se s računom za pohranu ADLS koristeći glavnu uslugu
-              href: audience-insights/connect-service-principal.md
-            - name: Izvoz dijagnostičkih zapisnika
-              href: audience-insights/diagnostics.md
-    - name: Rastezljivost
+        - name: Povezivanje vlastitog sefa za ključeve
+          href: audience-insights/use-azure-key-vault.md
+        - name: Povezivanje s računom za pohranu pomoću upravitelja servisa
+          href: audience-insights/connect-service-principal.md
+        - name: Izvoz dijagnostičkih zapisnika
+          href: audience-insights/diagnostics.md
+        - name: Ograničenja usluge
+          href: service-limits.md
+        - name: Prava i zahtjevi DSR-a
+          href: dsr-rights-requests.md
+    - name: API-ji
       items:
         - name: Pregled shema entiteta u modelu Common Data Model
           href: audience-insights/entity-schemas.md
@@ -290,7 +304,7 @@
           href: consent-management/set-consent-rules.md
     - name: Upravljanje podacima o pristanku
       items:
-        - name: Omogući pravila o pristanku u publika uvidima
+        - name: Omogućivanje pravila o pristanku u publika uvidima
           href: audience-insights/activate-consent.md
         - name: Upravljanje zadanim pravilima pristanka u segmentima publika uvida
           href: audience-insights/change-default-consent-rules.md
@@ -306,9 +320,5 @@
           href: consent-management/predictions-consent-data.md
 - name: Uvidi u angažman (pretpregled)
   href: engagement-insights/overview.md
-- name: Ograničenja usluge
-  href: service-limits.md
-- name: Prava i zahtjevi DSR-a
-  href: dsr-rights-requests.md
 - name: Zatražite podršku
   href: /power-platform/admin/get-help-support
