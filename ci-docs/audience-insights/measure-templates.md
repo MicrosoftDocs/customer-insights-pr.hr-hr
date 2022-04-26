@@ -1,28 +1,28 @@
 ---
 title: Stvaranje mjera iz predložaka
-description: Definirajte mjere pomoću predložaka za uobičajene slučajeve korištenja.
-ms.date: 02/28/2022
+description: Definirajte mjere pomoću predložaka za slučajeve uobičajene uporabe.
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359950"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529392"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Korištenje predloška za izradu mjera
 
 Za njihovo stvaranje možete koristiti unaprijed definirane predloške najčešće korištenih [mjera](measures.md). Detaljni opisi predložaka i vođeno iskustvo pomažu vam u učinkovitom stvaranju mjera. Predlošci se nadovezuju na mapirane podatke iz entiteta *Objedinjena aktivnost*. Stoga provjerite jeste li konfigurirali [aktivnosti klijenata](activities.md) prije nego što stvorite mjeru iz predloška.
 
-Da biste stvorili prilagođene mjere, pročitajte članak [Stvaranje mjera od nule pomoću sastavljača mjera](measure-builder.md).
+Upute za stvaranje prilagođenih mjera potražite u članku [Stvaranje mjera pomoću sastavljača mjera od nule](measure-builder.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
 
@@ -51,7 +51,9 @@ Dostupni predlošci mjera:
 
 1. Pregledajte potrebne podatke i odaberite **Započni** ako imate sve podatke na mjestu.
 
-1. U oknu **Uredi naziv** postavite naziv mjere i izlazni entitet. 
+1. Uz **stavku Naziv mjere odaberite Uredi detalje**. Navedite naziv mjere. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) mjeri.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Dijaloški okvir Uređivanje detalja.":::
 
 1. Odaberite **Gotovo**.
 

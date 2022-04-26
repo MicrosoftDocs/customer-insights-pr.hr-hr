@@ -1,7 +1,7 @@
 ---
 title: Podaci rješenja Customer Insights u servisu Microsoft Dataverse
 description: Koristite entitete Customer Insights kao tablice u servisu Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 04/05/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,31 +11,33 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: bbbbf2a7f5edb81ee75f6e33988cd4721134b6e7
+ms.sourcegitcommit: 0363559a1af7ae16da2a96b09d6a4a8a53a8cbb8
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355420"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "8547617"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad s podacima rješenja Customer Insights u servisu Microsoft Dataverse
 
-Customer Insights pruža mogućnost omogućivanja izlaznih entiteta u servisu [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Ova integracija omogućuje jednostavnu razmjenu podataka i prilagođeni razvoj putem pristupa s malo kodiranja / bez kodiranja. Izlazni entiteti bit će dostupni kao tablice u servisu Dataverse. Ove tablice omogućuju scenarije kao što su [automatizirani tijekovi rada putem servisa Power Automate](/power-automate/getting-started), [aplikacije stvorene prema modelu](/powerapps/maker/model-driven-apps/) i [aplikacije od gotovih gradivnih elemenata](/powerapps/maker/canvas-apps/) putem servisa Power Apps. Podatke možete koristiti za bilo koju drugu aplikaciju koja se temelji na tablicama servisa Dataverse. Trenutna implementacija uglavnom podržava pretraživanja gdje se podaci iz dostupnih entiteta uvida u ciljne skupine mogu dohvatiti za zadani ID klijenta.
+Customer Insights pruža mogućnost omogućivanja izlaznih entiteta u servisu [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Ova integracija omogućuje jednostavnu razmjenu podataka i prilagođeni razvoj kroz pristup koda niskog koda / bez koda. Izlazni [entiteti](#output-entities) dostupni su kao tablice u Dataverse okruženju. Podatke možete koristiti za bilo koju drugu aplikaciju na Dataverse temelju tablica. Ove tablice omogućavaju scenarije kao što su automatizirani tijekovi rada kroz Power Automate ili izrada aplikacija pomoću programa Power Apps. Trenutna implementacija uglavnom podržava pretraživanja u kojima se podaci iz dostupnih entiteta Customer Insights mogu dohvatiti za određeni ID klijenta.
 
 ## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Povezivanje okruženja servisa Dataverse s rješenjem Customer Insights
 
-**Tvrtke ili ustanove s postojećim okruženjima Dataverse**
+**Postojeća organizacija**
 
-Tvrtke ili ustanove koje već koriste Dataverse mogu [koristiti jedno od svojih postojećih okruženja Dataverse](create-environment.md) kada administrator postavi uvide u ciljne skupine. Pružanjem URL-a okruženju Dataverse, povezuje se s njihovim novim okruženjem uvida u ciljne skupine. Kako bi se osigurale najbolje moguće performanse, Customer Insights i okruženja Dataverse moraju biti udomaćena u istoj regiji.
+Administratori mogu konfigurirati Customer Insights za [korištenje postojećeg Dataverse okruženja](create-environment.md) prilikom stvaranja okruženja Customer Insights. Pružanjem URL-a okruženju Dataverse, povezuje se s njihovim novim okruženjem uvida u ciljne skupine. Uvidi u kupce i Dataverse okruženja moraju biti smješteni u istoj regiji. 
+
+Ako ne želite koristiti postojeće Dataverse okruženje, sustav stvara novo okruženje za podatke Customer Insights u vašem klijentu. 
+
+> [!NOTE]
+> Ako vaša tvrtka ili ustanova već koristi Dataverse u svom klijentu, važno je upamtiti da [stvaranje okruženja Dataverse kontrolira administrator](/power-platform/admin/control-environment-creation). Na primjer, ako postavljate novo okruženje uvida u ciljne skupine s računom svoje tvrtke ili ustanove, a administrator je onemogućio stvaranje probnih okruženja Dataverse za sve osim za administratore, ne možete stvoriti novo probno okruženje.
+> 
+> Probna okruženja Dataverse stvorena u rješenju Customer Insights imaju 3 GB prostora za pohranu koji se neće računati u ukupni kapacitet na koji klijent ima pravo. Plaćene pretplate dobivaju pravo servisa Dataverse na 15 GB za bazu podataka i 20 GB za pohranu datoteka.
 
 **Nova tvrtka ili ustanova**
 
-Ako prilikom postavljanja rješenja Customer Insights stvorite novu tvrtku ili ustanovu, automatski ćete dobiti novo okruženje Dataverse.
-
-> [!NOTE]
-> Ako vaša tvrtka ili ustanova već koristi Dataverse u svom klijentu, važno je upamtiti da [stvaranje okruženja Dataverse kontrolira administrator](/power-platform/admin/control-environment-creation.md). Na primjer, ako postavljate novo okruženje uvida u ciljne skupine s računom svoje tvrtke ili ustanove, a administrator je onemogućio stvaranje probnih okruženja Dataverse za sve osim za administratore, ne možete stvoriti novo probno okruženje.
-> 
-> Probna okruženja Dataverse stvorena u rješenju Customer Insights imaju 3 GB prostora za pohranu koji se neće računati u ukupni kapacitet na koji klijent ima pravo. Plaćene pretplate dobivaju pravo servisa Dataverse na 15 GB za bazu podataka i 20 GB za pohranu datoteka.
+Ako prilikom postavljanja customer insightsa stvorite novu organizaciju, sustav automatski stvara novo Dataverse okruženje u vašoj tvrtki ili ustanovi.
 
 ## <a name="output-entities"></a>Izlazni entiteti
 
@@ -127,13 +129,13 @@ Ova tablica sadrži rezultate predviđanja modela.
 
 ### <a name="segment-membership"></a>Članstvo u segmentu
 
-Ova tablica sadrži informacije o članstvu u segmentu profila kupaca.
+Ova tablica sadrži podatke o članstvu u segmentima profila kupaca.
 
-| Column        | Tip | Opis                        |
+| Column        | Tip | Opis                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | ID profila klijenta        |
-| SegmentProvider      | String       | Aplikacija koja objavljuje segmente. Zadano: publika uvida         |
-| SegmentMembershipType | String       | Vrsta klijenta za ovaj zapis članstva u segmentu. Podržava više vrsta kao što su Klijent, Kontakt ili Poslovni subjekt. Zadano: Kupac  |
-| Segmenti       | Niz JSON  | Popis jedinstvenih segmenata u koje je profil kupca      |
-| msdynci_identifier  | String   | Jedinstveni identifikator zapisa članstva u segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| CustomerId        | String       | ID profila klijenta        |
+| SegmentProvider      | String       | Aplikacija koja objavljuje segmente. Zadano: publika uvidi         |
+| SegmentMembershipType | String       | Upišite zapis članstva u ovom segmentu kupca. Podržava više vrsta kao što su Klijent, Kontakt ili Poslovni subjekt. Zadano: kupac  |
+| Segmenti       | Niz JSON  | Popis jedinstvenih segmenata čiji je profil kupca član      |
+| msdynci_identifier  | String   | Jedinstveni identifikator zapisa članstva u segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | Deterministički GUID generiran iz`msdynci_identifier`          |

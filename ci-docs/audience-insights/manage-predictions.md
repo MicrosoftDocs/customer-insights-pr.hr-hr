@@ -5,15 +5,15 @@ ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 8ff8d70ffb8489def072e5d8a6e43d062594141a
+ms.sourcegitcommit: 696ad9ab6e10046c00f1ac86a7e8fc37386e6fe7
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230783"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "8555304"
 ---
 # <a name="manage-predictions"></a>Upravljanje predviđanjima
 
@@ -49,12 +49,12 @@ Sljedeći stupci u izvješću sadrže korisne informacije za poboljšanje podata
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Primjer izvješća o upotrebljivosti ulaznih podataka koji prikazuje tablicu s pogreškama, upozorenjima i preporukama.":::
 
-- **Naziv:** Opisni naziv pogreške, upozorenje ili preporuka.
-- **Korak:** Faza modela, vlak ili rezultat, informacije se odnose.
+- **Naziv:** Opisni naziv pogreške, upozorenja ili preporuke.
+- **Korak:** Model faza, vlak ili rezultat, informacije se odnose na.
 - **Stanje:** Ozbiljnost informacija (pogreška, upozorenje, preporuka).
 - **Naziv stupca:** Stupac u entitetu koji treba izmijeniti da bi se poboljšale performanse modela.
-- **Naziv entiteta:** naziv entiteta koji treba izmijeniti da bi se poboljšala izvedba modela.
-- **Detalji:** pojedinosti o pogrešci, upozorenju ili preporuci.
+- **Naziv entiteta:** naziv entiteta koji treba izmijeniti da bi se poboljšale performanse modela.
+- **Detalji:** Pojedinosti o pogrešci, upozorenju ili preporuci.
 
 ## <a name="refresh-a-prediction"></a>Osvježavanje predviđanja
 

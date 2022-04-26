@@ -1,23 +1,23 @@
 ---
-title: Pronalaženje sličnih korisnika pomoću AI-ja (sadrži videozapis)
+title: Pronađite slične klijente pomoću umjetne inteligencije (sadrži videozapise)
 description: Pronađite slične segmente klijenata koristeći se umjetnom inteligencijom.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355236"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561516"
 ---
 # <a name="similar-customers-preview"></a>Slični klijenti (pretpregled)
 
@@ -36,6 +36,8 @@ Ova značajka omogućuje vam pronaći klijente u svojoj bazi klijenata koristeć
 
 1. Pregledajte predloženi naziv za svoj novi segment i promijenite ga ako je potrebno.
 
+1. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) novom segmentu.
+
 1. Pregledajte polja koja definiraju vaš novi segment. Ova polja određuju osnovu na kojoj će sustav pokušati pronaći klijente slične vašem izvornom segmentu. Sustav će prema zadanim postavkama odabrati preporučena polja.
   Polja koja mogu značajno smanjiti učinak modela automatski se isključuju:
   
@@ -44,9 +46,9 @@ Ova značajka omogućuje vam pronaći klijente u svojoj bazi klijenata koristeć
 
 1. Odaberite želite li da u novom segmentu budu uključeni **Svi klijenti** ili samo klijenti za **Specifični postojeći segment**.
 
-1. Isključite klijente iz svog izvornog segmenta odabirom potvrdnog okvira **Isključi sve iz izvornog segmenta**.
-
 1. Sustav prema zadanim postavkama predlaže da se u izlaz uključi samo 20% ciljne publike. Uredite ovaj prag ako je potrebno. Povećanje praga smanjit će preciznost.
+
+1. Uključite kupce u segment izvora tako da potvrdite okvir Uključi članove iz izvornog **segmenta uz kupce sa sličnim atributima**.
 
 1. Odaberite **Pokreni** pri dnu stranice kako biste pokrenuli zadatak binarne klasifikacije (metoda strojnog učenja) koji analizira skup podataka.
 
@@ -67,7 +69,7 @@ Možete [raditi s izlazom sličnog segmenta](segments.md) kao kod drugih segmena
 
 Da biste osvježili sličan segment, odaberite ga na stranici **Segmenti** i odaberite **Osvježi** u akcijskoj traci.
 
-Uređivanjem sličnog segmenta vaši će se podaci ponovno obraditi. Prethodno stvoreni segment ažurira se osvježenim podacima.    
+Uređivanjem sličnog segmenta vaši će se podaci ponovno obraditi. Prethodno stvoreni segment ažurira se osvježenim podacima.
 Da biste uredili sličan segment, odaberite ga na stranici **Segmenti** i odaberite **Uredi** u akcijskoj traci. Primijenite promjene i odaberite **Pokreni** da biste započeli obradu.
 
 ## <a name="delete-a-similar-segment"></a>Brisanje sličnog segmenta
@@ -84,6 +86,5 @@ Model strojnog učenja binarne klasifikacije dodjeljuje ocjene klijentima u sli�
 - Ocjene sličnosti između 0,85 i 1 klijenti su koje je sustav klasificirao kao *vrlo slične*
 
 Klijenti s ocjenama sličnosti manjim od 0,4 ne uvrštavaju se u izlaz modela. Sustav ih ne smatra dovoljno sličnim izvornom segmentu.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

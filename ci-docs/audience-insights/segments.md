@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508557"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529530"
 ---
 # <a name="segments-overview"></a>Pregled segmenata
 
@@ -47,24 +47,30 @@ Postoji više načina za stvaranje novog segmenta:
 
 ## <a name="manage-existing-segments"></a>Upravljanje postojećim segmentima
 
-Idite na stranicu **Segmenti** da biste pregledali sve svoje spremljene segmente i upravljali njima.
+Idite na **stranicu Segmenti da biste pogledali** sve spremljene segmente i upravljali njima.
 
 Svaki segment predstavljen je retkom koji sadrži dodatne informacije o segmentu.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Odabrani segment s padajućim popisom opcija i dostupnim opcijama.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Odabrani segment s padajućim popisom opcija i dostupnim opcijama." lightbox="media/segments-selected-segment.png":::
 
-Sljedeća je radnja dostupna kada odaberete segment:
+Prilikom odabira segmenta dostupne su sljedeće akcije:
 
 - **Prikaz** pojedinosti o segmentu, uključujući trend broja članova, pretpregled članova segmenta.
+- **Preuzmi** popis članova kao .CSV datoteku.
 - **Uredi** segment da promijeni svoja svojstva.
 - **Stvorite duplikat** segmenta. Možete odmah urediti njegova svojstva ili jednostavno spremiti duplikat.
 - **Osvježi** segment tako da uključuje najnovije podatke.
-- **Aktiviraj** ili **Deaktiviraj** segment. Segmenti imaju dva moguća stanja – aktivno ili neaktivno. Ta su stanja praktična tijekom uređivanja segmenta. Za neaktivne segmente definicija segmenta postoji, ali još ne sadrži korisnike. Kada aktivirate segment, njegovo se stanje mijenja iz „neaktivan” u „aktivan” i on počinje tražiti klijente koji pristaju definiciji segmenta. Ako je konfigurirano [planirano osvježavanje](system.md#schedule-tab), neaktivni segmenti imaju **Status** naveden kao **Preskočen**, što ukazuje da osvježenje nije ni pokušano. Kad se aktivira neaktivni segment, osvježit će se i uključiti u planirana osvježavanja.
+- **Aktiviraj** ili **Deaktiviraj** segment. Za neaktivne segmente definicija segmenta postoji, ali još ne sadrži korisnike. Aktivni segment traži kupce koji odgovaraju definiciji segmenta. Ako je konfigurirano [planirano osvježavanje](system.md#schedule-tab), neaktivni segmenti imaju **Status** naveden kao **Preskočen**, što ukazuje da osvježenje nije ni pokušano. Kad se aktivira neaktivni segment, osvježit će se i uključiti u planirana osvježavanja.
   Umjesto toga, možete koristiti funkcionalnost **Zakaži kasnije** u padajućem izborniku **Aktiviraj/deaktiviraj** kako biste odredili budući datum i vrijeme aktivacije i deaktivacije određenog segmenta.
+- **[Pronađite slične kupce](find-similar-customer-segments.md)** iz segmenta.
 - **Preimenuj** segment.
+- **Oznaka** za [upravljanje strukturnim oznakama](work-with-tags-columns.md#manage-tags) za segment.
 - **Preuzmi** popis članova kao .CSV datoteku.
 - **Upravljajte izvozima** da biste vidjeli segment povezan s izvozom i upravljali njime. [Saznajte više o izvozima.](export-destinations.md)
 - **Izbriši** segment.
+- **Stupci** za [prilagodbu stupaca](work-with-tags-columns.md#customize-columns) koji se prikazuju.
+- **Filtrirajte** za filtriranje [na strukturnim oznakama](work-with-tags-columns.md#filter-on-tags).
+- **Naziv** za pretraživanje radi pretraživanja prema nazivu segmenta.
 
 ## <a name="refresh-segments"></a>Osvježavanje segmenata
 

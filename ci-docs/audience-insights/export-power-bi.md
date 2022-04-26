@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225506"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552047"
 ---
 # <a name="connector-for-power-bi-preview"></a>Poveznik za Power BI (pretpregled)
 
@@ -72,6 +72,6 @@ Nakon uklanjanja dupliciranih odnosa, pokušajte ponovno konfigurirati poveznik 
 
 Prilikom učitavanja entiteta koji sadrže polja s formatom datuma poput MM/DD/GGGG, možete naići na pogreške zbog neusklađenih formata lokalizacije. Ovo se nepodudaranje događa kada se datoteka Power BI Desktop postavi na drugi jezik osim engleskog (Sjedinjene Države), jer se polja datuma u uvidima u ciljnu skupinu spremaju u američkom formatu.
 
-Datoteka Power BI Desktop ima jednu postavku jezika koja se primjenjuje prilikom preuzimanja podataka. Da biste ispravno protumačili ova polja s datumom, postavite jezik .BPI datoteke na engleski (Sjedinjene Države). [Saznajte kako promijeniti jezik datoteke Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+Datoteka Power BI Desktop ima jednu postavku jezika koja se primjenjuje prilikom preuzimanja podataka. Da biste ispravno protumačili ova polja s datumom, postavite jezik .BPI datoteke na engleski (Sjedinjene Države). [Saznajte kako promijeniti jezik datoteke Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

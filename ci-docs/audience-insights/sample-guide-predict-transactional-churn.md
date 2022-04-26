@@ -5,15 +5,15 @@ ms.date: 11/19/2020
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: d3465b7eaa17a24e2926b8ea432b33e705931b88
+ms.sourcegitcommit: 696ad9ab6e10046c00f1ac86a7e8fc37386e6fe7
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354592"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "8555350"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Vodič uzorka za predviđanje transakcijskog gubitka
 
@@ -30,7 +30,7 @@ Contoso je tvrtka koja proizvodi visokokvalitetnu kavu i aparate za kavu koje pr
 
 ## <a name="task-1---ingest-data"></a>Zadatak 1 – Podaci za unos
 
-Pregledajte članke [o unosu](data-sources.md) podataka i [uvozu izvora podataka pomoću Power Query konektora](connect-power-query.md) posebno. Sljedeće informacije pretpostavljaju da ste se upoznali s unosom podataka općenito. 
+Pregledajte članke [o gutanju](data-sources.md) podataka i [uvozu izvora podataka pomoću Power Query konektora](connect-power-query.md) posebno. Sljedeće informacije pretpostavljaju da ste se upoznali s unosom podataka općenito. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Unesite podatke o klijentima s platforme eCommerce
 
@@ -148,7 +148,7 @@ Nakon unosa podataka, sada započinjemo postupak **Karta, podudaranje, spajanje*
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Zadatak 3 - Konfigurirajte predviđanje transakcijskog gubitka
 
-S uspostavljenim objedinjenim profilima klijenata, sada možemo pokrenuti predviđanje gubitka pretplate. Detaljne korake potražite u članku [o predviđanje](predict-subscription-churn.md) pretplate. 
+S uspostavljenim objedinjenim profilima klijenata, sada možemo pokrenuti predviđanje gubitka pretplate. Detaljne korake potražite u članku Konverzija predviđanje [pretplate](predict-subscription-churn.md). 
 
 1. Idite na **Obavještavanje** > **Otkrij** i odaberite **Model gubitka klijenta**.
 
