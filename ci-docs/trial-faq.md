@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229486"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641799"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Najčešća pitanja u vezi probne verzije sustava Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ ms.locfileid: "8229486"
 
 Ova je aplikacija usluga koja se temelji na oblaku i ne zahtijeva posebni softver, osim ažuriranog web-preglednika, iako vrijede neka ograničenja. Za najbolje iskustvo rada s probnom verzijom izbjegavajte pristupiti web-mjestu probne verzije u anonimnom načinu rada i odaberite lokaciju probne verzije koja vam je najbliža. [Saznajte više o zahtjevima za web-aplikaciju.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kako se prijaviti za probno razdoblje bez stanara Microsoft 365?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kako se prijaviti za suđenje bez stanara Microsoft 365?
 
 Možete unijeti adresu e-pošte koja nije poslovna i mi ćemo za vas stvoriti račun i klijenta.
 
@@ -42,7 +42,7 @@ Kada se registrirate za probnu verziju, dobit ćete poruku e-pošte s pojedinost
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Kako mogu dodati veći broj korisnika probnoj verziji?
 
-Da biste dodali korisnike, idite u [Centar za administratore okruženja Microsoft 365](https://admin.microsoft.com) pomoću računa administratora za probnu verziju. Slijedite [Vodič centra za administratore](/microsoft-365/admin/add-users/add-users) da biste dodali korisnike do ograničenja licence probne verzije. Ako korisnik kojeg dodajete već ima Microsoft 365 račun, dodijelite mu odgovarajuću sigurnosna uloga u probnoj organizaciji. Dodatne informacije potražite u članku [Dodjela sigurnosna uloga korisniku](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Da biste dodali korisnike, idite u [Centar za administratore okruženja Microsoft 365](https://admin.microsoft.com) pomoću računa administratora za probnu verziju. Slijedite [Vodič centra za administratore](/microsoft-365/admin/add-users/add-users) da biste dodali korisnike do ograničenja licence probne verzije. Ako korisnik kojeg dodajete već ima Microsoft 365 račun, dodijelite mu odgovarajući sigurnosna uloga u probnoj operacijskoj ustanovi. Dodatne informacije potražite u članku [Dodjela sigurnosna uloga korisniku](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Koliko korisnika mogu dodati u svoje probno okruženje?
 
@@ -62,13 +62,13 @@ Probno razdoblje u aplikaciji možete produžiti izravno. Probno razdoblje može
 
 Općenito preporučujemo da počnete iznova s vlastitim podacima prilikom nadogradnje na plaćenu verziju Customer Insights. 
 
-Izborno, ako koristite samo uvide u ciljne skupine, možete kopirati svoje podatke iz probnog okruženja ako kupite Customer Insights. Da biste migrirali postavke iz probnog okruženja u plaćeno okruženje, morate biti administrator probne akcije Uvidi u klijenta i globalni administrator klijenta Microsoft 365 ili administrator sustava Dynamics 365 u tvrtki ili ustanovi. 
+Po želji, ako koristite samo Customer Insights, možete kopirati svoje podatke iz probnog okruženja ako kupite Customer Insights. Da biste migrirali postavke iz probnog okruženja za probno razdoblje u probno okruženje za probno razdoblje u plaćeno okruženje, morate biti administrator probne verzije uvida u klijenta ili administrator sustava Customer Insights ili globalni administrator klijenta Microsoft 365 ili administrator sustava Dynamics 365 u tvrtki ili ustanovi. 
 
-Nakon što se prvi put prijavite u svoju plaćenu instancu Customer Insights, od vas će se tražiti da stvorite novo okruženje. U ovom procesu možete odabrati kopiranje konfiguracije iz postojećeg okruženja i premještanje većine postavki. Ako imate gore navedene dozvole, probno okruženje prikazat će se na ovom popisu. Za više informacija pogledajte [Kopiranje konfiguracije okruženja](audience-insights/manage-environments.md#copy-the-environment-configuration).
+Nakon što se prvi put prijavite u svoju plaćenu instancu Customer Insights, od vas će se tražiti da stvorite novo okruženje. U ovom procesu možete odabrati kopiranje konfiguracije iz postojećeg okruženja i premještanje većine postavki. Ako imate gore navedene dozvole, probno okruženje prikazat će se na ovom popisu. Za više informacija pogledajte [Kopiranje konfiguracije okruženja](manage-environments.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Koja su ograničenja i kvote probne verzije?
 
-- Ne možete koristiti vlastiti račun za pohranu za Azure Data Lake kako biste pohranili izlazne podatke tijekom upotrebe probne verzije uvida u ciljne skupine. Međutim, možete unijeti podatke s računa za pohranu Data Lake.
+- Ne možete koristiti vlastiti račun za pohranu servisa Azure Data Lake za pohranu izlaznih podataka tijekom probne verzije customer insightsa. Međutim, možete unijeti podatke s računa za pohranu Data Lake.
 - Možete spremiti do 3 GB podataka u okruženje Dataverse kojemu se automatski dodjeljuju sredstva kada pokrenete probnu verziju aplikacije Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Customer Insights – specifična pitanja

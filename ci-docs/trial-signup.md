@@ -3,17 +3,17 @@ title: Prijavite se za besplatnu probnu verziju sustava Dynamics 365 Customer In
 description: Saznajte kako se brzo registrirati i započeti rad s besplatnom probnom verzijom aplikacije Customer Insights. Istražite aplikaciju s vodičima i pronađite dodatne resurse za učenje.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 04/12/2022
 ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350214"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641707"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Registracija za besplatnu probnu verziju Dynamics 365 Customer Insights
 
@@ -21,7 +21,7 @@ Aplikacija Customer Insights pruža besplatnu 30-dnevnu probnu verziju. Nakon br
 
 **Da biste se registrirali za probnu verziju**:
 
-1. Idite na [stranicu pregleda probne verzije](https://dynamics.microsoft.com/get-started/?appname=customerinsights) i odaberite **Prijavi se odmah**.
+1. Idite na stranicu [s pregledom](https://dynamics.microsoft.com/ai/customer-insights/) probe i odaberite **Isprobaj uvide kupaca besplatno**.
 1. Slijedite vodič na zaslonu da biste ušli u [e-poštu povezanu s vašim računom tvrtke Microsoft](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa) i kontaktne informacije.
 1. Odaberite mogućnosti i stavke na koje ćete se usredotočiti dok ne dođete na početnu stranicu za odabranu mogućnost.
 
@@ -31,12 +31,12 @@ Probnoj je verziji potrebno nekoliko trenutaka da se učita, a zatim možete po�
 
 Probno okruženje uključuje iste značajke kao i plaćena verzija. Veze u nastavku vodit će vas kroz korištenje nekih ključnih značajki.
 
-- [Brzi početak za uvide u ciljne skupine.](audience-insights/get-started.md)
-- [Dodajte još korisnika i dodijelite dozvole.](audience-insights/permissions.md)
-- [Unesite svoje izvore podataka](audience-insights/data-sources.md) i provedite ih kroz [proces objedinjavanja podataka](audience-insights/data-unification.md) da biste dobili [objedinjene profile klijenata](audience-insights/customer-profiles.md).
-- [Obogatite objedinjene profile klijenata](audience-insights/enrichment-hub.md) ili [pokrenite modele predviđanja](audience-insights/predictions-overview.md).
-- Stvorite [segmente](audience-insights/segments.md) da biste grupirali klijente i [mjere](audience-insights/measures.md) za pregled KPI-jeva.
-- Postavite [veze](audience-insights/connections.md) i [izvoze](audience-insights/export-destinations.md) za obradu podskupa vaših podataka u ostalim aplikacijama.
+- [Započnite s uvidima kupaca.](get-started.md)
+- [Dodajte još korisnika i dodijelite dozvole.](permissions.md)
+- [Unesite svoje izvore podataka](data-sources.md) i provedite ih kroz [proces objedinjavanja podataka](data-unification.md) da biste dobili [objedinjene profile klijenata](customer-profiles.md).
+- [Obogatite objedinjene profile klijenata](enrichment-hub.md) ili [pokrenite modele predviđanja](predictions-overview.md).
+- Stvorite [segmente](segments.md) da biste grupirali klijente i [mjere](measures.md) za pregled KPI-jeva.
+- Postavite [veze](connections.md) i [izvoze](export-destinations.md) za obradu podskupa vaših podataka u ostalim aplikacijama.
 
 ## <a name="additional-resources"></a>Dodatni resursi
 

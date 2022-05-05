@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 98c7bd1cec20481874681e98bda050846c760e45
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92dc5c662af39a5a4393f15ac48b50af81f8f4d
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619262"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641461"
 ---
-Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [segmente](../audience-insights/segments.md) i [mjere](../audience-insights/measures.md) odabirom ikona na naredbenoj traci. Također možete [izvesti podatke](../audience-insights/export-destinations.md) kako biste pružili prilagođeno iskustvo svojim klijentima.
+Nadogradite na svoje obogaćene podatke o klijentu. Stvorite [segmente](../segments.md) i [mjere](../measures.md) odabirom ikona na naredbenoj traci. Također možete [izvesti podatke](../export-destinations.md) kako biste pružili prilagođeno iskustvo svojim klijentima.
