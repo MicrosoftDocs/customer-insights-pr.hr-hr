@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642385"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741170"
 ---
 # <a name="power-automate-connector-preview"></a>Poveznik Power Automate (pretpregled)
 
@@ -25,14 +25,14 @@ Postavite okidač da se određeni događaji dogode automatski kada se podaci pro
 
 ## <a name="power-automate-triggers"></a>Power Automate okidači
 
-Koristite okidače za stvaranje tokova oblaka i automatizaciju ponavljajućih zadataka, kao što su obavijesti ili naprednije mogućnosti. 
+Koristite okidače za stvaranje tokova oblaka i automatizaciju ponavljajućih zadataka, kao što su obavijesti ili naprednije mogućnosti.
 
-- Okidanje kad osvježavanje izvora podataka ne uspije. 
+- Okidanje kad osvježavanje izvora podataka ne uspije.
 - Okidanje kad osvježavanje izvora podataka uspije.
 - Okidanje kad se prijeđe prag na segmentu. Okidanje je ograničeno na prelazak preko praga.
 - Okidanje kad se prijeđe prag na poslovnoj mjeri. Podržane su samo poslovne mjere bez dimenzija. Okidanje je ograničeno na prelazak preko praga.
 - Okidanje kada se dovrši potpuno osvježavanje (izvora podataka, segmenata, mjera...).
-- Uključi se kada završi osvježavanje postupka objedinjavanja (mapiranje, podudaranje, spajanje).
+- Aktivirajte se kada se dovrši osvježavanje postupka ujedinjenja.
 
 [Konfigurirajte okidače u aplikaciji Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

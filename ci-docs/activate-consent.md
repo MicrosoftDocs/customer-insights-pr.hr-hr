@@ -1,23 +1,22 @@
 ---
 title: Aktiviranje pravila pristanka za segmente
 description: Slijedite ove korake kako biste povezali podatke o pristanku i aktivirali prijave privole Dynamics 365 Customer Insights. Administrator također može onemogućiti provjere pristanka.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642222"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755161"
 ---
 # <a name="activate-consent-rules"></a>Aktiviranje pravila pristanka
 
-Centar [za pristanak (pregled)](consent-management/overview.md) pomaže vam u usklađivanju podataka o pristanku iz različitih izvora. Upotrijebite jedinstveni *entitet privola* za primjenu zadanih provjera privole. Nakon uvoza podataka o pristanku u Centar za pristanak i konfiguriranja pravila za podatke, *entitet Privola* automatski se sinkronizira sa sustavom Dynamics 365 Customer Insights.
+Centar [za pristanak (pregled)](consent-management/overview.md) pomaže vam u usklađivanju podataka o pristanku iz različitih izvora. Upotrijebite jedinstveni *entitet privola* za primjenu zadanih provjera privole. Nakon uvoza podataka o pristanku i konfiguriranja pravila karte, *entitet Pristanak* automatski se sinkronizira sa sustavom Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Omogući provjere pristanka
 

@@ -1,19 +1,19 @@
 ---
 title: Uzorak vodiča za predviđanje cjeloživotne vrijednosti klijenta
 description: Koristite ovaj uzorak vodiča da biste isprobali model predviđanja cjeloživotne vrijednosti klijenta.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642355"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740802"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Uzorak vodiča za predviđanje cjeloživotne vrijednosti klijenta (CLV)
 
@@ -102,64 +102,7 @@ Pregledajte članke [o gutanju](data-sources.md) podataka i [uvozu izvora podata
 
 ## <a name="task-2---data-unification"></a>Zadatak 2 - Objedinjavanje podataka
 
-Nakon unosa podataka, započinjemo postupak objedinjavanja podataka kako bismo stvorili objedinjeni profil klijenta. Dodatne informacije potražite u odjeljku [Objedinjavanje podataka](data-unification.md).
-
-### <a name="map"></a>Mapa
-
-1. Nakon unosa podataka, mapirajte kontakte iz e-trgovine i podataka o vjernosti u uobičajene vrste podataka. Idite na **Podaci** > **Objedini** > **Mapiraj**.
-
-1. Odaberite entitete koji predstavljaju profil klijenta – **Kontakti e-trgovine** i **Odani kupci**. Zatim odaberite **Primijeni**.
-
-   ![objedinite izvore podataka o e-trgovini i vjernosti.](media/unify-ecommerce-loyalty.png)
-
-1. Odaberite **ContactId** kao primarni ključ za **eCommerceContacts** i **LoyaltyID** kao primarni ključ za **loyCustomers**.
-
-   ![Objedinite LoyaltyId kao primarni ključ.](media/unify-loyaltyid.png)
-
-1. Odaberite **Spremi**.
-
-### <a name="match"></a>Usklađivanje
-
-1. Idite na karticu **Usklađivanje** i odaberite **Naruči**.
-
-1. Na padajućem popisu **Primarni** odaberite **eCommerceContacts: eCommerce** kao primarni izvor i uključite sve zapise.
-
-1. Na padajućem popisu **Entitet 2** odaberite **loyCustomers: LoyaltyScheme** i uključite sve zapise.
-
-   ![objedinite usklađivanje e-trgovine i odanost.](media/unify-match-order.png)
-
-1. Odaberite **Dodavanje pravila**
-
-1. Dodajte svoj prvi uvjet pomoću programa FullName.
-
-   - Za eCommerceContacts odaberite **FullName** na padajućem popisu.
-   - Za loyCustomers odaberite **FullName** na padajućem popisu.
-   - Odaberite padajući izbornik **Normaliziraj** pa odaberite **Vrsta (telefon, ime, adresa, ...)**.
-   - Postavite **Razina preciznosti**: **Osnovna** i **Vrijednost**: **Visoko**.
-
-1. Unesite naziv **Puno ime, e-pošta** za novo pravilo.
-
-   - Odaberite drugi uvjet za adresu e-pošte tako da odaberete **Dodaj uvjet**
-   - Za entitet eCommerceContacts odaberite **E-pošta** na padajućem popisu.
-   - Za entitet loyCustomers odaberite **E-pošta** na padajućem popisu.
-   - Ostavite praznim polje Normaliziraj.
-   - Postavite **Razina preciznosti**: **Osnovna** i **Vrijednost**: **Visoko**.
-
-   ![objedinite pravilo podudaranja za naziv i e-poštu.](media/unify-match-rule.png)
-
-1. Odaberite **Gotovo**.
-
-1. Odaberite **Spremi** i **Pokreni**.
-
-### <a name="merge"></a>Spoji
-
-1. Idite na karticu **Spoji**.
-
-1. U dijelu **ContactId** za entitet **loyCustomers** promijenite zaslonsko ime u **ContactIdLOYALTY** kako bi se razlikovao od ostalih unesenih identifikacijskih oznaka.
-
-   ![preimenujte ID kontakta iz oznake ID za vjernost.](media/unify-merge-contactid.png)
-
-1. Odaberite **Spremi** i **Pokreni spajanje i nizvodne procese**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Zadatak 3 - Konfiguracija predviđanja cjeloživotne vrijednosti klijenta
 

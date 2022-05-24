@@ -1,38 +1,46 @@
 ---
 title: Stvaranje objedinjenog prikaza klijenata
-description: Prođite kroz proces objedinjavanja podataka sa svojim podacima kako biste stvorili objedinjeni glavni skup podataka profila klijenata.
-ms.date: 10/18/2021
-ms.reviewer: mhart
+description: Prođite kroz postupak objedinjavanja podataka sa svojim podacima da biste stvorili jedan skup podataka jedinstvenih korisničkih profila.
+ms.date: 05/10/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: overview
-author: adkuppa
-ms.author: adkuppa
+author: v-wendysmith
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: eb5bbc538f93bc7097581db233d684870ade84a2
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bb8da6f4b9f92f2b265ff9807e04638edae4f814
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642206"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755725"
 ---
 # <a name="data-unification-overview"></a>Pregled objedinjavanja podataka
 
-Nakon [postavljanja izvora podataka](data-sources.md) možete objediniti podatke. Objedinjavanje podataka obuhvaća tri koraka: **Mapiranje**, **Podudaranje** i **Spajanje**.
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-Postupak objedinjavanja podataka omogućuje objedinjavanje odvojenih izvora podataka u jedan glavni skup podataka koji pruža objedinjeni prikaz vaših klijenata. Faze objedinjavanja obavezne su i izvode se sljedećim redoslijedom:
+Nakon [postavljanja izvora podataka](data-sources.md) možete objediniti podatke. Objedinjavanje podataka omogućuje vam objedinjavanje jednom različitih izvora podataka u jedan skup glavnih podataka koji pruža jedinstveni prikaz tih podataka. Za pojedinačne potrošače (B-do-C) gdje su podaci usredotočeni na pojedince, ujedinjenje pruža jedinstven prikaz vaših kupaca. Za poslovne račune (B-do-B) na kojima su podaci centrirani na račune, objedinjavanje pruža jedinstveni prikaz vaših računa.
 
-1. [Preslikaj](map-entities.md)
-2. [Match](match-entities.md)
-3. [Spajanje](merge-entities.md)
+Podaci se mogu objediniti u jednom entitetu ili više entiteta. Ujedinjenje se vrši sljedećim redoslijedom:
 
-Nakon dovršetka objedinjavanja podataka po želji možete
+1. [Izvorna polja](map-entities.md) (prethodno nazvana Karta): U koraku izvorišnih polja odaberite entitete i polja koja želite uključiti u proces objedinjavanja. Preslikajte polja na uobičajenu semantičku vrstu koja opisuje svrhu polja.
 
-- [postaviti odnose između entiteta](relationships.md) da biste stvorili sofisticirane segmente
-- [obogatiti podatke](enrichment-hub.md) da biste dobili širi raspon uvida o svojim klijentima
-- [definirati aktivnosti](activities.md) iz nekih unesenih atributa
+1. [Duplicirani zapisi](remove-duplicates.md) (prethodno dio podudaranja): u koraku dupliciranih zapisa po želji definirajte pravila za uklanjanje dupliciranih zapisa o klijentima iz svakog entiteta.
 
+1. [Odgovarajući uvjeti](match-entities.md) (prethodno nazvani Podudaranje): u koraku podudarnih uvjeta definirajte pravila koja odgovaraju zapisima klijenata između entiteta. Kada se klijent pronađe u dva ili više entiteta, kreira se jedan konsolidirani zapis sa svim stupcima i podacima iz svakog entiteta.
+
+1. [Objedinjena polja kupca](merge-entities.md) (prethodno nazvana Spoji): U koraku objedinjenih polja kupaca odredite koja izvorna polja treba uključiti, isključiti ili spojiti u jedinstveni profil kupca.  
+
+1. [Pregledajte](review-unification.md) i stvorite jedinstveni profil.
+
+Nakon dovršetka objedinjavanja podataka po želji možete:
+
+- [Postavite Odnosi između entiteta](relationships.md) da biste kreirali sofisticirane segmente.
+- [Obogatite svoje podatke](enrichment-hub.md) kako biste dobili širi raspon uvida o svojim klijentima.
+- [Definirajte aktivnosti](activities.md) iz nekih od unesenih atributa.
+- [Izradite mjere](measures.md) za bolje razumijevanje ponašanja kupaca i poslovnih rezultata.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

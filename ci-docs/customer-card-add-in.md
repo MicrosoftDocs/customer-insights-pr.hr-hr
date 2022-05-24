@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642215"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755627"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatak kartice klijenta (pretpregled)
-
-
 
 Dobijte prikaz svojih klijenata od 360 stupnjeva izravno u Dynamics 365 aplikacijama. S dodatkom kartice klijenta instaliranim u podržanoj aplikaciji Dynamics 365, možete odabrati prikaz polja profila klijenta, uvida i vremenske trake aktivnosti. Dodatak će dohvatiti podatke iz usluge Customer Insights bez utjecaja na podatke u povezanoj aplikaciji Dynamics 365.
 
@@ -31,7 +29,7 @@ Dobijte prikaz svojih klijenata od 360 stupnjeva izravno u Dynamics 365 aplikaci
 ## <a name="prerequisites"></a>Preduvjeti
 
 - Dodatak funkcionira samo s aplikacijama Dynamics 365 stvorenim prema modelu, kao što su Sales ili Customer Service verzije 9.0 i novije.
-- Da bi se podaci sustava Dynamics 365 mapirali na korisničke profile customer insights, preporučujemo da se [unose iz aplikacije Dynamics 365 pomoću Microsoft Dataverse poveznika](connect-power-query.md). Ako koristite drugu metodu za unos kontakata sustava Dynamics 365 (ili poslovnih subjekata), morate provjeriti je li `contactid` polje (ili `accountid`) postavljeno kao [primarni ključ za tu izvor podataka u koraku karte postupka objedinjavanja podataka](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Da bi se podaci sustava Dynamics 365 mapirali na korisničke profile customer insights, preporučujemo da se [unose iz aplikacije Dynamics 365 pomoću Microsoft Dataverse poveznika](connect-power-query.md). Ako koristite drugu metodu za unos kontakata sustava Dynamics 365 (ili poslovnih subjekata), morate provjeriti je li `contactid` polje (ili `accountid`) postavljeno kao [primarni ključ za tu izvor podataka u koraku karte postupka objedinjavanja podataka](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Svi korisnici sustava Dynamics 365 dodatka Customer Card moraju se [dodati kao korisnici](permissions.md) u Customer Insights da bi vidjeli podatke.
 - [Da bi pretraživanje podataka funkcioniralo, potrebne su konfigurirane mogućnosti](search-filter-index.md) pretraživanja i filtriranja u odjeljku Customer Insights.
 - Svaka kontrola dodatka oslanja se na određene podatke u customer insights. Neki podaci i kontrole dostupni su samo u okruženjima određenih vrsta. Konfiguracija dodatka obavijestit će vas ako kontrola nije dostupna zbog odabrane vrste okruženja. Saznajte više o [slučajevima upotrebe okruženja](work-with-business-accounts.md).
@@ -132,16 +130,16 @@ Dodatak za karticu kupca ne nadograđuje se automatski. Za nadogradnju na najnov
 
 **Rješenje:**
 
-1. Provjerite jeste li konfigurirali dodatak kartica prema uputama: [Konfiguriranje dodatka Kartica kupca](#configure-the-customer-card-add-in) 
+1. Provjerite jeste li konfigurirali dodatak kartica prema uputama: [Konfiguriranje dodatka Kartica kupca](#configure-the-customer-card-add-in)
 
-1. Pregledajte konfiguraciju gutanja podataka. Uredite izvor podataka za sustav Dynamics 365 koji sadrži GUID ID kontakta. Ako je GUID ID kontakta prikazan s velikim slovima u uređivaču Power Query, pokušajte sljedeće: 
+1. Pregledajte konfiguraciju gutanja podataka. Uredite izvor podataka za sustav Dynamics 365 koji sadrži GUID ID kontakta. Ako je GUID ID kontakta prikazan s velikim slovima u uređivaču Power Query, pokušajte sljedeće korake:
     1. Uredite izvor podataka da biste otvorili izvor podataka u uređivaču Power Query.
     1. Odaberite stupac ID kontakta.
     1. Na traci zaglavlja odaberite **Pretvorba** da biste vidjeli dostupne akcije.
     1. Odaberite **malo slovo**. Provjerite jesu li GUID-ovi u tablici sada mala slova.
     1. Spremite izvor podataka.
-    1. Pokrenite procese gutanja podataka, objedinjavanja i silaznog lanca da biste prenijeli promjene u GUID. 
+    1. Pokrenite procese gutanja podataka, objedinjavanja i silaznog lanca da biste prenijeli promjene u GUID.
 
-Nakon dovršetka potpunog osvježavanja kontrole dodataka kartica kupca trebale bi prikazivati očekivane podatke. 
+Nakon što sustav dovrši potpuno osvježavanje, kontrole dodataka kartice kupca trebale bi prikazivati očekivane podatke.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

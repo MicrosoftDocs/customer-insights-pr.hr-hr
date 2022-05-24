@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642271"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755300"
 ---
 # <a name="connections-preview-overview"></a>Pregled (pretpregled) veza
 
@@ -24,15 +24,15 @@ Veze su ključ za omogućavanje dijeljenja podataka s i iz Customer Insights. Sv
 
 Idite na **Admin** > **Veze** za stvaranje i pregled veza.
 
-Kartica **Veze** prikazuje sve aktivne veze. Popis prikazuje redak za svaku vezu. 
+Kartica **Veze** prikazuje sve aktivne veze. Popis prikazuje redak za svaku vezu.
 
 Dobijte brzi pregled, opis i saznajte što možete učiniti sa svakom mogućnosti proširenja na kartici **Otkrij**.
 
-### <a name="exports"></a>Izvozi
+## <a name="exports"></a>Izvozi
 
 Samo administratori mogu konfigurirati nove veze, ali suradnicima mogu odobriti pristup korištenju postojećih veza. Administratori kontroliraju kamo podaci mogu ići, suradnici definiraju korisne podatke i frekvenciju u skladu sa svojim potrebama. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](#allow-contributors-to-use-a-connection-for-exports).
 
-### <a name="enrichments"></a>Obogaćivanja
+## <a name="enrichments"></a>Obogaćivanja
 
 Samo administratori mogu konfigurirati nove veze, ali stvorene veze uvijek su dostupne i administratorima i suradnicima. Administratori upravljaju vjerodajnicama i daju pristanak za prijenos podataka. Tada veze za obogaćivanja mogu koristiti i administratori i suradnici.
 
@@ -46,9 +46,9 @@ Da biste dodali veze, morate imati [administratorske dozvole](permissions.md). A
 
 1. Odaberite **Nova veza** da biste stvorili novu vezu. Na padajućem izborniku odaberite vrstu veze koju želite stvoriti.
 
-1. U oknu **Postavi vezu** okno navedite potrebne pojedinosti. 
+1. U oknu **Postavi vezu** okno navedite potrebne pojedinosti.
    1. **Zaslonski naziv** i vrsta veze opisuju vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj te veze.
-   1. Točna polja ovise o tome na koju se uslugu povezujete. O pojedinostima određene vrste veze možete saznati u članku o ciljnoj usluzi.
+   1. Točna polja ovise o usluzi s kojom se povezujete. O pojedinostima određene vrste veze možete saznati u članku o ciljnoj usluzi.
    1. Ako [koristite vlastiti sef za ključeve](use-azure-key-vault.md) za pohranu tajni, aktivirajte **Upotrijebi sef za ključeve** i odaberite tajnu s popisa.
 
 1. Da biste stvorili vezu, odaberite **Spremi**.
@@ -59,7 +59,7 @@ Možete odabrati i **Postavljanje** na pločici na kartici **Otkrivanje**.
 
 Kada postavljate ili uređujete vezu za izvoz, odabirete koji korisnici smiju koristiti tu određenu vezu za definiranje [izvoza](export-destinations.md). Prema zadanim postavkama veza je dostupna korisnicima s ulogom administratora. Ovu postavku možete promijeniti pod **Odaberi tko može koristiti ovu vezu** i dopustite korisnicima s ulogom suradnika da koriste ovu vezu.
 
-- Suradnici neće moći pregledati ili urediti vezu. Vidjet će samo zaslonski naziv i njegovu vrstu prilikom stvaranja izvoza.
+- Suradnici neće moći pregledati ili urediti vezu. Oni će vidjeti samo zaslonsko ime i njezinu vrstu prilikom stvaranja izvoza.
 - Dijeljenjem veze dopuštate suradnicima korištenje veze. Suradnici će vidjeti dijeljene veze kada postave izvoze. Oni mogu upravljati svakim izvozom koji koristi ovu specifičnu vezu.
 - Ovu postavku možete promijeniti zadržavajući izvoze koje su suradnici već definirali.
 
@@ -77,7 +77,7 @@ Kada postavljate ili uređujete vezu za izvoz, odabirete koji korisnici smiju ko
 
 ## <a name="remove-a-connection"></a>Uklanjanje veze
 
-Ako se veza koju uklanjate koristi za obogaćivanje ili izvoze, najprije ih morate odvojiti ili ukloniti. Dijaloški okvir za uklanjanje vodit će vas do relevantnih obogaćivanja ili izvoza. 
+Ako se veza koju uklanjate koristi obogaćivanjem ili izvozom, najprije je morate odvojiti ili ukloniti. Dijaloški okvir za uklanjanje vodit će vas do relevantnih obogaćivanja ili izvoza.
 
 Odvojena obogaćivanja i izvozi postaju neaktivni. Ponovno ih aktivirate tako da im dodate drugu vezu na stranici [Obogaćivanja](enrichment-hub.md) ili [Izvozi](export-destinations.md).
 
@@ -91,7 +91,7 @@ Odvojena obogaćivanja i izvozi postaju neaktivni. Ponovno ih aktivirate tako da
 
    1. Ako postoje obogaćivanja ili izvozi koji koriste ovu vezu, odaberite gumb da biste vidjeli što koristi vezu.
       - **Izvozi:** Možete odabrati da uklonite ili prekinete izvoze kako biste mogli ukloniti vezu. Da bi prekinuli izvoz, administratori mogu koristiti radnju **Prekini vezu**. Ova je radnja dostupna za pojedinačne i višestruko odabrane izvoze. Prekidanjem veze zadržavate konfiguraciju izvoza, ali ona se neće pokrenuti dok joj se ne doda druga veza.
-      - **Obogaćivanja:** Možete odabrati da uklonite ili deaktivirate obogaćivanja kako biste mogli ukloniti vezu. 
+      - **Obogaćivanja:** Možete odabrati da uklonite ili deaktivirate obogaćivanja kako biste mogli ukloniti vezu.
    1. Kada veza više nema ovisnosti, vratite se na **Admin** > **Veze** i ponovno pokušajte ukloniti vezu.
 
 1. Da biste potvrdili brisanje, odaberite **Ukloni**.

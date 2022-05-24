@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642361"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741032"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
@@ -44,7 +44,7 @@ Dodatne informacije o postavkama okruženja potražite u odjeljku [Stvaranje nov
    
 Korak **Microsoft Dataverse** omogućuje vam da povežete Customer Insights s okruženjem Dataverse. 
 
-Pružite vlastito Microsoft Dataverse okruženje za dijeljenje podataka (profila i uvida) s poslovnim aplikacijama koje se temelje na, kao što su Dynamics 365 Marketing ili aplikacije temeljene na Dataverse modelu u Power Apps sustavu.
+Pružite vlastito Microsoft Dataverse okruženje za dijeljenje podataka (profila i uvida) s poslovnim aplikacijama koje se temelje na, kao što su Dynamics 365 Marketing ili aplikacije temeljene na Dataverse modelu u sustavu Power Apps.
 
 Da biste koristili [gotove modele predviđanja](predictions-overview.md#out-of-box-models), konfigurirajte dijeljenje podataka s platformom Dataverse. Ili možete omogućiti uvoz podataka iz lokalnih izvora podataka, navodeći URL okruženja Microsoft Dataverse kojim upravlja vaša tvrtka ili ustanova.
 
@@ -113,7 +113,7 @@ Kada se povezujete s okruženjem Dataverse, poruka **o pogrešci Ova cds organiz
 ILI 
 
 1. Otvorite okolinu Dataverse.
-1. Otvorite **Dodatne postavkeSolutions** > **·**.
+1. Otvorite Rješenja **za dodatne postavke** > **·**.
 1. **Deinstalirajte rješenje CustomerInsightsCustomerCard**.
 
 ## <a name="copy-the-environment-configuration"></a>Kopiranje konfiguracije okruženja
@@ -127,7 +127,7 @@ Vidjet ćete popis svih dostupnih okruženja u svojoj tvrtki ili ustanovi iz koj
 Kopirane su sljedeće postavke konfiguracije:
 
 - Uneseni/uvezeni izvori podataka
-- Konfiguracija objedinjavanja podataka (mapiranje, podudaranje, spajanje)
+- Konfiguracija objedinjavanja podataka
 - Segmenti
 - Mjerila
 - Odnosi
@@ -158,7 +158,7 @@ Nakon osvježenja izvora podataka, idite na **Podaci** > **Objedini**. Ovdje će
 
 Nakon završetka objedinjavanja podataka idite na **Mjere** i **Segmenti** da ih osvježite.
 
-Prije nego što ponovno aktivirate izvoz i obogaćivanja, idite na **AdminConnections** > **da** biste ponovno uspostavili veze u novom okruženju.
+Prije nego što ponovno aktivirate izvoz i obogaćivanja, idite na **Administratorske** > **veze** da biste ponovno uspostavili veze u novom okruženju.
 
 ## <a name="change-the-owner-of-an-environment"></a>Promjena vlasnika okruženja
 

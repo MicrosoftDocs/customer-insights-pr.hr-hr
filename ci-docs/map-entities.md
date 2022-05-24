@@ -1,110 +1,83 @@
 ---
-title: Mapiranje entiteta i atributa za objedinjavanje podataka
-description: Odaberite entitete, atribute, primarne ključeve i semantičke vrste za mapiranje podataka u objedinjeni profil klijenta.
-ms.date: 10/18/2020
+title: Odabir izvorišnih polja za objedinjavanje podataka
+description: Prvi korak u procesu ujedinjenja je odabir entiteta, atributa, primarnih ključeva i semantičkih vrsta za mapiranje podataka u jedinstveni profil klijenta.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642234"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740986"
 ---
-# <a name="map-entities-and-attributes"></a>Entiteti i atributi karte
+# <a name="select-source-fields-for-data-unification"></a>Odabir izvorišnih polja za objedinjavanje podataka
 
-**Karta** je prva faza u procesu objedinjavanja podataka. Mapiranje se sastoji od tri faze:
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Odabir entiteta*: identificirajte entitete koji se mogu kombinirati koji vode do skupa podataka s više potpunih informacija o vašim klijentima.
-- *Odabir atributa*: za svaki entitet identificirajte stupce koje želite kombinirati i uskladiti u fazama *uspoređivanja* i *spajanja*. Ti se stupci nazivaju *Atributi*.
-- *Odabir primarnog ključa i semantičkog tipa*: Za svaki entitet identificirajte atribut koji želite definirati kao primarni ključ za taj entitet, a za svaki atribut identificirajte semantički tip koji najbolje opisuje taj atribut.
+Prvi korak u ujedinjenju je odabir entiteta i polja unutar skupova podataka koje želite objediniti. Odaberite entitete koji sadrže detalje vezane uz klijenta kao što su ime, adresa, telefonski broj i e-pošta. Možete odabrati jedan ili više entiteta.
 
-Za više informacija o općenitom tijeku objedinjavanja podataka pogledajte dio [Objedinjavanje](data-unification.md).
+## <a name="select-entities-and-fields"></a>Odaberite entitete i polja
 
-## <a name="select-the-first-entities"></a>Odabir prvog entiteta
+1. Otvorite Objedinjavanje **podataka** > **·**.
 
-1. Idite na **Podaci** > **Objedini** > **Mapiraj**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Snimka zaslona objedinjavanja odredišne stranice za doživljaj prvog pokretanja s istaknutim prvim pokretanjem.":::
 
-2. Pokrenite fazu mapiranja odabirom stavke **Odaberi entitete**.
+1. Odaberite **Početak rada**.
 
-3. Odaberite entitete i atribute koje želite koristiti u fazama *uskladi* i *spoji*. Možete pojedinačno odabrati potrebne atribute iz entiteta ili uključiti sve atribute iz entiteta odabirom potvrdnog okvira **Uključi sva polja** na razini entiteta. Preporučujemo vam da odaberete barem dva entiteta kako biste imali koristi od postupka objedinjavanja podataka.
+1. Na stranici Izvorna **polja** odaberite **Odabir entiteta i polja**. Prikazuje se **okno Odabir entiteta i polja**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Dodajte primjer entiteta.](media/data-manager-configure-map-add-entities-example.png "Dodavanje primjera entiteta")
+1. Odaberite barem jedan entitet.
 
-   U ovom primjeru dodajemo entitete **eCommerceContacts** i **loyCustomers**. Odabirom ovih entiteta možete steći uvid u to koji su od internetskih poslovnih klijenata članovi programa vjernosti.
-   
-   Ključne riječi možete pretraživati po svim atributima i entitetima kako biste odabrali potrebne atribute koje želite mapirati.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Primjer polja za pretraživanje.](media/data-manager-configure-map-search-fields-example.png "Primjer polja za pretraživanje")
+1. Za svaki odabrani entitet identificirajte polja koja želite koristiti za podudaranje zapisa o klijentima i polja koja želite uključiti u jedinstveni profil. Ta se polja nazivaju *Atributi*. Obavezne atribute možete odabrati pojedinačno iz entiteta ili uključiti sve atribute iz entiteta tako da potvrdite okvir na razini entiteta. Ključne riječi možete pretraživati po svim atributima i entitetima kako biste odabrali potrebne atribute koje želite mapirati.
 
-4. Odaberite **Primijeni** za potvrdu odabira.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Snimka zaslona odabranih entiteta i atributa.":::
+
+   U ovom primjeru dodajemo entitete **Kontakti** i **CustomerLoyalty**. Odabirom ovih entiteta možete steći uvid u to koji su od internetskih poslovnih klijenata članovi programa vjernosti.
+
+1. Odaberite **Primijeni** za potvrdu odabira. Prikazuju se odabrani entiteti i atributi.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Odaberite primarni ključ i semantičku vrstu za atribute
 
-Nakon odabira entiteta, stranica **Mapiraj** navodi odabrane entitete za pregled. Definirajte primarni ključ za entitet i identificirajte semantički tip za atribut u entitetu.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Snimka zaslona odabranih entiteta s primarnim ključem koji nije odabran." lightbox="media/m3_select_primary.png":::
 
-- **Primarni ključ**: odaberite jedan atribut kao primarni ključ za svaki vaš entitet. Da bi atribut bio važeći primarni ključ, on ne bi trebao uključivati dvostruke vrijednosti, vrijednosti koje nedostaju ili vrijednosti nula. Atributi vrste podataka niza, cijelog broja i GUID-a podržani su kao primarni ključevi i bit će prikazani u polju za odabir.
+Za svaki entitet izvedi sljedeće korake.
 
-- **Semantički tip atributa**: kategorije vaših atributa, kao što su adresa e-pošte ili ime. Kako biste upotrebljavali modele umjetne inteligencije za pametno predviđanje semantike, uštedjeli vrijeme i poboljšali točnost, postavite mogućnost **Inteligentno mapiranje** na **UKLJUČENO**. Inteligentno mapiranje ističe preporuke o semantici koje se temelje na umjetnoj iteligenciji u polju **Vrsta**. Ako ga postavite na **ISKLJUČENO**, vidjet ćete naše redovne preporuke za mapiranje. Možete odabrati bilo koju vrstu semantike s dostupnog popisa mogućnnosti i prebrisati predloženi odabir.
+1. Odaberite primarni **ključ**. Primarni ključ je atribut jedinstven za entitet. Da bi atribut bio važeći primarni ključ, on ne bi trebao uključivati dvostruke vrijednosti, vrijednosti koje nedostaju ili vrijednosti nula. Atributi vrste podataka nizova, cijelog broja i GUID-a podržani su kao primarni ključevi.
 
-> [!div class="mx-imgBorder"]
-> ![Vrsta atributa i predviđanje semantike.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Vrsta atributa i predviđanje semantike")
+1. Da biste koristili AI modele za pametne predviđanje semantike, uštedjeli vrijeme i poboljšali točnost, osigurajte da **je uključeno inteligentno mapiranje**. Inteligentno mapiranje ističe preporuke o semantici koje se temelje na umjetnoj iteligenciji u polju **Vrsta**. Predloženi odabir možete nadjačati odabirom bilo koje semantičke vrste s dostupnog popisa mogućnosti.
 
-Također je moguće dodati i prilagođeni semantički tip. Odaberite polje tipa za atribut i unesite naziv prilagođenog semantičkog tipa. Tim putem također možete promijeniti vrste atributa koje je automatski identificirao sustav.
+1. Za svaki atribut odaberite semantičku **vrstu** koja najbolje opisuje taj atribut, kao što su ime, grad ili adresa e-pošte.
 
-Svi atributi za koje se semantički tip automatski identificira grupirani su u odjeljku **Pregledaj mapirana polja**. Pregledajte ove atribute i njihove semantičke tipove jer će se koristiti za kombiniranje vaših entiteta u koraku spajanja kod objedinjavanja podataka.
+   > [!NOTE]
+   > Jedno polje treba mapirati na semantičku vrstu *Person.FullName* da bi se ime kupca popunilo karticom kupca. U suprotnom će se kartice klijenta prikazati bez naziva.
 
-Atributi koji nisu automatski mapirani u semantički tip grupirani su u odjeljku **Definiraj podatke u nemapiranim poljima**. Odaberite polje semantičkog tipa za nemapirane atribute ili unesite naziv prilagođenog tipa atributa.
+   1. Da biste promijenili vrstu atributa koju je identificirao sustav, odaberite drugu vrstu. Ako vrsta ne postoji, stvorite prilagođenu semantičku vrstu tako **da odaberete polje Vrsta** za atribut i unesete prilagođeni naziv semantičke vrste.
 
-> [!div class="mx-imgBorder"]
-> ![Primarni ključ i vrsta atributa.](media/data-manager-configure-map-add-attributes.png "Primarni ključ i vrsta atributa")
+   1. Da biste dodali atribut koji sadrži URL javno dostupnim slikama ili logotipima profila, odaberite entitet i polje koje sadrži URL. **U polje Vrsta** unesite sljedeće:
+      - Za osobu: Person.ProfileImage
+      - Za tvrtku ili ustanovu: Organization.LogoImage
 
-> [!NOTE]
-> Jedno polje treba se mapirati na semantički tip Person.FullName da bi se ime klijenta popunilo u kartici klijenta. U suprotnom će se kartice klijenta prikazati bez naziva. 
+   1. Za atribut naziva računa unesite "Organization.Name" u **polje Vrsta**.
 
-## <a name="add-and-remove-attributes-and-entities"></a>Dodavanje i uklanjanje atributa i entiteta
+1. Pregledajte atribute na kojima se automatski identificira semantički tip. Ti su atributi navedeni u odjeljku **Pregled mapiranih polja**. U koraku Jedinstvena polja **klijenta mogu se kombinirati** samo atributi iste vrste. Semantički tipovi koriste se za automatsko predlaganje uvida. Provjerite jesu li odabrane vrste dosljedne u svim odabranim entitetima.
 
-1. Na **Ujedini** > **Mapiraj**, odaberite **Uredi polja**.
+1. Za atribute koji nisu automatski mapirani u semantičku vrstu odaberite polje semantičke vrste, unesite prilagođeni naziv vrste atributa ili ih ostavite nepreslikane. Ti su atributi navedeni u odjeljku **Definiranje podataka u nepreslikanim poljima**.
 
-2. U oknu **Uredi polja**, dodajte ili uklonite atribute i entitete. S pomoću pretraživanja ili pomicanja pronađite i odaberite svoje atribute i entitete od interesa. Ne možete ukloniti atribut ili entitet ako su već usklađeni.
+1. Nakon dovršetka koraka za svaki entitet odaberite **Spremi izvorišna polja**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Dodajte ili uklonite atribute.](media/configure-data-map-edit.png "Dodavanje ili uklanjanje atributa")
+1. Odaberite **Dalje**.
 
-3. Odaberite **Primijeni**.
-
-## <a name="add-images-to-profiles"></a>Dodavanje slika profilima
-
-Ako entitet sadrži URL-ove javno dostupnih slika ili logotipa profila, možete ih dodati u objedinjeni profil klijenta.
-
-Odaberite entitet i pronađite polje koje sadrži URL slike profila. U polje za unos **Tip**, ručno unesite sljedeću vrijednost: 
-- Za osobu: Person.ProfileImage
-- Za tvrtku ili ustanovu: Organization.LogoImage
-
-Nastavite s koracima ujedinjavanja i osigurajte da je atribut koji sadrži URL slike također dodan u koraku [Spoji](merge-entities.md).
-
-## <a name="set-attributes-for-organizations"></a>Postavljanje atributa za organizacije
-
-Za organizacije (Pregled), tip atributa trebao bi se mapirati u "Organization.Name"
-> [!div class="mx-imgBorder"]
-> ![Primarni ključ i vrsta atributa B2B.](media/configure-data-map-edit-b2b.png "Primarni ključ i vrsta atributa B2B")
-
-## <a name="next-step"></a>Sljedeći korak
-
-Kao dio postupka objedinjavanja podataka idite na stranicu **Podudaranje**. Otvorite dio [**Podudaranje**](match-entities.md) kako biste saznali više o ovoj fazi.
-
-> [!TIP]
-> Provjerite sljedeći videozapis: [Prvi koraci: izrada jedinstvenog profila klijenta](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Sljedeći korak: Uklanjanje duplikata](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,23 +1,23 @@
 ---
 title: Uvod u Dynamics 365 Customer Insights
-description: Pregled uvida u korisnike pomaže resursima da brzo započnu.
-ms.reviewer: mhart
+description: Pregled uvida u kupce pomaže resursima da brzo započnu.
+ms.reviewer: v-wendysmith
 ms.author: mhart
 author: m-hartmann
-ms.date: 08/31/2021
-ms.subservice: audience-insights
+ms.date: 04/12/2022
+ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 6d23552687530fddf42418b924571dddc0209e69
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642246"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741124"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Uvod u Dynamics 365 Customer Insights
 
@@ -25,7 +25,7 @@ Uvidi u kupce mogu vam pomoći da izgradite dublje razumijevanje svojih kupaca. 
 
 ## <a name="step-1-create-an-environment"></a>Korak 1: Stvaranje okruženja
 
-Za početak najprije morate stvoriti okruženje za rad. Ako je vaša tvrtka ili ustanova već kupila licencu, pogledajte [Stvaranje okruženja](create-environment.md). Upute za započinjanje probnog razdoblja za uvide u korisnike potražite u članku [Postavljanje probnog okruženja](trial-signup.md). 
+Za početak najprije morate stvoriti okruženje za rad. Ako je vaša tvrtka ili ustanova već kupila licencu, pogledajte [Stvaranje okruženja](create-environment.md). Upute za započinjanje probnog razdoblja za uvide u korisnike potražite u članku [Postavljanje probnog okruženja](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>Korak 2: Istražite uvide kupaca
 
@@ -35,16 +35,16 @@ Kada se prvi put prijavite u Customer Insights, možete konfigurirati postavke i
 
 1. [Promijenite okruženje](manage-environments.md#switch-environments) da biste vidjeli demo podatke i [istražite uvide u kupce](home.md).
 
-##  <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>Korak 3: Unesite, objedinite i postavite odnose za svoje podatke
+## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>Korak 3: Unesite, objedinite i postavite odnose za svoje podatke
 
-Objedinjeni profili temelj su za stjecanje uvida i poduzimanje radnji u vezi s podacima. Unesite podatke iz različitih izvora i pokrenite proces objedinjavanja podataka kako biste kombinirali objedinjene profile. Navedite odnose između unesenih entiteta i koristite značajke obogaćivanja za dodavanje informacija profilima. 
+Objedinjeni profili temelj su za stjecanje uvida i poduzimanje radnji u vezi s podacima. Unesite podatke iz različitih izvora i pokrenite proces objedinjavanja podataka kako biste kombinirali objedinjene profile. Navedite odnose između unesenih entiteta i koristite značajke obogaćivanja za dodavanje informacija profilima.
 
 1. Unesite podatke stvaranjem izvora podataka iz više mogućnosti. Izaberite između [Power Query poveznika](connect-power-query.md), [mape](connect-common-data-model.md) Uobičajeni podatkovni model ili [Microsoft Dataverse](connect-dataverse-managed-lake.md). 
 
-1. Pokrenite [proces objedinjavanja podataka](data-unification.md) prolaskom kroz faze [mapiranja](map-entities.md), [podudaranja](match-entities.md) i [spajanja](merge-entities.md).
+1. Pokrenite postupak objedinjavanja [podataka identificiranjem izvorišnih](data-unification.md) polja [, uklanjanjem](map-entities.md) duplikata, [odgovarajućih](remove-duplicates.md) uvjeta [i](match-entities.md) ujedinjavanjem polja [.](merge-entities.md)
 
 1. Upoznajte se s [entitetima koje stvara sustav](entities.md) i stvorite [odnose među unesenim entitetima](relationships.md).
-    
+
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>Korak 4: Poboljšajte objedinjene profile predviđanjima, aktivnostima i mjerama
 
 S postavljenim objedinjenim profilima možete poboljšati svoje podatke i dodatno povećati podatke koje oni pružaju.
@@ -53,13 +53,13 @@ S postavljenim objedinjenim profilima možete poboljšati svoje podatke i dodatn
 
 1. Koristite [gotove modele](predictions-overview.md) za predviđanje vjerojatnosti gubitka ili očekivanih prihoda.
 
-1. [Konfigurirajte aktivnosti](activities.md) na temelju unesenih podataka i vizualizirajte interakcije sa svojim klijentima na kronološkoj vremenskoj traci. 
+1. [Konfigurirajte aktivnosti](activities.md) na temelju unesenih podataka i vizualizirajte interakcije sa svojim klijentima na kronološkoj vremenskoj traci.
 
 1. [Izgradite mjere](measures.md) za mjerenje vaših poslovnih ciljeva i KPI-jeva.
- 
+
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>Korak 5: Stvorite segmente i aktivirajte podatke kroz različite mogućnosti izvoza
 
-Sada kada su vaši podaci potpuni i sadrže širok raspon informacija o vašim klijentima, vrijeme je da potražite načine za poduzimanje radnji na tim podacima. 
+Sada kada su vaši podaci potpuni i sadrže širok raspon informacija o vašim klijentima, vrijeme je da potražite načine za poduzimanje radnji na tim podacima.
 
 1. [Stvorite segmente](segments.md), podskupove vaše baze klijenata kako biste bili sigurni da su vaše radnje relevantne za ciljane klijente.
 

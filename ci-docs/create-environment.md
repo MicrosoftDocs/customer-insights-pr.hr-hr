@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642218"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712893"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Stvaranje okruženja u odjeljku Uvidi kupaca
 
@@ -63,8 +63,7 @@ Imat ćete dvije mogućnosti: **Pohrana za Customer Insights** (Azure data lake 
 Spremanjem podataka u repozitorij Azure Data Lake Storage, slažete se da će se podaci prenijeti i pohraniti na odgovarajuću geografsku lokaciju za taj račun za pohranu Azure. Ta se lokacija može razlikovati od lokacije na kojoj su podaci pohranjeni u sustavu Dynamics 365 Customer Insights. Saznajte više u [Microsoftom centru za pouzdanost](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights trenutačno podržava sljedeće:
-> - Uvezeni entiteti iz tokova podataka programa Power BI koji su pohranjeni u Data Lake kojim upravlja Microsoft Dataverse.  
+> Customer Insights trenutačno podržava sljedeće:  
 > - Računi za Azure Data Lake Storage iz iste regije za Azure koju ste odabrali prilikom stvaranja okruženja.
 > - Azure Data Lake Storage računi koji su Gen2 i imaju *omogućen hijerarhijski prostora za naziv*. Računi za pohranu servisa Azure Data Lake Gen1 nisu podržani.
 
@@ -78,9 +77,9 @@ Ako stvorite više okruženja za Customer Insights i odlučite spremiti izlazne 
    
 Korak **Microsoft Dataverse** omogućuje vam da povežete Customer Insights s okruženjem Dataverse.
 
-Pružite vlastito Microsoft Dataverse okruženje za dijeljenje podataka (profila i uvida) s poslovnim aplikacijama koje se temelje na, kao što su Dynamics 365 Marketing ili aplikacije temeljene na Dataverse modelu u Power Apps sustavu. Ostavite ovo polje prazno ako nemate vlastito Dataverse okruženje, a mi ćemo vam ga dodijeliti.
+Pružite vlastito Microsoft Dataverse okruženje za dijeljenje podataka (profila i uvida) s poslovnim aplikacijama koje se temelje na, kao što su Dynamics 365 Marketing ili aplikacije temeljene na Dataverse modelu u sustavu Power Apps. Ostavite ovo polje prazno ako nemate vlastito Dataverse okruženje, a mi ćemo vam ga dodijeliti.
 
-Povezivanje s okolinom Dataverse također vam omogućuje unos [podataka iz lokalno izvora podataka pomoću Power Platform tokova podataka i pristupnika](data-sources.md#add-data-from-on-premises-data-sources). Također možete koristiti [gotove modele](predictions-overview.md?tabs=b2c#out-of-box-models) predviđanje povezivanjem s okolinom Dataverse.
+Povezivanje s okolinom Dataverse također vam omogućuje unos [podataka iz lokalno izvora podataka pomoću Power Platform tokova podataka i pristupnika](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Uvidi u kupce i Dataverse moraju biti u istoj regiji kako biste omogućili dijeljenje podataka.

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642199"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755345"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Obogaćivanje profila klijenata pomoću Azure karata (pretpregled)
 
@@ -51,7 +51,7 @@ Da biste konfigurirali obogaćivanje podataka Azure karata, moraju biti ispunjen
 
 1. Odaberite **Sljedeće** da biste dovršili mapiranje polja.
 
-1. Procijenite želite li izmijeniti **Napredne postavke**. One su pružene kako bi dale maksimalnu fleksibilnost u rješavanju naprednih slučajeva korištenja, ali zadane će vrijednosti u većini slučajeva biti primjerene:
+1. Procijenite želite li izmijeniti **Napredne postavke**. Te su postavke predviđene kako bi se pružila maksimalna fleksibilnost za rukovanje slučajevima napredne uporabe, ali zadane vrijednosti u većini slučajeva bit će prikladne:
    - **Vrsta adresa**: Zadano je ponašanje da će obogaćivanje vratiti najbolje podudaranje adrese čak i ako je nepotpuno. Da biste dobili samo potpune adrese&mdash;na primjer, adrese koje uključuju kućni broj&mdash;poništite sve potvrdne okvire osim **Adrese točaka**. 
    - **Jezik**: Prema zadanim postavkama adrese se vraćaju na jeziku regije za koju je utvrđeno da joj adresa pripada. Da biste primijenili standardizirani jezik adrese, odaberite jezik s padajućeg izbornika. Na primjer, odabir **Hrvatski** vratit će **Kopenhagen, Danska** umjesto **København, Danmark**.
 
@@ -89,7 +89,7 @@ Detaljnom prikazu svakog obogaćenog profila možete pristupiti odabirom **Prika
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
 
-Kada omogućite Dynamics 365 Customer Insights za prijenos podataka u Azure karte, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke poput osobnih podataka. Microsoft će prenijeti takve podatke prema vašoj uputi, ali vi ste odgovorni za to da Azure karte ispunjavaju sve obveze zaštite privatnosti ili sigurnosti koje imate. Za više informacija idite na [Microsoftovu izjavu o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
+Kada omogućite Dynamics 365 Customer Insights za prijenos podataka u Azure karte, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke poput osobnih podataka. Microsoft će takve podatke prenijeti prema vašim uputima, ali vi ste odgovorni za to da Azure Karte ispunjavaju sve obveze zaštite privatnosti ili sigurnosti koje možda imate. Za više informacija idite na [Microsoftovu izjavu o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš administrator usluge Dynamics 365 Customer Insights može ovo obogaćivanje ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

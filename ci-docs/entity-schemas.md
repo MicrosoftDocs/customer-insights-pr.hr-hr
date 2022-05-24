@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642283"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757423"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Sheme entiteta u modelu zajedničkih podatakal
 
@@ -23,7 +23,7 @@ ms.locfileid: "8642283"
 
 Ovaj model zajedničkih podataka omogućuje aplikacijama i integratorima podataka jednostavniju suradnju pružajući jedinstvenu definiciju podataka. Model zajedničkih podataka uključuje bogati sustav metapodataka sa standardnim entitetima, odnosima, hijerarhijom, osobinama i još mnogo toga. Potječe iz aplikacija Dynamics 365 i otvorenog je izvora na usluzi GitHub s više od 260 standardnih entiteta. Veliki sustav unutarnjih i vanjskih partnera pridonosi konceptima koji se odnose na industriju modelu zajedničkih podataka.
 
-Više sustava i platformi danas implementiraju zajednički model podataka, uključujući Power BI tijekove podataka i Azure podatkovne usluge. Već je podržano u Microsoft Dataverse, Dynamics 365, Power Apps, Power BI i nadolazećim podatkovnim uslugama servisa Azure koje izravno ostvaruju vrijednost prema [Inicijativi za otvorene podatke](https://www.microsoft.com/open-data-initiative).
+Više sustava i platformi danas implementiraju zajednički model podataka, uključujući Power BI tijekove podataka i Azure podatkovne usluge. Već je podržano u Microsoft Dataverse, Dynamics 365, Power Apps, Power BI i nadolazećim podatkovnim uslugama servisa Azure koje izravno ostvaruju vrijednost prema [Inicijativi za otvorene podatke](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Sheme entiteta usluge Customer Insights
 

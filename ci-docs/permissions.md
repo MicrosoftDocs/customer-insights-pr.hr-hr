@@ -12,18 +12,18 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653559"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740894"
 ---
 # <a name="user-permissions"></a>Korisničke dozvole
 
 Stranica **Dozvole** mjesto je na kojem ćete postaviti uloge i dozvole za korištenje uvida u klijenta.
 
-Za pregled stranice morate imati administratorske dozvole. Da biste pristupili stranici s dozvolama, idite na **AdminSecurityUsers** > **·** > **·**.
+Za pregled stranice morate imati administratorske dozvole. Da biste pristupili stranici s dozvolama, idite na **Korisnici sigurnosti** > **administratora** > **·**.
 
 Postoje tri vrste uloga:
 
@@ -41,7 +41,7 @@ Postoje tri vrste uloga:
 
 - Sve dozvole koje su dostupne Gledatelju.
 - Učitavajte i pretvarajte podatke pomoću stranice **Izvori podataka**.
-- Dovršite odjeljke *Objedinjavanje podataka* (**Mapiranje**, **Podudaranje** i **Spajanje**) koji rezultiraju objedinjenim entitetom profila klijenta.
+- Dovršite ***Objedinjavanje** podataka što rezultira jedinstvenim entitetom korisničkog profila.
 - Definirajte **Odnosi** i **Aktivnosti**.
 - Stvorite segmente pomoću stranice **Segmenti**.
 - Izradite mjere s pomoću stranice **Mjere**.
@@ -69,7 +69,7 @@ Postoje tri vrste uloga:
 
 ## <a name="assign-roles-and-permissions"></a>Dodjela uloga i dozvola
 
-1. Otvorite **AdminSecurity** > **·** > **Korisnici***.
+1. Otvorite **> Sigurnost administratora** > **·** **Korisnici***.
 
 1. Odaberite **Dodaj korisnike** da biste otvorili okno **Dodaj/uredi dozvole**.
 
@@ -79,7 +79,7 @@ Postoje tri vrste uloga:
 
 ## <a name="view-current-permissions"></a>Pregledaj trenutačne dozvole
 
-Idite na **AdminSecurityUsers** > **·** > **da** biste vidjeli koje su dodjele uloga trenutno aktivne.
+Idite na **Korisnici** > **sigurnosti** > **administratora** da biste vidjeli koje su dodjele uloga trenutno aktivne.
 
 - Stupac **Vrsta** navodi jednog korisnika, grupu ili aplikaciju. Sustav podržava pojedinačne korisnike i grupe.
 - Uloge su navedene u stupcu **Uloga**.

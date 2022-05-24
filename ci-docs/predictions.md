@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642356"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740710"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Ispunite svoje djelomične podatke s predviđanjima (zastarjelim)
 
@@ -37,7 +37,7 @@ Da bi vaša tvrtka ili ustanova mogla upotrebljavati značajku predviđanja, mor
 
 1. Vaša tvrtka ili ustanova ima instancu [postavljenu u Microsoft Dataverse](/ai-builder/build-model#prerequisites) i u istoj je tvrtki ili ustanovi kao i Customer Insights.
 
-2. Vaše okruženje uvida u ciljnu skupinu povezano je s vašom instancom Dataverse.
+2. Okruženje aplikacije Customer Insights priloženo je usluzi Dataverse.
 
 Dodatne informacije potražite u odjeljku [Stvaranje novog okruženja](create-environment.md).
 
@@ -91,7 +91,7 @@ Kao dio tog tijeka, odabirete određeni atribut na kojem ćete temeljiti svoj se
 
 ## <a name="view-a-prediction"></a>Prikaz predviđanja
 
-1. Idite na **IntelligencePredictionsMy** > **·** > **predviđanja**.
+1. Idi na **Obavještajna** > **predviđanja** > **Moja predviđanja**.
 
 2. Odaberite predviđanje koje želite pregledati.
 
@@ -108,7 +108,7 @@ Kao dio tog tijeka, odabirete određeni atribut na kojem ćete temeljiti svoj se
 
 ## <a name="update-a-prediction"></a>Ažuriranje predviđanja
 
-1. Idite na **IntelligencePredictionsMy** > **·** > **predviđanja**.
+1. Idi na **Obavještajna** > **predviđanja** > **Moja predviđanja**.
 
 2. Odaberite predviđanje koje želite ažurirati i odaberite ikonu **Ažuriraj**.
 
@@ -118,7 +118,7 @@ Kao dio tog tijeka, odabirete određeni atribut na kojem ćete temeljiti svoj se
 
 Nakon što izradite predviđanje, možete prilagoditi model u odjeljku AI Builder kako biste povećali učinkovitost svog modela.  
 
-1. Idite na **IntelligencePredictionsMy** > **·** > **predviđanja**.
+1. Idi na **Obavještajna** > **predviđanja** > **Moja predviđanja**.
 
 2. Odaberite predviđanje koje želite urediti.
 
@@ -135,7 +135,7 @@ Sljedeće pokretanje predviđanja upotrebljavat će ažurirani model koji ste st
 
 ## <a name="remove-a-prediction"></a>Uklanjanje predviđanja
 
-1. Idite na **IntelligencePredictionsMy** > **·** > **predviđanja**.
+1. Idi na **Obavještajna** > **predviđanja** > **Moja predviđanja**.
 
 2. Odaberite predviđanje koje želite izbrisati.
 

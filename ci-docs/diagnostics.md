@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642203"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755253"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prijava prosljeđivanja Dynamics 365 Customer Insights pomoću servisa Azure Monitor (pretpregled)
 
@@ -27,8 +27,8 @@ Customer Insights šalje sljedeće zapisnike događaja:
 - **Događaji nadzora**
   - **APIEvent** - omogućuje praćenje promjena putem korisničkog Dynamics 365 Customer Insights sučelja.
 - **Operativni događaji**
-  - **WorkflowEvent** - Tijek rada omogućuje postavljanje [izvora](data-sources.md) podataka, [objedinjavanje](data-unification.md) i obogaćivanje [i](enrichment-hub.md) konačno [izvoz](export-destinations.md) podataka u druge sustave. Svi ti koraci mogu se obaviti pojedinačno (npr. pokrenuti jedan izvoz) ili orkestrirani (npr. osvježavanje podataka iz izvora podataka koji pokreću postupak ujedinjenja koji će povući dodatna obogaćivanja i nakon što se provedu izvoziti podatke u drugi sustav). Dodatne informacije potražite u shemi [WorkflowEvent Sheme](#workflow-event-schema).
-  - **APIEvent** - svi API pozivi klijentima instanca na Dynamics 365 Customer Insights. Za više detalja pogledajte [APIEvent shemu](#api-event-schema).
+  - **WorkflowEvent** - Tijek rada omogućuje vam postavljanje [izvora](data-sources.md) podataka, objedinjavanje [,](data-unification.md)[obogaćivanje](enrichment-hub.md) i konačno [izvoz](export-destinations.md) podataka u druge sustave. Svi ti koraci mogu se obaviti pojedinačno (na primjer, pokrenuti jedan izvoz). Može se izvoditi i orkestrirano (na primjer, osvježavanje podataka iz izvora podataka koji pokreću proces ujedinjenja, koji će povući obogaćivanja i nakon što završi izvoz podataka u drugi sustav). Dodatne informacije potražite u shemi za otkrivanje tijeka [rada](#workflow-event-schema).
+  - **APIEvent** - svi API pozivi klijentima instanca na Dynamics 365 Customer Insights. Dodatne informacije potražite u [APIEvent shemi](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Postavljanje dijagnostičkih postavki
 
@@ -44,7 +44,7 @@ Da biste konfigurirali dijagnostiku u korisničkim uvidima, moraju se ispuniti s
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Postavljanje dijagnostike pomoću servisa Azure Monitor
 
-1. U odjeljku Customer Insights odaberite **SystemDiagnostics** > **da** biste vidjeli odredišta dijagnostike konfigurirana za ovu instancu.
+1. U odjeljku Customer Insights odaberite **Dijagnostika** > **sustava** da biste vidjeli odredišta dijagnostike konfigurirana za ovu instancu.
 
 1. Odaberite **Dodaj odredište**.
 
@@ -55,7 +55,7 @@ Da biste konfigurirali dijagnostiku u korisničkim uvidima, moraju se ispuniti s
 
 1. **Odaberite Klijent** pretplate na Azure s odredišnim resursom i odaberite **Prijava**.
 
-1. **Odaberite vrstu** resursa (račun za pohranu, središte događaja ili analitika zapisnika).
+1. Odaberite vrstu **resursa (račun za pohranu, središte događaja ili analitika** zapisnika).
 
 1. Odaberite pretplatu **za** odredišni resurs.
 
@@ -69,7 +69,7 @@ Da biste konfigurirali dijagnostiku u korisničkim uvidima, moraju se ispuniti s
 
 ### <a name="remove-a-destination"></a>Uklanjanje odredišta
 
-1. Idite na **SystemDiagnostics** > **·**.
+1. Otvorite **Dijagnostika** > **sustava**.
 
 1. Na popisu odaberite odredište dijagnostike.
 
@@ -109,7 +109,7 @@ Upravitelj servisa Customer Insights dobiva **dozvolu vlasnika** podataka servis
 
 ### <a name="log-analytics"></a>Log Analytics
 
-Direktor usluge Customer Insights dobiva **dopuštenje za suradnik** log analyticsa za resurs. Zapisnici će biti dostupni u odjeljku **LogsTablesLog** > **·** > **Management** na odabranom radnom prostoru Log Analyticsa. Proširite **rješenje za upravljanje zapisnicima** i pronađite tablice `CIEventsAudit` i `CIEventsOperational`.
+Direktor usluge Customer Insights dobiva **dopuštenje za suradnik** log analyticsa za resurs. Zapisnici će biti dostupni u odjeljku **Upravljanje** > **zapisnicima tablica** > **zapisnika** na odabranom radnom prostoru Log Analyticsa. Proširite **rješenje za upravljanje zapisnicima** i pronađite tablice `CIEventsAudit` i `CIEventsOperational`.
 
 - `CIEventsAudit` koji sadržavaju **događaje revizije**
 - `CIEventsOperational` koji sadrže operativne **događaje**
@@ -182,7 +182,7 @@ Događaji i događaji tijeka rada API-ja imaju zajedničku strukturu i detalje u
 
 ### <a name="workflow-event-schema"></a>Shema događaja tijeka rada
 
-Tijek rada sadrži više koraka. [Unos izvora](data-sources.md) podataka, [objedinjavanje](data-unification.md), [obogaćivanje](enrichment-hub.md) i [izvoz](export-destinations.md) podataka. Svi ti koraci mogu se izvoditi pojedinačno ili orkestrirano sljedećim procesima. 
+Tijek rada sadrži više koraka. [Unos izvora](data-sources.md) podataka, [objedinjavanje](data-unification.md), [obogaćivanje](enrichment-hub.md) i [izvoz](export-destinations.md) podataka. Svi ti koraci mogu se izvoditi pojedinačno ili orkestrirano sljedećim procesima.
 
 #### <a name="operation-types"></a>Vrste operacija
 
@@ -215,7 +215,7 @@ Tijek rada sadrži više koraka. [Unos izvora](data-sources.md) podataka, [objed
 | `time`          | Podaci vremenske oznake | Obvezno          | Vremenska oznaka događaja (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Obvezno          | ResourceId instance koja je emitirala događaj.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Obvezno          | Naziv operacije predstavljene ovim događajem. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Za referencu pogledajte [Vrste](#operation-types) operacija. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Obvezno          | Kategorija zapisnika događaja. Uvijek `Operational` za događaje tijeka rada                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Obvezno          | Kategorija zapisnika događaja. Uvijek `Operational` za događaje tijeka rada                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Obvezno          | Stanje događaja. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Dugi      | Neobavezno          | Trajanje operacije u milisekundama.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Neobavezno          | JSON objekt s više svojstava u određenu kategoriju događaja.                                                                                        | Pogledajte svojstva tijeka rada [pododjeljka](#workflow-properties-schema)                                                                                                       |

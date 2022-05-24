@@ -1,8 +1,8 @@
 ---
 title: Vodič uzorka za predviđanje gubitka pretplate
 description: Upotrijebite ovaj uzorak vodiča da biste isprobali gotov model predviđanja gubitka pretplate.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642349"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741402"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Vodič uzorka za predviđanje gubitka pretplate
 
@@ -112,61 +112,7 @@ Pregledajte članke [o gutanju](data-sources.md) podataka i [uvozu izvora podata
 
 ## <a name="task-2---data-unification"></a>Zadatak 2 - Objedinjavanje podataka
 
-Nakon unosa podataka, sada započinjemo postupak **Karta, podudaranje, spajanje** za stvaranje objedinjenog profila kupca. Dodatne informacije potražite u odjeljku [Objedinjavanje podataka](data-unification.md).
-
-### <a name="map"></a>Mapa
-
-1. Nakon unosa podataka, mapirajte kontakte iz e-trgovine i podataka o vjernosti u uobičajene vrste podataka. Idite na **Podaci** > **Objedini** > **Mapiraj**.
-
-1. Odaberite entitete koji predstavljaju profil klijenta – **Kontakti e-trgovine** i **Odani kupci**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="objedinite izvore podataka o e-trgovini i vjernosti.":::
-
-1. Odaberite **ContactId** kao primarni ključ za **eCommerceContacts** i **LoyaltyID** kao primarni ključ za **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Objedinite LoyaltyId kao primarni ključ.":::
-
-### <a name="match"></a>Usklađivanje
-
-1. Idite na karticu **Usklađivanje** i odaberite **Naruči**.
-
-1. Na padajućem popisu **Primarni** odaberite **eCommerceContacts: eCommerce** kao primarni izvor i uključite sve zapise.
-
-1. Na padajućem popisu **Entitet 2** odaberite **loyCustomers: LoyaltyScheme** i uključite sve zapise.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="objedinite usklađivanje e-trgovine i odanost.":::
-
-1. Odaberite **Stvaranje novog pravila**
-
-1. Dodajte svoj prvi uvjet pomoću programa FullName.
-
-   * Za eCommerceContacts odaberite **FullName** na padajućem popisu.
-   * Za loyCustomers odaberite **FullName** na padajućem popisu.
-   * Odaberite padajući izbornik **Normaliziraj** i odaberite **Vrsta (telefon, ime, adresa, ...)**.
-   * Postavite **Razina preciznosti**: **Osnovna** i **Vrijednost**: **Visoko**.
-
-1. Unesite naziv **Puno ime, e-pošta** za novo pravilo.
-
-   * Odaberite drugi uvjet za adresu e-pošte tako da odaberete **Dodaj uvjet**
-   * Za entitet eCommerceContacts odaberite **E-pošta** na padajućem popisu.
-   * Za entitet loyCustomers odaberite **E-pošta** na padajućem popisu. 
-   * Ostavite praznim polje Normaliziraj. 
-   * Postavite **Razina preciznosti**: **Osnovna** i **Vrijednost**: **Visoko**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="objedinite pravilo podudaranja za naziv i e-poštu.":::
-
-7. Odaberite **Spremi** i **Pokreni**.
-
-### <a name="merge"></a>Spoji
-
-1. Idite na karticu **Spoji**.
-
-1. U dijelu **ContactId** za entitet **loyCustomers** promijenite zaslonsko ime u **ContactIdLOYALTY** kako bi se razlikovao od ostalih unesenih identifikacijskih oznaka.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="preimenujte ID kontakta iz oznake ID za vjernost.":::
-
-1. Odaberi **Spremi** i **Pokreni** da biste započeli postupak spajanja.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Zadatak 3 - Konfigurirajte predviđanje gubitka pretplate
 
