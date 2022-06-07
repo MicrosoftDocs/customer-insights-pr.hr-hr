@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740710"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800641"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Ispunite svoje djelomične podatke s predviđanjima (zastarjelim)
 
@@ -95,7 +95,7 @@ Kao dio tog tijeka, odabirete određeni atribut na kojem ćete temeljiti svoj se
 
 2. Odaberite predviđanje koje želite pregledati.
 
-3. Odaberite elipsu u stupcu **Radnje** i odaberite **Prikaz**.
+3. Odaberite okomitu trotočje (&vellip;) u stupcu **Akcije** i odaberite **Prikaz**.
 
 4. U prikazu predviđanja vidjet ćete brojne podatkovne točke.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Nakon što izradite predviđanje, možete prilagoditi model u odjeljku AI Builde
 
 2. Odaberite predviđanje koje želite urediti.
 
-3. Odaberite elipsu u stupcu **Radnje** i odaberite **Prikaz**.
+3. Odaberite okomitu trotočje (&vellip;) u stupcu **Akcije** i odaberite **Prikaz**.
 
 4. U programu izaberite stavku **AI Builder** Prilagodi.
 
@@ -139,7 +139,7 @@ Sljedeće pokretanje predviđanja upotrebljavat će ažurirani model koji ste st
 
 2. Odaberite predviđanje koje želite izbrisati.
 
-3. Odaberite elipsu u stupcu **Radnje** i odaberite **Izbriši**.
+3. Odaberite okomitu trotočje (&vellip;) u stupcu **Akcije** i odaberite **Izbriši**.
 
 4. Potvrdite brisanje.
 
@@ -153,7 +153,7 @@ Ako ne možete dovršiti proces prilaganja usluge Dataverse zbog pogreške, mož
 - Dopuštenja za aplikacije nisu dodijeljena.
     1. Idite na [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Odaberite **Okruženja**.
-    1. Odaberite tri točke pored okruženja kojem želite dodati dozvolu i odaberite **Postavke**.
+    1. Odaberite okomitu trotočje (&vellip;) pokraj okruženja u koje želite dodati dozvolu i odaberite **Postavke**.
     1. Proširite **Korisnici + dozvole** i odaberite **Korisnici**.
     1. Odaberite **+ Novo** i odaberite **Korisnik**.
     1. Odaberite **Korisnik aplikacije** ako već nije odabran i unesite sljedeće informacije:

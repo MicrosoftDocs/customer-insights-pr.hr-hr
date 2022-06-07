@@ -1,19 +1,19 @@
 ---
 title: Izvor podataka obogaćivanje
 description: Obogatite izvore podataka prije nego što prođete kroz postupak objedinjavanja podataka.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755677"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800272"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obogaćivanje za izvore podataka (pretpregled)
 
@@ -27,7 +27,7 @@ Za stvaranje ili uređivanje obogaćenja morate imati suradnik ili administrator
 
 1. Idite na **Podaci** > **Izvor podataka**.
 
-1. Odaberite okomitu trotočje pokraj izvor podataka želite obogatiti i odaberite **Enrich**.
+1. Odaberite okomitu trotočje (&vellip;) pokraj izvor podataka želite obogatiti i odaberite **Obogaćivanje**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stranica za obogaćivanje izvora podataka.":::
 
@@ -41,11 +41,12 @@ Sljedeća obogaćivanja trenutno su dostupna za izvore podataka. Pregledajte det
 
 - [Poboljšane adrese](enrichment-enhanced-addresses.md)
 - [Poboljšani podaci tvrtke](enrichment-enhanced-company-data.md)
+- [Podaci o identitetu s LiveRampa](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Upravljanje postojećim izvor podataka obogaćenjima
 
 Idite na karticu **Moja obogaćivanja** da biste vidjeli sva konfigurirana obogaćivanja.
 
-Odaberite obogaćivanje da biste vidjeli dostupne mogućnosti. Možete odabrati i elipsu (...) na stavci popisa da biste vidjeli mogućnosti. Ako ste konfigurirali nekoliko obogaćivanja, možete ih brzo pronaći pomoću okvira za pretraživanje.
+Odaberite obogaćivanje da biste vidjeli dostupne mogućnosti. Također možete odabrati okomitu trotočje (&vellip;) na stavci popisa da biste vidjeli mogućnosti. Ako ste konfigurirali nekoliko obogaćivanja, možete ih brzo pronaći pomoću okvira za pretraživanje.
 
 Možete pregledavati, uređivati, izvoditi ili brisati izvor podataka obogaćivanja. Dodatne informacije potražite u članku [Upravljanje postojećim obogaćivanjima](enrichment-hub.md).

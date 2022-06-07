@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653795"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833299"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Rad s jedinstvenim profilima klijenata u sustavu Dynamics 365 Marketing
 
@@ -23,7 +23,6 @@ Povezivanjem podataka Customer Insights s marketingom možete:
 - Osnovni dinamički sadržaj (kao što su personalizirani tokeni) u porukama e-pošte, SMS-ovima i push obavijestima o mjerama kao što su status vjernosti, datum obnove pretplate, nadređeni račun ili bilo koja druga mjera koju ste zabilježili u jedinstvenom profilu customer insights.
 - Učitajte podatke iz marketinga u Customer Insights i kombinirajte ih s podacima o kupcima iz drugih izvora.
 - Primijenite korisničke uvide u alate za čišćenje, obogaćivanje i nejasno podudaranje podataka.
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Koristite bogate profile kupaca u marketingu u stvarnom vremenu
 
@@ -41,4 +40,4 @@ Dodatne informacije: [Korištenje segmenata iz Dynamics 365 Customer Insights su
 
 Ako želite koristiti podatke customer insights s marketingom, niste ograničeni samo na pohranu u oblaku. Ako ste već sami Azure Data Lake Storage postavili, možete se povezati s Customer Insights, a zatim ih podijeliti s aplikacijom Marketing baš kao što biste to učinili s postavljanjem u oblaku.
 
-Dodatne informacije: [Omogućivanje zajedničkog korištenja podataka s Dataverse vlastitim Azure Data Lake Storage](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+Dodatne informacije: [Omogućivanje zajedničkog korištenja podataka s Dataverse vlastitim Azure Data Lake Storage](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

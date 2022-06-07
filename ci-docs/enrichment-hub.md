@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c14e6c96d2f907ba161331b6f92277191cbdbef
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653514"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800596"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za korisničke profile (pretpregled)
 
@@ -27,7 +27,7 @@ Koristite podatke iz izvora poput Microsofta i drugih partnera kako biste obogat
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Stranica središta za obogaćivanje.":::
 
-Idite na **DataEnrichment** > **da** biste radili s mogućnostima obogaćivanja.  
+Idite na **Data** > **Enrichment** da biste radili s mogućnostima obogaćivanja.  
 
 Da biste stvorili ili uredili obogaćivanja, morate imati dozvole Suradnik ili Administrator. Za dodatne informacije pogledajte [Dozvole](permissions.md).
 
@@ -63,7 +63,7 @@ Na kartici **Moja obogaćivanja** možete vidjeti obogaćivanja koja ste konfigu
 
 Idite na karticu **Moja obogaćivanja** da biste vidjeli sva konfigurirana obogaćivanja. Svako obogaćivanje predstavljeno je kao redak koji uključuje dodatne informacije o obogaćivanju.
 
-Odaberite obogaćivanje da biste vidjeli dostupne mogućnosti. Možete odabrati i elipsu (...) na stavci popisa da biste vidjeli mogućnosti. Ako ste konfigurirali nekoliko obogaćivanja, možete ih brzo pronaći pomoću okvira za pretraživanje.
+Odaberite obogaćivanje da biste vidjeli dostupne mogućnosti. Također možete odabrati okomitu trotočje (&vellip;) na stavci popisa da biste vidjeli mogućnosti. Ako ste konfigurirali nekoliko obogaćivanja, možete ih brzo pronaći pomoću okvira za pretraživanje.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Mogućnosti upravljanja obogaćivanjima na popisu obogaćivanja.":::
 

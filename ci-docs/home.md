@@ -11,26 +11,26 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
-ms.translationtype: HT
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743404"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768341"
 ---
 # <a name="explore-customer-insights"></a>Istražite uvide kupaca
 
 Možete pristupiti [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) na sljedećem URL-u: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-Početna **stranica** prikazuje vas kroz postupak konfiguracije ključnih značajki i pruža pregled podataka o segmentima, mjerama i obogaćivanju.
+Početna **stranica** vodi vas kroz postupak konfiguracije ključnih značajki i pruža pregled podataka o segmentima, mjerama i obogaćivanju.
 
 :::image type="content" source="media/home-page.png" alt-text="Snimka zaslona početnog zaslona koja prikazuje uzorke uvida.":::
 
 ## <a name="left-side-pane"></a>Lijevo bočno okno
 
-Koristite lijevo okno za navigaciju između različitih područja Uvidi kupaca. 
+Pomoću lijevog okna krećite se između različitih područja uvida u klijente.
 
-Ako radite s poslovnim računima i pojedinačnim potrošačima, možete odabrati svoju primarnu publika kako biste u skladu s tim postavili fokus. 
+Ako radite s poslovnim računima i pojedinačnim potrošačima, možete odabrati svoju primarnu publika kako biste u skladu s tim postavili fokus.
 
 ## <a name="application-header"></a>Zaglavlje aplikacije
 
@@ -38,7 +38,7 @@ Birač okruženja **prikazuje** okruženje u kojem radite i omogućuje vam stvar
 
 Ikona smajlića je kontrola Povratne **informacije**. Odaberite ga da biste nam rekli o svom iskustvu s Customer Insights. Aktivno slušamo vaše povratne informacije i unaprijed vam zahvaljujemo što ste nam javili što vam se sviđa i kako se možemo poboljšati.
 
-**Kontrola Postavke**, predstavljena ikonom zupčanika, omogućuje vam prikupljanje detalja o sesiji za Customer Insights i konfiguriranje Globalne postavke za svoj Microsoft 365 profil. 
+**Kontrola Postavke**, predstavljena ikonom zupčanika, omogućuje vam prikupljanje detalja o sesiji za Customer Insights i konfiguriranje Globalne postavke za svoj Microsoft 365 profil.
 
 **Mogućnosti pomoći**, vizualizirane ikonom upitnika, pružaju kontekstualne veze pomoći i druge korisne resurse.
 
@@ -46,7 +46,7 @@ Vaša profilna slika otvara upravitelj **računa** za vaš Microsoft 365 profil.
 
 ## <a name="getting-started-with-customer-insights-section"></a>Odjeljak Uvod u odjeljak Uvidi kupaca
 
-Ovaj odjeljak sadrži kartice koje vam pomažu da prođete kroz postupak postavljanja okruženja Customer Insights. 
+Ovaj odjeljak sadrži kartice koje vam pomažu da prođete kroz postupak postavljanja okruženja Customer Insights.
 
 1. Kartica **Dodavanje podataka** pomaže vam u uvozu podataka. Customer Insights podržava [nekoliko mogućnosti za unos podataka o vašim klijentima](data-sources.md). Za početak odaberite **Dodaj izvore** podataka.
 1. Nakon što se početni uvoz podataka uspješno dovrši, pomoću podatkovne **kartice Objedinjavanje možete uskladiti** podatke i [stvoriti jedinstvene](data-unification.md) profile kupaca iz različitih izvora. 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755253"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807572"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prijava prosljeđivanja Dynamics 365 Customer Insights pomoću servisa Azure Monitor (pretpregled)
 
@@ -38,7 +38,7 @@ Da biste konfigurirali dijagnostiku u korisničkim uvidima, moraju se ispuniti s
 
 - Imate aktivnu [pretplatu](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) na Azure.
 - Imate [administratorske](permissions.md#admin) dozvole u customer insights.
-- Na odredišnom resursu na servisu Azure imate ulogu administratora **suradnik** **i** administratora korisničkog pristupa. Resurs može biti račun za pohranu servisa Azure, središte događaja azure ili radni prostor analitike azure loga. Dodatne informacije potražite u članku [Dodavanje ili uklanjanje dodjela uloga servisa Azure pomoću portala](/azure/role-based-access-control/role-assignments-portal) azure.
+- Na odredišnom resursu na servisu Azure imate ulogu administratora **suradnik** **i** administratora korisničkog pristupa. Resurs može biti Azure Data Lake Storage račun, središte događaja servisa Azure ili radni prostor azure Log Analytics. Dodatne informacije potražite u članku [Dodavanje ili uklanjanje dodjela uloga servisa Azure pomoću portala](/azure/role-based-access-control/role-assignments-portal) azure. Ova je dozvola potrebna tijekom konfiguriranja dijagnostičkih postavki u Customer Insights, a može se promijeniti nakon uspješnog postavljanja.
 - [Destination requirements](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) for Azure Storage, Azure Event Hub ili Azure Log Analytics met.
 - Imate barem **Čitatelj** ulogu u grupi resursa kojoj resurs pripada.
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642278"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800135"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezivanje s Power Query izvor podataka
 
@@ -76,7 +76,7 @@ Poveznici s kvačicom u stupcu **Customer Insights (Dataflows)** dostupni su za 
 
 1. Idite na **Podaci** > **Izvor podataka**.
 
-2. Odaberite okomito trotočje pored izvora podataka koji želite promijeniti i odaberite **Uredi** s padajućeg izbornika.
+2. Odaberite okomitu trotočje (&vellip;) pokraj izvor podataka želite promijeniti i na padajućem izborniku odaberite **Uredi**.
 
    > [!div class="mx-imgBorder"]
    > ![Mogućnost uređivanja.](media/edit-option-data-sources.png "Uređivanje mogućnosti")

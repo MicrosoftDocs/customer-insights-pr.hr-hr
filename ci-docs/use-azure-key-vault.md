@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653468"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763570"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Povezivanje vlastitog sefa za ključeve platforme Azure (pretpregled)
 
@@ -37,11 +37,11 @@ Da biste konfigurirali trezor s ključevima u customer insightsu, moraju se ispu
 
 - Sef za ključeve mora imati **onemogućen** vatrozid sefa za ključeve.
 
-- Trezor za ključeve nalazi se na istoj [lokaciji](https://azure.microsoft.com/global-infrastructure/geographies/#overview) servisa Azure kao i okruženje Customer Insights. Regija okruženja u customer insights navedena je pod **AdminSystemAboutRegion** > **·** > **·** > **·**.
+- Trezor za ključeve nalazi se na istoj [lokaciji](https://azure.microsoft.com/global-infrastructure/geographies/#overview) servisa Azure kao i okruženje Customer Insights. Regija okruženja u odjeljku Customer Insights navedena je u odjeljku **Administratorski** > **sustav** > **O** > **regiji**.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Povezivanje sefa za ključeve s okruženjem
 
-1. Otvorite **Administratorska** > **sigurnost**, a zatim odaberite karticu Trezor **ključeva**.
+1. Otvorite **Sigurnost administratora** > **·**, a zatim odaberite karticu Trezor **ključeva**.
 1. Na pločici **Sef za ključeve** odaberite **Postavljanje**.
 1. Odaberite **Pretplata**.
 1. Odaberite sef za ključeve s padajućeg popisa **Sef za ključeve**. Ako se prikazuje previše sefova za ključeve, odaberite grupu resursa kako biste ograničili rezultate pretraživanja.
@@ -89,9 +89,9 @@ Sljedeće dozvole dodjeljuju se uvidima korisnika u povezanom trezoru ključeva 
 
 | Tip        | Dopuštenja          |
 | ----------- | -------------------- |
-| Tipka         | [Dohvati ključeve](/rest/api/keyvault/get-keys), [Dohvati ključ](/rest/api/keyvault/get-key)                                 |
-| Tajno      | [Dohvati tajne](/rest/api/keyvault/get-secrets), [Dohvati tajnu](/rest/api/keyvault/get-secret)                     |
-| Certifikat | [Dohvati certifikate](/rest/api/keyvault/get-certificates), [Dohvati certifikat](/rest/api/keyvault/get-certificate) |
+| Tipka         | [Dohvati ključeve](/rest/api/keyvault/keys/get-keys/get-keys), [Dohvati ključ](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Tajno      | [Dohvati tajne](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Dohvati tajnu](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Certifikat | [Dohvati certifikate](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Dohvati certifikat](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Prethodne vrijednosti minimalne su za popis i čitanje tijekom izvođenja.
 

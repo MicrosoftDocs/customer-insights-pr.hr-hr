@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642239"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800411"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli za strojno učenje
 
@@ -92,7 +92,7 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 
 ## <a name="edit-a-workflow"></a>Uređivanje tijeka rada
 
-1. Na stranici **Prilagođeni modeli** odaberite okomite tri točke u stupcu **Radnje** pokraj toka rada koji ste prethodno stvorili te odaberite **Uredi**.
+1. **Na stranici Prilagođeni modeli** odaberite okomitu trotočje (&vellip;) u stupcu **Akcije** pokraj tijeka rada koji ste prethodno stvorili i odaberite **Uredi**.
 
 1. Prepoznatljivo ime vašeg tijeka rada možete ažurirati u polju **Zaslonski naziv**, ali ne možete promijeniti konfigurirani web-servis ili kanal. Odaberite **Dalje**.
 
@@ -108,7 +108,7 @@ Predviđanja nude mogućnosti stvaranja boljih korisničkih iskustava, poboljša
 
 ## <a name="run-a-workflow"></a>Pokretanje tijeka rada
 
-1. Na stranici **Prilagođeni modeli** odaberite okomite tri točke u stupcu **Radnje** pokraj toka rada koji ste prethodno stvorili.
+1. **Na stranici Prilagođeni modeli** odaberite okomitu trotočje (&vellip;) u stupcu **Akcije** pokraj tijeka rada koji ste prethodno stvorili.
 
 1. Odaberite **Pokretanje**.
 
@@ -116,7 +116,7 @@ Vaš tijek rada se također pokreće automatski sa svakim zakazanim osvježavanj
 
 ## <a name="delete-a-workflow"></a>Brisanje tijeka rada
 
-1. Na stranici **Prilagođeni modeli** odaberite okomite tri točke u stupcu **Radnje** pokraj toka rada koji ste prethodno stvorili.
+1. **Na stranici Prilagođeni modeli** odaberite okomitu trotočje (&vellip;) u stupcu **Akcije** pokraj tijeka rada koji ste prethodno stvorili.
 
 1. Odaberite **Izbriši** i potvrdite brisanje.
 

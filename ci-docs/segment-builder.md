@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642343"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800087"
 ---
 # <a name="create-segments"></a>Stvaranje segmenata
 
@@ -134,8 +134,9 @@ Tijekom izrade segmenta možete spremiti skicu. U fazi skice, segment se sprema 
 > - Graditelj segmenata neće predlagati valjane vrijednosti entiteta prilikom postavljanja operatora za uvjete. Možete otići na **Podaci** > **Entiteti** i preuzeti podatke entiteta kako biste vidjeli koje su vrijednosti dostupne.
 > - Uvjeti koji se temelje na datumima omogućuju vam prebacivanje između fiksnih datuma i promjenjivog datumskog raspona.
 > - Ako imate više pravila za segment, pokraj pravila koje uređujete nalazi se okomita plava linija.
-> - Pravila i uvjete možete premjestiti na druga mjesta u definiciji segmenta. Odaberite [...] pored pravila ili uvjeta i odaberite kako i gdje ga premjestiti.
+> - Pravila i uvjete možete premjestiti na druga mjesta u definiciji segmenta. Odaberite okomitu trotočje (&vellip;) pokraj pravila ili uvjeta i odaberite kako i gdje je premjestiti.
 > - Kontrole **Poništi** i **Ponovi** na naredbenoj traci omogućuju vam vraćanje promjena.
+> - Nakon stvaranja segmenta, neki segmenti omogućuju vam [praćenje korištenja segmenta](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Brzi segmenti
 

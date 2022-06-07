@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642219"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800158"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povezivanje s podacima iz rješenja Data Lake kojim upravlja platforma Microsoft Dataverse.
 
@@ -27,8 +27,8 @@ Ovaj članak pruža informacije o tome kako Dataverse se korisnici mogu brzo pov
 
 ## <a name="important-considerations"></a>Važne stavke
 
-1. Podaci pohranjeni u internetskom servisu kao što je Azure Data Lake Storage mogu biti pohranjeni na mjestu drugačijem od onoga na kojemu se podaci obrađuju ili pohranjuju u sustavu Dynamics 365 Customer Insights.Uvozom ili povezivanjem s podacima pohranjenim u mrežnim uslugama slažete se da se podaci mogu prenositi i pohranjivati pomoću programa Dynamics 365 Customer Insights. [Saznajte više u Microsoftovu centru za](https://www.microsoft.com/trust-center) pouzdanost.
-2. Vidljivi su samo Dataverse entiteti s omogućenim [praćenjem](/power-platform/admin/enable-change-tracking-control-data-synchronization) promjena. Ti se entiteti mogu izvesti u Dataverse jezero podataka kojima upravlja i koristiti u customer insights. Gotove tablice Dataverse prema zadanim postavkama imaju omogućeno evidentiranje promjena. Morate uključiti evidentiranje promjena za prilagođene tablice. Da biste provjerili je li tablica omogućena Dataverse za praćenje promjena, idite na [Power Apps](https://make.powerapps.com) > **Podatkovne** > **tablice**. Pronađite tablicu koja vas zanima i odaberite je. Otvorite **Mogućnosti** > **SettingsAdvanced** i pregledajte postavku **Evidentiranje promjena**.
+1. Podaci pohranjeni u internetskom servisu kao što je Azure Data Lake Storage mogu biti pohranjeni na mjestu drugačijem od onoga na kojemu se podaci obrađuju ili pohranjuju u sustavu Dynamics 365 Customer Insights.Uvozom ili povezivanjem s podacima pohranjenim u mrežnim uslugama slažete se da se podaci mogu prenositi i pohranjivati pomoću programa Dynamics 365 Customer Insights. [Saznajte više u Microsoftovu centru za pouzdanost](https://www.microsoft.com/trust-center).
+2. Vidljivi su samo Dataverse entiteti s omogućenim [praćenjem](/power-platform/admin/enable-change-tracking-control-data-synchronization) promjena. Ti se entiteti mogu izvesti u Dataverse jezero podataka kojima upravlja i koristiti u customer insights. Gotove tablice Dataverse prema zadanim postavkama imaju omogućeno evidentiranje promjena. Morate uključiti evidentiranje promjena za prilagođene tablice. Da biste provjerili je li tablica omogućena Dataverse za praćenje promjena, idite na [Power Apps](https://make.powerapps.com) > **Tablice** > **podataka**. Pronađite tablicu koja vas zanima i odaberite je. Otvorite **Dodatne mogućnosti postavki** > **i** pregledajte postavku **Evidentiranje promjena**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Povezivanje s jezerom za upravljanje Dataverse
 
@@ -62,7 +62,7 @@ Za povezivanje s drugim data lake usluge Dataverse [stvorite novi izvor podataka
 
 1. Idite na **Podaci** > **Izvor podataka**.
 
-2. Pored izvora podataka koji želite ažurirati odaberite elipsu.
+2. Uz izvor podataka koje želite ažurirati odaberite okomitu trotočje (&vellip;).
 
 3. S popisa odaberite mogućnost **Uredi**.
 

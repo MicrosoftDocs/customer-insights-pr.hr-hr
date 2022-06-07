@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642847"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800317"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Stvaranje mjera od nule pomoću sastavljača mjera
 
@@ -88,7 +88,7 @@ Mjere možete kreirati na razini pojedinačnih kupaca (atribut kupca, mjera kupc
 
 1. Da biste dodali više izračuna za mjeru, odaberite **Novi izračun**. Za nove izračune možete koristiti samo entitete na istoj putanji entiteta. Više će se izračuna prikazati kao novi stupci u entitetu izlazne vrijednosti mjere.
 
-1. Odaberite **...** na izračunu da biste proveli **Dupliciraj**, **Preimenuj** ili **Ukloni** izračun iz mjere.
+1. Odaberite okomitu trotočje (&vellip;) na izračunu da biste **duplicirali**, **preimenovali** ili **uklonili** izračun iz mjere.
 
 1. U području **Pretpregled** vidjet ćete shemu podataka entiteta izlazne vrijednosti mjere, uključujući filtre i dimenzije. Pretpregled dinamički reagira na promjene u konfiguraciji.
 
@@ -158,7 +158,7 @@ Mjere možete kreirati na razini pojedinačnih računa (mjera kupca) ili na razi
    1. Odaberite **Putanja odnosa** i odaberite putanju entiteta koji bi se trebao koristiti za identifikaciju mjere. Ako postoji samo jedna putanja do entiteta *Klijent*, ova se kontrola neće prikazati.
    1. Odaberite **Gotovo** da biste primijenili svoj odabir.
 
-1. Odaberite **...** na izračunu da biste proveli **Dupliciraj**, **Preimenuj** ili **Ukloni** izračun iz mjere.
+1. Odaberite okomitu trotočje (&vellip;) na izračunu da biste **duplicirali**, **preimenovali** ili **uklonili** izračun iz mjere.
 
 1. U području **Pretpregled** vidjet ćete shemu podataka entiteta izlazne vrijednosti mjere, uključujući filtre i dimenzije. Pretpregled dinamički reagira na promjene u konfiguraciji.
 

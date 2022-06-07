@@ -1,7 +1,7 @@
 ---
 title: Povezivanje podataka oblika Common Data Model s računom servisa Azure Data Lake
 description: Rad s podacima oblika Common Data Model pomoću servisa Azure Data Lake Storage.
-ms.date: 01/25/2022
+ms.date: 05/24/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -13,12 +13,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: eeb6b9d97be5f9c0b9f6cbd6dbc6985559a1cd9d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642267"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833347"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povezivanje s mapom značajke Common Data Model s pomoću računa za Azure Data Lake
 
@@ -34,9 +34,9 @@ U ovom se članku nalaze informacije o unosu Dynamics 365 Customer Insights poda
 
 - Da biste provjerili autentičnost s upraviteljem servisa Azure, provjerite je li konfiguriran na vašem klijentu. Dodatne informacije potražite u članku [Povezivanje Azure Data Lake Storage s gen2 računom pomoću upravitelja servisa Azure](connect-service-principal.md).
 
-- Azure Data Lake s kojim se želite povezati i s kojeg želite unositi podatke mora biti u istoj regiji platforme Azure kao i okruženje Dynamics 365 Customer Insights. Veze s mapom Common Data Model iz podatkovnog jezera u drugoj Azure regiji nisu podržane. Da biste upoznali regiju okruženja servisa Azure, otvorite **AdminSystemAbout** > **·** > **u** odjeljku Customer Insights.
+- Azure Data Lake s kojim se želite povezati i s kojeg želite unositi podatke mora biti u istoj regiji platforme Azure kao i okruženje Dynamics 365 Customer Insights. Veze s mapom Common Data Model iz podatkovnog jezera u drugoj Azure regiji nisu podržane. Da biste saznali regiju okruženja servisa Azure, otvorite **Odjeljak O sustavu** > **·** > **administratora** u odjeljku Customer Insights.
 
-- Podaci pohranjeni u online uslugama mogu se pohraniti na drugoj lokaciji od one na kojoj se podaci obrađuju ili pohranjuju u Dynamics 365 Customer Insights sustavu.Uvozom ili povezivanjem s podacima pohranjenim u mrežnim uslugama slažete se da se podaci mogu prenositi i pohranjivati pomoću programa Dynamics 365 Customer Insights. [Saznajte više u Microsoftovu centru za](https://www.microsoft.com/trust-center) pouzdanost.
+- Podaci pohranjeni u online uslugama mogu se pohraniti na drugoj lokaciji od one na kojoj se podaci obrađuju ili pohranjuju u Dynamics 365 Customer Insights sustavu.Uvozom ili povezivanjem s podacima pohranjenim u mrežnim uslugama slažete se da se podaci mogu prenositi i pohranjivati pomoću programa Dynamics 365 Customer Insights. [Saznajte više u Microsoftovu centru za pouzdanost](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Spojite se na mapu Common Data Model
 
@@ -46,16 +46,16 @@ U ovom se članku nalaze informacije o unosu Dynamics 365 Customer Insights poda
 
 1. Odaberite **Azure data lake storage**, unesite **Naziv** izvor podataka, a zatim **dalje**.
 
-   - Ako se to od vas zatraži, odaberite jedan od oglednih skupova podataka koji se odnose na vašu industriju, a zatim odaberite **Dalje**. 
+   - Ako se to od vas zatraži, odaberite jedan od oglednih skupova podataka koji se odnose na vašu industriju, a zatim odaberite **Dalje**.
 
 1. Možete birati između korištenja mogućnosti koja se temelji na resursima i mogućnosti koja se temelji na pretplati za provjeru autentičnosti. Dodatne informacije potražite u članku [Povezivanje Azure Data Lake Storage s gen2 računom pomoću upravitelja servisa Azure](connect-service-principal.md). Unesite adresu poslužitelja **, odaberite** Prijava **, a zatim Dalje** **.**
    > [!div class="mx-imgBorder"]
    > ![Dijaloški okvir za unos novih pojedinosti o vezi za Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Potrebna vam je jedna od sljedećih uloga u gore navedenom spremniku ili računu za pohranu da biste se mogli povezati i stvoriti izvor podataka:
-   >  - Čitač podataka bloba pohrane
-   >  - Vlasnik podataka bloba pohrane
-   >  - Suradnik podataka bloba pohrane
+   > Za spremnik na računu za pohranu potrebna vam je jedna od sljedećih uloga i stvorite izvor podataka:
+   >
+   >  - Pohrana Blob Data Čitatelj dovoljna je za čitanje s računa za pohranu i unos podataka u Customer Insights. 
+   >  - Ako želite urediti datoteke manifesta izravno u odjeljku Customer Insights, potreban je suradnik ili vlasnik podataka za pohranu blob podataka.
 
 1. U dijaloškom okviru **Odaberi mapu Common Data Model** odaberite datoteku model.json ili manifest.json iz koje želite uvesti podatke pa odaberite **Dalje**.
    > [!NOTE]
@@ -65,11 +65,11 @@ U ovom se članku nalaze informacije o unosu Dynamics 365 Customer Insights poda
    > [!div class="mx-imgBorder"]
    > ![Dijaloški okvir s popisom entiteta iz datoteke model.json.](media/review-entities.png)
 
-8. Navedite koje podatkovne entitete želite omogućiti profiliranje podataka, a zatim odaberite **Spremi**. Profiliranje podataka omogućuje analitiku i druge mogućnosti. Možete odabrati cijeli entitet koji odabire sve atribute iz entiteta ili odabrati određene atribute po svom izboru. Prema zadanim postavkama nijedan entitet nije omogućen za profiliranje podataka.
+1. Navedite koje podatkovne entitete želite omogućiti profiliranje podataka, a zatim odaberite **Spremi**. Profiliranje podataka omogućuje analitiku i druge mogućnosti. Možete odabrati cijeli entitet koji odabire sve atribute iz entiteta ili odabrati određene atribute po svom izboru. Prema zadanim postavkama nijedan entitet nije omogućen za profiliranje podataka.
    > [!div class="mx-imgBorder"]
    > ![Dijaloški okvir u kojemu se prikazuje profiliranje podataka.](media/dataprofiling-entities.png)
 
-9. Nakon spremanja odabira otvara se stranica **Izvori podataka**. Sada biste trebali vidjeti vezu mape Common Data Model kao izvor podataka.
+1. Nakon spremanja odabira otvara se stranica **Izvori podataka**. Sada biste trebali vidjeti vezu mape Common Data Model kao izvor podataka.
 
 > [!NOTE]
 > Datoteke model.json ili manifest.json mogu se povezati samo s jednim izvorom podataka u istom okruženju. Međutim, ista datoteka model.json ili manifest.json može se koristiti za izvore podataka u više okruženja.
@@ -80,7 +80,7 @@ Možete ažurirati pristupni ključ za račun pohrane koji sadrži mapu Common D
 
 1. Idite na **Podaci** > **Izvor podataka**.
 
-2. Pored izvora podataka koji želite ažurirati odaberite elipsu.
+2. Uz izvor podataka koje želite ažurirati odaberite okomitu trotočje (&vellip;).
 
 3. S popisa odaberite mogućnost **Uredi**.
 
@@ -93,13 +93,6 @@ Možete ažurirati pristupni ključ za račun pohrane koji sadrži mapu Common D
 
    > ![Dijaloški okvir za unos pojedinosti o vezi za Azure Data Lake na postojeći račun za pohranu.](media/enter-existing-storage-details.png)
 
-   > [!NOTE]
-   > Potrebna vam je jedna od sljedećih uloga u gore navedenom spremniku ili računu za pohranu da biste se mogli povezati i stvoriti izvor podataka:
-   >  - Čitač podataka bloba pohrane
-   >  - Vlasnik podataka bloba pohrane
-   >  - Suradnik podataka bloba pohrane
-
-
 6. Neobavezno odaberite drugu datoteku model.json ili manifest.json s različitim skupom entiteta iz spremnika.
 
 7. Po želji možete odabrati dodatne entitete za unos. Također, možete ukloniti sve već odabrane entitete ako nema ovisnosti.
@@ -107,7 +100,6 @@ Možete ažurirati pristupni ključ za račun pohrane koji sadrži mapu Common D
    > [!IMPORTANT]
    > Ako postoje ovisnosti o postojećoj datoteci model.json ili manifest.json i skupu entiteta, vidjet ćete poruku o pogrešci i ne možete odabrati drugu datoteku model.json ili manifest.json. Uklonite te ovisnosti prije promjene datoteke model.json ili manifest.json ili stvorite novi izvor podataka s datotekom model.json ili manifest.json koju želite koristiti da biste izbjegli uklanjanje ovisnosti.
 
-8. Po želji možete odabrati dodatne atribute ili entitete kako biste omogućili profiliranje podataka ili onemogućili već odabrane.   
-
+8. Po želji možete odabrati dodatne atribute ili entitete kako biste omogućili profiliranje podataka ili onemogućili već odabrane.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
