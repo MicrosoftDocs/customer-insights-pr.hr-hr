@@ -1,7 +1,7 @@
 ---
 title: Prikaz profila klijenata
 description: Dobijte kombinirani prikaz svojih objedinjenih podataka o klijentima.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755773"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947037"
 ---
 # <a name="customer-profiles"></a>Profili klijenata
 
@@ -55,9 +55,9 @@ Klijente možete filtrirati prema poljima entiteta *Klijent*. Slično pretraživ
 
 Odaberite bilo koju pločicu klijenta da biste otvorili **Stranicu s pojedinostima o klijentu**. Ovaj prikaz sadrži objedinjene podatke za odabranog klijenta. Pojedinosti o klijentima uključuju sljedeći sadržaj:
 
-**Pločica profila klijenta**: Ova pločica prikazuje različite vrijednosti od objedinjenog entiteta *Klijent*. Ako polje nema vrijednost za odabrani profil klijenta, neće se prikazati. Pločica je strukturirana u dijelove:
+**Pločica profila klijenta**: Ova pločica prikazuje različite vrijednosti od objedinjenog entiteta *Klijent*. Ako polje nema vrijednost za odabrani profil kupca, neće se prikazati osim polja adrese. Pločica je strukturirana u dijelove:
 
-- Prvi odjeljak prikazuje unaprijed definirani skup polja, nakon kojih slijede sva polja koja su dio opcije pretraživanja i filtriranja indeksa. Sva polja povezana s adresom kombiniraju se u jedan redak ako profil sadrži takva polja.
+- Prvi odjeljak prikazuje unaprijed definirani skup polja, nakon kojih slijede sva polja koja su dio opcije pretraživanja i filtriranja indeksa. Sva polja povezana s adresom kombinirana su u jedan redak, što pokazuje čak i ako profil ne sadrži podatke o adresi.
 - **Kontakti za ovog klijenta**: U okruženjima za poslovne račune kao drugi odjeljak vidjet ćete sve povezane kontakte za ovog klijenta. Svaki kontakt prikazan je sa svojim poljima. Prazna polja su skrivena.
 - **Dodatna polja**: Prikazuje preostala polja odabranog klijenta, osim ID-ova.
 - **ID-ovi**: Navodi sve ID-ove pod odgovarajućim nazivom entiteta. Polja su identificirana kao ID-ovi svojom semantikom, koja ih kategorizira kao takve.

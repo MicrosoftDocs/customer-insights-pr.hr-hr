@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642251"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947221"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Izvoz popisa segmenata i drugih podataka u Azure Data Lake Storage Gen2 (pretpregled)
 
@@ -21,11 +21,9 @@ Pohranite podatke s usluge Customer Insights na račun za Azure Data Lake Storag
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-1. Za Azure Data Lake Storage Gen2 možete birati između [Razina standardnih performansi i Premium performansi](/azure/storage/blobs/create-data-lake-storage-account) kada stvarate račun za pohranu za Data Lake. Ako odaberete razinu Premium performasi, odaberite Premium blobove bloka kao vrstu računa. 
+1. Za Azure Data Lake Storage Gen2 možete birati između [Razina standardnih performansi i Premium performansi](/azure/storage/blobs/create-data-lake-storage-account) kada stvarate račun za pohranu za Data Lake. Ako odaberete razinu Premium performasi, odaberite Premium blobove bloka kao vrstu računa.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Uspostavljanje veze s uslugom Azure Data Lake Storage Gen2 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Uspostavljanje veze s uslugom Azure Data Lake Storage Gen2
 
 1. Idite na **Admin** > **Veze**.
 
@@ -39,7 +37,7 @@ Pohranite podatke s usluge Customer Insights na račun za Azure Data Lake Storag
     - Da biste saznali kako stvoriti račun za pohranu za korištenje uz Azure Data Lake Storage druge generacije, pogledajte [Stvaranje računa za pohranu](/azure/storage/blobs/create-data-lake-storage-account). 
     - Da biste saznali više o nazivu računa za pohranu i ključu računa za Azure Data Lake Gen2, pogledajte [Upravljanje postavkama računa za pohranu na portalu Azure](/azure/storage/common/storage-account-manage).
 
-1. Odaberite **Spremi** da biste završili vezu. 
+1. Odaberite **Spremi** da biste završili vezu.
 
 ## <a name="configure-an-export"></a>Konfiguracija izvoza
 
@@ -57,8 +55,12 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 Spremanje izvoza ne pokreće izvoz odmah.
 
-Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
+Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab).
+Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand).
 
-Izvezeni podaci pohranjuju se u spremnik za pohranu za Azure Data Lake Gen 2 koji ste konfigurirali. 
+Izvezeni podaci pohranjuju se u spremnik za pohranu za Azure Data Lake Gen 2 koji ste konfigurirali.
+
+> [!TIP]
+> Izvoz entiteta koji sadrže veliku količinu podataka može dovesti do više CSV datoteka u istoj mapi za svaki izvoz. Podjela izvoza događa se iz razloga performansi kako bi se smanjilo vrijeme potrebno za dovršetak izvoza.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

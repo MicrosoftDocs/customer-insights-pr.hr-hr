@@ -1,101 +1,92 @@
 ---
 title: Obogaćivanje uz obogaćivanje treće strane Experian
 description: Opće informacije o obogaćivanju treće strane Experian.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f5aa45316b9e0e99c7ba4389353063e9d3ce06c
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642194"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954078"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obogaćivanje klijentskih profila demografskim podacima tvrtke Experian (pretpregled)
 
 Experian je svjetski predvodnik u izvještavanju o potrošačkim i poslovnim kreditima i marketinškim uslugama. Uz usluge obogaćivanja podataka tvrtke Experian možete steći dublje razumijevanje svojih klijenata obogaćujući klijentske profile demografskim podacima kao što su veličina kućanstva, prihod i još mnogo toga.
 
-## <a name="prerequisites"></a>Preduvjeti
-
-Za konfiguriranja servisa Experian potrebno je ispuniti sljedeće preduvjete:
-
-- Imate aktivnu pretplatu na Experian. Da biste dobili pretplatu, izravno se [obratite Experianu](https://www.experian.com/marketing-services/contact). [Saznajte više o obogaćivanju podataka Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-
-- Administrator je već konfigurirao vezu Experian *ili* imate [administratorske](permissions.md#admin) dozvole. Također su vam potrebni Korisnički ID, ID stranke i Broj modela za vaš račun sigurnog prijenosa (ST) s omogućenim SSH koji je Experian stvorio za vas.
-
 ## <a name="supported-countriesregions"></a>Podržane zemlje/regije
 
 Trenutno podržavamo obogaćivanje profila kupaca samo u Sjedinjenim Državama.
+
+## <a name="prerequisites"></a>Preduvjeti
+
+- Aktivna Experian pretplata. Da biste dobili pretplatu, izravno se [obratite Experianu](https://www.experian.com/marketing-services/contact). [Saznajte više o obogaćivanju podataka Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
+
+- Vezu Experian [je](connections.md) [konfigurirao](#configure-the-connection-for-experian) administrator.
+
+- Experian Korisnički ID, ID stranke i broj modela za vaš račun za siguran prijevoz (ST) koji podržava SSH koji je Experian stvoren za vas.
+
+## <a name="configure-the-connection-for-experian"></a>Konfiguriranje veze za Experian
+
+Morate biti [administrator](permissions.md#admin) u customer insights i imati Experian korisnički ID, ID stranke i broj modela.
+
+1. Odaberite **Dodaj vezu** prilikom konfiguriranja obogaćivanja ili Idite na **Veze s administratorima** > **·**, a zatim odaberite **Postavi** na pločici Experian.
+
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Okno konfiguracije veze na Experian.":::
+
+1. Unesite naziv veze i valjani korisnički ID, ID stranke i broj modela za svoj Experian račun za siguran prijevoz.
+
+1. Pregledajte i dajte svoj pristanak za [Privatnost podataka i usklađenost](#data-privacy-and-compliance) odabirom opcije **Slažem se**.
+
+1. Odaberite **Provjeri** da biste provjerili valjanost konfiguracije, a zatim **Spremi**.
+
+### <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
+
+Kad omogućite Dynamics 365 Customer Insights za prijenos podataka u Experian, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke poput osobnih podataka. Microsoft će prenositi takve podatke prema vašoj uputi, ali vi ste odgovorni za to da Experian ispunjava sve obveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732). Vaš administrator usluge Dynamics 365 Customer Insights može ovo obogaćivanje ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
 
 ## <a name="configure-the-enrichment"></a>Konfiguracija za obogaćivanje
 
 1. Idite na **Podaci** > **Obogaćivanje** i odaberite karticu **Pronađi**.
 
-1. Odaberite **Obogati moje podatke** na pločici Experian.
+1. S pločice odaberite **Obogati moje podatke o** demografiji **·**.Experian
 
-   > [!div class="mx-imgBorder"]
-   > ![Pločica Experian.](media/experian-tile.png "Experian tile")
-   > 
+   :::image type="content" source="media/experian-tile.png" alt-text="Experian pločica na stranici s pregledom obogaćivanja.":::
 
-1. Odaberite [vezu](connections.md) s padajućeg popisa. Ako nijedna veza nije dostupna, obratite se administratoru. Ako ste administrator, vezu možete stvoriti odabirom **Dodaj vezu** pa odabirom Experian s padajućeg popisa. 
+1. Pregledajte pregled, a zatim odaberite **Dalje**.
 
-1. Odaberite **Spoji na Experian** za potvrdu odabira veze.
+1. Odaberite vezu. Ako jedan nije dostupan, obratite se administratoru.
 
-1.  Odaberite **Dalje** pa odaberite **Skup podataka klijenta** koji želite obogatiti demografskim podacima servisa Experian. Možete odabrati entitet **Klijent** za obogaćivanje svih vaših korisničkih profila ili odaberite segmentni entitet za obogaćivanje samo korisničkih profila sadržanih u tom segmentu.
+1. Odaberite **Dalje**.
+
+1. **Odaberite skup podataka** za korisnike i odaberite profil ili segment koji želite obogatiti demografskim podacima iz Experian sustava. Subjekt *Kupac* obogaćuje sve vaše profile kupaca, dok segment obogaćuje samo profile kupaca sadržane u tom segmentu.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Snimka zaslona prilikom odabira skupa podataka o klijentu.":::
 
-1. Odaberite **Dalje** pa definirajte koja se vrsta polja iz vaših objedinjenih profila treba koristiti za traženje odgovarajućih demografskih podataka servisa Experian. Potrebno je barem jedno od polja **Ime i adresa**, **Telefon** ili **E-pošta**. Za veću točnost podudaranja mogu se dodati do dva druga polja. Ovaj će odabir utjecati na polja za mapiranje kojima imate pristup u sljedećem koraku.
+1. Definiši koju vrstu polja iz objedinjenih profila želite koristiti za podudaranje demografskih podataka iz Experian sustava. Potrebno je barem jedno od polja **Ime i adresa**, **Telefon** ili **E-pošta**. Za veću točnost podudaranja dodajte druga polja. Odaberite **Dalje**.
 
-    > [!TIP]
-    > Više atributa identifikatora ključa poslanih servisu Experian vjerojatno donosi višu stopu podudaranja.
+1. Mapirajte polja na demografske podatke iz Experian sustava.
 
-1. Odaberite **Sljedeće** da biste započeli mapiranje polja.
+1. Odaberite **Sljedeće** da biste dovršili mapiranje polja.
 
-1. Definirajte koja polja iz vaših objedinjenih profila treba koristiti za traženje odgovarajućih demografskih podataka servisa Experian. Obavezna su polja označena.
-
-1. Navedite naziv za obogaćivanje i naziv za izlazni entitet.
+1. Navedite naziv **za obogaćivanje i naziv izlaznog entiteta** **.**
 
 1. Odaberite **Spremi obogaćivanje** nakon pregledavanja svojih odabira.
 
-## <a name="configure-the-connection-for-experian"></a>Konfiguriranje veze za Experian 
-
-Morate biti administrator da biste konfigurirali veze. Odaberite **Dodaj vezu** prilikom konfiguriranja obogaćivanja *ili* idite na **Administrator** > **Veze** pa odaberite **Postavljanje** na pločici Experian.
-
-1. Odaberite **Početak rada**.
-
-1. Unesite naziv za vezu u dijaloški okvir **Zaslonski naziv**.
-
-1. Unesite važeći Korisnički ID, ID stranke i Broj modela za svoj račun sigurnog prijenosa za Experian.
-
-1. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usklađenost** odabirom opcije **Slažem se**.
-
-1. Odaberi **Potvrdi** za provjeru valjanosti konfiguracije.
-
-1. Nakon dovršetka provjere valjanosti odaberite **Spremi**.
-   
-   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Okno konfiguracije veze na Experian.":::
+1. Odaberite **Pokreni** da biste pokrenuli postupak obogaćivanja ili zatvorili da biste se vratili na **stranicu Obogaćivanje**.
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
-Kako biste započeli postupak obogaćivanja, odaberite **Pokreni** iz naredbene trake. Također možete pustiti sustav da automatski izvrši obogaćivanje kao dio [ planiranog osvježavanja](system.md#schedule-tab). Vrijeme obrade ovisit će o veličini vaših podataka o klijentima i postupcima obogaćivanja koje je za vaš račun postavio Experian.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Nakon završetka postupka obogaćivanja, podatke o novoobogaćenim profilima klijenata možete pregledati pod stavkom **Moja obogaćivanja**. Uz to ćete pronaći vrijeme zadnjeg ažuriranja i broj obogaćenih profila.
-
-Detaljnom prikazu svakog obogaćenog profila možete pristupiti odabirom **Prikaz obogaćenih podataka**.
+Broj **kupaca obogaćenih poljem** pruža dubinsku analizu pokrivenosti svakog obogaćenog polja.
 
 ## <a name="next-steps"></a>Sljedeći koraci
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
-
-Kad omogućite Dynamics 365 Customer Insights za prijenos podataka u Experian, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke poput osobnih podataka. Microsoft će prenositi takve podatke prema vašoj uputi, ali vi ste odgovorni za to da Experian ispunjava sve obveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-Vaš administrator usluge Dynamics 365 Customer Insights može ovo obogaćivanje ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

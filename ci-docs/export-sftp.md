@@ -1,19 +1,19 @@
 ---
 title: Izvoz podataka customer insights u SFTP domaćine (sadrži videozapis)
 description: Saznajte kako konfigurirati vezu i izvesti na SFTP lokaciju.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642247"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947175"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Izvoz segmenata i ostalih podataka na SFTP (pretpregled)
 
@@ -28,8 +28,8 @@ Koristite svoje podatke o klijentima u aplikacijama trećih strana tako što će
 ## <a name="known-limitations"></a>Poznata ograničenja
 
 - SFTP odredišta iza vatrozida trenutno nisu podržana. 
-- Vrijeme izvoza ovisi o performansama vašeg sustava. Preporučujemo dvije CPU jezgre i 1 Gb memorije kao minimalnu konfiguraciju vašeg poslužitelja. 
-- Izvoz entiteta s do 100 milijuna profila klijenata može potrajati 90 minuta kada se koristi preporučena minimalna konfiguracija dviju CPU jezgri i 1 Gb memorije. 
+- Vrijeme izvoza ovisi o performansama vašeg sustava. Preporučujemo dvije CPU jezgre i 1 Gb memorije kao minimalnu konfiguraciju vašeg poslužitelja.
+- Izvoz entiteta s do 100 milijuna profila klijenata može potrajati 90 minuta kada se koristi preporučena minimalna konfiguracija dviju CPU jezgri i 1 Gb memorije.
 
 ## <a name="set-up-connection-to-sftp"></a>Postavljanje veze sa SFTP
 
@@ -64,13 +64,17 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 1. Odaberite entitete, na primjer, segmente koje želite izvesti.
 
    > [!NOTE]
-   > Svaki odabrani entitet podijelit će se u do pet izlaznih datoteka prilikom izvoza. 
+   > Svaki odabrani entitet podijelit će se u do pet izlaznih datoteka prilikom izvoza.
 
 1. Odaberite **Spremi**.
 
 Spremanje izvoza ne pokreće izvoz odmah.
 
-Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
+Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab).
+Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> Izvoz entiteta koji sadrže veliku količinu podataka može dovesti do više CSV datoteka u istoj mapi za svaki izvoz. Podjela izvoza događa se iz razloga performansi kako bi se smanjilo vrijeme potrebno za dovršetak izvoza.
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
 

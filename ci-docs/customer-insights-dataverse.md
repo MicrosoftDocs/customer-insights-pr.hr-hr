@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833667"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011511"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad s podacima rješenja Customer Insights u servisu Microsoft Dataverse
 
 Customer Insights pruža mogućnost da izlazne entitete učinite dostupnima kao [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Ova integracija omogućuje jednostavnu razmjenu podataka i prilagođeni razvoj kroz pristup koda niskog koda / bez koda. Izlazni [entiteti](#output-entities) dostupni su kao tablice u Dataverse okruženju. Podatke možete koristiti za bilo koju drugu aplikaciju na Dataverse temelju tablica. Ove tablice omogućavaju scenarije kao što su automatizirani tijekovi rada kroz Power Automate ili izrada aplikacija pomoću programa Power Apps.
 
-Povezivanje s okolinom Dataverse također vam omogućuje unos [podataka iz lokalno izvora podataka pomoću Power Platform tokova podataka i pristupnika](data-sources.md#add-data-from-on-premises-data-sources).
+Povezivanje s okolinom Dataverse također vam omogućuje unos [podataka iz lokalno izvora podataka pomoću Power Platform tokova podataka i pristupnika](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Preduvjeti
 
@@ -57,7 +57,7 @@ Omogućavanje dijeljenja podataka kada Microsoft Dataverse vaše okruženje [kor
 Postoje dva ograničenja pri korištenju Dataverse s vlastitim Azure Data Lake Storage računom:
 
 - Postoji mapiranje jedan-na-jedan između Dataverse organizacije i Azure Data Lake Storage računa. Dataverse Nakon što se tvrtka ili ustanova poveže s računom za pohranu, ne može se povezati s drugim računom za pohranu. Ovo ograničenje onemogućuje da ne popunjava Dataverse više računa za pohranu.
-- Zajedničko korištenje podataka neće funkcionirati ako je za pristup računu za pohranu servisa Azure Data Lake potreban instalacijski program servisa Azure Private Link jer se nalazi iza vatrozida. Dataverse trenutno ne podržava vezu s privatnim krajnjim točkama putem Private Linka.
+- Zajedničko korištenje podataka neće funkcionirati ako je za pristup računu Azure Data Lake Storage potrebna postava servisa Azure Private Link jer se nalazi iza vatrozida. Dataverse trenutno ne podržava vezu s privatnim krajnjim točkama putem Private Linka.
 
 ### <a name="set-up-powershell"></a>Postavljanje ljuske PowerShell
 

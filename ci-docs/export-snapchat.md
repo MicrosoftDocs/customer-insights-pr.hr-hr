@@ -1,19 +1,19 @@
 ---
 title: Izvoz podataka iz Customer Insights u Snapchat
 description: Saznajte kako konfigurirati vezu i izvesti u Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642362"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947267"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Izvoz segmenata u Snapchat (pretpregled)
 
@@ -21,7 +21,8 @@ Izvezite segmente objedinjenih profila klijenata u Snapchat i koristite ih za og
 
 ## <a name="prerequisites-for-a-connection"></a>Preduvjeti za vezu
 
--   Imate [Snapchat poslovni račun](https://business.snapchat.com/), [Snapchat Ads račun](https://ads.snapchat.com/) i odgovarajuće administratorske vjerodajnice.
+-   Imate [Snapchat poslovni račun](https://business.snapchat.com/), [Snapchat Ads račun](https://ads.snapchat.com/) i odgovarajuće administratorske vjerodajnice. YOu mora barem biti član računa tvrtke ili ustanove i upravitelj podataka određenog oglasnog računa. 
+-   Imate barem jednu publika u Snapchatu publika menadžer tipa SAM (Snap publika Match). 
 -   Konfigurirali [ste segmente](segments.md) u customer insights.
 -   Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
 
@@ -60,7 +61,7 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Snapchat. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
 
-1. Unesite [**ID ciljne skupine za Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. [**Unesite Snapchat segment / publika ID**](https://businesshelp.snapchat.com/s/article/custom-audiences). ID publika može se naći u URL-u nakon odabira publika u Snapchat publika Manageru. 
 
 1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. Obavezno je izvoziti segmente u Snapchat.
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833374"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011832"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Spajanje na Azure Data Lake Storage račun upotrebom upravitelja usluge Azure
 
@@ -51,7 +51,13 @@ Prije stvaranja novog upravitelja usluge za Customer Insights provjerite postoji
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Dodjela dozvola za pristup računu za pohranu upravitelju usluge
 
-Idite na portal servisa Azure da biste upravitelju servisa dodijelili dozvole za račun za pohranu koji želite koristiti u odjeljku Customer Insights.
+Idite na portal servisa Azure da biste upravitelju servisa dodijelili dozvole za račun za pohranu koji želite koristiti u odjeljku Customer Insights. Računu za pohranu ili spremniku mora se dodijeliti jedna od sljedećih uloga:
+
+|Vjerodajnica|Preduvjeti|
+|----------|------------|
+|Trenutno prijavljeni u korisniku|**Uloga**: pohrana blob data Čitatelj, Storage Blob suradnik ili Storage Blob Owner.<br>**Razina**: Dozvole se mogu dodijeliti na računu za pohranu ili spremniku.</br>|
+|Voditelj usluge uvida u kupce -<br>Korištenje Azure Data Lake Storage kao izvor podataka</br>|Mogućnost 1<ul><li>**Uloga**: pohrana Blob Data Čitatelj, Storage Blob Data suradnik ili Storage Blob Data Owner.</li><li>**Razina**: dozvole treba izdavati na računu za pohranu.</li></ul>Opcija 2 *(bez dijeljenja pristupa servisnog nalogodavca računu za pohranu)*<ul><li>**Uloga 1**: Pohrana Blob Data Čitatelj, Storage Blob Data suradnik ili Storage Blob Data Owner.</li><li>**Razina**: Dozvole se trebaju izdavati na spremniku.</li><li>**Uloga 2**: Delegator podataka o blobu pohrani.</li><li>**Razina**: dozvole treba izdavati na računu za pohranu.</li></ul>|
+|Voditelj usluge uvida u kupce - <br>Korištenje Azure Data Lake Storage kao izlaza ili odredišta</br>|Mogućnost 1<ul><li>**Uloga**: Pohrana Blob Data suradnik ili Storage Blob Owner.</li><li>**Razina**: dozvole treba izdavati na računu za pohranu.</li></ul>Opcija 2 *(bez dijeljenja pristupa servisnog nalogodavca računu za pohranu)*<ul><li>**Uloga**: Pohrana Blob Data suradnik ili Storage Blob Owner.</li><li>**Razina**: Dozvole se trebaju izdavati na spremniku.</li><li>**Uloga 2**: Delegator bloba za pohranu.</li><li>**Razina**: dozvole treba izdavati na računu za pohranu.</li></ul>|
 
 1. Idite na [administracijski portal za Azure](https://portal.azure.com) i prijavite se u svoju organizaciju.
 
@@ -62,7 +68,7 @@ Idite na portal servisa Azure da biste upravitelju servisa dodijelili dozvole za
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Snimka zaslona na kojoj je prikazan Azure portal u trenutku dodavanja dodjele uloge.":::
 
 1. U oknu **Dodaj dodjelu uloge** postavite sljedeća svojstva:
-   - Uloga: **Suradnik spremišta podataka za blob**
+   - Uloga: pohrana Blob Data Čitatelj, Storage Blob suradnik ili Storage Blob Owner na temelju gore navedenih vjerodajnica.
    - Dodijelite pristup: **Korisnik, grupa ili upravitelj servisa**
    - Odabir članova: **Dynamics 365 AI for Customer Insights** (upravitelj [servisa kojeg](#create-a-new-service-principal) ste potražili ranije u ovom postupku)
 

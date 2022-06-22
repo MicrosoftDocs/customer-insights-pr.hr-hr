@@ -1,5 +1,5 @@
 ---
-title: Obogaćivanje profila klijenata podacima tvrtke Microsoft
+title: Obogatite profile kupaca Microsoftovim robnim markama i interesima
 description: Koristite Microsoftove vlasničke podatke da biste svoje korisničke podatke obogatili afinitetima i Udio prisutnosti.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,25 +12,16 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c016a394fdf485057a190d03bfed9ce5481f435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642259"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953756"
 ---
 # <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Obogatite profile kupaca afinitetima i Udio prisutnosti (pregled)
 
 Koristite Microsoftove vlasničke podatke za obogaćivanje korisničkih podataka afinitetima robne marke, afinitetima interesa i Udio prisutnosti (SoV). Ovi afiniteti i SoV temelje se na podacima ljudi s demografijom sličnim vašim kupcima. Te vam informacije pomažu da bolje razumijete i segmentirate svoje kupce na temelju njihovih afiniteta ili SoV-a prema određenim robnim markama i interesima.
-
-Idite na **DataEnrichment** > **da** biste konfigurirali [i pogledali obogaćivanja](enrichment-hub.md).
-
-Da biste konfigurirali afinitete robne marke i obogaćivanje SoV-a, idite na karticu **Discover** i odaberite **Obogati moje podatke** na pločici **Robne marke**.
-
-Da biste konfigurirali afinitete interesa i obogaćivanje SoV-a, idite na karticu **Discover** i odaberite **Obogati moje podatke** na **pločici Interesi**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Pločice Robna marka i Interesi.](media/BrandsInterest-tile-Hub.png "pločice Robne marke i Interes")
 
 ## <a name="how-we-determine-affinities-and-sov"></a>Kako određujemo afinitete i SoV
 
@@ -45,7 +36,6 @@ Microsoftove podatke o internetskom pretraživanju koristimo za pronalaženje af
 Na svakom obogaćenom profilu klijenta pružamo dvije povezane vrijednosti: razinu afiniteta i ocjenu afiniteta. Te vam vrijednosti pomažu odrediti koliko je jak afinitet prema demografskom segmentu tog profila, prema marki ili interesu u usporedbi s ostalim demografskim segmentima.
 
 *Razina afiniteta* sastoji se od četiri razine, a *ocjena afiniteta* izračunava se na skali od 100 točaka koja se mapira na razine afiniteta.
-
 
 |Razina afiniteta |Ocjena afiniteta  |
 |---------|---------|
@@ -64,78 +54,65 @@ Izračunavamo SoV na ljestvici od 100 točaka. Ukupni SoV u svim markama ili int
 
 Trenutno podržavamo sljedeće mogućnosti zemlje/regije: Australija, Kanada (engleski), Francuska, Njemačka, Ujedinjeno Kraljevstvo ili Sjedinjene Države (engleski).
 
-Da biste odabrali zemlju ili regiju, otvorite **Obogaćivanje marki** ili **Obogaćivanje interesa** pa odaberite **Promijeni** pored opcije **Država/regija**. U oknu **Postavke zemlje/regije** odaberite mogućnost i odaberite **Primijeni**.
+## <a name="configure-the-enrichment"></a>Konfiguracija za obogaćivanje
 
-### <a name="implications-related-to-country-selection"></a>Implikacije povezane s odabirom zemlje
+1. Idite na **Podaci** > **Obogaćivanje** i odaberite karticu **Pronađi**.
 
-- Kada [odabirete vlastite marke](#define-your-brands-or-interests), sustav pruža prijedloge na temelju odabrane države ili regije.
+   - Da biste konfigurirali afinitete robne marke i obogaćivanje SoV-a, odaberite **Obogati moje podatke** na pločici **Robne marke**.
 
-- Kada [odabirete industriju](#define-your-brands-or-interests), dobit ćete najrelevantnije marke ili interese na temelju odabrane države ili regije.
+   - Da biste konfigurirali afinitete interesa i obogaćivanje SoV-a, odaberite **Obogati moje podatke** na pločici **Interesi**.
 
-- Kada [obogaćujemo profile](#refresh-enrichment), obogatit ćemo sve profile kupaca za koje dobivamo podatke za odabrane marke i interese, uključujući profile koji nisu u odabranoj državi ili regiji. Na primjer, ako ste odabrali Njemačku, obogatit ćemo profile koji se nalaze u Sjedinjenim Državama ako imamo dostupne podatke za odabrane brendove i interese u SAD-u.
+   > [!div class="mx-imgBorder"]
+   > ![Pločice Robna marka i Interesi.](media/BrandsInterest-tile-Hub.png "pločice Robne marke i Interes")
 
-## <a name="configure-enrichment"></a>Konfiguracija obogaćivanja
+1. Pregledajte pregled, a zatim odaberite **Dalje**.
 
-Vođeno iskustvo pomaže vam u konfiguraciji obogaćivanja. 
+1. Da biste promijenili državu ili regiju, pokraj stavke **Država/regija** odaberite **Promijeni**. **U oknu s postavkama** države/regije odaberite podržanu državu/regiju [...](#supported-countriesregions), a zatim **Primijeni**.
 
-### <a name="define-your-brands-or-interests"></a>Definirajte svoje robne marke ili interese
+   > [!NOTE]
+   > Kada odabirete vlastite marke, sustav pruža prijedloge na temelju odabrane države ili regije. Kada odabirete industriju, dobit ćete najrelevantnije marke ili interese na temelju odabrane države ili regije.
 
-Odaberite do pet robnih marki ili interesa pomoću jedne ili obje ove mogućnosti:
+1. Odaberite do pet robnih marki ili interesa pomoću jedne ili obje ove mogućnosti:
 
-- **Djelatnot** : Na padajućem popisu odaberite svoju djelatnost, a zatim odaberite vodeće marke ili interese za tu djelatnost.
-- **Odaberite vlastito**: Unesite marku ili interes koji su relevantni za vašu tvrtku ili ustanovu, a zatim odaberite među odgovarajućim prijedlozima. Ako nismo naveli robnu marku ili interes koji tražite, pošaljite nam povratne informacije putem veze **Predloži**.
+   - **Djelatnot** : Na padajućem popisu odaberite svoju djelatnost, a zatim odaberite vodeće marke ili interese za tu djelatnost.
+   - **Odaberite vlastito**: Unesite marku ili interes koji su relevantni za vašu tvrtku ili ustanovu, a zatim odaberite među odgovarajućim prijedlozima. Ako nismo naveli robnu marku ili interes koji tražite, pošaljite nam povratne informacije putem veze **Predloži**.
 
-### <a name="review-enrichment-preferences"></a>Preferencije obogaćivanja pregleda
+1. Odaberite **Dalje** i pregledajte zadane postavke obogaćivanja i po potrebi ih ažurirajte.
 
-Pregledajte zadane preference obogaćivanja i ažurirajte ih ako je potrebno.
+   :::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Snimka zaslona prozora s preferencama obogaćivanja.":::
 
-:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Snimka zaslona prozora s preferencama obogaćivanja.":::
+1. Odaberite **Dalje**.
 
-### <a name="select-entity-to-enrich"></a>Odabir entiteta za obogaćivanje
+1. **Odaberite customer skup podataka** i odaberite profil ili segment koji želite obogatiti podacima tvrtke Microsoft. Subjekt *Kupac* obogaćuje sve vaše profile kupaca, dok segment obogaćuje samo profile kupaca sadržane u tom segmentu.
 
-Odaberite **Obogaćeni entitet** i odaberite skup podataka koji želite obogatiti podacima tvrtke Microsoft. Možete odabrati entitet Klijent za obogaćivanje svih vaših profila klijenta ili odaberite segmentni entitet za obogaćivanje samo profila klijenata sadržanih u tom segmentu.
+1. Odaberite **Dalje**.
 
-### <a name="map-your-fields"></a>Mapirajte svoja polja
+1. Mapirajte polja iz jedinstvenog entiteta klijenta u Microsoftove podatke.
 
-Mapirajte polja iz svojeg objedinjenog entiteta klijenta da biste definirali demografski segment koji želite da sustav koristi za obogaćivanje vaših podataka o klijentu. Mapirajte državu/regiju i najmanje atribute Datum rođenja ili Spol. Usto, morate mapirati barem jedan grad (i saveznu državu/pokrajinu) ili poštanski broj. Odaberite **Uredi** da biste definirali mapiranje polja i odaberite **Primijeni** kada završite. Odaberite **Spremi** da biste dovršili mapiranje polja.
+   > [!NOTE]
+   > Potrebni su barem atributi Datuma rođenja ili spola. Potrebna je država/regija i barem grad (i država/pokrajina) ili poštanski broj. Preporučujemo da se datum rođenja pretvori u dateTime vrstu tijekom gutanja podataka. Alternativno, to može biti niz u [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formatu "yyyy-MM-dd" ili "yyyy-MM-ddTHH: mm: ss".
 
-Sljedeći su formati i vrijednosti podržani (vrijednosti ne razlikuju velika i mala slova):
+1. Odaberite **Sljedeće** da biste dovršili mapiranje polja.
 
-- **Datum rođenja**: Preporučujemo da se datum rođenja pretvara u vrstu DateTime tijekom obrade podataka. Alternativno, to može biti niz u [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formatu "yyyy-MM-dd" ili "yyyy-MM-ddTHH: mm: ss".
-- **Spol**: muški, ženski, nepoznato.
-- **Poštanski broj** : peteroznamenkasti poštanski brojevi za Sjedinjene Države, standardni poštanski broj svugdje drugdje.
-- **Grad**: Naziv grada na engleskom jeziku.
-- **Država/provincija**: Skraćenica od dva slova za SAD i Kanadu. Skraćenica od dva ili tri slova za Australiju. Nije primjenjivo za Francusku, Njemačku ili Ujedinjeno Kraljevstvo.
-- **Zemlja/regija**:
+1. Navedite naziv za obogaćivanje. Automatski se odabire **naziv** izlaznog entiteta.
 
-  - SAD: Sjedinjene Američke Države, Sjedinjene Države, SAD, SAD, Amerika
-  - CA: Kanada, Kalifornija
-  - GB: Ujedinjeno Kraljevstvo, UK, Velika Britanija, GB, Ujedinjeno Kraljevstvo Velike Britanije i Sjeverne Irske, Ujedinjeno Kraljevstvo Velike Britanije
-  - AU: Australija, AU, Zajednica Australije
-  - FR: Francuska, FR, Francuska Republika
-  - DE: Njemačka, njemački, Deutschland, Allemagne, DE, Savezna Republika Njemačka, Republika Njemačka
+   :::image type="content" source="media/enrichment-interests-summary.png" alt-text="Stranica za pregled i imenovanje interesa.":::
 
-## <a name="review-and-name-the-enrichment"></a>Pregled i imenovanje obogaćivanja
+1. Odaberite **Spremi obogaćivanje** nakon pregledavanja svojih odabira.
 
-Na kraju možete pregledati informacije i dati naziv za obogaćivanje.
+1. Odaberite **Pokreni** da biste pokrenuli postupak obogaćivanja ili zatvorili da biste se vratili na **stranicu Obogaćivanje**.
 
-:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Stranica za pregled i imenovanje interesa.":::
-
-## <a name="refresh-enrichment"></a>Osvježavanje obogaćivanja
-
-Pokrenite obogaćivanje nakon konfiguriranja robnih marki, interesa i mapiranja polja za demografske podatke. Za pokretanje postupka odaberite **Pokreni** na stranici za konfiguriranje robne marke ili interesa. Usto možete sustavu dopustiti automatsko pokretanje obogaćivanja kao dio zakazanog osvježenja.
-
-Ovisno o veličini vaših podataka o klijentima, može potrajati nekoliko minuta dok se obogaćivanje ne dovrši.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+   Kada obogaćujemo profile, obogatit ćemo sve profile kupaca za koje dobivamo podatke za odabrane marke i interese, uključujući profile koji nisu u odabranoj državi ili regiji. Na primjer, ako ste odabrali Njemačku, obogatit ćemo profile koji se nalaze u Sjedinjenim Državama ako imamo dostupne podatke za odabrane brendove i interese u SAD-u.
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
-Nakon pokretanja postupka obogaćivanja, idite na **Moja obogaćivanja** za pregled ukupnog broja obogaćenih klijenata i analizu robnih marki ili interesa na obogaćenim profilima klijenta.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Pretpregled rezultata nakon pokretanja postupka obogaćivanja.":::
 
-Pronaći ćete grafikon s brojem obogaćenih profila kupaca tijekom vremena i preglede obogaćenih entiteta. Pregledajte obogaćene podatke tako **da odaberete Vidi više** na **grafikonima razine** afiniteta ili **Udio prisutnosti**. Obogaćeni podaci za robne marke idu **brandAffinityFromMicrosoft** i **BrandShareOfVoiceFromMicrosoft** entitetima. Podaci za interese nalaze se u **subjektima InterestAffinityFromMicrosoft** i **InterestShareOfVoiceFromMicrosoft**. Ti su entiteti navedeni i u grupi **Obogaćivanje** u **Podaci** > **Entiteti**.
+Rezultati uključuju grafikone **na razini** afiniteta ili **Udio prisutnosti**.
+
+Subjekti stvoreni iz obogaćivanja navedeni su u **grupi Obogaćivanje** u **podatkovnim** > **entitetima**. Obogaćeni podaci za robne marke idu **brandAffinityFromMicrosoft** i **BrandShareOfVoiceFromMicrosoft** entitetima. Podaci za interese nalaze se u **subjektima InterestAffinityFromMicrosoft** i **InterestShareOfVoiceFromMicrosoft**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Prikaz podataka o obogaćivanju na kartici klijenta
 

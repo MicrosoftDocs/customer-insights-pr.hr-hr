@@ -1,7 +1,7 @@
 ---
 title: Obogaćivanje poboljšanja adrese (sadrži videozapis)
 description: Obogatite i normalizirajte podatke o adresi profila klijenata pomoću Microsoftovih modela.
-ms.date: 01/19/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b4fef3b5e30e1cac4e5cb4401498f2f0981a409e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642198"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953802"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogaćivanje profila klijenata s poboljšanim adresama
 
@@ -53,17 +53,17 @@ Podaci o adresi mogu biti u nestandardnom formatu i sadržavati pravopisne pogre
 
 ### <a name="limitations"></a>Ograničenja
 
-Poboljšane adrese funkcioniraju samo s vrijednostima koje već postoje u unesenim podacima o adresi. Model ne radi sljedeće: 
+Poboljšane adrese funkcioniraju samo s vrijednostima koje već postoje u unesenim podacima o adresi. Model ne radi sljedeće:
 
 1. Provjerava je li adresa valjana.
 2. Provjerava je li bilo koja vrijednost, poput poštanskih brojeva ili naziva ulica, valjana.
 3. Mijenja vrijednosti koje ne prepoznaje.
 
-Model koristi tehnike temeljene na strojnom učenju za poboljšanje adresa. Iako primjenjujemo visoki prag pouzdanosti kada model mijenja ulaznu vrijednost, kao i kod svakog modela temeljenog na strojnom učenju, 100-postotna točnost nije zajamčena.
+Model koristi tehnike temeljene na strojnom učenju za poboljšanje adresa. Kao i kod bilo kojeg modela temeljenog na strojnom učenju, 100 posto točnosti nije zajamčena.
 
 ## <a name="supported-countries-or-regions"></a>Podržane države ili regije
 
-Trenutno podržavamo obogaćivanje adresa u sljedećim državama ili regijama: 
+Trenutno podržavamo obogaćivanje adresa u sljedećim državama ili regijama:
 
 - Australija
 - Kanada
@@ -71,53 +71,49 @@ Trenutno podržavamo obogaćivanje adresa u sljedećim državama ili regijama:
 - Njemačka
 - Italija
 - Japan
-- Ujedinjena Kraljevina
+- Velika Britanija
 - Sjedinjene Države
-
-Adrese moraju sadržavati vrijednost države/regije. Ne obrađujemo adrese za države ili regije koje nisu podržane i adrese koje nemaju navedenu državu ili regiju.
 
 ## <a name="configure-the-enrichment"></a>Konfiguracija za obogaćivanje
 
-1. Idite na **Podaci** > **Obogaćivanje**.
+1. Idite na **Podaci** > **Obogaćivanje** i odaberite karticu **Pronađi**.
 
 1. Odaberite **Obogati moje podatke** na pločici **Poboljšane adrese**.
 
    :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Snimka zaslona pločice poboljšanih adresa.":::
 
-1. Odaberite **Skup podataka o klijentu** pa odaberite entitet koji sadrži adrese koje želite obogatiti. Možete odabrati entitet *Klijent* za obogaćivanje adresa u svim vašim profilima klijenata ili odaberite entitet segmenta za obogaćivanje adresa samo u profilima klijenata sadržanih u tom segmentu.
+1. Pregledajte pregled, a zatim odaberite **Dalje**.
+
+1. Odaberite skup podataka **kupca** i odaberite profil ili segment koji želite obogatiti. Subjekt *Kupac* obogaćuje sve vaše profile kupaca, dok segment obogaćuje samo profile kupaca sadržane u tom segmentu.
 
 1. Odaberite način formatiranja adresa u vašem skupu podataka. Odaberite **Adresa s jednim atributom** ako adrese u vašim podacima koriste jedno polje. Odaberite **Adresa s više atributa** ako adrese u vašim podacima koriste više od jednog polja podataka.
+
+1. Odaberite **Dalje** i mapirajte polja adrese iz jedinstvenog entiteta klijenta.
+
+    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Stranica mapiranja polja poboljšane adrese.":::
 
    > [!NOTE]
    > Država/regija obavezna je i za adrese s jednim i za one s više atributa. Adrese koje ne sadrže valjane ili podržane vrijednosti države/regije neće biti obogaćene.
 
-1.  Mapirajte polja adrese iz vašeg objedinjenog entiteta klijenta.
-
-    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Stranica mapiranja polja poboljšane adrese.":::
-
 1. Odaberite **Sljedeće** da biste dovršili mapiranje polja.
 
-1. Navedite naziv za obogaćivanje i izlazni entitet.
+1. Navedite naziv **za** obogaćivanje i izlazni **entitet**.
 
 1. Odaberite **Spremi obogaćivanje** nakon pregledavanja svojih odabira.
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
-Kako biste započeli postupak obogaćivanja, odaberite **Pokreni** iz naredbene trake. Također možete pustiti sustav da automatski izvrši obogaćivanje kao dio [ planiranog osvježavanja](system.md#schedule-tab). Vrijeme obrade ovisi o veličini vaših podataka o klijentima.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Nakon završetka postupka obogaćivanja, podatke o novoobogaćenim profilima klijenata možete pregledati pod stavkom **Moja obogaćivanja**. Uz to ćete pronaći vrijeme zadnjeg ažuriranja i broj obogaćenih profila.
-
-Uzorak obogaćenih podataka možete vidjeti u pločici pretpregleda **obogaćenih** kupaca. Odaberite **Vidi više** i odaberite karticu **Podaci** da biste pristupili detaljnom prikazu svakog obogaćenog profila.
+Broj **kupaca obogaćenih poljem** pruža dubinsku analizu pokrivenosti svakog obogaćenog polja.
 
 ### <a name="overview-card"></a>Kartica Pregled
 
-Pregledna kartica prikazuje detalje o pokrivenosti obogaćivanja. 
+Kartica **Pregled** promjena kupaca prikazuje pojedinosti o pokrivenosti obogaćivanjem:
 
-* **Obrađene i promijenjene** adrese: broj profila kupaca s adresama koje su uspješno obogaćene.
-
-* **Adrese obrađene i nisu promijenjene**: broj profila klijenata s adresama koje su prepoznate, ali nisu promijenjene. To se obično događa kada su ulazni podaci valjani i ne mogu se poboljšati obogaćivanjem.
-
-* **Adrese koje nisu obrađene i nisu promijenjene**: broj profila s adresama koje nisu prepoznate. Obično za ulazne podatke koji nisu valjani ili nisu podržani obogaćivanjem.
+- **Obrađene i promijenjene** adrese: broj profila kupaca s adresama koje su uspješno obogaćene.
+- **Adrese obrađene i nisu promijenjene**: broj profila klijenata s adresama koje su prepoznate, ali nisu promijenjene. To se obično događa kada su ulazni podaci valjani i ne mogu se poboljšati obogaćivanjem.
+- **Adrese koje nisu obrađene i nisu promijenjene**: broj profila s adresama koje nisu prepoznate. Obično za ulazne podatke koji nisu valjani ili nisu podržani obogaćivanjem.
 
 ## <a name="next-steps"></a>Sljedeći koraci
 

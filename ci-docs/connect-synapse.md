@@ -1,7 +1,7 @@
 ---
 title: Unos podataka iz Azure Synapse Analytics
 description: Koristite bazu podataka u sustavu Azure Synapse kao izvor podataka u programu Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7c758dccf7ea34dd7b8f80d05eff1ed12030526f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642272"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011418"
 ---
-# <a name="connect-an-azure-synapse-data-source-preview"></a>Azure Synapse Povezivanje izvor podataka (pretpregled)
+# <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics Povezivanje izvor podataka (pretpregled)
 
 Azure Synapse Analytics je usluga analitike poduzeća koja ubrzava vrijeme do uvida u skladišta podataka i big data sustava. Azure Synapse Analytics objedinjuje najbolje od SQL tehnologija koje se koriste u skladištu poslovnih podataka, Spark tehnologije koje se koriste za velike podatke, Data Explorer za analitiku log i vremenskih serija, Pipelines za integraciju podataka i ETL /ELT te duboku integraciju s drugim Azure uslugama kao Power BI što su, Cosmos DB i AzureML.
 
@@ -24,16 +24,14 @@ Dodatne informacije potražite u pregledu [Azure Synapse](/azure/synapse-analyti
 
 ## <a name="prerequisites"></a>Preduvjeti
 
-Moraju biti ispunjeni sljedeći preduvjeti za konfiguriranje veze iz Dynamics 365 Customer Insights sustava u Azure Synapse sustav.
-
 > [!IMPORTANT]
 > Obavezno postavite sve **dodjele uloga** kako je opisano.  
 
-## <a name="prerequisites-in-customer-insights"></a>Preduvjeti u usluzi Customer Insights
+**U odjeljku Uvidi kupaca**:
 
 * Imate administratorsku **ulogu** u korisničkom uvidu. Saznajte više o [korisničkim dozvolama u odjeljku Customer Insights](permissions.md#assign-roles-and-permissions).
 
-U servisu Azure: 
+**In Azure**:
 
 - Aktivna pretplata na Azure.
 
@@ -47,7 +45,7 @@ U servisu Azure:
 
 - Azure Synapse Na radnom prostoru upravitelju *usluge za Customer Insights* potrebna je **uloga administratora** synapsea. Dodatne informacije potražite u odjeljku [Kako postaviti kontrolu pristupa za vaš radni prostor servisa Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="connect-to-data-lake-databases-in-azure-synapse-analytics"></a>Poveži se s bazama podataka na jezeru podataka u programu Azure Synapse Analytics
+## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Poveži se s bazom podataka na jezeru podataka u programu Azure Synapse Analytics
 
 1. Idite na **Podaci** > **Izvor podataka**.
 
@@ -55,14 +53,16 @@ U servisu Azure:
 
 1. Odaberite metodu **Azure Synapse Analytics (Pretpregled).**
 
-1. Navedite **Naziv** izvora podataka i odaberite **Dalje** kako biste stvorili izvor podataka. 
+   :::image type="content" source="media/data_sources_synapse.png" alt-text="Dijaloški okvir za povezivanje s podacima synapse Analyticsa":::
+  
+1. **Unesite naziv** izvor podataka i neobavezni **Opis**.
 
 1. Odaberite dostupnu [vezu s](connections.md)Azure Synapse Analytics novom ili je stvorite.
 
-1. Odaberite jezersku **bazu podataka** iz radnog prostora povezanog s odabranom Azure Synapse Analytics vezom i odaberite **Dalje**.
+1. **Odaberite bazu podataka** iz radnog prostora povezanog s odabranom Azure Synapse Analytics vezom i odaberite **Dalje**.
 
-1. Odaberite entitete koje želite progutati iz povezane baze podataka. 
+1. Odaberite entitete koje želite progutati iz povezane baze podataka i odaberite **Dalje**.
 
-1. Po želji odaberite podatkovne entitete na kojima želite dopustiti profiliranje podataka. 
+1. Po želji odaberite podatkovne entitete na kojima želite dopustiti profiliranje podataka.
 
-1. Odaberite **Spremi** da biste primijenili svoj odabir i započeli unos podataka iz novostvorenih izvor podataka povezanih s tablicama baze podataka Lake u sustavu Azure Synapse Analytics.
+1. Odaberite **Spremi** da biste primijenili svoj odabir i započeli unos podataka iz novostvorenih izvor podataka povezanih s tablicama baze podataka Lake u sustavu Azure Synapse Analytics. Otvorit **će se stranica Izvori** podataka koja prikazuje novi izvor podataka u **statusu Osvježavanje**.

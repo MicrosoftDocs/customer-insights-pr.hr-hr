@@ -1,95 +1,93 @@
 ---
 title: LiveRamp obogaćivanje podataka o identitetu
 description: Obogatite profile kupaca LiveRamp podacima.
-ms.date: 03/02/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 0727818f6df565d9a031966a68d521ae7167e484
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e8a130865267b57c89157b44be3d4bba3dc2fb4e
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642238"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953986"
 ---
-# <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Obogatite profile korisnika podacima o identitetu s LiveRampa (Preview) 
+# <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Obogatite korisničke profile podacima o identitetu s LiveRampa (pregled)
 
-LiveRamp pruža determinističko izvanmrežno rješavanje identiteta i konsolidaciju korisničkih podataka. Osobne identifikatore u svojim podacima o kupcima možete mapirati na grafikon identiteta tvrtke AbiliTec i primati AbiliTec ID-ove. Zatim možete koristiti te ID-ove za bolje ujedinjenje podataka o kupcima. 
+LiveRamp pruža determinističko izvanmrežno rješavanje identiteta i konsolidaciju korisničkih podataka. Osobne identifikatore u svojim podacima o kupcima možete mapirati na grafikon identiteta tvrtke AbiliTec i primati AbiliTec ID-ove. Zatim možete koristiti te ID-ove za bolje ujedinjenje podataka o kupcima.
 
-## <a name="prerequisites"></a>Preduvjeti 
+## <a name="supported-countriesregions"></a>Podržane zemlje/regije
 
-Da biste konfigurirali obogaćivanje, moraju biti ispunjeni sljedeći preduvjeti: 
+Trenutno podržavamo obogaćivanje profila kupaca s LiveRamp podacima samo u Sjedinjenim Državama.
 
-- Imate aktivnu pretplatu na LiveRamp. Da biste dobili pretplatu, obratite se timu za LiveRamp račun ili zatražite [dynamics@liveramp.com](mailto:dynamics@liveramp.com) dodatne informacije.   
+## <a name="prerequisites"></a>Preduvjeti
 
-- Aktivna pretplata na AbiliTec s ID-om klijenta i tajnom pristupa API-ju. Dodatne informacije potražite u odjeljku [AbiliTec API Developer Hub](https://developers.liveramp.com/abilitec-api/). 
+- Aktivna pretplata na LiveRamp. Da biste dobili pretplatu, obratite se timu za LiveRamp račun ili zatražite [dynamics@liveramp.com](mailto:dynamics@liveramp.com) dodatne informacije.
 
-## <a name="supported-countriesregions"></a>Podržane zemlje/regije 
+- Aktivna pretplata na AbiliTec s ID-om klijenta i tajnom pristupa API-ju. Dodatne informacije potražite u odjeljku [AbiliTec API Developer Hub](https://developers.liveramp.com/abilitec-api/).
 
-Trenutno podržavamo obogaćivanje profila kupaca s LiveRamp podacima samo u Sjedinjenim Državama. 
+- LiveRamp [vezu](connections.md)[konfigurira](#configure-the-connection-for-liveramp) administrator.
 
-## <a name="configure-the-enrichment"></a>Konfiguracija za obogaćivanje 
+## <a name="configure-the-connection-for-liveramp"></a>Konfiguriranje veze za LiveRamp
 
-1. Idite na **Podaci** > **Obogaćivanje** i odaberite karticu **Pronađi**. 
+Morate biti [administrator](permissions.md#admin) u usluzi Customer Insights i imati aktivan ID klijenta i tajni ključ za LiveRamp.
 
-1. Na **pločici Identitet** odaberite Obogati moje **podatke**. 
+1. Odaberite **Dodaj vezu** prilikom konfiguriranja obogaćenja ili Idite na **Veze s administratorima** > **·**, a zatim odaberite **Postavi** na pločici LiveRamp.
+
+   :::image type="content" source="media/liveramp-connection.png" alt-text="Okno konfiguracije za postavljanje veze sa servisom LiveRamp AbiliTec.":::
+
+1. Unesite naziv veze i valjani LiveRamp ID klijenta i tajnu.
+
+1. Pregledajte i dajte svoj pristanak za [Privatnost podataka i usklađenost](#data-privacy-and-compliance) odabirom opcije **Slažem se**.
+
+1. Odaberite **Provjeri** da biste provjerili valjanost konfiguracije, a zatim **Spremi**.
+
+### <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
+
+Kada omogućite Dynamics 365 Customer Insights prijenos podataka na LiveRamp, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prenijeti takve podatke prema vašim uputima, ali vi ste odgovorni za to da LiveRamp ispunjava sve obveze zaštite privatnosti ili sigurnosti koje možda imate. Dodatne informacije potražite u Microsoftovoj [izjavi](https://go.microsoft.com/fwlink/?linkid=396732) o zaštiti privatnosti. Vaš administrator usluge Dynamics 365 Customer Insights može ovo obogaćivanje ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
+
+## <a name="configure-the-enrichment"></a>Konfiguracija za obogaćivanje
+
+1. Idite na **Podaci** > **Obogaćivanje** i odaberite karticu **Pronađi**.
+
+1. Odaberite **Obogati moje podatke** na pločici **Identitet** s liveramp pločice.
 
    :::image type="content" source="media/liveramp-tile.png" alt-text="Pločica identiteta na stranici s pregledom obogaćivanja.":::
 
-1. Odaberite [vezu](connections.md) s padajućeg popisa. Ako nijedna veza nije dostupna, obratite se administratoru. Ako ste administrator, vezu možete stvoriti tako **da odaberete Dodaj vezu**. Na padajućem popisu odaberite **LiveRamp**. 
+1. Pregledajte pregled, a zatim odaberite **Dalje**.
 
-1. Odaberite **Dalje** i odaberite **skup podataka** korisnika koje želite obogatiti podacima o identitetu s LiveRampa. Možete odabrati *entitet Kupac* da biste obogatili sve svoje profile kupaca ili odabrali entitet segmenta *da* biste obogatili samo profile kupaca sadržane u tom segmentu. 
+1. Odaberite vezu. Ako jedan nije dostupan, obratite se administratoru.
 
-1. Odaberite **Dalje** i definirajte koja će se vrsta polja iz vaših jedinstvenih profila koristiti za traženje odgovarajućih podataka o identitetu s LiveRampa. Potrebno je barem jedno od polja **Naziv i adresa**, **Telefon** ili **E-pošta**. 
+1. Odaberite **Dalje**.
 
-   > [!TIP]
-   > Što više identifikatora ključeva i polja mapirate, veća je vjerojatnost veće stope podudaranja 
+1. **Odaberite skup podataka** za korisnike i odaberite profil ili segment koji želite obogatiti podacima o identitetu s LiveRampa. Subjekt *Kupac* obogaćuje sve vaše profile kupaca, dok segment obogaćuje samo profile kupaca sadržane u tom segmentu.
 
-1. Mapirajte polja iz jedinstvenog *entiteta klijenta* koja će se koristiti za podudaranje s LiveRampovim grafikonom AbiliTec ID-a. 
+1. Definirajte koja će se vrsta polja iz vaših jedinstvenih profila koristiti za podudaranje podataka o identitetu s LiveRampa. Potrebno je barem jedno od polja **Naziv i adresa**, **E-pošta** ili **Telefon**. Za veću točnost podudaranja dodajte druga polja. Odaberite **Dalje**.
+
+1. Mapirajte svoja polja na identifikacijske podatke s LiveRampa.
 
    :::image type="content" source="media/liveramp-data-mapping.png" alt-text="Mogućnosti mapiranja podataka za obogaćivanje LiveRamp-a.":::
 
-1. Odaberite **Sljedeće** da biste dovršili mapiranje polja. 
+1. Odaberite **Sljedeće** da biste dovršili mapiranje polja.
 
-1. Navedite naziv **za** obogaćivanje i izlazni **entitet**. 
+1. Navedite naziv **za obogaćivanje i naziv izlaznog entiteta** **.**
 
-1. Odaberite **Spremi obogaćivanje** nakon pregledavanja svojih odabira. 
+1. Odaberite **Spremi obogaćivanje** nakon pregledavanja svojih odabira.
 
-## <a name="configure-the-connection-for-liveramp"></a>Konfiguriranje veze za LiveRamp 
+1. Odaberite **Pokreni** da biste pokrenuli postupak obogaćivanja ili zatvorili da biste se vratili na **stranicu Obogaćivanje**.
 
-Da biste konfigurirali [veze](connections.md), morate biti administrator. Odaberite **Dodaj vezu** prilikom konfiguriranja obogaćenja ili Idite na **AdminConnections** > **·**, a zatim odaberite **Postavi** na pločici **LiveRamp**. 
+## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
-:::image type="content" source="media/liveramp-connection.png" alt-text="Okno konfiguracije za postavljanje veze sa servisom LiveRamp AbiliTec.":::
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-1. Za **zaslonsko ime** unesite naziv veze. 
-
-1. Navedite valjani LiveRamp ID klijenta i tajnu. 
-
-1. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usklađenost** odabirom potvrdnog okvira **Slažem se**. 
-
-1. Odaberi **Potvrdi** za provjeru valjanosti konfiguracije. 
-
-1. Da biste dovršili vezu, odaberite **Spremi**. 
-
-## <a name="enrichment-results"></a>Rezultati obogaćivanja 
-
-Da biste pokrenuli postupak obogaćivanja, na naredbenoj traci odaberite Pokreni. Također možete dopustiti sustavu da automatski pokrene obogaćivanje u sklopu odgođenog [osvježavanja](system.md#schedule-tab). Vrijeme obrade ovisi o veličini vaših podataka o klijentima. 
-
-Nakon završetka postupka obogaćivanja, možete pregledati novoobogaćene podatke o profilima kupaca pod **Moja obogaćivanja**. Uz to ćete pronaći vrijeme zadnjeg ažuriranja i broj obogaćenih profila. 
-
-Detaljnom prikazu svakog obogaćenog profila možete pristupiti tako da odaberetePrikaz **obogaćenih** podataka. 
+Broj **kupaca obogaćenih poljem** pruža dubinsku analizu pokrivenosti svakog obogaćenog polja.
 
 ## <a name="next-steps"></a>Sljedeći koraci
 
-Nadogradite na svoje obogaćene podatke o klijentu. Koristite AbiliTec ID-ove za konsolidaciju korisničkih profila u prikaz temeljen na osobi. 
+Nadogradite na svoje obogaćene podatke o klijentu. Koristite AbiliTec ID-ove za konsolidaciju korisničkih profila u prikaz temeljen na osobi.
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost 
-
-Kada omogućite Dynamics 365 Customer Insights prijenos podataka na LiveRamp, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prenijeti takve podatke prema vašim uputima, ali vi ste odgovorni za to da LiveRamp ispunjava sve obveze zaštite privatnosti ili sigurnosti koje možda imate. Dodatne informacije potražite u Microsoftovoj [izjavi](https://go.microsoft.com/fwlink/?linkid=396732) o zaštiti privatnosti. Vaš administrator usluge Dynamics 365 Customer Insights može ovo obogaćivanje ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati. 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

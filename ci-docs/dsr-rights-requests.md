@@ -1,19 +1,19 @@
 ---
 title: Zahtjevi subjekta podataka (ZSP) za prava pod OUZP-om | Microsoft Docs
 description: Odgovaranje na zahtjeve subjekta podataka za Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808537"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947359"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahtjevi subjekta podataka (ZSP) za prava pod OUZP-om
 
@@ -77,11 +77,5 @@ Administrator klijenta može pratiti ove korake za izvoz podataka:
 1. Pošaljite e-poštu na D365CI@microsoft.com i u zahtjevu navedite adresu e-pošte korisnika. Tim Customer Insights poslat će poruku e-pošte na registriranu adresu e-pošte administratora klijenta i zatražiti potvrdu za izvoz podataka.
 2. Potvrdite zahtjev za izvozom podataka za zatraženog korisnika.
 3. Primite izvezene podatke putem adrese e-pošte administratora klijenta.
-
-## <a name="consent-management-preview"></a>Upravljanje pristankom (pretpregled)
-
-Mogućnost upravljanja pristankom ne prikuplja izravno korisničke podatke. Uvozi i obrađuje samo podatke o pristanku koje korisnici pružaju u drugim aplikacijama.
-
-Da biste uklonili podatke o pristanku o određenim korisnicima, uklonite ih u izvorima podataka unesenima u sposobnost upravljanja pristankom. Nakon osvježavanja izvor podataka, uklonjeni podaci bit će izbrisani i u Centru za pristanak. Aplikacije koje koriste entitet pristanka također će izbrisati podatke koji su uklonjeni na izvoru [nakon osvježavanja](system.md#refresh-processes). Preporučujemo brzo osvježavanje izvora podataka nakon odgovora na zahtjev ispitanika za uklanjanje korisničkih podataka iz svih ostalih procesa i aplikacija.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

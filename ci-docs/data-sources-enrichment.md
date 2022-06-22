@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800272"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011464"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obogaćivanje za izvore podataka (pretpregled)
 
@@ -29,9 +29,11 @@ Za stvaranje ili uređivanje obogaćenja morate imati suradnik ili administrator
 
 1. Odaberite okomitu trotočje (&vellip;) pokraj izvor podataka želite obogatiti i odaberite **Obogaćivanje**.
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stranica za obogaćivanje izvora podataka.":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Stranica izvori podataka s istaknutim obogaćenim":::
 
    Na **kartici Discover** prikazuju se podržane [mogućnosti](#supported-data-source-enrichments) obogaćivanja izvor podataka.
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stranica za obogaćivanje izvora podataka.":::
 
 1. Odaberite **Obogati moje podatke** da biste konfigurirali izvor podataka obogaćivanje. Naziv izlaznog entiteta automatski se popunjava.
 

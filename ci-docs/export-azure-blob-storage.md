@@ -1,19 +1,19 @@
 ---
 title: Izvoz podataka usluge Customer Insights u Spremnik za pohranu bloba za Azure
 description: Saznajte kako konfigurirati vezu i izvesti u Spremnik za pohranu bloba.
-ms.date: 10/06/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757377"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947129"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Izvoz popisa segmenata i ostalih podataka u Spremnik za pohranu bloba za Azure (pretpregled)
 
@@ -58,16 +58,19 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više info
 
 Spremanje izvoza ne pokreće izvoz odmah.
 
-Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab).     
+Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab).
 
-Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
+Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand).
 
 Izvezeni podaci pohranjuju se u spremnik za pohranu bloba koji ste konfigurirali. Sljedeći se putovi mapa automatski stvaraju u vašem spremniku:
 
 - Za izvorne entitete i entitete koje generira sustav:   
   `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Primjer: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
+  
+  > [!TIP]
+  > Izvoz entiteta koji sadrže veliku količinu podataka može dovesti do više CSV datoteka u istoj mapi za svaki izvoz. Podjela izvoza događa se iz razloga performansi kako bi se smanjilo vrijeme potrebno za dovršetak izvoza.
+
 - Model.json za izvezene entitete bit će na razini %ExportDestinationName%.  
   - Primjer: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
