@@ -1,5 +1,5 @@
 ---
-title: Unos podataka iz Azure Synapse Analytics
+title: Azure Synapse Povezivanje izvor podataka (pretpregled)
 description: Koristite bazu podataka u sustavu Azure Synapse kao izvor podataka u programu Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011418"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052690"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics Povezivanje izvor podataka (pretpregled)
 
@@ -59,7 +59,7 @@ Dodatne informacije potražite u pregledu [Azure Synapse](/azure/synapse-analyti
 
 1. Odaberite dostupnu [vezu s](connections.md)Azure Synapse Analytics novom ili je stvorite.
 
-1. **Odaberite bazu podataka** iz radnog prostora povezanog s odabranom Azure Synapse Analytics vezom i odaberite **Dalje**.
+1. **Odaberite bazu podataka** iz radnog prostora povezanog s odabranom Azure Synapse Analytics vezom i odaberite **Dalje**. Trenutno podržavamo samo bazu podataka *tipa* Lake.
 
 1. Odaberite entitete koje želite progutati iz povezane baze podataka i odaberite **Dalje**.
 

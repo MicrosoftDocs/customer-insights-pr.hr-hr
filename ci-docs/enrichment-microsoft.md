@@ -1,5 +1,5 @@
 ---
-title: Obogatite profile kupaca Microsoftovim robnim markama i interesima
+title: Obogatite korisničke profile robnim markama i podacima o interesima tvrtke Microsoft (pregled)
 description: Koristite Microsoftove vlasničke podatke da biste svoje korisničke podatke obogatili afinitetima i Udio prisutnosti.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953756"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082697"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Obogatite profile kupaca afinitetima i Udio prisutnosti (pregled)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Obogatite korisničke profile robnim markama i podacima o interesima tvrtke Microsoft (pregled)
 
 Koristite Microsoftove vlasničke podatke za obogaćivanje korisničkih podataka afinitetima robne marke, afinitetima interesa i Udio prisutnosti (SoV). Ovi afiniteti i SoV temelje se na podacima ljudi s demografijom sličnim vašim kupcima. Te vam informacije pomažu da bolje razumijete i segmentirate svoje kupce na temelju njihovih afiniteta ili SoV-a prema određenim robnim markama i interesima.
 
@@ -104,7 +104,7 @@ Trenutno podržavamo sljedeće mogućnosti zemlje/regije: Australija, Kanada (en
 
    Kada obogaćujemo profile, obogatit ćemo sve profile kupaca za koje dobivamo podatke za odabrane marke i interese, uključujući profile koji nisu u odabranoj državi ili regiji. Na primjer, ako ste odabrali Njemačku, obogatit ćemo profile koji se nalaze u Sjedinjenim Državama ako imamo dostupne podatke za odabrane brendove i interese u SAD-u.
 
-## <a name="enrichment-results"></a>Rezultati obogaćivanja
+## <a name="view-enrichment-results"></a>Prikaz rezultata obogaćivanja
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

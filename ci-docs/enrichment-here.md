@@ -1,5 +1,5 @@
 ---
-title: Obogaćivanje uz obogaćivanje treće strane HERE Technologies
+title: Obogatite profile kupaca here tehnologijama (pregled)
 description: Opće informacije o obogaćivanju treće strane tvrtke HERE Technologies.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953664"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052042"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obogaćivanje profila klijenata pomoću usluge HERE Technologies (pretpregled)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Obogatite profile kupaca here tehnologijama (pregled)
 
 HERE Technologies je tvrtka za lokacijsku platformu koja pruža podatke i usluge usmjerene na lokaciju. Usluge obogaćivanja podataka HERE Technologies poboljšavaju preciznost informacija o lokaciji vaših kupaca. Pruža normalizaciju adrese, ekstrakciju zemljopisne širine i dužine i još mnogo toga.
 
@@ -72,7 +72,7 @@ Vaš administrator usluge Dynamics 365 Customer Insights može ovo obogaćivanje
 
 1. Odaberite **Pokreni** da biste pokrenuli postupak obogaćivanja ili zatvorili da biste se vratili na **stranicu Obogaćivanje**.
 
-## <a name="enrichment-results"></a>Rezultati obogaćivanja
+## <a name="view-enrichment-results"></a>Prikaz rezultata obogaćivanja
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

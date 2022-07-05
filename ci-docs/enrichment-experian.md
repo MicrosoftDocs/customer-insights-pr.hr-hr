@@ -1,5 +1,5 @@
 ---
-title: Obogaćivanje uz obogaćivanje treće strane Experian
+title: Obogaćivanje klijentskih profila demografskim podacima tvrtke Experian (pretpregled)
 description: Opće informacije o obogaćivanju treće strane Experian.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954078"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053012"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obogaćivanje klijentskih profila demografskim podacima tvrtke Experian (pretpregled)
 
@@ -79,7 +79,7 @@ Kad omogućite Dynamics 365 Customer Insights za prijenos podataka u Experian, d
 
 1. Odaberite **Pokreni** da biste pokrenuli postupak obogaćivanja ili zatvorili da biste se vratili na **stranicu Obogaćivanje**.
 
-## <a name="enrichment-results"></a>Rezultati obogaćivanja
+## <a name="view-enrichment-results"></a>Prikaz rezultata obogaćivanja
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Prijavite se za besplatnu probnu verziju sustava Dynamics 365 Customer Insights
+title: Registracija za besplatnu probnu verziju Dynamics 365 Customer Insights
 description: Saznajte kako se brzo registrirati i započeti rad s besplatnom probnom verzijom aplikacije Customer Insights. Istražite aplikaciju s vodičima i pronađite dodatne resurse za učenje.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641707"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082487"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Registracija za besplatnu probnu verziju Dynamics 365 Customer Insights
 

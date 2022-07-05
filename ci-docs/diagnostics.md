@@ -1,5 +1,5 @@
 ---
-title: Nadzor Dynamics 365 Customer Insights s azure monitorom
+title: Prijava prosljeđivanja Dynamics 365 Customer Insights pomoću servisa Azure Monitor (pretpregled)
 description: Saznajte kako poslati zapisnike na Microsoft Azure Monitor.
 ms.date: 12/14/2021
 ms.reviewer: mhart
@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
-ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
+ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "8807572"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052644"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prijava prosljeđivanja Dynamics 365 Customer Insights pomoću servisa Azure Monitor (pretpregled)
 
-Dynamics 365 Customer Insights pruža izravnu integraciju s azure monitorom. Zapisnici resursa azure Monitor omogućuju vam praćenje i slanje zapisnika u [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) ili njihovo strujanje na [Azure Središta događaja](https://azure.microsoft.com/services/event-hubs/).
+Dynamics 365 Customer Insights pruža izravnu integraciju s azure monitorom. Zapisnici resursa servisa Azure Monitor omogućuju vam praćenje i slanje zapisnika u [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) ili njihovo strujanje u [Azure Središta događaja](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights šalje sljedeće zapisnike događaja:
 
@@ -176,7 +176,7 @@ Događaji i događaji tijeka rada API-ja imaju zajedničku strukturu i detalje u
 | `properties.origin`          | URI koji pokazuje odakle dolazi dohvat ili `unknown`.                                                                  |
 | `properties.operationStatus` | `Success` za HTTP kod stanja < 400 <br> `ClientError` za HTTP kod stanja < 500 <br> `Error` za HTTP status >= 500 |
 | `properties.tenantId`        | ID organizacije                                                                                                        |
-| `properties.tenantName`      | Naziv organizacije.                                                                                              |
+| `properties.tenantName`      | Naziv te tvrtke ili ustanove.                                                                                              |
 | `properties.callerObjectId`  | Azure Active Directory ObjectId pozivatelja.                                                                         |
 | `properties.instanceId`      | Uvidi kupaca`instanceId`                                                                                         |
 

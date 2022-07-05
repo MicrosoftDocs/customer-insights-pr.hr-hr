@@ -1,5 +1,5 @@
 ---
-title: Obogaćivanje pomoću SFTP prilagođenog uvoza
+title: Obogatite profile kupaca prilagođenim uvozom SFTP-a (pretpregled)
 description: Opće informacije o obogaćivanju SFTP prilagođenog uvoza.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953710"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082319"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogaćivanje profila klijenata pomoću prilagođenih podataka (pretpregled)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Obogatite profile kupaca prilagođenim uvozom SFTP-a (pretpregled)
 
 Prilagođeni uvoz Protokola sigurnog prijenosa datoteka (SFTP) omogućava vam uvoz podataka koji ne moraju proći kroz postupak objedinjavanja podataka. To je fleksibilan, siguran i jednostavan način unosa podataka. SFTP prilagođeni uvoz može se koristiti u kombinaciji sa [SFTP izvozom](export-sftp.md) koji vam omogućava izvoz podataka profila klijenata potrebnih za obogaćivanje. Podaci se zatim mogu obrađivati i obogaćivati, a SFTP prilagođeni uvoz može se koristiti za vraćanje obogaćenih podataka u Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ Vaš administrator usluge Dynamics 365 Customer Insights može ovo obogaćivanje
 
 1. Odaberite **Pokreni** da biste pokrenuli postupak obogaćivanja ili zatvorili da biste se vratili na **stranicu Obogaćivanje**.
 
-## <a name="enrichment-results"></a>Rezultati obogaćivanja
+## <a name="view-enrichment-results"></a>Prikaz rezultata obogaćivanja
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

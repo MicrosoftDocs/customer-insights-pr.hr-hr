@@ -1,5 +1,5 @@
 ---
-title: Izvoz podataka usluge Customer Insights u Azure Data Lake Storage druge generacije
+title: Izvoz podataka u Azure Data Lake Storage Gen2 (pretpregled)
 description: Saznajte kako konfigurirati vezu s uslugom Azure Data Lake Storage druge generacije.
 ms.date: 10/06/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: c2446fba425203d2910b82134b73543a73c7ecf8
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947221"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082655"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Izvoz popisa segmenata i drugih podataka u Azure Data Lake Storage Gen2 (pretpregled)
+# <a name="export-data-to-azure-data-lake-storage-gen2-preview"></a>Izvoz podataka u Azure Data Lake Storage Gen2 (pretpregled)
 
 Pohranite podatke s usluge Customer Insights na račun za Azure Data Lake Storage Gen2 ili ih upotrijebite za prijenos podataka u druge aplikacije.
 

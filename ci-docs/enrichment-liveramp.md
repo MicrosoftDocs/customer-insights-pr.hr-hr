@@ -1,5 +1,5 @@
 ---
-title: LiveRamp obogaćivanje podataka o identitetu
+title: Obogatite korisničke profile podacima o identitetu s LiveRampa (pregled)
 description: Obogatite profile kupaca LiveRamp podacima.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e8a130865267b57c89157b44be3d4bba3dc2fb4e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953986"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082193"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Obogatite korisničke profile podacima o identitetu s LiveRampa (pregled)
 
@@ -79,7 +79,7 @@ Kada omogućite Dynamics 365 Customer Insights prijenos podataka na LiveRamp, do
 
 1. Odaberite **Pokreni** da biste pokrenuli postupak obogaćivanja ili zatvorili da biste se vratili na **stranicu Obogaćivanje**.
 
-## <a name="enrichment-results"></a>Rezultati obogaćivanja
+## <a name="view-enrichment-results"></a>Prikaz rezultata obogaćivanja
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

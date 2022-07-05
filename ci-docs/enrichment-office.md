@@ -1,5 +1,5 @@
 ---
-title: Obogatite profile kupaca podacima iz Microsoft Office 365
+title: Obogatite profile kupaca podacima iz Microsoft Office 365 (pretpregleda)
 description: Koristite vlasničke podatke iz Microsoft Office kako biste obogatili svoje profile kupaca podacima o angažmanu.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954124"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055665"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Obogatite profile kupaca podacima o angažmanu (pregled)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Obogatite profile kupaca podacima iz Microsoft Office 365 (pretpregleda)
 
 Koristite podatke iz Microsoft Office 365 da biste obogatili profile svojih korisničkih računa uvidima u angažmane putem Office 365 aplikacija. Podaci o angažmanu sastoje se od aktivnosti e-pošte i sastanka, koja se agregira na razini računa. Na primjer, broj e-poruka s poslovnog računa ili broj sastanaka s računom. Podaci o pojedinačnim korisnicima nisu dostupni.
 
@@ -75,7 +75,7 @@ Odaberite **Pokreni** da biste pokrenuli postupak obogaćivanja.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Rezultati obogaćivanja
+## <a name="view-enrichment-results"></a>Prikaz rezultata obogaćivanja
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Ovo je *entitet Office*. *Office_UserEntity* sadrži ID-ove servisa Active Directory za adrese e-pošte odabrane tijekom konfiguracije obogaćivanja.
 

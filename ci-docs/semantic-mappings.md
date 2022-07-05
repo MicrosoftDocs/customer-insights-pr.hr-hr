@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642337"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083138"
 ---
 # <a name="semantic-mappings-preview"></a>Semantička mapiranja (pretpregled)
 
@@ -26,7 +26,7 @@ Semantičko mapiranje omogućuje vam mapiranje podataka o neaktivnosti u unaprij
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Definirajte semantičko mapiranje entiteta ContactProfile
 
-1. Idite na **DataSemantic** > **mappings (pretpregled)**.
+1. Idite na **Mapiranja semantičkog semantičkog prijenosa podataka** > **(pretpregled)**.
 
 1. Odaberite **Dodaj semantičko mapiranje** za početak vođenog iskustva.
 
@@ -102,7 +102,7 @@ Nakon stvaranja mapiranja *semantičkog entiteta ContactProfile* možete snimiti
 
 1. [*Definirajte mapiranje semantičkih entiteta ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) I pokrenite semantičko mapiranje.
 
-1. Otvorite **DataActivities** > **·**.
+1. Otvorite **Podatkovne** > **aktivnosti**.
 
 1. Odaberite **Dodaj aktivnost** da biste stvorili novu aktivnost.
 
@@ -110,8 +110,8 @@ Nakon stvaranja mapiranja *semantičkog entiteta ContactProfile* možete snimiti
 
 1. **U Odnosi** koraku stvorite neizravan odnos između podataka izvora aktivnosti s poslovnim subjektima pomoću podataka za kontakt kao posredničkog entiteta. Dodatne informacije potražite u izravnim [i neizravnim putovima](relationships.md#relationship-paths) odnosa.
    - Primjer odnosa za aktivnost pod nazivom *Nabava*:
-      - **Nabava Podaci o izvornoj** > **aktivnostikontaktni podaci** na atributu **ContactID**
-      - **Kontakt DataAccount** > **podaci** na atributu **ID poslovnog subjekta**
+      - **Kupnja Podaci o kontaktima** > **podataka o izvornoj** aktivnosti na atributu **ID kontakta**
+      - **Podaci** > **podatkovnog** računa za kontakt na atributu **ID poslovnog subjekta**
 
    :::image type="content" source="media/Contact_Activities1.png" alt-text="Primjer postavljanja odnosa.":::
 

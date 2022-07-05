@@ -1,5 +1,5 @@
 ---
-title: Dodatak korisničke kartice za aplikacije sustava Dynamics 365 (sadrži videozapise)
+title: Dodatak korisničke kartice za aplikacije sustava Dynamics 365 (pretpregled) (sadrži videozapis)
 description: Pomoću ovog dodatka prikažite podatke o profilu korisnika iz aplikacije Customer Insights iz aplikacija sustava Dynamics 365.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755627"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082130"
 ---
-# <a name="customer-card-add-in-preview"></a>Dodatak kartice klijenta (pretpregled)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dodatak za karticu kupca za aplikacije sustava Dynamics 365 (pretpregled)
 
 Dobijte prikaz svojih klijenata od 360 stupnjeva izravno u Dynamics 365 aplikacijama. S dodatkom kartice klijenta instaliranim u podržanoj aplikaciji Dynamics 365, možete odabrati prikaz polja profila klijenta, uvida i vremenske trake aktivnosti. Dodatak će dohvatiti podatke iz usluge Customer Insights bez utjecaja na podatke u povezanoj aplikaciji Dynamics 365.
 

@@ -1,5 +1,5 @@
 ---
-title: Izvoz podataka usluge Customer Insights u Spremnik za pohranu bloba za Azure
+title: Izvoz podataka u spremište blobova servisa Azure (pretpregled)
 description: Saznajte kako konfigurirati vezu i izvesti u Spremnik za pohranu bloba.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947129"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055481"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Izvoz popisa segmenata i ostalih podataka u Spremnik za pohranu bloba za Azure (pretpregled)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Izvoz podataka u spremište blobova servisa Azure (pretpregled)
 
 Pohranite podatke usluge Customer Insights na Spremnik za pohranu bloba ili ih koristite za prijenos svojih podataka u ostale aplikacije.
 

@@ -1,17 +1,17 @@
 ---
-title: Dynamics 365 Customer Insights pregled proizvoda
+title: Pregled proizvoda za Dynamics 365 Customer Insights
 author: m-hartmann
 description: Dobijte pregled i Dynamics 365 Customer Insights njegove glavne značajke.
 ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: a8b982d761b6598fb5c582963dbc00852089a396
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947083"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051122"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Pregled proizvoda za Dynamics 365 Customer Insights
 
@@ -32,7 +32,7 @@ Customer Insights licenciran je po klijentu i uključuje mogućnosti između pod
 
 ## <a name="try-customer-insights-and-get-started"></a>Isprobajte Customer Insights i započnite s radom
 
-Započnite besplatno probno [razdoblje](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) Customer Insights već danas kako biste testirali aplikaciju vlastitim podacima o kupcima. [Saznajte kako možete brzo pristupiti i istražiti mnoge ključne značajke](trial-signup.md) aplikacije. 
+Započnite besplatno probno [razdoblje](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) Customer Insights već danas kako biste testirali aplikaciju vlastitim podacima o kupcima. [Saznajte kako možete brzo pristupiti i istražiti mnoge ključne značajke aplikacije](trial-signup.md). 
 
 Pregledajte [istaknute resurse za](https://dynamics.microsoft.com/ai/customer-insights/resources/) učenje, uključujući izvješća analitičara, webinare na zahtjev i priče o kupcima.
 

@@ -1,5 +1,5 @@
 ---
-title: Nove i ažurirane značajke
+title: Što je novo u sustavu Dynamics 365 Customer Insights
 description: Informacije o novim značajkama, poboljšanjima i ispravcima programskih pogrešaka.
 ms.date: 06/02/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
-ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8843338"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054009"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Što je novo u sustavu Dynamics 365 Customer Insights
 
@@ -122,7 +122,7 @@ Ažuriranja u veljači 2022. uključuju nove značajke, nadogradnje performansi 
 
 Gotovi modeli predviđanje, uključujući **prijenos** pretplate, **transakcijski bućkuriš** i **vrijednost životnog vijeka korisnika (CLV)** postaju općenito dostupni kao dio Customer Insights. 
 
-Dodatne informacije potražite u članku [Pregled](predictions-overview.md) predviđanja.
+Dodatne informacije potražite u članku [Pregled predviđanja](predictions-overview.md).
 
 ### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Novi izvor podataka: integracija s (pretpregledom Azure Synapse Analytics)
 

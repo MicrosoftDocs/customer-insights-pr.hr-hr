@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: f3ec86806074a12c1107648303ed2d65e97ebc69
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800317"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083012"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Stvaranje mjera od nule pomoću sastavljača mjera
+# <a name="create-new-measures-with-the-measure-builder"></a>Stvaranje novih mjera pomoću sastavljača mjera
 
 Ovaj članak objašnjava kako stvoriti novu [mjeru](measures.md) od nule. Sastavljač mjera omogućuje vam definiranje izračuna pomoću matematičkih operatora, funkcija zbrajanja i filtara. Mjeru možete izraditi s atributima iz entiteta koji su povezani s jedinstvenim *entitetom klijent*.
 

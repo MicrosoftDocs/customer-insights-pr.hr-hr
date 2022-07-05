@@ -1,5 +1,5 @@
 ---
-title: Izvoz podataka usluge Customer Insights u Adobe Campaign Standard
+title: Izvoz segmenata uvida kupaca u Adobe standard kampanje (pretpregled)
 description: Saznajte kako koristiti segmente Customer Insights u aplikaciji Adobe Standard kampanje.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,24 +8,24 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642308"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082340"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Upotreba segmenata usluge Customer Insights u alatu Adobe Campaign Standard (pregled)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Izvoz segmenata uvida kupaca u Adobe standard kampanje (pretpregled)
 
-Kao korisnik Dynamics 365 Customer Insights možda ste stvorili segmente kako biste marketinške kampanje učinili učinkovitijima ciljajući relevantnu publiku. Da biste koristili segment iz Customer Insights Adobe Experience Platform u aplikacijama i aplikacijama kao što je Adobe Standard kampanje, morate slijediti nekoliko koraka navedenih u ovom članku.
+Kao korisnik Dynamics 365 Customer Insights sustava možda ste stvorili segmente kako biste svoje marketinške kampanje učinili učinkovitijima ciljajući relevantnu publiku. Da biste koristili segment iz Customer Insights Adobe Experience Platform u aplikacijama i aplikacijama kao što je Adobe Standard kampanje, morate slijediti nekoliko koraka navedenih u ovom članku.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Dijagram procesa koraka opisanih u ovom članku.":::
 
 ## <a name="prerequisites"></a>Preduvjeti
 
--   Licenca sustava Dynamics 365 Customer Insights
--   Licenca za Adobe Campaign Standard
--   Račun za Azure spremište blobova
+- Licenca sustava Dynamics 365 Customer Insights
+- Licenca za Adobe Campaign Standard
+- Račun za Azure spremište blobova
 
 ## <a name="campaign-overview"></a>Pregled kampanje
 
@@ -51,7 +51,7 @@ E-pošta s ponudom koju želite poslati sadržavat će ime, prezime i datum zavr
 
 S utvrđenim ciljnim publika možemo konfigurirati izvoz na račun servisa Azure Blob Storage.
 
-1. U odjeljku Customer Insights otvorite **AdminConnections** > **·**.
+1. U odjeljku Customer Insights otvorite **Administratorske** > **veze**.
 
 1. Odaberite **Dodaj vezu**, a zatim **Adobe Campaign** da biste konfigurirali vezu ili odaberite **Postavi** na pločici **Adobe Campaign**.
 

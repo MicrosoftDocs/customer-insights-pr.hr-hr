@@ -1,5 +1,5 @@
 ---
-title: Konfiguracija sustava u korisničkim uvidima
+title: Konfiguracija sustava
 description: Saznajte više o postavkama sustava u sustavu Dynamics 365 Customer Insights.
 ms.date: 04/21/2022
 ms.subservice: audience-insights
@@ -15,16 +15,16 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 3aa4c6529d705698e612adad86587e3c3a4db35b
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653607"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050662"
 ---
 # <a name="system-configuration"></a>Konfiguracija sustava
 
-Da biste pristupili konfiguracijama sustava, idite na **AdminSystem** > **da** biste pogledali popis sistemskih zadataka i procesa.
+Da biste pristupili konfiguracijama sustava, idite na **Administratorski** > **sustav** da biste pogledali popis sistemskih zadataka i procesa.
 
 Stranica **Sustav** uključuje sljedeće kartice:
 - [Stanje](#status-tab)
@@ -95,7 +95,7 @@ Upotrijebite karticu **Raspored** da biste zakazali automatsko osvježavanje svi
 > Izvore podataka kojima upravljate osvježavate prema vlastitim rasporedima. Da biste zakazali osvježavanje izvora podataka kojima upravljate, konfigurirajte postavke osvježavanja na tom određenom izvor podataka sa **stranice Izvori** podataka.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Postavke osvježavanja tijeka podataka.":::
 
-1. Otvorite **AdminSystem** > **i** odaberite karticu **Raspored**.
+1. Otvorite **Administratorski** > **sustav** i odaberite karticu **Raspored**.
 
 2. Zadano je stanje za zakazano osvježavanje **Isključeno**. Da biste omogućili zakazana osvježavanja, promijenite gumb na vrhu zaslona na **Uključeno**.
 

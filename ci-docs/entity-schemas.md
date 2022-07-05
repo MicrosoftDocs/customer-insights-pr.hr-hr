@@ -1,5 +1,5 @@
 ---
-title: Sheme entiteta usluge Customer Insights u formatu Common Data Model
+title: Sheme entiteta u modelu zajedničkih podatakal
 description: Rad s entitetima u formatu Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757423"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054745"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Sheme entiteta u modelu zajedničkih podatakal
-
-
 
 [Model zajedničkih podataka](/common-data-model/) je deklarativna specifikacija i definicija standardnih entiteta koji predstavljaju uobičajene koncepte i aktivnosti u poslovnim i produktivnim aplikacijama. Ovaj model se proširuje i na opažajne i na analitičke podatke. Model zajedničkih podataka pruža dobro definirane, modularne i proširive poslovne entitete, kao što su Račun, Poslovna jedinica, Slučaj, Kontakt, Potencijalni klijent i Proizvod te interakcije s dobavljačima, suradnicima i klijentima, kao što su aktivnosti i ugovori o razini usluge. Svatko može nadograditi i proširiti definicije modela zajedničkih podataka kako bi zabilježio dodatne ideje vezane uz poslovanje.
 

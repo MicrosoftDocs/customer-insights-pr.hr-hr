@@ -1,5 +1,5 @@
 ---
-title: Izvoz podataka usluge Customer Insights u AdRoll
+title: Izvoz segmenata u AdRoll (pretpregled)
 description: Saznajte kako konfigurirati vezu i izvesti u AdRoll.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec7d2d4d137f2f0e3e1ff2ec0d09bff8ac4f28ea
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 13c7dd3b8556ad807fba6c537525b463480e860b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642235"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082823"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Izvoz segmenata u AdRoll (pretpregled)
 
@@ -21,9 +21,9 @@ Izvezite segmente objedinjenih profila klijenata u AdRoll i upotrijebite ih za o
 
 ## <a name="prerequisites-for-a-connection"></a>Preduvjeti za vezu
 
--   Imate [račun za AdRoll](https://www.adroll.com/) i odgovarajuće vjerodajnice administratora.
--   Konfigurirali [ste segmente](segments.md) u customer insights.
--   Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
+- Imate [račun za AdRoll](https://www.adroll.com/) i odgovarajuće vjerodajnice administratora.
+- Konfigurirali [ste segmente](segments.md) u customer insights.
+- Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
