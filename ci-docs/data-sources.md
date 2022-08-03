@@ -1,7 +1,7 @@
 ---
 title: Pregled izvora podataka
 description: Saznajte kako uvesti ili unijeti podatke iz različitih izvora.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051444"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207082"
 ---
 # <a name="data-sources-overview"></a>Pregled izvora podataka
 
 Dynamics 365 Customer Insights pruža veze za dovođenje podataka iz širokog skupa izvora. Povezivanje s izvorom podataka često se naziva postupkom *gutanja podataka*. Nakon unosa podataka možete [objediniti, generirati](data-unification.md) uvide i aktivirati podatke za izgradnju personaliziranih iskustava.
 
-## <a name="add-data-sources"></a>Dodavanje izvora podataka
+## <a name="add-or-edit-data-sources"></a>Dodavanje ili uređivanje izvora podataka
 
-Možete priložiti ili uvesti izvore podataka u Customer Insights. Veze u nastavku pružaju upute za dodavanje izvora podataka.
+Možete priložiti ili uvesti izvore podataka u Customer Insights. Veze u nastavku pružaju upute za dodavanje i uređivanje izvora podataka.
 
 **Prilaganje izvor podataka**
 
@@ -50,13 +50,18 @@ Ako je vaše okruženje konfigurirano za korištenje pohrane customer insights i
 
 Ako vaše okruženje ne koristi Power Platform tijekove podataka, **stranica Izvori** podataka sadrži samo popis svih izvora podataka. Nema prikaza sekcija.
 
-Idite na **izvore** > **podataka** da biste vidjeli naziv svakog unesenog izvor podataka, njegov status i posljednji put kada su podaci osvježeni za taj izvor. Popis izvora podataka možete sortirati prema svakom stupcu.
+## <a name="manage-existing-data-sources"></a>Upravljanje postojećim izvorima podataka
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Dodan je izvor podataka.":::
+Idite na **izvore** > **podataka** da biste vidjeli naziv svakog unesenog izvor podataka, njegov status i posljednji put kada su podaci osvježeni za taj izvor. Popis izvora podataka možete sortirati po bilo kojem stupcu ili pomoću okvira za pretraživanje pronaći izvor podataka kojim želite upravljati.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Odaberite izvor podataka za prikaz dostupnih akcija.
 
-Učitavanje podataka može potrajati. Nakon uspješnog osvježavanja umetnuti podaci mogu se pregledati na stranici **Entiteti**. Dodatne informacije potražite u odjeljku [Entiteti](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Dodan je izvor podataka.":::
+
+- [**Uredite**](#add-or-edit-data-sources) izvor podataka da biste promijenili njegova svojstva.
+- [**Osvježite**](#refresh-data-sources) izvor podataka tako da uključuje najnovije podatke.
+- [**Obogatite**](data-sources-enrichment.md) izvor podataka prije ujedinjenja.
+- **Izbrišite** izvor podataka. Izvor podataka se može izbrisati samo ako se podaci ne koriste u bilo kojoj obradi kao što su ujedinjenje, uvidi, aktivacije ili izvoz.
 
 ## <a name="refresh-data-sources"></a>Osvježivanje izvora podataka
 
@@ -64,23 +69,12 @@ Izvori podataka mogu se osvježiti prema automatskom rasporedu ili ručno na zah
 
 Idite na **Raspored** > **administratorskih** > [**sustava**](system.md#schedule-tab) da biste konfigurirali sistemski zakazana osvježavanja unesenih izvora podataka.
 
-Da biste osvježili izvor podataka na zahtjev, slijedite korake u nastavku:
+Da biste osvježili izvor podataka na zahtjev:
 
 1. Idite na **Podaci** > **Izvor podataka**.
 
-1. Odaberite okomitu trotočje (&vellip;) pokraj izvor podataka želite osvježiti, a zatim na padajućem popisu odaberite **Osvježi**. Izvor podataka sada se pokreće za ručno osvježavanje. Osvježavanje izvora podataka ažurirat će i shemu entiteta i podatke za sve entitete navedene u izvoru podataka.
+1. Odaberite izvor podataka želite osvježiti, a zatim odaberite **Osvježi**. Izvor podataka sada se pokreće za ručno osvježavanje. Osvježavanje izvora podataka ažurirat će i shemu entiteta i podatke za sve entitete navedene u izvoru podataka.
 
-1. Odaberite **Zaustavljanje osvježavanja** ako želite otkazati postojeće osvježavanje i izvor podataka će se vratiti na posljednji status osvježavanja.
-
-## <a name="delete-a-data-source"></a>Brisanje izvora podataka
-
-Izvor podataka se može izbrisati samo ako se podaci ne koriste u bilo kojoj obradi kao što su ujedinjenje, uvidi, aktivacije ili izvoz.
-
-1. Idite na **Podaci** > **Izvor podataka**.
-
-2. Odaberite okomitu trotočje (&vellip;) pokraj izvor podataka želite ukloniti, a zatim na padajućem izborniku odaberite **Izbriši**.
-
-3. Potvrdite brisanje.
-
+1. Odaberite status da biste otvorili **okno s detaljima o** napretku i prikazali tijek. Da biste otkazali posao, pri dnu okna odaberite **Odustani od posla**.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

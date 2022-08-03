@@ -1,7 +1,7 @@
 ---
 title: Aktivnosti klijenta
 description: Definirajte aktivnosti klijenta i prikažite ih na vremenskoj traci na profilima klijenata.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
@@ -17,51 +17,51 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755489"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188130"
 ---
 # <a name="customer-activities"></a>Aktivnosti klijenta
 
-Kombinirajte aktivnosti klijenta iz [različitih izvora podataka](data-sources.md) u sustavu Dynamics 365 Customer Insights. Stvorite vremensku traku koja kronološki navodi aktivnosti. Uključite vremensku traku u aplikacije sustava Dynamics 365 pomoću [rješenja](customer-card-add-in.md) za dodatak Kartica kupca.
+Aktivnosti kupaca su akcije ili događaji koje izvode kupci. Na primjer, transakcije, trajanje poziva za podršku, recenzije web stranice, kupnje ili povrati. Te su aktivnosti sadržane u jednom ili više izvora podataka. Uz Customer Insights objedinite svoje aktivnosti kupaca iz tih [izvora](data-sources.md) podataka i povežite ih s profilima kupaca. Te se aktivnosti pojavljuju kronološki u vremenskoj traci na profilu kupca. Uključite vremensku traku u aplikacije sustava Dynamics 365 pomoću [rješenja](customer-card-add-in.md) za dodatak Kartica kupca.
 
 ## <a name="define-an-activity"></a>Definiranje aktivnosti
 
-Vaši izvori podataka mogu uključivati entitete s podacima o transakcijama i aktivnostima iz više izvora podataka. Identificirajte te entitete i odaberite aktivnosti koje želite prikazati na vremenskoj traci klijenta. Odaberite entitet koji uključuje vašu ciljanu aktivnost ili aktivnosti.
-
-Entitet mora imati najmanje jedan atribut vrste **Datum** da bi se uključio u vremensku traku klijenta i ne možete dodavati entitete bez polja **Datum**. Kontrola **Dodaj aktivnost** onemogućena je ako nije pronađen takav entitet.
+Entitet mora imati barem jedan atribut vrste **Datum** da bi bio uključen u vremensku traku klijenta. Kontrola **Dodaj aktivnost** onemogućena je ako nije pronađen takav entitet.
 
 1. Otvorite **Podatkovne** > **aktivnosti**.
 
-1. Odaberite **Dodaj aktivnost** za pokretanje vođenog iskustva za postupak postavljanja aktivnosti.
+1. Odaberite **Dodaj aktivnost** da biste započeli vođeno iskustvo.
 
-1. U koraku **Podaci o aktivnostima** postavite vrijednosti za sljedeća polja:
+1. U koraku **s podacima o** aktivnosti unesite sljedeće podatke:
 
-   - **Naziv aktivnosti**: Odaberite naziv za svoju aktivnost.
-   - **Entitet**: odaberite entitet koji uključuje podatke o transakcijama ili aktivnostima.
-   - **Primarni ključ**: odaberite polje koje jedinstveno identificira zapis. Ne smije sadržavati duplicirane vrijednosti, prazne vrijednosti ili vrijednosti koje nedostaju.
+   - **Naziv** aktivnosti: naziv vaše aktivnosti.
+   - **Entitet** aktivnosti: entitet koji uključuje podatke o transakcijama ili aktivnostima.
+   - **Primarni ključ**: polje koje jedinstveno identificira zapis. Ne smije sadržavati duplicirane vrijednosti, prazne vrijednosti ili vrijednosti koje nedostaju.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Postavite podatke o aktivnosti s nazivom, entitetom i primarnim ključem.":::
 
-1. Odaberite **Sljedeće** da biste prešli na sljedeći korak.
+1. Odaberite **Dalje**.
 
-1. U kkoraku **Odnos** konfigurirajte pojedinosti za povezivanje podataka o aktivnosti s odgovarajućim zapisom klijenta. Ovaj korak vizualizira vezu među entitetima.  
+1. U koraku **Odnos** odaberite **Dodaj odnos** da biste povezali podatke o aktivnostima s odgovarajućim zapisom o klijentu. Ovaj korak vizualizira vezu među entitetima.  
 
-   - **Prvi**: Strano polje u vašem entitetu aktivnosti koje će se koristiti za uspostavljanje odnosa s drugim entitetom.
-   - **Drugi**: Odgovarajući izvorni entitet klijenta s kojim će vaš entitet aktivnosti biti u odnosu. Možete se odnositi samo na izvorne entitete klijenata koji se koriste u procesu objedinjavanja podataka.
-   - **Treći**: Ako odnos između ovog entiteta aktivnosti i odabranog izvornog entiteta klijenta već postoji, naziv odnosa bit će u načinu samo za čitanje. Ako takav odnos ne postoji, stvorit će se novi odnos s nazivom koji navedete u ovom okviru.
+   - **Vanjski ključ iz entiteta**: polje u entitetu aktivnosti koje će se koristiti za uspostavljanje odnosa s drugim entitetom.
+   - **Naziv entiteta**: Odgovarajući izvorni klijentski entitet s kojim će vaš entitet aktivnosti biti u odnosu. Možete se odnositi samo na izvorne entitete klijenata koji se koriste u procesu objedinjavanja podataka.
+   - **Naziv** odnosa: Naziv koji identificira odnos između entiteta. Ako odnos između ovog entiteta aktivnosti i odabranog izvornog entiteta klijenta već postoji, naziv odnosa je samo za čitanje.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definirajte odnos entiteta.":::
 
    > [!TIP]
    > U B2B okruženjima možete birati između entiteta računa i ostalih entiteta. Ako odaberete entitet računa, automatski se postavlja putanja odnosa. Za druge entitete morate definirati putanju odnosa preko jednog ili više posrednih entiteta dok ne dođete do entiteta računa.
 
-1. Odaberite **Sljedeće** da biste prešli na sljedeći korak. 
+1. Odaberite **Primijeni** da biste stvorili odnos.
 
-1. U koraku **Objedinjavanje aktivnosti** odaberite događaj aktivnosti i vrijeme početka svoje aktivnosti. 
+1. Odaberite **Dalje**.
+
+1. U koraku **Objedinjavanje aktivnosti** odaberite događaj aktivnosti i vrijeme početka svoje aktivnosti.
    - **Obvezna polja**
       - **Aktivnost događaja**: Polje koje je događaj za ovu aktivnost.
       - **Vremenska oznaka**: Polje koje predstavlja vrijeme početka vaše aktivnosti.
@@ -76,61 +76,49 @@ Entitet mora imati najmanje jedan atribut vrste **Datum** da bi se uključio u v
 
       :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Navedite podatke o aktivnostima klijenta u entitetu Objedinjene aktivnosti.":::
 
-1. Odaberite **Sljedeće** da biste se pomaknuli na sljedeći korak. Možete odabrati **Završi i pregledaj** da biste sada spremili aktivnost s vrstom aktivnosti postavljenom na **Ostalo**. 
+1. Odaberite **Dalje** da biste odabrali vrstu aktivnosti ili Odaberite **Završi i pregledaj** da biste spremili aktivnost s vrstom aktivnosti postavljenom na **Ostalo**.
 
 1. U koraku **Vrsta aktivnosti** odaberite vrstu aktivnosti i neobavezno odaberite želite li semantički mapirati neke od vrsta aktivnosti za korištenje u ostalim područjima Customer Insights. Trenutno, vrste aktivnosti povratnih informacija *,* *lojalnosti* *, salesoradera*, *salesorderlinea* i *pretplate* podržavaju semantiku nakon što pristanu na mapiranje polja. Ako vrsta aktivnosti nije relevantna za novu aktivnost, možete odabrati *Ostalo* ili *Stvori novo* za prilagođenu vrstu aktivnosti.
 
-1. Odaberite **Sljedeće** da biste se pomaknuli na sljedeći korak. 
+1. Odaberite **Dalje**.
 
 1. U koraku **Pregled** provjerite svoje odabire. Vratite se na bilo koji od prethodnih koraka i ažurirajte podatke ako je potrebno.
 
-   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Pregledajte navedena polja za aktivnost.":::
-   
-1. Odaberite **Spremi aktivnost** da biste primijenili promjene i odaberite **Gotovo** da biste se vratili na **Podaci** > **Aktivnosti**. Ovdje možete vidjeti koje su aktivnosti postavljene za prikaz na vremenskoj traci. 
+1. Odaberite **Spremi aktivnost** da biste primijenili promjene i odaberite **Gotovo** da biste se vratili na **Podaci** > **Aktivnosti**. Prikazana je stvorena aktivnost.
 
-1. Na stranici **Aktivnosti** odaberite **Pokreni** za obradu aktivnosti. 
+1. Nakon stvaranja svih aktivnosti odaberite **Pokreni** da biste ih obradili.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Upravljanje postojećim aktivnostima
 
-Na **Podaci** > **Aktivnosti** možete pregledati sve spremljene aktivnosti i upravljati njima. Svaka je aktivnost predstavljena retkom koji također uključuje pojedinosti o izvoru, entitetu i vrsti aktivnosti.
+Idite na **Podatkovne** > **aktivnosti** da biste vidjeli spremljene aktivnosti, njihov izvorni entitet, vrstu aktivnosti i ako su uključene u vremensku traku klijenta. Popis aktivnosti možete sortirati po bilo kojem stupcu ili pomoću okvira za pretraživanje pronaći aktivnost kojom želite upravljati.
 
-Sljedeće su radnje dostupne kada odaberete aktivnost. 
+Odaberite aktivnost za prikaz dostupnih akcija.
 
-- **Uredi**: Otvara postavljanje aktivnosti u koraku pregleda. U ovom koraku možete promijeniti bilo koju ili sve trenutne konfiguracije. Nakon promjene konfiguracije odaberite **Spremi aktivnost**, a zatim odaberite **Pokreni** za obradu promjena.
-
-- **Preimenuj** : Otvara dijaloški okvir u koji možete unijeti drugi naziv za odabranu aktivnost. Odaberite **Spremi** za primjenu izmjena.
-
-- **Izbriši**: Otvara dijaloški okvir za potvrdu brisanja odabrane aktivnosti. Možete i izbrisati više aktivnosti odjednom odabirom aktivnosti, a zatim odabirom ikone za brisanje. Odaberite **Izbriši** da biste potvrdili brisanje.
+- **Uredite** aktivnost da biste promijenili njezinu konfiguraciju. Konfiguracija se otvara u koraku pregleda. Nakon promjene konfiguracije odaberite **Spremi aktivnost**, a zatim odaberite **Pokreni** za obradu promjena.
+- **Preimenujte** aktivnost. Odaberite **Spremi** za primjenu izmjena.
+- **Izbrišite** aktivnost. Da biste izbrisali više aktivnosti odjednom, odaberite aktivnosti, a zatim **izbrišite**. Potvrdite brisanje.
 
 ## <a name="view-activity-timelines-on-customer-profiles"></a>Prikaz vremenskih traka aktivnosti na profilima klijenata
 
-Nakon što konfigurirate aktivnosti klijenta, odaberite **Prikaži na vremenskoj traci aktivnosti** u konfiguraciji aktivnosti kako biste pronašli sve aktivnosti klijenta na profilu klijenta.
+1. Ako ste u konfiguraciji aktivnosti odabrali **Prikaži vremensku traku** aktivnosti, idite na **Kupci i odaberite profil kupca** da biste vidjeli aktivnosti klijenta u odjeljku Vremenska **traka** Aktivnost.
 
-Da biste otvorili vremensku traku za klijenta, idite na **Klijenti** i odaberite profil klijenta koji želite vidjeti.
+   :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Pregledajte konfigurirane aktivnosti u profilima klijenata.":::
 
-Ako je klijent sudjelovao u konfiguriranoj aktivnosti, pronaći ćete je u odjeljku Vremenska **traka** Aktivnosti.
+1. Da biste filtrirali aktivnosti na vremenskoj traci aktivnosti:
 
-:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Pregledajte konfigurirane aktivnosti u profilima klijenata.":::
+   - Odaberite jednu ili više ikona aktivnosti da biste suzili rezultate tako da sadrže samo odabrane vrste.
 
-Postoji nekoliko načina za filtriranje aktivnosti na vremenskoj traci aktivnosti:
+     :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrirajte aktivnosti prema vrsti s pomoću ikona.":::
 
-- Možete odabrati jednu ili više ikona aktivnosti da biste poboljšali rezultate tako da uključuju samo odabrane vrste.
+   - Odaberite **Filtar** da biste otvorili ploču filtra da biste konfigurirali filtre vremenske trake. Filtrirajte prema *ActivityType* i/ili *Datumu*. Odaberite **Primijeni**.
 
-  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrirajte aktivnosti prema vrsti s pomoću ikona.":::
+     :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="S pomoću panela filtra konfigurirajte uvjete filtra.":::
 
-- Možete odabrati **Filtar** za otvaranje panela s filtrima za konfiguriranje filtara vremenske trake.
-
-   1. Možete filtrirati prema *Vrsti aktivnosti* i *Datumu*
-   1. Odaberite **Primijeni** za biste upotrijebili filtre na vremenskoj traci aktivnosti.
-
-   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="S pomoću panela filtra konfigurirajte uvjete filtra.":::
-
-Da biste uklonili filtre, odaberite **x** pored svakog filtra primijenjenog na vremensku traku ili odaberite **Očisti filtre**.
-
+1. Da biste uklonili filtre, odaberite **Očisti filtre** ili Potvrdite okvir **Filtriraj** i poništite okvir filtra.
 
 > [!NOTE]
-> Filtri aktivnosti uklanjaju se kada napustite profil klijenta. Morate ih primijeniti svaki put kada otvorite profil klijenta.
+> Filtri aktivnosti uklanjaju se kada napustite profil klijenta. Morate ih primijeniti svaki put kada otvorite profil kupca.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

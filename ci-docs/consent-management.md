@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947518"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188038"
 ---
 # <a name="use-customer-consent"></a>Koristi pristanak korisnika
 
@@ -50,13 +50,13 @@ Primjer tablice jednostavne baze podataka pristanka s više mogućnosti pristank
 
 ## <a name="import-and-unify-consent-data"></a>Uvoz i objedinjavanje podataka o pristanku
 
-Podatke o pristanku možete uvesti na isti način na koji unosite druge izvore podataka u Customer Insights. Dodatne informacije o podržanim izvorima podataka i načinu njihova uvoza potražite u članku [Pregled izvora podataka](data-sources.md).
+Uvezite podatke o pristanku na isti način na koji unosite druge izvore podataka u Customer Insights. Dodatne informacije o podržanim izvorima podataka i načinu njihova uvoza potražite u članku [Pregled izvora podataka](data-sources.md).
 
 Dodatne informacije o objedinjavanju izvora podataka potražite u članku [Pregled](data-unification.md) ujedinjenja podataka.
 
 ## <a name="use-consent-data"></a>Korištenje podataka o pristanku
 
-Nakon što vaši podaci o pristanku budu dio vaših jedinstvenih korisničkih profila, možete ih koristiti u Customer Insights. Na primjer, stvorite segment s pravilom kako biste osigurali da poštujete postavke privatnosti i zaštite podataka svojih kupaca. Pravila koja podržavaju preference pristanka koriste se za isključivanje korisnika iz segmenta koji se temelji na atributima profila. Dodavanje pravila segmentu koje isključuje profile korisnika koji nisu dali pristanak za kontakt.
+Nakon što vaši podaci o pristanku budu dio vaših jedinstvenih korisničkih profila, možete ih koristiti u Customer Insights. Na primjer, stvorite segment s pravilom kako biste osigurali da poštujete postavke privatnosti i zaštite podataka svojih kupaca. Pravila koja podržavaju preference pristanka koriste se za isključivanje korisnika iz segmenta koji se temelji na atributima profila. Dodajte pravilo segmentu koje isključuje profile kupaca koji nisu dali pristanak za kontakt.
 
 Pozivajući se na gornju oglednu tablicu, segment može sadržavati ovo pravilo:`Consent option=Newsletter & Consent value=True`. Ova konfiguracija rezultira segmentom koji poštuje postavke kontakta za slanje biltena.
 
@@ -71,3 +71,5 @@ Važno je ažurirati status pristanka za svoje klijente. Zakazano osvježavanje 
 Drugim riječima, provjerite imaju li izvorišni podaci koji se uvoze u Customer Insights uvijek najnovije informacije.
 
 Dodatne informacije potražite u članku [Ručno](segments.md#refresh-segments) osvježavanje segmenata ili [konfiguriranje zakazanog osvježavanja](system.md#schedule-tab).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

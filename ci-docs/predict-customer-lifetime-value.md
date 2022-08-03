@@ -1,7 +1,7 @@
 ---
 title: Predviđanje cjeloživotne vrijednosti klijenta (CLV)
 description: Predvidite potencijalni prihod za aktivne klijente u budućnosti.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055205"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186431"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Predviđanje cjeloživotne vrijednosti klijenta (CLV)
 
 Predvidite potencijalnu vrijednost (prihod) koju će pojedini aktivni klijenti donijeti u vašu tvrtku u definiranom vremenskom razdoblju u budućnosti. Ova vam značajka može pomoći u postizanju različitih ciljeva:
+
 - Prepoznati visokovrijedne klijente i obraditi ovaj uvid
 - Stvoriti strateške segmente klijenata na temelju njihove potencijalne vrijednosti za vođenje personaliziranih kampanja s ciljanim naporima prodaje, marketinga i podrške
 - Voditi razvoj proizvoda usredotočujući se na značajke koje povećavaju vrijednost za klijente
 - Optimizirati prodajnu ili marketinšku strategiju i preciznije rasporediti proračun za dosezanje klijenata
-- Prepoznati i nagraditi visokovrijedne klijente kroz programe vjernosti ili nagrađivanja 
+- Prepoznati i nagraditi visokovrijedne klijente kroz programe vjernosti ili nagrađivanja
 
 ## <a name="prerequisites"></a>Preduvjeti
 
@@ -35,7 +36,7 @@ Prije početka razmislite što CLV znači za vaše poslovanje. Trenutno podržav
 
 Budući da za konfiguriranje i pokretanje CLV modela ne treba puno vremena, razmislite o stvaranju nekoliko modela s različitim preferencijama unosa i usporedite rezultate modela da biste vidjeli koji scenarij modela najbolje odgovara vašim poslovnim potrebama.
 
-###  <a name="data-requirements"></a>Preduvjeti za podatke
+### <a name="data-requirements"></a>Preduvjeti za podatke
 
 Potrebni su sljedeći podaci i ako su označeni kao neobavezni, preporučuju se za veće performanse modela. Što više podataka model može obraditi, to će predviđanje biti preciznije. Stoga vam preporučujemo da unesete više podataka o aktivnostima klijenata, ako su dostupni.
 
@@ -52,11 +53,12 @@ Potrebni su sljedeći podaci i ako su označeni kao neobavezni, preporučuju se 
     - Web-aktivnosti: povijest posjeta web-mjestu, povijest e-pošte
     - Aktivnosti vjernosti: povijest akumulacije i iskorištavanja nagradnih bodova za vjernost
     - Povijest zapisnika službe za korisnike, servisnih poziva, pritužbi ili povrata
+    - Podaci o profilu kupca
 - Podaci o aktivnostima klijenata (neobavezno):
     - Identifikatori aktivnosti za razlikovanje aktivnosti iste vrste
     - Identifikatori klijenata za spajanje aktivnosti s klijentima
     - Podaci o aktivnosti koji sadrže naziv i datum aktivnosti
-    - Shema semantičkih podataka za aktivnosti uključuje: 
+    - Shema semantičkih podataka za aktivnosti uključuje:
         - **Primarni ključ**: jedinstveni identifikator aktivnosti
         - **Vremenska oznaka**: datum i vrijeme događaja identificirani pomoću primarnog ključa
         - **Događaj (naziv aktivnosti)**: naziv događaja koji želite koristiti
@@ -66,7 +68,7 @@ Potrebni su sljedeći podaci i ako su označeni kao neobavezni, preporučuju se 
     - Dovoljno povijesnih podataka: najmanje jedna godina transakcijskih podataka. Po mogućnosti dvije do tri godine transakcijskih podataka za predviđanje CLV-a za jednu godinu.
     - Više kupnji po klijentu: u idealnom slučaju, najmanje dvije do tri transakcije po ID-u klijenta, po mogućnosti tijekom više datuma.
     - Broj klijenata: najmanje 100 jedinstvenih klijenata, po mogućnosti više od 10 000 klijenata. Model neće uspjeti s manje od 100 klijenata i nedovoljnim povijesnim podacima
-    - Potpunost podataka: manje od 20 % vrijednosti koje nedostaju u obaveznim poljima u ulaznim podacima   
+    - Potpunost podataka: manje od 20 % vrijednosti koje nedostaju u obaveznim poljima u ulaznim podacima
 
 > [!NOTE]
 > - Model zahtijeva povijest transakcija vaših klijenata. Trenutno se može konfigurirati samo jedan entitet povijesti transakcija. Ako postoji više subjekata nabave/transakcije, možete ih udružiti prije Power Query gutanja podataka.
@@ -122,11 +124,11 @@ Potrebni su sljedeći podaci i ako su označeni kao neobavezni, preporučuju se 
 
 1. Odaberite **Dalje**.
 
-### <a name="add-optional-data"></a>Dodavanje neobaveznih podataka
+### <a name="add-optional-activity-data"></a>Dodavanje neobaveznih podataka o aktivnostima
 
-Podaci koji odražavaju ključne interakcije klijenata (poput weba, službe za korisnike i zapisnika događaja) dodaju kontekst zapisima transakcija. Više obrazaca pronađenih u podacima o aktivnostima klijenata može poboljšati točnost predviđanja. 
+Podaci koji odražavaju ključne interakcije klijenata (poput weba, službe za korisnike i zapisnika događaja) dodaju kontekst zapisima transakcija. Više obrazaca pronađenih u podacima o aktivnostima klijenata može poboljšati točnost predviđanja.
 
-1. U koraku **Dodatni podaci (neobavezno)** odaberite **Dodaj podatke**. Odaberite entitet aktivnosti klijenata koji pruža informacije o aktivnostima klijenata kao što je opisano u [preduvjetima](#prerequisites).
+1. U koraku **Dodatni podaci (neobavezno)** odaberite **Dodaj podatke** u odjeljku **Povećaj uvide modela s dodatnim podacima o aktivnostima**. Odaberite entitet aktivnosti klijenata koji pruža informacije o aktivnostima klijenata kao što je opisano u [preduvjetima](#prerequisites).
 
 1. Mapirajte semantička polja na atribute unutar entiteta aktivnosti klijenta i odaberite **Sljedeće**.
 
@@ -135,15 +137,34 @@ Podaci koji odražavaju ključne interakcije klijenata (poput weba, službe za k
 1. Odaberite vrstu aktivnosti koja odgovara vrsti aktivnosti klijenta koju dodajete. Odaberite neku od postojećih vrsta aktivnosti ili dodajte novu vrstu aktivnosti.
 
 1. Konfigurirajte odnos između entiteta aktivnosti klijenta i entiteta *Klijent*.
-    
+
     1. Odaberite polje koje identificira klijenta u tablici aktivnosti klijenta. Može se izravno povezati s primarnim ID-jem klijenta vašeg entiteta *Klijent*.
     1. Odaberite entitet *Klijent* koji odgovara vašem primarnom entitetu *Klijent*.
     1. Unesite naziv koji opisuje odnos.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Slika koraka u tijeku konfiguracije za dodavanje dodatnih podataka i konfiguriranje aktivnosti s popunjenim primjerima.":::
 
-1. Odaberite **Spremi**.    
+1. Odaberite **Spremi**.
     Dodajte još podataka ako postoje druge aktivnosti klijenata koje želite uključiti.
+
+1. Dodajte neobavezne podatke o klijentima ili odaberite **Dalje**.
+
+### <a name="add-optional-customer-data"></a>Dodavanje neobaveznih podataka o klijentima
+
+Odaberite jednu od 18 najčešće korištenih atributa korisničkog profila koje želite uključiti kao unos u model. Ti atributi mogu dovesti do personaliziranijih, relevantnijih i djelotvornijih rezultata modela za slučajeve vaše poslovne upotrebe.
+
+Na primjer: Contoso Coffee želi predvidjeti životnu vrijednost kupca kako bi ciljao kupce visoke vrijednosti personaliziranom ponudom povezanom s lansiranjem njihovog novog aparata za espresso. Contoso koristi model CLV i dodaje svih 18 atributa korisničkog profila kako bi vidjeli koji čimbenici utječu na njihove kupce najviše vrijednosti. Smatraju da je lokacija kupca najutjecajniji čimbenik za te kupce.
+Ovim informacijama organiziraju lokalni događaj za pokretanje aparata za espresso i udružuju se s lokalnim dobavljačima za personalizirane ponude i poseban doživljaj na događaju. Bez tih informacija, Contoso možda su slali samo generičke marketinške e-poruke i propustili priliku personalizirati za ovaj lokalni segment svojih visokovrijednih kupaca.
+
+1. U koraku **Dodatni podaci (neobavezno)** odaberite **Dodaj podatke** u odjeljku **Povećaj uvide modela još više uz dodatne podatke o kupcima**.
+
+1. Za **entitet** odaberite **Kupac: CustomerInsights da biste odabrali** jedinstvenu tablicu profila klijenta koja se mapira na podatke atributa kupca. Za **ID** klijenta odaberite **System.Customer.Customer.CustomerId**.
+
+1. Mapirajte više polja ako su podaci dostupni u vašim jedinstvenim profilima kupaca.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Primjer mapiranih polja za podatke profila korisnika.":::
+
+1. Odaberite **Spremi** nakon mapiranja atributa koje bi model trebao koristiti za predviđanje vrijednosti životnog vijeka korisnika.
 
 1. Odaberite **Dalje**.
 

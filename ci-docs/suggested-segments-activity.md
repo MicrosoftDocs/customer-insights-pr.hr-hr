@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: e98aea3b3f3a2c4788346deab1b7ad7d1167110d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: df4f5f4b5c9a3ad66d57a6b349e18a0d714aff62
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054331"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170580"
 ---
-# <a name="suggested-segments-based-on-activity-data-preview"></a>Predloženi segmenti na temelju podataka o aktivnostima (pretpregled)
+# <a name="suggested-segments-based-on-activity-preview"></a>Predloženi segmenti na temelju aktivnosti (pretpregled)
 
 Otkrijte zanimljive segmente svojih klijenata na temelju podataka o aktivnostima klijenata koji se unose u Customer Insights. Primjeri podataka o aktivnostima su transakcije, trajanje poziva za podršku, kupnje ili povrati. Da bi se segmenti predložili, podaci o aktivnostima analiziraju se u odnosu na vrijeme, učestalost i novčanu vrijednost (ili trajanje). Umjesto toga možete stvoriti [predložene segmente za poboljšanje mjere ili bolje razumijevanje utjecaja na atribut](suggested-segments.md).
 
@@ -35,33 +35,31 @@ S [podacima o aktivnostima](activities.md) dostupnim u usluzi Customer Insights 
 - klijenti koji često komuniciraju s vašom tvrtkom  
 
 Ako imate maloprodajnu trgovinu, mogli biste saznati koji klijenti donose najveći prihod i nagraditi ih kuponom. Ili možete identificirati povremene klijente i ponuditi im da se pridruže programu nagrađivanja kako bi češće posjećivali vašu tvrtku.
-Ako se bavite zdravstvenom djelatnošću koja pruža javnu zdravstvenu zaštitu i vaš je cilj smanjiti troškove za pojedine pacijente. Način da se to učini mogao bi biti smanjenje ponavljajućih posjeta pružanjem najbolje moguće skrbi u što manje posjeta. U ovom je slučaju vaš cilj održati učestalost posjeta niskom i minimizirati ponavljajuće troškove za pacijente. Ili možete identificirati segmente pacijenata koji imaju česte posjete i visoke troškove koji se ponavljaju i analizirati te slučajeve kako biste poboljšali liječenje pojedinca. 
+Ako pružate javnu zdravstvenu skrb, a vaš je cilj smanjiti troškove za pojedine pacijente, mogli biste pokušati smanjiti ponavljajuće posjete pružanjem najbolje moguće skrbi u što manje posjeta. U ovom je slučaju vaš cilj održati učestalost posjeta niskom i minimizirati ponavljajuće troškove za pacijente. Ili možete identificirati segmente pacijenata koji imaju česte posjete i visoke troškove koji se ponavljaju i analizirati te slučajeve kako biste poboljšali liječenje pojedinca.
 
 ## <a name="required-data"></a>Obavezni podaci
 
-Prijedlozi se stvaraju na temelju odabranih ulaznih podataka. 
+Prijedlozi se stvaraju na temelju odabranih ulaznih podataka.
 
-- Profili klijenata: svi klijenti ili članovi određenog segmenta. 
+- Profili klijenata: svi klijenti ili članovi određenog segmenta.
 
 - Vremensko razdoblje: prošli mjesec, prošla godina ili bilo koji prilagođeni vremenski okvir.
 
 - Vrsta aktivnosti: kupnje, maloprodajne transakcije, mrežne transakcije, slučajevi korisničke podrške, pretplate itd.  
 
-- Entitet u usluzi Customer Insights koji sadrži podatke o aktivnostima: entitet UnifiedActivity ili entitet za određenu aktivnost. 
+- Entitet u usluzi Customer Insights koji sadrži podatke o aktivnostima: entitet UnifiedActivity ili entitet za određenu aktivnost.
 
 - Dimenzije koje treba uključiti: vrijeme, učestalost ili novčanu dimenziju, ovisno o vašim poslovnim zahtjevima.
 
 ## <a name="generate-suggested-segments"></a>Stvaranje predloženih segmenata
 
-1. Idite na **Segmenti**.
+1. Otvorite **Segmenti** i odaberite karticu **Prijedlozi (pretpregled).**
 
-1. Odaberite karticu **Prijedlozi (pretpregled)**.
-
-1. Odaberite **Pronađi nove prijedloge** i odaberite **Prati ili predvidi ponašanje klijenata**. Odaberite **Pokreni** za pokretanje vođenog iskustva.
+1. Odaberite **Pronađi nove prijedloge** i odaberite **Prati ili predvidi ponašanje klijenata**. Odaberite **Start**.
 
    :::image type="content" source="media/suggested-segments-activity-wizard.png" alt-text="Prvi korak čarobnjaka za konfiguraciju za predloženi segment na temelju aktivnosti.":::
 
-1. Navedite potrebne ulazne podatke i odaberite **Sljedeće** za nastavak.
+1. Navedite potrebne ulazne podatke i odaberite **Dalje**.
 
    - Odaberite klijente: uključite sve klijente ili određeni segment.
    - Odaberite aktivnost: odaberite vrstu aktivnosti i entitete koji opisuju aktivnost.
@@ -69,32 +67,17 @@ Prijedlozi se stvaraju na temelju odabranih ulaznih podataka.
 
 1. Pregledajte svoj unos i odaberite **Pokreni** za pokretanje modela i stvaranje prijedloga.
 
-1. To može potrajati nekoliko minuta, ovisno o broju profila klijenata i odabranim aktivnostima. 
+To može potrajati nekoliko minuta, ovisno o broju profila klijenata i odabranim aktivnostima.
 
-Nakon stvaranja prijedloga možete ih filtrirati prema dimenziji ili vrijednosti koja vas najviše zanima. 
+Nakon stvaranja prijedloga možete ih filtrirati prema dimenziji ili vrijednosti koja vas najviše zanima.
 
-## <a name="view-details-of-a-suggested-segment"></a>Prikaz pojedinosti o predloženom segmentu
+## <a name="manage-suggested-segments"></a>Upravljanje predloženim segmentima
 
-Kada se stvore prijedlozi, pronaći ćete ih na popisu **Segmenti** > **Prijedlozi (pretpregled)** u odjeljku **Prijedlozi na temelju aktivnosti**.
+Otvorite **Segmenti** i odaberite karticu **Prijedlozi (pretpregled).** **U odjeljku Prijedlozi temeljeni na aktivnostima** odaberite predloženi segment za prikaz dostupnih akcija.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Prošireno bočno okno s detaljnim podacima predloženog segmenta.":::
-
-Odaberite **Prikaži prijedlog** na predloženom segmentu za pregled pojedinosti tog segmenta. Bočno okno pruža pojedinosti poput opsega svake dimenzije u usporedbi s ciljnom skupinom. Također naglašava broj potencijalnih članova u segmentu i odgovarajući postotak ukupnog broja klijenata. Ako želite zadržati prijedlog kao segment, odaberite **Stvori segment**.    
-
-## <a name="save-a-suggestion-as-a-segment"></a>Spremanje prijedloga kao segmenta
-
-1. Idite u odjeljak **Segmenti** > **Prijedlozi (pretpregled)**.
-
-1. Odaberite segment koji želite spremiti. 
-
-1. U bočnom oknu odaberite **Stvori segment**. 
-
-1. Nakon spremanja segmenta, prikazat će se na popisu segmenata na kartici **Svi segmenti**. Sad se može [osvježiti ili izbrisati kao i bilo koji drugi segment](segments.md). Ne možete uređivati pojedinosti segmenta. Međutim, možete promijeniti ulazne kriterije za prijedloge i stvarati različite prijedloge.
-
-## <a name="refresh-or-edit-a-set-of-suggestions"></a>Osvježavanje ili uređivanje skupa prijedloga
-
-1. Idite na **Segmenti** > **Prijedlozi (pretpregled)** i potražite segment u odjeljku **Prijedlozi na temelju aktivnosti**.
-
-1. Odaberite **Osvježavanje prijedloga** za osvježavanje prijedloga uz zadržavanje konfiguriranih atributa. Ili odaberite **Uredi prijedloge** za izmjenu konfiguriranih atributa. Sustav će ponoviti postupak, stvoriti prijedloge segmenata na temelju najnovijih podataka i zamijeniti trenutne prijedloge.
+- **Pogledajte prijedlog** da se pojedinosti tog segmenta pogledaju kao opseg svake dimenzije u usporedbi s ciljnom skupinom. Također naglašava broj potencijalnih članova u segmentu i odgovarajući postotak ukupnog broja klijenata.
+- **Kreirajte segment** da biste spremili predloženi kao segment. Prikazuje se na **kartici Svi segmenti** i može se [osvježiti ili izbrisati](segments.md). Ne možete uređivati pojedinosti segmenta. Međutim, možete promijeniti ulazne kriterije za prijedloge i stvarati različite prijedloge.
+- **Uredite prijedloge** za izmjenu konfiguriranih atributa koji će zamijeniti trenutne prijedloge.
+- **Osvježite prijedloge** da biste osvježili prijedloge uz zadržavanje konfiguriranih atributa.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

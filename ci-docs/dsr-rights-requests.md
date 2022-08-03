@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947359"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146686"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahtjevi subjekta podataka (ZSP) za prava pod OUZP-om
 
@@ -31,18 +31,22 @@ Posvećeni smo pomaganju našim klijentima u ispunjavanju njihovih zahtjeva u ve
 
 Customer Insights nudi sljedeća iskustva u proizvodu za brisanje osobnih podataka za određenog kupca ili korisnika:
 
-- **Upravljanje zahtjevima za brisanje za podatke o klijentu**: podaci o klijentu u stavci Customer Insights unose se iz izvornih izvora podataka koji su izvan stavke Customer Insights. Svi OUZP zahtjevi za brisanje moraju se provesti u originalnom izvoru podataka.
+- **Upravljanje zahtjevima za brisanje za podatke o klijentu**: podaci o klijentu u stavci Customer Insights unose se iz izvornih izvora podataka koji su izvan stavke Customer Insights. Najprije izvršite gdpr zahtjeve za brisanjem u izvornom izvor podataka.
 - **Upravljaj zahtjevima za brisanje korisničkih podataka u sustavu Customer Insights**: podatke za korisnike stvara Customer Insights. Svi OUZP zahtjevi za brisanje moraju se provesti unutar stavke Customer Insights.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Upravljanje zahtjevima za brisanje podataka o klijentima
 
-Administrator za Customer Insights može slijediti ove korake kako bi uklonio korisničke podatke koji su izbrisani u izvoru podataka:
+Administrator customer insightsa može slijediti ove korake da bi uklonio podatke o klijentima koji su izbrisani u izvor podataka. Prije nego što nastavite s dolje navedenim koracima, provjerite je li zahtjev za brisanjem izvršen u vašoj izvor podataka. 
 
 1. Prijavite se u sustav Dynamics 365 Customer Insights.
-2. Idite na **izvore podataka podataka** > **·**
-3. Za svaki izvor podataka na popisu koji sadrži izbrisane podatke o klijentu:
+1. Idite na **izvore podataka podataka** > **·**
+1. Za svaki izvor podataka na popisu koji sadrži izbrisane podatke o klijentu:
    1. Odaberite okomitu trotočje (&vellip;), a zatim **Osvježi**.
-   2. Provjerite status izvora podataka pod **Status**. Oznaka kvačice znači da je osvježavanja bilo uspješno. Trokut upozorenja znači da je došlo do pogreške. Ako se prikaže znak upozorenja, kontaktirajte D365CI@microsoft.com.
+   1. Provjerite status izvora podataka pod **Status**. Oznaka kvačice znači da je osvježavanja bilo uspješno. Trokut upozorenja znači da je došlo do pogreške. Ako se prikaže znak upozorenja, kontaktirajte D365CI@microsoft.com.
+1. Nakon uspješnog osvježavanja izvora podataka pokrenite i nizvodno osvježavanje. Pogotovo ako nemate zakazano ponavljajuće potpuno osvježenje uvida u kupce. 
+
+> [!IMPORTANT]
+> Statični segmenti nisu uključeni u potpuno osvježavanje ili pokretanje nizvodno osvježavanja nakon zahtjeva za brisanjem. Da biste osigurali uklanjanje podataka o klijentima i iz statičkih segmenata, ponovno stvorite statičke segmente s osvježenim izvorišnim podacima.
 
 > [!div class="mx-imgBorder"]
 > ![Upravljanje zahtjevima za brisanje OUZP-a za podatke o klijentima.](media/gdpr-data-sources.png "Upravljanje zahtjevima za brisanje OUZP-a za podatke o klijentima")
@@ -77,5 +81,10 @@ Administrator klijenta može pratiti ove korake za izvoz podataka:
 1. Pošaljite e-poštu na D365CI@microsoft.com i u zahtjevu navedite adresu e-pošte korisnika. Tim Customer Insights poslat će poruku e-pošte na registriranu adresu e-pošte administratora klijenta i zatražiti potvrdu za izvoz podataka.
 2. Potvrdite zahtjev za izvozom podataka za zatraženog korisnika.
 3. Primite izvezene podatke putem adrese e-pošte administratora klijenta.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Rukovanje brisanjem podataka u sustavu Dynamics 365 Customer Insights
+
+1. Podaci će se izbrisati (particije podataka i snimke podataka) ako su particije podataka i snimke podataka neaktivne više od 30 dana, što znači da su zamijenjeni novom particijom podataka i snimkama kroz osvježavanje izvora podataka.
+2. Ne brišu se svi podaci i snimke. Najnovija particija podataka i snimka podataka po definiciji su aktivni jer se koriste u customer insights. Za najnovije podatke nije važno jesu li izvori podataka osvježeni u posljednjih 30 dana.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

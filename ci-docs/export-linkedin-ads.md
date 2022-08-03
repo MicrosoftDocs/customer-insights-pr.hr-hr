@@ -1,19 +1,19 @@
 ---
 title: Izvoz segmenata u LinkedIn Ads (pretpregled)
 description: Saznajte kako konfigurirati vezu i izvesti u LinkedIn Ads.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e6ad3901f7b8dc1ae8edc54c0b09a99b01be34cd
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050847"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196799"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Izvoz segmenata u LinkedIn Ads (pretpregled)
 
@@ -21,32 +21,33 @@ Izvezite segmente objedinjenih profila klijenata u LinkedIn Ads kako biste stvor
 
 ## <a name="prerequisites"></a>Preduvjeti
 
--   Imate [Račun za LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) i odgovarajuće vjerodajnice administratora.
--   Konfigurirali [ste segmente](segments.md) u customer insights.
--   Profili klijenata u izvezenim segmentima sadrže polje s adresom e-pošte.
+- Račun [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) i odgovarajuće administratorske vjerodajnice.
+- ID [LinkedIn Campaign Manager računa](https://www.linkedin.com/help/lms/answer/a424270).
+- [Konfigurirani segmenti](segments.md) u customer insights.
+- Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Vaš segment u customer insights mora sadržavati najmanje 300 jedinstvenih profila. 
-- Možete izvesti do 100 tisuća profila klijenata po izvozu u LinkedIn Ads.
-- Izvoz u LinkedIn Ads ograničen je na segmente.
-- Izvoz do 100 tisuća profila klijenata u LinkedIn Ads može potrajati do 10 minuta. 
+- Do 100 000 korisničkih profila po izvozu na LinkedIn Ads, što može potrajati i do 10 minuta.
+- Samo segmenti. Segment mora sadržavati najmanje 300 jedinstvenih profila.
 
-## <a name="set-up-the-connection-to-linkedin-ads"></a>Postavljanje veze s uslugom LinkedIn Ads
+## <a name="set-up-connection-to-linkedin-ads"></a>Postavljanje veze sa servisom LinkedIn Ads
+
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Idite na **Admin** > **Veze**.
 
-1. Odaberite **Dodaj vezu** i odaberite **LinkedIn Ads** za konfiguriranje veze.
+1. Odaberite **Dodaj vezu**, a zatim **LinkedIn Ads**.
 
 1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
 
-1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Odaberite tko može se može koristiti vezom. Prema zadanim postavkama to su samo administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Navedite svoj [ID računa za LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270).
+1. Navedite svoj LinkedIn Campaign Manager ID računa.
 
-1. Odaberite **Prihvaćam** da biste potvrdili **Privatnost podataka i sukladnost**.
+1. [Pregledajte privatnost i usklađenost](connections.md#data-privacy-and-compliance) podataka i odaberite **Slažem se**.
 
-1. Odaberite **Poveži** za inicijalizaciju veze s Campaign Monitor.
+1. Odaberite **Poveži** da biste inicijalizirali vezu.
 
 1. Odaberite **Provjeri autentičnost uz LinkedIn** i pružite svoje administratorske vjerodajnice za LinkedIn Campaign Manager.
 
@@ -56,29 +57,26 @@ Izvezite segmente objedinjenih profila klijenata u LinkedIn Ads kako biste stvor
 
 ## <a name="configure-an-export"></a>Konfiguracija izvoza
 
-Izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Idite na **Podaci** > **Izvozi**.
 
-1. Da biste stvorili novi izvoz, odaberite **Dodaj odredište**.
+1. Odaberite **Dodaj izvoz**.
 
-1. U polju **Veza za izvoz** odaberite vezu iz odjeljka LinkedIn Ads. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
+1. U polju **Veza za izvoz** odaberite vezu iz odjeljka LinkedIn Ads. Ako nijedna veza nije dostupna, obratite se administratoru.
 
-1. Odaberite želite li izvesti podatke radi [ciljanja kontakata](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ili [ciljanja tvrtki](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) u usluzi LinkedIn. 
+1. Unesite naziv izvoza.
 
-1. U odjeljku **Podudaranje podataka** za ciljanje kontakata odaberite barem jedno polje koje predstavlja adresu e-pošte klijenta, ID za Apple Ad, ID za Google Ad, ID korisnika tražilice Google ili ime i prezime. Ako odaberete ciljanje tvrtke, odaberite barem jedno polje koje predstavlja naziv tvrtke, domenu e-pošte, URL stranice LinkedIn, simbol Stock ili web-mjesto. Moguće je odabrati dodatna polja za dodatno definiranje izvoza. 
+1. Odaberite želite li izvesti podatke radi [ciljanja kontakata](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ili [ciljanja tvrtki](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) u usluzi LinkedIn.
 
-1. Odaberite segmente koje želite izvesti. Podudarne ciljne skupine u alatu LinkedIn Campaign Manager automatski će se stvoriti s nazivom segmenata koje ste odabrali za izvoz. Svaki će segment rezultirati zasebnom podudarnom ciljnom skupinom. 
+1. U odjeljku **Podudaranje podataka** za ciljanje kontakata odaberite barem jedno polje koje predstavlja adresu e-pošte klijenta, ID za Apple Ad, ID za Google Ad, ID korisnika tražilice Google ili ime i prezime. Ako odaberete ciljanje tvrtke, odaberite barem jedno polje koje predstavlja naziv tvrtke, domenu e-pošte, URL stranice LinkedIn, simbol Stock ili web-mjesto.
+
+1. Po želji dodajte polja da biste dodatno definirali izvoz. Odaberite **Dodavanje atributa** za mapiranje ovih polja.
+
+1. Odaberite segmente koje želite izvesti. Podudarne ciljne skupine u alatu LinkedIn Campaign Manager automatski će se stvoriti s nazivom segmenata koje ste odabrali za izvoz. Svaki će segment rezultirati zasebnom podudarnom ciljnom skupinom.
 
 1. Odaberite **Spremi**.
 
-Spremanje izvoza ne pokreće izvoz odmah.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
-
-Kada omogućite Dynamics 365 Customer Insights za prijenos podataka u LinkedIn Ads, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prenositi takve podatke prema vašoj uputi, ali vi ste odgovorni za to da LinkedIn Ads ispunjava sve obaveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Vaš administrator usluge Dynamics 365 Customer Insights može ovo odredište izvoza ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

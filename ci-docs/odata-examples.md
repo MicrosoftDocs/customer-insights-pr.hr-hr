@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
+ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083159"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "9121553"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Primjeri OData upita za API-je za uvide kupaca
 
@@ -23,7 +23,7 @@ U ovom se članku navode neki često traženi primjeri upita koji će vam pomoć
 
 Morate izmijeniti uzorke upita da bi radili na ciljnim okruženjima: 
 
-- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` gdje {instanceId} se nalazi GUID okruženja Customer Insights koje želite postaviti na upit. Operacija [ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) omogućuje vam da pronađete {InstanceId} pristup kojem imate pristup.
+- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` gdje {instanceId} se nalazi GUID okruženja Customer Insights koje želite postaviti na upit. Operacija [ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) omogućuje vam da pronađete {InstanceId} pristup kojem imate pristup.
 - {CID}: GUID jedinstvenog zapisa o klijentu. Primjer: `ce759201f786d590bf2134bff576c369`.
 - {AlternateKey}: Identifikator primarnog ključa zapisa o klijentu u izvor podataka. Primjer: `CNTID_1002`
 - {DSname}: Niz s nazivom entiteta izvor podataka koji se unosi u Customer Insights. Primjer: `Website_contacts`.
@@ -39,9 +39,10 @@ Sljedeća tablica sadrži skup oglednih upita za *entitet Kupac*.
 |Zamjenski ključ    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Zamjenski ključevi i dalje postoje u jedinstvenom entitetu klijenta       |
 |Select   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Za    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Zamjenski ključ + u   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|Zamjenski ključ + u   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Traži  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Vraća prvih 10 rezultata za niz za pretraživanje      |
 |Članstvo u segmentu  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Vraća unaprijed postavljeni broj redaka iz entiteta segmentacije.      |
+|Članstvo u segmentu za klijenta | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Vraća profil kupca ako je član određenog segmenta.     |
 
 ## <a name="unified-activity"></a>Objedinjena aktivnost
 

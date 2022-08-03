@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051674"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170764"
 ---
 # <a name="create-measures-from-templates"></a>Stvaranje mjera iz predložaka
 
-Za njihovo stvaranje možete koristiti unaprijed definirane predloške najčešće korištenih [mjera](measures.md). Detaljni opisi predložaka i vođeno iskustvo pomažu vam u učinkovitom stvaranju mjera. Predlošci se nadovezuju na mapirane podatke iz entiteta *Objedinjena aktivnost*. Stoga provjerite jeste li konfigurirali [aktivnosti klijenata](activities.md) prije nego što stvorite mjeru iz predloška.
+Za njihovo stvaranje koristite unaprijed definirane predloške najčešće korištenih [mjera](measures.md). Predlošci se nadovezuju na mapirane podatke iz entiteta *Objedinjena aktivnost*. Stoga provjerite jeste li konfigurirali [aktivnosti klijenata](activities.md) prije nego što stvorite mjeru iz predloška.
 
-Upute za stvaranje prilagođenih mjera potražite u članku [Stvaranje mjera pomoću sastavljača mjera od nule](measure-builder.md).
+Predlošci mjera podržani su samo u okruženjima za **pojedinačne kupce**. Upute za stvaranje prilagođenih mjera ili stvaranje mjera za B-do-B potražite u članku [Korištenje sastavljača mjera](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
-
-Dostupni predlošci mjera: 
+Dostupni predlošci mjera:
 - Prosječna vrijednost transakcije (ATV)
 - Ukupna vrijednost transakcije
 - Prosječni dnevni prihod
+- Prosječni mjesečni prihod
 - Prosječni godišnji prihod
 - Broj transakcija
 - Zarađeni bodovi vjernosti
@@ -57,21 +56,22 @@ Dostupni predlošci mjera:
 
 1. Odaberite **Gotovo**.
 
-1. U odjeljku **Postavi vremensko razdoblje** definirajte vremenski okvir podataka koji će se koristiti. Odaberite želite li da nova mjera pokriva cijeli skup podataka odabirom **Cijelo vrijeme** ili ako želite da se mjera usredotoči na **Određeno vremensko razdoblje**.
+1. U sekciji **Postavljanje vremenskog razdoblja** definirajte vremenski okvir podataka. Odaberite želite li da nova mjera pokriva cijeli skup podataka odabirom **Cijelo vrijeme** ili ako želite da se mjera usredotoči na **Određeno vremensko razdoblje**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Snimka zaslona koja prikazuje odjeljak vremenskog razdoblja prilikom konfiguriranja mjere iz predloška.":::
 
 1. U sljedećem odjeljku odaberite **Dodaj podatke** za odabir aktivnosti i mapiranje odgovarajućih podataka iz vašeg entiteta *Objedinjena aktivnost*.
 
-    1. Korak 1 od 2: Pod **Vrsta aktivnosti** odaberite vrstu entiteta koju želite koristiti. Za **Aktivnosti** odaberite entitete koje želite mapirati.
-    1. Korak 2 od 2: Odaberite atribut iz entiteta *Objedinjena aktivnost* za komponentu koju zahtijeva formula. Na primjer, za Prosječna vrijednost transakcije to je atribut koji predstavlja vrijednost Transakcije. Za **Vremenska oznaka aktivnosti** odaberite atribut iz entiteta Objedinjena aktivnost koji predstavlja datum i vrijeme aktivnosti.
-   
-1. Nakon što mapiranje podataka bude uspješno, možete vidjeti status kao **Dovršeno** te naziv mapiranih aktivnosti i atributa.
+    1. Korak 1 od 2: Pod **Vrsta aktivnosti** odaberite vrstu entiteta koju želite koristiti. U odjeljku **Aktivnosti odaberite entitete koje želite mapirati, a zatim dalje** **.**
+    1. Korak 2 od 2: Odaberite atribut iz entiteta *Objedinjena aktivnost* za komponentu koju zahtijeva formula. Na primjer, za Prosječna vrijednost transakcije to je atribut koji predstavlja vrijednost Transakcije. Za **vremensku oznaku** aktivnosti odaberite atribut iz entiteta *Objedinjena aktivnost* koji predstavlja datum i vrijeme aktivnosti.
+    1. Odaberite **Spremi**.
 
-1. Sada možete odabrati **Pokreni** za izračunavanje rezultata mjere. Da biste je kasnije pročistili, odaberite **Spremi nacrt**.
+    Kada je mapiranje podataka uspješno, status prikazuje **Dovršeno** i prikaz naziva mapiranih aktivnosti i atributa.
 
-# <a name="business-accounts-b-to-b"></a>[Poslovni računi (B-to-B)](#tab/b2b)
+1. Odaberite **Pokreni** da biste izračunali rezultate mjere. Odaberite **Spremi skicu** ako želite zadržati trenutnu konfiguraciju i kasnije pokrenuti mjeru. Prikazuje se **stranica Mjere**.
 
-Ova je značajka dostupna samo za mjere stvorene u okruženjima s pojedinačnim klijentima kao primarnom ciljnom skupinom.
+## <a name="next-step"></a>Sljedeći korak
 
----
+Koristite postojeće mjere da biste kreirali [segment kupca](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Povezivanje s mapom značajke Common Data Model s pomoću računa za Azure Data Lake
 description: Rad s podacima oblika Common Data Model pomoću servisa Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082256"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206990"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Povezivanje s podacima u usluzi Azure Data Lake Storage
 
@@ -33,7 +33,7 @@ Unosite podatke u Dynamics 365 Customer Insights korištenje računa Azure Data 
 
 - Podaci Azure Data Lake Storage iz kojih želite povezati i unositi podatke moraju biti u istoj regiji servisa Azure kao i Dynamics 365 Customer Insights okruženje. Veze s mapom Common Data Model iz podatkovnog jezera u drugoj Azure regiji nisu podržane. Da biste saznali regiju okruženja servisa Azure, otvorite **Odjeljak O sustavu** > **·** > **administratora** u odjeljku Customer Insights.
 
-- Podaci pohranjeni u online uslugama mogu se pohraniti na drugoj lokaciji od one na kojoj se podaci obrađuju ili pohranjuju u Dynamics 365 Customer Insights sustavu.Uvozom ili povezivanjem s podacima pohranjenim u mrežnim uslugama slažete se da se podaci mogu prenositi i pohranjivati pomoću programa Dynamics 365 Customer Insights. [Saznajte više u Microsoftovu centru za pouzdanost](https://www.microsoft.com/trust-center).
+- Podaci pohranjeni u online uslugama mogu se pohraniti na drugoj lokaciji od one na kojoj se podaci obrađuju ili pohranjuju u Dynamics 365 Customer Insights sustavu.Uvozom ili povezivanjem s podacima pohranjenim u mrežnim uslugama slažete se da se podaci mogu prenositi i pohranjivati pomoću programa Dynamics 365 Customer Insights. [Saznajte više u Microsoftovu centru za](https://www.microsoft.com/trust-center) pouzdanost.
 
 - Ravnatelj usluge Customer Insights mora biti u jednoj od sljedećih uloga da bi pristupio računu za pohranu. Dodatne informacije potražite u članku [Dodjela dozvola ravnatelju servisa za pristup računu](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account) za pohranu.
   - Čitač podataka bloba pohrane
@@ -82,9 +82,9 @@ Unosite podatke u Dynamics 365 Customer Insights korištenje računa Azure Data 
    :::image type="content" source="media/ADLS_required.png" alt-text="Dijaloški okvir s prikazom potrebnog za primarni ključ":::
 
    > [!TIP]
-   > Da biste uredili entitete u JSON-ovom sučelju za uređivanje, odaberite **Pokaži više** > **uređivanje datoteke sheme**. Unesite promjene i odaberite **Spremi**.
+   > Da biste uredili entitet u JSON-ovom sučelju za uređivanje, odaberite entitet, a zatim **Uredite datoteku sheme**. Unesite promjene i odaberite **Spremi**.
 
-1. Za odabrane entitete koji zahtijevaju inkrementalno gutanje, **obavezni** prikazi u odjeljku **Inkrementalno osvježavanje**. Za svaki od tih entiteta pročitajte članak [Konfiguriranje postupnog osvježavanja za izvore podataka servisa Azure Data Lake](incremental-refresh-data-sources.md).
+1. Za odabrane entitete koji zahtijevaju inkrementalno gutanje, **obavezni** prikazi u odjeljku **Inkrementalno osvježavanje**. Za svaki od tih entiteta pročitajte članak [Konfiguriranje postupnog osvježavanja za izvore](incremental-refresh-data-sources.md) podataka servisa Azure Data Lake.
 
 1. Za odabrane entitete u kojima primarni ključ nije definiran, **Obavezni** prikazivaju se u odjeljku **Primarni ključ**. Za svaki od ovih entiteta:
    1. Odaberite **Obavezno**. Prikazat će se **ploča Uređivanje entiteta**.
@@ -101,6 +101,10 @@ Unosite podatke u Dynamics 365 Customer Insights korištenje računa Azure Data 
    1. Odaberite **Gotovo**.
 
 1. Odaberite **Spremi**. Otvorit **će se stranica Izvori** podataka koja prikazuje novi izvor podataka u **statusu Osvježavanje**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Učitavanje podataka može potrajati. Nakon uspješnog osvježavanja uneseni podaci mogu se pregledati sa [**stranice Entiteti**](entities.md).
 
 ### <a name="create-a-new-schema-file"></a>Stvaranje nove datoteke sheme
 
@@ -138,7 +142,7 @@ Unosite podatke u Dynamics 365 Customer Insights korištenje računa Azure Data 
 
    :::image type="content" source="media/ADLS_required.png" alt-text="Dijaloški okvir s prikazom potrebnog za primarni ključ":::
 
-1. Za odabrane entitete koji zahtijevaju inkrementalno gutanje, **obavezni** prikazi u odjeljku **Inkrementalno osvježavanje**. Za svaki od tih entiteta pročitajte članak [Konfiguriranje postupnog osvježavanja za izvore podataka servisa Azure Data Lake](incremental-refresh-data-sources.md).
+1. Za odabrane entitete koji zahtijevaju inkrementalno gutanje, **obavezni** prikazi u odjeljku **Inkrementalno osvježavanje**. Za svaki od tih entiteta pročitajte članak [Konfiguriranje postupnog osvježavanja za izvore](incremental-refresh-data-sources.md) podataka servisa Azure Data Lake.
 
 1. Za odabrane entitete u kojima primarni ključ nije definiran, **Obavezni** prikazivaju se u odjeljku **Primarni ključ**. Za svaki od ovih entiteta:
    1. Odaberite **Obavezno**. Prikazat će se **ploča Uređivanje entiteta**.
@@ -148,6 +152,9 @@ Unosite podatke u Dynamics 365 Customer Insights korištenje računa Azure Data 
 
 1. Odaberite **Spremi**. Otvorit **će se stranica Izvori** podataka koja prikazuje novi izvor podataka u **statusu Osvježavanje**.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Učitavanje podataka može potrajati. Nakon uspješnog osvježavanja uneseni podaci mogu se pregledati sa [**stranice Entiteti**](entities.md).
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Azure Data Lake Storage Uređivanje izvor podataka
 
@@ -179,8 +186,16 @@ Pomoću mogućnosti Poveži se s računom *za pohranu možete ažurirati*. Dodat
       > [!IMPORTANT]
       > Ako postoje ovisnosti o postojećoj datoteci model.json ili manifest.json i skupu entiteta, vidjet ćete poruku o pogrešci i ne možete odabrati drugu datoteku model.json ili manifest.json. Uklonite te ovisnosti prije promjene datoteke model.json ili manifest.json ili stvorite novi izvor podataka s datotekom model.json ili manifest.json koju želite koristiti da biste izbjegli uklanjanje ovisnosti.
    - Da biste promijenili mjesto podatkovne datoteke ili primarni ključ, odaberite **Uredi**.
-   - Upute za promjenu inkrementalnih podataka o gutanju potražite u članku [Konfiguriranje postupnog osvježavanja za izvore podataka servisa Azure Data Lake](incremental-refresh-data-sources.md)
+   - Upute za promjenu inkrementalnih podataka o gutanju potražite u članku [Konfiguriranje inkrementalnog osvježavanja za izvore](incremental-refresh-data-sources.md) podataka servisa Azure Data Lake.
+   - Promijenite samo naziv entiteta tako da odgovara nazivu entiteta u .json datoteci.
+
+     > [!NOTE]
+     > Uvijek zadržite naziv entiteta u Customer Insights isto kao i naziv entiteta unutar datoteke model.json ili manifest.json nakon gutanja. Customer Insights provjerava valjanost svih naziva entiteta s model.json ili manifest.json tijekom svakog osvježavanja sustava. Ako se naziv entiteta promijeni unutar Customer Insightsa ili izvan njega, pojavljuje se pogreška jer Customer Insights ne može pronaći novi naziv entiteta u .json datoteci. Ako je uneseni naziv entiteta slučajno promijenjen, uredite naziv entiteta u customer insightsu tako da odgovara nazivu u .json datoteci.
 
 1. Odaberite **Atributi da biste dodali** ili promijenili atribute ili omogućili profiliranje podataka. Zatim odaberite **Gotovo**.
 
 1. Kliknite **Spremi** da biste primijenili promjene i vratili se na **stranicu Izvori** podataka.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082088"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195165"
 ---
 # <a name="connections-preview-overview"></a>Pregled (pretpregled) veza
 
@@ -27,6 +27,12 @@ Idite na **Admin** > **Veze** za stvaranje i pregled veza.
 Kartica **Veze** prikazuje sve aktivne veze. Popis prikazuje redak za svaku vezu.
 
 Dobijte brzi pregled, opis i saznajte što možete učiniti sa svakom mogućnosti proširenja na kartici **Otkrij**.
+
+## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
+
+Kada omogućite Dynamics 365 Customer Insights prijenos podataka trećim stranama ili drugim Microsoftovim proizvodima, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prenijeti takve podatke prema vašim uputima, ali vi ste odgovorni za to da treća strana ispunjava sve obveze zaštite privatnosti ili sigurnosti koje možda imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Administrator Dynamics 365 Customer Insights može ukloniti vezu u bilo kojem trenutku kako bi prekinuo korištenje funkcije.
 
 ## <a name="exports"></a>Izvozi
 
@@ -41,8 +47,6 @@ Samo administratori mogu konfigurirati nove veze, ali stvorene veze uvijek su do
 Da biste dodali veze, morate imati [administratorske dozvole](permissions.md). Ako se povežete s ostalim Microsoftovim uslugama, pretpostavljamo da su obje usluge u istoj tvrtki ili ustanovi.
 
 1. Idite na **Admin** > **Veze (pretpregled)**.
-
-1. Idite na karticu **Veze**.
 
 1. Odaberite **Nova veza** da biste stvorili novu vezu. Na padajućem izborniku odaberite vrstu veze koju želite stvoriti.
 
@@ -99,3 +103,5 @@ Odvojena obogaćivanja i izvozi postaju neaktivni. Ponovno ih aktivirate tako da
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Uspostavljanje veza s tajnama kojima upravlja vaš vlastiti sef za ključeve
 
 Za neke veze potrebne su tajne poput API ključeva ili lozinki. Neke veze podržavaju tajne pohranjene u sefu za ključeve. Saznajte više o podržanim vezama i kako postaviti u vlastitom trezoru [ključeva za uvide u kupce](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

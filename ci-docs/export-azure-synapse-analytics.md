@@ -1,19 +1,19 @@
 ---
 title: Izvoz podataka u Azure Synapse Analytics (pretpregled)
 description: Saznajte kako konfigurirati vezu na Azure Synapse Analytics.
-ms.date: 06/29/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082865"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196385"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvoz podataka u Azure Synapse Analytics (pretpregled)
 
@@ -21,56 +21,52 @@ Azure Synapse je analitička usluga koja ubrzava vrijeme za uvid u skladišta po
 
 ## <a name="prerequisites"></a>Preduvjeti
 
-Za konfiguriranje veze od usluge Customer Insights do Azure Synapse moraju biti ispunjeni sljedeći preduvjeti.
-
 > [!NOTE]
-> Obavezno postavite sve **dodjele uloga** kako je opisano.  
+> Obavezno postavite sve **dodjele uloga** kako je opisano.
 
-## <a name="prerequisites-in-customer-insights"></a>Preduvjeti u usluzi Customer Insights
+- U odjeljku Customer Insights vaš Azure Active Directory (AD) korisnički račun mora imati administratorsku [ulogu](permissions.md#assign-roles-and-permissions).
 
-* Vaš Azure Active Directory (AD) korisnički račun ima administratorsku **ulogu** u customer insights. Saznajte više o [postavljanju korisničkih dozvola](permissions.md#assign-roles-and-permissions).
-
-U servisu Azure: 
+U servisu Azure:
 
 - Aktivna pretplata na Azure.
 
-- Ako koristite novi Azure Data Lake Storage gen2 račun, *upravitelj usluge za Customer Insights* treba **dozvole za pohranu bloba podataka suradnik**. Saznajte više o [povezivanju s gen2 računom s upraviteljem Azure Data Lake Storage servisa Azure za Customer Insights](connect-service-principal.md). Data Lake Storage druge generacije **mora imati** omogućeno [hijerarhijsko polje imena](/azure/storage/blobs/data-lake-storage-namespace).
+- Ako koristi novi Azure Data Lake Storage gen2 račun, [upravitelj usluge za Customer Insights](connect-service-principal.md) ima **dozvole za pohranu blob podataka suradnik**. Data Lake Storage druge generacije **mora imati** omogućeno [hijerarhijsko polje imena](/azure/storage/blobs/data-lake-storage-namespace).
 
-- U grupi resursa u kojoj Azure Synapse se nalazi radni prostor, upravitelju *usluge i korisniku* *Azure AD s administratorskim dozvolama u Customer Insights potrebno je dodijeliti* najmanje **Čitatelj** dozvola. Dodatne informacije potražite u odjeljku [Dodjela uloga servisa Azure pomoću portala Azure](/azure/role-based-access-control/role-assignments-portal).
+- U grupi resursa u kojoj Azure Synapse se nalazi radni prostor, upravitelju *usluge* i korisniku *Azure AD s administratorskim dozvolama u customer insights moraju se dodijeliti* **najmanje** Čitatelj [dozvole](/azure/role-based-access-control/role-assignments-portal).
 
-- Korisniku *Azure AD s administratorskim dozvolama u customer insightsu potrebne* **su dozvole za pohranu blob podataka suradnik** na gen2 računu na Azure Data Lake Storage kojem se podaci nalaze i povezani su s radnim prostorom Azure Synapse. Saznajte više o [korištenju portala Azure za dodjelu uloge servisa Azure za pristup blobu i podacima u redu čekanja](/azure/storage/common/storage-auth-aad-rbac-portal) i [dozvolama Suradnik za podatke blobova pohrane](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- Korisnik *Azure AD s administratorskim dozvolama u customer insights* ima **dozvole za pohranu blob podataka suradnik** na gen2 računu na Azure Data Lake Storage kojem se podaci nalaze i povezani su s radnim prostorom Azure Synapse. Saznajte više o [korištenju portala Azure za dodjelu uloge servisa Azure za pristup blobu i podacima u redu čekanja](/azure/storage/common/storage-auth-aad-rbac-portal) i [dozvolama Suradnik za podatke blobova pohrane](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- *[Identitet kojim upravlja radni prostor servisa Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* treba dozvole **Suradnik za podatke blobova pohrane** na računu Azure Data Lake Storage druge generacije na kojem su podaci smješteni i povezani s radnim prostorom servisa Azure Synapse. Saznajte više o [korištenju portala Azure za dodjelu uloge servisa Azure za pristup blobu i podacima u redu čekanja](/azure/storage/common/storage-auth-aad-rbac-portal) i [dozvolama Suradnik za podatke blobova pohrane](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- Upravljani identitet radnog prostora ima *[Azure Synapse dozvole za pohranu Blob Data suradnik](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* na gen2 računu na **kojem se podaci nalaze i povezani su s radnim prostorom**.Azure Data Lake Storage Azure Synapse Saznajte više o [korištenju portala Azure za dodjelu uloge servisa Azure za pristup blobu i podacima u redu čekanja](/azure/storage/common/storage-auth-aad-rbac-portal) i [dozvolama Suradnik za podatke blobova pohrane](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Azure Synapse Na radnom prostoru upravitelju *usluge za Customer Insights* potrebna je **uloga administratora** synapsea. Dodatne informacije potražite u odjeljku [Kako postaviti kontrolu pristupa za vaš radni prostor servisa Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Azure Synapse Na radnom prostoru upravitelju *usluge za Customer Insights* dodijeljena **je** uloga administratora [synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Postavljanje veze i izvoz u Azure Synapse
+## <a name="set-up-connection-to-azure-synapse"></a>Postavljanje veze na Azure Synapse
 
-### <a name="configure-a-connection"></a>Konfiguracija veze
-
-Da biste stvorili vezu, upravitelj usluge i korisnički račun u customer insightsu trebaju **Čitatelj** dozvole za grupu *resursa u kojoj* se nalazi radni prostor Synapse Analytics. Osim toga, upravitelju usluge i korisniku u radnom prostoru Synapse Analytics potrebne **su dozvole administratora** synapsea. 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Idite na **Admin** > **Veze**.
 
-1. Odaberite **Dodaj vezu**, a zatim Odaberite **Azure Synapse Analytics** ili odaberite **Postavljanje** na pločici **Azure Synapse Analytics** da biste konfigurirali vezu.
+1. Odaberite **Dodaj vezu** i odaberite .**Azure Synapse Analytics**
 
-1. Dodijelite vezi prepoznatljivi naziv u polju Zaslonski naziv. Naziv i vrsta veze opisuju ovu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
+1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju ovu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
 
-1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Odaberite tko može se može koristiti vezom. Prema zadanim postavkama to su samo administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Odaberite ili potražite pretplatu u kojoj želite koristiti podatke Customer Insights. Čim se odabere pretplata, možete odabrati i **Radni prostor**, **Račun za pohranu** i **Spremnik**.
 
-1. Odaberite **Spremi** da biste spremili vezu.
+1. [Pregledajte privatnost i usklađenost](connections.md#data-privacy-and-compliance) podataka i odaberite **Slažem se**.
 
-### <a name="configure-an-export"></a>Konfiguracija izvoza
+1. Odaberite **Spremi** da biste završili vezu.
 
-Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Da biste konfigurirali izvoz sa zajedničkom vezom, potrebno vam je najmanje **suradnik** dozvola u customer insights. Dodatne informacije potražite u odjeljku [dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+## <a name="configure-an-export"></a>Konfiguracija izvoza
+
+[!INCLUDE [export-permission-include](includes/export-permission.md)] Da biste konfigurirali izvoz sa zajedničkom vezom, potrebno vam je najmanje **suradnik** dozvola u customer insights.
 
 1. Idite na **Podaci** > **Izvozi**.
 
-1. Da biste stvorili novi izvoz, ddaberite **Dodaj izvoz**.
+1. Odaberite **Dodaj izvoz**.
 
-1. **U polju Veza za izvoz** odaberite vezu iz odjeljka **Azure Synapse Analytics**. Ako ne vidite naziv ovog odjeljka, nema dostupnih [veza](connections.md) ove vrste.
+1. **U polju Veza za izvoz** odaberite vezu iz odjeljka Azure Synapse Analytics. Ako nijedna veza nije dostupna, obratite se administratoru.
 
 1. Navedite prepoznatljiv **zaslonski naziv** za vaš izvoz i **naziv baze podataka**. Izvoz će stvoriti novu [Azure Synapse bazu podataka](/azure/synapse-analytics/database-designer/concepts-lake-database) jezera u radnom prostoru definiranom u vezi.
 
@@ -80,13 +76,11 @@ Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Da biste konf
 
 1. Odaberite **Spremi**.
 
-Spremanje izvoza ne pokreće izvoz odmah.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand).
+Da biste upitali podatke koji su izvezeni u Synapse Analytics, potrebni **su vam podaci o blobama za pohranu Čitatelj** pristup odredišnoj pohrani u radnom prostoru izvoza.
 
-Da biste upitali podatke koji su izvezeni u Synapse Analytics, potrebni **su vam podaci o blobama za pohranu Čitatelj** pristup odredišnoj pohrani u radnom prostoru izvoza. 
-
-### <a name="update-an-export"></a>Ažuriranje izvoza
+## <a name="update-an-export"></a>Ažuriranje izvoza
 
 1. Idite na **Podaci** > **Izvozi**.
 
@@ -95,3 +89,5 @@ Da biste upitali podatke koji su izvezeni u Synapse Analytics, potrebni **su vam
    - **Dodajte** ili **uklonite** entitete iz odabira. Ako se entiteti uklone iz odabira, neće se izbrisati iz baze podataka analitike servisa Synapse. Međutim, buduća osvježavanja podataka neće ažurirati uklonjene entitete u toj bazi podataka.
 
    - **Promjena naziva baze podataka** stvara novu bazu podataka analitike servisa Synapse. Baza podataka s nazivom koji je ranije konfiguriran neće primati ažuriranja u budućim osvježavanjima.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

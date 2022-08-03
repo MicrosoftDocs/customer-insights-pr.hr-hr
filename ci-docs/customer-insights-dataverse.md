@@ -1,7 +1,7 @@
 ---
 title: Rad s podacima rješenja Customer Insights u servisu Microsoft Dataverse
 description: Saznajte kako povezati Customer Insights i Microsoft Dataverse razumjeti izlazne entitete koji se izvoze u Dataverse.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011511"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153395"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad s podacima rješenja Customer Insights u servisu Microsoft Dataverse
 
@@ -31,19 +31,31 @@ Povezivanje s okolinom Dataverse također vam omogućuje unos [podataka iz lokal
 - Nijedno drugo okruženje Customer Insights već nije povezano s okruženjem Dataverse koje želite povezati. Saznajte kako [ukloniti postojeću vezu s okruženjem Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
 - Okruženje Microsoft Dataverse se može povezati samo s jednim računom za pohranu. Primjenjuje se samo ako konfigurirate okruženje za [korištenje sustava Azure Data Lake Storage](own-data-lake-storage.md).
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse pravo na kapacitet pohrane
+
+Pretplata na Customer Insights daje vam pravo na dodatni kapacitet za postojeći [Dataverse kapacitet](/power-platform/admin/capacity-storage) pohrane vaše tvrtke ili ustanove. Dodani kapacitet ovisi o broju profila koje vaša pretplata koristi.
+
+**Primjer:**
+
+Pod pretpostavkom da ćete dobiti pohranu baze podataka od 15 GB i pohranu datoteka od 20 GB na 100.000 korisničkih profila. Ako vaša pretplata uključuje 300 000 korisničkih profila, vaš ukupni kapacitet pohrane bio bi 45 GB (3 x 15 GB) pohrane baze podataka i pohrana datoteka od 60 GB (3 x 20 GB). Slično tome, ako imate B2B pretplatu s 30K računima, vaš ukupni kapacitet pohrane bio bi 45 GB (3 x 15 GB) za pohranu baze podataka i 60 GB prostora za pohranu datoteka (3 x 20 GB).
+
+Kapacitet zapisnika nije inkrementalan i fiksiran za vašu tvrtku ili ustanovu.
+
+Dodatne informacije o detaljnim pravima na kapacitet potražite u članku [Vodič za](https://go.microsoft.com/fwlink/?LinkId=866544) licenciranje sustava Dynamics 365.
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Povezivanje okruženja s Dataverse uvidima kupaca
 
 Korak **Microsoft Dataverse** vam omogućuje povezivanje uvida u korisnike s okolinom Dataverse tijekom [stvaranja okruženja](create-environment.md) Customer Insights.
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="zajedničko korištenje podataka s omogućenim Microsoft Dataverse automatskim omogućivanjem za nova mrežna okruženja.":::
 
-Administratori mogu konfigurirati Customer Insights za povezivanje postojećeg Dataverse okruženja. Pružanjem URL-a okolišu Dataverse pridaje se njihovom novom okruženju Customer Insights.
+Administratori mogu konfigurirati Customer Insights za povezivanje postojećeg Dataverse okruženja. Pružajući URL Dataverse okruženju, povezuje se s njihovim novim okruženjem Customer Insights. Nakon uspostavljanja veze između customer insights i Dataverse, nemojte mijenjati naziv tvrtke ili ustanove za Dataverse okoliš. Naziv organizacije koristi se u URL-u Dataverse, a promijenjeni naziv prekida vezu s Customer Insights.
 
 Ako ne želite koristiti postojeće Dataverse okruženje, sustav stvara novo okruženje za podatke Customer Insights u vašem klijentu. [Power Platform administratori mogu kontrolirati tko može stvarati okruženja](/power-platform/admin/control-environment-creation). Kada postavljate novo okruženje customer insights, a administrator onemogući stvaranje okruženja Dataverse za sve osim za administratore, možda nećete moći stvoriti novo okruženje.
 
 **Omogućite zajedničko korištenje** podataka pomoću Dataverse pomoću potvrdnog okvira za zajedničko korištenje podataka.
 
-Ako koristite vlastiti račun za pohranu na jezeru podataka, potreban vam je **i identifikator** Dozvole. Dodatne informacije o dobivanju identifikatora dozvole potražite u sljedećem odjeljku.
+Ako koristite vlastiti račun za pohranu na jezeru podataka, potreban vam je **i identifikator Dozvole**. Dodatne informacije o dobivanju identifikatora dozvole potražite u sljedećem odjeljku.
 
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Omogućivanje zajedničkog korištenja podataka s Dataverse vlastitim Azure Data Lake Storage (pretpregled)
 
@@ -80,11 +92,11 @@ Da biste izvršili skripte komponente PowerShell, najprije morate postaviti Powe
        - Spremite obje vrijednosti ID-a sigurnosne grupe generirane ovom skriptom jer ćemo ih koristiti u skripti `ByolSetup.ps1`.
 
         > [!NOTE]
-        > Stvaranje sigurnosne grupe može se onemogućiti na klijentu. U tom bi slučaju bilo potrebno ručno postavljanje i vaš Azure AD bi administrator morao [omogućiti stvaranje](/azure/active-directory/enterprise-users/groups-self-service-management) sigurnosne grupe.
+        > Stvaranje sigurnosne grupe može se onemogućiti na klijentu. U tom bi slučaju bilo potrebno ručno postavljanje i vaš Azure AD bi administrator morao [omogućiti stvaranje sigurnosne grupe](/azure/active-directory/enterprise-users/groups-self-service-management).
 
     2. `ByolSetup.ps1`
         - Za pokretanje ove skripte potrebne su vam *dozvole vlasnika* blob podataka za pohranu na razini računa/spremnika za pohranu ili će vam je ova skripta stvoriti. Dodjela uloge može se ukloniti ručno nakon uspješnog pokretanja skripte.
-        - Ova skripta ljuske PowerShell dodaje potrebnu kontrolu pristupa temeljenu na toleu (RBAC) za uslugu Microsoft Dataverse i sve Dataverse poslovne aplikacije koje se temelje na njima. Također ažurira Popis kontrole pristupa (ACL) u spremniku CustomerInsights za sigurnosne grupe stvorene skriptom `CreateSecurityGroups.ps1`. Grupa suradnik imat *će rwx* dozvolu, a grupa Readers imat *će samo r-x* dozvolu.
+        - Ova skripta komponente PowerShell dodaje potrebnu kontrolu pristupa temeljenu na ulogama za uslugu Microsoft Dataverse i sve Dataverse poslovne aplikacije koje se temelje na ulozima. Također ažurira Popis kontrole pristupa (ACL) u spremniku CustomerInsights za sigurnosne grupe stvorene skriptom `CreateSecurityGroups.ps1`. Grupa suradnik imat *će rwx* dozvolu, a grupa Readers imat *će samo r-x* dozvolu.
         - Izvršite ovu skriptu komponente PowerShell u komponenti Windows PowerShell tako da navedete ID pretplate na Azure koji sadrži naziv računa Azure Data Lake Storage za pohranu, naziv grupe resursa te vrijednosti ID-a sigurnosne grupe Čitatelj i suradnik. Otvorite skriptu komponente PowerShell u uređivaču da biste pregledali dodatne informacije i implementiranu logiku.
         - Kopirajte izlazni niz nakon uspješnog pokretanja skripte. Izlazni niz izgleda ovako: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 

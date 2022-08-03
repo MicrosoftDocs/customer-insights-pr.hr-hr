@@ -1,50 +1,52 @@
 ---
 title: Izvoz segmenata u Criteo (pretpregled)
 description: Saznajte kako konfigurirati vezu i izvesti u Criteo.
-ms.date: 05/27/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ace9056d200a3179e442132004324a01f0d247b6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082781"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195327"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Izvoz segmenata u Criteo (pretpregled)
 
 Izvoz segmenata jedinstvenih korisničkih profila za generiranje kampanja, pružanje marketinga putem e-pošte i korištenje određenih grupa kupaca s Criteom.
 
-## <a name="prerequisites-for-connection"></a>Preduvjeti za vezu
+## <a name="prerequisites"></a>Preduvjeti
 
--   Imate [criteo dynamics retargeting račun](https://www.criteo.com/login/) i odgovarajuće administratorske vjerodajnice.
--   Imate [konfigurirane segmente](segments.md).
--   Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
+- Criteo [Dynamics Retargeting račun](https://www.criteo.com/login/) i odgovarajuće administratorske vjerodajnice.
+- [Konfigurirani segmenti](segments.md).
+- Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Do milijun korisničkih profila po izvozu u Criteo.
-- Izvoz u Criteo ograničen je na segmente.
-- Izvoz segmenata s ukupno 1 milijun profila klijenata može potrajati do 30 minuta. 
-- Broj korisničkih profila koje možete izvesti u Criteo ovisi i ograničen je na vaš ugovor s Criteom.
+- Do milijun profila kupaca po izvozu u Criteo, što može potrajati i do 30 minuta. Broj korisničkih profila koje možete izvesti u Criteo ovisi o vašem ugovoru s Criteom.
+- Samo segmenti.
 
 ## <a name="set-up-connection-to-criteo"></a>Postavljanje veze s Criteom
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Idite na **Admin** > **Veze**.
 
-1. Odaberite **Dodaj vezu**, a zatim **Criteo** da biste konfigurirali vezu.
+1. Odaberite **Dodaj vezu**, a zatim **Criteo**.
 
 1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
 
-1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Odaberite tko može se može koristiti vezom. Prema zadanim postavkama to su samo administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Odaberite **Pristajem** potvrditi privatnost i usklađenost **podataka i odaberite** Poveži **se** da biste inicijalizirali vezu s Criteom.
+1. [Pregledajte privatnost i usklađenost](connections.md#data-privacy-and-compliance) podataka i odaberite **Slažem se**.
 
-1. Odaberite **Autentifikaciju pomoću tvrtke Criteo** i navedite korisničko ime i vjerodajnice administratora za Criteo. 
+1. Odaberite **Poveži** da biste inicijalizirali vezu.
+
+1. Odaberite **Autentifikaciju pomoću tvrtke Criteo** i navedite korisničko ime i vjerodajnice administratora za Criteo.
 
 1. Odaberite **Dodajte se kao korisnik izvoza** i unesite svoje vjerodajnice za Customer Insights.
 
@@ -52,30 +54,24 @@ Izvoz segmenata jedinstvenih korisničkih profila za generiranje kampanja, pruž
 
 ## <a name="configure-an-export"></a>Konfiguracija izvoza
 
-Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Idite na **Podaci** > **Izvozi**.
 
-1. Da biste stvorili novi izvoz, odaberite **Dodaj odredište**.
+1. Odaberite **Dodaj izvoz**.
 
-1. **U polju Veza za izvoz** odaberite vezu iz sekcije Criteo. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste. 
+1. **U polju Veza za izvoz** odaberite vezu iz sekcije Criteo. Ako nijedna veza nije dostupna, obratite se administratoru.
 
-1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. 
+1. Unesite naziv izvoza.
 
-1. Po želji možete izvesti **ID** i **ime oglašivača**
+1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta.
 
-1. Odaberite segmente koje želite izvesti. 
+1. Po želji izvezite **ID** i **ime oglašivača**.
+
+1. Odaberite segmente koje želite izvesti.
 
 1. Odaberite **Spremi**.
 
-Spremanje izvoza ne pokreće izvoz odmah.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
-
-Kada omogućite Dynamics 365 Customer Insights prijenos podataka u Criteo, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prenijeti takve podatke prema vašim uputama, ali vi ste odgovorni za to da criteo ispunjava sve obveze privatnosti ili sigurnosti koje možda imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-Vaš administrator usluge Dynamics 365 Customer Insights može ovo odredište izvoza ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012016"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207128"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Postupno osvježavanje izvora Power Query podataka i izvora podataka servisa Azure Data Lake
 
-U ovom se članku opisuje kako konfigurirati postupno osvježavanje za izvore podataka koji se temelje na podatkovnom jezeru Power Query azure ili azure data lake.
-
-Dodatno osvježavanje izvora podataka pruža sljedeće prednosti:
+Postupno osvježavanje izvora podataka na Power Query temelju ili Azure Data Lake pruža sljedeće prednosti:
 
 - **Brže se osvježava** - osvježavaju se samo podaci koji su se promijenili. Na primjer, možete osvježiti samo posljednjih pet dana povijesnog skupa podataka.
 - **Povećana pouzdanost** - uz manja osvježenja, ne morate dugo održavati veze s nestalnim sustavima izvora, čime se smanjuje opasnost od problema s vezom.
@@ -73,6 +71,7 @@ Customer Insights omogućuje postupno osvježavanje izvora podataka povezanih s 
 
    1. Pronađite korijensku mapu koja sadrži datoteke .csv ili .parketa za potpune podatke, inkrementalne nadogradnje podataka i dodatne podatke.
    1. Unesite proširenje za potpune podatke i obje inkrementalne datoteke (\. csv ili \. parket).
+   1. Za .csv datoteke odaberite graničnik stupca i ako želite da prvi redak datoteke bude zaglavlje stupca.
    1. Odaberite **Spremi**.
 
 1. Za **Posljednje ažuriranje** odaberite atribut datumske vremenske oznake.

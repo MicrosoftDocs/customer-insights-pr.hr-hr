@@ -1,28 +1,56 @@
 ---
 title: Što je novo u sustavu Dynamics 365 Customer Insights
 description: Informacije o novim značajkama, poboljšanjima i ispravcima programskih pogrešaka.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054009"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114237"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Što je novo u sustavu Dynamics 365 Customer Insights
 
 Sa zadovoljstvom objavljujemo naša najnovija ažuriranja! Ovaj članak daje javni pretpregled značajki, poboljšanja opće dostupnosti i ažuriranja značajki. Kako biste vidjeli dugoročne planove značajki, pogledajte članak [Raspored izdanja sustava Dynamics 365 i rješenje Power Platform](/dynamics365/release-plans/).
 
-Ažuriranja unosimo po regijama. Tako bi neke regije mogle vidjeti značajke prije drugih. Ako nije drugačije određeno, ne morate poduzimati ništa i automatski ćemo ažurirati aplikaciju bez prekida u radu.
+Ažuriranja unosimo po regijama. Tako bi neke regije mogle vidjeti značajke prije drugih. Ako nije drugačije navedeno, ne morate poduzimati nikakve radnje, automatski ćemo ažurirati aplikaciju bez zastoja.
 
 > [!TIP]
 > Za kontakt i glasanje o zahtjevima za značajkama i prijedlozima o proizvodu idite na [portal sa zamislima za aplikacije Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>Ažuriranja za lipanj 2022.
+
+Ažuriranja u lipnju 2022. uključuju nove značajke, nadogradnje performansi i ispravke pogrešaka.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Ažurirano korisničko iskustvo za izvore podataka i unos podataka
+
+Uvoz podataka iz širokog spektra izvora podataka temelj je konsolidacije podataka o klijentima u sustavu Dynamics 365 Customer Insights. Ponovno smo pregledali korisničko iskustvo za uvoz i povezivanje izvora podataka. Ovo ažuriranje ima za cilj olakšati vam unos podataka u Customer Insights.
+
+Dodatne informacije potražite u članku [Pregled izvora podataka](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Izvoz u InMobi
+
+InMobi pomaže robnim markama da razumiju, identificiraju, angažiraju i steknu potrošače. Segmente i druge podatke možete izvesti u uslugu InMobi putem računa servisa Azure Blob Storage.
+
+Dodatne informacije potražite u članku [Izvoz u InMobi (pretpregled)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Podrška za Lockbox u odjeljku Customer Insights
+
+Customer Lockbox pruža sučelje za pregled i odobravanje (ili odbijanje) zahtjeva za pristup podacima. Ti se zahtjevi javljaju kada je za rješavanje slučaja podrške potreban pristup podacima o klijentima.
+
+Dodatne informacije potražite u članku [Siguran pristup podacima o klijentima pomoću značajke Customer Lockbox (Pretpregled)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Povezivanje s podacima pomoću veze servisa Azure Private Link
+
+Azure Private Link omogućuje uvidima u korisnike da se povežu s vašim Azure Data Lake Storage računom putem privatnog krajnja točka u vašoj virtualnoj mreži. Za podatke na računu za pohranu, koji nije izložen javnom internetu, Private Link omogućuje vezu s tom ograničenom mrežom.
+
+Dodatne informacije potražite u članku [Korištenje privatne veze u odjeljku Uvidi](security-overview.md#private-links-tab) kupaca.
 
 ## <a name="may-2022-updates"></a>Ažuriranja za svibanj 2022.
 
@@ -30,7 +58,7 @@ Ažuriranja u svibnju 2022. uključuju nove značajke, nadogradnje performansi i
 
 ### <a name="updated-data-unification-experience"></a>Ažurirano iskustvo objedinjavanja podataka
 
- Objedinjavanje podataka omogućuje vam objedinjavanje jednom različitih izvora podataka u jedan skup glavnih podataka koji pruža jedinstveni prikaz tih podataka. Podaci se mogu objediniti u jednom entitetu ili više entiteta. Najprije odabirete entitete i izvorišna [polja](map-entities.md), [uklanjate duplicirane zapise](remove-duplicates.md), određujete pravila za [podudarne uvjete](match-entities.md) i definirate koja [polja želite uključiti u objedinjene profile klijenata](merge-entities.md).
+ Objedinjavanje podataka omogućuje vam objedinjavanje jednom različitih izvora podataka u jedan skup glavnih podataka koji pruža jedinstveni prikaz tih podataka. Podaci se mogu objediniti u jednom entitetu ili više entiteta. Najprije odabirete entitete i izvorišna polja, uklanjate duplicirane zapise [, određujete pravila za](map-entities.md) podudarne uvjete [i definirate koja](remove-duplicates.md) polja želite uključiti u objedinjene [profile klijenata.](match-entities.md)[...](merge-entities.md)
 
 Dodatne informacije potražite u članku [Pregled](data-unification.md) ujedinjenja podataka.
 
@@ -122,7 +150,7 @@ Ažuriranja u veljači 2022. uključuju nove značajke, nadogradnje performansi 
 
 Gotovi modeli predviđanje, uključujući **prijenos** pretplate, **transakcijski bućkuriš** i **vrijednost životnog vijeka korisnika (CLV)** postaju općenito dostupni kao dio Customer Insights. 
 
-Dodatne informacije potražite u članku [Pregled predviđanja](predictions-overview.md).
+Dodatne informacije potražite u članku [Pregled](predictions-overview.md) predviđanja.
 
 ### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Novi izvor podataka: integracija s (pretpregledom Azure Synapse Analytics)
 
@@ -169,7 +197,7 @@ U prijelaznom razdoblju postojeći sudionici pretpregleda i dalje imaju pristup 
 - Prikaz događaja i svojstava događaja 
 - Poboljšajte jedinstvene profile s unesenim i rafiniranim događajima kako biste imali koristi od pune vrijednosti njihovih korisničkih podataka
   
-Tijekom prijelaznog razdoblja zabilježeni događaji i dalje se prenose na povezano jezero podataka. Nakon isključivanja ove funkcije, dijeljenje podataka će se zaustaviti i u povezanu pohranu neće se slati novi događaji.
+Tijekom prijelaznog razdoblja zabilježeni događaji i dalje se prenose na povezano jezero podataka. Nakon što se ta funkcija isključi, dijeljenje podataka će se zaustaviti i nijedan novi događaj neće se slati u povezanu pohranu.
 Ako imate pitanja o završetku pretpregleda mogućnosti, obratite se izravno timu za Microsoftov račun. Vaš tim računa obavještavat će vas o nadolazećim lansiranjima. 
 
 ## <a name="january-2022-updates"></a>Ažuriranja iz siječnja 2022.

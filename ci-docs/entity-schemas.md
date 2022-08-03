@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: cc65314f1b083694b60ac0a2625bea906be7272b
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054745"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183484"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Sheme entiteta u modelu zajedničkih podatakal
 
@@ -39,9 +39,8 @@ Više informacija potražite u dokumentaciji u odjeljku [Sheme entieta usluge Cu
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Pregled entiteta pomoću navigatora entiteta modela zajedničkih podataka
 
-Entitete možete pregledati u [Navigatoru entiteta formata Common Data Model](https://microsoft.github.io/CDM/). Odaberite entitet iz odjeljka aplikacije Insights da biste dobili popis entiteta usluge Customer Insights i njihove definicije.
-> [!div class="mx-imgBorder"]
-> ![CDM navigator eniteta koji prikazuje entitet CustomerActivity.](media/CDM-entity-navigator.png "CDM navigator eniteta koji prikazuje entitet CustomerActivity")
+Prikažite entitete u navigatoru entiteta uobičajenog [podatkovnog modela](https://microsoft.github.io/CDM/). Odaberite entitet iz odjeljka aplikacije Insights da biste dobili popis entiteta usluge Customer Insights i njihove definicije.
 
+:::image type="content" source="media/CDM-entity-navigator.png" alt-text="CDM navigator eniteta koji prikazuje entitet CustomerActivity.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

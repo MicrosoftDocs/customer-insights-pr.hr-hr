@@ -1,51 +1,51 @@
 ---
 title: Izvoz segmenata u RollWorks (pretpregled)
 description: Saznajte kako konfigurirati vezu i izvesti u RollWorks.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 83c3f2437b9822d29d1d2f99ead96815b1b0881a
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055159"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195603"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Izvoz segmenata u RollWorks (pretpregled)
 
-Izvezite segmente objedinjenih profila klijenata u RollWorks i koristite ih za oglašavanje. 
+Izvezite segmente objedinjenih profila klijenata u RollWorks i koristite ih za oglašavanje.
 
-## <a name="prerequisites-for-a-connection"></a>Preduvjeti za vezu
+## <a name="prerequisites"></a>Preduvjeti
 
--   Imate [Račun za RollWorks](https://www.rollworks.com/) i odgovarajuće vjerodajnice administratora.
--   Konfigurirali [ste segmente](segments.md) u customer insights.
--   Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
+- RollWorks [račun](https://www.rollworks.com/) i odgovarajuće administratorske vjerodajnice.
+- ID [oglašivača RollWorksa](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+- [Konfigurirani segmenti](segments.md) u customer insights.
+- Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Možete izvesti do 250 tisuća profila klijenata po izvozu u RollWorks.
-- Ne možete izvesti segmente s manje od 100 profila klijenata u RollWorks. 
-- Izvoz u RollWorks ograničen je na segmente.
-- Izvoz do 250 tisuća profila klijenata u RollWorks može potrajati do 10 minuta. 
-- Broj profila klijenata koje možete izvesti u RollWorks ovisi i ograničen je ugovorom s uslugom RollWorks.
+- Do 250.000 profila kupaca po izvozu u RollWorks, što može potrajati i do 10 minuta. Broj profila kupaca koje možete izvesti u RollWorks ovisi o ugovoru s RollWorksom.
+- Samo segmenti.
 
 ## <a name="set-up-connection-to-rollworks"></a>Postavljanje veze s RollWorks
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Idite na **Admin** > **Veze**.
 
-1. Odaberite **Dodaj vezu** i odaberite **RollWorks** za konfiguriranje veze.
+1. Odaberite **Dodaj vezu**, a zatim **RollWorks**.
 
 1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
 
-1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Odaberite tko može se može koristiti vezom.  Prema zadanim postavkama to su samo administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Odaberite **Prihvaćam** da biste potvrdili **Privatnost podataka i sukladnost**.
+1. [Pregledajte privatnost i usklađenost](connections.md#data-privacy-and-compliance) podataka i odaberite **Slažem se**.
 
-1. Odaberite **Poveži** za inicijalizaciju veze s RollWorks.
+1. Odaberite **Poveži** da biste inicijalizirali vezu.
 
 1. Odaberite **Provjeri autentičnost uz RollWorks** i pružite svoje administratorske vjerodajnice za RollWorks.
 
@@ -55,29 +55,24 @@ Izvezite segmente objedinjenih profila klijenata u RollWorks i koristite ih za o
 
 ## <a name="configure-an-export"></a>Konfiguracija izvoza
 
-Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Idite na **Podaci** > **Izvozi**.
 
-1. Da biste stvorili novi izvoz, odaberite **Dodaj odredište**.
+1. Odaberite **Dodaj izvoz**.
 
-1. U polju **Veza za izvoz** odaberite vezu iz odjeljka RollWorks. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
+1. U polju **Veza za izvoz** odaberite vezu iz odjeljka RollWorks. Ako nijedna veza nije dostupna, obratite se administratoru.
 
-1. Unesite svoj **ID oglašivača za RollWorks** [Oglas za RollWorks](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Unesite naziv izvoza.
 
-1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. Obavezno je izvoziti segmente u RollWorks.
+1. Unesite svoj **ID** rollwork oglašivača.
 
-1. Odaberite segmente koje želite izvesti. Odaberite segment s najmanje 100 članova. Ne možete izvesti manje segmente. Uz to, maksimalna veličina segmenta za izvoz je 250 000 članova po izvozu. 
+1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta.
+
+1. Odaberite segmente koje želite izvesti.
 
 1. Odaberite **Spremi**.
 
-Spremanje izvoza ne pokreće izvoz odmah.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
-
-Kada omogućite Dynamics 365 Customer Insights za prijenos podataka u RollWorks dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prenositi takve podatke prema vašoj uputi, ali vi ste odgovorni za to da RollWorks ispunjava sve obaveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Vaš administrator usluge Dynamics 365 Customer Insights može ovo odredište izvoza ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

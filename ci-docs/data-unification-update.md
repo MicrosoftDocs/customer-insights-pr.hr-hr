@@ -13,16 +13,14 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
-ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
+ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8844031"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139564"
 ---
 # <a name="update-the-unification-settings"></a>Ažuriranje postavki objedinjavanja
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Da biste pregledali ili promijenili postavke objedinjavanja nakon stvaranja jedinstvenog profila, poduzmite sljedeće korake.
 
@@ -71,7 +69,7 @@ Atribut ili entitet ne možete ukloniti ako su već ujedinjeni.
 
    Broj pronađenih duplikata zapisa prikazuje se u odjeljku **Duplikati**. Stupac Zapisi **koji se dodjeljuju** prikazuje koji entiteti imaju duplicirane zapise i postotak dupliciranih zapisa.
 
-1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora](data-sources-enrichment.md) podataka.
+1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora podataka](data-sources-enrichment.md).
 
 1. Da biste upravljali pravilima deduplikacije, odaberite neku od sljedećih mogućnosti:
    - **Stvaranje novog pravila**: Odaberite Dodaj **pravilo** u odgovarajućem entitetu. Dodatne informacije potražite u članku [Definiranje pravila](remove-duplicates.md#define-deduplication-rules) deduplikacije.
@@ -112,7 +110,7 @@ Većinu parametara uparivanja možete ponovno konfigurirati i fino podesiti. Ne 
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Grafički prikaz neusporedivih i podudarnih zapisa, uključujući popis podataka.":::
 
-1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora](data-sources-enrichment.md) podataka.
+1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora podataka](data-sources-enrichment.md).
 
 1. Da biste upravljali pravilima, odaberite neku od sljedećih mogućnosti:
    - **Stvaranje novog pravila**: Odaberite Dodaj **pravilo** u odgovarajućem entitetu. Dodatne informacije potražite u članku [Definiranje pravila za parove podudaranja](match-entities.md#define-rules-for-match-pairs).
@@ -136,7 +134,7 @@ Većinu parametara uparivanja možete ponovno konfigurirati i fino podesiti. Ne 
 
 ## <a name="run-matching-conditions"></a>Pokreni odgovarajuće uvjete
 
-Pokretanje odgovarajućih uvjeta pokreće samo pravila deduplikacije i podudaranja te ažurira *entitete Deduplication_* i *ConflationMatchPair*.
+Pokretanje odgovarajućih uvjeta pokreće samo pravila deduplikacije i podudaranja te ažurira *entitete Deduplication_** i *ConflationMatchPair*.
 
 1. **Na stranici Objedinjavanje** > **podataka** odaberite **Pokreni samo** odgovarajuće uvjete.
 

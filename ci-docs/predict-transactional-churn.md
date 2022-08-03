@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642956"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171086"
 ---
 # <a name="transaction-churn-prediction"></a>Predviđanje gubitka transakcija
 
@@ -240,7 +240,7 @@ Dodajte popis poslovnih klijenata i računa koje želite koristiti kao referentn
    - **Naziv predviđanja:**: naziv predviđanja naveden pri stvaranju.
    - **Vrsta predviđanja**: vrsta modela koji se koristi za predviđanje
    - **Entitet rezultata**: naziv entiteta za pohranu rezultata predviđanja. Entitet ovog naziva možete pronaći u **Podaci** > **Entiteti**.
-     U izlaznom je entitetu *ChurnScore* predviđena vjerojatnost gubitka i *IsChurn* binarna oznaka koja se temelji na *ChurnScore* s pragom od 0,5. Zadani prag možda neće funkcionirati za vaš scenarij. [Stvorite novi segment](segments.md#create-a-new-segment) s vašim željenim pragom.
+     U izlaznom je entitetu *ChurnScore* predviđena vjerojatnost gubitka i *IsChurn* binarna oznaka koja se temelji na *ChurnScore* s pragom od 0,5. Zadani prag možda neće funkcionirati za vaš scenarij. [Stvorite novi segment](segments.md#create-a-segment) s vašim željenim pragom.
      Nisu svi klijenti nužno i aktivni klijenti. Neki od njih možda već dugo nisu imali nikakve aktivnosti i već se smatraju izgubljenima na temelju vaše definicije gubitka. Predviđanje opasnosti od gubitka za klijente koji su već izgubljeni nije korisno jer nisu ciljna skupina.
    - **Predviđeno polje**: Ovo se polje popunjava samo za neke vrste predviđanja i ne koristi se u predviđanju gubitka.
    - **Status**: status pokretanja predviđanja.

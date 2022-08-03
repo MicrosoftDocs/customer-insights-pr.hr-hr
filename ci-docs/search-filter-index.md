@@ -1,7 +1,7 @@
 ---
-title: 'Profili klijenta: indeks pretraživanja i filtriranja'
+title: Upravljanje indeksom pretraživanja i filtriranja za profile kupaca
 description: Pronađite brzo informacije o objedinjenim profilima klijenata i filtrirajte određene atribute.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,59 +11,64 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: dfbfcbff3ffb3e4483252377e591229631d38556
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050800"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9187900"
 ---
-# <a name="customer-profiles-search--filter-index"></a>Profili klijenta: indeks pretraživanja i filtriranja
+# <a name="manage-the-search--filter-index-for-customer-profiles"></a>Upravljanje indeksom pretraživanja i filtriranja za profile kupaca
 
-Rezultat objedinjavanja podataka vaših klijenata jest entitet Profil klijenta koji pruža objedinjeni pregled nad ukupnom bazom klijenata. Da biste brzo [pronašli informacije o određenom klijentu ili grupi klijenata](customer-profiles.md) možete konfigurirati mogućnosti **Pretraži** i **Filtriraj** na stranici **Klijenti**. Pročitajte više o tome kako administratori mogu uređivati atribute na stranici **Pretraži i filtriraj indeks**, koja je dostupna korisnicima za pretraživanje i filtriranje.
+Rezultat objedinjavanja podataka o klijentima *je klijentski* entitet koji pruža jedinstven prikaz vaše ukupne baze klijenata. Da bi korisnici brzo [pronašli informacije o određenom klijentu ili grupi klijenata](customer-profiles.md), administrator mora konfigurirati **mogućnosti pretraživanja** i **filtriranja** za **stranicu Kupci**.
 
    :::image type="content" source="media/search-filter.png" alt-text="Pretraži filtar":::
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+## <a name="define-searchable-attributes-and-indexed-fields"></a>Definiranje atributa koji se mogu pretraživati i indeksiranih polja
 
-## <a name="add-fields-and-specify-attributes"></a>Dodajte polja i odredite atribute
+Ako prvi put definirate atribute koji se mogu pretraživati kao administratora, najprije definirajte indeksirana polja. Preporučujemo da odaberete sve atribute po kojima korisnici mogu pretraživati i filtrirati klijente na stranici **Klijenti**. Mogu se navesti samo atributi koji postoje u *entitetu Klijent* stvoreni tijekom postupka objedinjavanja podataka.
 
-Ako kao administrator po prvi put definirate atribute koje je moguće pretraživati, prvo trebate definirati indeksirana polja. Preporučujemo da odaberete sve atribute po kojima korisnici mogu pretraživati i filtrirati klijente na stranici **Klijenti**. Možete odrediti samo atribute koji postoje na entitetu Profil klijenta, koji ste izradili tijekom postupka objedinjavanja podataka.
+1. Idite na **Klijenti** i odaberite **Indeks** pretraživanja i filtriranja.
 
-1. Otvorite stranicu **Kupci** i odaberite **Pretraži i filtriraj indeks**.
+1. Odaberite **+ Dodaj**.
 
-2. Odaberite **+ Dodaj** da biste odredili indeksirana polja.
+1. Odaberite atribute na popisu koji želite dodati kao indeksirana polja i kliknite **Primijeni**.
 
-3. Na popisu odaberite atribute koje želite dodati kao indeksirana polja. Uvijek možete dodati više atributa odabirom mogućnosti **Dodaj**. Također, možete ukloniti sve odabrane atribute odabirom simbola **Ukloni**.
+1. Da biste dodali još atributa, odaberite **Dodaj**. Da biste uklonili odabrani atribut, odaberite ga, a zatim **izbrišite**.
 
-## <a name="explore-the-indexed-customer-fields-table"></a>Istraživanje tablice polja indeksiranih klijenata
+   :::image type="content" source="media/search-filter-index.png" alt-text="Stranica indeksa pretraživanja i filtriranja.":::
 
-U tablici su dostupne sljedeće informacije.
+1. Odaberite **Pokreni** nakon što budete spremni primijeniti postavke pretraživanja i filtriranja. Nakon obrade promjena pogledajte ih na [karticama kupaca na stranici](customer-profiles.md) Kupac.
 
-- **Naziv**: predstavlja naziv atributa kako se pojavljuje u entitetu Profil klijenta.
+## <a name="define-filtering-options-for-a-given-attribute"></a>Definiranje mogućnosti filtriranja za određeni atribut
+
+Postavite polja koja se mogu koristiti za filtriranje kupaca na **stranici Kupci**.
+
+1. Idite na **Klijenti** i odaberite **Indeks** pretraživanja i filtriranja.
+
+1. Odaberite atribut i **Dodaj filtar**. Definirajte broj rezultata i redoslijed kojim će biti organizirani. Ovisno o vrsti podataka atributa, pojavit će se jedno od sljedećih okna.
+
+   - Atributi vrste nizova: navedite broj željenih rezultata u **oknu filtra** Niz i pravilo redoslijeda po kojem će biti organizirani.
+
+   - Atributi numeričke vrste: navedite intervale uključene u **okno filtara** Broj i pravilo redoslijeda po kojem će biti organizirani.
+
+   - Atributi vrste datuma: navedite intervale uključene u **okno filtra** Datum i pravilo redoslijeda po kojem će biti organizirani.
+
+1. Odaberite **U redu**. Ponovite postupak za sve atribute prema kojima želite filtrirati.
+
+1. Odaberite **Pokreni** nakon što budete spremni primijeniti postavke pretraživanja i filtriranja. Nakon obrade promjena pogledajte ih na [karticama kupaca na stranici](customer-profiles.md) Kupac.
+
+## <a name="view-indexed-customer-fields"></a>Prikaz indeksiranih polja kupaca
+
+Stranica indeksa **pretraživanja** i filtra prikazuje sljedeće informacije:
+
+- **Naziv**: predstavlja naziv atributa kako se pojavljuje u entitetu *Kupac*.
 - **Vrsta podataka**: određuje je li vrsta podataka niz, broj ili datum.
 - **Uključeno u pretraživanje**: određuje može li se taj atribut koristiti za pretraživanje klijenata na stranici **Klijenti** koristeći polje **Pretraživanje**.
 - **Dodavanje filtra**: kontrola za upravljanje načina na koji se taj atribut može koristiti za filtriranje na stranici **Klijenti**.
 
-## <a name="editing-filtering-options-for-a-given-attribute"></a>Uređivanje opcija filtriranja za određeni atribut
-
-Izbornik **Filtar** na stranici **Klijenti** može uključivati različit broj razina atributa (na primjer, različite dobne skupine prema kojima se filtriraju klijenti).
-
-1. Odaberite **Dodaj filtar** za određeni atribut na stranici **Pretraži i filtriraj indeks**. Možete definirati broj rezultata i redoslijed po kojem će biti organizirani. Ovisno o vrsti podataka atributa prikazat će se jedna od sljedećih ploča.
-
-- Atributi vrste niza: odredite broj željenih rezultata u oknu **Mogućnosti filtra niza** i pravila redoslijeda prema kojima će biti organizirani.
-
-- Atributi vrste broja: odredite uključene intervale u oknu **Mogućnosti filtra broja** i pravila redoslijeda prema kojima će biti organizirani.
-
-- Atributi vrste datuma: odredite uključene intervale u oknu **Mogućnosti filtra datuma** i pravila redoslijeda prema kojima će biti organizirani.
-
-2. Odaberite **Spremi** za primjenu izmjena.
-
-3. Odaberite **Pokreni** kad budete spremni primijeniti svoje postavke. Nakon obrade promjena, pronaći ćete ih u [karticama klijenta na stranici Klijenti](customer-profiles.md). 
-
 ## <a name="next-steps"></a>Sljedeći koraci
 
 Pregledajte [stranicu objedinjenih profila](customer-profiles.md) da biste potražili profile ili se koristili indeksiranim poljima za pregled podskupa svih objedinjenih profila.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082550"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196017"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Obogatite profile tvrtke Dun & Bradstreet (pregled)
 
@@ -80,7 +80,7 @@ Trenutno podržavamo sljedeće opcije zemlje / regije: Kanada (engleski) ili Sje
 
 1. Pregledajte pregled, a zatim odaberite **Dalje**.
 
-1. Odaberite vezu i potvrdite. Ako jedan nije dostupan, obratite se administratoru.
+1. Odaberite vezu i potvrdite. Ako nijedna veza nije dostupna, obratite se administratoru.
 
 1. Odaberite **Dalje**.
 

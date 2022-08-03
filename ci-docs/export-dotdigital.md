@@ -1,88 +1,82 @@
 ---
 title: Izvoz segmenata u DotDigital (pretpregled)
 description: Saznajte kako konfigurirati vezu i izvesti u DotDigital.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: af0cce4edb9d47247c79ae08491366349da98b1c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082928"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196063"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Izvoz segmenata u DotDigital (pretpregled)
 
-Izvezite segmente objedinjenih profila klijenata u adresare usluge DotDigital i koristite ih za kampanje, marketing putem e-pošte i za izgradnju segmenata klijenata pomoću usluge DotDigital. 
+Izvezite segmente objedinjenih profila klijenata u adresare usluge DotDigital i koristite ih za kampanje, marketing putem e-pošte i za izgradnju segmenata klijenata pomoću usluge DotDigital.
 
-## <a name="prerequisites-for-a-connection"></a>Preduvjeti za vezu
+## <a name="prerequisites"></a>Preduvjeti
 
--   Imate [račun za DotDigital](https://dotdigital.com/) i stvorili ste [korisnika API-ja](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Za stvaranje veze trebate koristiti vjerodajnice korisnika API -ja
--   DotDigital sadrži postojeće adresare i odgovarajuće ID-ove. ID se može pronaći u URL-u kada odaberete i otvorite adresar. Dodatne informacije potražite u [adresarima usluge DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
--   Konfigurirali [ste segmente](segments.md) u customer insights.
--   Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
+- [DotDigital račun](https://dotdigital.com/) i korisnik API-ja [...](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user).
+- DotDigital ID iz [novog](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book) ili postojećeg adresara u DotDigitalu. ID se može pronaći u URL-u kada odaberete i otvorite adresar.
+- [Konfigurirani segmenti](segments.md) u customer insights.
+- Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Do 1 milijun profila klijenata po izvozu u DotDigital.
-- Izvoz u DotDigital ograničen je na segmente.
-- Izvoz segmenata s ukupno 1 milijun profila klijenata može potrajati i do 3 sata zbog ograničenja na strani davatelja usluga. 
-- Broj profila klijenata koje možete izvesti u DotDigital ovisi i ograničen je ugovorom s uslugom DotDigital.
+- Do milijun profila kupaca po izvozu u DotDigital, što može potrajati i do tri sata zbog ograničenja na strani pružatelja usluga. Broj profila kupaca koje možete izvesti u DotDigital ovisi o vašem ugovoru s DotDigitalom.
+- Samo segmenti.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Postavljanje veze s DotDigital
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Idite na **Admin** > **Veze**.
 
-1. Odaberite **Dodaj vezu** i odaberite **DotDigital** za konfiguriranje veze.
+1. Odaberite **Dodaj vezu**, a zatim **DotDigital**.
 
 1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
 
-1. Odaberite tko može se može koristiti vezom. Ako ništa ne poduzmete, prema zadanim će postavkama biti Administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Odaberite tko može se može koristiti vezom. Prema zadanim postavkama to su samo administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Unesite **korisničko ime i lozinku API-ja za DotDigital**. 
+1. Unesite **korisničko ime i lozinku API-ja za DotDigital**.
 
-1. Unesite svoj **[ID adresara usluge DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
+1. **Unesite svoj DotDigital ID** adresara.
 
-1. Odaberite **Prihvaćam** da biste potvrdili **Privatnost podataka i sukladnost**.
+1. [Pregledajte privatnost i usklađenost](connections.md#data-privacy-and-compliance) podataka i odaberite **Slažem se**.
 
-1. Odaberite **Povezivanje** za inicijalizaciju veze s uslugom DotDigital.
+1. Odaberite **Poveži** da biste inicijalizirali vezu.
 
 1. Odaberite **Dodajte se kao korisnik izvoza** i unesite svoje vjerodajnice za Customer Insights.
 
-1. Odaberite **Spremi** da biste završili vezu. 
+1. Odaberite **Spremi** da biste završili vezu.
 
 ## <a name="configure-an-export"></a>Konfiguracija izvoza
 
-Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Idite na **Podaci** > **Izvozi**.
 
-1. Da biste stvorili novi izvoz, odaberite **Dodaj odredište**.
+1. Odaberite **Dodaj izvoz**.
 
-1. U polju **Veza za izvoz** odaberite vezu iz odjeljka DotDigital. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
+1. U polju **Veza za izvoz** odaberite vezu iz odjeljka DotDigital. Ako nijedna veza nije dostupna, obratite se administratoru.
 
+1. Unesite naziv izvoza.
 
-1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. Ponovite iste korake za druga neobavezna polja kao što su **Ime**, **Prezime**, **Puno ime**, **Spol** i **Poštanski broj**.
+1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta.
 
-1. Odaberite segmente koje želite izvesti. U DotDigital možete ukupno izvesti do 1 milijun profila klijenata.
+1. Po želji izvezite **ime**, **prezime**, **puno ime**, **spol** i **poštanski broj**.
+
+1. Odaberite segmente koje želite izvesti.
 
 1. Odaberite **Spremi**.
 
-Spremanje izvoza ne pokreće izvoz odmah.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
- 
-U usluzi DotDigital sada možete pronaći svoje segmente u [adresaru usluge DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
-
-
-## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
-
-Kada omogućite Dynamics 365 Customer Insights za prijenos podataka u DotDigital, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prema vašoj uputi prenijeti takve podatke, ali vi ste odgovorni za to da DotDigital ispunjava sve obaveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-Vaš administrator usluge Dynamics 365 Customer Insights može ovo odredište izvoza ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
-
+U DotDigitalu pronađite svoje segmente u [DotDigital adresarima](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

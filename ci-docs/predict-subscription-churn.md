@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642876"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171040"
 ---
 # <a name="subscription-churn-prediction"></a>Predviđanje gubitka pretplate
 
@@ -61,7 +61,7 @@ Predviđanje gubitaka pretplate pomaže u predviđanju postoji li opasnost da ć
 
 ## <a name="create-a-subscription-churn-prediction"></a>Izrada predviđanja gubitaka pretplate
 
-1. Idite na **IntelligencePredictions** > **·**.
+1. Idite na **Obavještajna** > **predviđanja**.
 1. Odaberite pločicu **Model** modela s dobavljačem Pretplata i odaberite **Koristi ovaj model**.
    > [!div class="mx-imgBorder"]
    > ![Pločica modela gubitka pretplate s gumbom Koristi ovaj model.](media/subscription-churn-usethismodel.PNG "Pločica Predviđanje gubitaka pretplate, pomoću gumba Koristi ovaj model")
@@ -121,7 +121,7 @@ Predviđanje gubitaka pretplate pomaže u predviđanju postoji li opasnost da ć
    - **Naziv predviđanja:** Naziv predviđanja naveden prilikom njegovog stvaranja.
    - **Vrsta predviđanja:** Vrsta modela korištenog za to predviđanje
    - **Entitet rezultata:** Naziv entiteta za pohranu rezultata predviđanja. Entitet ovog naziva možete pronaći u **Podaci** > **Entiteti**.    
-     U izlaznom je entitetu *ChurnScore* predviđena vjerojatnost gubitka i *IsChurn* binarna oznaka koja se temelji na *ChurnScore* s pragom od 0,5. Zadani prag možda neće funkcionirati za vaš scenarij. [Stvorite novi segment](segments.md#create-a-new-segment) s vašim željenim pragom.
+     U izlaznom je entitetu *ChurnScore* predviđena vjerojatnost gubitka i *IsChurn* binarna oznaka koja se temelji na *ChurnScore* s pragom od 0,5. Zadani prag možda neće funkcionirati za vaš scenarij. [Stvorite novi segment](segments.md#create-a-segment) s vašim željenim pragom.
    - **Polje predviđanja:** Ovo polje popunjava se samo za neke vrste predviđanja i ne koristi se za predviđanje gubitka pretplate.
    - **Status:** Trenutačni status izvršenja predviđanja.
         - **Na čekanju:** Predviđanje trenutno čeka na pokretanje drugih procesa.

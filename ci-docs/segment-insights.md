@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: e90bdc523c3f8857c150ccba9d81f055d39f9feb
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ccb33594a3a92e87d307f3300c77772ef8b4a82f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051582"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170994"
 ---
 # <a name="segment-insights-preview"></a>Uvidi u segmente (pretpregled)
 
@@ -43,26 +43,25 @@ Također, možete analizirati kako se preklapanje mijenja za određene atribute.
 
 ### <a name="view-and-optimize-an-overlap-analysis"></a>Prikaz i optimiziranje analize preklapanja
 
-Nakon dovršetka analize, pronađite detalje o ovom uvidu u **Segmenti** > **Uvidi (pretpregled)**.
+1. Nakon dovršetka analize, pronađite detalje o ovom uvidu u **Segmenti** > **Uvidi (pretpregled)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Pojedinosti uvida u preklapanje segmenta.":::
+   :::image type="content" source="media/segment-overlap.png" alt-text="Pojedinosti uvida u preklapanje segmenta.":::
 
-Odaberite uvid da biste vidjeli rezultate analize:
+1. Odaberite uvid da biste vidjeli rezultate analize:
 
-- Broj članova kod kojih se preklapaju segmenti odabrani za analizu.
-- Broj članova koji su uključeni u jedan od segmenata, ali ne i u ostale segmente.
-- Ako ste tijekom konfiguriranja analize preklapanja odabrali polja, naći ćete ih na odgovarajućim karticama. Pomoću padajućeg izbornika filtra možete odabrati bilo koju razinu atributa koja vas zanima, a tablica na dnu prikazat će odgovarajuće podatke.
+   - Broj članova kod kojih se preklapaju segmenti odabrani za analizu.
+   - Broj članova koji su uključeni u jedan od segmenata, ali ne i u ostale segmente.
+   - Ako ste tijekom konfiguriranja analize preklapanja odabrali polja, naći ćete ih na odgovarajućim karticama. Pomoću padajućeg izbornika filtra možete odabrati bilo koju razinu atributa koja vas zanima, a tablica na dnu prikazat će odgovarajuće podatke.
 
 ## <a name="segment-differentiators"></a>Diferencijatori segmenta
 
-Elementi razlikovanja segmenata pomažu vam otkriti po čemu se neki segment razlikuje od ostalih klijenata ili nekog drugog segmenta. Trebate samo odabrati segment i sustav će prepoznati atribute profila i mjere koje razlikuju odabrani segment.
+Elementi razlikovanja segmenata pomažu vam otkriti po čemu se neki segment razlikuje od ostalih klijenata ili nekog drugog segmenta. Odaberite segment i sustav identificira atribute profila i mjere koje razlikuju odabrani segment.
 
 ### <a name="run-a-differentiator-analysis"></a>Pokretanje analize elemenata razlikovanja
 
 1. Idite na **Segmenti** i odaberite karticu **Uvidi (pretpregled)**.
 
-1. Odaberite **Novo** i odaberite opciju **Preklapanje** u oknu **Odabir vrste uvida**.
+1. Odaberite **Novo** i odaberite **mogućnost Diferencijatori** u **oknu Odabir vrste uvida**.
 
 1. Odaberite segment koji želite analizirati kao **Primarni segment** i odaberite **Dalje**.
 
@@ -70,29 +69,29 @@ Elementi razlikovanja segmenata pomažu vam otkriti po čemu se neki segment raz
 
 1. Također, možete odabrati jedno ili više polja koja vas zanimaju da biste analizu usredotočili na određene atribute i zatim odaberite **Dalje**.
 
-1. Navedite naziv za analizu preklapanja, neobvezni zaslonski naziv i opis.
+1. Navedite naziv za analizu diferencijatora, neobaveznu zaslonsko ime i opis.
 
-1. Odaberite **Spremi** kako biste započeli analizu. Analiza preklapanja bit će spremna kada se status promijeni s Osvježavanje na Uspješno.
+1. Odaberite **Spremi** kako biste započeli analizu. Analiza diferencijatora spremna je kada se status promijeni iz Osvježavanje u Uspješno.
 
 ### <a name="view-and-optimize-a-differentiators-analysis"></a>Prikaz i optimiziranje analize elemenata razlikovanja
 
-Nakon dovršetka analize, pronađite detalje o ovom uvidu u **Segmenti** > **Uvidi (pretpregled)**.
+1. Nakon završetka analize idite na **Segments** > **Insights (pregled)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Pojedinosti uvida u elemente razlikovanja segmenta.":::
+   :::image type="content" source="media/segment-differentiators.png" alt-text="Pojedinosti uvida u elemente razlikovanja segmenta.":::
 
-Odaberite uvid da biste vidjeli rezultate analize. Analiza elemenata razlikovanja uključuje dvije kartice. Na kartici **Atributi** nalaze se atributi profila koji se smatraju elementima razlikovanja. Na kartici **Mjere** nalaze se elementi razlikovanja. Svaka kartica sadrži sljedeće detalje:
+1. Odaberite uvid da biste vidjeli rezultate analize. Analiza elemenata razlikovanja uključuje dvije kartice. Na kartici **Atributi** nalaze se atributi profila koji se smatraju elementima razlikovanja. Na kartici **Mjere** nalaze se elementi razlikovanja. Svaka kartica sadrži sljedeće detalje:
 
-- Rangirani popis elemenata razlikovanja, poredan po ocjeni razlike.
-- **Ocjena razlike** za svaki element razlikovanja. Ocjena razlike predstavlja stupanj razlike atributa između dva segmenta. Što je veća ocjena razlike, to se više atributi razlikuju između dva segmenta. Odaberite ocjenu kako bi se otvorilo okno **Ocjena razlike** s raspodjelom vrijednosti za taj atribut.
+   - Rangirani popis elemenata razlikovanja, poredan po ocjeni razlike.
+   - **Ocjena razlike** za svaki element razlikovanja. Ocjena razlike predstavlja stupanj razlike atributa između dva segmenta. Što je veća ocjena razlike, to se više atributi razlikuju između dva segmenta. Odaberite ocjenu kako bi se otvorilo okno **Ocjena razlike** s raspodjelom vrijednosti za taj atribut.
 
 ## <a name="manage-segment-insights"></a>Upravljanje uvidima u segmente
 
-Sljedeće opcije s naredbene trake možete koristiti za svoje uvide:
+Idite na **Segments** > **Insights (pregled)** da biste vidjeli uvide u segmente i upravljali njima. Odaberite uvid u segmente da biste vidjeli dostupne akcije.
 
-- **Natrag** za vraćanje popisa uvida
-- **Osvježi** za ponovno pokretanje analize
-- **Izbriši** za uklanjanje ovog uvida
-
+- **Prikaz** analize uvida
+- **Uređivanje** uvida radi promjene njegovih svojstava
+- **Osvježite** uvid da biste ponovno pokrenuli analizu
+- **Preimenujte** uvid
+- **Brisanje** uvida
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Izvoz segmenata u Omnisend (pretpregled)
 description: Saznajte kako konfigurirati vezu i izvesti u Omnisend.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 15918b2e2550869115d30ea4d84b4549c3c7d1ca
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052272"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196155"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Izvoz segmenata u Omnisend (pretpregled)
 
@@ -21,31 +21,33 @@ Izvezite segmente objedinjenih profila klijenata u Omnisend i koristite ih za ma
 
 ## <a name="prerequisites"></a>Preduvjeti
 
--   Imate [Račun za Omnisend](https://www.omnisend.com/) i odgovarajuće vjerodajnice administratora.
--   Konfigurirali [ste segmente](segments.md) u customer insights.
--   Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
+- Sveprisutni [račun](https://www.omnisend.com/) i odgovarajuće administratorske vjerodajnice.
+- [Omnisend API ključ](https://support.omnisend.com/en/articles/1061890-generating-api-key).
+- [Konfigurirani segmenti](segments.md) u customer insights.
+- Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Možete izvesti do 1 milijun profila klijenata po izvozu u Omnisend, a dovršetak može potrajati do 4 sata.
-- Izvoz u Omnisend ograničen je na segmente.
-- Broj profila klijenata koje možete izvesti u Omnisend ovisi o ugovoru s uslugom Omnisend.
+- Do milijun profila kupaca po izvozu u Omnisend, što može potrajati i do četiri sata. Broj profila klijenata koje možete izvesti u Omnisend ovisi o ugovoru s uslugom Omnisend.
+- Samo segmenti.
 
 ## <a name="set-up-connection-to-omnisend"></a>Postavljanje veze s uslugom Omnisend
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Idite na **Admin** > **Veze**.
 
-1. Odaberite **Dodaj vezu** i odaberite **Omnisend** za konfiguriranje veze.
+1. Odaberite **Dodaj vezu**, a zatim **Sveprisutno**.
 
 1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
 
 1. Odaberite tko može se može koristiti vezom. Prema zadanim postavkama to su samo administratori. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Unesite svoj [Ključ za API za Omnisend](https://support.omnisend.com/en/articles/1061890-generating-api-key).
+1. Unesite svoj Ključ za API za Omnisend.
 
-1. Odaberite **Prihvaćam** da biste potvrdili **Privatnost podataka i sukladnost**.
+1. [Pregledajte privatnost i usklađenost](connections.md#data-privacy-and-compliance) podataka i odaberite **Slažem se**.
 
-1. Odaberite **Poveži** za inicijalizaciju veze s uslugom Omnisend.
+1. Odaberite **Poveži** da biste inicijalizirali vezu.
 
 1. Odaberite **Dodajte se kao korisnik izvoza** i unesite svoje vjerodajnice za Customer Insights.
 
@@ -53,25 +55,24 @@ Izvezite segmente objedinjenih profila klijenata u Omnisend i koristite ih za ma
 
 ## <a name="configure-an-export"></a>Konfiguracija izvoza
 
-Ovaj izvoz možete konfigurirati ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Idite na **Podaci** > **Izvozi**.
 
-1. Da biste stvorili novi izvoz, odaberite **Dodaj odredište**.
+1. Odaberite **Dodaj izvoz**.
 
-1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Omnisend. Ako ne vidite naziv ovog odjeljka, nema dostupnih veza ove vrste.
+1. U polju **Veza za izvoz** odaberite vezu iz odjeljka Omnisend. Ako nijedna veza nije dostupna, obratite se administratoru.
 
-1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta. Obavezno je izvoziti segmente u Omnisend. Ako želite, možete izvesti Ime, Prezime, Adresu, Državu/Regiju, Državu, Grad i Poštanski broj za stvaranje personaliziranije e-pošte. Odaberite **Dodavanje atributa** za mapiranje ovih polja.
+1. Unesite naziv izvoza.
+
+1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta.
+
+1. Po želji izvezite **ime**, **prezime**, **adresu**, **državu/regiju**, **državu**, **grad** i **poštanski broj** da biste stvorili personaliziranije e-poruke. Odaberite **Dodavanje atributa** za mapiranje ovih polja.
+
+1. Odaberite segmente koje želite izvesti.
 
 1. Odaberite **Spremi**.
 
-Spremanje izvoza ne pokreće izvoz odmah.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Izvoz se pokreće sa svakim [zakazanim osvježavanjem](system.md#schedule-tab). Također možete [izvesti podatke na zahtjev](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
-
-Kada omogućite Dynamics 365 Customer Insights za prijenos podataka u Ommisend, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prenositi takve podatke prema vašoj uputi, ali vi ste odgovorni za to da Omnisend ispunjava sve obaveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Vaš administrator usluge Dynamics 365 Customer Insights može ovo odredište izvoza ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
+[!INCLUDE [footer-include](includes/footer-banner.md)]
