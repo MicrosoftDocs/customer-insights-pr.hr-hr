@@ -1,7 +1,7 @@
 ---
-title: Upravljanje korisničkim dozvolama
+title: Dodjela korisničkih dozvola
 description: Saznajte više o dozvolama i korisničkim ulogama.
-ms.date: 02/09/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,20 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: a59a672b6f7e1e67c2162ea14bb9860df0d551aa
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054845"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245410"
 ---
-# <a name="manage-user-permissions"></a>Upravljanje korisničkim dozvolama
+# <a name="assign-user-permissions"></a>Dodjela korisničkih dozvola
 
-Stranica **Dozvole** mjesto je na kojem ćete postaviti uloge i dozvole za korištenje uvida u klijenta.
-
-Za pregled stranice morate imati administratorske dozvole. Da biste pristupili stranici s dozvolama, idite na **Korisnici sigurnosti** > **administratora** > **·**.
-
-Postoje tri vrste uloga:
+Pristup korisničkim uvidima ograničen je na korisnike u vašoj tvrtki ili ustanovi koje je administrator dodao u aplikaciju. Administrator može dodavati, uređivati ili uklanjati korisnike. Korisnik može biti jedan korisnik, grupa ili aplikacija. Postoje tri vrste uloga koje korisnik može imati:
 
 ## <a name="viewer"></a>Gledatelj
 
@@ -41,18 +37,18 @@ Postoje tri vrste uloga:
 
 - Sve dozvole koje su dostupne Gledatelju.
 - Učitavajte i pretvarajte podatke pomoću stranice **Izvori podataka**.
-- Dovršite ***Objedinjavanje** podataka što rezultira jedinstvenim entitetom korisničkog profila.
+- Dovršite **objedinjavanje** podataka koje rezultira jedinstvenim entitetom korisničkog profila.
 - Definirajte **Odnosi** i **Aktivnosti**.
 - Stvorite segmente pomoću stranice **Segmenti**.
 - Izradite mjere s pomoću stranice **Mjere**.
 - Upravljajte konfiguracijom i obogaćujte korisničke profile sa stranice **Obogaćivanje** (samo za obogaćivanja prve strane).
-- Upravljajte i stvarajte izvoze na temelju veza koje se dijele sa suradnicima. [Saznajte više o tome kako administratori dopuštaju suradnicima korištenje veze za izvoze](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Upravljajte izvozom i stvarajte ih na [temelju veza koje se zajednički koriste sa suradnicima](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="admin"></a>Administrativna cjelina
 
 - Sve dozvole koje su dostupne Suradniku.
-- Promijenite postavke na stranici **Sustav**, uključujući radni jezik i rasporede osvježavanja za vaše sistemske procese.
-- Pregledajte i dodajte dozvole koristeći stranicu **Dozvole**.
+- Promijenite postavke na **stranici Sustav**, uključujući radni jezik, raspored osvježavanja sistemskih procesa i izvoz dijagnostičkih zapisnika.
+- Promijenite postavke na **stranici Sigurnost**, uključujući korisnike, API ključeve, privatne veze i trezor ključeva.
 - Postavite definicije pretraživanja i filtriranja za stranicu Klijenti pomoću stranice **Indeks pretraživanja i filtriranja** (dostupna putem stranice **Klijenti**).
 - Upravljajte vezama i dopustite im ostale korisničke uloge na stranici **Veze**.
 - Upravljajte konfiguracijom i obogaćujte korisničke profile sa stranice **Obogaćivanje** (za sva obogaćivanja).
@@ -67,24 +63,27 @@ Postoje tri vrste uloga:
 - Sve dozvole dostupne administratoru.
 - [Resetirajte i izbrišite](manage-environments.md#reset-an-existing-environment-preview) okruženje.
 
-## <a name="assign-roles-and-permissions"></a>Dodjela uloga i dozvola
+## <a name="add-users"></a>Dodavanje korisnika
 
-1. Otvorite **> Sigurnost administratora** > **·** **Korisnici***.
+1. Otvorite **Sigurnost administratora** > **i** odaberite karticu **Korisnici**.
 
 1. Odaberite **Dodaj korisnike** da biste otvorili okno **Dodaj/uredi dozvole**.
 
-1. Koristite polje **Pretraži** da biste pronašli Azure Active Directory korisnika ili grupu čije dozvole želite prilagoditi. Odaberite mogućnost **Uloga** za dodjelu tom korisniku ili grupi.
+1. **Pomoću polja Pretraživanje** pronađite korisnika ili grupu Azure Active Directory koju želite dodati. Odaberite mogućnost **Uloga** za dodjelu tom korisniku ili grupi.
 
-1. Odaberite **Spremi**. Trenutno okruženje automatski će se dijeliti s korisnikom ili članovima grupe čije ste dozvole promijenili. Korisnici mogu pristupiti aplikaciji Customer Insights i raditi u skladu s njihovom zadanom ulogom.
+1. Odaberite **Spremi**. Trenutno okruženje automatski se dijeli s korisnikom ili članovima grupe. Korisnici mogu pristupiti aplikaciji Customer Insights i raditi u skladu s njihovom zadanom ulogom.
 
 ## <a name="view-current-permissions"></a>Pregledaj trenutačne dozvole
 
-Idite na **Korisnici** > **sigurnosti** > **administratora** da biste vidjeli koje su dodjele uloga trenutno aktivne.
+Otvorite **Sigurnost administratora** > **i odaberite karticu** Korisnici **da biste pogledali popis aktivnih korisnika i njihove** dodjele uloga. Popis korisnika možete sortirati po bilo kojem stupcu ili pomoću okvira za pretraživanje pronaći određenog korisnika.
 
-- Stupac **Vrsta** navodi jednog korisnika, grupu ili aplikaciju. Sustav podržava pojedinačne korisnike i grupe.
-- Uloge su navedene u stupcu **Uloga**.
-- Odaberite bilo koji naziv stupca da biste rezultate sortirali prema vrijednosti stupca.
-- Upotrijebite polje **Pretraživanje** na vrhu stranice kako biste pronašli određene korisnike.
+## <a name="manage-current-users"></a>Upravljanje trenutnim korisnicima
 
+Otvorite **Sigurnost administratora** > **i** odaberite karticu **Korisnici**. Popis korisnika možete sortirati po bilo kojem stupcu ili pomoću okvira za pretraživanje pronaći korisnika kojim želite upravljati.
+
+Odaberite korisnika da biste vidjeli dostupne akcije.
+
+- **Uredite** da biste uredili ulogu korisnika u odjeljku Uvidi kupaca. Odaberite **Spremi** da biste potvrdili promjenu.
+- **Uklonite** da biste uklonili korisnika iz pristupa uvidima u kupca. Odaberite **Izbriši** da biste potvrdili brisanje.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

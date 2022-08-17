@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
-ms.translationtype: MT
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053855"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245870"
 ---
 # <a name="data-enrichment-preview-overview"></a>Pregled obogaćivanja podataka (pretpregleda)
 
@@ -76,7 +76,7 @@ Odaberite obogaćivanje da biste vidjeli dostupne akcije.
 - **Prikaži** pojedinosti o obogaćivanju brojem obogaćenih profila klijenata.
 - **Uredi** konfiguraciju obogaćivanja.
 - [**Pokrenite**](#run-or-refresh-enrichments) obogaćivanje da biste ažurirali profile kupaca najnovijim podacima. Pokrenite više obogaćivanja odjednom tako da ih odaberete na popisu.
-- **Aktiviranje** ili **deaktiviranje** obogaćivanja. Neaktivna obogaćivanja neće se osvježiti tijekom zakazanog [osvježavanja](system.md#schedule-tab).
+- **Aktiviranje** ili **deaktiviranje** obogaćivanja. Neaktivna obogaćivanja neće se osvježiti tijekom zakazanog [osvježavanja](schedule-refresh.md).
 - Odaberite **Izbriši** obogaćivanje.
 
 Također možete stvoriti [segmente](segments.md) ili [mjere](measures.md) iz obogaćivanja.
@@ -85,7 +85,7 @@ Također možete stvoriti [segmente](segments.md) ili [mjere](measures.md) iz ob
 
 Nakon pokretanja, obogaćivanja se mogu osvježiti prema automatskom rasporedu ili ručno osvježiti na zahtjev.
 
-1. Da biste ručno osvježili jednu ili više obogaćenja, odaberite ih i odaberite **Pokreni**. Da biste [zakazali automatsko osvježavanje](system.md#schedule-tab), idite na **Raspored** > **administratorskih** > **sustava**. Vrijeme obrade ovisi o veličini vaših podataka o klijentima.
+1. Da biste ručno osvježili jednu ili više obogaćenja, odaberite ih i odaberite **Pokreni**. Da biste [zakazali automatsko osvježavanje](schedule-refresh.md), idite na **Raspored** > **administratorskih** > **sustava**. Vrijeme obrade ovisi o veličini vaših podataka o klijentima.
 
 1. Po želji pogledajte [napredak procesa](#see-the-progress-of-the-enrichment-process) obogaćivanja.
 
@@ -102,6 +102,8 @@ Možete pronaći pojedinosti o obradi obogaćivanja, uključujući status i pote
 1. U oknu **Pojedinosti o napretku** proširite odjeljak **Obogaćivanja**.
 1. Pod obogaćivanjem za koje želite vidjeti napredak odaberite **Pogledaj pojedinosti**.
 1. U oknu **Pojedinosti o zadatku** odaberite **Pokaži pojedinosti** da biste vidjeli procese koji su uključeni u ažuriranje obogaćivanja i njihov status.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Prikaz rezultata obogaćivanja
 

@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170672"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246284"
 ---
 # <a name="segments-overview"></a>Pregled segmenata
 
@@ -58,7 +58,7 @@ Odaberite segment za prikaz dostupnih akcija.
 - **Uredi** segment da promijeni svoja svojstva.
 - **Stvorite duplikat** segmenta. Možete odmah urediti njegova svojstva ili spremiti duplikat.
 - [**Osvježite**](#refresh-segments) segment tako da uključuje najnovije podatke.
-- **Aktiviraj** ili **Deaktiviraj** segment. Neaktivni segmenti neće se osvježiti tijekom zakazanog [osvježavanja](system.md#schedule-tab) i status je **naveden** kao **Preskočen**, što znači da osvježavanje nije ni pokušano. Aktivni segmenti osvježavaju se na temelju njihove vrste: statični ili dinamički.
+- **Aktiviraj** ili **Deaktiviraj** segment. Neaktivni segmenti neće se osvježiti tijekom zakazanog [osvježavanja](schedule-refresh.md) i status je **naveden** kao **Preskočen**, što znači da osvježavanje nije ni pokušano. Aktivni segmenti osvježavaju se na temelju njihove vrste: statični ili dinamički.
 - **Postavite statiku** ili **učinite dinamičkom** vrstu segmenta. Statični segmenti moraju se ručno osvježiti. Dinamički segmenti automatski se osvježavaju tijekom osvježavanja sustava.
 - [**Pronađite slične kupce**](find-similar-customer-segments.md) iz segmenta.
 - **Preimenuj** segment.
@@ -88,7 +88,7 @@ U donjem dijelu nalazi se popis članova segmenta.
 
 Segmenti se mogu osvježiti prema automatskom rasporedu ili ručno osvježiti na zahtjev. Da biste ručno osvježili jedan ili više segmenata, odaberite ih i odaberite **Osvježi**.
 
-Da biste [zakazali automatsko osvježavanje](system.md#schedule-tab), idite na **Raspored** > **administratorskih** > **sustava**. Primjenjuju se sljedeća pravila:
+Da biste [zakazali automatsko osvježavanje](schedule-refresh.md), idite na **Raspored** > **administratorskih** > **sustava**. Primjenjuju se sljedeća pravila:
 
 - Svi segmenti s vrstom **Dinamička** ili **Ekspanzija** automatski će se osvježiti na postavljenoj kadenci. Nakon dovršetka osvježavanja status **pokazuje** je li bilo problema s osvježavanjem segmenta. Posljednji **osvježeni** prikazuje vremensku oznaku posljednjeg uspješnog osvježavanja. Ako dođe do pogreške, odaberite pogrešku da biste vidjeli detalje o tome što se dogodilo.
 - Segmenti vrste **Statik** *neće* se automatski osvježavati. Posljednji **osvježeni** prikazuje vremensku oznaku posljednjeg pokretanja ili osvježavanja statički segment ručno.

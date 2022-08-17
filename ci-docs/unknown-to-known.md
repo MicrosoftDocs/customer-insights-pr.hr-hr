@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173813"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224286"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Personalizirajte svoja iskustva podacima o poznatim i nepoznatim korisnicima
 
-Upravljanje podacima o kupcima nije novi izazov, ali postaje sve teže kako se korisnici kreću raznim ponudama robnih marki digitalnih kanala. Korisnik koji je poznat (autentificiran) na jednom kanalu postaje nepoznat (neprovjeren) u drugom ako nije prijavljen. Problem je često u tome što neprovjereni (nepoznati) korisnici nemaju zajednički ID. Može se koristiti za povezivanje značajnih atributa profila i generiranje jedinstvenih profila kupaca. Customer Insights pomaže u rješavanju ovog problema unoseći podatke iz metoda praćenja na izvornim sustavima. Konsolidirani nepoznati i poznati profili pružaju organizacijama potpuni prikaz ažurnih profila i njihovih povijesnih transakcija, ponašanja i demografskih podataka. Čak ide korak dalje pružajući razlučivost identiteta koja vam omogućuje objedinjavanje aktivnosti kupaca na više kanala, uključujući vašu web stranicu, kupnju u trgovini, programe vjernosti itd.
+Upravljanje podacima o kupcima nije novi izazov, ali postaje sve teže kako se korisnici kreću raznim ponudama robnih marki digitalnih kanala. Korisnik koji je poznat (autentificiran) na jednom kanalu postaje nepoznat (neprovjeren) u drugom ako nije prijavljen. Problem je često u tome što neprovjereni (nepoznati) korisnici nemaju zajednički ID. Može se koristiti za povezivanje značajnih atributa profila i generiranje jedinstvenih profila kupaca. Customer Insights pomaže u rješavanju ovog problema unoseći podatke iz metoda praćenja na izvornim sustavima. Konsolidacija nepoznatih i poznatih profila pruža organizacijama potpuni prikaz ažurnih profila i njihovih povijesnih transakcija, ponašanja i demografije. Čak ide korak dalje pružajući razlučivost identiteta koja vam omogućuje objedinjavanje aktivnosti kupaca na više kanala, uključujući vašu web stranicu, kupnju u trgovini, programe vjernosti itd.
 
 ## <a name="sample-scenario"></a>Primjer scenarija
 

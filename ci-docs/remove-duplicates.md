@@ -2,7 +2,7 @@
 title: Uklanjanje duplikata prije objedinjavanja podataka
 description: Drugi korak u procesu ujedinjenja je odabir zapisa koji ćete zadržati kada se pronađu duplikati.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,20 +13,29 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139420"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213618"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Uklanjanje duplikata prije objedinjavanja podataka
 
-Ovaj korak u objedinjavanju po želji vam omogućuje postavljanje pravila za rukovanje dupliciranim zapisima unutar entiteta. *Deduplikacija* identificira duplicirane zapise i spaja ih u jedan zapis. Izvorni zapisi povezuju se s objedinjenim zapisom sa zamjenskim ID-ovima. Ako pravila nisu konfigurirana, primjenjuju se sistemski definirana pravila.
+Ovaj neobavezni korak u objedinjavanju omogućuje vam postavljanje pravila za uklanjanje dupliciranih zapisa **unutar** entiteta. Deduplikacija identificira više zapisa za klijenta i odabire najbolji zapis za čuvanje (na temelju osnovnih preferenci spajanja) ili spaja zapise u jedan (na temelju naprednih preferenci spajanja). Izvorni zapisi povezuju se s objedinjenim zapisom sa zamjenskim ID-ovima. Ako pravila nisu konfigurirana, primjenjuju se sistemski definirana pravila.
+
+## <a name="default-deduplication"></a>Zadana deduplikacija
+
+Sistemski definirana pravila primjenjuju se ako se ne dodaju pravila deduplikacije.
+
+- Primarni ključ je dedupliciran.
+  Za sve zapise s istim primarnim ključem **pobjednik je zapis najpotpunjeniji** zapis (onaj s najmanje null vrijednosti).
+- Sva pravila uspoređivanja entiteta primjenjuju se na entitet.
+  Na primjer: U koraku podudaranja, ako se entitet A podudara s entitetom B na *FullName* i *DateofBirth*, tada entitet A također dodjeljuje FullName *i* DateofBirth *.* Budući da *su FullName* i *DateofBirth* valjani ključevi za identifikaciju klijenta u entitetu A, ti su ključevi valjani i za identifikaciju dupliciranih kupaca u entitetu A.
 
 ## <a name="include-enriched-entities-preview"></a>Uključi obogaćene entitete (pretpregled)
 
-Ako ste obogatili entitete na razini izvor podataka kako biste poboljšali rezultate ujedinjenja, odaberite ih. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora podataka](data-sources-enrichment.md).
+Ako ste obogatili entitete na razini izvor podataka kako biste poboljšali rezultate ujedinjenja, odaberite ih. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora](data-sources-enrichment.md) podataka.
 
 1. **Na stranici Duplicirani zapisi** pri vrhu stranice odaberite **Koristi obogaćene entitete**.
 

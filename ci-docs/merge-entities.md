@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139648"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213573"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Objedinjavanje polja klijenata radi ujedinjenja podataka
 
@@ -58,6 +58,9 @@ U ovom koraku postupka ujedinjenja odaberite i izuzmite atribute za spajanje unu
 
 1. Navedite kako kombinirati ili spojiti polja iz jedne od tri mogućnosti:
     - **Važnost**: Identificira pobjedničku vrijednost na temelju razine važnosti navedene za polja koja sudjeluju. To je zadana mogućnost spajanja. Odaberite **Pomakni se prema gore/dolje** za postavljanje razine važnosti.
+
+      > [!NOTE]
+      > Customer Insights koristi prvu vrijednost koja nije null. Na primjer, s obzirom na entitete A, B i C rangirane tim redoslijedom, ako su A.Name i B.Name null, tada se koristi vrijednost iz C.Name.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Mogućnost važnosti u dijalogu za spajanje polja.":::
 

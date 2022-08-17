@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 6c951219410b55adc34691f677158b574cea1e01
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188038"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245686"
 ---
 # <a name="use-customer-consent"></a>Koristi pristanak korisnika
 
@@ -70,6 +70,6 @@ Važno je ažurirati status pristanka za svoje klijente. Zakazano osvježavanje 
 
 Drugim riječima, provjerite imaju li izvorišni podaci koji se uvoze u Customer Insights uvijek najnovije informacije.
 
-Dodatne informacije potražite u članku [Ručno](segments.md#refresh-segments) osvježavanje segmenata ili [konfiguriranje zakazanog osvježavanja](system.md#schedule-tab).
+Dodatne informacije potražite u članku [Ručno](segments.md#refresh-segments) osvježavanje segmenata ili [konfiguriranje zakazanog osvježavanja](schedule-refresh.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

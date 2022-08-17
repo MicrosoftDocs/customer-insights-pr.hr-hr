@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139564"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245585"
 ---
 # <a name="update-the-unification-settings"></a>Ažuriranje postavki objedinjavanja
 
@@ -42,7 +42,7 @@ Da biste pregledali ili promijenili postavke objedinjavanja nakon stvaranja jedi
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Snimka zaslona stranice Objedinjavanje podataka s istaknutim mogućnostima objedinjavanja.":::
 
    - [Pokrenite odgovarajuće uvjete](#run-matching-conditions) da biste brzo procijenili kvalitetu odgovarajućih uvjeta (pravila deduplikacije i podudaranja) bez ažuriranja jedinstvenog profila. Mogućnost **Pokreni samo** odgovarajuće uvjete ne prikazuje se za jedan entitet.
-   - [Objedinite profile](#run-updates-to-the-unified-customer-profile) kupaca da biste pokrenuli odgovarajuće uvjete i ažurirali jedinstveni entitet korisničkog profila bez utjecaja na ovisnosti (kao što su obogaćivanja, segmenti ili mjere). Zavisni procesi se ne izvode, već će se osvježiti kako [je definirano u rasporedu](system.md#schedule-tab) osvježavanja.
+   - [Objedinite profile](#run-updates-to-the-unified-customer-profile) kupaca da biste pokrenuli odgovarajuće uvjete i ažurirali jedinstveni entitet korisničkog profila bez utjecaja na ovisnosti (kao što su obogaćivanja, segmenti ili mjere). Zavisni procesi se ne izvode, već će se osvježiti kako [je definirano u rasporedu](schedule-refresh.md) osvježavanja.
    - [Objedinite profile i ovisnosti](#run-updates-to-the-unified-customer-profile) kupaca kako biste pokrenuli odgovarajuće uvjete i ažurirali jedinstveni entitet korisničkog profila i sve ovisnosti (kao što su obogaćivanja, segmenti ili mjere). Svi se procesi automatski ponavljaju.
 
 ## <a name="edit-source-fields"></a>Uređivanje izvorišnih polja
@@ -69,7 +69,7 @@ Atribut ili entitet ne možete ukloniti ako su već ujedinjeni.
 
    Broj pronađenih duplikata zapisa prikazuje se u odjeljku **Duplikati**. Stupac Zapisi **koji se dodjeljuju** prikazuje koji entiteti imaju duplicirane zapise i postotak dupliciranih zapisa.
 
-1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora podataka](data-sources-enrichment.md).
+1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora](data-sources-enrichment.md) podataka.
 
 1. Da biste upravljali pravilima deduplikacije, odaberite neku od sljedećih mogućnosti:
    - **Stvaranje novog pravila**: Odaberite Dodaj **pravilo** u odgovarajućem entitetu. Dodatne informacije potražite u članku [Definiranje pravila](remove-duplicates.md#define-deduplication-rules) deduplikacije.
@@ -87,7 +87,7 @@ Atribut ili entitet ne možete ukloniti ako su već ujedinjeni.
 
    1. Odaberite **Gotovo**.
 
-1. Odaberite **Dalje** da biste promijenili odgovarajuće uvjete ili Odaberite **Spremi i zatvori** te se vratite da biste [ažurirali postavke objedinjavanja](#update-the-unification-settings).
+1. Odaberite **Dalje** da biste promijenili odgovarajuće uvjete ili Odaberite **Spremi i zatvori** te se vratite da biste [ažurirali postavke](#update-the-unification-settings) objedinjavanja.
 
 ## <a name="manage-match-rules"></a>Upravljanje pravilima uparivanja
 
@@ -110,7 +110,7 @@ Većinu parametara uparivanja možete ponovno konfigurirati i fino podesiti. Ne 
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Grafički prikaz neusporedivih i podudarnih zapisa, uključujući popis podataka.":::
 
-1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora podataka](data-sources-enrichment.md).
+1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora](data-sources-enrichment.md) podataka.
 
 1. Da biste upravljali pravilima, odaberite neku od sljedećih mogućnosti:
    - **Stvaranje novog pravila**: Odaberite Dodaj **pravilo** u odgovarajućem entitetu. Dodatne informacije potražite u članku [Definiranje pravila za parove podudaranja](match-entities.md#define-rules-for-match-pairs).
@@ -134,7 +134,7 @@ Većinu parametara uparivanja možete ponovno konfigurirati i fino podesiti. Ne 
 
 ## <a name="run-matching-conditions"></a>Pokreni odgovarajuće uvjete
 
-Pokretanje odgovarajućih uvjeta pokreće samo pravila deduplikacije i podudaranja te ažurira *entitete Deduplication_** i *ConflationMatchPair*.
+Pokretanje odgovarajućih uvjeta pokreće samo pravila deduplikacije i podudaranja te ažurira *entitete Deduplication_* i *ConflationMatchPair*.
 
 1. **Na stranici Objedinjavanje** > **podataka** odaberite **Pokreni samo** odgovarajuće uvjete.
 
@@ -154,7 +154,7 @@ Pokretanje odgovarajućih uvjeta pokreće samo pravila deduplikacije i podudaran
 
 1. **Na stranici Objedinjavanje** > **podataka** odaberite:
 
-   - **Objedinjavanje korisničkih** profila: pokreće odgovarajuće uvjete i ažurira jedinstveni entitet korisničkog profila bez utjecaja na ovisnosti (kao što su obogaćivanja, segmenti ili mjere). Zavisni procesi se ne izvode, već će se osvježiti kako [je definirano u rasporedu](system.md#schedule-tab) osvježavanja.
+   - **Objedinjavanje korisničkih** profila: pokreće odgovarajuće uvjete i ažurira jedinstveni entitet korisničkog profila bez utjecaja na ovisnosti (kao što su obogaćivanja, segmenti ili mjere). Zavisni procesi se ne izvode, već će se osvježiti kako [je definirano u rasporedu](schedule-refresh.md) osvježavanja.
 
    - **Objedinjavanje korisničkih profila i ovisnosti**: pokreće odgovarajuće uvjete i ažurira jedinstveni profil i sve ovisnosti. Svi se procesi automatski ponavljaju. Nakon završetka svih nizvodnih procesa, profil kupca odražava ažurirane podatke.
 

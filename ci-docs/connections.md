@@ -1,7 +1,7 @@
 ---
 title: Pregled (pretpregled) veza
 description: Veze s ostalim uslugama iz Customer Insights.
-ms.date: 04/09/2021
+ms.date: 08/04/2022
 ms.reviewer: nikeller
 ms.subservice: audience-insights
 ms.topic: overview
@@ -11,91 +11,89 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8580dc7d90c75f66f73efc15f8e38f5e10fbb8a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195165"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245502"
 ---
 # <a name="connections-preview-overview"></a>Pregled (pretpregled) veza
 
-Veze su ključ za omogućavanje dijeljenja podataka s i iz Customer Insights. Svaka veza uspostavlja dijeljenje podataka s određenom uslugom. Veze su temelj za [konfiguriranje obogaćivanja treće strane](enrichment-hub.md) i [konfiguriranje izvoza](export-destinations.md). Ista veza može se koristiti više puta. Na primjer, jedna veza s Dynamics 365 Marketing funkcionira za više izvoza, a jedna veza Leadspace može se koristiti za nekoliko obogaćivanja.
+Veze su ključ za omogućavanje dijeljenja podataka s i iz Customer Insights. Svaka veza uspostavlja dijeljenje podataka s određenom uslugom. Koristite veze za konfiguriranje [obogaćivanja](enrichment-hub.md) drugih proizvođača i [konfiguriranje izvoza](export-destinations.md). Ista veza može se koristiti više puta. Na primjer, jedna veza s Dynamics 365 Marketing funkcionira za više izvoza, a jedna veza Leadspace može se koristiti za nekoliko obogaćivanja.
 
-Idite na **Admin** > **Veze** za stvaranje i pregled veza.
+## <a name="export-connections"></a>Izvoz veza
 
-Kartica **Veze** prikazuje sve aktivne veze. Popis prikazuje redak za svaku vezu.
+Samo administratori mogu konfigurirati nove veze, ali mogu [odobriti pristup suradnicima](#allow-contributors-to-use-a-connection-for-exports) za korištenje postojećih veza. Administratori kontroliraju kamo podaci mogu ići, suradnici definiraju korisne podatke i frekvenciju u skladu sa svojim potrebama.
 
-Dobijte brzi pregled, opis i saznajte što možete učiniti sa svakom mogućnosti proširenja na kartici **Otkrij**.
-
-## <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
-
-Kada omogućite Dynamics 365 Customer Insights prijenos podataka trećim stranama ili drugim Microsoftovim proizvodima, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prenijeti takve podatke prema vašim uputima, ali vi ste odgovorni za to da treća strana ispunjava sve obveze zaštite privatnosti ili sigurnosti koje možda imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Administrator Dynamics 365 Customer Insights može ukloniti vezu u bilo kojem trenutku kako bi prekinuo korištenje funkcije.
-
-## <a name="exports"></a>Izvozi
-
-Samo administratori mogu konfigurirati nove veze, ali suradnicima mogu odobriti pristup korištenju postojećih veza. Administratori kontroliraju kamo podaci mogu ići, suradnici definiraju korisne podatke i frekvenciju u skladu sa svojim potrebama. Za više informacija pogledajte [Omogućavanje korištenja veze za izvoze suradnicima](#allow-contributors-to-use-a-connection-for-exports).
-
-## <a name="enrichments"></a>Obogaćivanja
+## <a name="enrichment-connections"></a>Veze s obogaćivanjem
 
 Samo administratori mogu konfigurirati nove veze, ali stvorene veze uvijek su dostupne i administratorima i suradnicima. Administratori upravljaju vjerodajnicama i daju pristanak za prijenos podataka. Tada veze za obogaćivanja mogu koristiti i administratori i suradnici.
 
 ## <a name="add-a-new-connection"></a>Dodavanje nove veze
 
-Da biste dodali veze, morate imati [administratorske dozvole](permissions.md). Ako se povežete s ostalim Microsoftovim uslugama, pretpostavljamo da su obje usluge u istoj tvrtki ili ustanovi.
+### <a name="prerequisites"></a>Preduvjeti
 
-1. Idite na **Admin** > **Veze (pretpregled)**.
+- [Dozvole administratora](permissions.md)
+- Ostali Microsoftovi servisi, ako ih ima, nalaze se u istoj organizaciji
 
-1. Odaberite **Nova veza** da biste stvorili novu vezu. Na padajućem izborniku odaberite vrstu veze koju želite stvoriti.
+1. Idite na **Admin** > **Veze**.
 
-1. U oknu **Postavi vezu** okno navedite potrebne pojedinosti.
-   1. **Zaslonski naziv** i vrsta veze opisuju vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj te veze.
-   1. Točna polja ovise o usluzi s kojom se povezujete. O pojedinostima određene vrste veze možete saznati u članku o ciljnoj usluzi.
-   1. Ako [koristite vlastiti sef za ključeve](use-azure-key-vault.md) za pohranu tajni, aktivirajte **Upotrijebi sef za ključeve** i odaberite tajnu s popisa.
+1. Odaberite **Dodaj vezu** i odaberite vrstu veze koju želite stvoriti. Ili idite na karticu **Otkrivanje** i odaberite **Postavi** na pločici veze.
 
-1. Da biste stvorili vezu, odaberite **Spremi**.
+1. Dodijelite vezi prepoznatljivi naziv u polju **Zaslonski naziv**. Naziv i vrsta veze opisuju tu vezu. Preporučujemo odabir naziva koji objašnjava svrhu i cilj veze.
 
-Možete odabrati i **Postavljanje** na pločici na kartici **Otkrivanje**.
+1. Unesite potrebne detalje. Točna polja ovise o usluzi s kojom se povezujete. Pojedinosti o određenoj vrsti veze potražite u članku o ciljnoj usluzi.
 
-### <a name="allow-contributors-to-use-a-connection-for-exports"></a>Omogućavanje korištenja veze za izvoze suradnicima
+1. Ako [koristite vlastiti sef za ključeve](use-azure-key-vault.md) za pohranu tajni, aktivirajte **Upotrijebi sef za ključeve** i odaberite tajnu s popisa.
 
-Kada postavljate ili uređujete vezu za izvoz, odabirete koji korisnici smiju koristiti tu određenu vezu za definiranje [izvoza](export-destinations.md). Prema zadanim postavkama veza je dostupna korisnicima s ulogom administratora. Ovu postavku možete promijeniti pod **Odaberi tko može koristiti ovu vezu** i dopustite korisnicima s ulogom suradnika da koriste ovu vezu.
+1. Pregledajte privatnost i usklađenost podataka i odaberite **Slažem se**.
+
+1. Odaberite **Spremi** da biste stvorili vezu.
+
+### <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
+
+Kada omogućite Dynamics 365 Customer Insights prijenos podataka trećim stranama ili drugim Microsoftovim proizvodima, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prenijeti takve podatke prema vašim uputima, ali vi ste odgovorni za to da treća strana ispunjava sve obveze zaštite privatnosti ili sigurnosti koje možda imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Administrator Dynamics 365 Customer Insights može ukloniti vezu u bilo kojem trenutku kako bi prekinuo korištenje funkcije.
+
+## <a name="allow-contributors-to-use-a-connection-for-exports"></a>Omogućavanje korištenja veze za izvoze suradnicima
+
+Prilikom postavljanja ili uređivanja izvozne veze odaberite koji korisnici smiju koristiti ovu vezu za definiranje [izvoza](export-destinations.md). Prema zadanim postavkama, veza je dostupna korisnicima s administratorskom ulogom. Promijenite postavku Odaberi **tko može koristiti ovu vezu** da biste korisnicima s suradnik ulogom omogućili korištenje ove veze.
 
 - Suradnici neće moći pregledati ili urediti vezu. Oni će vidjeti samo zaslonsko ime i njezinu vrstu prilikom stvaranja izvoza.
 - Dijeljenjem veze dopuštate suradnicima korištenje veze. Suradnici će vidjeti dijeljene veze kada postave izvoze. Oni mogu upravljati svakim izvozom koji koristi ovu specifičnu vezu.
 - Ovu postavku možete promijeniti zadržavajući izvoze koje su suradnici već definirali.
 
-## <a name="edit-a-connection"></a>Uređivanje veze
+## <a name="manage-existing-connections"></a>Upravljanje postojećim vezama
 
-1. Idite na **Admin** > **Veze (pretpregled)**.
+1. Idite na **Admin** > **Veze**.
 
-1. Idite na karticu **Veze**.
+1. Odaberite karticu **Obogaćenje** ili **Izvoz** da biste vidjeli popis veza za obogaćivanje ili izvoz, vrstu veze, prilikom stvaranja i tko ima pristup. Popis veza možete sortirati po bilo kojem stupcu.
 
-1. Odaberite okomitu trotočje (&vellip;) za vezu koju želite urediti.
+1. Odaberite vezu da biste vidjeli dostupne akcije.
 
-1. Odaberite **Uredi**.
+   - **Uredite** vezu.
+   - [**Uklonite**](#remove-a-connection) vezu.
 
-1. Promijenite vrijednosti koje želite ažurirati i odaberite **Spremi**.
+### <a name="remove-a-connection"></a>Uklanjanje veze
 
-## <a name="remove-a-connection"></a>Uklanjanje veze
+Ako se veza koju uklanjate koristi obogaćivanjem ili izvozom, najprije je odvojite ili uklonite. Dijaloški okvir uklanjanje vodi vas do odgovarajućih obogaćivanja ili izvoza.
 
-Ako se veza koju uklanjate koristi obogaćivanjem ili izvozom, najprije je morate odvojiti ili ukloniti. Dijaloški okvir za uklanjanje vodit će vas do relevantnih obogaćivanja ili izvoza.
+> [!TIP]
+> Deaktivirana obogaćivanja i odvojeni izvoz postaju neaktivni. Ponovno ih aktivirate tako da im dodate drugu vezu na stranici [Obogaćivanja](enrichment-hub.md) ili [Izvozi](export-destinations.md).
 
-Odvojena obogaćivanja i izvozi postaju neaktivni. Ponovno ih aktivirate tako da im dodate drugu vezu na stranici [Obogaćivanja](enrichment-hub.md) ili [Izvozi](export-destinations.md).
+1. Idite na **Admin** > **Veze**.
 
-1. Idite na **Admin** > **Veze (pretpregled)**.
+1. Odaberite karticu **Obogaćivanje** ili **Izvoz**.
 
-1. Idite na karticu **Veze**.
-
-1. Odaberite okomitu trotočje (&vellip;) za vezu koju želite ukloniti.
+1. Odaberite vezu koju želite ukloniti.
 
 1. Na padajućem popisu odaberite **Ukloni**. Pojavljuje se dijaloški okvir za potvrdu.
 
    1. Ako postoje obogaćivanja ili izvozi koji koriste ovu vezu, odaberite gumb da biste vidjeli što koristi vezu.
-      - **Izvozi:** Možete odabrati da uklonite ili prekinete izvoze kako biste mogli ukloniti vezu. Da bi prekinuli izvoz, administratori mogu koristiti radnju **Prekini vezu**. Ova je radnja dostupna za pojedinačne i višestruko odabrane izvoze. Prekidanjem veze zadržavate konfiguraciju izvoza, ali ona se neće pokrenuti dok joj se ne doda druga veza.
-      - **Obogaćivanja:** Možete odabrati da uklonite ili deaktivirate obogaćivanja kako biste mogli ukloniti vezu.
+      - **Izvoz:** Odaberite ukloni **izvoz** ili **Odvoji vezu**. Odvajanjem veze zadržava se konfiguracija izvoza, ali ona se neće izvoditi dok joj se ne doda druga veza.
+      - **Obogaćivanja:** Odaberite **brisanje** ili **deaktiviranje** obogaćenja.
    1. Kada veza više nema ovisnosti, vratite se na **Admin** > **Veze** i ponovno pokušajte ukloniti vezu.
 
 1. Da biste potvrdili brisanje, odaberite **Ukloni**.

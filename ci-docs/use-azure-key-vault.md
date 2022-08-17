@@ -1,7 +1,7 @@
 ---
 title: Povezivanje vlastitog sefa za ključeve platforme Azure (pretpregled)
 description: Saznajte kako konfigurirati Customer Insights za korištenje vlastitog trezora ključeva servisa Azure za upravljanje tajnama.
-ms.date: 10/06/2021
+ms.date: 08/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -11,58 +11,63 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 229fb5698a02d1d73c30442f61c7b1b5fce918bf
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082634"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246146"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Povezivanje vlastitog sefa za ključeve platforme Azure (pretpregled)
 
-Povezivanje namjenskog [trezora](/azure/key-vault/general/basic-concepts) s ključevima servisa Azure s okruženjem Customer Insights pomaže organizacijama da ispune zahtjeve usklađenosti.
-Namjenski sef za ključeve može se koristiti za postavljanje i korištenje tajni u granicama usklađenosti tvrtke ili ustanove. Customer Insights može koristiti tajne u trezoru ključeva servisa Azure za [postavljanje veza sa](connections.md) sustavima drugih proizvođača.
+Povezivanje namjenskog [trezora](/azure/key-vault/general/basic-concepts) ključeva servisa Azure s okruženjem Customer Insights pomaže organizacijama da ispune zahtjeve usklađenosti.
 
 ## <a name="link-the-key-vault-to-the-customer-insights-environment"></a>Povezivanje trezora ključeva s okruženjem Customer Insights
 
+Postavite namjenski trezor ključeva za pozornicu i koristite tajne u granici usklađenosti tvrtke ili ustanove.
+
 ### <a name="prerequisites"></a>Preduvjeti
 
-Da biste konfigurirali trezor s ključevima u customer insightsu, moraju se ispuniti sljedeći preduvjeti:
+- Aktivna pretplata na Azure.
 
-- Morate imati aktivnu pretplatu za na Azure.
+- Administratorska [uloga](permissions.md#admin) dodijeljena [u](permissions.md#add-users) uvidima kupaca.
 
-- Imate administratorsku [ulogu](permissions.md#admin) u korisničkom uvidu. Saznajte više o [korisničkim dozvolama u odjeljku Customer Insights](permissions.md#assign-roles-and-permissions).
+- [suradnik](/azure/role-based-access-control/built-in-roles#contributor) i [uloga administratora](/azure/role-based-access-control/built-in-roles#user-access-administrator) korisničkog pristupa u trezoru ključeva ili grupi resursa kojoj pripada trezor ključeva. Dodatne informacije potražite u odjeljku [Dodavanje ili uklanjanje dodjele uloga na platformi Azure putem portala Azure](/azure/role-based-access-control/role-assignments-portal). Ako u trezoru za ključeve nemate ulogu administratora korisničkog pristupa, postavite dozvole kontrole pristupa utemeljene na ulogama za upravitelj servisa Azure za Dynamics 365 Customer Insights zasebno. Slijedite korake kako biste [upotrijebili upravitelja usluge Azure](connect-service-principal.md) za sef za ključeve koji treba povezati.
 
-- Imate ulogu [suradnika](/azure/role-based-access-control/built-in-roles#contributor) i [administratora pristupa korisnika](/azure/role-based-access-control/built-in-roles#user-access-administrator) u sefu za ključeve ili grupi resursa kojima pripada sef za ključeve. Dodatne informacije potražite u odjeljku [Dodavanje ili uklanjanje dodjele uloga na platformi Azure putem portala Azure](/azure/role-based-access-control/role-assignments-portal). Ako nemate ulogu administratora pristupa za korisnike u sefu za ključeve, morate postaviti dopuštenja za kontrolu pristupa temeljena na ulogama za upravitelja usluge Azure za Dynamics 365 Customer Insights. Slijedite korake kako biste [upotrijebili upravitelja usluge Azure](connect-service-principal.md) za sef za ključeve koji treba povezati.
+- Trezor ključeva mora imati onemogućen vatrozid **key vaulta**.
 
-- Sef za ključeve mora imati **onemogućen** vatrozid sefa za ključeve.
+- Trezor za ključeve nalazi se na istoj [lokaciji](https://azure.microsoft.com/global-infrastructure/geographies/#overview) servisa Azure kao i okruženje Customer Insights. U odjeljku Uvidi u korisnike otvorite **Administratorski** > **sustav** i karticu **O** programu da biste pogledali regiju okruženja.
 
-- Trezor za ključeve nalazi se na istoj [lokaciji](https://azure.microsoft.com/global-infrastructure/geographies/#overview) servisa Azure kao i okruženje Customer Insights. Regija okruženja u odjeljku Customer Insights navedena je u odjeljku **Administratorski** > **sustav** > **O** > **regiji**.
+### <a name="recommendations"></a>Preporuke
+
+- [Koristite zaseban ili namjenski trezor ključeva](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults) koji sadrži samo tajne potrebne za Customer Insights.
+
+- Slijedite [najbolje prakse za korištenje sefa za ključeve](/azure/key-vault/general/best-practices#turn-on-logging) za mogućnosti kontrole pristupa, sigurnosne kopije, revizije i oporavka.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Povezivanje sefa za ključeve s okruženjem
 
 1. Otvorite **Sigurnost administratora** > **·**, a zatim odaberite karticu Trezor **ključeva**.
 1. Na pločici **Sef za ključeve** odaberite **Postavljanje**.
 1. Odaberite **Pretplata**.
-1. Odaberite sef za ključeve s padajućeg popisa **Sef za ključeve**. Ako se prikazuje previše sefova za ključeve, odaberite grupu resursa kako biste ograničili rezultate pretraživanja.
-1. Prihvatite izjavu **Privatnost podataka i sukladnost**.
+1. Odaberite sef za ključeve s padajućeg popisa **Sef za ključeve**. Ako je dostupno previše trezora ključeva, odaberite grupu resursa da biste ograničili rezultate pretraživanja.
+1. Pregledajte [Zaštita privatnosti podataka i usklađenost](connections.md#data-privacy-and-compliance) i odaberite **Slažem se**.
 1. Odaberite **Spremi**.
 
-:::image type="content" source="media/set-up-azure-key-vault.png" alt-text="Koraci za postavljanje povezanog trezora ključeva u customer insights.":::
-
-Pločica **Sef za ključeve** sada prikazuje naziv povezanog sefa za ključeve, grupu resursa i pretplatu. Spremno je za upotrebu u postavljanju veze.
-Detalje o tome koja su dopuštenja za trezor za ključeve dodijeljena uvidima kupaca potražite [u odjeljku Dozvole dodijeljene u trezoru ključeva](#permissions-granted-on-the-key-vault) u nastavku ovog članka.
+Pločica **Key Vault** prikazuje povezani naziv trezora ključeva, pretplatu i grupu resursa. Spremno je za upotrebu u postavljanju veze.
+Pojedinosti o tome koja se dopuštenja za trezor za ključeve dodjeljuju uvidima u kupce potražite u odjeljku [Dozvole dodijeljene u trezoru ključeva](#permissions-granted-on-the-key-vault).
 
 ## <a name="use-the-key-vault-in-the-connection-setup"></a>Upotreba sefa za ključeve u postavljanju veze
 
-Kada [uspostavljate veze](connections.md) sa sustavima trećih strana, tajne iz povezanog sefa za ključeve mogu se koristiti za konfiguriranje veza.
+Prilikom [postavljanja veza](connections.md) s [podržanim sustavima trećih strana](#supported-connection-types) koristite tajne iz povezanog trezora za ključeve da biste konfigurirali veze.
 
 1. Idite na **Admin** > **Veze**.
 1. Odaberite **Dodaj vezu**.
 1. Za podržane vrste povezivanja dostupan je preklopni gumb **Upotrijebi sef za ključeve** ako ste povezali sef za ključeve.
-1. Umjesto ručnog unosa tajne, možete odabrati tajni naziv koji upućuje na tajnu vrijednost u sefu za ključeve.
+1. Umjesto da ručno unesete tajnu, odaberite tajni naziv koji ukazuje na tajnu vrijednost u trezoru ključeva.
 
-:::image type="content" source="media/use-key-vault-secret.png" alt-text="Okno za povezivanje s SFTP vezom koja koristi tajnu sefa za ključeve.":::
+   :::image type="content" source="media/use-key-vault-secret.png" alt-text="Okno za povezivanje s SFTP vezom koja koristi tajnu sefa za ključeve.":::
+
+1. Odaberite **Spremi** da biste stvorili vezu.
 
 ## <a name="supported-connection-types"></a>Podržane vrste veze
 
@@ -97,19 +102,13 @@ Prethodne vrijednosti minimalne su za popis i čitanje tijekom izvođenja.
 
 ### <a name="azure-role-based-access-control"></a>Kontrola pristupa na Azure temeljena na ulogama
 
-Korisničke uloge Čitatelj i tajni key vaulta bit će dodane za customer insights. Za pojedinostima o tim ulogama idite na [Ugrađene uloge platforme Azure za rad s podacima sefa za ključeve](/azure/key-vault/general/rbac-guide?tabs=azure-cli).
-
-## <a name="recommendations"></a>Preporuke
-
-- Koristite zaseban ili namjenski trezor ključeva koji sadrži samo tajne potrebne za Customer Insights. Pročitajte više o tome zašto [se preporučuju zasebni sefovi za ključeve](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults).
-
-- Slijedite [najbolje prakse za korištenje sefa za ključeve](/azure/key-vault/general/best-practices#turn-on-logging) za mogućnosti kontrole pristupa, sigurnosne kopije, revizije i oporavka.
+Uloge [korisnika Čitatelj i tajni key vaulta bit će dodane](/azure/key-vault/general/rbac-guide?tabs=azure-cli) za customer insights.
 
 ## <a name="frequently-asked-questions"></a>Najčešća pitanja
 
 ### <a name="can-customer-insights-write-secrets-or-overwrite-secrets-into-the-key-vault"></a>Mogu li Customer Insights pisati tajne ili prebrisati tajne u trezor za ključeve?
 
-Ne. Uvidima kupaca dodijeljene su samo dozvole za čitanje i popis navedene u [odjeljku odobrene](#permissions-granted-on-the-key-vault) dozvole iz prethodnog članka. Sustav ne može dodavati, brisati ili prepisivati tajne u sefu za ključeve. To je i razlog zašto ne možete unijeti vjerodajnice kada veza koristi sef za ključeve.
+Ne. Uvidima korisnika dodjeljuju se samo dozvole za čitanje i popis navedene [u](#permissions-granted-on-the-key-vault) dodijeljenim dozvolama. Sustav ne može dodavati, brisati ili prepisivati tajne u sefu za ključeve. To je i razlog zašto ne možete unijeti vjerodajnice kada veza koristi sef za ključeve.
 
 ### <a name="can-i-change-a-connection-from-using-key-vault-secrets-to-default-authentication"></a>Mogu li promijeniti vezu s korištenja tajni sefa za ključeve na zadanu provjeru autentičnosti?
 
@@ -117,7 +116,7 @@ Ne. Ne možete se vratiti na zadanu vezu nakon što ste je konfigurirali s pomo�
 
 ### <a name="how-can-i-revoke-access-to-a-key-vault-for-customer-insights"></a>Kako mogu opozvati pristup trezoru ključeva za Customer Insights?
 
-Ovisno o tome je li omogućena opcija [Pravila pristupa sefu za ključeve](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) ili [Kontrola pristupa za Azure temeljena na ulogama](/azure/key-vault/general/rbac-guide?tabs=azure-cli), morate ukloniti dozvole za upravitelja usluge`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` pod nazivom `Dynamics 365 AI for Customer Insights`. Sve veze koje koriste sef za ključeve prestat će raditi.
+Ako je omogućeno pravilo pristupa trezoru [ključeva](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) ili [kontrola](/azure/key-vault/general/rbac-guide?tabs=azure-cli) pristupa utemeljena na ulogama servisa Azure, uklonite dozvole za upravitelja `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` servisa pod nazivom `Dynamics 365 AI for Customer Insights`. Sve veze koje koriste sef za ključeve prestat će raditi.
 
 ### <a name="a-secret-thats-used-in-a-connection-got-removed-from-the-key-vault-what-can-i-do"></a>Tajna koja se koristi u vezi uklonjena je iz sefa za ključeve. Što mogu učiniti?
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082844"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245456"
 ---
 # <a name="manage-predictions"></a>Upravljanje predviđanjima
 
@@ -58,7 +58,7 @@ Sljedeći stupci u izvješću sadrže korisne informacije za poboljšanje podata
 
 ## <a name="refresh-a-prediction"></a>Osvježavanje predviđanja
 
-Predviđanja će se automatski osvježiti na istom [rasporedu osvježavanja podataka](system.md#schedule-tab) kao što je konfigurirano u postavkama. Možete ih osvježiti i ručno.
+Predviđanja će se automatski osvježiti na istom [rasporedu osvježavanja podataka](schedule-refresh.md) kao što je konfigurirano u postavkama. Možete ih osvježiti i ručno.
 
 1. Idite na **Obavještavanje** > **Predviđanja** i odaberite karticu **Moja predviđanja**.
 

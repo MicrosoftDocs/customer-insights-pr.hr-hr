@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206990"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245778"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Povezivanje s podacima u usluzi Azure Data Lake Storage
 
@@ -56,8 +56,8 @@ Unosite podatke u Dynamics 365 Customer Insights korištenje računa Azure Data 
 
 1. Odaberite jednu od sljedećih mogućnosti za povezivanje prostora za **pohranu pomoću.** Dodatne informacije potražite u članku [Povezivanje uvida Azure Data Lake Storage korisnika s gen2 računom s upraviteljem](connect-service-principal.md) servisa Azure.
 
-   - **Azure resource**: Unesite **ID** resursa. Ako po želji želite unijeti podatke s računa za pohranu putem privatne veze servisa Azure, odaberite **Omogući privatnu vezu**. Dodatne informacije potražite u odjeljku [Privatne veze](security-overview.md#private-links-tab).
-   - **Pretplata** na Azure: Odaberite pretplatu **,** a zatim grupu **Resursa** i **račun** za pohranu. Ako po želji želite unijeti podatke s računa za pohranu putem privatne veze servisa Azure, odaberite **Omogući privatnu vezu**. Dodatne informacije potražite u odjeljku [Privatne veze](security-overview.md#private-links-tab).
+   - **Azure resource**: Unesite **ID** resursa. Ako po želji želite unijeti podatke s računa za pohranu putem privatne veze servisa Azure, odaberite **Omogući privatnu vezu**. Dodatne informacije potražite u odjeljku [Privatne veze](security-overview.md#set-up-an-azure-private-link).
+   - **Pretplata** na Azure: Odaberite pretplatu **,** a zatim grupu **Resursa** i **račun** za pohranu. Ako po želji želite unijeti podatke s računa za pohranu putem privatne veze servisa Azure, odaberite **Omogući privatnu vezu**. Dodatne informacije potražite u odjeljku [Privatne veze](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Za stvaranje izvor podataka potrebna vam je jedna od sljedećih uloga u spremniku ili računu za pohranu:
@@ -176,7 +176,7 @@ Pomoću mogućnosti Poveži se s računom *za pohranu možete ažurirati*. Dodat
         > - Vlasnik podataka bloba pohrane
         > - Suradnik podataka bloba pohrane
 
-   - **Omogućite privatnu vezu** ako želite unijeti podatke s računa za pohranu putem privatne veze servisa Azure. Dodatne informacije potražite u odjeljku [Privatne veze](security-overview.md#private-links-tab).
+   - **Omogućite privatnu vezu** ako želite unijeti podatke s računa za pohranu putem privatne veze servisa Azure. Dodatne informacije potražite u odjeljku [Privatne veze](security-overview.md#set-up-an-azure-private-link).
 
 1. Odaberite **Dalje**.
 1. Promijenite nešto od sljedećeg:
@@ -186,7 +186,7 @@ Pomoću mogućnosti Poveži se s računom *za pohranu možete ažurirati*. Dodat
       > [!IMPORTANT]
       > Ako postoje ovisnosti o postojećoj datoteci model.json ili manifest.json i skupu entiteta, vidjet ćete poruku o pogrešci i ne možete odabrati drugu datoteku model.json ili manifest.json. Uklonite te ovisnosti prije promjene datoteke model.json ili manifest.json ili stvorite novi izvor podataka s datotekom model.json ili manifest.json koju želite koristiti da biste izbjegli uklanjanje ovisnosti.
    - Da biste promijenili mjesto podatkovne datoteke ili primarni ključ, odaberite **Uredi**.
-   - Upute za promjenu inkrementalnih podataka o gutanju potražite u članku [Konfiguriranje inkrementalnog osvježavanja za izvore](incremental-refresh-data-sources.md) podataka servisa Azure Data Lake.
+   - Upute za promjenu inkrementalnih podataka o gutanju potražite u članku [Konfiguriranje inkrementalnog osvježavanja za izvore podataka servisa Azure Data Lake](incremental-refresh-data-sources.md).
    - Promijenite samo naziv entiteta tako da odgovara nazivu entiteta u .json datoteci.
 
      > [!NOTE]

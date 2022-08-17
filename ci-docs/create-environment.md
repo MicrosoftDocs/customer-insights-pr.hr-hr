@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
-ms.translationtype: MT
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142810"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245548"
 ---
 # <a name="how-to-create-a-new-environment"></a>Kako: stvoriti novo okruženje
 
@@ -48,7 +48,7 @@ U koraku **Osnovne informacije** odaberite želite li stvoriti okruženje od nul
 
 Navedite sljedeće pojedinosti:
 
-- **Naziv**: Naziv za ovo okruženje. Ovo je polje već popunjeno ako ste kopirali iz postojećeg okruženja, ali to možete promijeniti.
+- **Naziv**: Naziv za ovo okruženje. Ovo je polje već popunjeno ako ste kopirali iz postojećeg okruženja, ali to možete promijeniti. Ako imate više radnih okruženja, svakome dajte lako prepoznatljivo ime.
 - **Odaberi poslovanje**: Odaberite primarnu ciljnu skupinu za novo okruženje. Možete raditi s pojedinačnim potrošačima (B2C) ili [poslovnim računima](work-with-business-accounts.md) (B2B). Ako vaša organizacija uglavnom posluje s pojedincima, kao što su trgovac na malo ili kafić, odaberite pojedinačne potrošače. U slučaju da su vaše glavne publika druge tvrtke, poput proizvođača automobila ili papirne tvrtke, odaberite poslovne račune.
 - **Vrsta**: Odaberite želite li stvoriti radno okruženje ili okruženje sigurnosne ograde. Okruženja sigurnosne ograde ne dopuštaju zakazano osvježavanje podataka i namijenjena su predimplementaciji i testiranju. Okruženja sigurnosne ograde koriste istu primarnu ciljnu skupinu kao i trenutačno odabrano radno okruženje.
 - **Regija**: Regija u kojoj je usluga uvedena i udomaćena. Da biste [koristili vlastiti Azure Data Lake Storage račun](own-data-lake-storage.md) ili [se povezali s postojećom Microsoft Dataverse organizacijom](customer-insights-dataverse.md), okruženje Customer Insights mora biti u istoj regiji.

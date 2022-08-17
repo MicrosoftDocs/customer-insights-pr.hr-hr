@@ -1,19 +1,19 @@
 ---
 title: Što je novo u sustavu Dynamics 365 Customer Insights
 description: Informacije o novim značajkama, poboljšanjima i ispravcima programskih pogrešaka.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114237"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246002"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Što je novo u sustavu Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Ažuriranja unosimo po regijama. Tako bi neke regije mogle vidjeti značajke pri
 
 > [!TIP]
 > Za kontakt i glasanje o zahtjevima za značajkama i prijedlozima o proizvodu idite na [portal sa zamislima za aplikacije Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>Ažuriranja za srpanj 2022.
+
+Ažuriranja u srpnju 2022. uključuju nove značajke, nadogradnje performansi i ispravke pogrešaka.
+
+### <a name="export-to-moengage"></a>Izvoz u MoEngage
+
+Izvezite segmente jedinstvenih profila kupaca u MoEngage i koristite ih za marketing putem e-pošte u MoEngageu.
+
+Dodatne informacije potražite u članku [Izvoz segmenata u MoEngage](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>Podrška SSH-a za izvoz sa sjedištem u SFTP-u
+
+Odaberite želite li provjeriti autentičnost putem SSH-a ili korisničkog imena/lozinke za veze sa SFTP izvoznim odredištima.
+
+Dodatne informacije potražite u članku [Izvoz podataka u SFTP domaćine](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalizacija iskustava s podacima o poznatim i nepoznatim korisnicima
+
+Upravljanje podacima o kupcima nije novi izazov, ali postaje sve teže kako se korisnici kreću raznim ponudama robnih marki digitalnih kanala. Korisnik koji je poznat (autentificiran) na jednom kanalu postaje nepoznat (neprovjeren) u drugom ako nije prijavljen. Problem je često u tome što neprovjereni (nepoznati) korisnici nemaju zajednički ID. Može se koristiti za povezivanje značajnih atributa profila i generiranje jedinstvenih profila kupaca. Customer Insights pomaže u rješavanju ovog problema unoseći podatke iz metoda praćenja na izvornim sustavima.
+
+Dodatne informacije potražite u članku [Personalizacija iskustava podacima o poznatim i nepoznatim korisnicima](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>Ažuriranja za lipanj 2022.
 
@@ -50,7 +72,7 @@ Dodatne informacije potražite u članku [Siguran pristup podacima o klijentima 
 
 Azure Private Link omogućuje uvidima u korisnike da se povežu s vašim Azure Data Lake Storage računom putem privatnog krajnja točka u vašoj virtualnoj mreži. Za podatke na računu za pohranu, koji nije izložen javnom internetu, Private Link omogućuje vezu s tom ograničenom mrežom.
 
-Dodatne informacije potražite u članku [Korištenje privatne veze u odjeljku Uvidi](security-overview.md#private-links-tab) kupaca.
+Dodatne informacije potražite u članku [Korištenje privatne veze u odjeljku Uvidi](security-overview.md#set-up-an-azure-private-link) kupaca.
 
 ## <a name="may-2022-updates"></a>Ažuriranja za svibanj 2022.
 
@@ -114,7 +136,7 @@ Ažuriranja u ožujku 2022. uključuju nove značajke, nadogradnje performansi i
 
 LiveRamp pruža razlučivost identiteta i konsolidaciju korisničkih podataka. Osobne identifikatore u svojim podacima o kupcima možete mapirati na grafikon identiteta tvrtke AbiliTec i primati AbiliTec ID-ove. Zatim možete koristiti te ID-ove za bolje ujedinjenje podataka o kupcima.
 
-Dodatne informacije potražite u članku [Obogaćivanje korisničkih profila podacima o identitetu s LiveRampa (Pretpregleda)](enrichment-liveramp.md).
+Dodatne informacije potražite u članku [Obogaćivanje korisničkih profila podacima o identitetu s LiveRampa (Pretpregled)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organiziranje segmenata i mjera pomoću oznaka i filtara
 
@@ -164,7 +186,7 @@ Dodatne informacije potražite u članku [Povezivanje Azure Synapse izvor podata
 
 LiveRamp pruža razlučivost identiteta i konsolidaciju korisničkih podataka. Osobne identifikatore u svojim podacima o kupcima možete mapirati na grafikon identiteta tvrtke AbiliTec i primati AbiliTec ID-ove. Zatim možete koristiti te ID-ove za bolje ujedinjenje podataka o kupcima.
 
-Dodatne informacije potražite u članku [Obogaćivanje korisničkih profila podacima o identitetu s LiveRampa (Pretpregleda)](enrichment-liveramp.md).
+Dodatne informacije potražite u članku [Obogaćivanje korisničkih profila podacima o identitetu s LiveRampa (Pretpregled)](enrichment-liveramp.md).
 
 ### <a name="enrichment-for-data-sources-preview"></a>Obogaćivanje za izvore podataka (Pretpregled)
 

@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195649"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246099"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Unos podataka u stvarnom vremenu (pretpregled)
 
 Rad praktično u stvarnom vremenu omogućuje vam da za nekoliko sekundi vidite najnovije interakcije klijenata s vašim proizvodima ili uslugama.
 
-[Zakazana osvježenja](system.md#schedule-tab) uključuju velik broj zapisa i nekoliko složenih operacija. Prvo se podaci izvlače iz izvora podataka. Zatim se podaci objedinjuju, a onda obogaćuju dodatnim informacijama. Svako pokretanje ovog procesa može trajati nekoliko minuta ili sati.
+[Zakazana osvježenja](schedule-refresh.md) uključuju velik broj zapisa i nekoliko složenih operacija. Prvo se podaci izvlače iz izvora podataka. Zatim se podaci objedinjuju, a onda obogaćuju dodatnim informacijama. Svako pokretanje ovog procesa može trajati nekoliko minuta ili sati.
 
 Funkcija u stvarnom vremenu odmah pruža podatke za potrošnju, sve dok ih naknadno zakazano osvježenje ne izvuče iz izvora podataka.
 
@@ -85,7 +85,7 @@ Pojedinosti ovog API-ja, uključujući parametre i odgovore, možete pronaći u 
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Objašnjenje uporabe u stvarnom vremenu uz telemetriju
 
-Dohvatite pregled količine zahtjeva API-ju u stvarnom vremenu i informacije o problemima na koje sustav može naići. Možete [pristupiti telemetriji u stvarnom vremenu](system.md#api-usage-tab). 
+Dohvatite pregled količine zahtjeva API-ju u stvarnom vremenu i informacije o problemima na koje sustav može naići. Možete [pristupiti telemetriji u stvarnom vremenu](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Obogatite profile tvrtke Dun & Bradstreet (pregled)
 description: Opće informacije o obogaćivanju treće strane Dun & Bradstreet.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e89b64774dcb519a071dd3d403473807a50e7f33
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196017"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237895"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Obogatite profile tvrtke Dun & Bradstreet (pregled)
 
@@ -55,16 +55,11 @@ Morate biti [administrator](permissions.md#admin) u Customer Insights i imati vj
 
 1. Navedite valjane vjerodajnice Dun & Bradstreet i detalje projekta *Dun & Bradstreet Regija, Put mape Drop i Naziv* mape Drop. Ove [informacije](#set-up-your-dun--bradstreet-project) dobivate iz projekta Dun & Bradstreet.
 
-1. Pregledajte i dajte svoj pristanak za [Privatnost podataka i usklađenost](#data-privacy-and-compliance) odabirom opcije **Slažem se**.
+1. [Pregledajte privatnost i usklađenost](connections.md#data-privacy-and-compliance) podataka i odaberite **Slažem se**.
 
 1. Odaberite **Provjeri** da biste provjerili valjanost konfiguracije, a zatim **Spremi**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Stranica konfiguracije veze Dun & Bradstreet.":::
-
-### <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
-
-Kada omogućite Dynamics 365 Customer Insights prijenos podataka u Dun & Bradstreet, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke kao što su osobni podaci. Microsoft će prenijeti takve podatke prema vašim uputama, ali vi ste odgovorni za to da Dun & Bradstreet ispunjava sve obveze privatnosti ili sigurnosti koje možda imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-Vaš administrator usluge Dynamics 365 Customer Insights može ovo obogaćivanje ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
 
 ## <a name="supported-countries-or-regions"></a>Podržane države ili regije
 

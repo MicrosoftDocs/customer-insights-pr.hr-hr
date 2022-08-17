@@ -1,19 +1,19 @@
 ---
 title: Obogaćivanje klijentskih profila demografskim podacima tvrtke Experian (pretpregled)
 description: Opće informacije o obogaćivanju treće strane Experian.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fccb37cde3f05a70009c18b6c52db01a5ede094d
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195927"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237987"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obogaćivanje klijentskih profila demografskim podacima tvrtke Experian (pretpregled)
 
@@ -41,13 +41,9 @@ Morate biti [administrator](permissions.md#admin) u customer insights i imati Ex
 
 1. Unesite naziv veze i valjani korisnički ID, ID stranke i broj modela za svoj Experian račun za siguran prijevoz.
 
-1. Pregledajte i dajte svoj pristanak za [Privatnost podataka i usklađenost](#data-privacy-and-compliance) odabirom opcije **Slažem se**.
+1. [Pregledajte privatnost i usklađenost](connections.md#data-privacy-and-compliance) podataka i odaberite **Slažem se**.
 
 1. Odaberite **Provjeri** da biste provjerili valjanost konfiguracije, a zatim **Spremi**.
-
-### <a name="data-privacy-and-compliance"></a>Privatnost podataka i sukladnost
-
-Kad omogućite Dynamics 365 Customer Insights za prijenos podataka u Experian, dopuštate prijenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osjetljive podatke poput osobnih podataka. Microsoft će prenositi takve podatke prema vašoj uputi, ali vi ste odgovorni za to da Experian ispunjava sve obveze privatnosti ili sigurnosti koje imate. Dodatne informacije potražite u odjeljku [Microsoftova izjava o zaštiti privatnosti](https://go.microsoft.com/fwlink/?linkid=396732). Vaš administrator usluge Dynamics 365 Customer Insights može ovo obogaćivanje ukloniti u bilo kojem trenutku kako bi se ta funkcija prestala upotrebljavati.
 
 ## <a name="configure-the-enrichment"></a>Konfiguracija za obogaćivanje
 
