@@ -1,7 +1,7 @@
 ---
 title: Stvaranje složenih segmenata pomoću sastavljača segmenata
 description: Pomoću sastavljača segmenata koristite za stvaranje složenih segmenata kupaca grupiranjem na temelju različitih atributa.
-ms.date: 03/25/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170626"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304740"
 ---
 # <a name="create-complex-segments-with-segment-builder"></a>Stvaranje složenih segmenata pomoću sastavljača segmenata
 
-Definirajte složene filtre oko objedinjenog entiteta klijenta i s njime povezanih entiteta. Nakon obrade, svaki segment stvara skup zapisa o klijentima koji možete izvesti i koristiti za rad.
+Definirajte složene filtre oko jedinstvenog klijenta ili jedinstvenog kontakta i povezanih entiteta. Svaki segment, nakon obrade, kreira skup zapisa o kupcu ili kontaktima koje možete izvesti i poduzeti akciju.
 
 > [!TIP]
-> Segmenti temeljeni na **pojedinačnim klijentima** automatski uključuju dostupne podatke za kontakt za brojeve segmenta. U okruženjima za **poslovne račune** segmenti se temelje na računima (tvrtke ili podružnice). Za uključivanje podataka o kontaktu u segment koristite funkciju **Atributi projekta** u sastavljaču segmenata. Provjerite jesu li izvori podataka o kontaktu [semantički mapirani na entitetu ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> Segmenti temeljeni na **pojedinačnim klijentima** automatski uključuju dostupne podatke za kontakt za brojeve segmenta. Ako **na poslovnim poslovnim subjektima** objedinite [poslovne](data-unification.md) subjekte i kontakte, odaberite temelji li se segment na poslovnim subjektima ili poslovnim kontaktima. Da biste izvezli na odredište očekujući podatke za kontakt, koristite segment kontakata. Da biste izvezli na odredište očekujući podatke o računu, koristite segment računa.
 
 ## <a name="segment-builder"></a>Graditelj segmenata
 
@@ -57,6 +57,11 @@ Gornji primjer ilustrira sposobnost segmentacije. Definirali smo segment za klij
 
 1. Odaberite **Novo** > **Izgradi vlastiti**. Na stranici sastavljača segmenata definirate ili sastavljate pravila. Pravilo se sastoji od jednog ili više uvjeta koji definiraju skup klijenata.
 
+   > [!NOTE]
+   > Za okruženja koja se temelje na poslovnim računima odaberite **Novi** > **segment poslovnih subjekata** ili **Segment kontakata (pretpregled)** na temelju vrste segmenta koji želite kreirati. Ako je hijerarhija računa [definirana i želite stvoriti pravila za filtriranje podataka na temelju podređenog](relationships.md#set-up-account-hierarchies) i nadređenog odnosa, odaberite **Koristi hijerarhiju? (pretpregled)**, odaberite hijerarhiju, a zatim **Primijeni**.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Okno hijerarhije odabranog računa segmenta.":::
+
 1. Uz stavku Segment bez naslova odaberite **Uređivanje detalja**. Navedite naziv za svoj segment i ažurirajte predloženi **Naziv izlaznog entiteta** za segment. Po želji dodajte opis i [oznake](work-with-tags-columns.md#manage-tags) segmentu.
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Dijaloški okvir Uređivanje detalja.":::
@@ -65,11 +70,11 @@ Gornji primjer ilustrira sposobnost segmentacije. Definirali smo segment za klij
    - Pregledajte popis dostupnih entiteta i atributa u oknu **Dodaj u pravilo** i odaberite ikonu **+** pored atributa za dodavanje. Odaberite želite li atribut dodati postojećem pravilu ili ga koristiti za stvaranje novog pravila.
    - Upišite naziv atributa u odjeljak pravila da biste vidjeli odgovarajuće prijedloge.
 
-1. Odaberite operatore za navođenje podudarnih vrijednosti uvjeta. Atribut može imati jednu od četiri vrste podataka kao vrijednost: numeričku, niz, datum ili Booleovu vrijednost. Ovisno o vrsti podataka atributa, za navođenje uvjeta dostupni su različiti operatori. Za segmente s poslovnim računima dostupna su dva posebna operatora za uključivanje potencijalne hijerarhije između unesenih računa. Koristite operatore *podređeno s obzirom na* i *nadređeno s obzirom na* da biste uključili povezane račune.
+1. Odaberite operatore za navođenje podudarnih vrijednosti uvjeta. Atribut može imati jednu od četiri vrste podataka kao vrijednost: numeričku, niz, datum ili Booleovu vrijednost. Ovisno o vrsti podataka atributa, za navođenje uvjeta dostupni su različiti operatori.
 
 1. Odaberite **Dodaj uvjet** za dodavanje više uvjeta u pravilo. Da biste stvorili pravilo prema trenutnom pravilu, odaberite **Dodaj pod-pravilo**.
 
-1. Ako pravilo koristi druge entitete osim entiteta *Klijent*, odaberite **Postavi put** odnosa da biste mapirali odabrani entitet u entitet ujedinjenog klijenta. Ako postoji samo jedan mogući put odnosa, sustav ga automatski odabire. Različiti [putovi](relationships.md#relationship-paths) odnosa mogu dati različite rezultate. Svako pravilo može imati svoju vlastitu putanju odnosa.
+1. Ako pravilo koristi druge entitete osim entiteta *Klijent* (ili *entiteta ContactProfile* za B-do-B), odaberite **Postavi put** odnosa da biste mapirali odabrani entitet u entitet jedinstvenog klijenta. Ako postoji samo jedan mogući put odnosa, sustav ga automatski odabire. Različiti [putovi](relationships.md#relationship-paths) odnosa mogu dati različite rezultate. Svako pravilo može imati svoju vlastitu putanju odnosa.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Potencijalna putanja odnosa prilikom stvaranja pravila na temelju entiteta mapiranog u objedinjeni entitet klijenta.":::
 
@@ -92,24 +97,22 @@ Gornji primjer ilustrira sposobnost segmentacije. Definirali smo segment za klij
       - **Unakrsno** preklapa dvije grupe. Samo podaci koji *su zajednički* objema grupama ostaju u objedinjenoj grupi.
       - **Izuzmi** kombinira dvije grupe. Zadržavaju se samo podaci u grupi A koji *nisu zajednički* podacima u grupi B.
 
-1. Prema zadanim postavkama izlazni entitet automatski će sadržavati sve atribute korisničkih profila koji odgovaraju definiranim filtrima. Ako se segment temelji na drugim entitetima osim na entitetu *Klijent*, odaberite **Atributi** Projekta da biste dodali više atributa iz tih entiteta izlaznom entitetu.
-
-   > [!IMPORTANT]
-   > Za segmente koji se temelje na poslovnim računima, pojedinosti o jednom ili više kontakata svakog računa iz *entiteta ContactProfile moraju biti uključeni u segment kako bi se omogućilo aktiviranje ili izvoz tog segmenta na odredišta koja zahtijevaju podatke* za kontakt. Za više informacija o entitetu *ContactProfile* pogledajte [Semantička mapiranja](semantic-mappings.md).
-   > Uzorak izlaza za segment koji se temelji na poslovnim računima s predviđenim atributima kontakata mogao bi izgledati ovako:
-   >
-   > |ID  |Ime kupca  |Prihod  |Naziv kontakta  | Uloga kontakta|
-   > |---------|---------|---------|---------|---|
-   > |10021     | Contoso | 100 tisuća | [Abbie Moss, Ruth Soto]  | [Generalni direktor, Voditelj nabave]
-
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Primjer projiciranih atributa odabranih u bočnom oknu za dodavanje izlaznom entitetu.":::
-  
+1. Prema zadanim postavkama izlazni entitet automatski će sadržavati sve atribute korisničkih profila koji odgovaraju definiranim filtrima. U B-do-B prilikom korištenja entiteta *ContactProfile* automatski se uključuje ID računa. Ako se segment temelji na drugim entitetima osim na entitetu *Kupac* ili da bi uključio više atributa iz *ContactProfilea*, odaberite **Atributi** Projekta da biste izlaznom entitetu dodali više atributa iz tih entiteta.
+ 
    Na primjer: segment se temelji na entitetu koji sadrži podatke o kupnji, koji su povezani s entitetom *Klijent*. Segment traži sve klijente iz Španjolske koji su kupili robu u tekućoj godini. Možete odabrati dodavanje atributa kao što su cijena robe ili datum nabave svim podudarnim zapisima kupaca u izlaznom entitetu. Ove informacije mogu biti korisne za analizu sezonskih korelacija s ukupnom potrošnjom.
 
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Primjer projiciranih atributa odabranih u bočnom oknu za dodavanje izlaznom entitetu.":::
+ 
+   Uzorak izlaza za segment koji se temelji na poslovnim računima s predviđenim atributima kontakata mogao bi izgledati ovako:
+
+   |ID  |Ime kupca  |Prihod  |Naziv kontakta  | Uloga kontakta|
+   |---------|---------|---------|---------|---|
+   |10021     | Contoso | 100 tisuća | [Abbie Moss, Ruth Soto]  | [Generalni direktor, Voditelj nabave]
+
    > [!NOTE]
-   > - **Atributi projekta** funkcioniraju samo za entitete koji imaju odnos jedan-prema-više s entitetom klijenta. Na primjer, jedan klijent može imati više pretplata.
-   > - Ako je atribut koji želite projicirati udaljen više od jednog koraka od entiteta *Klijent*, kako je definirano odnosom, taj bi se atribut trebao koristiti u svakom pravilu upita segmenta koji sastavljate.
-   > - Ako je atribut koji želite projicirati udaljen samo jedan korak od entiteta *Klijent*, taj se atribut ne treba koristiti u svakom pravilu upita segmenta koji sastavljate.
+   > - **Atributi projekta funkcioniraju** samo za entitete koji imaju odnos jedan-prema-više s entitetom *Kupac* ili *ContactProfile*. Na primjer, jedan klijent može imati više pretplata.
+   > - Ako je atribut koji želite projicirati udaljen više od jednog skoka od *entiteta Kupac* ili *ContactProfile*, kako je definirano odnosom, taj bi se atribut trebao koristiti u svakom pravilu upita segmenta koji gradite.
+   > - Ako je atribut koji želite projicirati samo jedan skok udaljen od *entiteta Customer* ili *ContactProfile*, taj atribut ne mora biti prisutan u svakom pravilu upita segmenta koji gradite.
    > - **Projicirani atributi** uzimaju se u obzir pri korištenju postavljenih operatora.
 
 1. Odaberite **Pokreni** da biste kreirali segment. Odaberite **Spremi** ako želite zadržati trenutnu konfiguraciju i pokrenuti segment kasnije. Prikazuje se **stranica Segmenti**.

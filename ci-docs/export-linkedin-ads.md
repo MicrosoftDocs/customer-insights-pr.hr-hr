@@ -1,19 +1,19 @@
 ---
 title: Izvoz segmenata u LinkedIn Ads (pretpregled)
 description: Saznajte kako konfigurirati vezu i izvesti u LinkedIn Ads.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196799"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304694"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Izvoz segmenata u LinkedIn Ads (pretpregled)
 
@@ -24,7 +24,7 @@ Izvezite segmente objedinjenih profila klijenata u LinkedIn Ads kako biste stvor
 - Račun [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) i odgovarajuće administratorske vjerodajnice.
 - ID [LinkedIn Campaign Manager računa](https://www.linkedin.com/help/lms/answer/a424270).
 - [Konfigurirani segmenti](segments.md) u customer insights.
-- Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
+- Izvezenim segmentima potrebno je barem jedno određeno polje, ovisno o tome odaberete [li ciljanje kontakata ili](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ciljanje [tvrtke](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) na LinkedInu. Moguća polja navedena su u koraku **podudaranja podataka prilikom** konfiguriranja [izvoza](#configure-an-export).
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 

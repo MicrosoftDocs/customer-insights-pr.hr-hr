@@ -1,11 +1,11 @@
 ---
-title: Ažuriranje postavki objedinjavanja
-description: Ažurirajte duplicirana pravila, pravila podudaranja ili jedinstvena polja u postavkama ujedinjenja.
-ms.date: 06/01/2022
+title: Ažuriranje postavki objedinjavanja klijenta, poslovnog subjekta ili kontakta
+description: Ažurirajte dvostruka pravila, pravila podudaranja ili jedinstvena polja u postavkama ujedinjenja klijenta ili računa.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: v-wendysmith
-ms.author: mukeshpo
+author: Scott-Stabbert
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
@@ -13,20 +13,26 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245585"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304326"
 ---
-# <a name="update-the-unification-settings"></a>Ažuriranje postavki objedinjavanja
+# <a name="update-unification-settings"></a>Ažuriraj postavke objedinjavanja
 
 Da biste pregledali ili promijenili postavke objedinjavanja nakon stvaranja jedinstvenog profila, poduzmite sljedeće korake.
 
 1. Otvorite Objedinjavanje **podataka** > **·**.
 
-   :::image type="content" source="media/m3_unified.png" alt-text="Snimka zaslona stranice Objedinjavanje podataka nakon ujedinjenja podataka.":::
+   Za pojedinačne kupce (B-do-C) **stranica Objedinjavanje** prikazuje broj jedinstvenih profila i pločica kupaca za svaki od koraka ujedinjenja.
+
+   :::image type="content" source="media/m3_unified.png" alt-text="Snimka zaslona stranice Objedinjavanje podataka nakon ujedinjenja podataka." lightbox="media/m3_unified.png":::
+
+   Za poslovne račune (B-do-B) **stranica Objedinjavanje** prikazuje broj jedinstvenih profila računa i pločica za svaki od koraka objedinjavanja računa. Ako su kontakti ujedinjeni, prikazat će se broj jedinstvenih profila kontakata i pločica za svaki od koraka objedinjavanja kontakata. Odaberite odgovarajuću pločicu u odjeljku **Objedinjavanje poslovnih subjekata** ili **Objedinjavanje kontakata (pretpregled),** ovisno o tome što želite ažurirati.
+
+   :::image type="content" source="media/b2b_unified.png" alt-text="Snimka zaslona stranice Objedinjavanje podataka nakon objedinjavanja podataka o računu i kontaktima." lightbox="media/b2b_unified.png":::
 
    > [!TIP]
    > Pločica Odgovarajući uvjeti **prikazuje se samo ako je** odabrano više entiteta.
@@ -36,14 +42,14 @@ Da biste pregledali ili promijenili postavke objedinjavanja nakon stvaranja jedi
    - [Duplicirani zapisi](#manage-deduplication-rules) za upravljanje pravilima deduplikacije ili preference spajanja.
    - [Odgovarajući uvjeti](#manage-match-rules) za ažuriranje odgovarajućih pravila u dva ili više entiteta.
    - [Objedinjena polja kupca](#manage-unified-fields) za kombiniranje ili isključivanje polja. Povezane profile možete grupirati i u klastere.
+   - [Semantička polja](#manage-semantic-fields-for-unified-contacts) za upravljanje semantičkim tipovima za jedinstvena polja kontakata.
+   - [Odnosi](#manage-contact-and-account-relationships) da biste upravljali odnosom kontakta s poslovnim subjektom.
 
 1. Nakon što unesete promjene, odaberite sljedeću opciju:
 
-   :::image type="content" source="media/m3_run_match_merge.png" alt-text="Snimka zaslona stranice Objedinjavanje podataka s istaknutim mogućnostima objedinjavanja.":::
-
    - [Pokrenite odgovarajuće uvjete](#run-matching-conditions) da biste brzo procijenili kvalitetu odgovarajućih uvjeta (pravila deduplikacije i podudaranja) bez ažuriranja jedinstvenog profila. Mogućnost **Pokreni samo** odgovarajuće uvjete ne prikazuje se za jedan entitet.
-   - [Objedinite profile](#run-updates-to-the-unified-customer-profile) kupaca da biste pokrenuli odgovarajuće uvjete i ažurirali jedinstveni entitet korisničkog profila bez utjecaja na ovisnosti (kao što su obogaćivanja, segmenti ili mjere). Zavisni procesi se ne izvode, već će se osvježiti kako [je definirano u rasporedu](schedule-refresh.md) osvježavanja.
-   - [Objedinite profile i ovisnosti](#run-updates-to-the-unified-customer-profile) kupaca kako biste pokrenuli odgovarajuće uvjete i ažurirali jedinstveni entitet korisničkog profila i sve ovisnosti (kao što su obogaćivanja, segmenti ili mjere). Svi se procesi automatski ponavljaju.
+   - [Objedinite](#run-updates-to-the-unified-profile) profile kako biste pokrenuli odgovarajuće uvjete i ažurirali jedinstveni entitet profila bez utjecaja na ovisnosti (kao što su obogaćivanja, segmenti ili mjere). Zavisni procesi se ne izvode, već će se osvježiti kako [je definirano u rasporedu](schedule-refresh.md) osvježavanja.
+   - [Objedinite profile i ovisnosti](#run-updates-to-the-unified-profile) za pokretanje odgovarajućih uvjeta, ažurirajte jedinstveni entitet profila i ažurirajte sve ovisnosti (kao što su obogaćivanja, segmenti ili mjere). Svi se procesi automatski ponavljaju. U B-do-B ujedinjenje se provodi i na subjektima za poslovni subjekt i na subjektima za kontakt koji ažuriraju jedinstvene profile.
 
 ## <a name="edit-source-fields"></a>Uređivanje izvorišnih polja
 
@@ -55,11 +61,11 @@ Atribut ili entitet ne možete ukloniti ako su već ujedinjeni.
 
    Prikazuje se broj preslikanih i nepreslikanih polja.
 
-1. Odaberite **Odaberite entitete i polja** da biste dodali druge atribute ili entitete. S pomoću pretraživanja ili pomicanja pronađite i odaberite svoje atribute i entitete od interesa. Odaberite **Primijeni**.
+1. Da biste dodali druge atribute ili entitete, odaberite **Odaberi entitete i polja**.
 
-1. Po želji možete promijeniti primarni ključ za entitet, vrste atributa i uključiti **ili isključiti inteligentno mapiranje**. Dodatne informacije potražite u odjeljku [Odabir primarnog ključa i semantičke vrste za atribute](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Po želji možete promijeniti primarni ključ za entitet, vrste atributa i uključiti **ili isključiti inteligentno mapiranje**. Dodatne informacije potražite u odjeljku [Odabir izvorišnih polja](map-entities.md).
 
-1. Odaberite **Dalje** da biste promijenili pravila deduplikacije ili Odaberite **Spremi i zatvorite** i vratite se da biste [ažurirali postavke](#update-the-unification-settings) objedinjavanja.
+1. Odaberite **Dalje** da biste promijenili pravila deduplikacije ili Spremi **i zatvorite** te se vratite na [Ažuriraj postavke](#update-unification-settings) objedinjavanja.
 
 ## <a name="manage-deduplication-rules"></a>Upravljanje pravilima deduplikacije
 
@@ -69,7 +75,7 @@ Atribut ili entitet ne možete ukloniti ako su već ujedinjeni.
 
    Broj pronađenih duplikata zapisa prikazuje se u odjeljku **Duplikati**. Stupac Zapisi **koji se dodjeljuju** prikazuje koji entiteti imaju duplicirane zapise i postotak dupliciranih zapisa.
 
-1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora](data-sources-enrichment.md) podataka.
+1. Da biste koristili obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora podataka](data-sources-enrichment.md).
 
 1. Da biste upravljali pravilima deduplikacije, odaberite neku od sljedećih mogućnosti:
    - **Stvaranje novog pravila**: Odaberite Dodaj **pravilo** u odgovarajućem entitetu. Dodatne informacije potražite u članku [Definiranje pravila](remove-duplicates.md#define-deduplication-rules) deduplikacije.
@@ -83,11 +89,9 @@ Atribut ili entitet ne možete ukloniti ako su već ujedinjeni.
    1. Odaberite **Uređivanje preferenci spajanja** i promijenite **mogućnost Zapis da biste zadržali**.
    1. Da biste promijenili preference spajanja na pojedinačnim atributima entiteta, odaberite **Dodatno** i unesite potrebne promjene.
 
-      :::image type="content" source="media/m3_adv_merge.png" alt-text="Snimka zaslona s naprednim preferencama spajanja koje prikazuju najnoviju e-poštu i najcjelovitiju adresu":::
-
    1. Odaberite **Gotovo**.
 
-1. Odaberite **Dalje** da biste promijenili odgovarajuće uvjete ili Odaberite **Spremi i zatvori** te se vratite da biste [ažurirali postavke](#update-the-unification-settings) objedinjavanja.
+1. Odaberite **Dalje** da biste promijenili odgovarajuće uvjete ili odaberite **Spremi i zatvori** te se vratite na [Ažuriraj postavke](#update-unification-settings) objedinjavanja.
 
 ## <a name="manage-match-rules"></a>Upravljanje pravilima uparivanja
 
@@ -98,9 +102,9 @@ Većinu parametara uparivanja možete ponovno konfigurirati i fino podesiti. Ne 
    :::image type="content" source="media/m3_match_edit.png" alt-text="Snimka zaslona stranice Podudaranje s pravilima i uvjetima sa statistikom." lightbox="media/m3_match_edit.png":::
 
    Stranica prikazuje redoslijed podudaranja i definirana pravila te sljedeće statistike:
-   - **Jedinstveni izvorni zapisi** pokazuje broj pojedinačnih izvornih zapisa koji su obrađeni u zadnjem izvođenju uparivanja.
-   - **Upareni i neupareni zapisi** ističe koliko jedinstvenih zapisa ostaje nakon obrade pravila uparivanja.
-   - **Samo upareni zapisi** prikazuje broj uparivanja u svim vašim parovima uparivanja.
+   - **Jedinstveni izvorišni zapisi** prikazuju broj pojedinačnih izvornih zapisa obrađenih u posljednjem izvođenju podudaranja.
+   - **Podudarni i neusporedivi zapisi** ističu koliko jedinstvenih zapisa ostaje nakon obrade pravila podudaranja.
+   - **Podudarni zapisi prikazuju samo** broj podudaranja u svim parovima vaših podudaranja.
 
 1. Da biste vidjeli rezultate svih pravila i njihovih rezultata, odaberite **Prikaz zadnjeg izvođenja**. Prikazuju se rezultati, uključujući alternativne ID-ove kontakata. Rezultate možete preuzeti.
 
@@ -110,7 +114,7 @@ Većinu parametara uparivanja možete ponovno konfigurirati i fino podesiti. Ne 
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Grafički prikaz neusporedivih i podudarnih zapisa, uključujući popis podataka.":::
 
-1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora](data-sources-enrichment.md) podataka.
+1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora podataka](data-sources-enrichment.md).
 
 1. Da biste upravljali pravilima, odaberite neku od sljedećih mogućnosti:
    - **Stvaranje novog pravila**: Odaberite Dodaj **pravilo** u odgovarajućem entitetu. Dodatne informacije potražite u članku [Definiranje pravila za parove podudaranja](match-entities.md#define-rules-for-match-pairs).
@@ -120,7 +124,7 @@ Većinu parametara uparivanja možete ponovno konfigurirati i fino podesiti. Ne 
    - **Dupliciranje pravila**: Odaberite pravilo, a zatim **Dupliciraj** da biste stvorili slično pravilo s izmjenama.
    - **Brisanje pravila**: Odaberite pravilo, a zatim **izbrišite**.
 
-1. Odaberite **Dalje** da biste unijeli promjene u objedinjena polja ili odaberite **Spremi i zatvori** te se vratite da biste [ažurirali postavke](#update-the-unification-settings) objedinjavanja.
+1. Odaberite **Dalje** da biste unijeli promjene u jedinstvena polja ili odaberite **Spremi i zatvori** te se vratite na [Ažuriraj postavke](#update-unification-settings) objedinjavanja.
 
 ## <a name="manage-unified-fields"></a>Upravljanje jedinstvenim poljima
 
@@ -130,7 +134,28 @@ Većinu parametara uparivanja možete ponovno konfigurirati i fino podesiti. Ne 
 
 1. Pregledajte kombinirana i isključena polja i po potrebi napravite sve promjene. Dodajte ili uredite IDD-a klijenta ili profile grupa u klastere. Dodatne informacije potražite u članku [Objedinjavanje polja](merge-entities.md) kupaca.
 
-1. Odaberite **Dalje** da biste pregledali postavke ujedinjenja i [ažurirali jedinstveni profil i ovisnosti ili odaberite](#run-updates-to-the-unified-customer-profile) Spremi i zatvori **i vratite** se na [Ažuriranje postavki](#update-the-unification-settings) ujedinjenja da biste unijeli dodatne promjene.
+1. Za klijente ili račune odaberite **Dalje** da biste pregledali i [ažurirali jedinstveni profil i ovisnosti](#run-updates-to-the-unified-profile). Ili odaberite **Spremi i zatvorite** i vratite se na [Ažuriraj postavke](#update-unification-settings) ujedinjenja da biste unijeli dodatne promjene.
+
+   Za kontakte odaberite **Dalje** da biste upravljali semantičkim poljima. Ili odaberite **Spremi i zatvorite** i vratite se na [Ažuriraj postavke](#update-unification-settings) ujedinjenja da biste unijeli dodatne promjene.
+
+## <a name="manage-semantic-fields-for-unified-contacts"></a>Upravljanje semantičkim poljima za objedinjene kontakte
+
+1. Na pločici **Semantička polja** odaberite **Uredi**.
+
+1. Da biste promijenili semantičku vrstu za objedinjeno polje, odaberite novu vrstu. Dodatne informacije potražite u odjeljku [Definiranje semantičkih polja za objedinjene kontakte](data-unification-contacts.md#define-the-semantic-fields-for-unified-contacts).
+
+1. Odaberite **Dalje** da biste upravljali odnosom računa i kontakta ili Odaberite **Spremi i zatvori** te se vratite na [Ažuriraj postavke](#update-unification-settings) objedinjavanja da biste unijeli dodatne promjene.
+
+## <a name="manage-contact-and-account-relationships"></a>Upravljanje Odnosi kontakta i računa
+
+1. Na **pločici** Odnosi **odaberite Uređivanje**.
+
+1. Da biste promijenili odnos kontakta i poslovnog subjekta, promijenite bilo koju od sljedećih informacija:
+
+   - **Vanjski ključ iz entiteta** kontakta: Odaberite atribut koji povezuje vaš kontaktni entitet s poslovnim subjektom.
+   - **Entitet za poslovni kontakt**: Odaberite entitet poslovnog subjekta pridružen kontaktu.
+
+1. Odaberite **Dalje** da biste pregledali postavke ujedinjenja i [ažurirali jedinstveni profil i ovisnosti ili odaberite](#run-updates-to-the-unified-profile) Spremi i zatvori **i vratite** se na [Ažuriraj postavke](#update-unification-settings) ujedinjenja da biste unijeli dodatne promjene.
 
 ## <a name="run-matching-conditions"></a>Pokreni odgovarajuće uvjete
 
@@ -148,18 +173,15 @@ Pokretanje odgovarajućih uvjeta pokreće samo pravila deduplikacije i podudaran
 
 1. Upute za unos promjena potražite u člancima [Upravljanje pravilima](#manage-deduplication-rules) deduplikacije ili [Upravljanje pravilima](#manage-match-rules) podudaranja.
 
-1. Ponovno pokrenite postupak podudaranja ili [pokrenite ažuriranja korisničkog profila](#run-updates-to-the-unified-customer-profile).
+1. Ponovno pokrenite postupak podudaranja ili [pokrenite ažuriranja profila](#run-updates-to-the-unified-profile).
 
-## <a name="run-updates-to-the-unified-customer-profile"></a>Pokretanje ažuriranja za jedinstveni profil klijenta
+## <a name="run-updates-to-the-unified-profile"></a>Pokretanje ažuriranja za objedinjeni profil
 
-1. **Na stranici Objedinjavanje** > **podataka** odaberite:
+- Da biste pokrenuli odgovarajuće uvjete i ažurirali jedinstveni entitet *profila bez* utjecaja na ovisnosti (kao što su kartice kupaca, obogaćenja, segmenti ili mjere), odaberite **Objedini profile** kupaca. Za račune odaberite **Objedinjavanje računa** > **Objedinjavanje profila**. Za kontakte odaberite **Objedinjavanje kontakata (pretpregled)** > **Objedinjavanje profila**. Zavisni procesi se ne izvode, već će se osvježiti kako [je definirano u rasporedu](schedule-refresh.md) osvježavanja.
+- Da biste pokrenuli odgovarajuće uvjete, ažurirajte objedinjeni profil i pokrenite sve zavisnosti, odaberite **Objediniraj profile i ovisnosti** klijenata. Svi se procesi automatski ponavljaju. Za poslovne subjekte i kontakte odaberite **Objedinjavanje računa** > **Objedinjavanje profila i ovisnosti**. Odgovarajući uvjeti pokreću se i za poslovne subjekte i za kontakte koji ažuriraju objedinjene profile i sve ostale zavisnosti.
 
-   - **Objedinjavanje korisničkih** profila: pokreće odgovarajuće uvjete i ažurira jedinstveni entitet korisničkog profila bez utjecaja na ovisnosti (kao što su obogaćivanja, segmenti ili mjere). Zavisni procesi se ne izvode, već će se osvježiti kako [je definirano u rasporedu](schedule-refresh.md) osvježavanja.
+Sve pločice osim **izvornih polja** prikazuju **red čekanja** ili **osvježavanje**.
 
-   - **Objedinjavanje korisničkih profila i ovisnosti**: pokreće odgovarajuće uvjete i ažurira jedinstveni profil i sve ovisnosti. Svi se procesi automatski ponavljaju. Nakon završetka svih nizvodnih procesa, profil kupca odražava ažurirane podatke.
+[!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-   Pločice **Duplicirani zapisi**, **Odgovarajući uvjeti** i **Objedinjeni klijenti** prikazuju **status u redu čekanja** ili **Osvježavanje**.
-
-   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
-
-Rezultati uspješnog izvođenja prikazuju se **na stranici Objedinjavanje** koja prikazuje broj objedinjenih profila kupaca.
+Rezultati uspješnog izvođenja prikazuju se **na stranici Objedinjavanje** koja prikazuje broj jedinstvenih profila.

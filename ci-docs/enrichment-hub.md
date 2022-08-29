@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245870"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304510"
 ---
 # <a name="data-enrichment-preview-overview"></a>Pregled obogaćivanja podataka (pretpregleda)
 
@@ -95,7 +95,7 @@ Nakon pokretanja, obogaćivanja se mogu osvježiti prema automatskom rasporedu i
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Pogledajte napredak procesa obogaćivanja
 
-Možete pronaći pojedinosti o obradi obogaćivanja, uključujući status i potencijalne probleme dok se osvježava ili nakon dovršetka osvježavanja. Razumijte koji su procesi uključeni za osvježavanje obogaćivanja i koliko je vremena potrebno za pokretanje procesa. Status obogaćivanja podržan je za Experian, Leadspace, HERE Technologies, SFTP Import i Azure karte.
+Detalje o obradi obogaćivanja možete pronaći, uključujući njegov status i potencijalne probleme dok je osvježavajuće ili nakon dovršetka osvježavanja. Razumijte koji su procesi uključeni za osvježavanje obogaćivanja i koliko je vremena potrebno za pokretanje procesa. Status obogaćivanja podržan je za Experian, Leadspace, HERE Technologies, SFTP Import i Azure karte.
 
 1. Idite na **Podaci** > **Obogaćivanje**.
 1. Na kartici **Moja obogaćivanja** odaberite status obogaćivanja da biste otvorili bočno okno.

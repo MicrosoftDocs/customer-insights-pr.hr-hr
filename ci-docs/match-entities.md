@@ -2,7 +2,7 @@
 title: Usklađivanje uvjeta za objedinjavanje podataka
 description: Prilagodite entitete da biste stvorili objedinjene profile klijenata.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139688"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304648"
 ---
 # <a name="match-conditions-for-data-unification"></a>Usklađivanje uvjeta za objedinjavanje podataka
 
@@ -27,6 +27,8 @@ Ovaj korak u ujedinjenju definira redoslijed podudaranja i pravila za međusobno
 
 > [!NOTE]
 > Nakon što stvorite uvjete podudaranja i odaberete **Dalje**, ne možete ukloniti odabrani entitet ili atribut. Ako je potrebno, odaberite **Natrag** da biste pregledali odabrane entitete i atribute prije nastavka.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Uključi obogaćene entitete (pretpregled)
 
@@ -43,14 +45,14 @@ Ako ste obogatili entitete na razini izvor podataka kako biste poboljšali rezul
 Svako uparivanje ujedinjuje dva ili više entiteta u jedan objedinjeni entitet. Istodobno vodi jedinstvenu evidenciju klijenata. Redoslijed podudaranja označava redoslijed kojim sustav pokušava uskladiti zapise.
 
 > [!IMPORTANT]
-> Prvi entitet na listi naziva se primarni entitet. Primarni entitet služi kao osnova za skup podataka o objedinjenim profilima. U ovaj entitet bit će dodani dodatni odabrani entiteti.
+> Prvi entitet naziva se primarni entitet, koji služi kao osnova za vaše jedinstvene profile. U ovaj entitet bit će dodani dodatni odabrani entiteti.
 >
 > Važna razmatranja:
 >
 > - Odaberite entitet s najcjelovitijim i najpouzdanijim profilnim podacima o vašim klijentima kao primarnom entitetu.
 > - Odaberite entitet koji ima nekoliko zajedničkih atributa s drugim entitetima (na primjer, ime, telefonski broj ili adresu e-pošte) kao primarni entitet.
 
-1. **Na stranici Odgovarajući uvjeti** koristite strelice za pomicanje gore i dolje da biste premjestili entitete željenim redoslijedom ili ih povucite i ispustite. Na primjer, odaberite **Kontakti:e-trgovina** kao primarni entitet i **CustomerLoyalty:Loyalty** kao drugi entitet.
+1. **Na stranici Odgovarajući uvjeti** koristite strelice za pomicanje gore i dolje da biste premjestili entitete željenim redoslijedom ili ih povucite i ispustite. Na primjer, odaberite **eCommerceCustomers kao primarni** entitet i **loyCustomers** kao drugi entitet.
 
 1. Da bi svaki zapis u entitetu bio jedinstveni klijent bez obzira na to je li pronađeno podudaranje, odaberite **Uključi sve zapise**. Svi zapisi u ovom entitetu koji se ne podudaraju sa zapisima ni u jednom drugom entitetu uključeni su u objedinjeni profil. Zapisi koji nemaju podudaranje nazivaju se singletoni.
   
@@ -70,7 +72,7 @@ Upozorenje pored naziva entiteta znači da za par podudaranja nije definirano pr
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Snimka zaslona s prikazom mogućnosti Dodavanje okna pravila.":::
 
-   - **Odabir entiteta/polja (prvi redak)**: Odaberite povezani entitet i atribut da biste naveli svojstvo zapisa koje je vjerojatno jedinstveno za klijenta. Na primjer, telefonski broj ili adresu e-pošte. Izbjegavajte uparivanje prema atributima vrste aktivnosti. Na primjer, ID kupnje vjerojatno neće pronaći uparivanje u drugim vrstama zapisa.
+   - **Odabir entiteta/polja (prvi redak)**: Odaberite entitet i atribut koji je vjerojatno jedinstven za kupca. Na primjer, telefonski broj ili adresu e-pošte. Izbjegavajte uparivanje prema atributima vrste aktivnosti. Na primjer, ID kupnje vjerojatno neće pronaći uparivanje u drugim vrstama zapisa.
 
    - **Odabir entiteta/polja (drugog retka)**: Odaberite atribut koji se odnosi na atribut entiteta navedenog u prvom retku.
 
@@ -116,7 +118,7 @@ Pravila uparivanja predstavljaju skupove uvjeta. Da biste entitete uskladili s u
 
 ### <a name="add-exceptions-to-a-rule"></a>Dodavanje iznimaka pravilu
 
-U većini slučajeva podudaranje entiteta dovodi do jedinstvenih profila klijenata s konsolidiranim podacima. Da biste dinamički riješili rijetke slučajeve lažno pozitivnih rezultata i lažno negativnih rezultata, možete definirati iznimke za pravilo podudaranja. Iznimke se primjenjuju nakon obrade pravila podudaranja i izbjegavaju podudaranje svih zapisa koji ispunjavaju kriterije iznimke.
+U većini slučajeva podudaranje entiteta dovodi do jedinstvenih profila klijenata s konsolidiranim podacima. Da biste riješili rijetke slučajeve lažno pozitivnih rezultata i lažno negativnih rezultata, definirajte iznimke za pravilo podudaranja. Iznimke se primjenjuju nakon obrade pravila podudaranja i izbjegavaju podudaranje svih zapisa koji ispunjavaju kriterije iznimke.
 
 Na primjer, ako vaše pravilo podudaranja kombinira prezime, grad i datum rođenja, sustav bi identificirao blizance s istim prezime koji žive u istom gradu kao i isti profil. Možete odrediti iznimku koja se ne podudara s profilima ako ime u entitetima koje kombinirate nisu iste.
 
@@ -134,7 +136,7 @@ Možete odrediti uvjete koji nadjačavaju zadanu logiku podudaranja. Dostupne su
 |---------|---------|---------|
 |Uvijek se podudara     | Definira vrijednosti koje se uvijek podudaraju.         |  Uvijek se podudaraj s *Mikeom* i *Mikerom*.       |
 |Nikad se ne podudara     | Definira vrijednosti koje se nikada ne podudaraju.        | Nikad ne odgovaraj Johnu *i* *Jonathanu*.        |
-|Prilagođeno zaobilaženje     | Definira vrijednosti koje sustav uvijek treba zanemariti u fazi podudaranja. |  Zanemarite vrijednosti *111111* i *Nepoznato* tijekom podudaranja.        |
+|Zaobilaženje            | Definira vrijednosti koje sustav uvijek treba zanemariti u fazi podudaranja. |  Zanemarite vrijednosti *111111* i *Nepoznato* tijekom podudaranja.        |
 |Mapiranje pseudonima    | Definiranje vrijednosti koje bi sustav trebao smatrati istom vrijednošću.         | Smatraj *Joea* jednakim *Josephu*.        |
 
 1. Odaberite **Prilagođeni**.

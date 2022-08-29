@@ -1,7 +1,7 @@
 ---
 title: Pregled izvoza (pretpregled)
 description: Upravljajte izvozima da biste dijelili podatke.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245318"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304050"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvoza (pretpregled)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245318"
 
 Postoje dvije glavne vrste izvoza:  
 
-- **Izvozi podataka: izvezite** bilo koju vrstu entiteta dostupnu u customer insights. Entiteti koje odaberete za izvoz izvoze se sa svim poljima podataka, metapodacima, shemama i pojedinostima mapiranja.
-- **Izvoz segmenata**: entiteti segmenta izvoza iz customer insightsa. Segmenti predstavljaju popis profila klijenata. Prilikom konfiguriranja izvoza odabirete uključena podatkovna polja, ovisno o ciljnom sustavu u koji izvozite podatke.
+- **Izvozi za iznošenje** podataka omogućuju izvoz bilo koje vrste entiteta dostupne u customer insights. Entiteti koje odaberete za izvoz izvoze se sa svim poljima podataka, metapodacima, shemama i pojedinostima mapiranja.
+- **Izvoz segmenata** omogućuje izvoz entiteta segmenta iz customer insights. Za pojedinačne potrošače (B-do-C) segmenti predstavljaju popis korisničkih profila. Za tvrtke (od B do B) [segmenti mogu predstavljati popis poslovnih subjekata ili kontakata](segment-builder.md#create-a-new-segment-with-segment-builder). Prilikom konfiguriranja izvoza odabirete uključena podatkovna polja, ovisno o ciljnom sustavu u koji izvozite podatke.
 
 ### <a name="export-segments"></a>Izvoz segmenata
 
@@ -38,14 +38,15 @@ Većina izvoznih opcija podržava obje vrste okruženja. Izvoz segmenata u razli
 **Segment izvozi u okruženja za pojedinačne klijente (B2C)**  
 - Segmenti u kontekstu okruženja za pojedinačne klijente sastavljeni su na entitetu *objedinjeni profil klijenta*. Svaki segment koji zadovoljava zahtjeve ciljnih sustava (na primjer, adresa e -pošte) može se izvesti.
 
-**Segment izvozi okruženja za poslovne račune (B2B)**  
-- Segmenti u kontekstu okruženja za poslovne račune izgrađeni su na entitetu *račun*. Za izvoz segmenata računa kakvi jesu, ciljni sustav mora podržavati čiste segmente računa. To je slučaj za [LinkedIn](export-linkedin-ads.md) kada odaberete opciju **tvrtka** prilikom definiranja izvoza.
-- Svi drugi ciljni sustavi zahtijevaju polja iz entiteta kontakta. Kako bi se osiguralo da segmenti računa mogu dohvatiti podatke iz povezanih kontakata, definicija segmenta mora projicirati atribute entiteta kontakta. Saznajte više o tome kako [konfigurirati segmente i atribute projekta](segment-builder.md).
+**Izvoz segmenata u okruženjima za poslovne račune (B-do-B)**  
+- Segmenti u kontekstu okruženja za poslovne račune temelje se na entitetu poslovnog subjekta *ili* entitetu *kontakta*. Za izvoz segmenata računa kakvi jesu, ciljni sustav mora podržavati čiste segmente računa. To je slučaj za [LinkedIn](export-linkedin-ads.md) kada odaberete opciju **tvrtka** prilikom definiranja izvoza.
+- Svi drugi ciljni sustavi zahtijevaju polja iz entiteta kontakta.
+- S dvije vrste segmenata (kontakti i računi), Customer Insights automatski identificira koja vrsta segmenata ispunjava uvjete za izvoz na temelju ciljnog sustava. Na primjer, za ciljni sustav usmjeren na kontakt kao što je Mailchimp, Customer Insights omogućuje vam samo odabir segmenata kontakata za izvoz.
 
 **Ograničenja izvoza segmenata**  
 - Ciljni sustavi trećih strana mogu ograničiti broj profila klijenata koje možete izvesti. 
 - Za pojedinačne klijente vidjet ćete stvarni broj segmenta kada odaberete segment za izvoz. Dobit ćete upozorenje ako je segment prevelik. 
-- Za poslovne račune vidjet ćete broj računa u segmentu; međutim, broj kontakata koji se mogu projicirati ne prikazuje se. U nekim slučajevima, to bi moglo dovesti do toga da izvezeni segment zapravo sadrži više profila klijenata nego što ciljni sustav prihvaća. Ako se prekorače granice ciljnog sustava, izvoz se preskače.
+- Za poslovne račune vidjet ćete broj poslovnih subjekata ili kontakata, ovisno o segmentu. Dobit ćete upozorenje ako je segment prevelik. Prekoračenje granica rezultata ciljnog sustava preskočit će izvoz.
 
 ## <a name="set-up-a-new-export"></a>Postavljanje novog izvoza
 
@@ -110,6 +111,20 @@ Da biste izvezli podatke bez čekanja na zakazano osvježavanje, idite na **Poda
 
 - Da biste pokrenuli sve izvoze, odaberite **Pokreni sve** na naredbenoj traci. Izvode se samo izvozi koji imaju aktivan raspored. Da biste pokrenuli izvoz koji nije aktivan, pokrenite jedan izvoz.
 - Da biste pokrenuli jedan izvoz, odaberite ga na popisu i odaberite **Pokreni** na naredbenoj traci.
+
+## <a name="troubleshooting"></a>Rješavanje problema
+
+### <a name="segment-not-eligible-for-export"></a>Segment ne ispunjava uvjete za izvoz
+
+**Problem** U okruženju poslovnih računa vaš izvoz ne uspijeva s porukom o pogrešci: "Sljedeći segment ne ispunjava uvjete za ovo izvozno odredište: "{naziv segmenta}". Odaberite samo segmente vrste ContactProfile i pokušajte ponovno."
+
+**Rješenja** okruženja customer insights za poslovne račune ažurirana su kako bi podržala segmente kontakata uz segmente računa. Zbog te promjene izvoz koji treba podatke za kontakt radi samo sa segmentima koji se temelje na kontaktima.
+
+1. [Kreirajte segment na temelju kontakata](segment-builder.md) koji odgovaraju prethodno korištenom segmentu.
+
+1. Nakon pokretanja tog segmenta kontakta uredite odgovarajući izvoz i odaberite novi segment.
+
+1. Odaberite **Spremi** da biste spremili konfiguraciju ili **Spremi i pokrenite** da biste odmah testirali taj izvoz.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

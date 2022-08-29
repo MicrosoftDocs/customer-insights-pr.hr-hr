@@ -1,9 +1,9 @@
 ---
 title: Semantička mapiranja (pretpregled)
 description: Pregled semantičkih mapiranja i njihove upotrebe.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183622"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303867"
 ---
 # <a name="semantic-mappings-preview"></a>Semantička mapiranja (pretpregled)
 
-Semantičko mapiranje omogućuje vam mapiranje podataka o neaktivnosti u unaprijed definirane sheme. Te sheme pomažu Customer Insightsu da bolje razumiju vaše atribute podataka. Semantičko mapiranje i pruženi podaci omogućuju nove uvide i značajke u Customer Insights. Da biste svoje aktivnosti mapirali u sheme, pregledajte dokumentaciju [aktivnosti](activities.md).
+> [!NOTE]
+> Stranica **Semantička mapiranja** dostupna je samo za poslovna okruženja (B-do-B) u kojima su profili kontakata već stvoreni pomoću ove stranice. Možete nastaviti stvarati pojedinačne profile kontakata i upravljati njima pomoću **stranice Semantička mapiranja**. [Ili objedinite podatke za](data-unification-contacts.md) kontakt da biste uklonili duplikate, identificirali podudaranja među entitetima i stvorili jedan jedinstveni profil kontakta. Zatim možete koristiti jedinstveni profil kontakta za stvaranje aktivnosti na razini kontakta.
 
-**Semantičko mapiranje trenutačno je omogućeno za okruženja temeljena na poslovnim računima**. *ContactProfile* jedina je vrsta semantičkog mapiranja koja je trenutno dostupna u Customer Insights.
+Semantičko mapiranje omogućuje vam mapiranje podataka o neaktivnosti u unaprijed definirane sheme. Te sheme pomažu customer insightsu da bolje razumiju vaše atribute podataka. Semantičko mapiranje i pruženi podaci omogućuju nove uvide i značajke u Customer Insights. Da biste svoje aktivnosti mapirali u sheme, pregledajte dokumentaciju [aktivnosti](activities.md).
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Definirajte semantičko mapiranje entiteta ContactProfile
 
@@ -87,41 +88,5 @@ Odaberite semantičko mapiranje da biste vidjeli dostupne akcije.
 - **Osvježite** semantičko mapiranje tako da uključuje najnovije podatke. Osvježavanje bilo kojeg semantičkog mapiranja osvježit će sva semantička mapiranja iste vrste.
 - **Preimenujte** semantičko mapiranje. Odaberite **Spremi**.
 - **Izbrišite** semantičko mapiranje. Da biste izbrisali više semantičkih mapiranja odjednom, odaberite semantička mapiranja i ikonu brisanja. Odaberite **Izbriši** da biste potvrdili brisanje.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Stvaranje aktivnosti na razini kontakta pomoću preslikavanja semantičkog entiteta ContactProfile
-
-Nakon stvaranja mapiranja *semantičkog entiteta ContactProfile* možete snimiti aktivnosti kontakata. Omogućuje vam da vidite na vremenskoj traci aktivnosti za poslovni subjekt koji je kontakt odgovoran za svaku aktivnost. Većina koraka slijedi uobičajenu konfiguraciju mapiranja aktivnosti.
-
-   > [!NOTE]
-   > Da bi aktivnosti na razini kontakta funkcionirale, morate imati atribute **ID Poslovnog** subjekta i **ID-a** kontakta za svaki zapis unutar podataka o aktivnostima.
-
-1. [*Definirajte mapiranje* semantičkog entiteta ContactProfile i pokrenite semantičko mapiranje](#define-a-contactprofile-semantic-entity-mapping).
-
-1. Otvorite **Podatkovne** > **aktivnosti**.
-
-1. Odaberite **Dodaj aktivnost** da biste stvorili novu aktivnost.
-
-1. Imenujte aktivnost, odaberite entitet izvorne aktivnosti i odaberite primarni ključ entiteta aktivnosti.
-
-1. **U Odnosi** koraku stvorite neizravan odnos između podataka izvora aktivnosti s poslovnim subjektima pomoću podataka za kontakt kao posredničkog entiteta. Dodatne informacije potražite u izravnim [i neizravnim putovima](relationships.md#relationship-paths) odnosa.
-   - Primjer odnosa za aktivnost pod nazivom *Nabava*:
-      - **Kupnja Podaci o kontaktima** > **podataka o izvornoj** aktivnosti na atributu **ID kontakta**
-      - **Podaci** > **podatkovnog** računa za kontakt na atributu **ID poslovnog subjekta**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Primjer postavljanja odnosa.":::
-
-1. Nakon postavljanja Odnosi odaberite **Dalje** i dovršite konfiguraciju mapiranja aktivnosti. Detaljne korake u vezi sa stvaranjem aktivnosti potražite [u članku Definiranje aktivnosti](activities.md).
-
-1. Pokrenite mapiranja aktivnosti.
-
-1. Nakon pokretanja mapiranja aktivnosti na razini kontakta odaberite **Kupci**. Aktivnosti na razini kontakta prikazuju se na vremenskoj traci klijenta.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Konačni rezultat nakon konfiguriranja aktivnosti kontakta":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtriranje vremenske trake aktivnosti na razini kontakta
-
-Vremenska traka aktivnosti za vaše klijente uključuje njihove ID-ove ili nazive, ovisno *o konfiguraciji ContactProfile*, za aktivnosti na koje su djelovali. Filtrirajte aktivnosti po kontaktima na vremenskoj traci da biste vidjeli određene kontakte koji vas zanimaju. Da biste prikazali sve aktivnosti koje nisu dodijeljene određenom kontaktu, odaberite **Aktivnosti koje nisu mapirane u kontakt**.
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="Mogućnosti filtriranja dostupne za aktivnosti na razini kontakta.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

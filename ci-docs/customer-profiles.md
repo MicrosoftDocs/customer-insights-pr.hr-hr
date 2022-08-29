@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188084"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303774"
 ---
 # <a name="view-customer-profiles"></a>Prikaz profila klijenata
 
@@ -78,7 +78,7 @@ Pojedinosti o klijentu uključuju sljedeće:
 **Pločica** profila klijenta prikazuje različite vrijednosti od objedinjenog *entiteta Klijent*. Ako polje nema vrijednost za odabrani profil kupca, neće se prikazati osim polja adrese. Pločica je strukturirana u dijelove:
 
 - Prvi odjeljak prikazuje unaprijed definirani skup polja, nakon kojih slijede sva polja koja su dio opcije pretraživanja i filtriranja indeksa. Sva polja povezana s adresom kombinirana su u jedan redak, što pokazuje čak i ako profil ne sadrži podatke o adresi.
-- **Kontakti za ovog klijenta** prikazuju se u okruženjima za poslovne račune. Svaki kontakt prikazan je sa svojim poljima. Prazna polja su skrivena.
+- **Kontakti za ovog klijenta** prikazuju se u okruženjima za poslovne račune (B-do-B). Svaki kontakt prikazan je sa svojim poljima. Prazna polja su skrivena.
 - **Dodatna polja** prikazuju preostala polja odabranog kupca, osim ID-ova.
 - **ID-ovi** navode sve ID-ove pod odgovarajućim nazivom entiteta. Polja su identificirana kao ID-ovi po njihovoj semantici.
 

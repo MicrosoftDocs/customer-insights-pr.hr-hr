@@ -1,25 +1,25 @@
 ---
-title: Uvod u Dynamics 365 Customer Insights
-description: Pregled uvida u kupce pomaže resursima da brzo započnu.
-ms.reviewer: v-wendysmith
+title: Početak rada s uslugom Dynamics 365 Customer Insights
+description: Pregled uvida u korisnike pomaže resursima da brzo započnu.
+ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
-ms.date: 04/12/2022
-ms.subservice: engagement-insights
+ms.date: 08/31/2021
+ms.subservice: audience-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: ce0336c4bf853bc81ec01c45410169a63b69eb03
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011970"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304602"
 ---
-# <a name="get-started-with-dynamics-365-customer-insights"></a>Uvod u Dynamics 365 Customer Insights
+# <a name="get-started-with-dynamics-365-customer-insights"></a>Početak rada s uslugom Dynamics 365 Customer Insights
 
 Uvidi u kupce mogu vam pomoći da izgradite dublje razumijevanje svojih kupaca. Povežite podatke iz različitih izvora transakcija, ponašanja i promatranja kako biste stvorili sveobuhvatan prikaz klijenta. Iskoristite te uvide da biste potaknuli doživljaje i postupke usmjerene na klijenta. Objedinite i razumijte podatke o klijentima te ih iskoristite za inteligentne uvide i radnje.
 

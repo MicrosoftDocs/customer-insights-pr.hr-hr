@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213618"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304464"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Uklanjanje duplikata prije objedinjavanja podataka
 
@@ -35,7 +35,7 @@ Sistemski definirana pravila primjenjuju se ako se ne dodaju pravila deduplikaci
 
 ## <a name="include-enriched-entities-preview"></a>Uključi obogaćene entitete (pretpregled)
 
-Ako ste obogatili entitete na razini izvor podataka kako biste poboljšali rezultate ujedinjenja, odaberite ih. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora](data-sources-enrichment.md) podataka.
+Ako ste obogatili entitete na razini izvor podataka kako biste poboljšali rezultate ujedinjenja, odaberite ih. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora podataka](data-sources-enrichment.md).
 
 1. **Na stranici Duplicirani zapisi** pri vrhu stranice odaberite **Koristi obogaćene entitete**.
 
@@ -47,7 +47,7 @@ Ako ste obogatili entitete na razini izvor podataka kako biste poboljšali rezul
 
 1. **Na stranici Duplicirani zapisi** odaberite entitet i odaberite **Dodaj pravilo** da biste definirali pravila deduplikacije.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Snimka zaslona sa stranicama dupliciranih zapisa s istaknutim prikazom":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Snimka zaslona stranice Duplicirani zapisi s istaknutim entitetom i prikazanim pravilom Dodavanje"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. **U oknu Dodavanje pravila** unesite sljedeće informacije:
       - **Odaberite polje**: Odaberite s popisa dostupnih polja iz entiteta za koji želite provjeriti ima li duplikata. Odaberite polja koja su vjerojatno jedinstvena za svakog pojedinog klijenta. Na primjer, adresa e-pošte ili kombinacija imena, grada i telefonskog broja.
@@ -80,9 +80,9 @@ Ako ste obogatili entitete na razini izvor podataka kako biste poboljšali rezul
       - **Najispunjeniji**: identificira zapis s najviše ispunjenih polja atributa kao pobjednički zapis. To je zadana mogućnost spajanja.
       - **Najnoviji**: Identificira pobjednički zapis na temelju nedavnosti. Zahtijeva datum ili numeričko polje za definiranje nedavnosti.
       - **Najstariji**: Identificira pobjednički zapis na temelju starosti. Zahtijeva datum ili numeričko polje za definiranje nedavnosti.
-      
+
       U slučaju izjednačenja, rekord pobjednika je onaj s MAX(PK) ili većom vrijednošću primarnog ključa.
-      
+
    1. Po želji, da biste definirali preference spajanja na pojedinačnim atributima entiteta, pri dnu okna odaberite **Dodatno**. Na primjer, možete odabrati zadržavanje najnovije e-pošte I najcjelovitije adrese iz različitih zapisa. Proširite entitet da biste vidjeli sve njegove atribute i definirali koju mogućnost koristiti za pojedinačne atribute. Ako odaberete mogućnost koja se temelji na recesiji, morate navesti i polje datuma/vremena koje definira recesiju.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Okno s preferencama naprednog spajanja koje prikazuje nedavnu e-poštu i potpunu adresu":::
@@ -96,18 +96,5 @@ Ako ste obogatili entitete na razini izvor podataka kako biste poboljšali rezul
 
 > [!div class="nextstepaction"]
 > [Sljedeći korak za više entiteta: Podudarni uvjeti](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Izlazna vrijednost uklanjanja duplikata kao entitet
-
-Postupak dodjele stvara novi deduplicirani entitet za svaki od izvornih entiteta. Ti se entiteti mogu pronaći zajedno s **ConflationMatchPairs:CustomerInsights** u odjeljku **Sustav** na stranici **Entiteti** s nazivom **Deduplication_DataSource_Entity**.
-
-Entitet izlazne vrijednosti uklanjanja duplikata sadrži sljedeće informacije:
-
-- ID-jevi/ključevi
-  - Polja primarnog ključa i alternativnog ID-a. Zamjensko polje ID-a sastoji se od svih alternativnih ID-ova identificiranih za zapis.
-  - Polje Deduplication_GroupId prikazuje grupu ili klaster identificiran unutar entiteta koji grupira sve slične zapise na temelju navedenih polja uklanjanja duplikata. To se koristi u svrhu obrade sustava. Ako nisu navedena ručna pravila za uklanjanje duplikata i ako se primjenjuju pravila za uklanjanje duplikata koja je definirao sustav, ovo polje možda nećete pronaći u entitetu izlazne vrijednosti uklanjanja duplikata.
-  - Deduplication_WinnerId: Ovo polje sadrži ID pobjednika iz identificiranih grupa ili klastera. Ako je Deduplication_WinnerId jednak vrijednosti primarnog ključa za zapis, to znači da je zapis pobjednički zapis.
-- Polja koja se koriste za definiranje pravila za uklanjanje duplikata.
-- Polja Pravilo i Ocjena označavaju koja su pravila za uklanjanja duplikata primijenjena i ocjenu koju vraća algoritam podudaranja.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

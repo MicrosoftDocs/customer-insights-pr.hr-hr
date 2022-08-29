@@ -1,9 +1,9 @@
 ---
-title: Aktivnosti klijenta
-description: Definirajte aktivnosti klijenta i prikažite ih na vremenskoj traci na profilima klijenata.
-ms.date: 07/22/2022
+title: Aktivnosti korisničkih ili poslovnih kontakata
+description: Definirajte aktivnosti kontakta klijenta ili tvrtke i pregledajte ih na vremenskoj traci na profilima kupaca.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188130"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304096"
 ---
-# <a name="customer-activities"></a>Aktivnosti klijenta
+# <a name="customer-or-business-contact-activities"></a>Aktivnosti korisničkih ili poslovnih kontakata
 
-Aktivnosti kupaca su akcije ili događaji koje izvode kupci. Na primjer, transakcije, trajanje poziva za podršku, recenzije web stranice, kupnje ili povrati. Te su aktivnosti sadržane u jednom ili više izvora podataka. Uz Customer Insights objedinite svoje aktivnosti kupaca iz tih [izvora](data-sources.md) podataka i povežite ih s profilima kupaca. Te se aktivnosti pojavljuju kronološki u vremenskoj traci na profilu kupca. Uključite vremensku traku u aplikacije sustava Dynamics 365 pomoću [rješenja](customer-card-add-in.md) za dodatak Kartica kupca.
+Aktivnosti kupaca su akcije ili događaji koje obavljaju kupci ili poslovni kontakti. Na primjer, transakcije, trajanje poziva za podršku, recenzije web stranice, kupnje ili povrati. Te su aktivnosti sadržane u jednom ili više izvora podataka. Uz Customer Insights objedinite svoje aktivnosti kupaca iz tih [izvora](data-sources.md) podataka i povežite ih s profilima kupaca. Te se aktivnosti pojavljuju kronološki u vremenskoj traci na profilu kupca. Uključite vremensku traku u aplikacije sustava Dynamics 365 pomoću [rješenja](customer-card-add-in.md) za dodatak Kartica kupca.
 
-## <a name="define-an-activity"></a>Definiranje aktivnosti
+## <a name="define-a-customer-activity"></a>Definiranje aktivnosti klijenta
 
 Entitet mora imati barem jedan atribut vrste **Datum** da bi bio uključen u vremensku traku klijenta. Kontrola **Dodaj aktivnost** onemogućena je ako nije pronađen takav entitet.
 
@@ -38,9 +38,9 @@ Entitet mora imati barem jedan atribut vrste **Datum** da bi bio uključen u vre
 
 1. U koraku **s podacima o** aktivnosti unesite sljedeće podatke:
 
-   - **Naziv** aktivnosti: naziv vaše aktivnosti.
-   - **Entitet** aktivnosti: entitet koji uključuje podatke o transakcijama ili aktivnostima.
-   - **Primarni ključ**: polje koje jedinstveno identificira zapis. Ne smije sadržavati duplicirane vrijednosti, prazne vrijednosti ili vrijednosti koje nedostaju.
+   - **Naziv aktivnosti**: Odaberite naziv za svoju aktivnost.
+   - **Entitet** aktivnosti: Odaberite entitet koji sadrži podatke o transakcijama ili aktivnostima.
+   - **Primarni ključ**: odaberite polje koje jedinstveno identificira zapis. Ne smije sadržavati duplicirane vrijednosti, prazne vrijednosti ili vrijednosti koje nedostaju.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Postavite podatke o aktivnosti s nazivom, entitetom i primarnim ključem.":::
 
@@ -48,9 +48,9 @@ Entitet mora imati barem jedan atribut vrste **Datum** da bi bio uključen u vre
 
 1. U koraku **Odnos** odaberite **Dodaj odnos** da biste povezali podatke o aktivnostima s odgovarajućim zapisom o klijentu. Ovaj korak vizualizira vezu među entitetima.  
 
-   - **Vanjski ključ iz entiteta**: polje u entitetu aktivnosti koje će se koristiti za uspostavljanje odnosa s drugim entitetom.
+   - **Vanjski ključ**: strano polje u vašem entitetu aktivnosti koje će se koristiti za uspostavljanje odnosa s drugim entitetom.
    - **Naziv entiteta**: Odgovarajući izvorni klijentski entitet s kojim će vaš entitet aktivnosti biti u odnosu. Možete se odnositi samo na izvorne entitete klijenata koji se koriste u procesu objedinjavanja podataka.
-   - **Naziv** odnosa: Naziv koji identificira odnos između entiteta. Ako odnos između ovog entiteta aktivnosti i odabranog izvornog entiteta klijenta već postoji, naziv odnosa je samo za čitanje.
+   - **Naziv** odnosa: Ako odnos između ovog entiteta aktivnosti i odabranog izvornog entiteta klijenta već postoji, naziv odnosa bit će u načinu samo za čitanje. Ako takav odnos ne postoji, stvorit će se novi odnos s nazivom koji navedete u ovom okviru.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definirajte odnos entiteta.":::
 
@@ -90,7 +90,7 @@ Entitet mora imati barem jedan atribut vrste **Datum** da bi bio uključen u vre
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Upravljanje postojećim aktivnostima
+## <a name="manage-existing-customer-activities"></a>Upravljanje postojećim aktivnostima kupaca
 
 Idite na **Podatkovne** > **aktivnosti** da biste vidjeli spremljene aktivnosti, njihov izvorni entitet, vrstu aktivnosti i ako su uključene u vremensku traku klijenta. Popis aktivnosti možete sortirati po bilo kojem stupcu ili pomoću okvira za pretraživanje pronaći aktivnost kojom želite upravljati.
 
@@ -116,9 +116,43 @@ Odaberite aktivnost za prikaz dostupnih akcija.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="S pomoću panela filtra konfigurirajte uvjete filtra.":::
 
-1. Da biste uklonili filtre, odaberite **Očisti filtre** ili Potvrdite okvir **Filtriraj** i poništite okvir filtra.
-
 > [!NOTE]
 > Filtri aktivnosti uklanjaju se kada napustite profil klijenta. Morate ih primijeniti svaki put kada otvorite profil kupca.
+
+## <a name="define-a-contact-activity"></a>Definiranje aktivnosti kontakta
+
+Za poslovne račune (od B do B) koristite *entitet ContactProfile da biste zabilježili* aktivnosti kontakata. Na vremenskoj traci aktivnosti možete vidjeti za poslovni subjekt koji je odgovoran za svaku aktivnost. Većina koraka slijedi konfiguraciju mapiranja aktivnosti korisnika.
+
+   > [!NOTE]
+   > Da biste definirali aktivnost na razini kontakta, potrebno je *stvoriti entitet ContactProfile*, bilo kao [jedinstveni profil](data-unification-contacts.md) kontakta ili putem [semantičkog mapiranja](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > Za svaki zapis unutar podataka o aktivnostima morate imati **i atribute ID** Poslovnog subjekta i **ID Kontakta**.
+  
+1. Otvorite **Podatkovne** > **aktivnosti**.
+
+1. Odaberite **Dodaj aktivnost**.
+
+1. Imenujte aktivnost, odaberite entitet izvorne aktivnosti i odaberite primarni ključ entiteta aktivnosti.
+
+1. **U Odnosi** koraku stvorite neizravan odnos između podataka izvora aktivnosti s poslovnim subjektima pomoću podataka za kontakt kao posredničkog entiteta. Dodatne informacije potražite u izravnim [i neizravnim putovima odnosa](relationships.md#relationship-paths).
+   - Primjer odnosa za aktivnost pod nazivom *Nabava*:
+      - **Kupnja Podaci o kontaktima** > **podataka o izvornoj** aktivnosti na atributu **ID kontakta**
+      - **Podaci** > **podatkovnog** računa za kontakt na atributu **ID poslovnog subjekta**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Primjer postavljanja odnosa.":::
+
+1. Nakon postavljanja Odnosi odaberite **Dalje** i dovršite konfiguraciju mapiranja aktivnosti. Detaljne korake u vezi sa stvaranjem aktivnosti potražite [u članku Definiranje aktivnosti](#define-a-customer-activity) klijenta.
+
+1. Pokrenite mapiranja aktivnosti.
+
+1. Vaše aktivnosti na razini kontakta sada će biti vidljive na vremenskoj traci klijenta.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Konačni rezultat nakon konfiguriranja aktivnosti kontakta":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Filtriranje vremenske trake aktivnosti na razini kontakta
+
+Nakon konfiguriranja mapiranja aktivnosti na razini kontakta i njegovog pokretanja, vremenska crta aktivnosti za vaše klijente bit će ažurirana. Uključuje njihove ID-ove ili imena, ovisno *o konfiguraciji ContactProfile*, za aktivnosti na koje su djelovali. Aktivnosti možete filtrirati prema kontaktima na vremenskoj traci da biste vidjeli određene kontakte koji vas zanimaju. Osim toga, sve aktivnosti koje nisu dodijeljene određenom kontaktu možete vidjeti tako da odaberete **Aktivnosti koje nisu mapirane u kontakt**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Mogućnosti filtriranja dostupne za aktivnosti na razini kontakta.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
