@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245916"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352792"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Izvoz dijagnostičkih zapisnika (pretpregled)
 
@@ -36,8 +36,8 @@ Customer Insights šalje sljedeće zapisnike događaja:
 
 - Aktivna [pretplata na](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) Azure.
 - [Administratorske](permissions.md#admin) dozvole u customer insights.
+- Valjani resurs na servisu Azure koji slijedi odredišne preduvjete [za](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) Azure Storage, Azure Event Hub ili Azure Log Analytics.
 - [suradnik uloga](/azure/role-based-access-control/role-assignments-portal) administratora i administratora korisničkog pristupa na odredišnom resursu na servisu Azure. Resurs može biti Azure Data Lake Storage račun, središte događaja servisa Azure ili radni prostor azure Log Analytics. Ta je dozvola potrebna tijekom konfiguriranja dijagnostičkih postavki u customer insightsu, ali se može promijeniti nakon uspješnog postavljanja.
-- [Ispunjeni su odredišni preduvjeti](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) za Azure Storage, Azure Event Hub ili Azure Log Analytics.
 - Barem **Čitatelj** ulogu u grupi resursa kojoj resurs pripada.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Postavljanje dijagnostike pomoću servisa Azure Monitor
@@ -78,7 +78,7 @@ Upravitelj servisa Customer Insights dobiva **dozvolu vlasnika** podataka za Azu
 
 ### <a name="log-analytics"></a>Log Analytics
 
-Direktor usluge Customer Insights dobiva **dopuštenje za suradnik** log analyticsa za resurs. Zapisnici su dostupni u odjeljku **Upravljanje zapisnicima tablica** > **zapisnika** > **na** odabranom radnom prostoru Log Analyticsa. Proširite **rješenje za upravljanje zapisnicima** i pronađite tablice `CIEventsAudit` i `CIEventsOperational`.
+Direktor usluge Customer Insights dobiva **dopuštenje za suradnik** log analyticsa za resurs. Zapisnici su dostupni u odjeljku **Upravljanje zapisnicima tablica** > **zapisnika** > **na** odabranom radnom prostoru Log Analyticsa. Proširite **rješenje za upravljanje zapisnicima** i pronađite tablice `CIEventsAudit` i `CIEventsOperational` .
 
 - `CIEventsAudit` koji sadržavaju **događaje revizije**
 - `CIEventsOperational` koji sadrže operativne **događaje**
@@ -87,14 +87,14 @@ Direktor usluge Customer Insights dobiva **dopuštenje za suradnik** log analyti
 
 ## <a name="remove-a-diagnostics-destination"></a>Uklanjanje odredišta dijagnostike
 
-1. Otvorite **Administratorski** > **sustav** i odaberite karticu **Dijagnostika**.
+1. Otvorite **Administratorski** > **sustav** i odaberite karticu **Dijagnostika** .
 
 1. Na popisu odaberite odredište dijagnostike.
 
    > [!TIP]
    > Uklanjanje odredišta zaustavlja prosljeđivanje zapisnika, ali ne briše resurs na pretplati na Azure. Da biste izbrisali resurs u servisu Azure, odaberite vezu u stupcu **Akcije da biste otvorili** portal servisa Azure za odabrani resurs i tamo ga izbrisali. Zatim izbrišite odredište dijagnostike.
 
-1. U stupcu **Akcije** odaberite ikonu **Izbriši**.
+1. U stupcu **Akcije** odaberite ikonu **Izbriši** .
 
 1. Potvrdite brisanje da biste uklonili odredište i zaustavili prosljeđivanje zapisnika.
 
@@ -121,13 +121,13 @@ Događaji API-ja i događaji tijeka rada imaju zajedničku strukturu, ali s neko
 | `time`            | Podaci vremenske oznake | Obvezno          | Vremenska oznaka događaja (UTC)       | `2020-09-08T09:48:14.8050869Z`         |
 | `resourceId`      | String    | Obvezno          | ResourceId instance koja je emitirala događaj         | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX`  |
 | `operationName`   | String    | Obvezno          | Naziv operacije predstavljene ovim događajem.                                                                                                                | `Workflows.GetWorkFlowStatusAsync`                                                                                                                                       |
-| `category`        | String    | Obvezno          | Kategorija zapisnika događaja. Ili `Operational` ili `Audit`. Svi POST/PUT/PATCH/DELETE HTTP Zahtjevi su označeni sa `Audit`, sve ostalo s`Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
+| `category`        | String    | Obvezno          | Kategorija zapisnika događaja. Ili `Operational` ili `Audit`. Svi POST/PUT/PATCH/DELETE HTTP Zahtjevi su označeni sa `Audit`, sve ostalo s `Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resultType`      | String    | Obvezno          | Stanje događaja. `Success`, `ClientError`, `Failure`                                                                                                        |                                                                                                                                                                          |
 | `resultSignature` | String    | Neobavezno          | Stanje rezultata događaja. Ako operacija odgovara REST API pozivu, to je HTTP kod stanja.        | `200`             |
 | `durationMs`      | Dugi      | Neobavezno          | Trajanje operacije u milisekundama.     | `133`     |
 | `callerIpAddress` | String    | Neobavezno          | IP adresa pozivatelja, ako operacija odgovara API pozivu koji dolazi s javno dostupne IP adrese.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Neobavezno          | JSON objekt koji opisuje identitet korisnika ili aplikacije koja je izvršila operaciju.       | Pogledajte [odjeljak Identitet](#identity-schema).     |  
-| `properties`      | String    | Neobavezno          | JSON objekt s više svojstava u određenu kategoriju događaja.      | Pogledajte [odjeljak Svojstva](#api-properties-schema).    |
+| `identity`        | String    | Neobavezno          | JSON objekt koji opisuje identitet korisnika ili aplikacije koja je izvršila operaciju.       | Pogledajte [odjeljak Identitet](#identity-schema)  .     |  
+| `properties`      | String    | Neobavezno          | JSON objekt s više svojstava u određenu kategoriju događaja.      | Pogledajte [odjeljak Svojstva](#api-properties-schema) .    |
 | `level`           | String    | Obvezno          | Razina ozbiljnosti događaja.    | `Informational`, `Warning`, `Error` ili `Critical`.           |
 | `uri`             | String    | Neobavezno          | Apsolutni zahtjev URI.    |               |
 
@@ -155,7 +155,7 @@ Događaji API-ja i događaji tijeka rada imaju zajedničku strukturu, ali s neko
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `Authorization.UserRole`      | Dodijeljena uloga korisniku ili aplikaciji. Dodatne informacije potražite u korisničkim [dozvolama](permissions.md).                                     |
 | `Authorization.RequiredRoles` | Potrebne uloge za izvođenje operacije. `Admin` uloga je dopuštena za obavljanje svih operacija.                                                    |
-| `Claims`                      | Potraživanja korisnika ili aplikacije JSON web token (JWT). Svojstva zahtjeva razlikuju se ovisno o organizaciji i konfiguraciji Azure Active Directory. |
+| `Claims`                      | Potraživanja korisnika ili aplikacije JSON web token (JWT). Svojstva zahtjeva razlikuju se ovisno o organizaciji i konfiguraciji Azure Active Directory . |
 
 #### <a name="api-properties-schema"></a>Shema svojstava API-ja
 
@@ -165,14 +165,14 @@ Događaji API-ja i događaji tijeka rada imaju zajedničku strukturu, ali s neko
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `properties.eventType`       | Uvijek `ApiEvent`, označavajući događaj zapisnika kao API događaj.                                                                 |
 | `properties.userAgent`       | Agent preglednika koji šalje zahtjev ili `unknown`.                                                                        |
-| `properties.method`          | HTTP metoda:`GET/POST/PUT/PATCH/HEAD`.                                                                                |
+| `properties.method`          | HTTP metoda: `GET/POST/PUT/PATCH/HEAD`.                                                                                |
 | `properties.path`            | Relativni put zahtjeva.                                                                                          |
 | `properties.origin`          | URI koji pokazuje odakle dolazi dohvat ili `unknown`.                                                                  |
 | `properties.operationStatus` | `Success` za HTTP kod stanja < 400 <br> `ClientError` za HTTP kod stanja < 500 <br> `Error` za HTTP status >= 500 |
 | `properties.tenantId`        | ID organizacije                                                                                                        |
 | `properties.tenantName`      | Naziv te tvrtke ili ustanove.                                                                                              |
 | `properties.callerObjectId`  | Azure Active Directory ObjectId pozivatelja.                                                                         |
-| `properties.instanceId`      | Uvidi kupaca`instanceId`                                                                                         |
+| `properties.instanceId`      | Uvidi kupaca `instanceId`                                                                                         |
 
 ### <a name="workflow-event-schema"></a>Shema događaja tijeka rada
 
@@ -228,17 +228,17 @@ Događaji tijeka rada imaju sljedeća svojstva.
 | `properties.submittedBy`                     | Jest      | No   | Nije obavezno. Samo događaji tijeka rada. ObjectId Azure Active Directory [korisnika](/azure/marketplace/find-tenant-object-id#find-user-object-id) koji je pokrenuo tijek rada, pogledajte i `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Jest      | No   | `full` ili `incremental` osvježiti.                                                                                                                                                                                                                            |
 | `properties.workflowSubmissionKind`          | Jest      | No   | `OnDemand` ili `Scheduled`.                                                                                                                                                                                                                                  |
-| `properties.workflowStatus`                  | Jest      | No   | `Running` ili `Successful`.                                                                                                                                                                                                                                 |
-| `properties.startTimestamp`                  | Jest      | Jest  | UTC vremenska oznaka`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.endTimestamp`                    | Jest      | Jest  | UTC vremenska oznaka`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.submittedTimestamp`              | Jest      | Jest  | UTC vremenska oznaka`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Jest      | Jest  | Uvidi kupaca`instanceId`                                                                                                                                                                                                                              |  
+| `properties.workflowStatus`                  | Jest      | No   | `Running` ili  `Successful`.                                                                                                                                                                                                                                 |
+| `properties.startTimestamp`                  | Jest      | Jest  | UTC vremenska oznaka `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.endTimestamp`                    | Jest      | Jest  | UTC vremenska oznaka `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.submittedTimestamp`              | Jest      | Jest  | UTC vremenska oznaka `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.instanceId`                      | Jest      | Jest  | Uvidi kupaca `instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Jest  | - Za OperationType = `Export` identifikator je guid konfiguracije izvoza. <br> - Za OperationType = `Enrichment`, to je guid obogaćivanja <br> - Za OperationType `Measures` i `Segmentation` identifikator je naziv entiteta. |
 | `properties.friendlyName`                    | No       | Jest  | Korisničko ime izvoza ili obrađenog entiteta.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Jest  | Nije obavezno. Poruka o pogrešci s više detalja.                                                                                                                                                                                                                  |
-| `properties.additionalInfo.Kind`             | No       | Jest  | Nije obavezno. Samo za OperationType `Export`. Identificira vrstu izvoza. Dodatne informacije potražite [u pregledu izvoznih odredišta](export-destinations.md).                                                                                          |
-| `properties.additionalInfo.AffectedEntities` | No       | Jest  | Nije obavezno. Samo za OperationType `Export`. Sadrži popis konfiguriranih entiteta u izvozu.                                                                                                                                                            |
-| `properties.additionalInfo.MessageCode`      | No       | Jest  | Nije obavezno. Samo za OperationType `Export`. Detaljna poruka za izvoz.                                                                                                                                                                                 |
-| `properties.additionalInfo.entityCount`      | No       | Jest  | Nije obavezno. Samo za OperationType `Segmentation`. Označava ukupan broj članova koje segment ima.                                                                                                                                                    |
+| `properties.additionalInfo.Kind`             | No       | Jest  | Nije obavezno. Samo za OperationType `Export` . Identificira vrstu izvoza. Dodatne informacije potražite [u pregledu izvoznih odredišta](export-destinations.md).                                                                                          |
+| `properties.additionalInfo.AffectedEntities` | No       | Jest  | Nije obavezno. Samo za OperationType `Export` . Sadrži popis konfiguriranih entiteta u izvozu.                                                                                                                                                            |
+| `properties.additionalInfo.MessageCode`      | No       | Jest  | Nije obavezno. Samo za OperationType `Export` . Detaljna poruka za izvoz.                                                                                                                                                                                 |
+| `properties.additionalInfo.entityCount`      | No       | Jest  | Nije obavezno. Samo za OperationType `Segmentation` . Označava ukupan broj članova koje segment ima.                                                                                                                                                    |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

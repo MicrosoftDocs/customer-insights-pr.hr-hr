@@ -1,27 +1,27 @@
 ---
 title: Primjeri OData upita za API-je za uvide kupaca
 description: Uobičajeni primjeri protokola otvorenih podataka (OData) za pretraživanje API-ja Customer Insights za pregled podataka.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121553"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387193"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Primjeri OData upita za API-je za uvide kupaca
 
 Protokol otvorenih podataka (OData) protokol je pristupa podacima izgrađen na osnovnim protokolima kao što je HTTP. Koristi općeprihvaćene metodologije poput REST za web. Postoje razne vrste knjižnica i alata koji se mogu koristiti za konzumiranje OData usluga.
 
-U ovom se članku navode neki često traženi primjeri upita koji će vam pomoći u izgradnji vlastitih implementacija na [temelju API-ja customer insights](apis.md).
+Da biste lakše izgradili vlastite implementacije na [temelju API-ja](apis.md) customer insights, pregledajte neke često tražene primjere upita.
 
-Morate izmijeniti uzorke upita da bi radili na ciljnim okruženjima: 
+Izmijenite uzorke upita da bi funkcionirali na ciljnim okruženjima:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` gdje {instanceId} se nalazi GUID okruženja Customer Insights koje želite postaviti na upit. Operacija [ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) omogućuje vam da pronađete {InstanceId} pristup kojem imate pristup.
 - {CID}: GUID jedinstvenog zapisa o klijentu. Primjer: `ce759201f786d590bf2134bff576c369`.
@@ -31,7 +31,7 @@ Morate izmijeniti uzorke upita da bi radili na ciljnim okruženjima:
 
 ## <a name="customer"></a>klijente
 
-Sljedeća tablica sadrži skup oglednih upita za *entitet Kupac*.
+Ogledni upiti za *entitet Klijent*.
 
 |Vrsta upita |Primjer  | Napomena  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ Sljedeća tablica sadrži skup oglednih upita za *entitet Kupac*.
 
 ## <a name="unified-activity"></a>Objedinjena aktivnost
 
-Sljedeća tablica sadrži skup oglednih upita za *entitet Objedinjenost*.
+Ogledni upiti za *entitet Jedinstvena aktivnost*.
 
 |Vrsta upita |Primjer  | Napomena  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Sljedeća tablica sadrži skup oglednih upita za *entitet Objedinjenost*.
 
 ## <a name="other-examples"></a>Drugi primjeri
 
-Sljedeća tablica sadrži skup oglednih upita za druge entitete.
+Ogledni upiti za druge entitete.
 
 |Vrsta upita |Primjer  | Napomena  |
 |---------|---------|---------|

@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d20d57e9b7724e9921f9341eeaa39141b4555ff1
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246053"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387240"
 ---
 # <a name="configure-security-settings"></a>Konfiguriranje sigurnosnih postavki
 
@@ -23,7 +23,7 @@ Upravljajte API ključevima, pristupite podacima o klijentima i postavite privat
 
 Pregledajte ključeve za korištenje [API-ja](apis.md) customer insights i upravljajte njima s podacima u vašem okruženju.
 
-1. Otvorite **Sigurnost** > **sustava** i odaberite karticu **API-ji**.
+1. Otvorite **Sigurnost administratora** > **i** odaberite karticu **API-ji**.
 
 1. Ako API pristup okolišu nije postavljen, odaberite **Omogući**. Ili, da biste blokirali pristup API-ja okolišu, odaberite **Onemogući** i potvrdi.
 

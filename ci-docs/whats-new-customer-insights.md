@@ -1,19 +1,19 @@
 ---
 title: Što je novo u sustavu Dynamics 365 Customer Insights
 description: Informacije o novim značajkama, poboljšanjima i ispravcima programskih pogrešaka.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246002"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387273"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Što je novo u sustavu Dynamics 365 Customer Insights
 
@@ -23,6 +23,24 @@ Ažuriranja unosimo po regijama. Tako bi neke regije mogle vidjeti značajke pri
 
 > [!TIP]
 > Za kontakt i glasanje o zahtjevima za značajkama i prijedlozima o proizvodu idite na [portal sa zamislima za aplikacije Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>Ažuriranja u kolovozu 2022.
+
+Ažuriranja u kolovozu 2022. uključuju nove značajke, nadogradnje performansi i ispravke pogrešaka.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Ujedinjenje kontakata u okruženjima B-do-B
+
+B-do-B okruženja u customer insights sada podržavaju poboljšano iskustvo objedinjavanja podataka.
+
+Sada možete objediniti kontakte uz poslovne subjekte da biste dobili potpuni prikaz poslovnih kontakata. Objedinjeni kontakti povezani su s objedinjenim poslovnim subjektima i sada su navedeni na karticama kupaca. 
+
+Dodatne informacije potražite u članku [Stvaranje jedinstvenog profila kontakta](data-unification-contacts.md).
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Kreiranje i izvoz segmenata na temelju jedinstvenih kontakata
+
+Zahvaljujući novom ujedinjenju kontakata možete kreirati segmente kontakata pomoću kriterija iz kontakata, poslovnih subjekata ili oboje. Ti se segmenti mogu izvesti radi aktivacije u drugim uslugama.
+
+Dodatne informacije potražite u članku [Pregled izvoza](export-destinations.md).
 
 ## <a name="july-2022-updates"></a>Ažuriranja za srpanj 2022.
 
@@ -42,7 +60,7 @@ Dodatne informacije potražite u članku [Izvoz podataka u SFTP domaćine](expor
 
 ### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalizacija iskustava s podacima o poznatim i nepoznatim korisnicima
 
-Upravljanje podacima o kupcima nije novi izazov, ali postaje sve teže kako se korisnici kreću raznim ponudama robnih marki digitalnih kanala. Korisnik koji je poznat (autentificiran) na jednom kanalu postaje nepoznat (neprovjeren) u drugom ako nije prijavljen. Problem je često u tome što neprovjereni (nepoznati) korisnici nemaju zajednički ID. Može se koristiti za povezivanje značajnih atributa profila i generiranje jedinstvenih profila kupaca. Customer Insights pomaže u rješavanju ovog problema unoseći podatke iz metoda praćenja na izvornim sustavima.
+Upravljanje podacima o kupcima nije novi izazov, ali postaje sve teže kako se korisnici kreću raznim ponudama robnih marki digitalnih kanala. Korisnik koji je poznat (autentificiran) na jednom kanalu postaje nepoznat (neautentificiran) u drugom ako nije prijavljen. Problem je često u tome što neprovjereni (nepoznati) korisnici nemaju zajednički ID. Može se koristiti za povezivanje značajnih atributa profila i generiranje jedinstvenih profila kupaca. Customer Insights pomaže u rješavanju ovog problema unoseći podatke iz metoda praćenja na izvornim sustavima.
 
 Dodatne informacije potražite u članku [Personalizacija iskustava podacima o poznatim i nepoznatim korisnicima](unknown-to-known.md).
 
@@ -54,7 +72,7 @@ Ažuriranja u lipnju 2022. uključuju nove značajke, nadogradnje performansi i 
 
 Uvoz podataka iz širokog spektra izvora podataka temelj je konsolidacije podataka o klijentima u sustavu Dynamics 365 Customer Insights. Ponovno smo pregledali korisničko iskustvo za uvoz i povezivanje izvora podataka. Ovo ažuriranje ima za cilj olakšati vam unos podataka u Customer Insights.
 
-Dodatne informacije potražite u članku [Pregled izvora podataka](data-sources.md).
+Dodatne informacije potražite u članku [Pregled](data-sources.md) izvora podataka.
 
 ### <a name="export-to-inmobi"></a>Izvoz u InMobi
 
@@ -190,7 +208,7 @@ Dodatne informacije potražite u članku [Obogaćivanje korisničkih profila pod
 
 ### <a name="enrichment-for-data-sources-preview"></a>Obogaćivanje za izvore podataka (Pretpregled)
 
-Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obogatili svoje korisničke podatke prije ujedinjenja podataka. Izvor podataka obogaćivanja pomažu u stvaranju veće cjelovitosti i kvalitete podataka koji mogu pomoći u postizanju boljih rezultata nakon što objedinite svoje podatke.
+Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obogatili svoje korisničke podatke prije ujedinjenja podataka. izvor podataka obogaćivanja pomažu u stvaranju veće cjelovitosti i kvalitete podataka koji mogu pomoći u postizanju boljih rezultata nakon što objedinite svoje podatke.
 
 Dodatne informacije potražite u članku [Obogaćivanje izvora podataka (pretpregled)](data-sources-enrichment.md).
 
@@ -230,7 +248,7 @@ Ažuriranja u siječnju 2022. uključuju nove značajke, nadogradnje performansi
 
 Customer Insights pruža novu značajku koju pokreće umjetna inteligencija kako bi sintetizirala raspoloženje kupaca i identificirala određene poslovne aspekte kao prilike za ciljana poboljšanja. Analizom pisanih povratnih informacija vaših kupaca možete dobiti točne uvide po niskoj cijeni. Analiza naklonosti koju pokreću modeli obrade prirodnog jezika (NLP) koji generiraju dva izvedena uvida za svaki ID kupca. Ocjena naklonosti (od –5 do 5) i popis primjenjivih poslovnih aspekata. 
 
-Dodatne informacije potražite u članku [Analiza naklonosti u povratnim informacijama klijenta (Pretpregled)](sentiment-analysis.md).
+Dodatne informacije potražite u članku [Analiza naklonosti u povratnim informacijama korisnika (Pretpregled)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
