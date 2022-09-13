@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Upotreba prilagođenih modela pomoću Strojnog učenja Azure
           href: custom-models.md
-        - name: Dovršavanje podataka koji djelomično nedostaju
-          href: predictions.md
     - name: Uzorci vodiča
       items:
         - name: Uzorak vodiča za CLV predviđanje

@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387273"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409348"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Što je novo u sustavu Dynamics 365 Customer Insights
 
@@ -42,6 +42,14 @@ Zahvaljujući novom ujedinjenju kontakata možete kreirati segmente kontakata po
 
 Dodatne informacije potražite u članku [Pregled izvoza](export-destinations.md).
 
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Područja implementacije usklađena s Microsoft Dataverse
+
+Prilikom stvaranja novog okruženja Customer Insights možete odabrati regiju u kojoj želite da se usluga uvede i hostira. Ažurirali smo odabir regije kako bismo se uskladili i Microsoft Dataverse Power Platform.
+
+Sada možete jednostavno odabrati istu regiju kao i postojeće Microsoft Dataverse okruženje ili račun za pohranu servisa Azure Data Lake (ako odaberete tu mogućnost), ovisno o dostupnosti uvida kupaca u toj regiji.
+
+Dodatne informacije potražite u članku [Stvaranje novog okruženja](create-environment.md) i [dostupnosti proizvoda prema zemljopisnoj tablici](https://dynamics.microsoft.com/availability-reports/).
+
 ## <a name="july-2022-updates"></a>Ažuriranja za srpanj 2022.
 
 Ažuriranja u srpnju 2022. uključuju nove značajke, nadogradnje performansi i ispravke pogrešaka.
@@ -60,7 +68,7 @@ Dodatne informacije potražite u članku [Izvoz podataka u SFTP domaćine](expor
 
 ### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalizacija iskustava s podacima o poznatim i nepoznatim korisnicima
 
-Upravljanje podacima o kupcima nije novi izazov, ali postaje sve teže kako se korisnici kreću raznim ponudama robnih marki digitalnih kanala. Korisnik koji je poznat (autentificiran) na jednom kanalu postaje nepoznat (neautentificiran) u drugom ako nije prijavljen. Problem je često u tome što neprovjereni (nepoznati) korisnici nemaju zajednički ID. Može se koristiti za povezivanje značajnih atributa profila i generiranje jedinstvenih profila kupaca. Customer Insights pomaže u rješavanju ovog problema unoseći podatke iz metoda praćenja na izvornim sustavima.
+Upravljanje podacima o kupcima nije novi izazov, ali postaje sve teže kako se korisnici kreću raznim ponudama robnih marki digitalnih kanala. Korisnik koji je poznat (autentificiran) na jednom kanalu postaje nepoznat (neprovjeren) u drugom ako nije prijavljen. Problem je često u tome što neprovjereni (nepoznati) korisnici nemaju zajednički ID. Može se koristiti za povezivanje značajnih atributa profila i generiranje jedinstvenih profila kupaca. Customer Insights pomaže u rješavanju ovog problema unoseći podatke iz metoda praćenja na izvornim sustavima.
 
 Dodatne informacije potražite u članku [Personalizacija iskustava podacima o poznatim i nepoznatim korisnicima](unknown-to-known.md).
 
@@ -132,7 +140,7 @@ Ažuriranja u travnju 2022. uključuju nove značajke, nadogradnje performansi i
 
 Dun & Bradstreet pruža komercijalne podatke, analitiku i uvide za tvrtke. Klijentima pruža objedinjene korisničke profile kako bi tvrtke obogatile svoje podatke. Obogaćivanja uključuju atribute kao što su DUNS broj, veličina tvrtke, lokacija, industrija i još mnogo toga.
 
-Više informacija potražite u odjeljku [Obogaćivanje profila tvrtke dun & bradstreet (preview)](enrichment-dnb.md).
+Za više informacija pogledajte [Obogaćivanje profila tvrtke s Dun & Bradstreet (Preview)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Definiranje vrste mjere prilikom kreiranja nove mjere
 
@@ -154,7 +162,7 @@ Ažuriranja u ožujku 2022. uključuju nove značajke, nadogradnje performansi i
 
 LiveRamp pruža razlučivost identiteta i konsolidaciju korisničkih podataka. Osobne identifikatore u svojim podacima o kupcima možete mapirati na grafikon identiteta tvrtke AbiliTec i primati AbiliTec ID-ove. Zatim možete koristiti te ID-ove za bolje ujedinjenje podataka o kupcima.
 
-Dodatne informacije potražite u članku [Obogaćivanje korisničkih profila podacima o identitetu s LiveRampa (Pretpregled)](enrichment-liveramp.md).
+Dodatne informacije potražite u članku [Obogaćivanje korisničkih profila podacima o identitetu s LiveRampa (Pretpregleda)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organiziranje segmenata i mjera pomoću oznaka i filtara
 
@@ -204,13 +212,13 @@ Dodatne informacije potražite u članku [Povezivanje Azure Synapse izvor podata
 
 LiveRamp pruža razlučivost identiteta i konsolidaciju korisničkih podataka. Osobne identifikatore u svojim podacima o kupcima možete mapirati na grafikon identiteta tvrtke AbiliTec i primati AbiliTec ID-ove. Zatim možete koristiti te ID-ove za bolje ujedinjenje podataka o kupcima.
 
-Dodatne informacije potražite u članku [Obogaćivanje korisničkih profila podacima o identitetu s LiveRampa (Pretpregled)](enrichment-liveramp.md).
+Dodatne informacije potražite u članku [Obogaćivanje korisničkih profila podacima o identitetu s LiveRampa (Pretpregleda)](enrichment-liveramp.md).
 
 ### <a name="enrichment-for-data-sources-preview"></a>Obogaćivanje za izvore podataka (Pretpregled)
 
-Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obogatili svoje korisničke podatke prije ujedinjenja podataka. izvor podataka obogaćivanja pomažu u stvaranju veće cjelovitosti i kvalitete podataka koji mogu pomoći u postizanju boljih rezultata nakon što objedinite svoje podatke.
+Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obogatili svoje korisničke podatke prije ujedinjenja podataka. Izvor podataka obogaćivanja pomažu u stvaranju veće cjelovitosti i kvalitete podataka koji mogu pomoći u postizanju boljih rezultata nakon što objedinite svoje podatke.
 
-Dodatne informacije potražite u članku [Obogaćivanje izvora podataka (pretpregled)](data-sources-enrichment.md).
+Dodatne informacije potražite u članku [Obogaćenje izvora podataka (Pretpregled)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Promijeni vlasnika okruženja
 
@@ -222,7 +230,7 @@ Dodatne informacije potražite u članku [Promjena vlasnika okruženja](manage-e
 
 Priprema podataka sada prikazuje razlog oštećenja za sva polja s oštećenim podacima. Informacije se pružaju na pojedinačnoj razini evidencije radi lakše identifikacije. 
 
-Dodatne informacije potražite u odjeljku [Oštećeni izvori](entities.md#corrupted-data-sources) podataka.
+Dodatne informacije potražite u odjeljku [Oštećeni izvori podataka](entities.md#corrupted-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Kraj pretpregleda za značajke izvješćivanja u mogućnosti uvida u angažman
 
@@ -248,7 +256,7 @@ Ažuriranja u siječnju 2022. uključuju nove značajke, nadogradnje performansi
 
 Customer Insights pruža novu značajku koju pokreće umjetna inteligencija kako bi sintetizirala raspoloženje kupaca i identificirala određene poslovne aspekte kao prilike za ciljana poboljšanja. Analizom pisanih povratnih informacija vaših kupaca možete dobiti točne uvide po niskoj cijeni. Analiza naklonosti koju pokreću modeli obrade prirodnog jezika (NLP) koji generiraju dva izvedena uvida za svaki ID kupca. Ocjena naklonosti (od –5 do 5) i popis primjenjivih poslovnih aspekata. 
 
-Dodatne informacije potražite u članku [Analiza naklonosti u povratnim informacijama korisnika (Pretpregled)](sentiment-analysis.md).
+Dodatne informacije potražite u članku [Analiza naklonosti u povratnim informacijama klijenta (Pretpregled)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

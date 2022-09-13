@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 421e1aa41a54a4b8c34ac27fc7c02e510d2bb588
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
-ms.translationtype: MT
+ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387147"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411731"
 ---
 # <a name="service-limits-in-customer-insights"></a>Ograničenja usluge u uvidima kupaca
 
@@ -23,7 +23,7 @@ ms.locfileid: "9387147"
 
 | Područje  | Limiti  | Bilješke |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmenti, mjere i predviđanja | 300  | Ukupan broj segmenata [,](segments.md) mjera [i](measures.md) predviđanja [zajedno ne može biti veći od](predictions.md) 300.  |
+| Segmenti, mjere i predviđanja | 300  | Ukupan broj segmenata [,](segments.md) mjera [i](measures.md) predviđanja [zajedno ne može biti veći od](predictions-overview.md) 300.  |
 | Odnosi | 20 razina dubine u odnosima na putanjama entiteta. | Prilikom stvaranja [segmenata](segments.md) ili [mjera](measures.md) pomoću sučelja graditelja, putanje entiteta mogu imati do 20 skokova odnosa između početnog entiteta i ciljnog entiteta.  |
 
 ## <a name="fair-scheduling-of-jobs"></a>Pošteno raspoređivanje radnih mjesta

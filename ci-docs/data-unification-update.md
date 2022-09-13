@@ -1,7 +1,7 @@
 ---
 title: Ažuriranje postavki objedinjavanja klijenta, poslovnog subjekta ili kontakta
 description: Ažurirajte dvostruka pravila, pravila podudaranja ili jedinstvena polja u postavkama ujedinjenja klijenta ili računa.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304326"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392462"
 ---
 # <a name="update-unification-settings"></a>Ažuriraj postavke objedinjavanja
 
@@ -38,7 +38,7 @@ Da biste pregledali ili promijenili postavke objedinjavanja nakon stvaranja jedi
    > Pločica Odgovarajući uvjeti **prikazuje se samo ako je** odabrano više entiteta.
 
 1. Odaberite što želite ažurirati:
-   - [Izvorišna polja](#edit-source-fields) za dodavanje entiteta ili atributa ili promjenu vrsta atributa.
+   - [Izvorišna polja](#edit-source-fields) za dodavanje atributa ili entiteta ili promjenu vrsta atributa. Upute za uklanjanje atributa potražite u članku [Uklanjanje jedinstvenog polja](#remove-a-unified-field). Upute za uklanjanje entiteta potražite u članku [Uklanjanje jedinstvenog entiteta](#remove-a-unified-entity).
    - [Duplicirani zapisi](#manage-deduplication-rules) za upravljanje pravilima deduplikacije ili preference spajanja.
    - [Odgovarajući uvjeti](#manage-match-rules) za ažuriranje odgovarajućih pravila u dva ili više entiteta.
    - [Objedinjena polja kupca](#manage-unified-fields) za kombiniranje ili isključivanje polja. Povezane profile možete grupirati i u klastere.
@@ -53,8 +53,6 @@ Da biste pregledali ili promijenili postavke objedinjavanja nakon stvaranja jedi
 
 ## <a name="edit-source-fields"></a>Uređivanje izvorišnih polja
 
-Atribut ili entitet ne možete ukloniti ako su već ujedinjeni.
-
 1. Na pločici Izvorna **polja** odaberite **Uređivanje**.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Snimka zaslona stranice Izvorna polja na kojoj se vidi broj primarnih ključeva, mapiranih i nepreslikanih polja":::
@@ -67,6 +65,80 @@ Atribut ili entitet ne možete ukloniti ako su već ujedinjeni.
 
 1. Odaberite **Dalje** da biste promijenili pravila deduplikacije ili Spremi **i zatvorite** te se vratite na [Ažuriraj postavke](#update-unification-settings) objedinjavanja.
 
+### <a name="remove-a-unified-field"></a>Uklanjanje jedinstvenog polja
+
+Da biste uklonili jedinstveno polje, polje se mora ukloniti iz svih ovisnosti kao što su segmenti, mjere, obogaćivanja ili Odnosi.
+
+1. Nakon uklanjanja svih zavisnosti za polje idite na **Objedinjavanje** > **podataka**.
+
+1. Na **pločici Sjedinjena polja** klijenta odaberite **Uredi**.
+
+1. Odaberite sva pojavljivanja polja, a zatim **izostavi**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Snimka zaslona stranice s objedinjenim poljima na kojoj su prikazana odabrana polja i gumb Isključi":::
+
+1. Odaberite **Gotovo** da biste potvrdili, a zatim Spremi **i zatvori**.
+
+   > [!TIP]
+   > Ako se prikaže poruka "Nije moguće spremiti objedinite. Navedeni resurs ne može se mijenjati ili brisati zbog silaznih ovisnosti", a polje se i dalje koristi u silaznoj ovisnosti.
+
+1. Ako se polje koristi u pravilu za duplicirane zapise ili odgovarajuće uvjete, poduzmite sljedeće korake. Inače prijeđite na sljedeći korak.
+   1. Na **pločici Dupliciraj zapise** odaberite **Uređivanje**.
+   1. Uklonite polje iz svih pravila u kojima se koristi, ako postoji, a zatim odaberite **Dalje**.
+   1. **Na stranici Odgovarajući uvjeti** uklonite polje iz svih pravila u kojima se koristi, ako postoje, a zatim odaberite **Spremi i zatvori**.
+   1. Odaberite **Objedini objedinjavanje** > **profila i ovisnosti** klijenata. Pričekajte da se ujedinjenje dovrši prije nego što prijeđete na sljedeći korak.
+
+1. Na pločici Izvorna **polja** odaberite **Uređivanje**.
+
+1. Odaberite **Odaberite entitete i polja** i poništite potvrdni okvir pokraj svakog pojavljivanja polja.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Snimka zaslona dijaloškog okvira Odabir entiteta i polja s prikazanim očišćenim potvrdnim okvirima":::
+
+1. Odaberite **Primijeni**.
+
+1. Odaberite **Spremi i zatvori**.
+
+1. Odaberite **Objedini objedinjavanje** > **profila i ovisnosti** klijenata da biste ažurirali jedinstveni profil.
+
+### <a name="remove-a-unified-entity"></a>Uklanjanje jedinstvenog entiteta
+
+Da bi se uklonio entitet koji je ujedinjen, entitet mora biti uklonjen iz svih ovisnosti kao što su segmenti, mjere, obogaćivanja ili Odnosi.
+
+1. Nakon uklanjanja svih ovisnosti za entitet, idite na **Objedinjavanje** > **podataka**.
+
+1. Na **pločici Sjedinjena polja** klijenta odaberite **Uredi**.
+
+1. Odaberite sva polja za entitet, a zatim **izostavi**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Snimka zaslona s objedinjenim poljima sa svim poljima za odabrani entitet i gumb Isključi":::
+
+1. Odaberite **Gotovo** da biste potvrdili, a zatim Spremi **i zatvori**.
+
+   > [!TIP]
+   > Ako se prikaže poruka "Nije moguće spremiti objedinite. Navedeni resurs nije moguće izmijeniti ili izbrisati zbog silaznih ovisnosti", tada se entitet i dalje koristi u silaznoj ovisnosti.
+
+1. Na **pločici Dupliciraj zapise** odaberite **Uređivanje**.
+
+1. Uklonite sva pravila iz entiteta, ako postoje, a zatim odaberite **Dalje**.
+
+1. **Na stranici Odgovarajući uvjeti** odaberite entitet, a zatim **Izbriši**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Snimka zaslona s odgovarajućim uvjetima s odabranim entitetom i gumbom Izbriši":::
+
+1. Odaberite **Spremi i zatvori**.
+
+1. Na pločici Izvorna **polja** odaberite **Uređivanje**.
+
+1. Odaberite **Odaberite entitete i polja** i poništite potvrdni okvir pokraj entiteta.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Snimka zaslona dijaloškog okvira Odabir entiteta i polja s poništenim potvrdnim okvirom entiteta":::
+
+1. Odaberite **Primijeni**.
+
+1. Odaberite **Spremi i zatvori**.
+
+1. Odaberite **Objedini objedinjavanje** > **profila i ovisnosti** klijenata da biste ažurirali jedinstveni profil.
+
 ## <a name="manage-deduplication-rules"></a>Upravljanje pravilima deduplikacije
 
 1. Na **pločici Dupliciraj zapise** odaberite **Uređivanje**.
@@ -75,7 +147,7 @@ Atribut ili entitet ne možete ukloniti ako su već ujedinjeni.
 
    Broj pronađenih duplikata zapisa prikazuje se u odjeljku **Duplikati**. Stupac Zapisi **koji se dodjeljuju** prikazuje koji entiteti imaju duplicirane zapise i postotak dupliciranih zapisa.
 
-1. Da biste koristili obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora podataka](data-sources-enrichment.md).
+1. Da biste koristili obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora](data-sources-enrichment.md) podataka.
 
 1. Da biste upravljali pravilima deduplikacije, odaberite neku od sljedećih mogućnosti:
    - **Stvaranje novog pravila**: Odaberite Dodaj **pravilo** u odgovarajućem entitetu. Dodatne informacije potražite u članku [Definiranje pravila](remove-duplicates.md#define-deduplication-rules) deduplikacije.
@@ -114,7 +186,7 @@ Većinu parametara uparivanja možete ponovno konfigurirati i fino podesiti. Ne 
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Grafički prikaz neusporedivih i podudarnih zapisa, uključujući popis podataka.":::
 
-1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora podataka](data-sources-enrichment.md).
+1. Ako ste dodali obogaćeni entitet, odaberite **Koristi obogaćene entitete**. Dodatne informacije potražite u odjeljku [Obogaćivanje izvora](data-sources-enrichment.md) podataka.
 
 1. Da biste upravljali pravilima, odaberite neku od sljedećih mogućnosti:
    - **Stvaranje novog pravila**: Odaberite Dodaj **pravilo** u odgovarajućem entitetu. Dodatne informacije potražite u članku [Definiranje pravila za parove podudaranja](match-entities.md#define-rules-for-match-pairs).

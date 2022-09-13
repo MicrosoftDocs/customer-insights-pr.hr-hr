@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246425"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395947"
 ---
 # <a name="schedule-system-refresh"></a>Zakazivanje osvježavanja sustava
 
@@ -36,7 +36,7 @@ Zakažite automatsko osvježavanje svih [unesenih izvora podataka](data-sources.
 
 1. Odaberite između osvježavanja **Tjedno** (zadano) i **Dnevno**. Ako namjeravate zakazati tjedna osvježavanja, odaberite jedan ili više dana u koje želite izvesti osvježavanje.
 
-1. Postavite vrijednost **Vremenska zona**, a zatim upotrijebite padajući izbornik **Vrijeme** kako biste postavili vrijeme osvježavanja. Ako želite zakazati više osvježavanja u jednom danu, odaberite **Dodavanje drugog vremena**.
+1. Postavite vrijednost **Vremenska zona**, a zatim upotrijebite padajući izbornik **Vrijeme** kako biste postavili vrijeme osvježavanja. Ako želite zakazati više osvježavanja u jednom danu, odaberite **Dodavanje drugog vremena**. Možete dodati do četiri osvježavanja.
 
 1. Odaberite **Spremi** za primjenu izmjena.
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245778"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396037"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Povezivanje s podacima u usluzi Azure Data Lake Storage
 
@@ -39,6 +39,8 @@ Unosite podatke u Dynamics 365 Customer Insights korištenje računa Azure Data 
   - Čitač podataka bloba pohrane
   - Vlasnik podataka bloba pohrane
   - Suradnik podataka bloba pohrane
+
+- Korisniku koji postavlja izvor podataka vezu potrebno je najmanje dozvola za pohranu Blob Data suradnik na računu za pohranu.
 
 - Podaci u vašoj pohrani na jezeru podataka trebali bi slijediti standard uobičajenog podatkovnog modela za pohranu vaših podataka i imati zajednički manifest podatkovnog modela koji predstavlja shemu podatkovnih datoteka (*.csv ili *.parket). U manifestu se moraju navesti pojedinosti o entitetima kao što su stupci entiteta i vrste podataka te mjesto podatkovne datoteke i vrsta datoteke. Dodatne informacije potražite u članku [Manifest](/common-data-model/sdk/manifest) Uobičajeni podatkovni model. Ako manifesta nema, administratorski korisnici s vlasnikom podataka o blobu za pohranu ili pristupom Blob Data storage Blob Data suradnik mogu definirati shemu prilikom unosa podataka.
 
@@ -62,7 +64,7 @@ Unosite podatke u Dynamics 365 Customer Insights korištenje računa Azure Data 
    > [!NOTE]
    > Za stvaranje izvor podataka potrebna vam je jedna od sljedećih uloga u spremniku ili računu za pohranu:
    >
-   >  - Pohrana Blob Data Čitatelj dovoljna je za čitanje s računa za pohranu i unos podataka u Customer Insights. 
+   >  - Pohrana Blob Data Čitatelj dovoljna je za čitanje s računa za pohranu i unos podataka u Customer Insights.
    >  - Ako želite urediti datoteke manifesta izravno u odjeljku Customer Insights, potreban je suradnik ili vlasnik podataka za pohranu blob podataka.  
   
 1. Odaberite naziv spremnika **koji sadrži podatke** i shemu (datoteka model.json ili manifest.json) iz kojeg želite uvesti podatke, a zatim odaberite **Dalje**.

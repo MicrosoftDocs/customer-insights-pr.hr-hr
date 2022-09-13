@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: dd433b57e8695891a08d6f7fdb8c87befd2e1cfa
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246099"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396052"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Unos podataka u stvarnom vremenu (pretpregled)
 
@@ -82,10 +82,5 @@ Mogućnosti u stvarnom vremenu možete se koristiti izgradnjom vlastitog kanala 
 Aktivnost možete objaviti u formatu svog izvornog sustava ili u formatu UnifiedActivity. Nabavite format upućivanjem API poziva u /api/instances/{instanceId}/manage/entities/UnifiedActivity.
 
 Pojedinosti ovog API-ja, uključujući parametre i odgovore, možete pronaći u odjeljku **EntityData** o [Referenci API-ja Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Dodatne informacije potražite u odjeljku [Rad s API-jima Customer Insights](apis.md).
-
-## <a name="understand-your-real-time-usage-with-telemetry"></a>Objašnjenje uporabe u stvarnom vremenu uz telemetriju
-
-Dohvatite pregled količine zahtjeva API-ju u stvarnom vremenu i informacije o problemima na koje sustav može naići. Možete [pristupiti telemetriji u stvarnom vremenu](system.md#view-api-usage). 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

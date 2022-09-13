@@ -1,7 +1,7 @@
 ---
 title: Rad s podacima rješenja Customer Insights u servisu Microsoft Dataverse
 description: Saznajte kako povezati Customer Insights i Microsoft Dataverse razumjeti izlazne entitete koji se izvoze u Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303820"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424300"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad s podacima rješenja Customer Insights u servisu Microsoft Dataverse
 
@@ -136,6 +136,7 @@ Ako uklanjanje veze ne uspije zbog ovisnosti, morate ukloniti i ovisnosti. Dodat
 Neki izlazni entiteti iz customer insightsa dostupni su kao tablice u programu Dataverse. Odjeljci u nastavku opisuju očekivanu shemu ovih tablica.
 
 - [CustomerProfile](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,7 +146,32 @@ Neki izlazni entiteti iz customer insightsa dostupni su kao tablice u programu D
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Ova tablica sadrži objedinjeni profil klijenta iz rješenja Customer Insights. Shema za jedinstveni profil klijenta ovisi o entitetima i atributima koji se koriste u procesu objedinjavanja podataka. Shema profila klijenta obično sadrži podskup atributa iz [definicije Common Data Model tablice CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Ova tablica sadrži objedinjeni profil klijenta iz rješenja Customer Insights. Shema za jedinstveni profil klijenta ovisi o entitetima i atributima koji se koriste u procesu objedinjavanja podataka. Shema profila klijenta obično sadrži podskup atributa iz [definicije Common Data Model tablice CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Za scenarij od B do B profil kupca sadrži jedinstvene račune, a shema obično sadrži podskup atributa iz [definicije zajedničkog podatkovnog modela računa](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+
+### <a name="contactprofile"></a>ContactProfile
+
+ContactProfile sadrži jedinstvene informacije o kontaktu. Kontakti su [pojedinci koji su mapirani na račun](data-unification-contacts.md) u scenariju B-do-B.
+
+| Column                       | Tip                | Opis     |
+| ---------------------------- | ------------------- | --------------- |
+|  Datum Rođenja            | DatumVrijeme       |  Datum rođenja kontakta               |
+|  Grad                 | SMS |  Grad kontakt adrese               |
+|  ID kontakta            | SMS |  ID profila kontakta               |
+|  ContactProfileId     | Jedinstveni identifikator   |  GUID kontakta               |
+|  CountryOrRegion      | SMS |  Država/regija adrese kontakta               |
+|  CustomerId           | SMS |  ID poslovnog subjekta na koji je kontakt mapiran               |
+|  EntityName           | SMS |  Entitet iz kojeg dolaze podaci                |
+|  FirstName            | SMS |  Ime kontakta               |
+|  Rod               | SMS |  Spol kontakta               |
+|  Id                   | SMS |  Deterministički GUID temeljen na`Identifier`               |
+|  Identifier           | SMS |  Interni ID profila kontakta: `ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | SMS |  Naziv radnog mjesta kontakta               |
+|  LastName             | SMS |  Prezime kontakta               |
+|  PostalCode           | SMS |  Poštanski broj adrese kontakta               |
+|  PrimaryEmail         | SMS |  Adresa e-pošte kontakta               |
+|  Primarni telefon         | SMS |  Telefonski broj kontakta               |
+|  Savezna država ili pokrajina      | SMS |  Država ili pokrajina adrese kontakta               |
+|  StreetAddress        | SMS |  Ulica kontakt adrese               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
@@ -153,13 +179,13 @@ Tablica AlternateKey sadrži ključeve entiteta koji su sudjelovali u procesu ob
 
 |Column  |Tip  |Opis  |
 |---------|---------|---------|
-|DataSourceName    |String         | Naziv izvora podataka. Na primjer: `datasource5`.        |
-|EntityName        | String        | Naziv entiteta u odjeljku Uvidi kupaca. Na primjer: `contact1`.        |
-|AlternateValue    |String         |Alternativni ID koji se preslikava na ID klijenta. Primjer: `cntid_1078`         |
-|KeyRing           | Tekst s više redaka        | Vrijednost JSON  </br> Uzorak: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | String        | ID objedinjenog profila klijenta.         |
-|AlternateKeyId     | GUID         |  AlternateKey određuje GUID na temelju msdynci_identifier       |
-|msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Uzorak: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |SMS         | Naziv izvora podataka. Na primjer: `datasource5`.        |
+|EntityName        | SMS        | Naziv entiteta u odjeljku Uvidi kupaca. Na primjer: `contact1`.        |
+|AlternateValue    |SMS         |Alternativni ID koji se preslikava na ID klijenta. Primjer: `cntid_1078`         |
+|KeyRing           | SMS        | Vrijednost JSON  </br> Uzorak: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | SMS        | ID objedinjenog profila klijenta.         |
+|AlternateKeyId     | Jedinstveni identifikator        |  AlternateKey deterministički GUID temeljen na`Identifier`      |
+|Identifier |   SMS      |   `DataSourceName|EntityName|AlternateValue`  </br> Uzorak: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,18 +193,18 @@ Ova tablica sadrži aktivnosti korisnika koje su dostupne u rješenju Customer I
 
 | Column            | Tip        | Opis                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | String      | ID profila klijenta                                                                      |
-| ActivityId        | String      | Interni ID aktivnosti klijenta (primarni ključ)                                       |
-| SourceEntityName  | String      | Naziv izvornog entiteta                                                                |
-| SourceActivityId  | String      | Primarni ključ iz izvornog entiteta                                                       |
-| ActivityType      | String      | Vrsta semantičke aktivnosti ili naziv prilagođene aktivnosti                                        |
-| ActivityTimeStamp | DATETIME    | Vremenska oznaka aktivnosti                                                                      |
-| Naziv             | String      | Naslov ili naziv aktivnosti                                                               |
-| Opis       | String      | Opis aktivnosti                                                                     |
-| URL               | String      | Veza do vanjskog URL-a specifičnog za aktivnost                                         |
-| SemanticData      | Niz JSON | Uključuje popis parova vrijednosti ključeva za polja semantičkog mapiranja specifična za vrstu aktivnosti |
-| RangeIndex        | String      | Unix vremenska oznaka koja se koristi za sortiranje vremenske trake aktivnosti i učinkovite upite raspona |
-| mydynci_unifiedactivityid   | GUID | Interni ID aktivnosti klijenta (ActivityId) |
+| CustomerId        | SMS      | ID profila klijenta                                                                      |
+| ActivityId        | SMS      | Interni ID aktivnosti klijenta (primarni ključ)                                       |
+| SourceEntityName  | SMS      | Naziv izvornog entiteta                                                                |
+| SourceActivityId  | SMS      | Primarni ključ iz izvornog entiteta                                                       |
+| ActivityType      | SMS      | Vrsta semantičke aktivnosti ili naziv prilagođene aktivnosti                                        |
+| ActivityTimeStamp | DatumVrijeme    | Vremenska oznaka aktivnosti                                                                      |
+| Naziv             | SMS      | Naslov ili naziv aktivnosti                                                               |
+| Opis       | SMS      | Opis aktivnosti                                                                     |
+| URL               | SMS      | Veza do vanjskog URL-a specifičnog za aktivnost                                         |
+| SemanticData      | SMS | Uključuje popis parova vrijednosti ključeva za polja semantičkog mapiranja specifična za vrstu aktivnosti |
+| RangeIndex        | SMS      | Unix vremenska oznaka koja se koristi za sortiranje vremenske trake aktivnosti i učinkovite upite raspona |
+| UnifiedActivityId   | Jedinstveni identifikator | Interni ID aktivnosti klijenta (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
@@ -186,11 +212,10 @@ Ova tablica sadrži izlazne podatke mjera na temelju atributa klijenata.
 
 | Column             | Tip             | Opis                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | String           | ID profila klijenta        |
-| Mjerila           | Niz JSON      | Uključuje popis parova vrijednosti ključeva za naziv mjere i vrijednosti za datog klijenta | 
-| msdynci_identifier | String           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | ID profila klijenta |
-
+| CustomerId         | SMS           | ID profila klijenta        |
+| Mjerila           | SMS      | Uključuje popis parova vrijednosti ključeva za naziv mjere i vrijednosti za datog klijenta |
+| Identifier | SMS           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Jedinstveni identifikator     | ID profila klijenta |
 
 ### <a name="enrichment"></a>Obogaćivanje
 
@@ -198,12 +223,12 @@ Ova tablica sadrži rezultate postupka obogaćivanja.
 
 | Column               | Tip             |  Opis                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | String           | ID profila klijenta                                 |
-| EnrichmentProvider   | String           | Naziv davatelja za obogaćivanje                                  |
-| EnrichmentType       | String           | Vrsta obogaćivanja                                      |
-| Vrijednosti               | Niz JSON      | Popis atributa dobivenih postupkom obogaćivanja |
-| msdynci_enrichmentid | GUID             | Deterministički GUID generiran iz msdynci_identifier |
-| msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | SMS           | ID profila klijenta                                 |
+| EnrichmentProvider   | SMS           | Naziv davatelja za obogaćivanje                                  |
+| EnrichmentType       | SMS           | Vrsta obogaćivanja                                      |
+| Vrijednosti               | SMS      | Popis atributa dobivenih postupkom obogaćivanja |
+| ID obogaćivanja | Jedinstveni identifikator            | Deterministički GUID generiran iz`Identifier` |
+| Identifier   | SMS           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Predviđanje
 
@@ -211,12 +236,12 @@ Ova tablica sadrži rezultate predviđanja modela.
 
 | Column               | Tip        | Opis                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | String      | ID profila klijenta                                  |
-| ModelProvider        | String      | Naziv davatelja modela                                      |
-| Model                | String      | Naziv modela                                                |
-| Vrijednosti               | Niz JSON | Popis atributa koje stvara model |
-| msdynci_predictionid | GUID        | Deterministički GUID generiran iz msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | SMS      | ID profila klijenta                                  |
+| ModelProvider        | SMS      | Naziv davatelja modela                                      |
+| Model                | SMS      | Naziv modela                                                |
+| Vrijednosti               | SMS | Popis atributa koje stvara model |
+| ID predviđanja | Jedinstveni identifikator       | Deterministički GUID generiran iz`Identifier` |
+| Identifier   | SMS      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Članstvo u segmentu
 
@@ -224,12 +249,11 @@ Ova tablica sadrži podatke o članstvu u segmentima profila kupaca.
 
 | Column        | Tip | Opis                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | ID profila klijenta        |
-| SegmentProvider      | String       | Aplikacija koja objavljuje segmente.      |
-| SegmentMembershipType | String       | Vrsta klijenta za ovaj zapis članstva u segmentu. Podržava više vrsta kao što su Klijent, Kontakt ili Poslovni subjekt. Zadano: kupac  |
-| Segmenti       | Niz JSON  | Popis jedinstvenih segmenata čiji je profil kupca član      |
-| msdynci_identifier  | String   | Jedinstveni identifikator zapisa članstva u segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministički GUID generiran iz`msdynci_identifier`          |
-
+| CustomerId        | SMS       | ID profila klijenta        |
+| SegmentProvider      | SMS       | Aplikacija koja objavljuje segmente.      |
+| SegmentMembershipType | SMS       | Vrsta klijenta za ovaj zapis članstva u segmentu. Podržava više vrsta kao što su Klijent, Kontakt ili Poslovni subjekt. Zadano: kupac  |
+| Segmenti       | SMS  | Popis jedinstvenih segmenata čiji je profil kupca član      |
+| Identifier  | SMS   | Jedinstveni identifikator zapisa članstva u segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Jedinstveni identifikator      | Deterministički GUID generiran iz`Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
