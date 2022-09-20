@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194913"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473633"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dodatak za karticu kupca za aplikacije sustava Dynamics 365 (pretpregled)
 
@@ -32,7 +32,8 @@ Dobijte prikaz svojih klijenata od 360 stupnjeva izravno u Dynamics 365 aplikaci
 - Da bi se podaci sustava Dynamics 365 mapirali na korisničke profile customer insights, preporučujemo da se [unose iz aplikacije Dynamics 365 pomoću Microsoft Dataverse poveznika](connect-power-query.md). Ako koristite drugu metodu za unos kontakata sustava Dynamics 365 (ili poslovnih subjekata), provjerite `contactid` je li polje (ili `accountid`) postavljeno kao [primarni ključ za taj izvor podataka tijekom postupka objedinjavanja podataka](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Svi korisnici sustava Dynamics 365 dodatka Customer Card moraju se [dodati kao korisnici](permissions.md) u Customer Insights da bi vidjeli podatke.
 - [Konfigurirane mogućnosti pretraživanja i filtriranja](search-filter-index.md) u aplikaciji Customer Insights.
-- Svaka kontrola dodatka oslanja se na određene podatke u customer insights. Neki podaci i kontrole dostupni su samo u okruženjima određenih vrsta. Konfiguracija dodatka obavijestit će vas ako kontrola nije dostupna zbog odabrane vrste okruženja. Saznajte više o [slučajevima upotrebe okruženja](work-with-business-accounts.md).
+- Neki podaci i kontrole dostupni su samo u okruženjima određenih vrsta. Konfiguracija dodatka obavijestit će vas ako kontrola nije dostupna zbog odabrane vrste okruženja. Ova će se pogreška prikazati unutar kontrole prilikom prikazivanja. Saznajte više o [slučajevima upotrebe okruženja](work-with-business-accounts.md).
+- Svaka kontrola dodatka oslanja se na određene podatke u customer insights.
   - **Kontrola** mjere zahtijeva [konfigurirane mjere](measures.md) atributa klijenta.
   - **Kontrola** inteligencije zahtijeva podatke generirane pomoću [predviđanja ili prilagođenih modela](predictions-overview.md).
   - **Kontrola** detalja o kupcu prikazuje sva polja iz profila dostupna u jedinstvenom profilu kupca.

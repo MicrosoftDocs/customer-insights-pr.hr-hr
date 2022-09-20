@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207036"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463256"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezivanje s Power Query izvor podataka
 
@@ -63,7 +63,9 @@ Dodavanje izvora podataka na Power Query temelju poveznika općenito slijedi kor
 Učitavanje podataka može potrajati. Nakon uspješnog osvježavanja uneseni podaci mogu se pregledati sa [**stranice Entiteti**](entities.md).
 
 > [!CAUTION]
-> Izvor podataka na Power Query kojem se temelji kreira tijek [podataka u programu Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Nemojte mijenjati naziv tijeka podataka u centru za administratore Power Platform koji se koristi u odjeljku Customer Insights. Preimenovanje tijeka podataka uzrokuje probleme s referencama između izvor podataka Customer Insights i tijeka Dataverse podataka.
+>
+> - Izvor podataka na Power Query kojem se temelji kreira tijek [podataka u programu Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Nemojte mijenjati naziv tijeka podataka u centru za administratore Power Platform koji se koristi u odjeljku Customer Insights. Preimenovanje tijeka podataka uzrokuje probleme s referencama između izvor podataka Customer Insights i tijeka Dataverse podataka.
+> - Istodobne procjene izvora Power Query podataka u customer insights imaju ista [ograničenja osvježavanja kao dataflows u PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Ako osvježavanje podataka ne uspije jer je doseglo ograničenje procjene, preporučujemo da prilagodite raspored osvježavanja za svaki protok podataka kako biste osigurali da se izvori podataka ne obrađuju istovremeno.
 
 ### <a name="available-power-query-data-sources"></a>Dostupni Power Query izvori podataka
 
@@ -75,14 +77,14 @@ Poveznici s kvačicom u stupcu **Customer Insights (Dataflows)** dostupni su za 
 
 Unos podataka iz lokalno izvora podataka podržan je na Microsoft Power Platform temelju tokova podataka (PPDF-ova). Protok podataka u uvidima kupaca možete omogućiti pružanjem [URL-a Microsoft Dataverse](create-environment.md) okruženja prilikom postavljanja okruženja.
 
-Izvori podataka stvoreni nakon povezivanja Dataverse okruženja s Customer Insights prema zadanim postavkama koriste [Power Platform tijekove](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) podataka. Tijekovi podataka podržavaju lokalnu povezivost pomoću pristupnika za podatke. Pomoću pristupnika podataka možete ukloniti i ponovno stvoriti izvore podataka koji su postojali prije Dataverse povezivanja [okruženja pomoću pristupnika](/data-integration/gateway/service-gateway-app) podataka lokalno.
+Izvori podataka stvoreni nakon povezivanja Dataverse okruženja s Customer Insights prema zadanim postavkama koriste [Power Platform tijekove](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) podataka. Tijekovi podataka podržavaju lokalnu povezivost pomoću pristupnika za podatke. Možete ukloniti i ponovno stvoriti izvore podataka koji su postojali prije povezivanja Dataverse [okruženja pomoću lokalno pristupnika podataka](/data-integration/gateway/service-gateway-app).
 
-Pristupnici podataka iz postojećeg Power BI ili Power Apps okruženja bit će vidljivi i možete ih ponovno koristiti u customer insights. Stranica izvora podataka prikazuje veze do okruženja platforme Microsoft Power Platform u kojem možete pregledavati i konfigurirati lokalne pristupnike za podatke.
+Pristupnici podataka iz postojećeg Power BI ili Power Apps okruženja bit će vidljivi i možete ih ponovno koristiti u customer insights ako se podatkovni pristupnik i okruženje Customer Insights nalaze u istoj regiji Azure. Stranica izvora podataka prikazuje veze do okruženja platforme Microsoft Power Platform u kojem možete pregledavati i konfigurirati lokalne pristupnike za podatke.
 
 > [!IMPORTANT]
 > Provjerite jesu li pristupnici ažurirani na najnoviju verziju. Možete instalirati ažuriranje i ponovno konfigurirati pristupnik iz upita prikazanog na zaslonu pristupnika izravno ili [preuzeti najnoviju verziju](https://powerapps.microsoft.com/downloads/). Ako ne koristite najnoviju verziju pristupnika, osvježavanje tijeka podataka ne uspijeva s porukama o pogreškama kao što **je Ključna riječ nije podržana: svojstva konfiguracije. Naziv parametra: ključna riječ**.
 >
-> Pogreške s lokalno pristupnicima podataka u customer insights često su uzrokovane problemima s konfiguracijom. Dodatne informacije o otklanjanju poteškoća s pristupnicima podataka potražite u članku [Otklanjanje poteškoća s lokalno pristupnikom podataka](/data-integration/gateway/service-gateway-tshoot).
+> Pogreške s lokalno pristupnicima podataka u customer insights često su uzrokovane problemima s konfiguracijom. Dodatne informacije o otklanjanju poteškoća s pristupnicima podataka potražite u članku [Otklanjanje poteškoća s pristupnikom](/data-integration/gateway/service-gateway-tshoot) za podatke lokalno.
 
 ## <a name="edit-power-query-data-sources"></a>Uređivanje Power Query izvora podataka
 

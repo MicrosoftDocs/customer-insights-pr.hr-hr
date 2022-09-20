@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
-ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
-ms.translationtype: HT
+ms.openlocfilehash: c3863b1a72fd92ddc87755699feda11371ec9214
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9411731"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463210"
 ---
 # <a name="service-limits-in-customer-insights"></a>Ograničenja usluge u uvidima kupaca
 
@@ -25,6 +25,7 @@ ms.locfileid: "9411731"
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmenti, mjere i predviđanja | 300  | Ukupan broj segmenata [,](segments.md) mjera [i](measures.md) predviđanja [zajedno ne može biti veći od](predictions-overview.md) 300.  |
 | Odnosi | 20 razina dubine u odnosima na putanjama entiteta. | Prilikom stvaranja [segmenata](segments.md) ili [mjera](measures.md) pomoću sučelja graditelja, putanje entiteta mogu imati do 20 skokova odnosa između početnog entiteta i ciljnog entiteta.  |
+|Obrada podataka| Istodobne evaluacije izvora Power Query podataka su ograničene. | Customer Insights ima ista [ograničenja osvježavanja kao dataflows u PowerBI.com](/power-query/power-query-online-limits#refresh-limits). |
 
 ## <a name="fair-scheduling-of-jobs"></a>Pošteno raspoređivanje radnih mjesta
 

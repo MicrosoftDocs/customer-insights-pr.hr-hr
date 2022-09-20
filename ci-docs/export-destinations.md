@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304050"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460181"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvoza (pretpregled)
 
@@ -81,6 +81,11 @@ Odaberite izvoz da biste vidjeli dostupne akcije.
 ## <a name="schedule-and-run-exports"></a>Zakazivanje i pokretanje izvoza
 
 Svaki izvoz koji konfigurirate ima raspored osvježavanja. Tijekom osvježavanja sustav traži nove ili ažurirane podatke koje će uključiti u izvoz. Prema zadanim postavkama izvozi se izvode kao dio svakog [zakazanog osvježavanja sustava](schedule-refresh.md). Raspored osvježavanja možete prilagoditi ili ga isključiti za ručno pokretanje izvoza.
+
+> [!TIP]
+> Smanjite vrijeme obrade izvoza segmenata uz sljedeće najbolje primjere iz prakse:
+> - Raspodijelite segmentne entitete po izvozu mutiple.
+> - Izbjegavajte istovremeno zakazivanje svih izvoza. Ostavite 30 minuta ili jedan sat između predviđenog vremena svakog izvoza.
 
 Rasporedi izvoza ovise o stanju vašeg okruženja. Ako su u tijeku ažuriranja na [ovisnostima](system.md#refresh-processes) kada bi trebao započeti planirani izvoz, sustav će prvo dovršiti ažuriranja, a zatim pokrenuti izvoz. Stupac **Osvježeno** prikazuje kada je izvoz posljednji put osvježen.
 
