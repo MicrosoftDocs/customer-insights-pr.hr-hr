@@ -6,12 +6,12 @@ metadata:
   ms.author: mhart
   ms.date: 05/18/2022
   ms.topic: landing-page
-  ms.openlocfilehash: 209d635f8b548559ba035a5803c360d26dea8bab
-  ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+  ms.openlocfilehash: c3781830dbb1ab1bf5d6395e1398c2c3b297abfd
+  ms.sourcegitcommit: e02a0bf51b5440fcf3284d410f24ea652fe90723
   ms.translationtype: MT
   ms.contentlocale: hr-HR
-  ms.lasthandoff: 09/07/2022
-  ms.locfileid: "9411769"
+  ms.lasthandoff: 09/20/2022
+  ms.locfileid: "9544346"
 title: Dokumentacija za Dynamics 365 Customer Insights
 summary: Pronađite korisne resurse o značajkama i mogućnostima usluge Customer Insights te početku rada s njom.
 landingContent:
@@ -28,7 +28,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Put učenja Customer Insights
-      url: /learn/paths/build-customer-insights/
+      url: /training/paths/build-customer-insights/
 - title: Početak rada uz Customer Insights
   linkLists:
   - linkListType: get-started
@@ -42,7 +42,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Započnite
-      url: /learn/modules/get-started-customer-data-platform/
+      url: /training/modules/get-started-customer-data-platform/
 - title: Unesite podatke
   linkLists:
   - linkListType: how-to-guide
@@ -56,7 +56,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Unos podataka u uvide kupaca
-      url: /learn/modules/ingest-data-customer-insights/
+      url: /training/modules/ingest-data-customer-insights/
 - title: Objedinjavanjepodataka
   linkLists:
   - linkListType: how-to-guide
@@ -70,7 +70,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Stvaranje jedinstvenog profila
-      url: /learn/modules/unified-customer-profile/
+      url: /training/modules/unified-customer-profile/
 - title: Nabavi uvide
   linkLists:
   - linkListType: how-to-guide
@@ -84,7 +84,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Obogaćivanje i predviđanje podataka
-      url: /learn/modules/enrich-data/
+      url: /training/modules/enrich-data/
 - title: Nadograđujte svoje podatke
   linkLists:
   - linkListType: how-to-guide
@@ -98,7 +98,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Rad s aplikacijom
-      url: /learn/modules/working-with-customer-insights/
+      url: /training/modules/working-with-customer-insights/
 - title: Izvoz podataka
   linkLists:
   - linkListType: how-to-guide
@@ -112,7 +112,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Upravljanje vanjskim vezama
-      url: /learn/modules/configure-third-party-connections/
+      url: /training/modules/configure-third-party-connections/
 - title: Upravljanje uslugom Customer Insights
   linkLists:
   - linkListType: how-to-guide
@@ -126,7 +126,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Upravljanje uslugom Customer Insights
-      url: /learn/modules/administer-customer-data-platform/
+      url: /training/modules/administer-customer-data-platform/
 - title: Ostanite u kontaktu
   linkLists:
   - linkListType: overview

@@ -7,21 +7,21 @@
 - name: Katalog učenja
   items:
     - name: Certificirajte kao Microsoftov stručnjak za korisničku podatkovnu platformu
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Početak rada uz Customer Insights
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: Unesite podatke
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: Stvaranje objedinjenih profila klijenta
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Rad s uvidima kupaca
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: Obogaćivanje podataka i predviđanje
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: Upravljanje vanjskim vezama
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Upravljanje uslugom Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: Besplatna probna verzija
   items:
     - name: Prijava u besplatnu probnu verziju
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: Korištenje web-podataka za personalizaciju
       href: unknown-to-known.md
+    - name: Upravljanje nepoznatim profilima kupaca
+      href: manage-unknown-profiles.md
 - name: Segmenti
   items:
     - name: Pregled segmenata
