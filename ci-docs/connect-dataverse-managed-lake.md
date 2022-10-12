@@ -1,7 +1,7 @@
 ---
 title: Povezivanje s podacima iz rješenja Data Lake kojim upravlja platforma Microsoft Dataverse.
 description: Uvoz podataka iz rješenja Data Lake kojim upravlja platforma Microsoft Dataverse.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206944"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609784"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povezivanje s podacima iz rješenja Data Lake kojim upravlja platforma Microsoft Dataverse.
 
@@ -70,5 +70,93 @@ Za povezivanje s drugim data lake usluge Dataverse [stvorite novi izvor podataka
 1. Kliknite **Spremi** da biste primijenili promjene i vratili se na **stranicu Izvori** podataka.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Uobičajeni razlozi za pogreške u gutanju ili oštećene podatke
+
+Sljedeće provjere izvode se na unesenim podacima kako bi se otkrili oštećeni zapisi:
+
+- Vrijednost polja ne podudara se s vrstom podataka njegova stupca.
+- Polja sadrže znakove koji uzrokuju da stupci ne odgovaraju očekivanoj shemi. Na primjer: pogrešno oblikovane ponude, neprespojne ponude ili znakovi novog retka.
+- Ako postoje stupci datetime/datetime/datetimeoffset, njihov oblik mora biti naveden u modelu ako ne slijedi standardni ISO oblik.
+
+### <a name="schema-or-data-type-mismatch"></a>Nepodudaranje sheme ili vrste podataka
+
+Ako podaci nisu u skladu sa shemom, zapisi se klasificiraju kao oštećeni. Ispravite izvorišne podatke ili shemu i ponovno unesite podatke.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Polja datetime u pogrešnom obliku
+
+Polja datetime u entitetu nisu u ISO ili en-US formatima. Zadani oblik datetimea u Customer Insights formatu je en-US format. Sva polja datetime u entitetu trebaju biti u istom obliku. Customer Insights podržava druge formate pod uvjetom da se primjedbe ili osobine izrađuju na razini izvora ili entiteta u modelu ili manifest.jsonu. Na primjer:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  U manifest.json formatu datetime može se odrediti na razini entiteta ili na razini atributa. Na razini entiteta koristite "ExhibitsTraits" u entitetu u obliku *.manifest.cdm.json da biste definirali oblik vremena prijenosa podataka. Na razini atributa koristite "appliedTraits" u atributu u nazivu entiteta.cdm.json.
+
+**Manifest.json na razini entiteta**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json na razini atributa**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Korištenje modela utemeljenih na Strojnom učenju Azure
 description: Koristite modele utemeljene na Strojnom učenju Azure sustavu Dynamics 365 Customer Insights.
-ms.date: 12/02/2021
+ms.date: 09/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8d9c9324ea4840b585b9af1a58d505ccaea6f18e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082277"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609816"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Korištenje modela utemeljenih na Strojnom učenju Azure
 
@@ -35,7 +35,7 @@ Objedinjeni podaci u sustavu Dynamics 365 Customer Insights izvor su za izgradnj
 ## <a name="work-with-azure-machine-learning-designer"></a>Rad s dizajnerom za Strojno učenje Azure
 
 Azure Strojno učenje designer pruža vizualno platno na kojem možete povlačiti i ispuštati skupove podataka i module. Skupni cjevovod stvoren u dizajneru može se integrirati u Customer Insights ako je odgovarajuće konfiguriran. 
-   
+
 ## <a name="working-with-azure-machine-learning-sdk"></a>Rad s SDK-om za Strojno učenje Azure
 
 Podatkovni znanstvenici i programeri za umjetnu inteligenciju koriste [SDK za Strojno učenje Azure](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) za izgradnju Strojno učenje tijekova rada. Trenutačno se modeli obučeni pomoću SDK-a ne mogu izravno integrirati u Customer Insights. Skupni cjevovod za procjenjivanje koji troši taj model potreban je za integraciju sa servisom Customer Insights.
@@ -44,17 +44,16 @@ Podatkovni znanstvenici i programeri za umjetnu inteligenciju koriste [SDK za St
 
 ### <a name="dataset-configuration"></a>Konfiguracija skupa podataka
 
-Morate stvoriti skupove podataka da biste koristili podatke entiteta iz servisa Customer Insights za svoj skupni cjevovod za procjenjivanje. Te skupove podataka treba registrirati u radnom prostoru. Trenutačno podržavamo samo [tablične skupove podataka](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) u formatu .csv. Skupovi podataka koji odgovaraju podacima entiteta moraju se parametrizirati kao parametar cjevovoda.
-   
-* Parametri skupa podataka u Dizajneru
-   
-     U dizajneru, otvorite **Odabir stupaca u skupu podataka** pa odaberite **Postavi kao parametar cjevovoda** gdje ćete navesti naziv parametra.
+Stvorite skupove podataka da biste koristili podatke o entitetu iz customer insightsa za skupni zaključivanje kanala. Registrirajte te skupove podataka u radnom prostoru. Trenutačno podržavamo samo [tablične skupove podataka](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) u formatu .csv. Parametrizirajte skupove podataka koji odgovaraju podacima entiteta kao parametar kanala.
 
-     > [!div class="mx-imgBorder"]
-     > ![Parametarizacija skupa podataka u dizajneru.](media/intelligence-designer-dataset-parameters.png "Parametrizacija skupa podataka u dizajneru")
-   
-* Parametar skupa podataka u SDK-u (Python)
-   
+- Parametri skupa podataka u Dizajneru
+
+  U dizajneru, otvorite **Odabir stupaca u skupu podataka** pa odaberite **Postavi kao parametar cjevovoda** gdje ćete navesti naziv parametra.
+
+  :::image type="content" source="media/intelligence-designer-dataset-parameters.png" alt-text="Parametarizacija skupa podataka u dizajneru.":::
+
+- Parametar skupa podataka u SDK-u (Python)
+
    ```python
    HotelStayActivity_dataset = Dataset.get_by_name(ws, name='Hotel Stay Activity Data')
    HotelStayActivity_pipeline_param = PipelineParameter(name="HotelStayActivity_pipeline_param", default_value=HotelStayActivity_dataset)
@@ -63,10 +62,10 @@ Morate stvoriti skupove podataka da biste koristili podatke entiteta iz servisa 
 
 ### <a name="batch-inference-pipeline"></a>Skupni cjevovod za procjenjivanje
   
-* U dizajneru se cjevovod za obuku može koristiti za stvaranje ili ažuriranje cjevovoda za procjenjivanje. Trenutačno su podržani samo skupni cjevovodi za procjenjivanje.
+- U dizajneru koristite cjevovod za obuku za stvaranje ili ažuriranje cjevovoda za zaključivanje. Trenutačno su podržani samo skupni cjevovodi za procjenjivanje.
 
-* Pomoću SDK-a cjevovod možete objaviti na krajnjoj točki. Trenutačno se Customer Insights integrira sa zadanim cjevovodom na krajnjoj točki skupnog cjevovoda u radnom prostoru Strojnog učenja.
-   
+- Pomoću SDK-a objavite cjevovod na krajnja točka. Trenutačno se Customer Insights integrira sa zadanim cjevovodom na krajnjoj točki skupnog cjevovoda u radnom prostoru Strojnog učenja.
+
    ```python
    published_pipeline = pipeline.publish(name="ChurnInferencePipeline", description="Published Churn Inference pipeline")
    pipeline_endpoint = PipelineEndpoint.get(workspace=ws, name="ChurnPipelineEndpoint") 
@@ -75,11 +74,11 @@ Morate stvoriti skupove podataka da biste koristili podatke entiteta iz servisa 
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Uvoz podataka cjevovoda u Customer Insights
 
-* Dizajner pruža [Modul za izvoz podataka](/azure/machine-learning/algorithm-module-reference/export-data) koji omogućuje izvoz izlaznih podataka cjevovoda u pohranu platforme Azure. Modul trenutačno mora koristiti vrstu spremišta podataka **Pohrana blobova platforme Azure** i parameterizirati **Spremište podataka** i relativnu **Putanju**. Customer Insights nadjačava oba ova parametra tijekom izvođenja cjevovoda sa spremištem podataka i putanjom koja je dostupna proizvodu.
-   > [!div class="mx-imgBorder"]
-   > ![Konfiguracija modula za izvoz podataka.](media/intelligence-designer-importdata.png "Konfiguracija modula za izvoz podataka")
-   
-* Prilikom pisanja izlazne vrijednosti procjenjivanja u kodu možete prenijeti izlazun vrijednost na putanju unutar *registriranog spremišta podataka* u radnom prostoru. Ako su putanja i spremište podataka parametrizirani u cjevovodu, uvidi o klijenatima moći će čitati i uvesti izlaznu vrijednost zaključka. Trenutačno je podržana jedna tablična izlazna vrijednost u formatu csv. Putanja mora sadržavati direktorij i naziv datoteke.
+- Dizajner pruža [Modul za izvoz podataka](/azure/machine-learning/algorithm-module-reference/export-data) koji omogućuje izvoz izlaznih podataka cjevovoda u pohranu platforme Azure. Modul trenutačno mora koristiti vrstu spremišta podataka **Pohrana blobova platforme Azure** i parameterizirati **Spremište podataka** i relativnu **Putanju**. Customer Insights nadjačava oba ova parametra tijekom izvođenja cjevovoda sa spremištem podataka i putanjom koja je dostupna proizvodu.
+
+  :::image type="content" source="media/intelligence-designer-importdata.png" alt-text="Konfiguracija modula za izvoz podataka.":::
+
+- Prilikom pisanja izlaza zaključka pomoću koda, prenesite izlaz na put unutar registriranog *spremišta* podataka u radnom prostoru. Ako su putanja i spremište podataka parametrizirani u cjevovodu, uvidi o klijenatima moći će čitati i uvesti izlaznu vrijednost zaključka. Trenutačno je podržana jedna tablična izlazna vrijednost u formatu csv. Putanja mora sadržavati direktorij i naziv datoteke.
 
    ```python
    # In Pipeline setup script

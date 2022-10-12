@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
-ms.translationtype: MT
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.translationtype: HT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409348"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609583"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Što je novo u sustavu Dynamics 365 Customer Insights
 
@@ -228,9 +228,9 @@ Dodatne informacije potražite u članku [Promjena vlasnika okruženja](manage-e
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>U procesu pripreme podataka naveden je razlog oštećenja oštećenih zapisa
 
-Priprema podataka sada prikazuje razlog oštećenja za sva polja s oštećenim podacima. Informacije se pružaju na pojedinačnoj razini evidencije radi lakše identifikacije. 
+Priprema podataka sada prikazuje razlog oštećenja za sva polja s oštećenim podacima. Informacije se pružaju na pojedinačnoj razini evidencije radi lakše identifikacije.
 
-Dodatne informacije potražite u odjeljku [Oštećeni izvori podataka](entities.md#corrupted-data-sources).
+Dodatne informacije potražite u odjeljku [Oštećeni izvori podataka](data-sources.md#corrupt-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Kraj pretpregleda za značajke izvješćivanja u mogućnosti uvida u angažman
 

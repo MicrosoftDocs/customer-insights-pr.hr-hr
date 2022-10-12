@@ -1,7 +1,7 @@
 ---
 title: Povezivanje s mapom značajke Common Data Model s pomoću računa za Azure Data Lake
 description: Rad s podacima oblika Common Data Model pomoću servisa Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396037"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609933"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Povezivanje s podacima u usluzi Azure Data Lake Storage
 
@@ -43,6 +43,10 @@ Unosite podatke u Dynamics 365 Customer Insights korištenje računa Azure Data 
 - Korisniku koji postavlja izvor podataka vezu potrebno je najmanje dozvola za pohranu Blob Data suradnik na računu za pohranu.
 
 - Podaci u vašoj pohrani na jezeru podataka trebali bi slijediti standard uobičajenog podatkovnog modela za pohranu vaših podataka i imati zajednički manifest podatkovnog modela koji predstavlja shemu podatkovnih datoteka (*.csv ili *.parket). U manifestu se moraju navesti pojedinosti o entitetima kao što su stupci entiteta i vrste podataka te mjesto podatkovne datoteke i vrsta datoteke. Dodatne informacije potražite u članku [Manifest](/common-data-model/sdk/manifest) Uobičajeni podatkovni model. Ako manifesta nema, administratorski korisnici s vlasnikom podataka o blobu za pohranu ili pristupom Blob Data storage Blob Data suradnik mogu definirati shemu prilikom unosa podataka.
+
+## <a name="recommendations"></a>Preporuke
+
+Za optimalne performanse Customer Insights preporučuje da veličina particije bude 1 GB ili manja, a broj particijskih datoteka u mapi ne smije prelaziti 1000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Povezivanje sa sustavom Azure Data Lake Storage
 
@@ -199,5 +203,101 @@ Pomoću mogućnosti Poveži se s računom *za pohranu možete ažurirati*. Dodat
 1. Kliknite **Spremi** da biste primijenili promjene i vratili se na **stranicu Izvori** podataka.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Uobičajeni razlozi za pogreške u gutanju ili oštećene podatke
+
+Tijekom gutanja podataka, neki od najčešćih razloga zbog kojih se zapis može smatrati oštećenim uključuju:
+
+- Vrste podataka i vrijednosti polja ne podudaraju se između izvorišne datoteke i sheme
+- Broj stupaca u izvornoj datoteci ne odgovara shemi
+- Polja sadrže znakove koji uzrokuju iskrivljavanje stupaca u usporedbi s očekivanom shemom. Na primjer: pogrešno oblikovani citati, neraspoređeni citati, novi linijski znakovi ili označeni znakovi.
+- Nedostaju particijske datoteke
+- Ako postoje stupci datetime/datetime/datetimeoffset, njihov oblik mora biti naveden u shemi ako ne slijedi standardni oblik.
+
+### <a name="schema-or-data-type-mismatch"></a>Nepodudaranje sheme ili vrste podataka
+
+Ako podaci nisu u skladu sa shemom, proces gutanja se dovršava pogreškama. Ispravite izvorišne podatke ili shemu i ponovno unesite podatke.
+
+### <a name="partition-files-are-missing"></a>Nedostaju particijske datoteke
+
+- Ako je gutanje bilo uspješno bez oštećenih zapisa, ali ne možete vidjeti nikakve podatke, uredite datoteku model.json ili manifest.json da biste bili sigurni da su particije navedene. [Zatim osvježite izvor podataka](data-sources.md#refresh-data-sources).
+
+- Ako se gutanje podataka dogodi istodobno s osvježavanjem izvora podataka tijekom automatskog osvježavanja rasporeda, particijske datoteke mogu biti prazne ili nisu dostupne za obradu customer insightsa. Da biste se uskladili s rasporedom osvježavanja uzvodno, promijenite [raspored](schedule-refresh.md) osvježavanja sustava ili raspored osvježavanja za izvor podataka. Uskladite vrijeme tako da se osvježavanja ne događaju odjednom i pruža najnovije podatke koji će se obrađivati u customer insights.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Polja datetime u pogrešnom obliku
+
+Polja datetime u entitetu nisu u obliku ISO 8601 ili en-US. Zadani oblik datetimea u Customer Insights formatu je en-US format. Sva polja datetime u entitetu trebaju biti u istom obliku. Customer Insights podržava druge formate pod uvjetom da se primjedbe ili osobine izrađuju na razini izvora ili entiteta u modelu ili manifest.jsonu. Na primjer:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  U manifest.json formatu datetime može se odrediti na razini entiteta ili na razini atributa. Na razini entiteta koristite "ExhibitsTraits" u entitetu u obliku *.manifest.cdm.json da biste definirali oblik datetime. Na razini atributa koristite "appliedTraits" u atributu u nazivu entiteta.cdm.json.
+
+**Manifest.json na razini entiteta**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json na razini atributa**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

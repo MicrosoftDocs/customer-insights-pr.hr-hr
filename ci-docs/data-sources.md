@@ -1,7 +1,7 @@
 ---
 title: Pregled izvora podataka
 description: Saznajte kako uvesti ili unijeti podatke iz različitih izvora.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245640"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610043"
 ---
 # <a name="data-sources-overview"></a>Pregled izvora podataka
 
@@ -65,7 +65,9 @@ Odaberite izvor podataka za prikaz dostupnih akcija.
 
 ## <a name="refresh-data-sources"></a>Osvježivanje izvora podataka
 
-Izvori podataka mogu se osvježiti prema automatskom rasporedu ili ručno na zahtjev. [Lokalni izvori](connect-power-query.md#add-data-from-on-premises-data-sources) podataka osvježavaju se prema vlastitim rasporedima koji su postavljeni tijekom gutanja podataka. Za priložene izvore podataka unos podataka troši najnovije podatke dostupne iz tog izvor podataka.
+Izvori podataka mogu se osvježiti prema automatskom rasporedu ili ručno na zahtjev. [Lokalni izvori](connect-power-query.md#add-data-from-on-premises-data-sources) podataka osvježavaju se prema vlastitim rasporedima koji su postavljeni tijekom gutanja podataka. Savjete za otklanjanje poteškoća potražite u članku [Otklanjanje poteškoća s izvor podataka osvježavanjem utemeljenih na PPDF-u Power Query](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
+
+Za priložene izvore podataka unos podataka troši najnovije podatke dostupne iz tog izvor podataka.
 
 Idite na **Raspored** > **administratorskih** > [**sustava**](schedule-refresh.md) da biste konfigurirali sistemski zakazana osvježavanja unesenih izvora podataka.
 
@@ -73,8 +75,40 @@ Da biste osvježili izvor podataka na zahtjev:
 
 1. Idite na **Podaci** > **Izvor podataka**.
 
-1. Odaberite izvor podataka želite osvježiti, a zatim odaberite **Osvježi**. Izvor podataka sada se pokreće za ručno osvježavanje. Osvježavanje izvora podataka ažurirat će i shemu entiteta i podatke za sve entitete navedene u izvoru podataka.
+1. Odaberite izvor podataka koje želite osvježiti, a zatim **Osvježi**. Izvor podataka sada se pokreće za ručno osvježavanje. Osvježavanje izvora podataka ažurirat će i shemu entiteta i podatke za sve entitete navedene u izvoru podataka.
 
 1. Odaberite status da biste otvorili **okno s detaljima o** napretku i prikazali tijek. Da biste otkazali posao, pri dnu okna odaberite **Odustani od posla**.
+
+## <a name="corrupt-data-sources"></a>Oštećeni izvori podataka
+
+Podaci koji se unose mogu imati oštećene zapise koji mogu uzrokovati dovršavanje procesa gutanja podataka s pogreškama ili upozorenjima.
+
+> [!NOTE]
+> Ako se unos podataka dovrši pogreškama, naknadna obrada (kao što je ujedinjenje ili stvaranje aktivnosti) koja koristi ovu izvor podataka bit će preskočena. Ako je gutanje dovršeno s upozorenjima, naknadna obrada se nastavlja, ali neki zapisi možda neće biti uključeni.
+
+Te se pogreške mogu vidjeti u detaljima zadatka.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Detalj zadatka koji prikazuje oštećenu pogrešku u podacima.":::
+
+Oštećeni zapisi prikazuju se u sistemski stvorenim entitetima.
+
+### <a name="fix-corrupt-data"></a>Ispravljanje oštećenih podataka
+
+1. Da biste prikazali oštećene podatke, idite na **Entiteti** > **podataka** i potražite oštećene entitete u **odjeljku Sustav**. Shema imenovanja oštećenih entiteta: "DataSourceName_EntityName_corrupt".
+
+1. Odaberite oštećeni entitet, a zatim karticu **Podaci**.
+
+1. Identificirajte oštećena polja u zapisu i razlog.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Razlog korupcije." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Entiteti** > **podataka** prikazuju samo dio oštećenih zapisa. Da biste prikazali sve oštećene zapise, izvezite datoteke u spremnik na računu za pohranu pomoću postupka [izvoza](export-destinations.md) Customer Insights. Ako ste koristili vlastiti račun za pohranu, možete pogledati i mapu Customer Insights na računu za pohranu.
+
+1. Popravite oštećene podatke. Na primjer, za izvore [podataka servisa Azure Data Lake popravite podatke u spremištu na servisu Data Lake Storage ili ažurirajte vrste podataka u datoteci](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data) manifest/model.json. Za Power Query izvore podataka popravite podatke u izvornoj datoteci i [ispravite vrstu podataka korak](connect-power-query.md#data-type-does-not-match-data) transformacije **Power Query na stranici - Uređivanje upita**.
+
+Nakon sljedećeg osvježavanja izvora podataka ispravljeni zapisi unose se u Customer Insights i prosljeđuju nizvodnim procesima.
+
+Na primjer, stupac 'rođendan' ima vrstu podataka postavljenu kao „datum”. U zapisu klijenta rođendan je unesen kao '01/01/19777'. Sustav označava ovaj zapis kao oštećen. Promijenite rođendan u izvornom sustavu u '1977'. Nakon automatskog osvježavanja izvora podataka, polje sada ima valjani oblik i zapis se uklanja iz oštećenog entiteta.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
