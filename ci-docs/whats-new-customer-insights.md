@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
-ms.translationtype: HT
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
+ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609583"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638342"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Što je novo u sustavu Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Ažuriranja unosimo po regijama. Tako bi neke regije mogle vidjeti značajke pri
 
 > [!TIP]
 > Za kontakt i glasanje o zahtjevima za značajkama i prijedlozima o proizvodu idite na [portal sa zamislima za aplikacije Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2022-updates"></a>Ažuriranja u rujnu 2022.
+
+Ažuriranja u rujnu 2022. uključuju nove značajke, nadogradnje performansi i ispravke pogrešaka.
+
+### <a name="export-data-to-hubspot"></a>Izvoz podataka u HubSpot
+
+Izvezite segmente jedinstvenih profila kupaca u HubSpot i koristite ih za marketing putem e-pošte.
+
+Dodatne informacije potražite u članku [Izvoz segmenata u HubSpot](export-hubspot.md).
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Uklanjanje jedinstvenog polja ili entiteta iz objedinjavanja podataka
+
+Polja i entitete možete ukloniti iz postupka objedinjavanja podataka.
+
+Dodatne informacije potražite u članku [Uklanjanje jedinstvenog polja](data-unification-update.md#remove-a-unified-field).
+
+### <a name="manage-unknown-customer-profiles"></a>Upravljanje nepoznatim profilima kupaca
+
+Nezaboravna personalizacija ovisi o bogatstvu i cjelovitosti vaših korisničkih podataka, a Customer Insights pomaže vam u postizanju tih ciljeva. Možete upravljati profilima kupaca za korisnike za koje nemate nikakve informacije osim ID-a.
+
+Dodatne informacije potražite u članku [Upravljanje nepoznatim profilima pomoću uvida u kupce](manage-unknown-profiles.md).
 
 ## <a name="august-2022-updates"></a>Ažuriranja u kolovozu 2022.
 
@@ -40,11 +62,11 @@ Dodatne informacije potražite u članku [Stvaranje jedinstvenog profila kontakt
 
 Zahvaljujući novom ujedinjenju kontakata možete kreirati segmente kontakata pomoću kriterija iz kontakata, poslovnih subjekata ili oboje. Ti se segmenti mogu izvesti radi aktivacije u drugim uslugama.
 
-Dodatne informacije potražite u članku [Pregled izvoza](export-destinations.md).
+Dodatne informacije potražite u članku [Pregled](export-destinations.md) izvoza.
 
 ### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Područja implementacije usklađena s Microsoft Dataverse
 
-Prilikom stvaranja novog okruženja Customer Insights možete odabrati regiju u kojoj želite da se usluga uvede i hostira. Ažurirali smo odabir regije kako bismo se uskladili i Microsoft Dataverse Power Platform.
+Prilikom stvaranja novog okruženja Customer Insights možete odabrati regiju u kojoj želite da se usluga uvede i hostira. Ažurirali smo odabir regije kako bismo se uskladili i Microsoft Dataverse .Power Platform
 
 Sada možete jednostavno odabrati istu regiju kao i postojeće Microsoft Dataverse okruženje ili račun za pohranu servisa Azure Data Lake (ako odaberete tu mogućnost), ovisno o dostupnosti uvida kupaca u toj regiji.
 
@@ -114,7 +136,7 @@ Dodatne informacije potražite u članku [Pregled](data-unification.md) ujedinje
 
 **Home** vas vodi kroz postupak konfiguracije ključnih značajki i pruža pregled podataka o segmentima, mjerama i obogaćivanju. Osvježili smo doživljaj kako bismo pružili relevantnije informacije na prvi pogled.
 
-Dodatne informacije potražite u članku [Istraživanje uvida](home.md) kupaca.
+Dodatne informacije potražite u članku [Istraživanje uvida kupaca](home.md).
 
 ### <a name="track-usage-of-a-segment"></a>Praćenje korištenja segmenta
 
@@ -140,7 +162,7 @@ Ažuriranja u travnju 2022. uključuju nove značajke, nadogradnje performansi i
 
 Dun & Bradstreet pruža komercijalne podatke, analitiku i uvide za tvrtke. Klijentima pruža objedinjene korisničke profile kako bi tvrtke obogatile svoje podatke. Obogaćivanja uključuju atribute kao što su DUNS broj, veličina tvrtke, lokacija, industrija i još mnogo toga.
 
-Za više informacija pogledajte [Obogaćivanje profila tvrtke s Dun & Bradstreet (Preview)](enrichment-dnb.md).
+Više informacija potražite u odjeljku [Obogaćivanje profila tvrtke dun & bradstreet (preview)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Definiranje vrste mjere prilikom kreiranja nove mjere
 
@@ -198,7 +220,7 @@ Ažuriranja u veljači 2022. uključuju nove značajke, nadogradnje performansi 
 
 Gotovi modeli predviđanje, uključujući **prijenos** pretplate, **transakcijski bućkuriš** i **vrijednost životnog vijeka korisnika (CLV)** postaju općenito dostupni kao dio Customer Insights. 
 
-Dodatne informacije potražite u članku [Pregled](predictions-overview.md) predviđanja.
+Dodatne informacije potražite u članku [Pregled predviđanja](predictions-overview.md).
 
 ### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Novi izvor podataka: integracija s (pretpregledom Azure Synapse Analytics)
 
@@ -218,7 +240,7 @@ Dodatne informacije potražite u članku [Obogaćivanje korisničkih profila pod
 
 Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obogatili svoje korisničke podatke prije ujedinjenja podataka. Izvor podataka obogaćivanja pomažu u stvaranju veće cjelovitosti i kvalitete podataka koji mogu pomoći u postizanju boljih rezultata nakon što objedinite svoje podatke.
 
-Dodatne informacije potražite u članku [Obogaćenje izvora podataka (Pretpregled)](data-sources-enrichment.md).
+Dodatne informacije potražite u članku [Obogaćivanje izvora podataka (pretpregled)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Promijeni vlasnika okruženja
 
@@ -230,7 +252,7 @@ Dodatne informacije potražite u članku [Promjena vlasnika okruženja](manage-e
 
 Priprema podataka sada prikazuje razlog oštećenja za sva polja s oštećenim podacima. Informacije se pružaju na pojedinačnoj razini evidencije radi lakše identifikacije.
 
-Dodatne informacije potražite u odjeljku [Oštećeni izvori podataka](data-sources.md#corrupt-data-sources).
+Dodatne informacije potražite u odjeljku [Oštećeni izvori](data-sources.md#corrupt-data-sources) podataka.
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Kraj pretpregleda za značajke izvješćivanja u mogućnosti uvida u angažman
 

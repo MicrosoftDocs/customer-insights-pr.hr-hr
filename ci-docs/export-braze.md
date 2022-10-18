@@ -1,19 +1,19 @@
 ---
 title: Izvoz segmenata u Braze (pretpregled)
 description: Saznajte kako konfigurirati vezu i izvesti u Braze.
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195098"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655293"
 ---
 # <a name="export-segments-to-braze-preview"></a>Izvoz segmenata u Braze (pretpregled)
 
@@ -23,6 +23,7 @@ Izvezite segmente jedinstvenih profila kupaca u Braze i koristite ih za marketin
 
 - [Braze račun](https://www.braze.com/) i odgovarajuće administratorske vjerodajnice.
 - Braze [API ključ](https://www.braze.com/docs/api/basics/)
+- Vaš [Braze REST krajnja točka](https://www.braze.com/docs/api/basics/#api-definitions) 
 - [Konfigurirani segmenti](segments.md) u customer insights.
 - Jedinstveni profili kupaca u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte i Brazeov ID kupca.
 
@@ -30,6 +31,7 @@ Izvezite segmente jedinstvenih profila kupaca u Braze i koristite ih za marketin
 
 - Do milijun korisničkih profila za Braze, što može potrajati i do 40 minuta. Broj profila kupaca koje možete izvesti u Braze ovisi o vašem ugovoru s Brazeom.
 - Samo segmenti.
+- Azure Private Link nije podržan za izvoz Braze.
 
 ## <a name="set-up-connection-to-braze"></a>Postavljanje veze s Brazeom
 
@@ -62,6 +64,8 @@ Izvezite segmente jedinstvenih profila kupaca u Braze i koristite ih za marketin
 1. Odaberite **Dodaj izvoz**.
 
 1. **U polju Veza za izvoz** odaberite vezu iz odjeljka Braze. Ako nijedna veza nije dostupna, obratite se administratoru.
+
+1. Unesite krajnja točka REST u **polje Naziv** glavnog računala u sljedećem obliku:`rest.iad-03.braze.com`.
 
 1. Unesite naziv izvoza.
 
