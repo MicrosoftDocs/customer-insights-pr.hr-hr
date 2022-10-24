@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424300"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671242"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad s podacima rješenja Customer Insights u servisu Microsoft Dataverse
 
@@ -64,6 +64,9 @@ Korak **Microsoft Dataverse** vam omogućuje povezivanje uvida u korisnike s oko
 
 Na [vlastitom Azure Data Lake Storage računu](own-data-lake-storage.md) provjerite ima li korisnik koji postavlja okruženje Customer Insights barem **storage Blob Data Čitatelj** dozvole za spremnik na `customerinsights` računu za pohranu.
 
+> [!NOTE]
+> Dijeljenje podataka primjenjivo je samo ako koristite vlastiti Azure Data Lake Storage račun. Ova postavka nije dostupna ako okruženje Customer Insights koristi zadanu Dataverse pohranu.
+
 ### <a name="limitations"></a>Ograničenja
 
 - Samo jedan-na-jedan mapiranje Dataverse između organizacije i Azure Data Lake Storage računa. Dataverse Nakon što se tvrtka ili ustanova poveže s računom za pohranu, ne može se povezati s drugim računom za pohranu. Ovo ograničenje onemogućuje popunjavanje Dataverse više računa za pohranu.
@@ -102,7 +105,7 @@ Postavite PowerShell za izvršavanje skripti komponente PowerShell.
 1. Spremite obje vrijednosti ID-a sigurnosne grupe generirane ovom skriptom za korištenje u skripti `ByolSetup.ps1`.
 
    > [!NOTE]
-   > Stvaranje sigurnosne grupe može se onemogućiti na klijentu. U tom bi slučaju bilo potrebno ručno postavljanje i vaš Azure AD bi administrator morao [omogućiti stvaranje](/azure/active-directory/enterprise-users/groups-self-service-management) sigurnosne grupe.
+   > Stvaranje sigurnosne grupe može se onemogućiti na klijentu. U tom bi slučaju bilo potrebno ručno postavljanje i vaš Azure AD bi administrator morao [omogućiti stvaranje sigurnosne grupe](/azure/active-directory/enterprise-users/groups-self-service-management).
 
 1. Izvršite u komponenti Windows PowerShell tako da navedete ID pretplate `ByolSetup.ps1` na Azure koji sadrži naziv računa Azure Data Lake Storage za pohranu, naziv grupe resursa te vrijednosti ID-a Čitatelj i suradnik sigurnosne grupe. Otvorite skriptu komponente PowerShell u uređivaču da biste pregledali dodatne informacije i implementiranu logiku.
 
