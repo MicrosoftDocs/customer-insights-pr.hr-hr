@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196569"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725069"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Izvoz segmenata u Google Ads (pretpregled)
 
@@ -30,6 +30,7 @@ Izvezite segmente objedinjenih korisničkih profila na popis publike servisa Goo
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Privatna veza u kombinaciji s Donesite vlastitu pohranu (BYOS) nije podržana.
 - Izvezite milijun korisničkih profila po izvozu u Google Ads, što može potrajati i do 30 minuta zbog ograničenja na strani pružatelja usluga.
 - Samo segmenti.
 - Podudaranje u Google Adsu može potrajati do 48 sati.

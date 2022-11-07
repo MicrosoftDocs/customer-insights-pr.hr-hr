@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ffc591c01a5a9434cde41f2da25fa930a515b8c1
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: df38e9e88a9c116252fba26983b5f3711b46f051
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9199188"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725253"
 ---
 # <a name="export-segments-to-moengage-preview"></a>Izvoz segmenata u MoEngage (pretpregled)
 
@@ -27,6 +27,7 @@ Izvezite segmente jedinstvenih profila kupaca u MoEngage i koristite ih za marke
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Privatna veza u kombinaciji s Donesite vlastitu pohranu (BYOS) nije podržana.
 - Do 100'000 korisničkih profila po izvozu u MoEngage, što može potrajati i do 15 minuta. Broj korisničkih profila koje možete izvesti u MoEngage ovisi o vašem ugovoru s tvrtkom MoEngage.
 - Samo segmenti.
 

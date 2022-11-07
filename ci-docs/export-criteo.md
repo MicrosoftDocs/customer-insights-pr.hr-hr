@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195327"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724780"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Izvoz segmenata u Criteo (pretpregled)
 
@@ -27,6 +27,7 @@ Izvoz segmenata jedinstvenih korisničkih profila za generiranje kampanja, pruž
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Privatna veza u kombinaciji s Donesite vlastitu pohranu (BYOS) nije podržana.
 - Do milijun profila kupaca po izvozu u Criteo, što može potrajati i do 30 minuta. Broj korisničkih profila koje možete izvesti u Criteo ovisi o vašem ugovoru s Criteom.
 - Samo segmenti.
 
@@ -65,8 +66,6 @@ Izvoz segmenata jedinstvenih korisničkih profila za generiranje kampanja, pruž
 1. Unesite naziv izvoza.
 
 1. U odjeljku **Podudaranje podataka** u polju **E -pošta** odaberite polje koje predstavlja adresu e-pošte klijenta.
-
-1. Po želji izvezite **ID** i **ime oglašivača**.
 
 1. Odaberite segmente koje želite izvesti.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196477"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724492"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Izvoz segmenata u Constant Contact (pretpregled)
 
@@ -28,6 +28,7 @@ Izvezite segmente objedinjenih profila klijenata u Constant Contact i koristite 
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Privatna veza u kombinaciji s Donesite vlastitu pohranu (BYOS) nije podržana.
 - Do milijun profila kupaca po izvozu u Constant Contact, što može potrajati i do jednog sata. Broj profila kupaca koje možete izvesti u Stalni kontakt ovisi o vašem ugovoru s stalnim kontaktom.
 - Samo segmenti.
 

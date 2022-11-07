@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d857bf5d11de86521c4a9d4fc665c020496d89d2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: hr-HR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195603"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725116"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Izvoz segmenata u RollWorks (pretpregled)
 
@@ -28,6 +28,7 @@ Izvezite segmente objedinjenih profila klijenata u RollWorks i koristite ih za o
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Privatna veza u kombinaciji s Donesite vlastitu pohranu (BYOS) nije podržana.
 - Do 250.000 profila kupaca po izvozu u RollWorks, što može potrajati i do 10 minuta. Broj profila kupaca koje možete izvesti u RollWorks ovisi o ugovoru s RollWorksom.
 - Samo segmenti.
 
